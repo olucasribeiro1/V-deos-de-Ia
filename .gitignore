@@ -2,3 +2,9 @@ node_modules
 out
 .env
 whisper.cpp
+growkaz-stickman-studio/node_modules
+growkaz-stickman-studio/projects/*/build
+growkaz-stickman-studio/projects/*/out
+growkaz-stickman-studio/projects/*/input/*.wav
+growkaz-stickman-studio/projects/*/input/*.mp3
+__pycache__

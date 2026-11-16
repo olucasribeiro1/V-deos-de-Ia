@@ -1,0 +1,66 @@
+{
+ "title": "Teste do personagem",
+ "duration": 9.0,
+ "shots": [
+  {
+   "id": "s001",
+   "start": 0,
+   "end": 3.8,
+   "line": "Dia dois. A água acabou. Restam três litros.",
+   "scene": "cozinha escura, protagonista despeja o resto do galão em copos; contador 3.0 L",
+   "set": "cozinha",
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 2.9,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -30
+   }
+  },
+  {
+   "id": "s002",
+   "start": 3.8,
+   "end": 5.9,
+   "line": "E ninguém sabe o que fazer.",
+   "scene": "close-up gigante do protagonista preocupado",
+   "set": "cozinha",
+   "in": {
+    "type": "cut"
+   },
+   "sfx": []
+  },
+  {
+   "id": "s003",
+   "start": 5.9,
+   "end": 9.0,
+   "line": "Lá fora, a fila só cresce.",
+   "scene": "rua à noite, fios, fila de figurantes, protagonista olhando",
+   "set": "rua",
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "sfx": [],
+   "amb": {
+    "name": "city",
+    "gain": -28
+   }
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 9,
+   "mood": "tension",
+   "intensity": 0.4
+  }
+ ],
+ "sfx": []
+}

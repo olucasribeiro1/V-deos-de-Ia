@@ -1,6 +1,26 @@
 # Vídeos de IA
 
-Vídeos animados 2D feitos com **Remotion** + **Three.js** (cenas, legendas, áudio e renderização).
+Vídeos animados 2D verticais (Instagram Reels / TikTok) com o personagem fixo do canal.
+
+## Fluxo principal: estúdio de stick figures (`growkaz-stickman-studio/`)
+
+Personagem fixo, estilo `urbano`, 9:16 com safe zone. Regras completas em [`CLAUDE.md`](CLAUDE.md).
+
+```bash
+cd growkaz-stickman-studio
+npm install && python3 -m pip install numpy scipy faster-whisper
+python3 tools/new_project.py --name meu-video --voice narracao.mp3 --aspect 9:16 --resolution 1080p --style urbano --captions
+python3 tools/transcribe.py --project projects/meu-video --lang pt --model small
+node render.mjs --project projects/meu-video --sheet --safe      # conferir cenas e safe zone
+node render.mjs --project projects/meu-video                     # render final (sem som)
+python3 audio/mix.py --project projects/meu-video                # música, efeitos e MP4 final em out/
+```
+
+Com o Claude: peça "quero um roteiro" (skill `roteiro-tubemakers`) e depois "faça o vídeo com essa narração" (skill `make-2d-video`).
+
+---
+
+## Setup alternativo: Remotion + Three.js (pasta `src/`)
 
 ## Instalação
 
