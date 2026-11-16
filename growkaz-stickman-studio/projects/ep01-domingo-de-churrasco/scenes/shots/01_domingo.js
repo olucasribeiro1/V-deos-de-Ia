@@ -1,5 +1,5 @@
 // Ep. 1 — DOMINGO DE CHURRASCO · cenas s01–s13 (domingo normal até a chegada do tio)
-import { E, SAFE, registerShot, layer, blurLayer, veil, ease, prog, key, clamp, lerp, shake, talkAmount, rr, seg, circle, glow, shade, alpha, S } from '/engine/core.js';
+import { E, SAFE, registerShot, layer, blurLayer, veil, ease, prog, key, clamp, lerp, shake, talkAmount, wordTime, rr, seg, circle, glow, shade, alpha, S } from '/engine/core.js';
 import { drawFigure, POSES, posesAt, breathe, walkPose, bigFace } from '/engine/rig2d.js';
 import * as FX from '/engine/fx2d.js';
 import { quintal, bilu, GRILL_X } from '../sets/quintal.js';
@@ -71,7 +71,7 @@ registerShot('s05', { draw(g, t, info) {
   const { GY } = quintal(g, t, cam);
   layer(g, cam, 1, g => {
     drawFigure(g, { x: 660, y: GY, s: 1.75, facing: -1, outfit: EDUARDO, pose: breathe(posesAt(t, [[0, 'holdFront'], [1.6, 'crossArms']]), t, 1, 1), expr: t > 1.6 ? 'smirk' : 'neutral', blink: blink(t) });
-    drawFigure(g, { x: 400, y: GY + 20, s: 1.75 * RAFAEL_S, facing: 1, outfit: RAFAEL, pose: breathe(posesAt(t, [[0, 'reach'], [1.0, 'cheer'], [1.5, 'reach'], [2.1, 'handsOnHead']], 0.2), t, 2, 2), expr: t > 2.0 ? 'cry' : 'sad', talk: talkAmount(T, 9.6, 12.5) });
+    drawFigure(g, { x: 400, y: GY + 20, s: 1.75 * RAFAEL_S, facing: 1, outfit: RAFAEL, pose: breathe(posesAt(t, [[0, 'reach'], [1.0, 'cheer'], [1.5, 'reach'], [2.1, 'handsOnHead']], 0.2), t, 2, 2), expr: t > 2.0 ? 'cry' : 'sad', talk: talkAmount(T, ...info.L.r1) });
   });
   FX.dust(g, t, { count: 30 });
 }});
@@ -79,7 +79,7 @@ registerShot('s05', { draw(g, t, info) {
 registerShot('s06', { draw(g, t, info) {
   const T = info.globalT, cam = { z: 1.0 + 0.05 * (t / info.dur) };
   blurLayer(g, 12, g => quintal(g, t, { z: 1.5, x: 200, y: 200 }), cam, 0.6); veil(g, '#000', 0.3);
-  layer(g, cam, 1, g => bigFace(g, 500, 860, 300, { outfit: EDUARDO, expr: 'angry', talk: talkAmount(T, 12.7, 16.3), look: [-0.5, 0.1], rimSide: -1, tilt: -0.04 }));
+  layer(g, cam, 1, g => bigFace(g, 500, 860, 300, { outfit: EDUARDO, expr: 'angry', talk: talkAmount(T, ...info.L.e1), look: [-0.5, 0.1], rimSide: -1, tilt: -0.04 }));
 }});
 
 registerShot('s07', { draw(g, t, info) {
@@ -113,8 +113,8 @@ registerShot('s08', { draw(g, t, info) {   // Mariana na janela, vista do quinta
 registerShot('s09', { draw(g, t, info) {
   const T = info.globalT, cam = { z: 1.0 + 0.07 * ease.inOut(t / info.dur) };
   blurLayer(g, 12, g => cozinha(g, t, { z: 1.4, x: -60, y: 120 }), cam, 0.6); veil(g, '#000', 0.35);
-  const ex = T < 20.2 ? 'smile' : T < 21.4 ? 'nervous' : 'worried';
-  layer(g, cam, 1, g => bigFace(g, 500, 880, 300, { outfit: MARIANA, expr: ex, blink: blink(t, 1.9), look: T < 20.2 ? [0, 0] : [0.5, -0.2], rimSide: 1 }));
+  const t1 = wordTime('disfar', info.shot.start) ?? 1e9, t2 = wordTime('errado', info.shot.start) ?? 1e9, ex = T < t1 ? 'smile' : T < t2 - 0.1 ? 'nervous' : 'worried';
+  layer(g, cam, 1, g => bigFace(g, 500, 880, 300, { outfit: MARIANA, expr: ex, blink: blink(t, 1.9), look: T < t1 ? [0, 0] : [0.5, -0.2], rimSide: 1 }));
 }});
 
 registerShot('s10', { draw(g, t, info) {
@@ -127,16 +127,16 @@ registerShot('s10', { draw(g, t, info) {
 }});
 
 registerShot('s11', { draw(g, t, info) {
-  const T = info.globalT, punch = T > 24.5 ? 1.13 : 1, cam = { z: punch + 0.03 * t };
+  const T = info.globalT, punch = T > (wordTime('agora', info.shot.start) ?? 1e9) ? 1.13 : 1, cam = { z: punch + 0.03 * t };
   blurLayer(g, 12, g => quintal(g, t, { z: 1.6, x: -260, y: 200 }, { gate: 1 }), cam, 0.6); veil(g, '#000', 0.4);
-  layer(g, cam, 1, g => bigFace(g, 500, 870, 300, { outfit: OSVALDO, expr: 'determined', talk: talkAmount(T, 23.9, 27.2), look: [0.2, 0], rimSide: -1 }));
+  layer(g, cam, 1, g => bigFace(g, 500, 870, 300, { outfit: OSVALDO, expr: 'determined', talk: talkAmount(T, ...info.L.o1), look: [0.2, 0], rimSide: -1 }));
 }});
 
 registerShot('s12', { draw(g, t, info) {
   const T = info.globalT, k = ease.inOut(t / info.dur), cam = { z: 1.1 + 0.05 * k, x: 20, y: 60 };
   const { GY } = quintal(g, t, cam, { gate: 1 });
   layer(g, cam, 1, g => {
-    drawFigure(g, { x: 300, y: GY + 20, s: 1.75, facing: 1, outfit: OSVALDO, pose: breathe(posesAt(t, [[0, 'ready'], [0.25, 'point']], 0.2), t, 1, 5), expr: 'angry', talk: talkAmount(T, 23.9, 27.2) });
+    drawFigure(g, { x: 300, y: GY + 20, s: 1.75, facing: 1, outfit: OSVALDO, pose: breathe(posesAt(t, [[0, 'ready'], [0.25, 'point']], 0.2), t, 1, 5), expr: 'angry', talk: talkAmount(T, ...info.L.o1) });
     drawFigure(g, { x: 520, y: GY + 30, s: 1.75 * RAFAEL_S, facing: -1, outfit: RAFAEL, pose: breathe(POSES.relaxed, t, 1, 2), expr: 'confused', blink: blink(t, 2.7) });
     drawFigure(g, { x: 660, y: GY, s: 1.75, facing: -1, outfit: EDUARDO, pose: breathe(POSES.holdFront, t, 1, 1), expr: 'surprised', blink: blink(t) });
   });
@@ -147,8 +147,8 @@ registerShot('s13', { draw(g, t, info) {
   const T = info.globalT, k = ease.inOut(t / info.dur), cam = { z: 1.3 + 0.06 * k, x: 60, y: 130 };
   const { GY } = quintal(g, t, cam, { gate: 1 });
   layer(g, cam, 1, g => {
-    drawFigure(g, { x: 650, y: GY, s: 1.9, facing: -1, outfit: EDUARDO, pose: breathe(POSES.crossArms, t, 1, 1), expr: T > 28.9 ? 'smirk' : 'neutral', blink: blink(t) });
-    drawFigure(g, { x: 420, y: GY + 30, s: 1.9 * RAFAEL_S, facing: -1, outfit: RAFAEL, pose: breathe(posesAt(t, [[0, 'relaxed'], [0.3, 'shrug'], [1.5, 'point'], [2.0, 'shrug']], 0.22), t, 1.5, 2), expr: 'smirk', talk: talkAmount(T, 27.5, 29.8) });
+    drawFigure(g, { x: 650, y: GY, s: 1.9, facing: -1, outfit: EDUARDO, pose: breathe(POSES.crossArms, t, 1, 1), expr: T > info.L.r2[0] + 1.3 ? 'smirk' : 'neutral', blink: blink(t) });
+    drawFigure(g, { x: 420, y: GY + 30, s: 1.9 * RAFAEL_S, facing: -1, outfit: RAFAEL, pose: breathe(posesAt(t, [[0, 'relaxed'], [0.3, 'shrug'], [1.5, 'point'], [2.0, 'shrug']], 0.22), t, 1.5, 2), expr: 'smirk', talk: talkAmount(T, ...info.L.r2) });
   });
   FX.dust(g, t, { count: 30 });
 }});

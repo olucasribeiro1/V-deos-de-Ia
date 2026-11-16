@@ -91,3 +91,18 @@ export function captions(g, globalT, o = {}) {
   const gap = sz * 0.3, widths = strs.map(s => measure(g, s, sz)), total = widths.reduce((a, b) => a + b, 0) + gap * (strs.length - 1);
   let x = V(E.W / 2, 520) - total / 2; strs.forEach((s, k) => { const cur = st + k === i; const pop = cur ? 1 + 0.08 * ease.out(prog(globalT, group[k].start, group[k].start + 0.12)) : 1; g.save(); g.translate(x + widths[k] / 2, y); g.scale(pop, pop); text(g, s, 0, 0, { size: sz, color: cur ? hi : color, stroke: sz * 0.16, strokeColor: 'rgba(0,0,0,.85)' }); g.restore(); x += widths[k] + gap; });
 }
+
+// Cartão final "segue a página" (Instagram/TikTok), dentro da safe zone. Use no último plano de cada episódio.
+// seguir(g, t, { linha1, linha2, botao, proximo, outfit })
+export function seguir(g, t, o = {}) {
+  const { linha1 = 'CONTINUA...', linha2 = ['SEGUE', 'A PÁGINA'], botao = '+ SEGUIR', proximo = null, outfit = null } = o; const ui = S().ui, cx = 500;
+  g.fillStyle = '#07080a'; g.fillRect(0, 0, E.W, E.H); glow(g, cx, 1500, 800, ui.accent, 0.1 + 0.03 * Math.sin(t * 4));
+  const a1 = ease.out(prog(t, 0.05, 0.4)), a2 = ease.outBack(prog(t, 0.3, 0.75)), a3 = ease.outBack(prog(t, 0.9, 1.3)), a4 = ease.out(prog(t, 1.5, 1.9));
+  text(g, linha1, cx, 420, { size: 44, color: ui.sub, font: FONTS.ui, weight: 900, spacing: 8, alpha: a1 });
+  g.save(); g.translate(cx, 600); g.scale(a2, a2); linha2.forEach((ln, i) => text(g, ln, 0, i * 128, { size: 128, color: ui.cream, spacing: 3 })); g.restore();
+  const pulse = 1 + 0.045 * Math.sin(t * 7); g.save(); g.translate(cx, 920); g.scale(a3 * pulse, a3 * pulse);
+  rr(g, -230, -62, 460, 124, 62); g.fillStyle = '#0b0b0d'; g.fill(); rr(g, -220, -52, 440, 104, 52); g.fillStyle = ui.accent; g.fill();
+  text(g, botao, 0, 4, { size: 64, color: '#ffffff', font: FONTS.ui, weight: 900, spacing: 3 }); g.restore();
+  if (proximo) { text(g, 'PRÓXIMO EPISÓDIO', cx, 1055, { size: 30, color: ui.sub, font: FONTS.ui, weight: 900, spacing: 6, alpha: a4 }); text(g, proximo, cx, 1110, { size: 46, color: ui.gold, font: FONTS.ui, weight: 900, spacing: 2, alpha: a4 }); }
+  if (outfit) drawFigure(g, { x: 500, y: 1432 + (1 - a1) * 60, s: 1.0, facing: 1, outfit, pose: t < 0.9 ? POSES.relaxed : POSES.pointUp, expr: 'smile', blink: (t % 2.9) > 2.8, alpha: a1 });
+}

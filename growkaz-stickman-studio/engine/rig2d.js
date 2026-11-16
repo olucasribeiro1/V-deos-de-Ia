@@ -213,8 +213,10 @@ function parts(g, o, p, of, ink, far, pass, grow = 0) {
   const R = S().rig || {}, sil = pass === 'sil', L = (R.leg ?? 12.5) + grow, A = (R.arm ?? 11) + grow, T = (R.torso ?? 15) + grow, HR = (R.head ?? 26) + grow * (S().outline ? 0.5 : 0.6);
   const sl = sleeve(of);
   // far leg + far arm
-  seg(g, [p.hip, p.kB, p.fB, [p.fB[0] + 12, p.fB[1]]], L - 1, sil ? ink : of.legs ? shade(of.legs, -0.35) : far);
-  seg(g, [p.sh, p.eB, p.hB], A - 1, sil ? ink : far);
+  const foot = (f, c, k = 1) => { if (R.foot) { g.fillStyle = c; g.beginPath(); g.ellipse(f[0] + R.foot * 0.55, f[1] - R.foot * 0.42, (R.foot + grow * 0.5) * k, (R.foot * 0.62 + grow * 0.5) * k, 0, 0, Math.PI * 2); g.fill(); } };
+  const hand = (h, c, k = 1) => { if (R.hand && !of.gloves) circle(g, h[0], h[1], (R.hand + grow * 0.5) * k, c); };
+  seg(g, [p.hip, p.kB, p.fB, [p.fB[0] + 12, p.fB[1]]], L - 1, sil ? ink : of.legs ? shade(of.legs, -0.35) : far); foot(p.fB, sil ? ink : far, 0.94);
+  seg(g, [p.sh, p.eB, p.hB], A - 1, sil ? ink : far); hand(p.hB, sil ? ink : far, 0.94);
   if (!sil && sl) seg(g, sl === 'long' ? [p.sh, p.eB, [lerp(p.eB[0], p.hB[0], 0.7), lerp(p.eB[1], p.hB[1], 0.7)]] : [p.sh, [lerp(p.sh[0], p.eB[0], 0.75), lerp(p.sh[1], p.eB[1], 0.75)]], 16, sleeveColor(of, true));
   if (of.gloves) circle(g, p.hB[0], p.hB[1], 8.5 + grow, sil ? ink : shade(of.gloves, -0.2));
   // hair / hood behind head
@@ -223,12 +225,13 @@ function parts(g, o, p, of, ink, far, pass, grow = 0) {
   if (['ponytail', 'bun'].includes(of.head)) drawHeadwear(g, of, p.head[0], p.head[1], HR, pass);
   // torso
   seg(g, [p.sh, p.hip], T, ink);
+  if (!sil && R.bodyShade) { seg(g, [[p.sh[0] - T * 0.27, p.sh[1] + 5], [p.hip[0] - T * 0.27, p.hip[1] - 3]], T * 0.3, alpha(R.bodyShade, 0.3)); seg(g, [[p.sh[0] + T * 0.2, p.sh[1] + 8], [lerp(p.sh[0], p.hip[0], 0.45) + T * 0.2, lerp(p.sh[1], p.hip[1], 0.45)]], T * 0.13, 'rgba(255,255,255,.55)'); }
   if (of.top && of.top !== 'none') torsoWear(g, of, p, pass);
   // near leg
-  seg(g, [p.hip, p.kF, p.fF, [p.fF[0] + 13, p.fF[1]]], L, sil ? ink : of.legs || ink);
+  seg(g, [p.hip, p.kF, p.fF, [p.fF[0] + 13, p.fF[1]]], L, sil ? ink : of.legs || ink); foot(p.fF, sil ? ink : of.legs || ink);
   if (!sil && ['labcoat', 'trench'].includes(of.top)) { const c = of.top === 'labcoat' ? '#ebe7f0' : of.color || '#2c2833'; poly(g, [[p.sh[0] - 4, p.sh[1] + 40], [p.hip[0] + 25, p.hip[1] + 44], [p.hip[0] - 23, p.hip[1] + 44]], c); }
   // near arm
-  seg(g, [p.sh, p.eF, p.hF], A, ink);
+  seg(g, [p.sh, p.eF, p.hF], A, ink); hand(p.hF, ink);
   if (!sil && sl) seg(g, sl === 'long' ? [p.sh, p.eF, [lerp(p.eF[0], p.hF[0], 0.72), lerp(p.eF[1], p.hF[1], 0.72)]] : [p.sh, [lerp(p.sh[0], p.eF[0], 0.75), lerp(p.sh[1], p.eF[1], 0.75)]], 16.5, sleeveColor(of, false));
   if (of.gloves) circle(g, p.hF[0], p.hF[1], 9 + grow, sil ? ink : of.gloves);
   // head

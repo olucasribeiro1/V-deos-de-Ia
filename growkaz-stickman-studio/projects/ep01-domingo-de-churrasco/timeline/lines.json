@@ -1,5 +1,5 @@
 {
- "duration": 57.952,
+ "duration": 82.522,
  "lines": [
   {
    "id": "n1a",
@@ -18,84 +18,108 @@
    "file": "projects/ep01-domingo-de-churrasco/input/clips/n1b_95cfb9108b.mp3"
   },
   {
+   "id": "n1c",
+   "spk": "NARRADOR",
+   "text": "Nos últimos meses, ela andava estranha. Recusava todo convite. E o celular, sempre de cabeça pra baixo na mesa.",
+   "start": 9.594,
+   "end": 19.103,
+   "file": "projects/ep01-domingo-de-churrasco/input/clips/n1c_f737fe7ef7.mp3"
+  },
+  {
    "id": "r1",
    "spk": "RAFAEL",
    "text": "Dá um pedaço aí, Eduardo, pelo amor de Deus!",
-   "start": 9.644,
-   "end": 12.465,
+   "start": 19.703,
+   "end": 22.524,
    "file": "projects/ep01-domingo-de-churrasco/input/clips/r1_54203b517e.mp3"
   },
   {
    "id": "e1",
    "spk": "EDUARDO",
    "text": "Para de correr atrás do Bilu com a carne, ele não é de ferro!",
-   "start": 12.715,
-   "end": 16.294,
+   "start": 22.774,
+   "end": 26.353,
    "file": "projects/ep01-domingo-de-churrasco/input/clips/e1_b4ab62da1a.mp3"
   },
   {
    "id": "n2",
    "spk": "NARRADOR",
    "text": "Mãe de biomédica tem esse problema: nunca sabe disfarçar quando algo tá errado.",
-   "start": 16.994,
-   "end": 22.428,
+   "start": 27.053,
+   "end": 32.486,
    "file": "projects/ep01-domingo-de-churrasco/input/clips/n2_4ffd7023bc.mp3"
   },
   {
    "id": "o1",
    "spk": "OSVALDO",
    "text": "Hoje. Agora. Todo mundo pro bunker, sem perguntas.",
-   "start": 23.928,
-   "end": 27.219,
+   "start": 33.986,
+   "end": 37.278,
    "file": "projects/ep01-domingo-de-churrasco/input/clips/o1_6f61ad011b.mp3"
   },
   {
    "id": "r2",
    "spk": "RAFAEL",
    "text": "De novo essa palhaçada do bunker, tio?",
-   "start": 27.569,
-   "end": 29.737,
+   "start": 37.628,
+   "end": 39.796,
    "file": "projects/ep01-domingo-de-churrasco/input/clips/r2_9f96567ed4.mp3"
+  },
+  {
+   "id": "n2b",
+   "spk": "NARRADOR",
+   "text": "Fazia oito anos que o tio Osvaldo reformava aquela churrasqueira. E fazia oito anos que a família inteira ria dele.",
+   "start": 40.396,
+   "end": 49.068,
+   "file": "projects/ep01-domingo-de-churrasco/input/clips/n2b_c5dd28b19f.mp3"
   },
   {
    "id": "n3",
    "spk": "NARRADOR",
    "text": "E pela primeira vez na vida, ela não ri da piada do bunker.",
-   "start": 30.737,
-   "end": 34.995,
+   "start": 50.068,
+   "end": 54.326,
    "file": "projects/ep01-domingo-de-churrasco/input/clips/n3_4f324fefcb.mp3"
   },
   {
    "id": "n4",
    "spk": "NARRADOR",
    "text": "Lá fora, o céu fica branco demais pro meio-dia.",
-   "start": 36.895,
-   "end": 40.317,
+   "start": 56.226,
+   "end": 59.648,
    "file": "projects/ep01-domingo-de-churrasco/input/clips/n4_13d2436378.mp3"
   },
   {
    "id": "e2",
    "spk": "EDUARDO",
    "text": "O bunker é EMBAIXO DA CHURRASQUEIRA?!",
-   "start": 42.017,
-   "end": 44.342,
+   "start": 61.348,
+   "end": 63.673,
    "file": "projects/ep01-domingo-de-churrasco/input/clips/e2_b3b6b25c39.mp3"
   },
   {
    "id": "o2",
    "spk": "OSVALDO",
    "text": "Desce, Eduardo, discute depois!",
-   "start": 44.542,
-   "end": 46.658,
+   "start": 63.873,
+   "end": 65.989,
    "file": "projects/ep01-domingo-de-churrasco/input/clips/o2_38c2e8c0d9.mp3"
   },
   {
    "id": "n5",
    "spk": "NARRADOR",
    "text": "A piada de família virou a única coisa entre vocês e o fim do mundo.",
-   "start": 48.258,
-   "end": 53.352,
+   "start": 67.589,
+   "end": 72.683,
    "file": "projects/ep01-domingo-de-churrasco/input/clips/n5_eafa1ac21e.mp3"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "Segue a página pra não perder o episódio dois.",
+   "start": 77.583,
+   "end": 80.822,
+   "file": "projects/ep01-domingo-de-churrasco/input/clips/cta_426989b15f.mp3"
   }
  ]
 }

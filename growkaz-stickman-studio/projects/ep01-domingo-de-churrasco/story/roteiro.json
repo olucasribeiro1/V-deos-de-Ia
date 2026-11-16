@@ -1,24 +1,166 @@
 {
  "model": "eleven_multilingual_v2",
  "voices": {
-  "NARRADOR": { "id": "ZqE9vIHPcrC35dZv0Svu", "settings": { "stability": 0.45, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": true, "speed": 1.04 } },
-  "OSVALDO":  { "id": "vCoCktSILN9EF9KwhL6O", "settings": { "stability": 0.4, "similarity_boost": 0.8, "style": 0.5, "use_speaker_boost": true, "speed": 1.05 } },
-  "EDUARDO":  { "id": "IKne3meq5aSn9XLyUdCD", "settings": { "stability": 0.35, "similarity_boost": 0.75, "style": 0.6, "use_speaker_boost": true, "speed": 1.05 } },
-  "RAFAEL":   { "id": "TX3LPaxmHKxFdv7VOQHJ", "settings": { "stability": 0.3, "similarity_boost": 0.75, "style": 0.7, "use_speaker_boost": true, "speed": 1.08 } }
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true,
+    "speed": 1.04
+   }
+  },
+  "OSVALDO": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.5,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   }
+  },
+  "EDUARDO": {
+   "id": "IKne3meq5aSn9XLyUdCD",
+   "settings": {
+    "stability": 0.35,
+    "similarity_boost": 0.75,
+    "style": 0.6,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   }
+  },
+  "RAFAEL": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "settings": {
+    "stability": 0.3,
+    "similarity_boost": 0.75,
+    "style": 0.7,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   }
+  }
  },
  "lines": [
-  { "id": "n1a", "spk": "NARRADOR", "gap": 1.5, "text": "Era só mais um domingo." },
-  { "id": "n1b", "spk": "NARRADOR", "gap": 0.7, "text": "Até a mãe desligar o celular rápido demais quando o Eduardo entrou na cozinha." },
-  { "id": "r1",  "spk": "RAFAEL",   "gap": 0.6, "text": "Dá um pedaço aí, Eduardo, pelo amor de Deus!" },
-  { "id": "e1",  "spk": "EDUARDO",  "gap": 0.25, "text": "Para de correr atrás do Bilu com a carne, ele não é de ferro!" },
-  { "id": "n2",  "spk": "NARRADOR", "gap": 0.7, "text": "Mãe de biomédica tem esse problema: nunca sabe disfarçar quando algo tá errado." },
-  { "id": "o1",  "spk": "OSVALDO",  "gap": 1.5, "text": "Hoje. Agora. Todo mundo pro bunker, sem perguntas.", "settings": { "stability": 0.3, "style": 0.7 } },
-  { "id": "r2",  "spk": "RAFAEL",   "gap": 0.35, "text": "De novo essa palhaçada do bunker, tio?" },
-  { "id": "n3",  "spk": "NARRADOR", "gap": 1.0, "text": "E pela primeira vez na vida, ela não ri da piada do bunker.", "settings": { "stability": 0.5, "speed": 0.98 } },
-  { "id": "n4",  "spk": "NARRADOR", "gap": 1.9, "text": "Lá fora, o céu fica branco demais pro meio-dia.", "settings": { "stability": 0.5, "speed": 0.98 } },
-  { "id": "e2",  "spk": "EDUARDO",  "gap": 1.7, "text": "O bunker é EMBAIXO DA CHURRASQUEIRA?!", "settings": { "stability": 0.2, "style": 0.9 } },
-  { "id": "o2",  "spk": "OSVALDO",  "gap": 0.2, "text": "Desce, Eduardo, discute depois!", "settings": { "stability": 0.45, "style": 0.7 } },
-  { "id": "n5",  "spk": "NARRADOR", "gap": 1.6, "text": "A piada de família virou a única coisa entre vocês e o fim do mundo.", "settings": { "stability": 0.55, "speed": 0.96 } }
+  {
+   "id": "n1a",
+   "spk": "NARRADOR",
+   "gap": 1.5,
+   "text": "Era só mais um domingo."
+  },
+  {
+   "id": "n1b",
+   "spk": "NARRADOR",
+   "gap": 0.7,
+   "text": "Até a mãe desligar o celular rápido demais quando o Eduardo entrou na cozinha."
+  },
+  {
+   "id": "n1c",
+   "spk": "NARRADOR",
+   "gap": 0.55,
+   "text": "Nos últimos meses, ela andava estranha. Recusava todo convite. E o celular, sempre de cabeça pra baixo na mesa."
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "gap": 0.6,
+   "text": "Dá um pedaço aí, Eduardo, pelo amor de Deus!"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "gap": 0.25,
+   "text": "Para de correr atrás do Bilu com a carne, ele não é de ferro!"
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "gap": 0.7,
+   "text": "Mãe de biomédica tem esse problema: nunca sabe disfarçar quando algo tá errado."
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "gap": 1.5,
+   "text": "Hoje. Agora. Todo mundo pro bunker, sem perguntas.",
+   "settings": {
+    "stability": 0.3,
+    "style": 0.7
+   }
+  },
+  {
+   "id": "r2",
+   "spk": "RAFAEL",
+   "gap": 0.35,
+   "text": "De novo essa palhaçada do bunker, tio?"
+  },
+  {
+   "id": "n2b",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "Fazia oito anos que o tio Osvaldo reformava aquela churrasqueira. E fazia oito anos que a família inteira ria dele."
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "gap": 1.0,
+   "text": "E pela primeira vez na vida, ela não ri da piada do bunker.",
+   "settings": {
+    "stability": 0.5,
+    "speed": 0.98
+   }
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "gap": 1.9,
+   "text": "Lá fora, o céu fica branco demais pro meio-dia.",
+   "settings": {
+    "stability": 0.5,
+    "speed": 0.98
+   }
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "gap": 1.7,
+   "text": "O bunker é EMBAIXO DA CHURRASQUEIRA?!",
+   "settings": {
+    "stability": 0.2,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "Desce, Eduardo, discute depois!",
+   "settings": {
+    "stability": 0.45,
+    "style": 0.7
+   }
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "gap": 1.6,
+   "text": "A piada de família virou a única coisa entre vocês e o fim do mundo.",
+   "settings": {
+    "stability": 0.55,
+    "speed": 0.96
+   }
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 4.9,
+   "text": "Segue a página pra não perder o episódio dois.",
+   "settings": {
+    "stability": 0.45,
+    "speed": 1.02
+   }
+  }
  ],
- "tail": 4.6
+ "tail": 1.7
 }

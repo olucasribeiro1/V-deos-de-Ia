@@ -83,7 +83,7 @@ registerShot('s20', { draw(g, t, info) {
   const T = info.globalT, sh = shake(t, 9, 14), cam = { z: 1.06 + 0.1 * ease.out(t / info.dur), x: sh[0], y: sh[1] };
   blurLayer(g, 12, g => quintal(g, t, { z: 1.8, x: 330, y: 330 }, { gate: 1, white: 0.8, hatch: 1 }), cam, 0.6);
   FX.speedLines(g, t, { cx: 500, cy: 880, a: 0.3, inner: 400, color: '#ffffff' });
-  layer(g, cam, 1, g => bigFace(g, 500, 880, 310, { outfit: EDUARDO, expr: 'shocked', talk: talkAmount(T, 42.0, 44.4), look: [0.4, 0.3], rimSide: 1 }));
+  layer(g, cam, 1, g => bigFace(g, 500, 880, 310, { outfit: EDUARDO, expr: 'shocked', talk: talkAmount(T, ...info.L.e2), look: [0.4, 0.3], rimSide: 1 }));
   veil(g, '#ffffff', 0.12, 'lighter');
 }});
 
@@ -94,7 +94,7 @@ registerShot('s21', { draw(g, t, info) {
   layer(g, cam, 1, g => {
     const rd = prog(t, 0.1, 0.8); if (rd < 1) drawFigure(g, { x: lerp(640, 790, rd), y: GY + 10 + 60 * rd, s: 1.5 * RAFAEL_S * (1 - 0.35 * rd), facing: 1, outfit: RAFAEL, pose: POSES.crouch, expr: 'scared', alpha: 1 - rd, shadow: false });
     drawFigure(g, { x: lerp(420, 760, go), y: GY + 50, s: 1.55 * (1 - 0.3 * go), facing: 1, outfit: EDUARDO, pose: go > 0 ? run(t, 1.8) : breathe(POSES.shrug, t, 1, 1), expr: go > 0 ? 'scared' : 'confused', alpha: 1 - go * go });
-    drawFigure(g, { x: 590, y: GY + 20, s: 1.6, facing: -1, outfit: OSVALDO, pose: breathe(posesAt(t, [[0, 'crouch'], [0.2, 'point'], [1.3, 'wave']], 0.2), t, 1, 5), expr: 'angry', talk: talkAmount(T, 44.5, 46.7) });
+    drawFigure(g, { x: 590, y: GY + 20, s: 1.6, facing: -1, outfit: OSVALDO, pose: breathe(posesAt(t, [[0, 'crouch'], [0.2, 'point'], [1.3, 'wave']], 0.2), t, 1, 5), expr: 'angry', talk: talkAmount(T, ...info.L.o2) });
   });
   veil(g, '#ffffff', 0.16, 'lighter');
 }});
