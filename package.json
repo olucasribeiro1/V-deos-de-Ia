@@ -1,0 +1,36 @@
+{
+  "name": "videos-de-ia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vídeos animados 2D com Remotion + Three.js (legendas, áudio e renderização)",
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render MeuVideo out/video.mp4",
+    "render:all": "remotion render MeuVideo out/video.mp4 && remotion render Cena3D out/cena3d.mp4",
+    "still": "remotion still MeuVideo out/thumb.png --frame=30",
+    "typecheck": "tsc --noEmit",
+    "transcrever": "node scripts/transcrever.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@remotion/captions": "4.0.544",
+    "@remotion/cli": "4.0.544",
+    "@remotion/google-fonts": "4.0.544",
+    "@remotion/install-whisper-cpp": "4.0.544",
+    "@remotion/media": "4.0.544",
+    "@remotion/media-utils": "4.0.544",
+    "@remotion/shapes": "4.0.544",
+    "@remotion/three": "4.0.544",
+    "@remotion/transitions": "4.0.544",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "4.0.544",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "typescript": "^7.0.2"
+  }
+}
