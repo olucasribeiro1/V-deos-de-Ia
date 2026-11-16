@@ -1,0 +1,189 @@
+{
+ "duration": 112.894,
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "text": "[tenso] Duas e catorze da manhã. Alguma coisa arranha o alçapão. Devagar. Para. E arranha de novo.",
+   "start": 0.6,
+   "end": 7.15,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n1_85b3a2238e_t1.20.wav"
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "text": "[acordando, esperançoso] É o Bilu! Gente, é o Bilu! Ele achou a gente!",
+   "start": 7.35,
+   "end": 10.913,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/r1_1db9c0657b_t1.10.wav"
+  },
+  {
+   "id": "r2",
+   "spk": "RAFAEL",
+   "text": "[desesperado] Tio, abre! Só um pouquinho!",
+   "start": 11.063,
+   "end": 13.469,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/r2_33ad866b13_t1.10.wav"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "text": "[sussurrando, firme] Faz catorze horas que essa bomba caiu. Lá fora ainda tá fervendo de radiação. Ninguém abre.",
+   "start": 13.669,
+   "end": 19.281,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/o1_cd9f479979_t1.10.wav"
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "text": "[rápido] Regra do tio: antes de quarenta e oito horas, porta fechada. Com dois dias, a radiação cai pra um por cento. Antes disso... é suicídio.",
+   "start": 19.481,
+   "end": 26.091,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n2_4ddd8b8f26_t1.20.wav"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "text": "[intrigado] Então ele puxa o periscópio. Um cano, dois espelhos... e um olho no mundo lá fora.",
+   "start": 26.291,
+   "end": 32.1,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n3_d5aa8c96a7_t1.20.wav"
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "text": "[baixo] Nada. Só poeira.",
+   "start": 32.4,
+   "end": 34.293,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/o2_f3eefb37d4_t1.10.wav"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "text": "[tenso] O quintal parece outro planeta. Tudo cinza. Nenhum cachorro. E o arranhão... para.",
+   "start": 34.493,
+   "end": 40.574,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n4_9f9cd809ee_t1.20.wav"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "text": "[sarcástico] Ótimo. Agora eu nunca mais durmo.",
+   "start": 40.874,
+   "end": 43.861,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/e1_adda5d792c_t1.10.wav"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "text": "[nostálgico] Vocês cresceram ouvindo o avô Joaquim repetir a mesma piada, todo santo domingo.",
+   "start": 44.361,
+   "end": 49.295,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n5_7e8f4a5676_t1.20.wav"
+  },
+  {
+   "id": "av",
+   "spk": "AVO",
+   "text": "[rindo, debochado] Esse menino assistiu filme de zumbi demais!",
+   "start": 49.495,
+   "end": 53.204,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/av_59135cb08a.mp3"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "text": "[mais baixo] O tio passou a vida ouvindo isso. E nunca respondeu. Hoje, a piada dói um pouco diferente.",
+   "start": 53.504,
+   "end": 59.317,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n6_5954141913_t1.20.wav"
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "text": "[suspense, rápido] Dia dois. A mãe dorme pela primeira vez. E você faz o que filho nenhum devia fazer: abre a mochila dela.",
+   "start": 59.817,
+   "end": 65.76,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n7_c6bb714ebc_t1.20.wav"
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "text": "[tenso] Um crachá militar. A foto da sua mãe. Laboratório de Biossegurança. Acesso restrito. E um tablet... trancado.",
+   "start": 65.96,
+   "end": 73.626,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n8_f4f919aa67_t1.20.wav"
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "text": "[sussurrando, chocado] Biossegurança? Mãe... o que você fazia lá?",
+   "start": 73.826,
+   "end": 77.614,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/e2_a01ca5050c_t1.10.wav"
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "text": "[atrás dele, fria] Isso não é seu pra mexer, Eduardo.",
+   "start": 77.914,
+   "end": 80.318,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/m1_54b7c13737_t1.10.wav"
+  },
+  {
+   "id": "e3",
+   "spk": "EDUARDO",
+   "text": "[encarando, firme] Então me conta o que é, mãe.",
+   "start": 80.568,
+   "end": 82.32,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/e3_3dd4264f1d_t1.10.wav"
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "text": "[rápido] Ela pega o tablet de volta. As mãos tremendo. Rápido demais pra quem não tem nada a esconder.",
+   "start": 82.62,
+   "end": 87.14,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n9_79e2f24afd_t1.20.wav"
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "text": "[sussurrando] E é nesse silêncio que o arranhão volta. Só que agora... mais pesado. Arrastado.",
+   "start": 87.64,
+   "end": 93.522,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n10_4c82367bf7_t1.20.wav"
+  },
+  {
+   "id": "r3",
+   "spk": "RAFAEL",
+   "text": "[voz trêmula] É o Bilu... né? Me diz que é o Bilu.",
+   "start": 93.722,
+   "end": 96.779,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/r3_ca2cbd1829_t1.10.wav"
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "text": "[tenso] O tio volta pro periscópio. E dessa vez, ele não fala nada.",
+   "start": 97.079,
+   "end": 101.023,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n11_7efb4f193e_t1.20.wav"
+  },
+  {
+   "id": "n12",
+   "spk": "NARRADOR",
+   "text": "[sussurrando, lento] Porque cachorro nenhum tem dois metros de altura.",
+   "start": 101.623,
+   "end": 104.692,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/n12_63996fbfea_t1.20.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Segue a página pra ver o episódio quatro!",
+   "start": 109.092,
+   "end": 111.294,
+   "file": "projects/ep03-caixa-da-mamae/input/clips/cta_2693dab5e9_t1.20.wav"
+  }
+ ]
+}

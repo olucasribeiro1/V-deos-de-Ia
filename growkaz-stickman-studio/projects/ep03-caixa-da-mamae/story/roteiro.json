@@ -1,0 +1,38 @@
+{
+ "model": "eleven_v4",
+ "_nota": "Ep. 3 não diz o nome do projeto (pronúncia de 'Cérbero' pendente de confirmação). Mariana é biomédica.",
+ "voices": {
+  "NARRADOR": { "id": "ZqE9vIHPcrC35dZv0Svu", "tempo": 1.2, "settings": { "stability": 0.5, "similarity_boost": 0.8, "speed": 1.08 } },
+  "OSVALDO":  { "id": "vCoCktSILN9EF9KwhL6O", "tempo": 1.1, "settings": { "stability": 0.5, "similarity_boost": 0.8, "speed": 1.05 } },
+  "EDUARDO":  { "id": "IKne3meq5aSn9XLyUdCD", "tempo": 1.1, "settings": { "stability": 0.5, "similarity_boost": 0.75, "speed": 1.06 } },
+  "RAFAEL":   { "id": "TX3LPaxmHKxFdv7VOQHJ", "tempo": 1.1, "settings": { "stability": 0.5, "similarity_boost": 0.75, "speed": 1.1 } },
+  "MARIANA":  { "id": "EXAVITQu4vr4xnSDxMaL", "tempo": 1.1, "settings": { "stability": 0.5, "similarity_boost": 0.75, "speed": 1.0 } },
+  "AVO":      { "id": "HoWXGRJgqYolkEBcxmGm", "tempo": 1.0, "settings": { "stability": 0.5, "similarity_boost": 0.8, "speed": 0.95 } }
+ },
+ "lines": [
+  { "id": "n1",  "spk": "NARRADOR", "gap": 0.6, "text": "[tenso] Duas e catorze da manhã. Alguma coisa arranha o alçapão. Devagar. Para. E arranha de novo." },
+  { "id": "r1",  "spk": "RAFAEL",   "gap": 0.2, "text": "[acordando, esperançoso] É o Bilu! Gente, é o Bilu! Ele achou a gente!" },
+  { "id": "r2",  "spk": "RAFAEL",   "gap": 0.15, "text": "[desesperado] Tio, abre! Só um pouquinho!" },
+  { "id": "o1",  "spk": "OSVALDO",  "gap": 0.2, "text": "[sussurrando, firme] Faz catorze horas que essa bomba caiu. Lá fora ainda tá fervendo de radiação. Ninguém abre." },
+  { "id": "n2",  "spk": "NARRADOR", "gap": 0.2, "text": "[rápido] Regra do tio: antes de quarenta e oito horas, porta fechada. Com dois dias, a radiação cai pra um por cento. Antes disso... é suicídio." },
+  { "id": "n3",  "spk": "NARRADOR", "gap": 0.2, "text": "[intrigado] Então ele puxa o periscópio. Um cano, dois espelhos... e um olho no mundo lá fora." },
+  { "id": "o2",  "spk": "OSVALDO",  "gap": 0.3, "text": "[baixo] Nada. Só poeira." },
+  { "id": "n4",  "spk": "NARRADOR", "gap": 0.2, "text": "[tenso] O quintal parece outro planeta. Tudo cinza. Nenhum cachorro. E o arranhão... para." },
+  { "id": "e1",  "spk": "EDUARDO",  "gap": 0.3, "text": "[sarcástico] Ótimo. Agora eu nunca mais durmo." },
+  { "id": "n5",  "spk": "NARRADOR", "gap": 0.5, "text": "[nostálgico] Vocês cresceram ouvindo o avô Joaquim repetir a mesma piada, todo santo domingo." },
+  { "id": "av",  "spk": "AVO",      "gap": 0.2, "text": "[rindo, debochado] Esse menino assistiu filme de zumbi demais!" },
+  { "id": "n6",  "spk": "NARRADOR", "gap": 0.3, "text": "[mais baixo] O tio passou a vida ouvindo isso. E nunca respondeu. Hoje, a piada dói um pouco diferente." },
+  { "id": "n7",  "spk": "NARRADOR", "gap": 0.5, "text": "[suspense, rápido] Dia dois. A mãe dorme pela primeira vez. E você faz o que filho nenhum devia fazer: abre a mochila dela." },
+  { "id": "n8",  "spk": "NARRADOR", "gap": 0.2, "text": "[tenso] Um crachá militar. A foto da sua mãe. Laboratório de Biossegurança. Acesso restrito. E um tablet... trancado." },
+  { "id": "e2",  "spk": "EDUARDO",  "gap": 0.2, "text": "[sussurrando, chocado] Biossegurança? Mãe... o que você fazia lá?" },
+  { "id": "m1",  "spk": "MARIANA",  "gap": 0.3, "text": "[atrás dele, fria] Isso não é seu pra mexer, Eduardo." },
+  { "id": "e3",  "spk": "EDUARDO",  "gap": 0.25, "text": "[encarando, firme] Então me conta o que é, mãe." },
+  { "id": "n9",  "spk": "NARRADOR", "gap": 0.3, "text": "[rápido] Ela pega o tablet de volta. As mãos tremendo. Rápido demais pra quem não tem nada a esconder." },
+  { "id": "n10", "spk": "NARRADOR", "gap": 0.5, "text": "[sussurrando] E é nesse silêncio que o arranhão volta. Só que agora... mais pesado. Arrastado." },
+  { "id": "r3",  "spk": "RAFAEL",   "gap": 0.2, "text": "[voz trêmula] É o Bilu... né? Me diz que é o Bilu." },
+  { "id": "n11", "spk": "NARRADOR", "gap": 0.3, "text": "[tenso] O tio volta pro periscópio. E dessa vez, ele não fala nada." },
+  { "id": "n12", "spk": "NARRADOR", "gap": 0.6, "text": "[sussurrando, lento] Porque cachorro nenhum tem dois metros de altura." },
+  { "id": "cta", "spk": "NARRADOR", "gap": 4.4, "text": "[animado] Segue a página pra ver o episódio quatro!" }
+ ],
+ "tail": 1.6
+}

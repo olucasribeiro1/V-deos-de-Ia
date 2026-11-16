@@ -13,6 +13,7 @@ U = {"zero": 0, "um": 1, "uma": 1, "dois": 2, "duas": 2, "três": 3, "tres": 3, 
      "duzentos": 200, "trezentos": 300, "quatrocentos": 400, "quinhentos": 500, "mil": 1000}
 UNIDADES = {"hora", "horas", "dia", "dias", "semana", "semanas", "ano", "anos", "litro", "litros", "pessoa", "pessoas", "minuto", "minutos", "segundo", "segundos",
             "mês", "meses", "metro", "metros", "quilômetro", "quilômetros", "km", "vezes", "respirações", "latas", "galões", "graus", "mil", "milhões", "bilhões"}
+PARAR = {"anos", "para", "pela", "pelo", "depois", "antes", "vezes", "mais", "menos", "desde", "quando", "porque", "então", "aqui", "agora"}
 PREFIXO = {"hora", "dia", "episódio", "regra", "nível"}
 n = lambda w: re.sub(r"[^\w\-]+", "", w.lower())
 
@@ -32,7 +33,14 @@ def achar_numeros(words, dur=1.6):
         v = _num(w)
         if v is None: i += 1; continue
         j, total = i + 1, v
-        while j + 1 < len(words) and n(words[j]["word"]) == "e" and _num(n(words[j + 1]["word"])) is not None:   # vinte e dois
+        # horário falado: "duas e catorze da manhã" -> 2:14
+        if j + 3 < len(words) + 1 and j + 1 < len(words) and n(words[j]["word"]) == "e" and _num(n(words[j + 1]["word"])) is not None:
+            k2 = j + 2; mins = _num(n(words[j + 1]["word"]))
+            if k2 + 1 < len(words) and n(words[k2 + 1]["word"]) == "e" and k2 + 2 < len(words) and _num(n(words[k2 + 2]["word"])) is not None and mins % 10 == 0: mins += _num(n(words[k2 + 2]["word"])); k2 += 2
+            if k2 + 1 < len(words) and n(words[k2]["word"]) in ("da", "de") and n(words[k2 + 1]["word"]) in ("manhã", "manha", "tarde", "noite", "madrugada"):
+                out.append({"t": words[i]["start"], "str": f"{int(v)}:{int(mins):02d}"}); i = k2 + 2; continue
+        # composto: só junta "e" quando o primeiro é dezena/centena redonda ("vinte e dois", "cento e dez")
+        while j + 1 < len(words) and n(words[j]["word"]) == "e" and _num(n(words[j + 1]["word"])) is not None and total >= 20 and total % 10 == 0 and _num(n(words[j + 1]["word"])) < (10 if total < 100 else 100):
             total += _num(n(words[j + 1]["word"])); j += 2
         if j < len(words) and n(words[j]["word"]) == "mil" and total < 1000: total *= 1000; j += 1
         nxt = n(words[j]["word"]) if j < len(words) else ""; nxt2 = n(words[j + 1]["word"]) if j + 1 < len(words) else ""
@@ -46,7 +54,7 @@ def achar_numeros(words, dur=1.6):
         elif prev in PREFIXO: item["str"] = f"{prev.upper()} {s}"
         else:
             item["str"] = s
-            if nxt in UNIDADES: item["sub"] = re.sub(r"[^\wÀ-ú ]", "", words[j]["word"]).upper(); j += 1
+            if nxt in UNIDADES or (len(nxt) > 3 and nxt.isalpha() and nxt not in PARAR): item["sub"] = re.sub(r"[^\wÀ-ú ]", "", words[j]["word"]).upper(); j += 1
         out.append(item); i = j
     for k, it in enumerate(out):                                                         # não sobrepõe: corta antes do próximo
         nx = out[k + 1]["t"] if k + 1 < len(out) else 1e9; it["dur"] = round(max(0.6, min(dur, nx - it["t"] - 0.05)), 2)
