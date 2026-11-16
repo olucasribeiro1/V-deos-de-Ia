@@ -1,0 +1,149 @@
+{
+ "duration": 95.656,
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "text": "[rápido, tenso] Dia dezesseis. Dezessete. Vinte. Os passos voltam toda noite... e vão embora toda madrugada.",
+   "start": 0.6,
+   "end": 6.142,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/n1_9e5d1c9757_t1.20.wav"
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "text": "[tenso] Até que, no dia vinte e dois, o rádio chia com uma voz nova.",
+   "start": 6.342,
+   "end": 10.49,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/n2_6a195a144e_t1.20.wav"
+  },
+  {
+   "id": "rad",
+   "spk": "RADIO",
+   "text": "Atenção, sobreviventes da zona de contenção. Evacuação no estádio municipal. Dia trinta, meio-dia. Último helicóptero.",
+   "start": 10.79,
+   "end": 21.1,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/rad_2f2607f2d2_radio.wav"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "text": "[animado, nervoso] Estádio municipal... é a três quilômetros daqui!",
+   "start": 21.4,
+   "end": 24.316,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/e1_023f67ed2a_t1.10.wav"
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "text": "[séria] Três quilômetros a pé, de dia, com aquela coisa caçando calor. A gente brilha feito uma fogueira.",
+   "start": 24.516,
+   "end": 30.991,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/m1_9809142023_t1.10.wav"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "text": "[devagar, com um sorriso] Então a gente dá pra ela uma fogueira maior.",
+   "start": 31.291,
+   "end": 34.282,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/o1_205cd78b85_t1.10.wav"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "text": "[empolgado, rápido] E é aí que a piada da família vira arma. A churrasqueira. O depósito de carvão. Oito anos de carvão estocado.",
+   "start": 34.482,
+   "end": 40.493,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/n3_7d8c84b3df_t1.20.wav"
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "text": "[planejando, rápido] No dia trinta, a gente acende tudo. Brasa no máximo, gerador ligado do lado de fora, esquentando. Ele vem pro calor. E a gente vai pro outro lado.",
+   "start": 40.693,
+   "end": 47.89,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/o2_fb27732054_t1.10.wav"
+  },
+  {
+   "id": "m2",
+   "spk": "MARIANA",
+   "text": "[concordando] Ele sempre vai na fonte mais quente. Mais quente que quatro corpos... e um cachorro.",
+   "start": 48.09,
+   "end": 53.987,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/m2_02344e37de_t1.10.wav"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "text": "[rápido, didático] Uma semana de preparação. Mochila de fuga pra cada um: água, comida, lanterna, rádio, remédio, documento... e um apito. Apito é o jeito mais barato de pedir socorro sem gastar a voz.",
+   "start": 54.287,
+   "end": 63.554,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/n4_9d29eb1ff3_t1.20.wav"
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "text": "[sério] Posso levar o guaraná?",
+   "start": 63.804,
+   "end": 65.339,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/r1_98d7d268ac_t1.10.wav"
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "text": "[seco] Não.",
+   "start": 65.489,
+   "end": 66.511,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/o3_8776fa76fe_t1.10.wav"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "text": "[rápido] Rota marcada no mapa, longe da avenida. Sinal combinado: um apito, para. Dois apitos, corre.",
+   "start": 66.761,
+   "end": 72.046,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/n5_999d5502f5_t1.20.wav"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "text": "[mais lento, tenso] Mas na última noite, o tio faz a conta que ninguém queria fazer.",
+   "start": 72.546,
+   "end": 76.832,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/n6_a5566c2eaa_t1.20.wav"
+  },
+  {
+   "id": "o4",
+   "spk": "OSVALDO",
+   "text": "[calmo, decidido] A brasa apaga em meia hora se ninguém alimentar. Alguém tem que ficar.",
+   "start": 77.132,
+   "end": 81.503,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/o4_f3112d0760_t1.10.wav"
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "text": "[desesperado] Tio, não...",
+   "start": 81.753,
+   "end": 83.213,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/e2_473d07e02c_t1.10.wav"
+  },
+  {
+   "id": "o5",
+   "spk": "OSVALDO",
+   "text": "[calmo, emocionado] Eu passei a vida esperando esse dia, Eduardo. Me deixa terminar o serviço.",
+   "start": 83.513,
+   "end": 87.516,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/o5_644a8be9b9_t1.10.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Segue a página pra ver o último episódio!",
+   "start": 91.916,
+   "end": 94.056,
+   "file": "projects/ep09-o-plano-do-tio/input/clips/cta_224757d501_t1.20.wav"
+  }
+ ]
+}

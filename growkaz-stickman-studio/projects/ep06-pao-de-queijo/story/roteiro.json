@@ -1,0 +1,179 @@
+{
+ "model": "eleven_v4",
+ "_nota": "Ep. 6. Dia 14 (336 h, regra 7-10 ~0,1%). Descontaminação CDC: roupa de fora até 90%, sabão e xampu, sem condicionador; pets também.",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.2,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  },
+  "OSVALDO": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  },
+  "EDUARDO": {
+   "id": "IKne3meq5aSn9XLyUdCD",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.06
+   }
+  },
+  "RAFAEL": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.1
+   }
+  },
+  "MARIANA": {
+   "id": "EXAVITQu4vr4xnSDxMaL",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.0
+   }
+  },
+  "RADIO": {
+   "id": "HoWXGRJgqYolkEBcxmGm",
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.8,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[animado, rápido] Dia catorze. Trezentas e trinta e seis horas depois da bomba. Pela regra do tio, a radiação lá fora caiu pra zero vírgula um por cento."
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[instrutor, firme] Protocolo de saída. Capa de chuva, máscara, luva, saco plástico no pé. Nenhum pedaço de pele pra fora. Vinte minutos. Nem um a mais."
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido] Vão o tio, o Eduardo... e o Rafael, que se recusou a ficar."
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "gap": 0.2,
+   "text": "[decidido] Se for pra arriscar a vida, eu quero pelo menos o pão de queijo do freezer."
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "gap": 0.15,
+   "text": "[incrédulo] Rafael, o mundo pode ter acabado."
+  },
+  {
+   "id": "r2",
+   "spk": "RAFAEL",
+   "gap": 0.15,
+   "text": "[sério] Mais um motivo."
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "gap": 0.4,
+   "text": "[tenso] O alçapão abre pela primeira vez em duas semanas. O quintal tá irreconhecível. Tudo coberto de uma poeira cinza, fina feito talco."
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido] Missão um: mangueira na caixa d'água, direto pros galões. Missão dois: o freezer."
+  },
+  {
+   "id": "r3",
+   "spk": "RAFAEL",
+   "gap": 0.2,
+   "text": "[desolado] Meu pão de queijo... virou uma pedra mole!"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[surpreso] E aí... um latido. Fraco. Debaixo da casa."
+  },
+  {
+   "id": "r4",
+   "spk": "RAFAEL",
+   "gap": 0.15,
+   "text": "[emocionado, gritando] BILU!"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[emocionado, rápido] Magro, sujo, cinza da cabeça ao rabo... mas vivo."
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "gap": 0.4,
+   "text": "[tenso] Só que no muro, do lado da churrasqueira... marcas de garra. Fundas. Do chão até quase dois metros."
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[sussurrando, urgente] Ninguém corre. Ninguém grita. Pra dentro. Agora."
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[didático, rápido] Na volta, protocolo: a roupa de fora fica do lado de fora. Só isso tira até noventa por cento da poeira radioativa. Depois, banho com sabão e xampu. Condicionador não, porque gruda a poeira no cabelo. E o Bilu? Banho também."
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "gap": 0.4,
+   "text": "[tenso] No meio da correria, a mochila da mãe cai da escada. Papéis do Exército se espalham pelo chão. Projeto Cérebro, em letras vermelhas. E um desenho... de uma coisa que não devia existir."
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "gap": 0.3,
+   "text": "[sussurrando] Mãe... o que é isso?"
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "gap": 0.4,
+   "text": "[lento, pesado] E dessa vez, ela não tenta esconder. Ela só olha pro filho... como quem finalmente desiste."
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 4.4,
+   "text": "[animado] Segue a página pra ver o episódio sete!"
+  }
+ ],
+ "tail": 1.6
+}

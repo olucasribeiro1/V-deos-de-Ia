@@ -1,0 +1,157 @@
+{
+ "duration": 104.67,
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "text": "[animado, rápido] Dia catorze. Trezentas e trinta e seis horas depois da bomba. Pela regra do tio, a radiação lá fora caiu pra zero vírgula um por cento.",
+   "start": 0.6,
+   "end": 7.476,
+   "file": "projects/ep06-pao-de-queijo/input/clips/n1_e7cd30d900_t1.20.wav"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "text": "[instrutor, firme] Protocolo de saída. Capa de chuva, máscara, luva, saco plástico no pé. Nenhum pedaço de pele pra fora. Vinte minutos. Nem um a mais.",
+   "start": 7.676,
+   "end": 16.41,
+   "file": "projects/ep06-pao-de-queijo/input/clips/o1_2f4fdb1101_t1.10.wav"
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "text": "[rápido] Vão o tio, o Eduardo... e o Rafael, que se recusou a ficar.",
+   "start": 16.61,
+   "end": 19.883,
+   "file": "projects/ep06-pao-de-queijo/input/clips/n2_1830f78c55_t1.20.wav"
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "text": "[decidido] Se for pra arriscar a vida, eu quero pelo menos o pão de queijo do freezer.",
+   "start": 20.083,
+   "end": 24.012,
+   "file": "projects/ep06-pao-de-queijo/input/clips/r1_e8a59b8e94_t1.10.wav"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "text": "[incrédulo] Rafael, o mundo pode ter acabado.",
+   "start": 24.162,
+   "end": 26.929,
+   "file": "projects/ep06-pao-de-queijo/input/clips/e1_f79fb703b6_t1.10.wav"
+  },
+  {
+   "id": "r2",
+   "spk": "RAFAEL",
+   "text": "[sério] Mais um motivo.",
+   "start": 27.079,
+   "end": 28.54,
+   "file": "projects/ep06-pao-de-queijo/input/clips/r2_3d20e4f0c2_t1.10.wav"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "text": "[tenso] O alçapão abre pela primeira vez em duas semanas. O quintal tá irreconhecível. Tudo coberto de uma poeira cinza, fina feito talco.",
+   "start": 28.94,
+   "end": 36.949,
+   "file": "projects/ep06-pao-de-queijo/input/clips/n3_12e7b3d4d2_t1.20.wav"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "text": "[rápido] Missão um: mangueira na caixa d'água, direto pros galões. Missão dois: o freezer.",
+   "start": 37.149,
+   "end": 41.63,
+   "file": "projects/ep06-pao-de-queijo/input/clips/n4_f5038541e1_t1.20.wav"
+  },
+  {
+   "id": "r3",
+   "spk": "RAFAEL",
+   "text": "[desolado] Meu pão de queijo... virou uma pedra mole!",
+   "start": 41.83,
+   "end": 45.046,
+   "file": "projects/ep06-pao-de-queijo/input/clips/r3_ac3103f8a6_t1.10.wav"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "text": "[surpreso] E aí... um latido. Fraco. Debaixo da casa.",
+   "start": 45.346,
+   "end": 48.892,
+   "file": "projects/ep06-pao-de-queijo/input/clips/n5_6c0b300d4b_t1.20.wav"
+  },
+  {
+   "id": "r4",
+   "spk": "RAFAEL",
+   "text": "[emocionado, gritando] BILU!",
+   "start": 49.042,
+   "end": 50.18,
+   "file": "projects/ep06-pao-de-queijo/input/clips/r4_4d116c3035_t1.10.wav"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "text": "[emocionado, rápido] Magro, sujo, cinza da cabeça ao rabo... mas vivo.",
+   "start": 50.38,
+   "end": 54.118,
+   "file": "projects/ep06-pao-de-queijo/input/clips/n6_216b3dc482_t1.20.wav"
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "text": "[tenso] Só que no muro, do lado da churrasqueira... marcas de garra. Fundas. Do chão até quase dois metros.",
+   "start": 54.518,
+   "end": 61.461,
+   "file": "projects/ep06-pao-de-queijo/input/clips/n7_3470879b8a_t1.20.wav"
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "text": "[sussurrando, urgente] Ninguém corre. Ninguém grita. Pra dentro. Agora.",
+   "start": 61.661,
+   "end": 65.375,
+   "file": "projects/ep06-pao-de-queijo/input/clips/o2_e8085c8ae5_t1.10.wav"
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "text": "[didático, rápido] Na volta, protocolo: a roupa de fora fica do lado de fora. Só isso tira até noventa por cento da poeira radioativa. Depois, banho com sabão e xampu. Condicionador não, porque gruda a poeira no cabelo. E o Bilu? Banho também.",
+   "start": 65.675,
+   "end": 76.744,
+   "file": "projects/ep06-pao-de-queijo/input/clips/n8_610ab09ad4_t1.20.wav"
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "text": "[tenso] No meio da correria, a mochila da mãe cai da escada. Papéis do Exército se espalham pelo chão. Projeto Cérebro, em letras vermelhas. E um desenho... de uma coisa que não devia existir.",
+   "start": 77.144,
+   "end": 87.479,
+   "file": "projects/ep06-pao-de-queijo/input/clips/n9_b9c135ceee_t1.20.wav"
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "text": "[sussurrando] Mãe... o que é isso?",
+   "start": 87.779,
+   "end": 89.717,
+   "file": "projects/ep06-pao-de-queijo/input/clips/e2_77382b8e80_t1.10.wav"
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "text": "[lento, pesado] E dessa vez, ela não tenta esconder. Ela só olha pro filho... como quem finalmente desiste.",
+   "start": 90.117,
+   "end": 96.461,
+   "file": "projects/ep06-pao-de-queijo/input/clips/n10_989cc5b863_t1.20.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Segue a página pra ver o episódio sete!",
+   "start": 100.861,
+   "end": 103.07,
+   "file": "projects/ep06-pao-de-queijo/input/clips/cta_3a13f5c1f9_t1.20.wav"
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "duration": 92.774,
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "text": "[tenso, rápido] Dia trinta. Onze e meia da manhã. Trinta minutos pro último helicóptero.",
+   "start": 0.6,
+   "end": 4.271,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/n1_5f25df9b95_t1.20.wav"
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "text": "[rápido] O tio enche a churrasqueira com oito anos de carvão. Liga o gerador do lado de fora. E acende.",
+   "start": 4.471,
+   "end": 9.068,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/n2_04b88ab1fb_t1.20.wav"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "text": "[firme, emocionado] Vai. Um apito, para. Dois, corre. E não olha pra trás.",
+   "start": 9.368,
+   "end": 14.251,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/o1_8cedd53e6f_t1.10.wav"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "text": "[tenso, rápido] Três pessoas e um cachorro, rua abaixo, longe da avenida. Na metade do caminho... a mãe para. Um apito.",
+   "start": 14.551,
+   "end": 19.768,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/n3_c80655c91a_t1.20.wav"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "text": "[sussurrando, lento] Do outro lado da rua, uma sombra alta atravessa a esquina. Devagar. Farejando o ar. E vira a cabeça na direção de vocês.",
+   "start": 20.068,
+   "end": 28.4,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/n4_196d65af3b_t1.20.wav"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "text": "[tenso, rápido] Lá atrás, a fumaça da churrasqueira sobe. Preta. Quente. Enorme. A coisa gira... e corre pro calor.",
+   "start": 28.7,
+   "end": 34.714,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/n5_cdadf3d7cc_t1.20.wav"
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "text": "[gritando] Dois apitos! Corre!",
+   "start": 34.864,
+   "end": 36.76,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/m1_61c90343c2_t1.10.wav"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "text": "[rápido, empolgado] O estádio aparece. As hélices já girando. Um minuto. Trinta segundos. A porta começa a fechar.",
+   "start": 36.96,
+   "end": 42.244,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/n6_49f61b4457_t1.20.wav"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "text": "[desesperado, gritando] Cadê o tio?!",
+   "start": 42.394,
+   "end": 43.776,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/e1_055105a7fc_t1.10.wav"
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "text": "[aliviado, emocionado] E pelo portão do estádio, coberto de fuligem da cabeça aos pés, com um espeto de churrasco na mão... vem o tio Osvaldo.",
+   "start": 44.176,
+   "end": 50.789,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/n7_017419b6a2_t1.20.wav"
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "text": "[ofegante, rindo] Eu falei que esse bunker ia servir pra alguma coisa.",
+   "start": 51.089,
+   "end": 55.166,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/o2_877e6946ab_t1.10.wav"
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "text": "[chorando e rindo] O vô tinha razão, tio. Você assistiu filme de zumbi demais.",
+   "start": 55.466,
+   "end": 60.051,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/e2_8e6d6ced2b_t1.10.wav"
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "text": "[sorrindo] E ainda bem.",
+   "start": 60.251,
+   "end": 62.189,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/o3_ef0898c9a9_t1.10.wav"
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "text": "[didático, rápido] Trinta dias. Cinco regras que salvaram essa família: abrigo primeiro. Regra sete-dez. Água de beber não se raciona. Gerador só do lado de fora. E a roupa de fora fica do lado de fora.",
+   "start": 62.689,
+   "end": 72.886,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/n8_57fc900950_t1.20.wav"
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "text": "[sussurrando] Lá embaixo, no quintal vazio, a brasa ainda queima. E no meio das cinzas... alguma coisa se mexe.",
+   "start": 73.486,
+   "end": 80.161,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/n9_c3989fc85e_t1.20.wav"
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "text": "[grave] A contenção falhou de novo.",
+   "start": 80.561,
+   "end": 82.7,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/n10_81373b2863_t1.20.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Fim da primeira temporada! Segue a página e comenta: você teria escutado o tio?",
+   "start": 86.9,
+   "end": 91.174,
+   "file": "projects/ep10-a-ultima-brasa/input/clips/cta_843c1fab40_t1.20.wav"
+  }
+ ]
+}

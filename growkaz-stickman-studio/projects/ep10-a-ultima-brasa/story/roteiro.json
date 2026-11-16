@@ -1,0 +1,156 @@
+{
+ "model": "eleven_v4",
+ "_nota": "Ep. 10 (final). Dia 30. Fuga, isca de calor, estádio, tio chega no fim. Revisão das 5 regras. Gancho: a contenção falhou de novo.",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.2,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  },
+  "OSVALDO": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  },
+  "EDUARDO": {
+   "id": "IKne3meq5aSn9XLyUdCD",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.06
+   }
+  },
+  "RAFAEL": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.1
+   }
+  },
+  "MARIANA": {
+   "id": "EXAVITQu4vr4xnSDxMaL",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.0
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[tenso, rápido] Dia trinta. Onze e meia da manhã. Trinta minutos pro último helicóptero."
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido] O tio enche a churrasqueira com oito anos de carvão. Liga o gerador do lado de fora. E acende."
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "gap": 0.3,
+   "text": "[firme, emocionado] Vai. Um apito, para. Dois, corre. E não olha pra trás."
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[tenso, rápido] Três pessoas e um cachorro, rua abaixo, longe da avenida. Na metade do caminho... a mãe para. Um apito."
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[sussurrando, lento] Do outro lado da rua, uma sombra alta atravessa a esquina. Devagar. Farejando o ar. E vira a cabeça na direção de vocês."
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[tenso, rápido] Lá atrás, a fumaça da churrasqueira sobe. Preta. Quente. Enorme. A coisa gira... e corre pro calor."
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "gap": 0.15,
+   "text": "[gritando] Dois apitos! Corre!"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido, empolgado] O estádio aparece. As hélices já girando. Um minuto. Trinta segundos. A porta começa a fechar."
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "gap": 0.15,
+   "text": "[desesperado, gritando] Cadê o tio?!"
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "gap": 0.4,
+   "text": "[aliviado, emocionado] E pelo portão do estádio, coberto de fuligem da cabeça aos pés, com um espeto de churrasco na mão... vem o tio Osvaldo."
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "gap": 0.3,
+   "text": "[ofegante, rindo] Eu falei que esse bunker ia servir pra alguma coisa."
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "gap": 0.3,
+   "text": "[chorando e rindo] O vô tinha razão, tio. Você assistiu filme de zumbi demais."
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[sorrindo] E ainda bem."
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "gap": 0.5,
+   "text": "[didático, rápido] Trinta dias. Cinco regras que salvaram essa família: abrigo primeiro. Regra sete-dez. Água de beber não se raciona. Gerador só do lado de fora. E a roupa de fora fica do lado de fora."
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[sussurrando] Lá embaixo, no quintal vazio, a brasa ainda queima. E no meio das cinzas... alguma coisa se mexe."
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "gap": 0.4,
+   "text": "[grave] A contenção falhou de novo."
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 4.2,
+   "text": "[animado] Fim da primeira temporada! Segue a página e comenta: você teria escutado o tio?"
+  }
+ ],
+ "tail": 1.6
+}

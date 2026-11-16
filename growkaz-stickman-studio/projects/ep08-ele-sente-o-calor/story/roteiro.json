@@ -1,0 +1,173 @@
+{
+ "model": "eleven_v4",
+ "_nota": "Ep. 8. Dia 15 noite. Disciplina de abrigo: luz, som, cheiro; calor do corpo (todos juntos, cobertas).",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.2,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  },
+  "OSVALDO": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  },
+  "EDUARDO": {
+   "id": "IKne3meq5aSn9XLyUdCD",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.06
+   }
+  },
+  "RAFAEL": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.1
+   }
+  },
+  "MARIANA": {
+   "id": "EXAVITQu4vr4xnSDxMaL",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.0
+   }
+  },
+  "RADIO": {
+   "id": "HoWXGRJgqYolkEBcxmGm",
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.8,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[sussurrando, rápido] Os passos param bem em cima de vocês. E tudo fica quieto demais."
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[sussurrando] Ninguém se mexe. Ninguém fala."
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[sussurrando, irônico] Nem o Rafael, que nunca ficou quieto um minuto na vida inteira."
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "gap": 0.4,
+   "text": "[tenso, lento] Alguma coisa testa o alçapão. Devagar. Como quem sabe exatamente o que está fazendo."
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "gap": 0.3,
+   "text": "[num fio de voz] Ele sente o calor. Do gerador, da churrasqueira... da gente. Foi pra isso que ele veio."
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[sussurrando, urgente] Então a gente esfria. Tudo. Agora."
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[rápido, sussurrado] Gerador, desligado. Lampião, apagado. Rádio, sem pilha. Em dez segundos, o bunker vira um buraco escuro e frio."
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[didático, baixo, rápido] Disciplina de abrigo: sem luz, sem barulho, sem cheiro de comida. E pra não congelar no escuro, todo mundo junto, debaixo das mesmas cobertas. O corpo de um esquenta o do outro."
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "gap": 0.4,
+   "text": "[sussurrando, choroso] Tio... eu tô com fome."
+  },
+  {
+   "id": "o4",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[sussurrando, bravo] Agora não, Rafael."
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "gap": 0.4,
+   "text": "[tenso] Lá em cima, as garras arranham a chapa. Uma vez. Duas. Três."
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "gap": 0.3,
+   "text": "[sussurrando, desesperado] Tio, se isso abrir..."
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[sussurrando, firme] Então a gente faz o que eu treinei a vida toda pra fazer."
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[emocionado, baixo] Pela primeira vez, a família toda se move junto, sem precisar combinar. O tio na escada, com uma barra de ferro. O Eduardo segurando o irmão. A mãe com a mão no rádio."
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[lento] E então... nada. Silêncio."
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[lento, grave] Uma hora. Duas. Os passos vão embora, arrastados, pro lado da rua."
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[sussurrando, encerramento] E foi nesse silêncio que você entendeu: a bomba nunca foi o fim da história. Foi só o primeiro aviso."
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 4.4,
+   "text": "[animado] Segue a página pra ver o episódio nove!"
+  }
+ ],
+ "tail": 1.6
+}

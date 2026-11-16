@@ -1,0 +1,174 @@
+{
+ "model": "eleven_v4",
+ "_nota": "Ep. 9. Dias 16-29. Evacuação dia 30 no estádio (3 km). Isca de calor: churrasqueira + gerador fora. Mochila de fuga com apito (Ready.gov).",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.2,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  },
+  "OSVALDO": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  },
+  "EDUARDO": {
+   "id": "IKne3meq5aSn9XLyUdCD",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.06
+   }
+  },
+  "RAFAEL": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.1
+   }
+  },
+  "MARIANA": {
+   "id": "EXAVITQu4vr4xnSDxMaL",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.0
+   }
+  },
+  "RADIO": {
+   "id": "HoWXGRJgqYolkEBcxmGm",
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.8,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[rápido, tenso] Dia dezesseis. Dezessete. Vinte. Os passos voltam toda noite... e vão embora toda madrugada."
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[tenso] Até que, no dia vinte e dois, o rádio chia com uma voz nova."
+  },
+  {
+   "id": "rad",
+   "spk": "RADIO",
+   "gap": 0.3,
+   "text": "Atenção, sobreviventes da zona de contenção. Evacuação no estádio municipal. Dia trinta, meio-dia. Último helicóptero.",
+   "fx": "radio"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "gap": 0.3,
+   "text": "[animado, nervoso] Estádio municipal... é a três quilômetros daqui!"
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "gap": 0.2,
+   "text": "[séria] Três quilômetros a pé, de dia, com aquela coisa caçando calor. A gente brilha feito uma fogueira."
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "gap": 0.3,
+   "text": "[devagar, com um sorriso] Então a gente dá pra ela uma fogueira maior."
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[empolgado, rápido] E é aí que a piada da família vira arma. A churrasqueira. O depósito de carvão. Oito anos de carvão estocado."
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[planejando, rápido] No dia trinta, a gente acende tudo. Brasa no máximo, gerador ligado do lado de fora, esquentando. Ele vem pro calor. E a gente vai pro outro lado."
+  },
+  {
+   "id": "m2",
+   "spk": "MARIANA",
+   "gap": 0.2,
+   "text": "[concordando] Ele sempre vai na fonte mais quente. Mais quente que quatro corpos... e um cachorro."
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[rápido, didático] Uma semana de preparação. Mochila de fuga pra cada um: água, comida, lanterna, rádio, remédio, documento... e um apito. Apito é o jeito mais barato de pedir socorro sem gastar a voz."
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "gap": 0.25,
+   "text": "[sério] Posso levar o guaraná?"
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "gap": 0.15,
+   "text": "[seco] Não."
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "gap": 0.25,
+   "text": "[rápido] Rota marcada no mapa, longe da avenida. Sinal combinado: um apito, para. Dois apitos, corre."
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "gap": 0.5,
+   "text": "[mais lento, tenso] Mas na última noite, o tio faz a conta que ninguém queria fazer."
+  },
+  {
+   "id": "o4",
+   "spk": "OSVALDO",
+   "gap": 0.3,
+   "text": "[calmo, decidido] A brasa apaga em meia hora se ninguém alimentar. Alguém tem que ficar."
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "gap": 0.25,
+   "text": "[desesperado] Tio, não..."
+  },
+  {
+   "id": "o5",
+   "spk": "OSVALDO",
+   "gap": 0.3,
+   "text": "[calmo, emocionado] Eu passei a vida esperando esse dia, Eduardo. Me deixa terminar o serviço."
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 4.4,
+   "text": "[animado] Segue a página pra ver o último episódio!"
+  }
+ ],
+ "tail": 1.6
+}

@@ -10,11 +10,11 @@ import re
 U = {"zero": 0, "um": 1, "uma": 1, "dois": 2, "duas": 2, "três": 3, "tres": 3, "quatro": 4, "cinco": 5, "seis": 6, "sete": 7, "oito": 8, "nove": 9,
      "dez": 10, "onze": 11, "doze": 12, "treze": 13, "catorze": 14, "quatorze": 14, "quinze": 15, "dezesseis": 16, "dezessete": 17, "dezoito": 18, "dezenove": 19,
      "vinte": 20, "trinta": 30, "quarenta": 40, "cinquenta": 50, "sessenta": 60, "setenta": 70, "oitenta": 80, "noventa": 90, "cem": 100, "cento": 100,
-     "duzentos": 200, "trezentos": 300, "quatrocentos": 400, "quinhentos": 500, "mil": 1000}
+     "duzentos": 200, "trezentos": 300, "quatrocentos": 400, "quinhentos": 500, "duzentas": 200, "trezentas": 300, "quatrocentas": 400, "quinhentas": 500, "seiscentos": 600, "seiscentas": 600, "setecentos": 700, "oitocentos": 800, "novecentos": 900, "mil": 1000}
 UNIDADES = {"hora", "horas", "dia", "dias", "semana", "semanas", "ano", "anos", "litro", "litros", "pessoa", "pessoas", "minuto", "minutos", "segundo", "segundos",
             "mês", "meses", "metro", "metros", "quilômetro", "quilômetros", "km", "vezes", "respirações", "latas", "galões", "graus", "mil", "milhões", "bilhões"}
 PARAR = {"anos", "para", "pela", "pelo", "depois", "antes", "vezes", "mais", "menos", "desde", "quando", "porque", "então", "aqui", "agora"}
-PREFIXO = {"hora", "dia", "episódio", "regra", "nível"}
+PREFIXO = {"hora", "dia", "episódio", "regra", "nível", "missão", "fase", "passo"}
 n = lambda w: re.sub(r"[^\w\-]+", "", w.lower())
 
 
@@ -43,18 +43,20 @@ def achar_numeros(words, dur=1.6):
         while j + 1 < len(words) and n(words[j]["word"]) == "e" and _num(n(words[j + 1]["word"])) is not None and total >= 20 and total % 10 == 0 and _num(n(words[j + 1]["word"])) < (10 if total < 100 else 100):
             total += _num(n(words[j + 1]["word"])); j += 2
         if j < len(words) and n(words[j]["word"]) == "mil" and total < 1000: total *= 1000; j += 1
+        if j + 1 < len(words) and n(words[j]["word"]) == "vírgula" and _num(n(words[j + 1]["word"])) is not None:   # zero vírgula um -> 0,1
+            dec = int(_num(n(words[j + 1]["word"]))); total = float(f"{int(total)}.{dec}"); j += 2
         nxt = n(words[j]["word"]) if j < len(words) else ""; nxt2 = n(words[j + 1]["word"]) if j + 1 < len(words) else ""
         prev = n(words[i - 1]["word"]) if i > 0 else ""
         is_um = w in ("um", "uma") and j == i + 1
         pct = nxt == "por" and nxt2 == "cento"
-        if is_um and not pct: i += 1; continue
+        if is_um and not pct and prev not in PREFIXO: i += 1; continue
         s = (f"{total:g}").replace(".", ",")
         item = {"t": words[i]["start"]}
         if pct: item["str"] = s + "%"; j += 2
         elif prev in PREFIXO: item["str"] = f"{prev.upper()} {s}"
         else:
             item["str"] = s
-            if nxt in UNIDADES or (len(nxt) > 3 and nxt.isalpha() and nxt not in PARAR): item["sub"] = re.sub(r"[^\wÀ-ú ]", "", words[j]["word"]).upper(); j += 1
+            if (nxt in UNIDADES or (len(nxt) > 3 and nxt.isalpha() and nxt not in PARAR)) and _num(nxt) is None: item["sub"] = re.sub(r"[^\wÀ-ú ]", "", words[j]["word"]).upper(); j += 1
         out.append(item); i = j
     for k, it in enumerate(out):                                                         # não sobrepõe: corta antes do próximo
         nx = out[k + 1]["t"] if k + 1 < len(out) else 1e9; it["dur"] = round(max(0.6, min(dur, nx - it["t"] - 0.05)), 2)

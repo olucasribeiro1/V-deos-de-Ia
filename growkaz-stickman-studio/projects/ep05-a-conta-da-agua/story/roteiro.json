@@ -1,0 +1,192 @@
+{
+ "model": "eleven_v4",
+ "_nota": "Ep. 5. Projeto Cérebro. Mariana é biomédica. Dica: não racionar água de beber (FEMA), 4 L/pessoa/dia, caixa d'água tampada.",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.2,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  },
+  "OSVALDO": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  },
+  "EDUARDO": {
+   "id": "IKne3meq5aSn9XLyUdCD",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.06
+   }
+  },
+  "RAFAEL": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.1
+   }
+  },
+  "MARIANA": {
+   "id": "EXAVITQu4vr4xnSDxMaL",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.0
+   }
+  },
+  "RADIO": {
+   "id": "HoWXGRJgqYolkEBcxmGm",
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.8,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[rápido] Dia oito. Todo dia de manhã, o tio faz a conta da água. E hoje... a conta não fecha."
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[desconfiado] Tá faltando água. Muita água."
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[tenso] Atrás da prateleira, o chão tá molhado. Três galões rachados desde a onda de choque da bomba. Pingando... há oito dias."
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "gap": 0.25,
+   "text": "[culpado, rápido] Eu lavei o cabelo duas vezes... isso não conta, né?"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "gap": 0.25,
+   "text": "[rápido] Sobraram cem litros. Quatro pessoas, quatro litros por dia cada. Dá seis dias."
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[sério] Então a partir de hoje, meio copo por pessoa."
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "gap": 0.15,
+   "text": "[firme] Não. Água de beber não se raciona. Desidratação derruba mais rápido que fome. Corta o banho, não o copo."
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "gap": 0.25,
+   "text": "[didático, rápido] Regra dos manuais de emergência: uns quatro litros por pessoa, por dia. Metade pra beber, metade pra comida e higiene. Na crise, você corta o banho... nunca a água de beber."
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "gap": 0.3,
+   "text": "[pensando] Seis dias... Dia catorze. O dia em que a radiação lá fora cai pra zero vírgula um por cento."
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "gap": 0.2,
+   "text": "[animado] E a caixa d'água de casa tá tampada! A água lá dentro tá protegida da poeira."
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido] O plano nasce ali. No dia catorze, eles saem. Vinte minutos. Até a caixa d'água... e de volta."
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[mais baixo, tenso] Mas naquela madrugada, o Eduardo acorda com um sussurro."
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[sussurrando] A mãe tá no rádio. Sozinha. Falando baixinho... em código."
+  },
+  {
+   "id": "m2",
+   "spk": "MARIANA",
+   "gap": 0.3,
+   "text": "[sussurrando, profissional] Doutora Mariana, Projeto Cérebro. Quatro sobreviventes. Abrigo sob a churrasqueira. Câmbio."
+  },
+  {
+   "id": "rad",
+   "spk": "RADIO",
+   "gap": 0.4,
+   "text": "Recebido, doutora. Permaneça na posição. Não saia antes do dia catorze.",
+   "fx": "radio"
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[sussurrando, tenso] Ela não tá pedindo socorro. Tá passando um relatório."
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "gap": 0.3,
+   "text": "[baixinho, chocado] Mãe... com quem você tá falando?"
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[lento] Ela desliga o rádio. Devagar. E pela primeira vez... ela não mente."
+  },
+  {
+   "id": "m3",
+   "spk": "MARIANA",
+   "gap": 0.4,
+   "text": "[cansada, sincera] Com quem fez isso, Eduardo."
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "gap": 0.7,
+   "text": "[sussurrando] E agora, eles sabem exatamente onde vocês estão."
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 4.4,
+   "text": "[animado] Segue a página pra ver o episódio seis!"
+  }
+ ],
+ "tail": 1.6
+}

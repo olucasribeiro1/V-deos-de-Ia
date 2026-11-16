@@ -1,0 +1,149 @@
+{
+ "duration": 94.075,
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "text": "[sussurrando, rápido] Os passos param bem em cima de vocês. E tudo fica quieto demais.",
+   "start": 0.6,
+   "end": 4.548,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/n1_605da1f9cf_t1.20.wav"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "text": "[sussurrando] Ninguém se mexe. Ninguém fala.",
+   "start": 4.748,
+   "end": 7.379,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/o1_81199c50da_t1.10.wav"
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "text": "[sussurrando, irônico] Nem o Rafael, que nunca ficou quieto um minuto na vida inteira.",
+   "start": 7.579,
+   "end": 11.514,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/n2_7a7c935733_t1.20.wav"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "text": "[tenso, lento] Alguma coisa testa o alçapão. Devagar. Como quem sabe exatamente o que está fazendo.",
+   "start": 11.914,
+   "end": 17.922,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/n3_02920ff81e_t1.20.wav"
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "text": "[num fio de voz] Ele sente o calor. Do gerador, da churrasqueira... da gente. Foi pra isso que ele veio.",
+   "start": 18.222,
+   "end": 24.627,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/m1_b30077cf9f_t1.10.wav"
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "text": "[sussurrando, urgente] Então a gente esfria. Tudo. Agora.",
+   "start": 24.827,
+   "end": 27.67,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/o2_420e93a46e_t1.10.wav"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "text": "[rápido, sussurrado] Gerador, desligado. Lampião, apagado. Rádio, sem pilha. Em dez segundos, o bunker vira um buraco escuro e frio.",
+   "start": 27.82,
+   "end": 34.162,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/n4_517faca403_t1.20.wav"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "text": "[didático, baixo, rápido] Disciplina de abrigo: sem luz, sem barulho, sem cheiro de comida. E pra não congelar no escuro, todo mundo junto, debaixo das mesmas cobertas. O corpo de um esquenta o do outro.",
+   "start": 34.462,
+   "end": 43.399,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/n5_b03005c103_t1.20.wav"
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "text": "[sussurrando, choroso] Tio... eu tô com fome.",
+   "start": 43.799,
+   "end": 46.129,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/r1_2e0c33124d_t1.10.wav"
+  },
+  {
+   "id": "o4",
+   "spk": "OSVALDO",
+   "text": "[sussurrando, bravo] Agora não, Rafael.",
+   "start": 46.329,
+   "end": 48.149,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/o4_bd4f719e1f_t1.10.wav"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "text": "[tenso] Lá em cima, as garras arranham a chapa. Uma vez. Duas. Três.",
+   "start": 48.549,
+   "end": 53.694,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/n6_73a3a7f54e_t1.20.wav"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "text": "[sussurrando, desesperado] Tio, se isso abrir...",
+   "start": 53.994,
+   "end": 56.11,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/e1_acbc854452_t1.10.wav"
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "text": "[sussurrando, firme] Então a gente faz o que eu treinei a vida toda pra fazer.",
+   "start": 56.31,
+   "end": 59.522,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/o3_68dbd3db89_t1.10.wav"
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "text": "[emocionado, baixo] Pela primeira vez, a família toda se move junto, sem precisar combinar. O tio na escada, com uma barra de ferro. O Eduardo segurando o irmão. A mãe com a mão no rádio.",
+   "start": 59.822,
+   "end": 69.171,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/n7_6f23bcd282_t1.20.wav"
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "text": "[lento] E então... nada. Silêncio.",
+   "start": 69.771,
+   "end": 73.048,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/n8_5f0c46ed10_t1.20.wav"
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "text": "[lento, grave] Uma hora. Duas. Os passos vão embora, arrastados, pro lado da rua.",
+   "start": 73.648,
+   "end": 79.263,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/n9_bce8a6b745_t1.20.wav"
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "text": "[sussurrando, encerramento] E foi nesse silêncio que você entendeu: a bomba nunca foi o fim da história. Foi só o primeiro aviso.",
+   "start": 79.863,
+   "end": 85.933,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/n10_62da714a26_t1.20.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Segue a página pra ver o episódio nove!",
+   "start": 90.333,
+   "end": 92.475,
+   "file": "projects/ep08-ele-sente-o-calor/input/clips/cta_2ad678f4ca_t1.20.wav"
+  }
+ ]
+}

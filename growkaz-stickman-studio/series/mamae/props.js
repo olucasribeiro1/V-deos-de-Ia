@@ -114,3 +114,75 @@ export function sintoma(g, x, y, s, tipo, t) {
   if (tipo === 'enjoo') { circle(g, -16, 2, 6, INK); circle(g, 16, 2, 6, INK); g.strokeStyle = INK; g.lineWidth = 5; g.beginPath(); for (let i = 0; i <= 10; i++) g.lineTo(-20 + i * 4, 30 + Math.sin(i * 1.4) * 5); g.stroke(); g.fillStyle = alpha('#7fb84a', 0.6); g.beginPath(); g.arc(0, 10, 48, 0, 7); g.fill(); }
   g.restore();
 }
+// galão rachado pingando + poça
+export function galaoRachado(g, x, y, s, t, o = {}) {
+  const { poca = 1 } = o; g.save(); g.translate(x, y); g.scale(s, s);
+  g.fillStyle = alpha('#7fc0e8', 0.55); g.beginPath(); g.ellipse(30, 4, 140 * poca, 22 * poca, 0, 0, 7); g.fill(); g.strokeStyle = alpha('#ffffff', 0.4); g.lineWidth = 3; g.beginPath(); g.ellipse(10, 0, 70 * poca, 8 * poca, 0, 3.4, 5.6); g.stroke();
+  box(g, -46, -130, 92, 130, alpha('#6fb8e8', 0.6), 22); box(g, -18, -150, 36, 24, '#2f7fd0', 5, 3);
+  seg(g, [[-20, -110], [0, -80], [-10, -60], [10, -36]], 5, INK);
+  const ph = (t * 1.6) % 1; g.fillStyle = '#7fc0e8'; g.beginPath(); g.ellipse(14, -30 + ph * 30, 6, 9, 0, 0, 7); g.fill();
+  g.restore();
+}
+// caixa d'água azul com tampa (a poeira escorre pela tampa)
+export function caixaDagua(g, x, y, s, t, o = {}) {
+  const { poeira = 1, corte = 0 } = o; g.save(); g.translate(x, y); g.scale(s, s);
+  poly(g, [[-150, -200], [150, -200], [120, 0], [-120, 0]], '#2f7fd0'); g.strokeStyle = INK; g.lineWidth = 8; g.beginPath(); g.moveTo(-150, -200); g.lineTo(150, -200); g.lineTo(120, 0); g.lineTo(-120, 0); g.closePath(); g.stroke();
+  if (corte > 0) { g.save(); g.globalAlpha = corte; rr(g, -110, -170, 220, 150, 10); g.fillStyle = '#9fd8ff'; g.fill(); for (let i = 0; i < 3; i++) seg(g, [[-90 + i * 60, -120 + Math.sin(t * 2 + i) * 5], [-50 + i * 60, -120 + Math.sin(t * 2 + i + 1) * 5]], 4, alpha('#ffffff', 0.7)); g.restore(); }
+  g.fillStyle = '#2a5fa8'; g.beginPath(); g.ellipse(0, -205, 165, 30, 0, 0, 7); g.fill(); g.strokeStyle = INK; g.lineWidth = 8; g.stroke(); circle(g, 0, -232, 22, '#2a5fa8'); g.stroke();
+  if (poeira > 0) for (let i = 0; i < 26; i++) { const ph = (t * 0.6 + i * 0.137) % 1, px = -160 + (i * 53) % 320, py = -420 + ph * 220; if (py < -228 + Math.abs(px) * 0.05) circle(g, px, py, 5, alpha('#b9bcc2', 0.9 * poeira)); else { const sx = px + (px > 0 ? 1 : -1) * (py + 228) * 1.2; circle(g, sx, -205 + (py + 228) * 0.6, 5, alpha('#b9bcc2', 0.8 * poeira * (1 - ph))); } }
+  g.restore();
+}
+export function copo(g, x, y, s, nivel = 1) { g.save(); g.translate(x, y); g.scale(s, s); poly(g, [[-40, -110], [40, -110], [30, 0], [-30, 0]], alpha('#e8eef6', 0.35)); if (nivel > 0) { const h = 100 * nivel; poly(g, [[-30 - 10 * (h / 110), -h], [30 + 10 * (h / 110), -h], [30, -4], [-30, -4]], alpha('#7fc0e8', 0.85)); } g.strokeStyle = INK; g.lineWidth = 6; g.beginPath(); g.moveTo(-40, -110); g.lineTo(-30, 0); g.lineTo(30, 0); g.lineTo(40, -110); g.stroke(); g.restore(); }
+export function chuveiro(g, x, y, s, t) { g.save(); g.translate(x, y); g.scale(s, s); seg(g, [[0, -160], [0, -100], [60, -100]], 14, INK); poly(g, [[30, -110], [110, -110], [90, -70], [50, -70]], '#9aa3ae'); g.strokeStyle = INK; g.lineWidth = 6; g.stroke(); for (let i = 0; i < 5; i++) { const ph = (t * 2 + i * 0.2) % 1; seg(g, [[55 + i * 8, -60 + ph * 120], [55 + i * 8, -40 + ph * 120]], 5, alpha('#7fc0e8', 1 - ph)); } g.restore(); }
+// toalha enrolada na cabeça (desenhe depois da figura, na posição da cabeça)
+export function toalha(g, hx, hy, r) { g.fillStyle = INK; g.beginPath(); g.ellipse(hx - r * 0.1, hy - r * 0.75, r * 1.15, r * 0.6, -0.1, 0, 7); g.fill(); g.fillStyle = '#e6c02a'; g.beginPath(); g.ellipse(hx - r * 0.1, hy - r * 0.75, r * 1.05, r * 0.5, -0.1, 0, 7); g.fill(); g.fillStyle = INK; g.beginPath(); g.ellipse(hx + r * 0.2, hy - r * 1.25, r * 0.45, r * 0.35, 0.4, 0, 7); g.fill(); g.fillStyle = '#e6c02a'; g.beginPath(); g.ellipse(hx + r * 0.2, hy - r * 1.25, r * 0.37, r * 0.27, 0.4, 0, 7); g.fill(); }
+// equipamento de saída sobre o boneco: capa de chuva TRANSPARENTE (o corpo continua branco), máscara, luvas e saco nos pés
+export function equipamento(g, o, k = 1) {
+  if (k <= 0) return; const s = (o.s ?? 1) * (o.outfit?.kid ? 0.72 : 1), f = o.facing ?? 1, x = o.x, y = o.y; g.save(); g.globalAlpha *= k;
+  g.fillStyle = 'rgba(200,225,240,.32)'; g.strokeStyle = 'rgba(20,30,40,.55)'; g.lineWidth = 3 * s;
+  g.beginPath(); g.moveTo(x - 30 * s * f, y - 180 * s); g.lineTo(x + 34 * s * f, y - 180 * s); g.lineTo(x + 52 * s * f, y - 60 * s); g.lineTo(x - 46 * s * f, y - 60 * s); g.closePath(); g.fill(); g.stroke();
+  for (const dx of [-8, 14]) { rr(g, x + dx * s * f - 14 * s, y - 16 * s, 28 * s, 18 * s, 6 * s); g.fillStyle = 'rgba(240,240,245,.75)'; g.fill(); g.stroke(); }
+  g.restore();
+}
+export function mascara(g, hx, hy, r, f = 1) { g.save(); g.translate(hx + r * 0.3 * f, hy + r * 0.28); g.scale(f, 1); rr(g, -r * 0.5, -r * 0.28, r * 0.95, r * 0.5, r * 0.2); g.fillStyle = INK; g.fill(); rr(g, -r * 0.44, -r * 0.22, r * 0.83, r * 0.38, r * 0.16); g.fillStyle = '#3a4526'; g.fill(); circle(g, r * 0.44, 0, r * 0.2, INK); circle(g, r * 0.44, 0, r * 0.14, '#7d8794'); g.restore(); }
+export function freezer(g, x, y, s, aberto = 0) { g.save(); g.translate(x, y); g.scale(s, s); box(g, -170, -190, 340, 190, '#e9edf0', 16, 7); box(g, -150, -150, 70, 30, '#c9ced6', 8, 4);
+  if (aberto > 0) { g.save(); g.translate(-170, -190); g.rotate(-1.4 * aberto); box(g, 0, -24, 340, 30, '#dfe4e8', 10, 6); g.restore(); rr(g, -160, -186, 320, 30, 6); g.fillStyle = '#1c2026'; g.fill(); } else box(g, -176, -214, 352, 30, '#dfe4e8', 10, 6);
+  g.restore(); }
+// pão de queijo murcho ("pedra mole")
+export function paoDeQueijo(g, x, y, s, t, murcho = 1) { g.save(); g.translate(x, y); g.scale(s, s); const sq = 1 - 0.3 * murcho + 0.04 * Math.sin(t * 4) * murcho; g.scale(1 + 0.25 * murcho, sq); circle(g, 0, 0, 70, INK); circle(g, 0, 0, 62, '#e6c070'); for (const [dx, dy] of [[-22, -16], [18, -24], [8, 14], [-14, 22]]) circle(g, dx, dy, 8, '#c99a48'); g.restore(); }
+export function mangueira(g, pts, cor = '#3f9a5a') { seg(g, pts, 20, INK); seg(g, pts, 12, cor); }
+// papéis do Exército espalhados + o desenho da criatura
+export function papelCerebro(g, x, y, s, rot, t, o = {}) {
+  const { desenho = false } = o; g.save(); g.translate(x, y); g.rotate(rot); g.scale(s, s);
+  rr(g, -210, -280, 420, 560, 6); g.fillStyle = INK; g.fill(); rr(g, -202, -272, 404, 544, 4); g.fillStyle = '#efe8d0'; g.fill();
+  rr(g, -180, -250, 120, 40, 4); g.fillStyle = '#4c5a30'; g.fill(); text(g, 'EXÉRCITO', -120, -229, { size: 20, color: '#efe8d0', font: FONTS.ui, weight: 900 });
+  if (desenho) { g.strokeStyle = '#3a3d44'; g.lineWidth = 5; g.lineCap = 'round'; g.lineJoin = 'round'; const sk = (pts) => { g.beginPath(); pts.forEach(([a, b], i) => i ? g.lineTo(a, b) : g.moveTo(a, b)); g.stroke(); };
+    sk([[0, -150], [-8, -60], [0, 40]]); sk([[-8, -60], [40, -20], [70, 80], [80, 140]]); sk([[-8, -60], [-60, -10], [-70, 90], [-60, 150]]); sk([[0, 40], [30, 110], [20, 190]]); sk([[0, 40], [-30, 120], [-50, 190]]); g.beginPath(); g.ellipse(25, -190, 34, 52, 0.5, 0, 7); g.stroke();
+    for (let i = 0; i < 4; i++) sk([[90 + i * 14, 120], [110 + i * 14, 150]]); text(g, '?', 120, -160, { size: 60, color: '#d8342b' }); g.strokeStyle = '#3a3d44'; g.lineWidth = 2; sk([[-150, 210], [150, 210]]); sk([[-150, 235], [90, 235]]); }
+  else { for (let i = 0; i < 9; i++) { rr(g, -170, -170 + i * 44, (i % 3 === 2 ? 220 : 330), 14, 4); g.fillStyle = i === 3 || i === 6 ? '#16181d' : '#9aa3ae'; g.fill(); } }
+  g.save(); g.rotate(-0.25); rr(g, -190, -40, 380, 90, 10); g.strokeStyle = alpha('#d8342b', 0.85); g.lineWidth = 8; g.stroke(); text(g, 'PROJETO CÉREBRO', 0, 6, { size: 40, color: alpha('#d8342b', 0.9), font: FONTS.ui, weight: 900, spacing: 2 }); g.restore();
+  g.restore();
+}
+// marcas de garra num muro (altura até ~2 m na escala do cenário)
+export function garrasMuro(g, x, base, alt, k = 1) { if (k <= 0) return; g.save(); g.globalAlpha *= k; for (let j = 0; j < 3; j++) for (let i = 0; i < 4; i++) { const x0 = x + j * 70 + i * 18, y0 = base - alt * (0.35 + j * 0.3); seg(g, [[x0, y0 - 140], [x0 + 26, y0 + 60]], 18, INK); seg(g, [[x0, y0 - 140], [x0 + 26, y0 + 60]], 8, '#e6dcc8'); } g.restore(); }
+// sacos de carvão empilhados
+export function sacosCarvao(g, x, y, s, n = 9) { g.save(); g.translate(x, y); g.scale(s, s); for (let i = 0; i < n; i++) { const c = i % 4, r = Math.floor(i / 4), bx = c * 120 + (r % 2) * 60, by = -r * 110; rr(g, bx - 56, by - 110, 112, 110, 26); g.fillStyle = INK; g.fill(); rr(g, bx - 50, by - 104, 100, 98, 22); g.fillStyle = '#c9b890'; g.fill(); text(g, 'CARVÃO', bx, by - 52, { size: 22, color: '#16181d', font: FONTS.ui, weight: 900 }); } g.restore(); }
+export function apito(g, x, y, s, rot = 0) { g.save(); g.translate(x, y); g.rotate(rot); g.scale(s, s); rr(g, -60, -30, 100, 60, 26); g.fillStyle = INK; g.fill(); rr(g, -54, -24, 88, 48, 20); g.fillStyle = '#e6c02a'; g.fill(); rr(g, 30, -22, 60, 30, 8); g.fillStyle = INK; g.fill(); rr(g, 34, -18, 52, 22, 6); g.fillStyle = '#e6c02a'; g.fill(); circle(g, -14, 0, 12, INK); g.restore(); }
+export function guarana(g, x, y, s) { g.save(); g.translate(x, y); g.scale(s, s); rr(g, -34, -170, 68, 170, 18); g.fillStyle = INK; g.fill(); rr(g, -28, -164, 56, 158, 14); g.fillStyle = '#2f8a3a'; g.fill(); rr(g, -14, -200, 28, 40, 6); g.fillStyle = INK; g.fill(); rr(g, -28, -110, 56, 46, 4); g.fillStyle = '#e6c02a'; g.fill(); g.restore(); }
+// mapa visto de cima: casa (x,y), estádio, avenida, rota; usado no plano e na fuga
+export function mapaCidade(g, t, o = {}) {
+  const { rota = 0, isca = 0, criatura = -1, familia = -1 } = o; const ui = S().ui;
+  g.fillStyle = '#e6dcc0'; g.fillRect(-200, -200, E.W + 400, E.H + 400); g.strokeStyle = alpha('#3f7f5a', 0.25); g.lineWidth = 3; for (let i = 0; i < 9; i++) { g.beginPath(); g.ellipse(300, 1500, 100 + i * 90, 70 + i * 60, 0.2, 0, 7); g.stroke(); }
+  for (let i = 0; i < 6; i++) for (let j = 0; j < 9; j++) { if ((i + j) % 3 === 0) continue; rr(g, 60 + i * 170, 260 + j * 170, 130, 130, 10); g.fillStyle = alpha('#b8a888', 0.7); g.fill(); }
+  seg(g, [[-100, 1000], [1200, 820]], 70, '#9aa3ae'); text(g, 'AVENIDA', 900, 860, { size: 34, color: '#4a4f58', font: FONTS.ui, weight: 900 }); seg(g, [[-100, 1000], [1200, 820]], 6, alpha(ui.accent, 0.6));
+  const casa = [300, 1500], est = [820, 380];
+  rr(g, casa[0] - 60, casa[1] - 60, 120, 120, 10); g.fillStyle = '#c0563a'; g.fill(); g.strokeStyle = INK; g.lineWidth = 6; g.stroke(); text(g, 'CASA', casa[0], casa[1] + 100, { size: 38, color: '#16181d', font: FONTS.ui, weight: 900 });
+  g.fillStyle = INK; g.beginPath(); g.ellipse(est[0], est[1], 150, 100, 0, 0, 7); g.fill(); g.fillStyle = '#3f9a5a'; g.beginPath(); g.ellipse(est[0], est[1], 136, 86, 0, 0, 7); g.fill(); text(g, 'ESTÁDIO', est[0], est[1] + 140, { size: 38, color: '#16181d', font: FONTS.ui, weight: 900 }); text(g, 'H', est[0], est[1], { size: 90, color: WH, stroke: 14, strokeColor: INK });
+  const path = [[casa[0], casa[1]], [180, 1250], [160, 900], [380, 700], [600, 560], [est[0], est[1]]];
+  if (rota > 0) { g.save(); g.setLineDash([26, 18]); g.lineDashOffset = -t * 40; g.strokeStyle = '#2f7fd0'; g.lineWidth = 14; g.lineCap = 'round'; g.beginPath(); const n = Math.max(2, Math.ceil(rota * path.length)); path.slice(0, n).forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.stroke(); g.restore(); }
+  if (isca > 0) { glow(g, casa[0], casa[1], 260 * isca, '#ff7a20', 0.6 * isca); for (let i = 0; i < 3; i++) { const ph = (t * 0.8 + i / 3) % 1; g.strokeStyle = alpha('#ff7a20', 0.6 * (1 - ph) * isca); g.lineWidth = 6; g.beginPath(); g.arc(casa[0], casa[1], 80 + ph * 260, 0, 7); g.stroke(); } }
+  const ponto = (k, cor, r = 26) => { const seg2 = k * (path.length - 1), i = Math.min(path.length - 2, Math.floor(seg2)), f = seg2 - i; const x = path[i][0] + (path[i + 1][0] - path[i][0]) * f, y = path[i][1] + (path[i + 1][1] - path[i][1]) * f; circle(g, x, y, r + 6, INK); circle(g, x, y, r, cor); };
+  if (familia >= 0) ponto(familia, '#2f7fd0');
+  if (criatura >= 0) { const x = 900 - 600 * criatura, y = 1300 + 200 * criatura; circle(g, x, y, 40, INK); circle(g, x, y, 32, '#16181d'); text(g, '?', x, y, { size: 44, color: ui.accent }); seg(g, [[x + 60, y - 20], [x + 120, y - 40]], 8, alpha(ui.accent, 0.6)); }
+  return { casa, est };
+}

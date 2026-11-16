@@ -1,0 +1,1619 @@
+{
+ "source": "elevenlabs:eleven_v4",
+ "words": [
+  {
+   "word": "Dia",
+   "start": 0.667,
+   "end": 0.8,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "oito.",
+   "start": 0.867,
+   "end": 1.3,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Todo",
+   "start": 1.467,
+   "end": 1.6,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dia",
+   "start": 1.667,
+   "end": 1.8,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 1.867,
+   "end": 1.933,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "manhã,",
+   "start": 2.0,
+   "end": 2.333,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 2.367,
+   "end": 2.4,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tio",
+   "start": 2.467,
+   "end": 2.6,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "faz",
+   "start": 2.667,
+   "end": 2.8,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 2.833,
+   "end": 2.867,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "conta",
+   "start": 2.933,
+   "end": 3.133,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "da",
+   "start": 3.167,
+   "end": 3.2,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "água.",
+   "start": 3.267,
+   "end": 3.8,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "E",
+   "start": 3.867,
+   "end": 3.933,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "hoje...",
+   "start": 4.0,
+   "end": 4.667,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 4.7,
+   "end": 4.733,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "conta",
+   "start": 4.867,
+   "end": 5.067,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "não",
+   "start": 5.111,
+   "end": 5.2,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "fecha.",
+   "start": 5.267,
+   "end": 5.867,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Tá",
+   "start": 6.146,
+   "end": 6.255,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "faltando",
+   "start": 6.292,
+   "end": 6.728,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "água.",
+   "start": 6.801,
+   "end": 7.419,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "Muita",
+   "start": 7.674,
+   "end": 8.11,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "água.",
+   "start": 8.183,
+   "end": 8.704,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "Atrás",
+   "start": 8.97,
+   "end": 9.237,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "da",
+   "start": 9.304,
+   "end": 9.37,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "prateleira,",
+   "start": 9.404,
+   "end": 10.237,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 10.304,
+   "end": 10.37,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "chão",
+   "start": 10.437,
+   "end": 10.57,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tá",
+   "start": 10.637,
+   "end": 10.704,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "molhado.",
+   "start": 10.77,
+   "end": 11.404,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Três",
+   "start": 11.637,
+   "end": 11.837,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "galões",
+   "start": 11.904,
+   "end": 12.104,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "rachados",
+   "start": 12.137,
+   "end": 12.637,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "desde",
+   "start": 12.704,
+   "end": 12.904,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 12.97,
+   "end": 13.004,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "onda",
+   "start": 13.037,
+   "end": 13.17,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 13.237,
+   "end": 13.304,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "choque",
+   "start": 13.37,
+   "end": 13.57,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "da",
+   "start": 13.604,
+   "end": 13.637,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "bomba.",
+   "start": 13.704,
+   "end": 14.037,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Pingando...",
+   "start": 14.437,
+   "end": 15.37,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "há",
+   "start": 15.404,
+   "end": 15.504,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "oito",
+   "start": 15.57,
+   "end": 15.77,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dias.",
+   "start": 15.904,
+   "end": 16.515,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Eu",
+   "start": 16.832,
+   "end": 16.838,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "lavei",
+   "start": 16.874,
+   "end": 17.081,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "o",
+   "start": 17.104,
+   "end": 17.129,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "cabelo",
+   "start": 17.165,
+   "end": 17.492,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "duas",
+   "start": 17.565,
+   "end": 17.856,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "vezes...",
+   "start": 18.002,
+   "end": 18.547,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "isso",
+   "start": 18.583,
+   "end": 18.729,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "não",
+   "start": 18.802,
+   "end": 18.947,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "conta,",
+   "start": 19.056,
+   "end": 19.213,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "né?",
+   "start": 19.238,
+   "end": 19.523,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "Sobraram",
+   "start": 19.84,
+   "end": 20.24,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cem",
+   "start": 20.306,
+   "end": 20.373,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "litros.",
+   "start": 20.44,
+   "end": 20.94,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Quatro",
+   "start": 21.04,
+   "end": 21.173,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pessoas,",
+   "start": 21.24,
+   "end": 21.74,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "quatro",
+   "start": 21.773,
+   "end": 21.973,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "litros",
+   "start": 22.04,
+   "end": 22.306,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "por",
+   "start": 22.373,
+   "end": 22.44,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dia",
+   "start": 22.54,
+   "end": 22.64,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cada.",
+   "start": 22.795,
+   "end": 23.129,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Dá",
+   "start": 23.15,
+   "end": 23.24,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "seis",
+   "start": 23.273,
+   "end": 23.44,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dias.",
+   "start": 23.506,
+   "end": 23.916,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Então",
+   "start": 24.298,
+   "end": 24.37,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "a",
+   "start": 24.407,
+   "end": 24.479,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "partir",
+   "start": 24.589,
+   "end": 24.77,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "de",
+   "start": 24.843,
+   "end": 24.916,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "hoje,",
+   "start": 24.989,
+   "end": 25.643,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "meio",
+   "start": 25.716,
+   "end": 25.934,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "copo",
+   "start": 26.079,
+   "end": 26.334,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "por",
+   "start": 26.37,
+   "end": 26.516,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "pessoa.",
+   "start": 26.552,
+   "end": 27.179,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "Não.",
+   "start": 27.635,
+   "end": 27.875,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Água",
+   "start": 28.057,
+   "end": 28.275,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "de",
+   "start": 28.348,
+   "end": 28.384,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "beber",
+   "start": 28.42,
+   "end": 28.784,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "não",
+   "start": 29.002,
+   "end": 29.148,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "se",
+   "start": 29.22,
+   "end": 29.293,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "raciona.",
+   "start": 29.329,
+   "end": 30.239,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Desidratação",
+   "start": 30.311,
+   "end": 31.039,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "derruba",
+   "start": 31.111,
+   "end": 31.475,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "mais",
+   "start": 31.548,
+   "end": 31.766,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "rápido",
+   "start": 31.839,
+   "end": 32.202,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "que",
+   "start": 32.275,
+   "end": 32.348,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "fome.",
+   "start": 32.384,
+   "end": 33.075,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Corta",
+   "start": 33.111,
+   "end": 33.293,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "o",
+   "start": 33.366,
+   "end": 33.439,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "banho,",
+   "start": 33.548,
+   "end": 34.02,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "não",
+   "start": 34.093,
+   "end": 34.239,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "o",
+   "start": 34.311,
+   "end": 34.384,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "copo.",
+   "start": 34.529,
+   "end": 34.973,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Regra",
+   "start": 35.409,
+   "end": 35.556,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dos",
+   "start": 35.623,
+   "end": 35.689,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "manuais",
+   "start": 35.756,
+   "end": 36.023,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 36.056,
+   "end": 36.089,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "emergência:",
+   "start": 36.123,
+   "end": 36.823,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "uns",
+   "start": 36.923,
+   "end": 37.023,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "quatro",
+   "start": 37.056,
+   "end": 37.289,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "litros",
+   "start": 37.356,
+   "end": 37.623,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "por",
+   "start": 37.689,
+   "end": 37.756,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pessoa,",
+   "start": 37.823,
+   "end": 38.289,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "por",
+   "start": 38.356,
+   "end": 38.423,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dia.",
+   "start": 38.489,
+   "end": 38.956,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Metade",
+   "start": 39.056,
+   "end": 39.223,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pra",
+   "start": 39.289,
+   "end": 39.356,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "beber,",
+   "start": 39.423,
+   "end": 39.756,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "metade",
+   "start": 39.856,
+   "end": 40.089,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pra",
+   "start": 40.123,
+   "end": 40.156,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "comida",
+   "start": 40.223,
+   "end": 40.556,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 40.589,
+   "end": 40.623,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "higiene.",
+   "start": 40.712,
+   "end": 41.289,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Na",
+   "start": 41.356,
+   "end": 41.423,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "crise,",
+   "start": 41.489,
+   "end": 41.823,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "você",
+   "start": 41.889,
+   "end": 42.023,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "corta",
+   "start": 42.089,
+   "end": 42.223,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 42.289,
+   "end": 42.356,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "banho...",
+   "start": 42.423,
+   "end": 42.889,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "nunca",
+   "start": 42.923,
+   "end": 43.289,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 43.323,
+   "end": 43.356,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "água",
+   "start": 43.423,
+   "end": 43.623,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 43.656,
+   "end": 43.689,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "beber.",
+   "start": 43.723,
+   "end": 44.156,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Seis",
+   "start": 44.747,
+   "end": 45.038,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "dias...",
+   "start": 45.183,
+   "end": 46.201,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "Dia",
+   "start": 46.274,
+   "end": 46.347,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "catorze.",
+   "start": 46.492,
+   "end": 47.147,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "O",
+   "start": 47.51,
+   "end": 47.583,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "dia",
+   "start": 47.656,
+   "end": 47.801,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "em",
+   "start": 47.838,
+   "end": 47.874,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "que",
+   "start": 47.91,
+   "end": 47.947,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "a",
+   "start": 47.983,
+   "end": 48.02,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "radiação",
+   "start": 48.092,
+   "end": 48.456,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "lá",
+   "start": 48.529,
+   "end": 48.601,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "fora",
+   "start": 48.674,
+   "end": 48.929,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "cai",
+   "start": 48.965,
+   "end": 49.11,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "pra",
+   "start": 49.183,
+   "end": 49.256,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "zero",
+   "start": 49.401,
+   "end": 49.547,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "vírgula",
+   "start": 49.692,
+   "end": 49.91,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "um",
+   "start": 50.056,
+   "end": 50.129,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "por",
+   "start": 50.201,
+   "end": 50.347,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "cento.",
+   "start": 50.492,
+   "end": 50.939,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "E",
+   "start": 51.212,
+   "end": 51.285,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "a",
+   "start": 51.321,
+   "end": 51.357,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "caixa",
+   "start": 51.43,
+   "end": 51.721,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "d'água",
+   "start": 51.757,
+   "end": 51.976,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "de",
+   "start": 52.012,
+   "end": 52.085,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "casa",
+   "start": 52.157,
+   "end": 52.376,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "tá",
+   "start": 52.448,
+   "end": 52.594,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "tampada!",
+   "start": 52.691,
+   "end": 53.357,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "A",
+   "start": 53.539,
+   "end": 53.612,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "água",
+   "start": 53.685,
+   "end": 53.83,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "lá",
+   "start": 53.903,
+   "end": 53.976,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "dentro",
+   "start": 54.085,
+   "end": 54.339,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "tá",
+   "start": 54.448,
+   "end": 54.557,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "protegida",
+   "start": 54.666,
+   "end": 55.139,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "da",
+   "start": 55.212,
+   "end": 55.285,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "poeira.",
+   "start": 55.357,
+   "end": 55.866,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "O",
+   "start": 56.244,
+   "end": 56.253,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "plano",
+   "start": 56.32,
+   "end": 56.52,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "nasce",
+   "start": 56.586,
+   "end": 56.72,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ali.",
+   "start": 56.82,
+   "end": 57.02,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "No",
+   "start": 57.12,
+   "end": 57.186,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dia",
+   "start": 57.253,
+   "end": 57.32,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "catorze,",
+   "start": 57.353,
+   "end": 57.853,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "eles",
+   "start": 57.92,
+   "end": 58.053,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "saem.",
+   "start": 58.12,
+   "end": 58.52,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Vinte",
+   "start": 58.553,
+   "end": 58.72,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "minutos.",
+   "start": 58.786,
+   "end": 59.32,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Até",
+   "start": 59.386,
+   "end": 59.486,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 59.52,
+   "end": 59.553,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "caixa",
+   "start": 59.586,
+   "end": 59.786,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "d'água...",
+   "start": 59.82,
+   "end": 60.32,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 60.342,
+   "end": 60.364,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 60.386,
+   "end": 60.453,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "volta.",
+   "start": 60.52,
+   "end": 60.914,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Mas",
+   "start": 61.58,
+   "end": 61.714,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "naquela",
+   "start": 61.78,
+   "end": 62.047,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "madrugada,",
+   "start": 62.08,
+   "end": 62.814,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 62.98,
+   "end": 63.014,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Eduardo",
+   "start": 63.047,
+   "end": 63.38,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "acorda",
+   "start": 63.48,
+   "end": 63.78,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "com",
+   "start": 63.847,
+   "end": 63.914,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "um",
+   "start": 63.947,
+   "end": 63.98,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sussurro.",
+   "start": 64.047,
+   "end": 64.847,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "A",
+   "start": 65.184,
+   "end": 65.251,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mãe",
+   "start": 65.317,
+   "end": 65.517,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tá",
+   "start": 65.584,
+   "end": 65.651,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "no",
+   "start": 65.717,
+   "end": 65.784,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "rádio.",
+   "start": 65.917,
+   "end": 66.384,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Sozinha.",
+   "start": 66.584,
+   "end": 67.317,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Falando",
+   "start": 67.517,
+   "end": 67.784,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "baixinho...",
+   "start": 67.851,
+   "end": 68.651,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "em",
+   "start": 68.751,
+   "end": 68.851,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "código.",
+   "start": 68.884,
+   "end": 69.451,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Doutora",
+   "start": 69.833,
+   "end": 70.057,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Mariana,",
+   "start": 70.13,
+   "end": 70.712,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Projeto",
+   "start": 70.857,
+   "end": 71.221,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Cérebro.",
+   "start": 71.294,
+   "end": 71.985,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Quatro",
+   "start": 72.166,
+   "end": 72.385,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "sobreviventes.",
+   "start": 72.457,
+   "end": 73.439,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Abrigo",
+   "start": 73.621,
+   "end": 73.985,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "sob",
+   "start": 74.057,
+   "end": 74.13,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "a",
+   "start": 74.203,
+   "end": 74.239,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "churrasqueira.",
+   "start": 74.276,
+   "end": 75.003,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Câmbio.",
+   "start": 75.148,
+   "end": 75.662,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Recebido,",
+   "start": 76.062,
+   "end": 76.851,
+   "spk": "RADIO"
+  },
+  {
+   "word": "doutora.",
+   "start": 76.875,
+   "end": 77.467,
+   "spk": "RADIO"
+  },
+  {
+   "word": "Permaneça",
+   "start": 77.664,
+   "end": 78.256,
+   "spk": "RADIO"
+  },
+  {
+   "word": "na",
+   "start": 78.303,
+   "end": 78.372,
+   "spk": "RADIO"
+  },
+  {
+   "word": "posição.",
+   "start": 78.419,
+   "end": 79.115,
+   "spk": "RADIO"
+  },
+  {
+   "word": "Não",
+   "start": 79.278,
+   "end": 79.475,
+   "spk": "RADIO"
+  },
+  {
+   "word": "saia",
+   "start": 79.545,
+   "end": 79.893,
+   "spk": "RADIO"
+  },
+  {
+   "word": "antes",
+   "start": 79.917,
+   "end": 80.172,
+   "spk": "RADIO"
+  },
+  {
+   "word": "do",
+   "start": 80.218,
+   "end": 80.3,
+   "spk": "RADIO"
+  },
+  {
+   "word": "dia",
+   "start": 80.358,
+   "end": 80.497,
+   "spk": "RADIO"
+  },
+  {
+   "word": "catorze.",
+   "start": 80.555,
+   "end": 81.449,
+   "spk": "RADIO"
+  },
+  {
+   "word": "Ela",
+   "start": 81.816,
+   "end": 82.016,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "não",
+   "start": 82.082,
+   "end": 82.216,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tá",
+   "start": 82.282,
+   "end": 82.416,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pedindo",
+   "start": 82.482,
+   "end": 82.749,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "socorro.",
+   "start": 82.882,
+   "end": 83.616,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Tá",
+   "start": 83.649,
+   "end": 83.749,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "passando",
+   "start": 83.849,
+   "end": 84.016,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "um",
+   "start": 84.082,
+   "end": 84.149,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "relatório.",
+   "start": 84.216,
+   "end": 84.892,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Mãe...",
+   "start": 85.41,
+   "end": 86.21,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "com",
+   "start": 86.283,
+   "end": 86.356,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "quem",
+   "start": 86.501,
+   "end": 86.646,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "você",
+   "start": 86.683,
+   "end": 86.865,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "tá",
+   "start": 86.937,
+   "end": 87.01,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "falando?",
+   "start": 87.119,
+   "end": 87.81,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "Ela",
+   "start": 88.182,
+   "end": 88.382,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "desliga",
+   "start": 88.516,
+   "end": 88.782,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 88.849,
+   "end": 88.916,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "rádio.",
+   "start": 89.016,
+   "end": 89.582,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Devagar.",
+   "start": 89.849,
+   "end": 90.649,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "E",
+   "start": 90.916,
+   "end": 90.982,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pela",
+   "start": 91.049,
+   "end": 91.182,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "primeira",
+   "start": 91.249,
+   "end": 91.582,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "vez...",
+   "start": 91.649,
+   "end": 92.449,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ela",
+   "start": 92.549,
+   "end": 92.649,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "não",
+   "start": 92.782,
+   "end": 92.916,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mente.",
+   "start": 92.982,
+   "end": 93.596,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Com",
+   "start": 94.142,
+   "end": 94.287,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "quem",
+   "start": 94.36,
+   "end": 94.506,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "fez",
+   "start": 94.578,
+   "end": 94.869,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "isso,",
+   "start": 94.942,
+   "end": 95.269,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Eduardo.",
+   "start": 95.306,
+   "end": 96.178,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "E",
+   "start": 97.017,
+   "end": 97.051,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "agora,",
+   "start": 97.084,
+   "end": 97.651,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "eles",
+   "start": 97.817,
+   "end": 98.084,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sabem",
+   "start": 98.117,
+   "end": 98.351,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "exatamente",
+   "start": 98.417,
+   "end": 99.217,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "onde",
+   "start": 99.284,
+   "end": 99.351,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "vocês",
+   "start": 99.417,
+   "end": 99.617,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "estão.",
+   "start": 99.684,
+   "end": 100.219,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Segue",
+   "start": 104.753,
+   "end": 104.953,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 104.997,
+   "end": 105.042,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "página",
+   "start": 105.086,
+   "end": 105.353,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pra",
+   "start": 105.419,
+   "end": 105.486,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ver",
+   "start": 105.553,
+   "end": 105.686,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 105.708,
+   "end": 105.73,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "episódio",
+   "start": 105.753,
+   "end": 106.153,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "seis!",
+   "start": 106.219,
+   "end": 106.886,
+   "spk": "NARRADOR"
+  }
+ ]
+}

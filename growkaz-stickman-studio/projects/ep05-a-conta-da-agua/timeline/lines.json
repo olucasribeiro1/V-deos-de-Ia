@@ -1,0 +1,173 @@
+{
+ "duration": 108.501,
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "text": "[rápido] Dia oito. Todo dia de manhã, o tio faz a conta da água. E hoje... a conta não fecha.",
+   "start": 0.6,
+   "end": 5.874,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/n1_90b5a0cbf8_t1.20.wav"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "text": "[desconfiado] Tá faltando água. Muita água.",
+   "start": 6.074,
+   "end": 8.704,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/o1_8b2af38d1c_t1.10.wav"
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "text": "[tenso] Atrás da prateleira, o chão tá molhado. Três galões rachados desde a onda de choque da bomba. Pingando... há oito dias.",
+   "start": 8.904,
+   "end": 16.515,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/n2_3d8f2a1b20_t1.20.wav"
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "text": "[culpado, rápido] Eu lavei o cabelo duas vezes... isso não conta, né?",
+   "start": 16.765,
+   "end": 19.523,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/r1_db40fb3ece_t1.10.wav"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "text": "[rápido] Sobraram cem litros. Quatro pessoas, quatro litros por dia cada. Dá seis dias.",
+   "start": 19.773,
+   "end": 23.916,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/n3_9d0df13b11_t1.20.wav"
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "text": "[sério] Então a partir de hoje, meio copo por pessoa.",
+   "start": 24.116,
+   "end": 27.179,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/o2_3607ae291f_t1.10.wav"
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "text": "[firme] Não. Água de beber não se raciona. Desidratação derruba mais rápido que fome. Corta o banho, não o copo.",
+   "start": 27.329,
+   "end": 34.973,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/m1_c37b9f4add_t1.10.wav"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "text": "[didático, rápido] Regra dos manuais de emergência: uns quatro litros por pessoa, por dia. Metade pra beber, metade pra comida e higiene. Na crise, você corta o banho... nunca a água de beber.",
+   "start": 35.223,
+   "end": 44.156,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/n4_6a1bfd9d75_t1.20.wav"
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "text": "[pensando] Seis dias... Dia catorze. O dia em que a radiação lá fora cai pra zero vírgula um por cento.",
+   "start": 44.456,
+   "end": 50.939,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/o3_f4b00adab9_t1.10.wav"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "text": "[animado] E a caixa d'água de casa tá tampada! A água lá dentro tá protegida da poeira.",
+   "start": 51.139,
+   "end": 55.986,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/e1_08961e284a_t1.10.wav"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "text": "[rápido] O plano nasce ali. No dia catorze, eles saem. Vinte minutos. Até a caixa d'água... e de volta.",
+   "start": 56.186,
+   "end": 60.914,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/n5_086fd193d2_t1.20.wav"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "text": "[mais baixo, tenso] Mas naquela madrugada, o Eduardo acorda com um sussurro.",
+   "start": 61.514,
+   "end": 64.851,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/n6_0829f701e5_t1.20.wav"
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "text": "[sussurrando] A mãe tá no rádio. Sozinha. Falando baixinho... em código.",
+   "start": 65.051,
+   "end": 69.466,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/n7_16c44e8f02_t1.20.wav"
+  },
+  {
+   "id": "m2",
+   "spk": "MARIANA",
+   "text": "[sussurrando, profissional] Doutora Mariana, Projeto Cérebro. Quatro sobreviventes. Abrigo sob a churrasqueira. Câmbio.",
+   "start": 69.766,
+   "end": 75.662,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/m2_2e64c0c719_t1.10.wav"
+  },
+  {
+   "id": "rad",
+   "spk": "RADIO",
+   "text": "Recebido, doutora. Permaneça na posição. Não saia antes do dia catorze.",
+   "start": 76.062,
+   "end": 81.449,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/rad_414229fe9b_radio.wav"
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "text": "[sussurrando, tenso] Ela não tá pedindo socorro. Tá passando um relatório.",
+   "start": 81.749,
+   "end": 84.892,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/n8_ed7be4400c_t1.20.wav"
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "text": "[baixinho, chocado] Mãe... com quem você tá falando?",
+   "start": 85.192,
+   "end": 87.816,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/e2_5d42c6ced6_t1.10.wav"
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "text": "[lento] Ela desliga o rádio. Devagar. E pela primeira vez... ela não mente.",
+   "start": 88.116,
+   "end": 93.596,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/n9_8e174c5e3a_t1.20.wav"
+  },
+  {
+   "id": "m3",
+   "spk": "MARIANA",
+   "text": "[cansada, sincera] Com quem fez isso, Eduardo.",
+   "start": 93.996,
+   "end": 96.184,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/m3_fd64554c65_t1.10.wav"
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "text": "[sussurrando] E agora, eles sabem exatamente onde vocês estão.",
+   "start": 96.884,
+   "end": 100.219,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/n10_6a865141d8_t1.20.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Segue a página pra ver o episódio seis!",
+   "start": 104.619,
+   "end": 106.901,
+   "file": "projects/ep05-a-conta-da-agua/input/clips/cta_2edffa1246_t1.20.wav"
+  }
+ ]
+}

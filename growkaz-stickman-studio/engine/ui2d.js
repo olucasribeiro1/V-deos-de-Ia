@@ -103,6 +103,6 @@ export function seguir(g, t, o = {}) {
   const pulse = 1 + 0.045 * Math.sin(t * 7); g.save(); g.translate(cx, 920); g.scale(a3 * pulse, a3 * pulse);
   rr(g, -230, -62, 460, 124, 62); g.fillStyle = '#0b0b0d'; g.fill(); rr(g, -220, -52, 440, 104, 52); g.fillStyle = ui.accent; g.fill();
   text(g, botao, 0, 4, { size: 64, color: '#ffffff', font: FONTS.ui, weight: 900, spacing: 3 }); g.restore();
-  if (proximo) { text(g, 'PRÓXIMO EPISÓDIO', cx, 1055, { size: 30, color: ui.sub, font: FONTS.ui, weight: 900, spacing: 6, alpha: a4 }); text(g, proximo, cx, 1110, { size: 46, color: ui.gold, font: FONTS.ui, weight: 900, spacing: 2, alpha: a4 }); }
-  if (outfit) drawFigure(g, { x: 500, y: 1432 + (1 - a1) * 60, s: 1.0, facing: 1, outfit, pose: t < 0.9 ? POSES.relaxed : POSES.pointUp, expr: 'smile', blink: (t % 2.9) > 2.8, alpha: a1 });
+  if (proximo) { text(g, 'PRÓXIMO EPISÓDIO', cx, 1055, { size: 30, color: ui.sub, font: FONTS.ui, weight: 900, spacing: 6, alpha: a4 }); const ps = Math.min(46, 860 / Math.max(1, proximo.length * 0.6)); if (proximo.length > 30 && proximo.includes('—')) { const [p1, p2] = proximo.split('—').map(x => x.trim()); text(g, p1, cx, 1105, { size: 40, color: ui.gold, font: FONTS.ui, weight: 900, spacing: 2, alpha: a4 }); text(g, p2, cx, 1160, { size: Math.min(46, 860 / Math.max(1, p2.length * 0.6)), color: ui.gold, font: FONTS.ui, weight: 900, spacing: 2, alpha: a4 }); } else text(g, proximo, cx, 1110, { size: ps, color: ui.gold, font: FONTS.ui, weight: 900, spacing: 2, alpha: a4 }); }
+  if (outfit) drawFigure(g, { x: 500, y: 1452 + (1 - a1) * 60, s: 1.0, facing: 1, outfit, pose: t < 0.9 ? POSES.relaxed : POSES.pointUp, expr: 'smile', blink: (t % 2.9) > 2.8, alpha: a1 });
 }

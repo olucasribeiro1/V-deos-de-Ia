@@ -1,0 +1,149 @@
+{
+ "duration": 98.186,
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "text": "[rápido, tenso] Dia quinze. O Bilu limpo, água nos galões... e uma pergunta que ninguém consegue mais engolir.",
+   "start": 0.6,
+   "end": 5.406,
+   "file": "projects/ep07-a-verdade/input/clips/n1_035396dead_t1.20.wav"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "text": "[firme, baixo] Mariana. Senta. E conta tudo.",
+   "start": 5.606,
+   "end": 8.372,
+   "file": "projects/ep07-a-verdade/input/clips/o1_8a65ac54fd_t1.10.wav"
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "text": "[lento] Ela respira fundo. E pela primeira vez desde a bomba... não desvia o olhar.",
+   "start": 8.672,
+   "end": 14.411,
+   "file": "projects/ep07-a-verdade/input/clips/n2_120d8ff830_t1.20.wav"
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "text": "[séria] Eu sou biomédica do Exército. Trabalhei seis anos num laboratório de biossegurança. Num projeto chamado Cérebro.",
+   "start": 14.711,
+   "end": 21.631,
+   "file": "projects/ep07-a-verdade/input/clips/m1_979b42999a_t1.10.wav"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "text": "[rápido, misterioso] O Projeto Cérebro estudava um organismo. Uma coisa que aprende. Que se adapta. E que age em grupo, como se fosse um cérebro só. Por isso o nome.",
+   "start": 21.881,
+   "end": 28.887,
+   "file": "projects/ep07-a-verdade/input/clips/n3_840b829320_t1.20.wav"
+  },
+  {
+   "id": "m2",
+   "spk": "MARIANA",
+   "text": "[culpada] Duas semanas antes da bomba... ele escapou da contenção.",
+   "start": 29.137,
+   "end": 33.0,
+   "file": "projects/ep07-a-verdade/input/clips/m2_0dfe96b906_t1.10.wav"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "text": "[tenso] E o comando tomou uma decisão.",
+   "start": 33.2,
+   "end": 35.28,
+   "file": "projects/ep07-a-verdade/input/clips/n4_5113953de2_t1.20.wav"
+  },
+  {
+   "id": "m3",
+   "spk": "MARIANA",
+   "text": "[voz quebrando] A bomba não foi ataque de inimigo nenhum. Foi ordem do nosso próprio comando. Uma arma experimental. Pra queimar tudo antes que aquilo se espalhasse.",
+   "start": 35.48,
+   "end": 43.927,
+   "file": "projects/ep07-a-verdade/input/clips/m3_c0734bf30d_t1.10.wav"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "text": "[rápido] Ela sabia da operação. Sabia o dia. E não podia contar pra ninguém. Nem pro próprio irmão.",
+   "start": 44.177,
+   "end": 48.781,
+   "file": "projects/ep07-a-verdade/input/clips/n5_7af310aa80_t1.20.wav"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "text": "[revoltado] Então você deixou a gente quase morrer... calada?",
+   "start": 49.031,
+   "end": 52.38,
+   "file": "projects/ep07-a-verdade/input/clips/e1_f641dfeb4c_t1.10.wav"
+  },
+  {
+   "id": "m4",
+   "spk": "MARIANA",
+   "text": "[chorando, firme] Eu só podia fazer uma coisa dentro da lei: nunca desmentir a paranoia do seu tio.",
+   "start": 52.63,
+   "end": 57.875,
+   "file": "projects/ep07-a-verdade/input/clips/m4_9e164f561f_t1.10.wav"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "text": "[emocionado] Por oito anos, a piada da família foi o único aviso que ela conseguiu dar. Cada lata, cada galão desse bunker... ela ajudou a pagar. Escondido.",
+   "start": 58.175,
+   "end": 66.846,
+   "file": "projects/ep07-a-verdade/input/clips/n6_0fcd891306_t1.20.wav"
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "text": "[chocado, baixo] Era você... o dinheiro na minha caixa de correio.",
+   "start": 67.146,
+   "end": 70.567,
+   "file": "projects/ep07-a-verdade/input/clips/o2_8d96e1e237_t1.10.wav"
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "text": "[rápido, didático] Foi ela também que pôs iodeto de potássio no kit de primeiros socorros. Mas atenção: ele só protege a tireoide do iodo radioativo. Não é remédio contra radiação. Quem salva é o abrigo.",
+   "start": 70.867,
+   "end": 80.076,
+   "file": "projects/ep07-a-verdade/input/clips/n7_54ac85f7d5_t1.20.wav"
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "text": "[tentando aliviar] Então... pelo menos a bomba resolveu o problema, né?",
+   "start": 80.476,
+   "end": 83.828,
+   "file": "projects/ep07-a-verdade/input/clips/r1_23c5eb09c2_t1.10.wav"
+  },
+  {
+   "id": "m5",
+   "spk": "MARIANA",
+   "text": "[sussurrando, aterrorizada] Ele sobreviveu.",
+   "start": 84.328,
+   "end": 85.933,
+   "file": "projects/ep07-a-verdade/input/clips/m5_0682b52708_t1.10.wav"
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "text": "[sussurrando] E nesse exato momento... tem passos em cima do alçapão.",
+   "start": 86.433,
+   "end": 89.976,
+   "file": "projects/ep07-a-verdade/input/clips/n8_4955c8be43_t1.20.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Segue a página pra ver o episódio oito!",
+   "start": 94.376,
+   "end": 96.586,
+   "file": "projects/ep07-a-verdade/input/clips/cta_08b89bfe97_t1.20.wav"
+  }
+ ]
+}
