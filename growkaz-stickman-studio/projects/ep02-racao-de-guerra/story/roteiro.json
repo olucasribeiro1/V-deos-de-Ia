@@ -1,58 +1,55 @@
 {
- "model": "eleven_multilingual_v2",
+ "model": "eleven_v4",
+ "_nota": "Tags entre colchetes guiam a emoção (eleven_v4) e não aparecem na legenda. 'Cérberu' = grafia fonética de 'Cérbero'.",
  "voices": {
   "NARRADOR": {
    "id": "ZqE9vIHPcrC35dZv0Svu",
    "settings": {
-    "stability": 0.45,
+    "stability": 0.5,
     "similarity_boost": 0.8,
-    "style": 0.35,
-    "use_speaker_boost": true,
-    "speed": 1.04
-   }
+    "speed": 1.08
+   },
+   "tempo": 1.2
   },
   "OSVALDO": {
    "id": "vCoCktSILN9EF9KwhL6O",
    "settings": {
-    "stability": 0.4,
+    "stability": 0.5,
     "similarity_boost": 0.8,
-    "style": 0.5,
-    "use_speaker_boost": true,
     "speed": 1.05
-   }
+   },
+   "tempo": 1.1
   },
   "EDUARDO": {
    "id": "IKne3meq5aSn9XLyUdCD",
    "settings": {
-    "stability": 0.35,
+    "stability": 0.5,
     "similarity_boost": 0.75,
-    "style": 0.6,
-    "use_speaker_boost": true,
-    "speed": 1.05
-   }
+    "speed": 1.06
+   },
+   "tempo": 1.1
   },
   "RAFAEL": {
    "id": "TX3LPaxmHKxFdv7VOQHJ",
    "settings": {
-    "stability": 0.3,
+    "stability": 0.5,
     "similarity_boost": 0.75,
-    "style": 0.7,
-    "use_speaker_boost": true,
-    "speed": 1.08
-   }
+    "speed": 1.1
+   },
+   "tempo": 1.1
   },
   "MARIANA": {
    "id": "EXAVITQu4vr4xnSDxMaL",
    "settings": {
     "stability": 0.5,
     "similarity_boost": 0.75,
-    "style": 0.35,
-    "use_speaker_boost": true,
-    "speed": 0.98
-   }
+    "speed": 1.0
+   },
+   "tempo": 1.1
   },
   "RADIO": {
    "id": "HoWXGRJgqYolkEBcxmGm",
+   "model": "eleven_multilingual_v2",
    "settings": {
     "stability": 0.6,
     "similarity_boost": 0.8,
@@ -64,84 +61,118 @@
  },
  "lines": [
   {
-   "id": "n1a",
+   "id": "n1",
    "spk": "NARRADOR",
-   "gap": 1.4,
-   "text": "Dentro, o bunker é menor do que parece de fora."
-  },
-  {
-   "id": "nx0",
-   "spk": "NARRADOR",
-   "gap": 0.5,
-   "text": "Gerador. Filtro de ar. Prateleira de comida até o teto. O tio não tinha cavado um buraco. Tinha montado um plano."
-  },
-  {
-   "id": "n1b",
-   "spk": "NARRADOR",
-   "gap": 0.5,
-   "text": "E cheira a comida de exército."
-  },
-  {
-   "id": "r1",
-   "spk": "RAFAEL",
-   "gap": 0.55,
-   "text": "Isso aqui tem gosto de quê, tio?"
-  },
-  {
-   "id": "o1",
-   "spk": "OSVALDO",
-   "gap": 0.3,
-   "text": "Proteína. Come e agradece.",
-   "settings": {
-    "stability": 0.55,
-    "style": 0.3
-   }
-  },
-  {
-   "id": "nx1",
-   "spk": "NARRADOR",
-   "gap": 0.6,
-   "text": "Vinte e dois anos de Exército. Instrutor de sobrevivência. O tio passou a vida inteira esperando por esse dia."
+   "gap": 0.22,
+   "text": "[tenso] O alçapão bate. Escuro total. Quatro respirações... e um gerador ganhando vida."
   },
   {
    "id": "n2",
    "spk": "NARRADOR",
-   "gap": 0.6,
-   "text": "Enquanto Rafael reclama da ração, você percebe que sua mãe não falou uma palavra desde que a porta fechou."
+   "gap": 0.22,
+   "text": "[impressionado] Gerador. Filtro de ar. Comida até o teto. O tio não cavou um buraco. Ele montou um plano."
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "gap": 0.22,
+   "text": "[em pânico] Cadê o Bilu? O Bilu ficou lá fora!"
+  },
+  {
+   "id": "r2",
+   "spk": "RAFAEL",
+   "gap": 0.15,
+   "text": "[desesperado] Abre, tio! Eu busco ele rapidinho!"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[firme, sem gritar] Ninguém abre essa porta."
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "gap": 0.22,
+   "text": "[sério] Porque uns dez minutos depois do clarão, começa a cair do céu uma poeira cinza. Parece cinza de churrasqueira. [baixo] Mas é radioativa."
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "gap": 0.22,
+   "text": "[explicando, rápido] Regra sete-dez. Sete horas depois, a radiação cai pra dez por cento. Dois dias, um por cento. [pausa] Duas semanas aqui embaixo. No mínimo."
+  },
+  {
+   "id": "r3",
+   "spk": "RAFAEL",
+   "gap": 0.15,
+   "text": "[chocado] Duas SEMANAS?!"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "gap": 0.22,
+   "text": "[irônico] E o Rafael chorou pelo Bilu... por uns cinco minutos. Até descobrir onde ficava a comida."
+  },
+  {
+   "id": "r4",
+   "spk": "RAFAEL",
+   "gap": 0.22,
+   "text": "[com nojo] Isso aqui tem gosto de quê, tio?"
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "gap": 0.15,
+   "text": "[seco] Proteína. Come e agradece."
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "gap": 0.22,
+   "text": "[rápido] Vinte e dois anos de Exército. Instrutor de sobrevivência. Quatro litros de água por pessoa, por dia. Ele fez a conta pra quatro pessoas... durante trinta dias."
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "gap": 0.22,
+   "text": "[mais baixo, intrigado] Mas tinha uma coisa que nem o tio previu. A mãe não falou uma palavra desde que a porta fechou."
   },
   {
    "id": "e1",
    "spk": "EDUARDO",
-   "gap": 0.7,
+   "gap": 0.35,
    "text": "Mãe, você tá bem?",
+   "model": "eleven_multilingual_v2",
    "settings": {
     "stability": 0.5,
     "style": 0.3,
+    "use_speaker_boost": true,
     "speed": 1.0
    }
   },
   {
    "id": "m1",
    "spk": "MARIANA",
-   "gap": 0.5,
-   "text": "Só cansada, filho."
+   "gap": 0.3,
+   "text": "[cansada, sorriso forçado] Só cansada, filho."
   },
   {
-   "id": "nx2",
+   "id": "n7",
    "spk": "NARRADOR",
-   "gap": 0.5,
-   "text": "Cansada. Era a mesma resposta dos últimos meses."
+   "gap": 0.22,
+   "text": "[desconfiado] Cansada. A mesma resposta dos últimos meses."
   },
   {
-   "id": "n3",
+   "id": "n8",
    "spk": "NARRADOR",
-   "gap": 0.8,
-   "text": "Osvaldo tenta captar alguma frequência. A maior parte é estática."
+   "gap": 0.22,
+   "text": "[tenso] Hora seis. O tio liga o rádio. Só estática... até que..."
   },
   {
    "id": "rad",
    "spk": "RADIO",
-   "gap": 1.2,
+   "gap": 0.3,
    "text": "Contenção do Projeto Cérberu não foi concluída.",
    "fx": "radio",
    "cut_end": 0.3,
@@ -156,20 +187,16 @@
    ]
   },
   {
-   "id": "n4",
+   "id": "n9",
    "spk": "NARRADOR",
-   "gap": 0.9,
-   "text": "Osvaldo desliga rápido demais pra quem diz que é só estática."
+   "gap": 0.2,
+   "text": "[rápido] Ele desliga na hora. Rápido demais pra quem jura que é só estática."
   },
   {
    "id": "e2",
    "spk": "EDUARDO",
-   "gap": 0.5,
-   "text": "Projeto Cérberu? Que isso, mãe?",
-   "settings": {
-    "stability": 0.42,
-    "style": 0.55
-   },
+   "gap": 0.2,
+   "text": "[confuso, cobrando] Projeto Cérberu? Que isso, mãe?",
    "caption": [
     "Projeto",
     "Cérbero?",
@@ -179,26 +206,23 @@
    ]
   },
   {
-   "id": "n5",
+   "id": "n10",
    "spk": "NARRADOR",
-   "gap": 2.2,
-   "text": "E pela primeira vez, você vê sua mãe sem resposta pronta pra nada.",
-   "settings": {
-    "stability": 0.55,
-    "speed": 0.95
-   }
+   "gap": 0.6,
+   "text": "[devagar, pesado] E pela primeira vez... a sua mãe não tem resposta pronta pra nada."
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "gap": 0.9,
+   "text": "[sussurrando] E lá em cima... alguma coisa começa a arranhar o alçapão."
   },
   {
    "id": "cta",
    "spk": "NARRADOR",
-   "gap": 4.9,
-   "text": "Segue a página pra não perder o episódio três.",
-   "settings": {
-    "stability": 0.45,
-    "speed": 1.02
-   }
+   "gap": 4.2,
+   "text": "[animado] Segue a página pra ver o episódio três!"
   }
  ],
- "tail": 1.7,
- "_nota": "'Cérberu' é grafia fonética para a voz pronunciar 'Cérbero' corretamente; a legenda usa 'caption'."
+ "tail": 1.6
 }

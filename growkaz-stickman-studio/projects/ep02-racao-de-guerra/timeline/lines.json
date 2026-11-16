@@ -1,133 +1,189 @@
 {
- "duration": 81.136,
+ "duration": 103.335,
  "lines": [
   {
-   "id": "n1a",
+   "id": "n1",
    "spk": "NARRADOR",
-   "text": "Dentro, o bunker é menor do que parece de fora.",
-   "start": 1.4,
-   "end": 4.561,
-   "file": "projects/ep02-racao-de-guerra/input/clips/n1a_45add8f3db.mp3"
-  },
-  {
-   "id": "nx0",
-   "spk": "NARRADOR",
-   "text": "Gerador. Filtro de ar. Prateleira de comida até o teto. O tio não tinha cavado um buraco. Tinha montado um plano.",
-   "start": 5.061,
-   "end": 14.752,
-   "file": "projects/ep02-racao-de-guerra/input/clips/nx0_af758a8af2.mp3"
-  },
-  {
-   "id": "n1b",
-   "spk": "NARRADOR",
-   "text": "E cheira a comida de exército.",
-   "start": 15.252,
-   "end": 17.473,
-   "file": "projects/ep02-racao-de-guerra/input/clips/n1b_44272a2092.mp3"
-  },
-  {
-   "id": "r1",
-   "spk": "RAFAEL",
-   "text": "Isso aqui tem gosto de quê, tio?",
-   "start": 18.023,
-   "end": 19.877,
-   "file": "projects/ep02-racao-de-guerra/input/clips/r1_50e2fbf820.mp3"
-  },
-  {
-   "id": "o1",
-   "spk": "OSVALDO",
-   "text": "Proteína. Come e agradece.",
-   "start": 20.177,
-   "end": 22.032,
-   "file": "projects/ep02-racao-de-guerra/input/clips/o1_b21d35c22c.mp3"
-  },
-  {
-   "id": "nx1",
-   "spk": "NARRADOR",
-   "text": "Vinte e dois anos de Exército. Instrutor de sobrevivência. O tio passou a vida inteira esperando por esse dia.",
-   "start": 22.632,
-   "end": 30.652,
-   "file": "projects/ep02-racao-de-guerra/input/clips/nx1_a9bff23fd2.mp3"
+   "text": "[tenso] O alçapão bate. Escuro total. Quatro respirações... e um gerador ganhando vida.",
+   "start": 0.22,
+   "end": 6.028,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n1_2f939a2ff3_t1.20.wav"
   },
   {
    "id": "n2",
    "spk": "NARRADOR",
-   "text": "Enquanto Rafael reclama da ração, você percebe que sua mãe não falou uma palavra desde que a porta fechou.",
-   "start": 31.252,
-   "end": 39.036,
-   "file": "projects/ep02-racao-de-guerra/input/clips/n2_3626387b59.mp3"
+   "text": "[impressionado] Gerador. Filtro de ar. Comida até o teto. O tio não cavou um buraco. Ele montou um plano.",
+   "start": 6.248,
+   "end": 12.856,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n2_deeb4ed21b_t1.20.wav"
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "text": "[em pânico] Cadê o Bilu? O Bilu ficou lá fora!",
+   "start": 13.076,
+   "end": 15.481,
+   "file": "projects/ep02-racao-de-guerra/input/clips/r1_b18b7ae1de_t1.10.wav"
+  },
+  {
+   "id": "r2",
+   "spk": "RAFAEL",
+   "text": "[desesperado] Abre, tio! Eu busco ele rapidinho!",
+   "start": 15.631,
+   "end": 18.1,
+   "file": "projects/ep02-racao-de-guerra/input/clips/r2_490caf5221_t1.10.wav"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "text": "[firme, sem gritar] Ninguém abre essa porta.",
+   "start": 18.3,
+   "end": 20.05,
+   "file": "projects/ep02-racao-de-guerra/input/clips/o1_f81fdd50ef_t1.10.wav"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "text": "[sério] Porque uns dez minutos depois do clarão, começa a cair do céu uma poeira cinza. Parece cinza de churrasqueira. [baixo] Mas é radioativa.",
+   "start": 20.27,
+   "end": 27.949,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n3_3225cc7ab3_t1.20.wav"
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "text": "[explicando, rápido] Regra sete-dez. Sete horas depois, a radiação cai pra dez por cento. Dois dias, um por cento. [pausa] Duas semanas aqui embaixo. No mínimo.",
+   "start": 28.169,
+   "end": 36.462,
+   "file": "projects/ep02-racao-de-guerra/input/clips/o2_a0fafdf646_t1.10.wav"
+  },
+  {
+   "id": "r3",
+   "spk": "RAFAEL",
+   "text": "[chocado] Duas SEMANAS?!",
+   "start": 36.612,
+   "end": 38.143,
+   "file": "projects/ep02-racao-de-guerra/input/clips/r3_eeaea7d27d_t1.10.wav"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "text": "[irônico] E o Rafael chorou pelo Bilu... por uns cinco minutos. Até descobrir onde ficava a comida.",
+   "start": 38.363,
+   "end": 43.513,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n4_9f717cfc22_t1.20.wav"
+  },
+  {
+   "id": "r4",
+   "spk": "RAFAEL",
+   "text": "[com nojo] Isso aqui tem gosto de quê, tio?",
+   "start": 43.733,
+   "end": 46.646,
+   "file": "projects/ep02-racao-de-guerra/input/clips/r4_7142640af7_t1.10.wav"
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "text": "[seco] Proteína. Come e agradece.",
+   "start": 46.796,
+   "end": 49.421,
+   "file": "projects/ep02-racao-de-guerra/input/clips/o3_ce60dd95b2_t1.10.wav"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "text": "[rápido] Vinte e dois anos de Exército. Instrutor de sobrevivência. Quatro litros de água por pessoa, por dia. Ele fez a conta pra quatro pessoas... durante trinta dias.",
+   "start": 49.641,
+   "end": 57.447,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n5_8ac5895edb_t1.20.wav"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "text": "[mais baixo, intrigado] Mas tinha uma coisa que nem o tio previu. A mãe não falou uma palavra desde que a porta fechou.",
+   "start": 57.667,
+   "end": 63.408,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n6_7516796397_t1.20.wav"
   },
   {
    "id": "e1",
    "spk": "EDUARDO",
    "text": "Mãe, você tá bem?",
-   "start": 39.736,
-   "end": 41.173,
-   "file": "projects/ep02-racao-de-guerra/input/clips/e1_82a0f11594.mp3"
+   "start": 63.758,
+   "end": 65.072,
+   "file": "projects/ep02-racao-de-guerra/input/clips/e1_82a0f11594_t1.10.wav"
   },
   {
    "id": "m1",
    "spk": "MARIANA",
-   "text": "Só cansada, filho.",
-   "start": 41.673,
-   "end": 43.162,
-   "file": "projects/ep02-racao-de-guerra/input/clips/m1_86049331da.mp3"
+   "text": "[cansada, sorriso forçado] Só cansada, filho.",
+   "start": 65.372,
+   "end": 68.076,
+   "file": "projects/ep02-racao-de-guerra/input/clips/m1_7b30d978d7_t1.10.wav"
   },
   {
-   "id": "nx2",
+   "id": "n7",
    "spk": "NARRADOR",
-   "text": "Cansada. Era a mesma resposta dos últimos meses.",
-   "start": 43.662,
-   "end": 47.606,
-   "file": "projects/ep02-racao-de-guerra/input/clips/nx2_b5e9105ade.mp3"
+   "text": "[desconfiado] Cansada. A mesma resposta dos últimos meses.",
+   "start": 68.296,
+   "end": 71.769,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n7_98337640f2_t1.20.wav"
   },
   {
-   "id": "n3",
+   "id": "n8",
    "spk": "NARRADOR",
-   "text": "Osvaldo tenta captar alguma frequência. A maior parte é estática.",
-   "start": 48.406,
-   "end": 53.448,
-   "file": "projects/ep02-racao-de-guerra/input/clips/n3_9a3bb8e822.mp3"
+   "text": "[tenso] Hora seis. O tio liga o rádio. Só estática... até que...",
+   "start": 71.989,
+   "end": 76.469,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n8_16e184b31f_t1.20.wav"
   },
   {
    "id": "rad",
    "spk": "RADIO",
    "text": "Contenção do Projeto Cérberu não foi concluída.",
-   "start": 54.648,
-   "end": 57.457,
+   "start": 76.769,
+   "end": 79.488,
    "file": "projects/ep02-racao-de-guerra/input/clips/rad_4fc6a5d465_radio.wav"
   },
   {
-   "id": "n4",
+   "id": "n9",
    "spk": "NARRADOR",
-   "text": "Osvaldo desliga rápido demais pra quem diz que é só estática.",
-   "start": 58.357,
-   "end": 62.014,
-   "file": "projects/ep02-racao-de-guerra/input/clips/n4_880d0481c4.mp3"
+   "text": "[rápido] Ele desliga na hora. Rápido demais pra quem jura que é só estática.",
+   "start": 79.688,
+   "end": 83.086,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n9_2014f5ef11_t1.20.wav"
   },
   {
    "id": "e2",
    "spk": "EDUARDO",
-   "text": "Projeto Cérberu? Que isso, mãe?",
-   "start": 62.514,
-   "end": 64.786,
-   "file": "projects/ep02-racao-de-guerra/input/clips/e2_0728ec2562.mp3"
+   "text": "[confuso, cobrando] Projeto Cérberu? Que isso, mãe?",
+   "start": 83.286,
+   "end": 85.698,
+   "file": "projects/ep02-racao-de-guerra/input/clips/e2_7e847ab6dc_t1.10.wav"
   },
   {
-   "id": "n5",
+   "id": "n10",
    "spk": "NARRADOR",
-   "text": "E pela primeira vez, você vê sua mãe sem resposta pronta pra nada.",
-   "start": 66.986,
-   "end": 71.767,
-   "file": "projects/ep02-racao-de-guerra/input/clips/n5_17ad438297.mp3"
+   "text": "[devagar, pesado] E pela primeira vez... a sua mãe não tem resposta pronta pra nada.",
+   "start": 86.298,
+   "end": 90.755,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n10_71e2ebc30d_t1.20.wav"
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "text": "[sussurrando] E lá em cima... alguma coisa começa a arranhar o alçapão.",
+   "start": 91.655,
+   "end": 95.46,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n11_433237c714_t1.20.wav"
   },
   {
    "id": "cta",
    "spk": "NARRADOR",
-   "text": "Segue a página pra não perder o episódio três.",
-   "start": 76.667,
-   "end": 79.436,
-   "file": "projects/ep02-racao-de-guerra/input/clips/cta_a6e2cd94a3.mp3"
+   "text": "[animado] Segue a página pra ver o episódio três!",
+   "start": 99.66,
+   "end": 101.735,
+   "file": "projects/ep02-racao-de-guerra/input/clips/cta_66c3f8d180_t1.20.wav"
   }
  ]
 }

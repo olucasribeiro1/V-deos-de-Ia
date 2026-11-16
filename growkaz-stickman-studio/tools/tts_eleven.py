@@ -25,8 +25,12 @@ def post_json(url, body):
 
 def words_from_alignment(al):
     ch, st, en = al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]
-    out, cur, s0, e0 = [], "", None, None
+    out, cur, s0, e0, tag = [], "", None, None, False
     for c, a, b in zip(ch, st, en):
+        if c == "[": tag = True; continue                 # tags de emoção do v3/v4 ([tenso], [sussurrando]) não viram legenda
+        if tag:
+            if c == "]": tag = False
+            continue
         if c.isspace():
             if cur: out.append({"word": cur, "start": s0, "end": e0}); cur = ""
             continue
@@ -41,23 +45,30 @@ def main():
     P = a.project; R = load_json(os.path.join(P, "story", "roteiro.json")); clips = os.path.join(P, "input", "clips"); os.makedirs(clips, exist_ok=True)
     model = R.get("model", "eleven_multilingual_v2"); t = 0.0; words, lines, inputs = [], [], []; spent = 0
     for i, ln in enumerate(R["lines"]):
-        v = R["voices"][ln["spk"]]; settings = {**v.get("settings", {}), **ln.get("settings", {})}
+        v = R["voices"][ln["spk"]]; settings = {**v.get("settings", {}), **ln.get("settings", {})}; model = ln.get("model", v.get("model", R.get("model", "eleven_multilingual_v2")))
         h = hashlib.sha1(json.dumps([ln["text"], v["id"], settings, model], sort_keys=True).encode()).hexdigest()[:10]
         mp3, meta = os.path.join(clips, f"{ln['id']}_{h}.mp3"), os.path.join(clips, f"{ln['id']}_{h}.json")
         if not (os.path.exists(mp3) and os.path.exists(meta)):
-            body = {"text": ln["text"], "model_id": model, "voice_settings": settings, "language_code": "pt"} if model != "eleven_multilingual_v2" else {"text": ln["text"], "model_id": model, "voice_settings": settings}
+            body = {"text": ln["text"], "model_id": model, "voice_settings": settings}
+            if model != "eleven_multilingual_v2": body["language_code"] = "pt"
             d = post_json(f"{API}/v1/text-to-speech/{v['id']}/with-timestamps?output_format=mp3_44100_128", body)
             if "audio_base64" not in d: sys.exit(f"ElevenLabs recusou {ln['id']}: {json.dumps(d)[:400]}")
             open(mp3, "wb").write(base64.b64decode(d["audio_base64"])); save_json(meta, d["alignment"]); spent += len(ln["text"])
-        al = load_json(meta); dur = probe_duration(mp3); t += ln.get("gap", 0.3); w = words_from_alignment(al)
+        al = load_json(meta)
+        tempo = ln.get("tempo", v.get("tempo", R.get("tempo", 1.0)))                     # acelera sem mudar o tom (ffmpeg atempo)
+        if ln.get("fx") == "radio":
+            fxf = mp3[:-4] + "_radio.wav"
+            if not os.path.exists(fxf): subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", mp3, "-f", "lavfi", "-i", "anoisesrc=color=white:amplitude=0.18", "-filter_complex", "[0:a]highpass=f=600,lowpass=f=2400,acrusher=bits=7:mode=log:mix=0.6,tremolo=f=11:d=0.55,volume=1.6[v];[1:a]highpass=f=1200,lowpass=f=5000[n];[v][n]amix=inputs=2:duration=first:normalize=0", fxf], check=True)
+            mp3 = fxf
+        if abs(tempo - 1) > 1e-3:
+            tf = mp3.rsplit(".", 1)[0] + f"_t{tempo:.2f}.wav"
+            if not os.path.exists(tf): subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", mp3, "-af", f"atempo={tempo}", tf], check=True)
+            mp3 = tf; al = {k: ([x / tempo for x in v2] if k.endswith("seconds") else v2) for k, v2 in al.items()}
+        dur = probe_duration(mp3); t += ln.get("gap", 0.3); w = words_from_alignment(al)
         # corta silêncio final exagerado da fala
         end_speech = min(dur, (w[-1]["end"] if w else dur) + 0.12)
         if ln.get("cut_end"): end_speech = max(0.3, end_speech - ln["cut_end"])          # corta o fim da fala (transmissão interrompida)
         cap = ln.get("caption")                                                            # texto alternativo da legenda, palavra a palavra
-        if ln.get("fx") == "radio":                                                        # voz de rádio: banda estreita, distorção e chiado
-            fxf = mp3[:-4] + "_radio.wav"
-            if not os.path.exists(fxf): subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", mp3, "-f", "lavfi", "-i", "anoisesrc=color=white:amplitude=0.18", "-filter_complex", "[0:a]highpass=f=600,lowpass=f=2400,acrusher=bits=7:mode=log:mix=0.6,tremolo=f=11:d=0.55,volume=1.6[v];[1:a]highpass=f=1200,lowpass=f=5000[n];[v][n]amix=inputs=2:duration=first:normalize=0", fxf], check=True)
-            mp3 = fxf
         for k, x in enumerate(w): words.append({"word": cap[k] if cap and k < len(cap) else x["word"], "start": round(t + x["start"], 3), "end": round(t + min(x["end"], end_speech), 3), "spk": ln["spk"]})
         lines.append({"id": ln["id"], "spk": ln["spk"], "text": ln["text"], "start": round(t, 3), "end": round(t + end_speech, 3), "file": mp3})
         inputs.append((mp3, t, end_speech)); t += end_speech
@@ -76,13 +87,14 @@ def main():
     print(f"voz: {total:.1f}s, {len(lines)} falas, {spent} caracteres gastos agora")
     for l in lines: print(f"  {l['start']:6.2f}-{l['end']:6.2f}  {l['spk']:9s} {l['text']}")
     if a.verify:
-        norm = lambda s: re.sub(r"[^\w ]+", "", s.lower(), flags=re.U).split()
+        norm = lambda s: re.sub(r"[^\w ]+", "", re.sub(r"\[[^\]]*\]", " ", s).lower(), flags=re.U).split()
         for l in lines:
             r = subprocess.run(["curl", "-sS", "-m", "120", "-H", f"xi-api-key: {KEY}", "-X", "POST", f"{API}/v1/speech-to-text", "-F", "model_id=scribe_v1", "-F", "language_code=por", "-F", f"file=@{l['file']}"], capture_output=True)
             try: txt = json.loads(r.stdout).get("text") or json.loads(r.stdout)
             except Exception: txt = r.stdout.decode()[:200]
-            ok = isinstance(txt, str) and norm(txt) == norm(l["text"])
-            print(("  OK   " if ok else "  DIF  ") + f"{l['id']}: {txt if not ok else ''}")
+            exact = isinstance(txt, str) and norm(txt) == norm(l["text"])
+            fuzzy = isinstance(txt, str) and __import__("difflib").SequenceMatcher(a=norm(txt), b=norm(l["text"])).ratio() > 0.9
+            print(("  OK   " if exact else "  OK~  " if fuzzy else "  DIF  ") + f"{l['id']}: {'' if exact else txt}")
 
 
 if __name__ == "__main__":

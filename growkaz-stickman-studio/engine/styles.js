@@ -87,7 +87,7 @@ STYLES.urbano = {
   name: 'Urbano Noir', desc: 'Estilo do canal: bonecos brancos com contorno preto, cenários urbanos escuros, granulados e dessaturados, acentos vermelhos.',
   ink: '#f1efe9', inkFar: '#d2cfc8', feature: '#141416', rimWidth: 0,
   outline: { color: '#0b0b0d', w: 3.2 },
-  rig: { head: 34, torso: 33, arm: 8.5, leg: 9.5, hand: 7.5, foot: 9.5, capBrim: 1.3, headShade: '#9aa0aa', bodyShade: '#8a90a0' },
+  rig: { head: 34, torso: 33, arm: 8.5, leg: 9.5, hand: 7.5, foot: 9.5, capBrim: 1.3, headShade: '#9aa0aa', bodyShade: '#8a90a0', eyeShine: true },
   ui: { ...UI, card: 'rgba(22,24,30,.94)', cardLine: 'rgba(220,220,230,.22)', text: '#d8d8dc', sub: '#8a8c94', accent: '#d8342b', gold: '#e9cf7a', cream: '#efece4', blueprint: '#b8c4d4', bpBg: '#15181f', good: '#9ac06a' },
   grade: { contrast: 1.08, sat: 1.0, lift: [0.015, 0.018, 0.03], gamma: [0.98, 0.98, 1.01], gain: [1.0, 0.99, 0.99], vignette: 0.6, grain: 0.08, grunge: 0.55, bloom: 0.35 },
   moods: {

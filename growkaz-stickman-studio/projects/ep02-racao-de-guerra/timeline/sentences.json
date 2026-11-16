@@ -1,164 +1,332 @@
 [
  {
   "i": 0,
-  "start": 1.4,
-  "end": 4.511,
-  "text": "Dentro, o bunker é menor do que parece de fora."
+  "start": 0.287,
+  "end": 1.42,
+  "text": "O alçapão bate."
  },
  {
   "i": 1,
-  "start": 5.061,
-  "end": 5.932,
-  "text": "Gerador."
+  "start": 1.62,
+  "end": 2.72,
+  "text": "Escuro total."
  },
  {
   "i": 2,
-  "start": 6.303,
-  "end": 7.383,
-  "text": "Filtro de ar."
+  "start": 2.953,
+  "end": 4.42,
+  "text": "Quatro respirações..."
  },
  {
   "i": 3,
-  "start": 7.813,
-  "end": 10.065,
-  "text": "Prateleira de comida até o teto."
+  "start": 4.487,
+  "end": 6.028,
+  "text": "e um gerador ganhando vida."
  },
  {
   "i": 4,
-  "start": 10.553,
-  "end": 12.654,
-  "text": "O tio não tinha cavado um buraco."
+  "start": 6.448,
+  "end": 7.348,
+  "text": "Gerador."
  },
  {
   "i": 5,
-  "start": 13.083,
-  "end": 14.72,
-  "text": "Tinha montado um plano."
+  "start": 7.514,
+  "end": 8.481,
+  "text": "Filtro de ar."
  },
  {
   "i": 6,
-  "start": 15.252,
-  "end": 17.435,
-  "text": "E cheira a comida de exército."
+  "start": 8.648,
+  "end": 10.181,
+  "text": "Comida até o teto."
  },
  {
   "i": 7,
-  "start": 18.023,
-  "end": 19.834,
-  "text": "Isso aqui tem gosto de quê, tio?"
+  "start": 10.214,
+  "end": 11.581,
+  "text": "O tio não cavou um buraco."
  },
  {
   "i": 8,
-  "start": 20.177,
-  "end": 20.781,
-  "text": "Proteína."
+  "start": 11.681,
+  "end": 12.856,
+  "text": "Ele montou um plano."
  },
  {
   "i": 9,
-  "start": 20.816,
-  "end": 21.988,
-  "text": "Come e agradece."
+  "start": 13.148,
+  "end": 13.73,
+  "text": "Cadê o Bilu?"
  },
  {
   "i": 10,
-  "start": 22.632,
-  "end": 24.582,
-  "text": "Vinte e dois anos de Exército."
+  "start": 14.094,
+  "end": 15.476,
+  "text": "O Bilu ficou lá fora!"
  },
  {
   "i": 11,
-  "start": 24.745,
-  "end": 26.893,
-  "text": "Instrutor de sobrevivência."
+  "start": 15.777,
+  "end": 16.577,
+  "text": "Abre, tio!"
  },
  {
   "i": 12,
-  "start": 27.322,
-  "end": 30.62,
-  "text": "O tio passou a vida inteira esperando por esse dia."
+  "start": 16.722,
+  "end": 18.1,
+  "text": "Eu busco ele rapidinho!"
  },
  {
   "i": 13,
-  "start": 31.252,
-  "end": 39.007,
-  "text": "Enquanto Rafael reclama da ração, você percebe que sua mãe não falou uma palavra desde que a porta fechou."
+  "start": 18.615,
+  "end": 20.045,
+  "text": "Ninguém abre essa porta."
  },
  {
   "i": 14,
-  "start": 39.736,
-  "end": 41.129,
-  "text": "Mãe, você tá bem?"
+  "start": 20.437,
+  "end": 24.67,
+  "text": "Porque uns dez minutos depois do clarão, começa a cair do céu uma poeira cinza."
  },
  {
   "i": 15,
-  "start": 41.673,
-  "end": 43.113,
-  "text": "Só cansada, filho."
+  "start": 24.703,
+  "end": 26.437,
+  "text": "Parece cinza de churrasqueira."
  },
  {
   "i": 16,
-  "start": 43.662,
-  "end": 44.637,
-  "text": "Cansada."
+  "start": 26.837,
+  "end": 27.949,
+  "text": "Mas é radioativa."
  },
  {
   "i": 17,
-  "start": 44.951,
-  "end": 47.563,
-  "text": "Era a mesma resposta dos últimos meses."
+  "start": 28.241,
+  "end": 29.296,
+  "text": "Regra sete-dez."
  },
  {
   "i": 18,
-  "start": 48.406,
-  "end": 51.123,
-  "text": "Osvaldo tenta captar alguma frequência."
+  "start": 29.478,
+  "end": 32.096,
+  "text": "Sete horas depois, a radiação cai pra dez por cento."
  },
  {
   "i": 19,
-  "start": 51.216,
-  "end": 53.422,
-  "text": "A maior parte é estática."
+  "start": 32.241,
+  "end": 33.587,
+  "text": "Dois dias, um por cento."
  },
  {
   "i": 20,
-  "start": 54.648,
-  "end": 56.273,
-  "text": "...contenção do Projeto Cér..."
+  "start": 34.205,
+  "end": 35.587,
+  "text": "Duas semanas aqui embaixo."
  },
  {
   "i": 21,
-  "start": 56.331,
-  "end": 57.457,
-  "text": "não foi conclu..."
+  "start": 35.732,
+  "end": 36.462,
+  "text": "No mínimo."
  },
  {
   "i": 22,
-  "start": 58.357,
-  "end": 61.979,
-  "text": "Osvaldo desliga rápido demais pra quem diz que é só estática."
+  "start": 36.849,
+  "end": 38.139,
+  "text": "Duas SEMANAS?!"
  },
  {
   "i": 23,
-  "start": 62.514,
-  "end": 63.559,
-  "text": "Projeto Cérbero?"
+  "start": 38.429,
+  "end": 40.363,
+  "text": "E o Rafael chorou pelo Bilu..."
  },
  {
   "i": 24,
-  "start": 63.872,
-  "end": 64.743,
-  "text": "Que isso, mãe?"
+  "start": 40.429,
+  "end": 41.663,
+  "text": "por uns cinco minutos."
  },
  {
   "i": 25,
-  "start": 66.986,
-  "end": 71.723,
-  "text": "E pela primeira vez, você vê sua mãe sem resposta pronta pra nada."
+  "start": 41.829,
+  "end": 43.513,
+  "text": "Até descobrir onde ficava a comida."
  },
  {
   "i": 26,
-  "start": 76.667,
-  "end": 79.407,
-  "text": "Segue a página pra não perder o episódio três."
+  "start": 44.315,
+  "end": 46.642,
+  "text": "Isso aqui tem gosto de quê, tio?"
+ },
+ {
+  "i": 27,
+  "start": 46.869,
+  "end": 47.705,
+  "text": "Proteína."
+ },
+ {
+  "i": 28,
+  "start": 47.887,
+  "end": 49.421,
+  "text": "Come e agradece."
+ },
+ {
+  "i": 29,
+  "start": 49.708,
+  "end": 50.975,
+  "text": "Vinte e dois anos de Exército."
+ },
+ {
+  "i": 30,
+  "start": 51.108,
+  "end": 52.441,
+  "text": "Instrutor de sobrevivência."
+ },
+ {
+  "i": 31,
+  "start": 52.508,
+  "end": 54.575,
+  "text": "Quatro litros de água por pessoa, por dia."
+ },
+ {
+  "i": 32,
+  "start": 54.641,
+  "end": 56.286,
+  "text": "Ele fez a conta pra quatro pessoas..."
+ },
+ {
+  "i": 33,
+  "start": 56.331,
+  "end": 57.447,
+  "text": "durante trinta dias."
+ },
+ {
+  "i": 34,
+  "start": 57.734,
+  "end": 60.4,
+  "text": "Mas tinha uma coisa que nem o tio previu."
+ },
+ {
+  "i": 35,
+  "start": 60.434,
+  "end": 63.408,
+  "text": "A mãe não falou uma palavra desde que a porta fechou."
+ },
+ {
+  "i": 36,
+  "start": 63.758,
+  "end": 65.067,
+  "text": "Mãe, você tá bem?"
+ },
+ {
+  "i": 37,
+  "start": 66.456,
+  "end": 68.063,
+  "text": "Só cansada, filho."
+ },
+ {
+  "i": 38,
+  "start": 68.362,
+  "end": 69.329,
+  "text": "Cansada."
+ },
+ {
+  "i": 39,
+  "start": 69.562,
+  "end": 71.769,
+  "text": "A mesma resposta dos últimos meses."
+ },
+ {
+  "i": 40,
+  "start": 72.055,
+  "end": 72.922,
+  "text": "Hora seis."
+ },
+ {
+  "i": 41,
+  "start": 73.122,
+  "end": 74.322,
+  "text": "O tio liga o rádio."
+ },
+ {
+  "i": 42,
+  "start": 74.522,
+  "end": 75.655,
+  "text": "Só estática..."
+ },
+ {
+  "i": 43,
+  "start": 75.755,
+  "end": 76.469,
+  "text": "até que..."
+ },
+ {
+  "i": 44,
+  "start": 76.769,
+  "end": 78.452,
+  "text": "...contenção do Projeto Cér..."
+ },
+ {
+  "i": 45,
+  "start": 78.487,
+  "end": 79.488,
+  "text": "não foi conclu..."
+ },
+ {
+  "i": 46,
+  "start": 79.802,
+  "end": 80.754,
+  "text": "Ele desliga na hora."
+ },
+ {
+  "i": 47,
+  "start": 80.888,
+  "end": 83.086,
+  "text": "Rápido demais pra quem jura que é só estática."
+ },
+ {
+  "i": 48,
+  "start": 83.552,
+  "end": 84.667,
+  "text": "Projeto Cérbero?"
+ },
+ {
+  "i": 49,
+  "start": 84.813,
+  "end": 85.698,
+  "text": "Que isso, mãe?"
+ },
+ {
+  "i": 50,
+  "start": 86.364,
+  "end": 88.164,
+  "text": "E pela primeira vez..."
+ },
+ {
+  "i": 51,
+  "start": 88.231,
+  "end": 90.755,
+  "text": "a sua mãe não tem resposta pronta pra nada."
+ },
+ {
+  "i": 52,
+  "start": 91.789,
+  "end": 92.855,
+  "text": "E lá em cima..."
+ },
+ {
+  "i": 53,
+  "start": 92.922,
+  "end": 95.455,
+  "text": "alguma coisa começa a arranhar o alçapão."
+ },
+ {
+  "i": 54,
+  "start": 99.794,
+  "end": 101.735,
+  "text": "Segue a página pra ver o episódio três!"
  }
 ]

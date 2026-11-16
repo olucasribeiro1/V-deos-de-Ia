@@ -1,6 +1,6 @@
 // engine/player.js — loads a project, maps global time -> shot, renders frames deterministically.
 // window.renderFrame(frameIndex) draws one frame onto #main. Used by render.mjs (headless).
-import { E, V, SAFE, setStyle, getShot, clamp, ease, prog, alpha, text, FONTS } from './core.js';
+import { E, V, SAFE, setStyle, getShot, clamp, ease, prog, alpha, text, FONTS, noise, rr, circle } from './core.js';
 import { STYLES } from './styles.js';
 import { captions } from './ui2d.js';
 
@@ -25,7 +25,7 @@ async function boot() {
   const short = RES[cfg.resolution || '1080p'] || 1080, long = Math.round((short * 16) / 9 / 2) * 2;
   const scale = +(q.get('scale') || 1);
   const outW = Math.round(((vertical ? short : long) * scale) / 2) * 2, outH = Math.round(((vertical ? long : short) * scale) / 2) * 2;
-  Object.assign(E, { vertical, W: vertical ? 1080 : 1920, H: vertical ? 1920 : 1080, fps: cfg.fps || 24, cfg, words: words.words || words, shots: story.shots, outW, outH });
+  Object.assign(E, { story, nums: story.numbers || [], hud: story.hud || [], punch: (story.punch || []).concat((story.numbers || []).map(n => n.t)).sort((a, b) => a - b), vertical, W: vertical ? 1080 : 1920, H: vertical ? 1920 : 1080, fps: cfg.fps || 24, cfg, words: words.words || words, shots: story.shots, outW, outH });
   E.PX = outW / E.W;
   setStyle(q.get('style') || cfg.style || 'emerald');
   await loadFonts();
@@ -98,9 +98,45 @@ function drawShot(buf, shot, lt) {
       g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(glCanvas, 0, 0, buf.width, buf.height); g.restore();
       if (def.overlay) { g.save(); def.overlay(g, lt, info, st); g.restore(); }
     } else { g.save(); def.draw(g, lt, info); g.restore(); }
+    if (shot.live !== false && E.cfg.live !== false) liveCam(buf, shot.start + lt);
   } catch (e) { const msg = `${shot.id}@${lt.toFixed(2)}: ${e.message}`; if (!errors.includes(msg) && errors.length < 200) errors.push(msg); console.log('SHOT ERROR', msg, e.stack?.split('\n')[1]);
     g.setTransform(E.PX, 0, 0, E.PX, 0, 0); text(g, 'ERROR ' + msg.slice(0, 90), E.W / 2, E.H / 2, { size: 34, color: '#ff4040', font: FONTS.ui, weight: 900 }); }
 }
+// ---------- câmera viva: tremida de mão + zoom de base + "punch" (zoom rápido) nos números e batidas ----------
+let camTmp = null;
+function liveCam(buf, T) {
+  const L = E.cfg.live || {}, amp = (L.amp ?? 9) * E.PX, base = L.zoom ?? 1.04;
+  let z = base + 0.012 * Math.sin(T * 0.45), kick = 0;
+  for (const p of E.punch) { const k = T - p; if (k >= 0 && k < 0.6) { z += (L.punch ?? 0.075) * Math.exp(-k * 7) * Math.min(1, k * 30); kick = Math.max(kick, Math.exp(-k * 9)); } if (p > T) break; }
+  const dx = noise(T * 0.55, 3) * amp + noise(T * 9, 8) * 6 * E.PX * kick, dy = noise(T * 0.5, 7) * amp + noise(T * 9, 2) * 6 * E.PX * kick, rot = noise(T * 0.35, 11) * (L.rot ?? 0.006);
+  if (!camTmp || camTmp.width !== buf.width) camTmp = mk(buf.width, buf.height);
+  const c = camTmp.getContext('2d'); c.setTransform(1, 0, 0, 1, 0, 0); c.drawImage(buf, 0, 0);
+  const g = buf.getContext('2d'); g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.filter = 'none'; g.globalCompositeOperation = 'source-over';
+  g.translate(buf.width / 2 + dx, buf.height / 2 + dy); g.rotate(rot); g.scale(z, z); g.drawImage(camTmp, -buf.width / 2, -buf.height / 2); g.setTransform(1, 0, 0, 1, 0, 0);
+}
+// ---------- números falados aparecem grandes na tela (gerados por build_shots a partir das palavras) ----------
+function drawNums(g, T, shot) {
+  if (shot.nums === false) return; const ui = E.style.ui;
+  for (const n of E.nums) { const k = T - n.t, dur = n.dur ?? 1.6; if (k < 0 || k > dur) continue;
+    const a = ease.outBack(prog(k, 0, 0.22)), out = clamp((dur - k) / 0.25), y = n.y ?? 430, x = n.x ?? 500;
+    g.save(); g.globalAlpha = out; g.translate(x, y); g.rotate(-0.05 + 0.015 * Math.sin(k * 6)); g.scale(a * (1 + 0.03 * Math.sin(k * 9)), a * (1 + 0.03 * Math.sin(k * 9)));
+    const size = n.size ?? 160; text(g, n.str, 0, 0, { size, color: n.color || ui.gold, stroke: size * 0.16, strokeColor: '#0b0b0d', spacing: 2 });
+    if (n.sub) { const ss = Math.round(size * 0.36); text(g, n.sub, 0, size * 0.62, { size: ss, color: ui.cream, font: FONTS.ui, weight: 900, stroke: ss * 0.3, strokeColor: '#0b0b0d', spacing: 3 }); }
+    g.restore(); }
+}
+// ---------- HUD de tempo da história ("DIA 2 · 06:40") + medidor de radiação ----------
+function drawHud(g, T, shot) {
+  if (shot.hud === false || !E.hud.length) return; let h = null; for (const x of E.hud) if (x.t <= T) h = x; if (!h) return;
+  const ui = E.style.ui, x = 90, y = 262, pulse = 0.5 + 0.5 * Math.sin(T * 6), fresh = clamp(1 - (T - h.t) / 0.5);
+  g.save(); g.translate(x, y); g.scale(1.25 + 0.15 * fresh, 1.25 + 0.15 * fresh);
+  g.font = '900 34px Nunito'; const w = g.measureText(h.text).width + 74;
+  rr(g, 0, -30, w, 60, 30); g.fillStyle = 'rgba(8,9,12,.82)'; g.fill(); g.strokeStyle = 'rgba(255,255,255,.18)'; g.lineWidth = 2; g.stroke();
+  circle(g, 30, 0, 9, alpha(ui.accent, 0.4 + 0.6 * pulse)); text(g, h.text, 52, 2, { size: 34, color: '#ffffff', font: FONTS.ui, weight: 900, align: 'left', spacing: 2 });
+  if (h.rad != null) { const ry = 50, bw = 300; text(g, 'RADIAÇÃO LÁ FORA', 4, ry, { size: 20, color: ui.cream, font: FONTS.ui, weight: 900, align: 'left', spacing: 2, stroke: 6, strokeColor: '#0b0b0d' });
+    rr(g, 0, ry + 16, bw, 18, 9); g.fillStyle = 'rgba(8,9,12,.8)'; g.fill(); rr(g, 2, ry + 18, Math.max(10, (bw - 4) * clamp(h.rad)), 14, 7); g.fillStyle = h.rad > 0.5 ? ui.accent : h.rad > 0.15 ? '#e0a030' : '#5fd36a'; g.fill(); }
+  g.restore();
+}
+
 const BARS = () => ({ none: 0, wide: V(60, 0), scope: V(138, 170), thin: V(30, 60) });
 const barVal = (s) => (typeof (s?.bars ?? E.cfg.bars) === 'number' ? (s.bars ?? E.cfg.bars) : BARS()[s?.bars ?? E.cfg.bars ?? V('wide', 'none')] ?? 0);
 
@@ -126,6 +162,7 @@ window.renderFrame = function (f) {
   if (grade.grunge > 0 && grungeTiles.length && shot.grunge !== false) { mg.save(); mg.globalAlpha = grade.grunge * (0.85 + 0.15 * Math.sin(f * 1.7)); const gt = grungeTiles[(i + Math.floor(f / 3)) % grungeTiles.length]; mg.drawImage(gt, 0, 0, W, H); mg.restore(); }
   if (grade.grain > 0) { mg.save(); mg.globalAlpha = grade.grain; mg.globalCompositeOperation = 'overlay'; mg.drawImage(grainTiles[f % 4], 0, 0, W, H); mg.restore(); }
   mg.setTransform(E.PX, 0, 0, E.PX, 0, 0);
+  drawHud(mg, t, shot); drawNums(mg, t, shot);
   if (E.cfg.captions && shot.captions !== false) captions(mg, t, E.cfg.captionStyle || {});
   const cur = barVal(shot), prevB = i > 0 ? barVal(E.shots[i - 1]) : cur, bar = prevB + (cur - prevB) * ease.inOut(prog(lt, 0, 0.6));
   if (bar > 0) { mg.fillStyle = '#000'; mg.fillRect(0, 0, E.W, bar); mg.fillRect(0, E.H - bar, E.W, bar); }

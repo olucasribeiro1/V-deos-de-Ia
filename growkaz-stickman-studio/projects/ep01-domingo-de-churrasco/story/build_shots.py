@@ -1,7 +1,8 @@
 """Monta story/shots.json a partir de timeline/lines.json (tempos das falas) — rode depois do tts_eleven.py.
 Cada cena começa em relação a uma fala ("linha", deslocamento) ou a uma palavra da fala ("linha", "palavra", deslocamento)."""
-import json, os, re
-P = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import json, os, re, sys
+P = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); sys.path.insert(0, os.path.join(P, "..", "..", "tools"))
+from numeros import achar_numeros
 LN = json.load(open(f"{P}/timeline/lines.json")); W = json.load(open(f"{P}/timeline/words.json"))["words"]
 L = {l["id"]: (l["start"], l["end"]) for l in LN["lines"]}; DUR = LN["duration"]
 nw = lambda s: re.sub(r"[^\w]+", "", s.lower())
@@ -26,7 +27,7 @@ S = [
  ("s05", ("r1", -0.25), "Dá um pedaço aí, Eduardo, pelo amor de Deus!", "churrasqueira: Rafael implora carne ao Eduardo", dict(amb=amb("city"))),
  ("s06", ("e1", -0.1), "Para de correr atrás do Bilu", "close do Eduardo bravo falando", {}),
  ("s07", ("e1", "com", -0.08), "com a carne, ele não é de ferro!", "Bilu dispara com a linguiça, Rafael atrás", dict(amb=amb("city"), sfx=[{"at": 0.05, "name": "whoosh", "gain": -10}])),
- ("s08", ("n2", -0.3), "Mãe de biomédica tem esse problema:", "Mariana parada na janela, vista de fora", dict(amb=amb("city"))),
+ ("s08", ("n2", -0.3), "Mãe biomédica tem esse problema:", "Mariana parada na janela, vista de fora", dict(amb=amb("city"))),
  ("s09", ("n2", "nunca", -0.1), "nunca sabe disfarçar quando algo tá errado.", "rosto gigante da Mariana: sorriso some", {}),
  ("s10", ("o1", -1.15), "", "portão abre com força, Osvaldo entra", dict(sfx=[{"at": 0.1, "name": "impact", "gain": -6}], **{"in": {"type": "whip", "dir": -1}})),
  ("s11", ("o1", -0.08), "Hoje. Agora.", "rosto gigante do Osvaldo", {}),
@@ -57,5 +58,8 @@ for i, (id, _, line, scene, x) in enumerate(S):
 T = {s["id"]: s["start"] for s in shots}
 music = [{"start": 0, "end": T["s10"], "mood": "playful", "intensity": 0.45}, {"start": T["s10"], "end": T["s18"], "mood": "tension", "intensity": 0.55},
          {"start": T["s18"], "end": T["s25"], "mood": "action", "intensity": 0.8}, {"start": T["s25"], "end": DUR, "mood": "mystery", "intensity": 0.4}]
-json.dump({"title": "Domingo de Churrasco", "duration": DUR, "shots": shots, "music": music, "sfx": []}, open(f"{P}/story/shots.json", "w"), ensure_ascii=False, indent=1)
+for sh in shots:
+    if sh["id"] in ("s13b", "s25", "s26"): sh["nums"] = False
+nums = [n for n in achar_numeros(W) if not any(x["start"] <= n["t"] < x["end"] and x.get("nums") is False for x in shots)]
+json.dump({"title": "Domingo de Churrasco", "duration": DUR, "shots": shots, "music": music, "numbers": nums, "sfx": [{"t": round(n["t"], 3), "name": "pop", "gain": -13} for n in nums]}, open(f"{P}/story/shots.json", "w"), ensure_ascii=False, indent=1)
 for s in shots: print(f"{s['id']:5s} {s['start']:6.2f}-{s['end']:6.2f}  {s['scene'][:60]}")

@@ -82,6 +82,12 @@ export const EXPR = {
   angry: { eyes: 'dot', brows: 'angry', mouth: 'flat' }, determined: { eyes: 'dot', brows: 'angry', mouth: 'smallFlat' }, sad: { eyes: 'dot', brows: 'worried', mouth: 'frown' },
   cry: { eyes: 'closed', brows: 'worried', mouth: 'frown', tears: true }, smirk: { eyes: 'dot', brows: null, mouth: 'smirk' }, sleepy: { eyes: 'closed', brows: null, mouth: 'flat' },
   thinking: { eyes: 'dot', brows: 'raised', mouth: 'smallFlat', look: [0.5, -0.6] }, confused: { eyes: 'dot', brows: 'confused', mouth: 'wavy' }, awe: { eyes: 'wide', brows: 'raised', mouth: 'o' },
+  // expressões extras (mais exageradas, estilo cartoon)
+  panic: { eyes: 'tiny', brows: 'worried', mouth: 'scream', sweat: true }, furious: { eyes: 'dot', brows: 'furious', mouth: 'teeth' },
+  disgust: { eyes: 'squint', brows: 'angry', mouth: 'tongue' }, sob: { eyes: 'closed', brows: 'worried', mouth: 'scream', tears: 'stream' },
+  terrified: { eyes: 'tiny', brows: 'worried', mouth: 'wavyBig', sweat: true }, suspicious: { eyes: 'squint', brows: 'skeptic', mouth: 'flat' },
+  proud: { eyes: 'happy', brows: 'raised', mouth: 'smirk' }, hungry: { eyes: 'wide', brows: 'raised', mouth: 'drool' }, gulp: { eyes: 'ring', brows: 'worried', mouth: 'smallFlat', sweat: true },
+  forced: { eyes: 'dot', brows: 'worried', mouth: 'grin', sweat: false }, blank: { eyes: 'tiny', brows: null, mouth: 'flat' },
 };
 // face(g, headX, headY, r, {expr, talk, blink, look:[x,y], front, color, facing})  — also used for giant close-ups
 export function face(g, hx, hy, r, o = {}) {
@@ -99,7 +105,10 @@ export function face(g, hx, hy, r, o = {}) {
       case 'happy': g.strokeStyle = col; g.lineWidth = r * 0.09; g.beginPath(); g.arc(x, ey + r * 0.05, r * 0.13 * s, Math.PI * 1.1, Math.PI * 1.9); g.stroke(); break;
       case 'ring': ring(g, x, ey, r * 0.2 * s, r * 0.085, col); circle(g, x + look[0] * r * 0.06, ey + look[1] * r * 0.06, r * 0.075 * s, col); break;
       case 'wide': circle(g, x, ey, r * 0.2 * s, col); circle(g, x + look[0] * r * 0.08, ey + look[1] * r * 0.08, r * 0.085 * s, ink); break;
+      case 'tiny': circle(g, x + look[0] * r * 0.05, ey + look[1] * r * 0.05, r * 0.065 * s, col); break;
+      case 'squint': seg(g, [[x - r * 0.13 * s, ey + r * 0.02], [x + r * 0.13 * s, ey - r * 0.01]], r * 0.085, col); circle(g, x + look[0] * r * 0.04, ey + r * 0.02, r * 0.06 * s, col); break;
       default: circle(g, x + look[0] * r * 0.05, ey + look[1] * r * 0.05, r * 0.125 * s, col);
+        if (S().rig?.eyeShine) circle(g, x + look[0] * r * 0.05 + r * 0.045 * s, ey + look[1] * r * 0.05 - r * 0.045 * s, r * 0.04 * s, '#ffffff');
     }
   });
   const by = ey - r * 0.3, bw = r * 0.15;
@@ -107,6 +116,8 @@ export function face(g, hx, hy, r, o = {}) {
   if (ex.brows === 'worried') { brow(eyeX[0], r * 0.06); brow(eyeX[1], -r * 0.06); }   // pontas internas para cima
   if (ex.brows === 'angry') { brow(eyeX[0], -r * 0.08); brow(eyeX[1], r * 0.08); }     // pontas internas para baixo
   if (ex.brows === 'raised') eyeX.forEach(x => { g.strokeStyle = col; g.lineWidth = r * 0.07; g.beginPath(); g.arc(x, by + r * 0.12, r * 0.15, Math.PI * 1.2, Math.PI * 1.8); g.stroke(); });
+  if (ex.brows === 'furious') { const w2 = r * 0.11; seg(g, [[eyeX[0] - bw, by - r * 0.1], [eyeX[0] + bw, by + r * 0.08]], w2, col); seg(g, [[eyeX[1] - bw, by + r * 0.08], [eyeX[1] + bw, by - r * 0.1]], w2, col); }
+  if (ex.brows === 'skeptic') { brow(eyeX[0], 0); seg(g, [[eyeX[1] - bw, by - r * 0.08], [eyeX[1] + bw, by - r * 0.14]], r * 0.075, col); }
   if (ex.brows === 'confused') { brow(eyeX[0], r * 0.07); g.strokeStyle = col; g.lineWidth = r * 0.07; g.beginPath(); g.arc(eyeX[1], by + r * 0.08, r * 0.15, Math.PI * 1.2, Math.PI * 1.8); g.stroke(); }
   const mx = fx + (o.front ? 0 : r * 0.04), my = fy + r * 0.42;
   const talk = o.talk || 0;
@@ -121,9 +132,15 @@ export function face(g, hx, hy, r, o = {}) {
     case 'smallFlat': seg(g, [[mx - r * 0.12, my], [mx + r * 0.12, my]], r * 0.085, col); break;
     case 'frown': g.strokeStyle = col; g.lineWidth = r * 0.085; g.beginPath(); g.arc(mx, my + r * 0.2, r * 0.2, Math.PI + 0.5, Math.PI * 2 - 0.5); g.stroke(); break;
     case 'smirk': g.strokeStyle = col; g.lineWidth = r * 0.085; g.beginPath(); g.moveTo(mx - r * 0.16, my); g.quadraticCurveTo(mx + r * 0.05, my + r * 0.06, mx + r * 0.22, my - r * 0.1); g.stroke(); break;
+    case 'scream': { g.fillStyle = col; g.beginPath(); g.ellipse(mx, my + r * 0.06, r * 0.2, r * 0.27, 0, 0, Math.PI * 2); g.fill(); g.fillStyle = '#c0444a'; g.beginPath(); g.ellipse(mx, my + r * 0.2, r * 0.11, r * 0.09, 0, 0, Math.PI * 2); g.fill(); break; }
+    case 'teeth': { rr(g, mx - r * 0.24, my - r * 0.08, r * 0.48, r * 0.2, r * 0.06); g.fillStyle = col; g.fill(); rr(g, mx - r * 0.2, my - r * 0.05, r * 0.4, r * 0.14, r * 0.03); g.fillStyle = '#ffffff'; g.fill(); seg(g, [[mx - r * 0.2, my + r * 0.02], [mx + r * 0.2, my + r * 0.02]], r * 0.025, col); break; }
+    case 'tongue': { g.strokeStyle = col; g.lineWidth = r * 0.085; g.beginPath(); for (let i = 0; i <= 16; i++) { const u = i / 16; const x = mx - r * 0.24 + u * r * 0.48, y = my + Math.sin(u * Math.PI * 2) * r * 0.06; i ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke(); g.fillStyle = '#d9707a'; g.beginPath(); g.ellipse(mx + r * 0.1, my + r * 0.12, r * 0.08, r * 0.1, 0, 0, Math.PI * 2); g.fill(); break; }
+    case 'wavyBig': { g.fillStyle = col; g.beginPath(); for (let i = 0; i <= 16; i++) { const u = i / 16; g.lineTo(mx - r * 0.28 + u * r * 0.56, my - r * 0.04 + Math.sin(u * Math.PI * 3) * r * 0.05); } for (let i = 16; i >= 0; i--) { const u = i / 16; g.lineTo(mx - r * 0.28 + u * r * 0.56, my + r * 0.12 + Math.sin(u * Math.PI * 3) * r * 0.05); } g.closePath(); g.fill(); break; }
+    case 'drool': { g.fillStyle = col; g.beginPath(); g.ellipse(mx, my, r * 0.14, r * 0.1, 0, 0, Math.PI * 2); g.fill(); g.fillStyle = '#9fd8ff'; g.beginPath(); g.ellipse(mx + r * 0.12, my + r * 0.2, r * 0.04, r * 0.09, 0, 0, Math.PI * 2); g.fill(); break; }
     case 'wavy': { g.strokeStyle = col; g.lineWidth = r * 0.085; g.beginPath(); for (let i = 0; i <= 16; i++) { const u = i / 16; const x = mx - r * 0.24 + u * r * 0.48, y = my + Math.sin(u * Math.PI * 2) * r * 0.06; i ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke(); break; }
   }
-  if (ex.tears) { g.fillStyle = '#8fd0ff'; for (const x of eyeX) { g.beginPath(); g.ellipse(x, ey + r * 0.3, r * 0.05, r * 0.1, 0, 0, Math.PI * 2); g.fill(); } }
+  if (ex.tears === 'stream') { g.fillStyle = alpha('#8fd0ff', 0.9); for (const x of eyeX) { rr(g, x - r * 0.05, ey + r * 0.05, r * 0.1, r * 0.75, r * 0.05); g.fill(); } }
+  else if (ex.tears) { g.fillStyle = '#8fd0ff'; for (const x of eyeX) { g.beginPath(); g.ellipse(x, ey + r * 0.3, r * 0.05, r * 0.1, 0, 0, Math.PI * 2); g.fill(); } }
   if (ex.sweat) { g.fillStyle = '#9fd8ff'; g.beginPath(); g.ellipse(hx - r * 0.6, hy - r * 0.45, r * 0.08, r * 0.13, 0, 0, Math.PI * 2); g.fill(); }
   g.restore();
 }
@@ -199,6 +216,7 @@ export function drawFigure(g, o) {
   if (o.shadow !== false && !o.rot) { g.fillStyle = 'rgba(0,0,0,.28)'; g.beginPath(); g.ellipse(o.x, o.y + 2, 34 * s, 6 * s, 0, 0, Math.PI * 2); g.fill(); }
   if (o.trail) { const { count = 4, dx = -40, dy = 0, a = 0.22 } = o.trail; for (let i = count; i >= 1; i--) { g.save(); g.globalAlpha *= a * (1 - i / (count + 1)); body(g, { ...o, x: o.x + dx * i, y: o.y + dy * i, trail: null }, p, s, f, of, ink, far, null, alpha(rim?.color || '#fff', 1)); g.restore(); } }
   body(g, o, p, s, f, of, ink, far, rim);
+  if (o.emote) { const [hx, hy, hr] = headPos(o); emote(g, hx, hy, hr, o.emote, o.t ?? 0); }
   g.restore();
 }
 function body(g, o, p, s, f, of, ink, far, rim, flat) {
@@ -285,7 +303,26 @@ export function bigFace(g, cx, cy, r, o = {}) {
   if (ol && st.rig?.headShade) { g.save(); g.beginPath(); g.arc(0, 0, r, 0, Math.PI * 2); g.clip(); circle(g, -side * r * 0.4, r * 0.3, r, alpha(st.rig.headShade, 0.3)); circle(g, side * r * 0.12, -r * 0.1, r * 0.95, ink); g.restore(); }
   if (of.head && !['hood', 'none'].includes(of.head)) drawHeadwear(g, { ...of, _ink: ink }, 0, 0, r, 'main');
   face(g, 0, 0, r, { expr: o.expr, talk: o.talk, blink: o.blink, look: o.look, front: true, override: o.face });
+  if (o.emote) emote(g, 0, 0, r * 0.62, o.emote, o.t ?? 0);
   if (of.face === 'glasses') { g.strokeStyle = st.feature; g.lineWidth = r * 0.06; for (const dx of [-0.34, 0.34]) { g.beginPath(); g.arc(dx * r, -r * 0.16, r * 0.26, 0, Math.PI * 2); g.stroke(); } }
   if (of.face === 'sunglasses') { g.fillStyle = '#05060a'; rr(g, -r * 0.66, -r * 0.34, r * 0.6, r * 0.4, r * 0.12); g.fill(); rr(g, r * 0.06, -r * 0.34, r * 0.6, r * 0.4, r * 0.12); g.fill(); g.fillStyle = 'rgba(160,230,255,.6)'; g.fillRect(-r * 0.55, -r * 0.28, r * 0.12, r * 0.05); }
   g.restore();
+}
+
+// ---------- emotes: símbolos de emoção em volta da cabeça (estilo cartoon) ----------
+// emote(g, hx, hy, r, tipo, t) — tipos: sweat, anger, shock, question, exclaim, blush, gloom, sparkle, steam
+export function emote(g, hx, hy, r, kind, t = 0) {
+  if (!kind) return; const INK = '#0b0b0d'; const kinds = Array.isArray(kind) ? kind : [kind];
+  for (const k of kinds) { g.save(); g.lineCap = 'round'; g.lineJoin = 'round';
+    switch (k) {
+      case 'sweat': { const y = hy - r * 0.6 + ((t * 0.9) % 1) * r * 0.5; g.fillStyle = INK; g.beginPath(); g.ellipse(hx - r * 0.95, y, r * 0.17, r * 0.24, 0, 0, 7); g.fill(); g.fillStyle = '#9fd8ff'; g.beginPath(); g.ellipse(hx - r * 0.95, y, r * 0.12, r * 0.18, 0, 0, 7); g.fill(); break; }
+      case 'anger': { const s2 = r * (0.28 + 0.04 * Math.sin(t * 14)), x = hx + r * 0.75, y = hy - r * 0.8; for (const a of [0, 1, 2, 3]) { g.save(); g.translate(x, y); g.rotate(a * Math.PI / 2 + 0.785); seg(g, [[s2 * 0.25, -s2 * 0.15], [s2, -s2 * 0.15], [s2, s2 * 0.15], [s2 * 0.25, s2 * 0.15]], r * 0.11, INK); seg(g, [[s2 * 0.25, -s2 * 0.15], [s2, -s2 * 0.15], [s2, s2 * 0.15], [s2 * 0.25, s2 * 0.15]], r * 0.06, '#d8342b'); g.restore(); } break; }
+      case 'shock': { for (let i = -2; i <= 2; i++) { const a = -Math.PI / 2 + i * 0.4, r0 = r * 1.25, r1 = r * (1.65 + 0.1 * Math.sin(t * 20 + i)); seg(g, [[hx + Math.cos(a) * r0, hy + Math.sin(a) * r0], [hx + Math.cos(a) * r1, hy + Math.sin(a) * r1]], r * 0.13, INK); seg(g, [[hx + Math.cos(a) * r0, hy + Math.sin(a) * r0], [hx + Math.cos(a) * r1, hy + Math.sin(a) * r1]], r * 0.06, '#ffffff'); } break; }
+      case 'question': case 'exclaim': { const ch = k === 'question' ? '?' : '!', b = Math.abs(Math.sin(t * 6)) * r * 0.12; g.font = `900 ${r * 1.1}px Fredoka`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.lineWidth = r * 0.22; g.strokeStyle = INK; g.strokeText(ch, hx + r * 0.95, hy - r * 1.25 - b); g.fillStyle = k === 'question' ? '#e9cf7a' : '#d8342b'; g.fillText(ch, hx + r * 0.95, hy - r * 1.25 - b); break; }
+      case 'blush': { g.fillStyle = 'rgba(232,110,120,.45)'; for (const dx of [-0.2, 0.62]) { g.beginPath(); g.ellipse(hx + r * dx, hy + r * 0.22, r * 0.18, r * 0.09, 0, 0, 7); g.fill(); } break; }
+      case 'gloom': { g.strokeStyle = 'rgba(40,50,90,.55)'; g.lineWidth = r * 0.06; for (let i = 0; i < 5; i++) { const x = hx - r * 0.6 + i * r * 0.3; g.beginPath(); g.moveTo(x, hy - r * 0.95); g.lineTo(x, hy - r * 0.35); g.stroke(); } break; }
+      case 'sparkle': { for (const [dx, dy, sz] of [[1.1, -1.0, 0.3], [-1.1, -0.8, 0.22]]) { const s2 = r * sz * (0.8 + 0.3 * Math.sin(t * 8 + dx)); g.fillStyle = '#e9cf7a'; g.beginPath(); g.moveTo(hx + r * dx, hy + r * dy - s2); g.quadraticCurveTo(hx + r * dx, hy + r * dy, hx + r * dx + s2, hy + r * dy); g.quadraticCurveTo(hx + r * dx, hy + r * dy, hx + r * dx, hy + r * dy + s2); g.quadraticCurveTo(hx + r * dx, hy + r * dy, hx + r * dx - s2, hy + r * dy); g.quadraticCurveTo(hx + r * dx, hy + r * dy, hx + r * dx, hy + r * dy - s2); g.fill(); } break; }
+      case 'steam': { for (const sd of [-1, 1]) { const ph = (t * 1.5) % 1; g.fillStyle = `rgba(230,230,235,${0.7 * (1 - ph)})`; g.beginPath(); g.arc(hx + sd * r * (0.9 + ph * 0.4), hy - r * (0.9 + ph * 0.6), r * (0.15 + ph * 0.25), 0, 7); g.fill(); } break; }
+    }
+    g.restore(); }
 }

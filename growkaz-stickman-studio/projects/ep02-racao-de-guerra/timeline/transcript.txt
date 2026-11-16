@@ -1,27 +1,55 @@
-[00:01.40 -> 00:04.51] Dentro, o bunker é menor do que parece de fora.
-[00:05.06 -> 00:05.93] Gerador.
-[00:06.30 -> 00:07.38] Filtro de ar.
-[00:07.81 -> 00:10.06] Prateleira de comida até o teto.
-[00:10.55 -> 00:12.65] O tio não tinha cavado um buraco.
-[00:13.08 -> 00:14.72] Tinha montado um plano.
-[00:15.25 -> 00:17.43] E cheira a comida de exército.
-[00:18.02 -> 00:19.83] Isso aqui tem gosto de quê, tio?
-[00:20.18 -> 00:20.78] Proteína.
-[00:20.82 -> 00:21.99] Come e agradece.
-[00:22.63 -> 00:24.58] Vinte e dois anos de Exército.
-[00:24.75 -> 00:26.89] Instrutor de sobrevivência.
-[00:27.32 -> 00:30.62] O tio passou a vida inteira esperando por esse dia.
-[00:31.25 -> 00:39.01] Enquanto Rafael reclama da ração, você percebe que sua mãe não falou uma palavra desde que a porta fechou.
-[00:39.74 -> 00:41.13] Mãe, você tá bem?
-[00:41.67 -> 00:43.11] Só cansada, filho.
-[00:43.66 -> 00:44.64] Cansada.
-[00:44.95 -> 00:47.56] Era a mesma resposta dos últimos meses.
-[00:48.41 -> 00:51.12] Osvaldo tenta captar alguma frequência.
-[00:51.22 -> 00:53.42] A maior parte é estática.
-[00:54.65 -> 00:56.27] ...contenção do Projeto Cér...
-[00:56.33 -> 00:57.46] não foi conclu...
-[00:58.36 -> 01:01.98] Osvaldo desliga rápido demais pra quem diz que é só estática.
-[01:02.51 -> 01:03.56] Projeto Cérbero?
-[01:03.87 -> 01:04.74] Que isso, mãe?
-[01:06.99 -> 01:11.72] E pela primeira vez, você vê sua mãe sem resposta pronta pra nada.
-[01:16.67 -> 01:19.41] Segue a página pra não perder o episódio três.
+[00:00.29 -> 00:01.42] O alçapão bate.
+[00:01.62 -> 00:02.72] Escuro total.
+[00:02.95 -> 00:04.42] Quatro respirações...
+[00:04.49 -> 00:06.03] e um gerador ganhando vida.
+[00:06.45 -> 00:07.35] Gerador.
+[00:07.51 -> 00:08.48] Filtro de ar.
+[00:08.65 -> 00:10.18] Comida até o teto.
+[00:10.21 -> 00:11.58] O tio não cavou um buraco.
+[00:11.68 -> 00:12.86] Ele montou um plano.
+[00:13.15 -> 00:13.73] Cadê o Bilu?
+[00:14.09 -> 00:15.48] O Bilu ficou lá fora!
+[00:15.78 -> 00:16.58] Abre, tio!
+[00:16.72 -> 00:18.10] Eu busco ele rapidinho!
+[00:18.61 -> 00:20.05] Ninguém abre essa porta.
+[00:20.44 -> 00:24.67] Porque uns dez minutos depois do clarão, começa a cair do céu uma poeira cinza.
+[00:24.70 -> 00:26.44] Parece cinza de churrasqueira.
+[00:26.84 -> 00:27.95] Mas é radioativa.
+[00:28.24 -> 00:29.30] Regra sete-dez.
+[00:29.48 -> 00:32.10] Sete horas depois, a radiação cai pra dez por cento.
+[00:32.24 -> 00:33.59] Dois dias, um por cento.
+[00:34.20 -> 00:35.59] Duas semanas aqui embaixo.
+[00:35.73 -> 00:36.46] No mínimo.
+[00:36.85 -> 00:38.14] Duas SEMANAS?!
+[00:38.43 -> 00:40.36] E o Rafael chorou pelo Bilu...
+[00:40.43 -> 00:41.66] por uns cinco minutos.
+[00:41.83 -> 00:43.51] Até descobrir onde ficava a comida.
+[00:44.31 -> 00:46.64] Isso aqui tem gosto de quê, tio?
+[00:46.87 -> 00:47.70] Proteína.
+[00:47.89 -> 00:49.42] Come e agradece.
+[00:49.71 -> 00:50.98] Vinte e dois anos de Exército.
+[00:51.11 -> 00:52.44] Instrutor de sobrevivência.
+[00:52.51 -> 00:54.58] Quatro litros de água por pessoa, por dia.
+[00:54.64 -> 00:56.29] Ele fez a conta pra quatro pessoas...
+[00:56.33 -> 00:57.45] durante trinta dias.
+[00:57.73 -> 01:00.40] Mas tinha uma coisa que nem o tio previu.
+[01:00.43 -> 01:03.41] A mãe não falou uma palavra desde que a porta fechou.
+[01:03.76 -> 01:05.07] Mãe, você tá bem?
+[01:06.46 -> 01:08.06] Só cansada, filho.
+[01:08.36 -> 01:09.33] Cansada.
+[01:09.56 -> 01:11.77] A mesma resposta dos últimos meses.
+[01:12.06 -> 01:12.92] Hora seis.
+[01:13.12 -> 01:14.32] O tio liga o rádio.
+[01:14.52 -> 01:15.66] Só estática...
+[01:15.75 -> 01:16.47] até que...
+[01:16.77 -> 01:18.45] ...contenção do Projeto Cér...
+[01:18.49 -> 01:19.49] não foi conclu...
+[01:19.80 -> 01:20.75] Ele desliga na hora.
+[01:20.89 -> 01:23.09] Rápido demais pra quem jura que é só estática.
+[01:23.55 -> 01:24.67] Projeto Cérbero?
+[01:24.81 -> 01:25.70] Que isso, mãe?
+[01:26.36 -> 01:28.16] E pela primeira vez...
+[01:28.23 -> 01:30.75] a sua mãe não tem resposta pronta pra nada.
+[01:31.79 -> 01:32.86] E lá em cima...
+[01:32.92 -> 01:35.45] alguma coisa começa a arranhar o alçapão.
+[01:39.79 -> 01:41.73] Segue a página pra ver o episódio três!
