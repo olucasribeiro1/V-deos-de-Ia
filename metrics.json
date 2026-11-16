@@ -1,0 +1,14 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "durationInSeconds": 10,
+  "codec": "h264",
+  "crf": 18,
+  "audio": {
+    "voiceVolume": 1.0,
+    "musicVolume": 0.25,
+    "duckMusic": true,
+    "targetLufs": -14
+  }
+}
