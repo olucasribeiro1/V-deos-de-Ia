@@ -1,0 +1,204 @@
+{
+ "model": "eleven_multilingual_v2",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true,
+    "speed": 1.04
+   }
+  },
+  "OSVALDO": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.5,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   }
+  },
+  "EDUARDO": {
+   "id": "IKne3meq5aSn9XLyUdCD",
+   "settings": {
+    "stability": 0.35,
+    "similarity_boost": 0.75,
+    "style": 0.6,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   }
+  },
+  "RAFAEL": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "settings": {
+    "stability": 0.3,
+    "similarity_boost": 0.75,
+    "style": 0.7,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   }
+  },
+  "MARIANA": {
+   "id": "EXAVITQu4vr4xnSDxMaL",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.35,
+    "use_speaker_boost": true,
+    "speed": 0.98
+   }
+  },
+  "RADIO": {
+   "id": "HoWXGRJgqYolkEBcxmGm",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.8,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n1a",
+   "spk": "NARRADOR",
+   "gap": 1.4,
+   "text": "Dentro, o bunker é menor do que parece de fora."
+  },
+  {
+   "id": "nx0",
+   "spk": "NARRADOR",
+   "gap": 0.5,
+   "text": "Gerador. Filtro de ar. Prateleira de comida até o teto. O tio não tinha cavado um buraco. Tinha montado um plano."
+  },
+  {
+   "id": "n1b",
+   "spk": "NARRADOR",
+   "gap": 0.5,
+   "text": "E cheira a comida de exército."
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "gap": 0.55,
+   "text": "Isso aqui tem gosto de quê, tio?"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "gap": 0.3,
+   "text": "Proteína. Come e agradece.",
+   "settings": {
+    "stability": 0.55,
+    "style": 0.3
+   }
+  },
+  {
+   "id": "nx1",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "Vinte e dois anos de Exército. Instrutor de sobrevivência. O tio passou a vida inteira esperando por esse dia."
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "Enquanto Rafael reclama da ração, você percebe que sua mãe não falou uma palavra desde que a porta fechou."
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "gap": 0.7,
+   "text": "Mãe, você tá bem?",
+   "settings": {
+    "stability": 0.5,
+    "style": 0.3,
+    "speed": 1.0
+   }
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "gap": 0.5,
+   "text": "Só cansada, filho."
+  },
+  {
+   "id": "nx2",
+   "spk": "NARRADOR",
+   "gap": 0.5,
+   "text": "Cansada. Era a mesma resposta dos últimos meses."
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "gap": 0.8,
+   "text": "Osvaldo tenta captar alguma frequência. A maior parte é estática."
+  },
+  {
+   "id": "rad",
+   "spk": "RADIO",
+   "gap": 1.2,
+   "text": "Contenção do Projeto Cérberu não foi concluída.",
+   "fx": "radio",
+   "cut_end": 0.3,
+   "caption": [
+    "...contenção",
+    "do",
+    "Projeto",
+    "Cér...",
+    "não",
+    "foi",
+    "conclu..."
+   ]
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "gap": 0.9,
+   "text": "Osvaldo desliga rápido demais pra quem diz que é só estática."
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "gap": 0.5,
+   "text": "Projeto Cérberu? Que isso, mãe?",
+   "settings": {
+    "stability": 0.42,
+    "style": 0.55
+   },
+   "caption": [
+    "Projeto",
+    "Cérbero?",
+    "Que",
+    "isso,",
+    "mãe?"
+   ]
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "gap": 2.2,
+   "text": "E pela primeira vez, você vê sua mãe sem resposta pronta pra nada.",
+   "settings": {
+    "stability": 0.55,
+    "speed": 0.95
+   }
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 4.9,
+   "text": "Segue a página pra não perder o episódio três.",
+   "settings": {
+    "stability": 0.45,
+    "speed": 1.02
+   }
+  }
+ ],
+ "tail": 1.7,
+ "_nota": "'Cérberu' é grafia fonética para a voz pronunciar 'Cérbero' corretamente; a legenda usa 'caption'."
+}

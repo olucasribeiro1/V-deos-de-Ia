@@ -5,7 +5,7 @@
 roteiro.json: { "voices": {"NARRADOR": {"id": "...", "settings": {...}}, ...},
                 "lines": [ {"id": "n1", "spk": "NARRADOR", "text": "...", "gap": 0.5, "settings": {...}} ],
                 "tail": 3.0 }
-`gap` = silêncio (s) ANTES da fala (tempo para ação visual). Cada fala vira input/clips/<id>.mp3 (cache por texto+voz).
+`gap` = silêncio (s) ANTES da fala (tempo para ação visual). Opcionais por fala: "fx": "radio", "cut_end": s, "caption": [palavras da legenda]. Cada fala vira input/clips/<id>.mp3 (cache por texto+voz).
 Escreve input/voiceover.wav, timeline/words.json, sentences.json, transcript.txt e timeline/lines.json (início/fim de cada fala).
 A chave é injetada pelo proxy do ambiente (header xi-api-key); fora dele, defina ELEVEN_API_KEY.
 """
@@ -52,7 +52,13 @@ def main():
         al = load_json(meta); dur = probe_duration(mp3); t += ln.get("gap", 0.3); w = words_from_alignment(al)
         # corta silêncio final exagerado da fala
         end_speech = min(dur, (w[-1]["end"] if w else dur) + 0.12)
-        for x in w: words.append({"word": x["word"], "start": round(t + x["start"], 3), "end": round(t + x["end"], 3), "spk": ln["spk"]})
+        if ln.get("cut_end"): end_speech = max(0.3, end_speech - ln["cut_end"])          # corta o fim da fala (transmissão interrompida)
+        cap = ln.get("caption")                                                            # texto alternativo da legenda, palavra a palavra
+        if ln.get("fx") == "radio":                                                        # voz de rádio: banda estreita, distorção e chiado
+            fxf = mp3[:-4] + "_radio.wav"
+            if not os.path.exists(fxf): subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", mp3, "-f", "lavfi", "-i", "anoisesrc=color=white:amplitude=0.18", "-filter_complex", "[0:a]highpass=f=600,lowpass=f=2400,acrusher=bits=7:mode=log:mix=0.6,tremolo=f=11:d=0.55,volume=1.6[v];[1:a]highpass=f=1200,lowpass=f=5000[n];[v][n]amix=inputs=2:duration=first:normalize=0", fxf], check=True)
+            mp3 = fxf
+        for k, x in enumerate(w): words.append({"word": cap[k] if cap and k < len(cap) else x["word"], "start": round(t + x["start"], 3), "end": round(t + min(x["end"], end_speech), 3), "spk": ln["spk"]})
         lines.append({"id": ln["id"], "spk": ln["spk"], "text": ln["text"], "start": round(t, 3), "end": round(t + end_speech, 3), "file": mp3})
         inputs.append((mp3, t, end_speech)); t += end_speech
     total = round(t + R.get("tail", 2.0), 3)

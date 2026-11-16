@@ -1,0 +1,941 @@
+{
+ "source": "elevenlabs:eleven_multilingual_v2",
+ "words": [
+  {
+   "word": "Dentro,",
+   "start": 1.4,
+   "end": 1.922,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 2.039,
+   "end": 2.12,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "bunker",
+   "start": 2.189,
+   "end": 2.549,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "é",
+   "start": 2.584,
+   "end": 2.607,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "menor",
+   "start": 2.642,
+   "end": 3.037,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "do",
+   "start": 3.107,
+   "end": 3.153,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "que",
+   "start": 3.2,
+   "end": 3.269,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "parece",
+   "start": 3.316,
+   "end": 3.641,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 3.687,
+   "end": 3.768,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "fora.",
+   "start": 3.826,
+   "end": 4.511,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Gerador.",
+   "start": 5.061,
+   "end": 5.932,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Filtro",
+   "start": 6.303,
+   "end": 6.744,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 6.791,
+   "end": 6.884,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ar.",
+   "start": 6.953,
+   "end": 7.383,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Prateleira",
+   "start": 7.813,
+   "end": 8.428,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 8.474,
+   "end": 8.521,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "comida",
+   "start": 8.567,
+   "end": 8.997,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "até",
+   "start": 9.032,
+   "end": 9.275,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 9.345,
+   "end": 9.38,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "teto.",
+   "start": 9.45,
+   "end": 10.065,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "O",
+   "start": 10.553,
+   "end": 10.634,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tio",
+   "start": 10.75,
+   "end": 10.947,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "não",
+   "start": 10.982,
+   "end": 11.121,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tinha",
+   "start": 11.156,
+   "end": 11.354,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cavado",
+   "start": 11.4,
+   "end": 11.841,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "um",
+   "start": 11.864,
+   "end": 11.934,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "buraco.",
+   "start": 11.992,
+   "end": 12.654,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Tinha",
+   "start": 13.083,
+   "end": 13.327,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "montado",
+   "start": 13.362,
+   "end": 13.815,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "um",
+   "start": 13.85,
+   "end": 13.908,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "plano.",
+   "start": 13.977,
+   "end": 14.72,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "E",
+   "start": 15.252,
+   "end": 15.345,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cheira",
+   "start": 15.461,
+   "end": 15.821,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 15.844,
+   "end": 15.867,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "comida",
+   "start": 15.949,
+   "end": 16.332,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 16.378,
+   "end": 16.459,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "exército.",
+   "start": 16.483,
+   "end": 17.435,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Isso",
+   "start": 18.023,
+   "end": 18.267,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "aqui",
+   "start": 18.29,
+   "end": 18.441,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "tem",
+   "start": 18.487,
+   "end": 18.592,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "gosto",
+   "start": 18.65,
+   "end": 18.894,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "de",
+   "start": 18.94,
+   "end": 19.021,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "quê,",
+   "start": 19.08,
+   "end": 19.254,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "tio?",
+   "start": 19.277,
+   "end": 19.834,
+   "spk": "RAFAEL"
+  },
+  {
+   "word": "Proteína.",
+   "start": 20.177,
+   "end": 20.781,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "Come",
+   "start": 20.816,
+   "end": 21.083,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "e",
+   "start": 21.106,
+   "end": 21.129,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "agradece.",
+   "start": 21.152,
+   "end": 21.988,
+   "spk": "OSVALDO"
+  },
+  {
+   "word": "Vinte",
+   "start": 22.632,
+   "end": 23.015,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 23.038,
+   "end": 23.062,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dois",
+   "start": 23.108,
+   "end": 23.317,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "anos",
+   "start": 23.387,
+   "end": 23.619,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 23.665,
+   "end": 23.712,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Exército.",
+   "start": 23.77,
+   "end": 24.582,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Instrutor",
+   "start": 24.745,
+   "end": 25.523,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 25.581,
+   "end": 25.674,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sobrevivência.",
+   "start": 25.743,
+   "end": 26.893,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "O",
+   "start": 27.322,
+   "end": 27.439,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tio",
+   "start": 27.531,
+   "end": 27.717,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "passou",
+   "start": 27.764,
+   "end": 28.089,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 28.147,
+   "end": 28.182,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "vida",
+   "start": 28.24,
+   "end": 28.483,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "inteira",
+   "start": 28.507,
+   "end": 29.052,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "esperando",
+   "start": 29.087,
+   "end": 29.598,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "por",
+   "start": 29.644,
+   "end": 29.761,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "esse",
+   "start": 29.819,
+   "end": 29.97,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dia.",
+   "start": 30.028,
+   "end": 30.62,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Enquanto",
+   "start": 31.252,
+   "end": 31.682,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Rafael",
+   "start": 31.728,
+   "end": 32.158,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "reclama",
+   "start": 32.216,
+   "end": 32.692,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "da",
+   "start": 32.738,
+   "end": 32.808,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ração,",
+   "start": 32.843,
+   "end": 33.4,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "você",
+   "start": 33.632,
+   "end": 33.853,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "percebe",
+   "start": 33.922,
+   "end": 34.398,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "que",
+   "start": 34.433,
+   "end": 34.514,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sua",
+   "start": 34.572,
+   "end": 34.747,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mãe",
+   "start": 34.805,
+   "end": 35.095,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "não",
+   "start": 35.176,
+   "end": 35.374,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "falou",
+   "start": 35.42,
+   "end": 35.838,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "uma",
+   "start": 35.977,
+   "end": 36.314,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "palavra",
+   "start": 36.395,
+   "end": 37.069,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "desde",
+   "start": 37.161,
+   "end": 37.556,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "que",
+   "start": 37.637,
+   "end": 37.719,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 37.742,
+   "end": 37.765,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "porta",
+   "start": 37.835,
+   "end": 38.172,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "fechou.",
+   "start": 38.23,
+   "end": 39.007,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Mãe,",
+   "start": 39.736,
+   "end": 40.212,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "você",
+   "start": 40.258,
+   "end": 40.444,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "tá",
+   "start": 40.491,
+   "end": 40.56,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "bem?",
+   "start": 40.618,
+   "end": 41.129,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "Só",
+   "start": 41.673,
+   "end": 41.894,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "cansada,",
+   "start": 41.952,
+   "end": 42.521,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "filho.",
+   "start": 42.544,
+   "end": 43.113,
+   "spk": "MARIANA"
+  },
+  {
+   "word": "Cansada.",
+   "start": 43.662,
+   "end": 44.637,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Era",
+   "start": 44.951,
+   "end": 45.148,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 45.171,
+   "end": 45.206,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mesma",
+   "start": 45.253,
+   "end": 45.52,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "resposta",
+   "start": 45.566,
+   "end": 46.088,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dos",
+   "start": 46.123,
+   "end": 46.251,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "últimos",
+   "start": 46.344,
+   "end": 46.669,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "meses.",
+   "start": 46.75,
+   "end": 47.563,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Osvaldo",
+   "start": 48.406,
+   "end": 49.01,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tenta",
+   "start": 49.068,
+   "end": 49.335,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "captar",
+   "start": 49.381,
+   "end": 49.846,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "alguma",
+   "start": 49.892,
+   "end": 50.252,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "frequência.",
+   "start": 50.31,
+   "end": 51.123,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "A",
+   "start": 51.216,
+   "end": 51.274,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "maior",
+   "start": 51.355,
+   "end": 51.645,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "parte",
+   "start": 51.738,
+   "end": 52.168,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "é",
+   "start": 52.214,
+   "end": 52.237,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "estática.",
+   "start": 52.295,
+   "end": 53.422,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "...contenção",
+   "start": 54.648,
+   "end": 55.228,
+   "spk": "RADIO"
+  },
+  {
+   "word": "do",
+   "start": 55.252,
+   "end": 55.31,
+   "spk": "RADIO"
+  },
+  {
+   "word": "Projeto",
+   "start": 55.356,
+   "end": 55.728,
+   "spk": "RADIO"
+  },
+  {
+   "word": "Cér...",
+   "start": 55.751,
+   "end": 56.273,
+   "spk": "RADIO"
+  },
+  {
+   "word": "não",
+   "start": 56.331,
+   "end": 56.471,
+   "spk": "RADIO"
+  },
+  {
+   "word": "foi",
+   "start": 56.529,
+   "end": 56.691,
+   "spk": "RADIO"
+  },
+  {
+   "word": "conclu...",
+   "start": 56.738,
+   "end": 57.457,
+   "spk": "RADIO"
+  },
+  {
+   "word": "Osvaldo",
+   "start": 58.357,
+   "end": 58.879,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "desliga",
+   "start": 58.949,
+   "end": 59.402,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "rápido",
+   "start": 59.46,
+   "end": 59.808,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "demais",
+   "start": 59.843,
+   "end": 60.168,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pra",
+   "start": 60.203,
+   "end": 60.307,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "quem",
+   "start": 60.354,
+   "end": 60.482,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "diz",
+   "start": 60.528,
+   "end": 60.656,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "que",
+   "start": 60.702,
+   "end": 60.772,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "é",
+   "start": 60.795,
+   "end": 60.818,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "só",
+   "start": 60.9,
+   "end": 61.051,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "estática.",
+   "start": 61.097,
+   "end": 61.979,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Projeto",
+   "start": 62.514,
+   "end": 62.99,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "Cérbero?",
+   "start": 63.025,
+   "end": 63.559,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "Que",
+   "start": 63.872,
+   "end": 64.023,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "isso,",
+   "start": 64.058,
+   "end": 64.255,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "mãe?",
+   "start": 64.279,
+   "end": 64.743,
+   "spk": "EDUARDO"
+  },
+  {
+   "word": "E",
+   "start": 66.986,
+   "end": 67.079,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pela",
+   "start": 67.149,
+   "end": 67.346,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "primeira",
+   "start": 67.381,
+   "end": 67.717,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "vez,",
+   "start": 67.764,
+   "end": 68.298,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "você",
+   "start": 68.762,
+   "end": 68.995,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "vê",
+   "start": 69.076,
+   "end": 69.157,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sua",
+   "start": 69.238,
+   "end": 69.412,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mãe",
+   "start": 69.482,
+   "end": 69.714,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sem",
+   "start": 69.749,
+   "end": 69.9,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "resposta",
+   "start": 69.947,
+   "end": 70.504,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pronta",
+   "start": 70.55,
+   "end": 70.829,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pra",
+   "start": 70.864,
+   "end": 70.98,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "nada.",
+   "start": 71.038,
+   "end": 71.723,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Segue",
+   "start": 76.667,
+   "end": 77.015,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 77.039,
+   "end": 77.062,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "página",
+   "start": 77.108,
+   "end": 77.503,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pra",
+   "start": 77.538,
+   "end": 77.642,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "não",
+   "start": 77.677,
+   "end": 77.77,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "perder",
+   "start": 77.805,
+   "end": 78.072,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 78.107,
+   "end": 78.141,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "episódio",
+   "start": 78.165,
+   "end": 78.617,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "três.",
+   "start": 78.664,
+   "end": 79.407,
+   "spk": "NARRADOR"
+  }
+ ]
+}

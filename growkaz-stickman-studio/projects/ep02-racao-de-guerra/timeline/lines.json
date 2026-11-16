@@ -1,0 +1,133 @@
+{
+ "duration": 81.136,
+ "lines": [
+  {
+   "id": "n1a",
+   "spk": "NARRADOR",
+   "text": "Dentro, o bunker é menor do que parece de fora.",
+   "start": 1.4,
+   "end": 4.561,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n1a_45add8f3db.mp3"
+  },
+  {
+   "id": "nx0",
+   "spk": "NARRADOR",
+   "text": "Gerador. Filtro de ar. Prateleira de comida até o teto. O tio não tinha cavado um buraco. Tinha montado um plano.",
+   "start": 5.061,
+   "end": 14.752,
+   "file": "projects/ep02-racao-de-guerra/input/clips/nx0_af758a8af2.mp3"
+  },
+  {
+   "id": "n1b",
+   "spk": "NARRADOR",
+   "text": "E cheira a comida de exército.",
+   "start": 15.252,
+   "end": 17.473,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n1b_44272a2092.mp3"
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "text": "Isso aqui tem gosto de quê, tio?",
+   "start": 18.023,
+   "end": 19.877,
+   "file": "projects/ep02-racao-de-guerra/input/clips/r1_50e2fbf820.mp3"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "text": "Proteína. Come e agradece.",
+   "start": 20.177,
+   "end": 22.032,
+   "file": "projects/ep02-racao-de-guerra/input/clips/o1_b21d35c22c.mp3"
+  },
+  {
+   "id": "nx1",
+   "spk": "NARRADOR",
+   "text": "Vinte e dois anos de Exército. Instrutor de sobrevivência. O tio passou a vida inteira esperando por esse dia.",
+   "start": 22.632,
+   "end": 30.652,
+   "file": "projects/ep02-racao-de-guerra/input/clips/nx1_a9bff23fd2.mp3"
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "text": "Enquanto Rafael reclama da ração, você percebe que sua mãe não falou uma palavra desde que a porta fechou.",
+   "start": 31.252,
+   "end": 39.036,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n2_3626387b59.mp3"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "text": "Mãe, você tá bem?",
+   "start": 39.736,
+   "end": 41.173,
+   "file": "projects/ep02-racao-de-guerra/input/clips/e1_82a0f11594.mp3"
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "text": "Só cansada, filho.",
+   "start": 41.673,
+   "end": 43.162,
+   "file": "projects/ep02-racao-de-guerra/input/clips/m1_86049331da.mp3"
+  },
+  {
+   "id": "nx2",
+   "spk": "NARRADOR",
+   "text": "Cansada. Era a mesma resposta dos últimos meses.",
+   "start": 43.662,
+   "end": 47.606,
+   "file": "projects/ep02-racao-de-guerra/input/clips/nx2_b5e9105ade.mp3"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "text": "Osvaldo tenta captar alguma frequência. A maior parte é estática.",
+   "start": 48.406,
+   "end": 53.448,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n3_9a3bb8e822.mp3"
+  },
+  {
+   "id": "rad",
+   "spk": "RADIO",
+   "text": "Contenção do Projeto Cérberu não foi concluída.",
+   "start": 54.648,
+   "end": 57.457,
+   "file": "projects/ep02-racao-de-guerra/input/clips/rad_4fc6a5d465_radio.wav"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "text": "Osvaldo desliga rápido demais pra quem diz que é só estática.",
+   "start": 58.357,
+   "end": 62.014,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n4_880d0481c4.mp3"
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "text": "Projeto Cérberu? Que isso, mãe?",
+   "start": 62.514,
+   "end": 64.786,
+   "file": "projects/ep02-racao-de-guerra/input/clips/e2_0728ec2562.mp3"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "text": "E pela primeira vez, você vê sua mãe sem resposta pronta pra nada.",
+   "start": 66.986,
+   "end": 71.767,
+   "file": "projects/ep02-racao-de-guerra/input/clips/n5_17ad438297.mp3"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "Segue a página pra não perder o episódio três.",
+   "start": 76.667,
+   "end": 79.436,
+   "file": "projects/ep02-racao-de-guerra/input/clips/cta_a6e2cd94a3.mp3"
+  }
+ ]
+}
