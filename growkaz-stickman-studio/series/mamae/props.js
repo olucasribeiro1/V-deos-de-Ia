@@ -80,3 +80,37 @@ export function dormindo(g, x, y, s, outfit, o = {}) {
   g.save(); g.translate(x, y); rr(g, -130 * s, -62 * s - bre, 330 * s, 66 * s + bre, 28 * s); g.fillStyle = INK; g.fill(); rr(g, -124 * s, -56 * s - bre, 318 * s, 54 * s + bre, 22 * s); g.fillStyle = cor; g.fill();
   g.strokeStyle = alpha('#000', 0.25); g.lineWidth = 3 * s; for (let i = 1; i < 4; i++) { g.beginPath(); g.moveTo(-124 * s + i * 80 * s, -56 * s - bre); g.lineTo(-124 * s + i * 80 * s, -2 * s); g.stroke(); } g.restore();
 }
+// detector de monóxido (CO) na parede: aberto mostra o compartimento de pilha vazio
+export function detectorCO(g, x, y, s, t, o = {}) {
+  const { aberto = 0, alarme = 0 } = o; g.save(); g.translate(x, y); g.scale(s, s);
+  circle(g, 0, 0, 92, INK); circle(g, 0, 0, 84, '#efe8d0'); for (let i = 0; i < 12; i++) { const a = i / 12 * 6.28; circle(g, Math.cos(a) * 52, Math.sin(a) * 52, 6, '#9aa3ae'); }
+  text(g, 'CO', 0, -6, { size: 40, color: '#16181d', font: FONTS.ui, weight: 900 }); circle(g, 0, 40, 9, alarme && Math.sin(t * 18) > 0 ? '#ff4030' : '#3a3d44');
+  if (aberto > 0.02) { g.save(); g.translate(0, 95); g.rotate(0.6 * aberto); rr(g, -60, 0, 120, 90 * aberto, 10); g.fillStyle = '#c9ced6'; g.fill(); g.strokeStyle = INK; g.lineWidth = 5; g.stroke(); g.restore();
+    rr(g, -50, 100, 100, 70, 8); g.fillStyle = '#2a2d34'; g.fill(); g.strokeStyle = INK; g.lineWidth = 4; g.stroke(); seg(g, [[-30, 120], [-30, 150]], 6, '#9aa3ae'); seg(g, [[30, 120], [30, 150]], 6, '#9aa3ae'); text(g, 'VAZIO', 0, 196, { size: 30, color: S().ui.accent, font: FONTS.ui, weight: 900, stroke: 8, strokeColor: INK }); }
+  g.restore();
+}
+// controle de videogame (com a pilha roubada)
+export function controle(g, x, y, s, rot = 0) { g.save(); g.translate(x, y); g.rotate(rot); g.scale(s, s); g.fillStyle = INK; g.beginPath(); g.ellipse(-50, 10, 46, 38, 0.3, 0, 7); g.ellipse(50, 10, 46, 38, -0.3, 0, 7); g.fill(); rr(g, -70, -30, 140, 60, 26); g.fill();
+  g.fillStyle = '#3a3d44'; g.beginPath(); g.ellipse(-50, 10, 38, 30, 0.3, 0, 7); g.ellipse(50, 10, 38, 30, -0.3, 0, 7); g.fill(); rr(g, -62, -22, 124, 44, 20); g.fill();
+  seg(g, [[-60, 0], [-36, 0]], 8, '#16181d'); seg(g, [[-48, -12], [-48, 12]], 8, '#16181d'); for (const [dx, dy, c] of [[44, -8, '#5fd36a'], [58, 6, '#e6c02a'], [30, 6, '#2f7fd0']]) circle(g, dx, dy, 7, c); g.restore(); }
+// pilha AA
+export function pilha(g, x, y, s, rot = 0) { g.save(); g.translate(x, y); g.rotate(rot); g.scale(s, s); rr(g, -60, -22, 120, 44, 10); g.fillStyle = INK; g.fill(); rr(g, -54, -16, 108, 32, 7); g.fillStyle = '#e0a030'; g.fill(); g.fillStyle = '#2a2d34'; g.fillRect(-54, -16, 40, 32); rr(g, 54, -9, 12, 18, 3); g.fillStyle = '#c9ced6'; g.fill(); g.restore(); }
+// manivela da ventilação manual (gira com k)
+export function manivela(g, x, y, s, ang) { g.save(); g.translate(x, y); g.scale(s, s); circle(g, 0, 0, 34, INK); circle(g, 0, 0, 26, '#9aa3ae'); g.rotate(ang); seg(g, [[0, 0], [90, 0]], 16, INK); seg(g, [[90, 0], [90, 50]], 18, INK); seg(g, [[90, 0], [90, 46]], 10, '#d8342b'); g.restore(); }
+// cano de escape saindo do chão do quintal (amassado: 0..1) com marcas de garra
+export function canoEscape(g, x, y, s, amassado = 0, garras = 0) {
+  g.save(); g.translate(x, y); g.scale(s, s);
+  if (amassado < 0.5) { seg(g, [[0, 0], [0, -260], [60, -300]], 40, INK); seg(g, [[0, 0], [0, -260], [60, -300]], 30, '#7d8794'); }
+  else { seg(g, [[0, 0], [0, -120], [70, -150], [20, -190], [-40, -170]], 40, INK); seg(g, [[0, 0], [0, -120], [70, -150], [20, -190], [-40, -170]], 30, '#7d8794'); poly(g, [[-10, -125], [20, -150], [10, -160], [-15, -140]], '#4a4f58'); }
+  g.fillStyle = '#4a4f58'; g.fillRect(-50, -10, 100, 20);
+  if (garras > 0.02) { g.globalAlpha *= garras; for (const [ox, oy, r] of [[-170, -60, -0.3], [150, -110, 0.4], [-90, 40, -0.1]]) for (let i = 0; i < 4; i++) { g.save(); g.translate(ox + i * 26, oy + i * 6); g.rotate(r); seg(g, [[0, -80], [8, 80]], 16, INK); seg(g, [[0, -80], [8, 80]], 7, '#d9d4c8'); g.restore(); } }
+  g.restore();
+}
+// ícone de sintoma num círculo (cabeça latejando / tontura / enjoo)
+export function sintoma(g, x, y, s, tipo, t) {
+  g.save(); g.translate(x, y); g.scale(s, s); circle(g, 0, 0, 96, INK); circle(g, 0, 0, 88, '#efe8d0'); circle(g, 0, 10, 48, WH); g.strokeStyle = INK; g.lineWidth = 6; g.beginPath(); g.arc(0, 10, 48, 0, 7); g.stroke();
+  if (tipo === 'cabeca') { for (const a of [-2.4, -1.6, -0.8]) seg(g, [[Math.cos(a) * 62, 10 + Math.sin(a) * 62], [Math.cos(a) * (80 + 6 * Math.sin(t * 12)), 10 + Math.sin(a) * (80 + 6 * Math.sin(t * 12))]], 7, '#d8342b'); seg(g, [[-24, 6], [-12, 6]], 6, INK); seg(g, [[12, 6], [24, 6]], 6, INK); }
+  if (tipo === 'tontura') { g.strokeStyle = INK; g.lineWidth = 5; for (const dx of [-18, 18]) { g.beginPath(); for (let i = 0; i < 20; i++) { const a = i * 0.6 + t * 6, r = i * 0.7; i ? g.lineTo(dx + Math.cos(a) * r, 4 + Math.sin(a) * r) : g.moveTo(dx, 4); } g.stroke(); } }
+  if (tipo === 'enjoo') { circle(g, -16, 2, 6, INK); circle(g, 16, 2, 6, INK); g.strokeStyle = INK; g.lineWidth = 5; g.beginPath(); for (let i = 0; i <= 10; i++) g.lineTo(-20 + i * 4, 30 + Math.sin(i * 1.4) * 5); g.stroke(); g.fillStyle = alpha('#7fb84a', 0.6); g.beginPath(); g.arc(0, 10, 48, 0, 7); g.fill(); }
+  g.restore();
+}

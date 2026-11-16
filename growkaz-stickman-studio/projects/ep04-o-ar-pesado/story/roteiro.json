@@ -1,0 +1,186 @@
+{
+ "model": "eleven_v4",
+ "_nota": "Ep. 4. Projeto Cérebro (o órgão). Mariana é biomédica. Dados de CO conferidos no CDC.",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.2,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  },
+  "OSVALDO": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  },
+  "EDUARDO": {
+   "id": "IKne3meq5aSn9XLyUdCD",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.06
+   }
+  },
+  "RAFAEL": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.1
+   }
+  },
+  "MARIANA": {
+   "id": "EXAVITQu4vr4xnSDxMaL",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.0
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "gap": 0.6,
+   "text": "[rápido] Dia cinco. Cento e vinte horas debaixo da terra. Rotina de bunker: ração, água contada e turno de vigia de duas horas."
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[irônico] E o Rafael descobriu que a ração tem três sabores: frango, carne... e proteína."
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "gap": 0.3,
+   "text": "[reclamando, fraco] Tio, minha cabeça tá explodindo. E eu tô enjoado."
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "gap": 0.15,
+   "text": "[seco] É frescura. Bebe água."
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[tenso] Só que dez minutos depois, o Eduardo também fica tonto. A visão embaça. As pernas pesam."
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "gap": 0.2,
+   "text": "[fraco, confuso] Mãe... tá tudo girando..."
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido] E pela primeira vez desde a bomba, a biomédica da família assume o comando."
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "gap": 0.2,
+   "text": "[firme, rápida] Dor de cabeça, tontura, enjoo. Todo mundo ao mesmo tempo? Isso não é ração. É monóxido de carbono!"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "gap": 0.25,
+   "text": "[tenso, rápido] Monóxido de carbono. Sem cor. Sem cheiro. Sai de motor de gerador, de carro, de fogão. Ele toma o lugar do oxigênio no seu sangue... e a vítima só sente sono. Tem gente que morre dormindo, sem nem perceber."
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "gap": 0.2,
+   "text": "[alarmado] O detector! Por que o detector não apitou?!"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[irônico] Simples. Alguém tirou a pilha dele."
+  },
+  {
+   "id": "r2",
+   "spk": "RAFAEL",
+   "gap": 0.3,
+   "text": "[culpado, baixinho] Era pro meu controle..."
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "gap": 0.15,
+   "text": "[gritando] Desliga o gerador! Todo mundo perto do filtro!"
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido] O tio corta o motor e gira a manivela da ventilação manual. Ar de fora, passando pelo filtro... até a cabeça parar de latejar."
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[didático, rápido] Regra de ouro: gerador nunca dentro de casa. Nem com a janela aberta. E detector de monóxido... sempre com pilha."
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "gap": 0.5,
+   "text": "[baixo, desconfiado] Mãe... crachá do Exército, laboratório, Projeto Cérebro... Você sabia que isso ia acontecer?"
+  },
+  {
+   "id": "m2",
+   "spk": "MARIANA",
+   "gap": 0.3,
+   "text": "[cansada, desviando] Agora não, Eduardo."
+  },
+  {
+   "id": "o4",
+   "spk": "OSVALDO",
+   "gap": 0.4,
+   "text": "[sério] O cano do escape deve ter entupido de poeira. Vou olhar."
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[tenso] No periscópio, o tio procura o cano. E acha."
+  },
+  {
+   "id": "o5",
+   "spk": "OSVALDO",
+   "gap": 0.3,
+   "text": "[baixo, assustado] Não tá entupido."
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[sussurrando] Tá amassado. Dobrado ao meio. E em volta dele... marcas de garra."
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 4.4,
+   "text": "[animado] Segue a página pra ver o episódio cinco!"
+  }
+ ],
+ "tail": 1.6
+}

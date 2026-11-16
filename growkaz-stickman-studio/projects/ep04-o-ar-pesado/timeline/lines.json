@@ -1,0 +1,181 @@
+{
+ "duration": 104.336,
+ "lines": [
+  {
+   "id": "n1",
+   "spk": "NARRADOR",
+   "text": "[rápido] Dia cinco. Cento e vinte horas debaixo da terra. Rotina de bunker: ração, água contada e turno de vigia de duas horas.",
+   "start": 0.6,
+   "end": 7.335,
+   "file": "projects/ep04-o-ar-pesado/input/clips/n1_a662de54a7_t1.20.wav"
+  },
+  {
+   "id": "n2",
+   "spk": "NARRADOR",
+   "text": "[irônico] E o Rafael descobriu que a ração tem três sabores: frango, carne... e proteína.",
+   "start": 7.535,
+   "end": 12.412,
+   "file": "projects/ep04-o-ar-pesado/input/clips/n2_05b968c872_t1.20.wav"
+  },
+  {
+   "id": "r1",
+   "spk": "RAFAEL",
+   "text": "[reclamando, fraco] Tio, minha cabeça tá explodindo. E eu tô enjoado.",
+   "start": 12.712,
+   "end": 16.358,
+   "file": "projects/ep04-o-ar-pesado/input/clips/r1_fc43962a32_t1.10.wav"
+  },
+  {
+   "id": "o1",
+   "spk": "OSVALDO",
+   "text": "[seco] É frescura. Bebe água.",
+   "start": 16.508,
+   "end": 18.62,
+   "file": "projects/ep04-o-ar-pesado/input/clips/o1_e4b37acb5a_t1.10.wav"
+  },
+  {
+   "id": "n3",
+   "spk": "NARRADOR",
+   "text": "[tenso] Só que dez minutos depois, o Eduardo também fica tonto. A visão embaça. As pernas pesam.",
+   "start": 18.92,
+   "end": 24.92,
+   "file": "projects/ep04-o-ar-pesado/input/clips/n3_504d7d6ad4_t1.20.wav"
+  },
+  {
+   "id": "e1",
+   "spk": "EDUARDO",
+   "text": "[fraco, confuso] Mãe... tá tudo girando...",
+   "start": 25.12,
+   "end": 27.456,
+   "file": "projects/ep04-o-ar-pesado/input/clips/e1_6982bea67a_t1.10.wav"
+  },
+  {
+   "id": "n4",
+   "spk": "NARRADOR",
+   "text": "[rápido] E pela primeira vez desde a bomba, a biomédica da família assume o comando.",
+   "start": 27.656,
+   "end": 30.989,
+   "file": "projects/ep04-o-ar-pesado/input/clips/n4_b79a41fdd1_t1.20.wav"
+  },
+  {
+   "id": "m1",
+   "spk": "MARIANA",
+   "text": "[firme, rápida] Dor de cabeça, tontura, enjoo. Todo mundo ao mesmo tempo? Isso não é ração. É monóxido de carbono!",
+   "start": 31.189,
+   "end": 38.102,
+   "file": "projects/ep04-o-ar-pesado/input/clips/m1_83b6e56615_t1.10.wav"
+  },
+  {
+   "id": "n5",
+   "spk": "NARRADOR",
+   "text": "[tenso, rápido] Monóxido de carbono. Sem cor. Sem cheiro. Sai de motor de gerador, de carro, de fogão. Ele toma o lugar do oxigênio no seu sangue... e a vítima só sente sono. Tem gente que morre dormindo, sem nem perceber.",
+   "start": 38.352,
+   "end": 48.552,
+   "file": "projects/ep04-o-ar-pesado/input/clips/n5_705fa3fb2f_t1.20.wav"
+  },
+  {
+   "id": "o2",
+   "spk": "OSVALDO",
+   "text": "[alarmado] O detector! Por que o detector não apitou?!",
+   "start": 48.752,
+   "end": 51.448,
+   "file": "projects/ep04-o-ar-pesado/input/clips/o2_2d2d69805e_t1.10.wav"
+  },
+  {
+   "id": "n6",
+   "spk": "NARRADOR",
+   "text": "[irônico] Simples. Alguém tirou a pilha dele.",
+   "start": 51.648,
+   "end": 54.127,
+   "file": "projects/ep04-o-ar-pesado/input/clips/n6_fd6e2972b7_t1.20.wav"
+  },
+  {
+   "id": "r2",
+   "spk": "RAFAEL",
+   "text": "[culpado, baixinho] Era pro meu controle...",
+   "start": 54.427,
+   "end": 56.028,
+   "file": "projects/ep04-o-ar-pesado/input/clips/r2_0d60e78b06_t1.10.wav"
+  },
+  {
+   "id": "o3",
+   "spk": "OSVALDO",
+   "text": "[gritando] Desliga o gerador! Todo mundo perto do filtro!",
+   "start": 56.178,
+   "end": 59.455,
+   "file": "projects/ep04-o-ar-pesado/input/clips/o3_0afc266182_t1.10.wav"
+  },
+  {
+   "id": "n7",
+   "spk": "NARRADOR",
+   "text": "[rápido] O tio corta o motor e gira a manivela da ventilação manual. Ar de fora, passando pelo filtro... até a cabeça parar de latejar.",
+   "start": 59.655,
+   "end": 65.929,
+   "file": "projects/ep04-o-ar-pesado/input/clips/n7_04202ffc76_t1.20.wav"
+  },
+  {
+   "id": "n8",
+   "spk": "NARRADOR",
+   "text": "[didático, rápido] Regra de ouro: gerador nunca dentro de casa. Nem com a janela aberta. E detector de monóxido... sempre com pilha.",
+   "start": 66.229,
+   "end": 72.166,
+   "file": "projects/ep04-o-ar-pesado/input/clips/n8_904a80a7f3_t1.20.wav"
+  },
+  {
+   "id": "e2",
+   "spk": "EDUARDO",
+   "text": "[baixo, desconfiado] Mãe... crachá do Exército, laboratório, Projeto Cérebro... Você sabia que isso ia acontecer?",
+   "start": 72.666,
+   "end": 79.505,
+   "file": "projects/ep04-o-ar-pesado/input/clips/e2_db65864f75_t1.10.wav"
+  },
+  {
+   "id": "m2",
+   "spk": "MARIANA",
+   "text": "[cansada, desviando] Agora não, Eduardo.",
+   "start": 79.805,
+   "end": 82.429,
+   "file": "projects/ep04-o-ar-pesado/input/clips/m2_624f87e56c_t1.10.wav"
+  },
+  {
+   "id": "o4",
+   "spk": "OSVALDO",
+   "text": "[sério] O cano do escape deve ter entupido de poeira. Vou olhar.",
+   "start": 82.829,
+   "end": 85.973,
+   "file": "projects/ep04-o-ar-pesado/input/clips/o4_cc318b76c6_t1.10.wav"
+  },
+  {
+   "id": "n9",
+   "spk": "NARRADOR",
+   "text": "[tenso] No periscópio, o tio procura o cano. E acha.",
+   "start": 86.173,
+   "end": 89.316,
+   "file": "projects/ep04-o-ar-pesado/input/clips/n9_e774113ad5_t1.20.wav"
+  },
+  {
+   "id": "o5",
+   "spk": "OSVALDO",
+   "text": "[baixo, assustado] Não tá entupido.",
+   "start": 89.616,
+   "end": 91.291,
+   "file": "projects/ep04-o-ar-pesado/input/clips/o5_d11876c572_t1.10.wav"
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "text": "[sussurrando] Tá amassado. Dobrado ao meio. E em volta dele... marcas de garra.",
+   "start": 91.591,
+   "end": 96.197,
+   "file": "projects/ep04-o-ar-pesado/input/clips/n10_21dd08588d_t1.20.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Segue a página pra ver o episódio cinco!",
+   "start": 100.597,
+   "end": 102.736,
+   "file": "projects/ep04-o-ar-pesado/input/clips/cta_bbb904894e_t1.20.wav"
+  }
+ ]
+}

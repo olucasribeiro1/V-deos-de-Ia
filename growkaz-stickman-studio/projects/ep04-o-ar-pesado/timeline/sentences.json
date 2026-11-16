@@ -1,0 +1,326 @@
+[
+ {
+  "i": 0,
+  "start": 0.667,
+  "end": 1.467,
+  "text": "Dia cinco."
+ },
+ {
+  "i": 1,
+  "start": 1.5,
+  "end": 3.267,
+  "text": "Cento e vinte horas debaixo da terra."
+ },
+ {
+  "i": 2,
+  "start": 3.367,
+  "end": 7.335,
+  "text": "Rotina de bunker: ração, água contada e turno de vigia de duas horas."
+ },
+ {
+  "i": 3,
+  "start": 7.602,
+  "end": 11.602,
+  "text": "E o Rafael descobriu que a ração tem três sabores: frango, carne..."
+ },
+ {
+  "i": 4,
+  "start": 11.635,
+  "end": 12.412,
+  "text": "e proteína."
+ },
+ {
+  "i": 5,
+  "start": 12.785,
+  "end": 15.039,
+  "text": "Tio, minha cabeça tá explodindo."
+ },
+ {
+  "i": 6,
+  "start": 15.257,
+  "end": 16.358,
+  "text": "E eu tô enjoado."
+ },
+ {
+  "i": 7,
+  "start": 16.581,
+  "end": 17.381,
+  "text": "É frescura."
+ },
+ {
+  "i": 8,
+  "start": 17.672,
+  "end": 18.617,
+  "text": "Bebe água."
+ },
+ {
+  "i": 9,
+  "start": 19.053,
+  "end": 22.52,
+  "text": "Só que dez minutos depois, o Eduardo também fica tonto."
+ },
+ {
+  "i": 10,
+  "start": 22.553,
+  "end": 23.72,
+  "text": "A visão embaça."
+ },
+ {
+  "i": 11,
+  "start": 23.787,
+  "end": 24.92,
+  "text": "As pernas pesam."
+ },
+ {
+  "i": 12,
+  "start": 25.426,
+  "end": 26.066,
+  "text": "Mãe..."
+ },
+ {
+  "i": 13,
+  "start": 26.175,
+  "end": 27.448,
+  "text": "tá tudo girando..."
+ },
+ {
+  "i": 14,
+  "start": 27.713,
+  "end": 30.989,
+  "text": "E pela primeira vez desde a bomba, a biomédica da família assume o comando."
+ },
+ {
+  "i": 15,
+  "start": 31.321,
+  "end": 33.771,
+  "text": "Dor de cabeça, tontura, enjoo."
+ },
+ {
+  "i": 16,
+  "start": 33.953,
+  "end": 35.334,
+  "text": "Todo mundo ao mesmo tempo?"
+ },
+ {
+  "i": 17,
+  "start": 35.553,
+  "end": 36.595,
+  "text": "Isso não é ração."
+ },
+ {
+  "i": 18,
+  "start": 36.619,
+  "end": 38.102,
+  "text": "É monóxido de carbono!"
+ },
+ {
+  "i": 19,
+  "start": 38.419,
+  "end": 39.452,
+  "text": "Monóxido de carbono."
+ },
+ {
+  "i": 20,
+  "start": 39.619,
+  "end": 40.085,
+  "text": "Sem cor."
+ },
+ {
+  "i": 21,
+  "start": 40.219,
+  "end": 40.919,
+  "text": "Sem cheiro."
+ },
+ {
+  "i": 22,
+  "start": 40.952,
+  "end": 43.052,
+  "text": "Sai de motor de gerador, de carro, de fogão."
+ },
+ {
+  "i": 23,
+  "start": 43.085,
+  "end": 44.908,
+  "text": "Ele toma o lugar do oxigênio no seu sangue..."
+ },
+ {
+  "i": 24,
+  "start": 44.929,
+  "end": 46.385,
+  "text": "e a vítima só sente sono."
+ },
+ {
+  "i": 25,
+  "start": 46.419,
+  "end": 48.552,
+  "text": "Tem gente que morre dormindo, sem nem perceber."
+ },
+ {
+  "i": 26,
+  "start": 48.825,
+  "end": 49.661,
+  "text": "O detector!"
+ },
+ {
+  "i": 27,
+  "start": 49.843,
+  "end": 51.443,
+  "text": "Por que o detector não apitou?!"
+ },
+ {
+  "i": 28,
+  "start": 51.848,
+  "end": 52.581,
+  "text": "Simples."
+ },
+ {
+  "i": 29,
+  "start": 52.714,
+  "end": 54.127,
+  "text": "Alguém tirou a pilha dele."
+ },
+ {
+  "i": 30,
+  "start": 54.572,
+  "end": 56.027,
+  "text": "Era pro meu controle..."
+ },
+ {
+  "i": 31,
+  "start": 56.25,
+  "end": 57.523,
+  "text": "Desliga o gerador!"
+ },
+ {
+  "i": 32,
+  "start": 57.705,
+  "end": 59.45,
+  "text": "Todo mundo perto do filtro!"
+ },
+ {
+  "i": 33,
+  "start": 59.712,
+  "end": 62.388,
+  "text": "O tio corta o motor e gira a manivela da ventilação manual."
+ },
+ {
+  "i": 34,
+  "start": 62.455,
+  "end": 64.122,
+  "text": "Ar de fora, passando pelo filtro..."
+ },
+ {
+  "i": 35,
+  "start": 64.188,
+  "end": 65.922,
+  "text": "até a cabeça parar de latejar."
+ },
+ {
+  "i": 36,
+  "start": 66.416,
+  "end": 68.929,
+  "text": "Regra de ouro: gerador nunca dentro de casa."
+ },
+ {
+  "i": 37,
+  "start": 68.963,
+  "end": 70.063,
+  "text": "Nem com a janela aberta."
+ },
+ {
+  "i": 38,
+  "start": 70.096,
+  "end": 71.229,
+  "text": "E detector de monóxido..."
+ },
+ {
+  "i": 39,
+  "start": 71.296,
+  "end": 72.166,
+  "text": "sempre com pilha."
+ },
+ {
+  "i": 40,
+  "start": 72.872,
+  "end": 73.539,
+  "text": "Mãe..."
+ },
+ {
+  "i": 41,
+  "start": 73.575,
+  "end": 77.611,
+  "text": "crachá do Exército, laboratório, Projeto Cérebro..."
+ },
+ {
+  "i": 42,
+  "start": 77.72,
+  "end": 79.502,
+  "text": "Você sabia que isso ia acontecer?"
+ },
+ {
+  "i": 43,
+  "start": 80.677,
+  "end": 82.423,
+  "text": "Agora não, Eduardo."
+ },
+ {
+  "i": 44,
+  "start": 82.95,
+  "end": 85.192,
+  "text": "O cano do escape deve ter entupido de poeira."
+ },
+ {
+  "i": 45,
+  "start": 85.374,
+  "end": 85.973,
+  "text": "Vou olhar."
+ },
+ {
+  "i": 46,
+  "start": 86.239,
+  "end": 88.539,
+  "text": "No periscópio, o tio procura o cano."
+ },
+ {
+  "i": 47,
+  "start": 88.706,
+  "end": 89.316,
+  "text": "E acha."
+ },
+ {
+  "i": 48,
+  "start": 89.907,
+  "end": 91.289,
+  "text": "Não tá entupido."
+ },
+ {
+  "i": 49,
+  "start": 91.713,
+  "end": 92.691,
+  "text": "Tá amassado."
+ },
+ {
+  "i": 50,
+  "start": 92.857,
+  "end": 93.824,
+  "text": "Dobrado ao meio."
+ },
+ {
+  "i": 51,
+  "start": 93.991,
+  "end": 95.124,
+  "text": "E em volta dele..."
+ },
+ {
+  "i": 52,
+  "start": 95.224,
+  "end": 96.197,
+  "text": "marcas de garra."
+ },
+ {
+  "i": 53,
+  "start": 100.731,
+  "end": 102.731,
+  "text": "Segue a página pra ver o episódio cinco!"
+ }
+]
