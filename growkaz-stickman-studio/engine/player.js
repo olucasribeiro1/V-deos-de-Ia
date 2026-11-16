@@ -24,9 +24,12 @@ async function boot() {
   const vertical = (cfg.aspect || '16:9') === '9:16';
   const short = RES[cfg.resolution || '1080p'] || 1080, long = Math.round((short * 16) / 9 / 2) * 2;
   const scale = +(q.get('scale') || 1);
-  const outW = Math.round(((vertical ? short : long) * scale) / 2) * 2, outH = Math.round(((vertical ? long : short) * scale) / 2) * 2;
+  const wide = vertical && (q.has('wide') || cfg.wide);   // modo horizontal (YouTube): palco vertical no centro + cenário nos lados
+  const outW = Math.round(((vertical && !wide ? short : long) * scale) / 2) * 2, outH = Math.round(((vertical && !wide ? long : short) * scale) / 2) * 2;
   Object.assign(E, { story, nums: story.numbers || [], hud: story.hud || [], punch: (story.punch || []).concat((story.numbers || []).map(n => n.t)).sort((a, b) => a - b), vertical, W: vertical ? 1080 : 1920, H: vertical ? 1920 : 1080, fps: cfg.fps || 24, cfg, words: words.words || words, shots: story.shots, outW, outH });
-  E.PX = outW / E.W;
+  E.PX = outW / E.W; E.wide = wide;
+  if (wide) { const VH = 1390, cy = 840; E.PX = outH / VH; E.OX = (outW - E.W * E.PX) / 2; E.OY = -(cy - VH / 2) * E.PX; E.VX = -E.OX / E.PX; E.VY = -E.OY / E.PX; E.VW = outW / E.PX; E.VH = VH; }
+  else { E.OX = 0; E.OY = 0; E.VX = 0; E.VY = 0; E.VW = E.W; E.VH = E.H; }
   setStyle(q.get('style') || cfg.style || 'emerald');
   await loadFonts();
   main = document.getElementById('main'); main.width = outW; main.height = outH; mg = main.getContext('2d', { willReadFrequently: true });
@@ -88,7 +91,7 @@ function state3D(shot, def, info) {
 }
 function drawShot(buf, shot, lt) {
   const g = buf.getContext('2d'); g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.filter = 'none';
-  g.fillStyle = '#000'; g.fillRect(0, 0, buf.width, buf.height); g.setTransform(E.PX, 0, 0, E.PX, 0, 0);
+  if (E.wide) g.clearRect(0, 0, buf.width, buf.height); else { g.fillStyle = '#000'; g.fillRect(0, 0, buf.width, buf.height); } g.setTransform(E.PX, 0, 0, E.PX, E.OX, E.OY);
   const def = getShot(shot.id); const dur = shot.end - shot.start;
   const info = { ...(shot.params || {}), shot, dur, globalT: shot.start + lt, p: clamp(lt / dur), line: shot.line };
   if (!def) { g.fillStyle = '#20141c'; g.fillRect(0, 0, E.W, E.H); text(g, `MISSING SHOT ${shot.id}`, E.W / 2, E.H / 2 - 30, { size: 60, color: '#ff6f61' }); text(g, (shot.line || '').slice(0, 80), E.W / 2, E.H / 2 + 50, { size: 30, color: '#fff', font: FONTS.ui, weight: 800 }); return; }
@@ -98,9 +101,19 @@ function drawShot(buf, shot, lt) {
       g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(glCanvas, 0, 0, buf.width, buf.height); g.restore();
       if (def.overlay) { g.save(); def.overlay(g, lt, info, st); g.restore(); }
     } else { g.save(); def.draw(g, lt, info); g.restore(); }
+    if (E.wide) preencheLados(buf);
     if (shot.live !== false && E.cfg.live !== false) liveCam(buf, shot.start + lt);
   } catch (e) { const msg = `${shot.id}@${lt.toFixed(2)}: ${e.message}`; if (!errors.includes(msg) && errors.length < 200) errors.push(msg); console.log('SHOT ERROR', msg, e.stack?.split('\n')[1]);
-    g.setTransform(E.PX, 0, 0, E.PX, 0, 0); text(g, 'ERROR ' + msg.slice(0, 90), E.W / 2, E.H / 2, { size: 34, color: '#ff4040', font: FONTS.ui, weight: 900 }); }
+    g.setTransform(E.PX, 0, 0, E.PX, E.OX, E.OY); text(g, 'ERROR ' + msg.slice(0, 90), E.W / 2, E.H / 2, { size: 34, color: '#ff4040', font: FONTS.ui, weight: 900 }); }
+}
+// ---------- modo horizontal: onde o cenário não chegou, entra uma cópia desfocada e escurecida da própria cena ----------
+let ladoA = null, ladoB = null;
+function preencheLados(buf) {
+  const sw = Math.round(E.W * E.PX), sx = Math.round(E.OX), w = 192, h = 108;
+  if (!ladoA) { ladoA = mk(w, h); ladoB = mk(w, h); }
+  const a = ladoA.getContext('2d'); a.setTransform(1, 0, 0, 1, 0, 0); a.clearRect(0, 0, w, h); const ch = buf.height * (sw / buf.width); a.drawImage(buf, sx, (buf.height - ch) / 2 * 0 + buf.height * 0.15, sw, buf.height * 0.55, 0, 0, w, h);
+  const b = ladoB.getContext('2d'); b.setTransform(1, 0, 0, 1, 0, 0); b.clearRect(0, 0, w, h); b.filter = 'blur(6px) brightness(0.55)'; b.drawImage(ladoA, -8, -8, w + 16, h + 16); b.filter = 'none';
+  const g = buf.getContext('2d'); g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'destination-over'; g.imageSmoothingQuality = 'high'; g.drawImage(ladoB, 0, 0, buf.width, buf.height); g.fillStyle = '#000'; g.fillRect(0, 0, buf.width, buf.height); g.restore();
 }
 // ---------- câmera viva: tremida de mão + zoom de base + "punch" (zoom rápido) nos números e batidas ----------
 let camTmp = null;
@@ -161,7 +174,7 @@ window.renderFrame = function (f) {
   if (shot.vignette !== false && grade.vignette > 0) { const v = mg.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.35, W / 2, H / 2, Math.max(W, H) * 0.62); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, `rgba(0,0,0,${grade.vignette})`); mg.fillStyle = v; mg.fillRect(0, 0, W, H); }
   if (grade.grunge > 0 && grungeTiles.length && shot.grunge !== false) { mg.save(); mg.globalAlpha = grade.grunge * (0.85 + 0.15 * Math.sin(f * 1.7)); const gt = grungeTiles[(i + Math.floor(f / 3)) % grungeTiles.length]; mg.drawImage(gt, 0, 0, W, H); mg.restore(); }
   if (grade.grain > 0) { mg.save(); mg.globalAlpha = grade.grain; mg.globalCompositeOperation = 'overlay'; mg.drawImage(grainTiles[f % 4], 0, 0, W, H); mg.restore(); }
-  mg.setTransform(E.PX, 0, 0, E.PX, 0, 0);
+  mg.setTransform(E.PX, 0, 0, E.PX, E.OX, E.OY);
   drawHud(mg, t, shot); drawNums(mg, t, shot);
   if (E.cfg.captions && shot.captions !== false) captions(mg, t, E.cfg.captionStyle || {});
   const cur = barVal(shot), prevB = i > 0 ? barVal(E.shots[i - 1]) : cur, bar = prevB + (cur - prevB) * ease.inOut(prog(lt, 0, 0.6));

@@ -2,7 +2,7 @@
 // 16:9 stage = 1920x1080, 9:16 stage = 1080x1920. The player scales to output pixels.
 import { STYLES, BASE_MOODS } from './styles.js';
 
-export const E = { W: 1920, H: 1080, PX: 1, fps: 24, vertical: false, style: null, styleId: 'emerald', cfg: {}, words: [], shots: [] };
+export const E = { W: 1920, H: 1080, PX: 1, OX: 0, OY: 0, VX: 0, VY: 0, VW: 1920, VH: 1080, fps: 24, vertical: false, style: null, styleId: 'emerald', cfg: {}, words: [], shots: [] };
 export const V = (h, v) => (E.vertical ? v : h);           // pick a value by aspect: V(landscape, vertical)
 // Safe zone Instagram Reels + TikTok (palco 1080x1920). Rostos, textos e legendas SEMPRE dentro deste retângulo.
 // Topo 220 (barra do app), base 480 (legenda do post, música, botões), esquerda 60, direita 140 (curtir/comentar/compartilhar).
@@ -112,18 +112,18 @@ const _blurPool = [];
 export function blurLayer(g, amount, fn, cam = null, depth = 1) {
   if (amount <= 0.3) { cam ? layer(g, cam, depth, fn) : fn(g); return; }
   const k = clamp(1 / (1 + amount / 3), 0.06, 1);
-  const w = Math.max(8, Math.round(E.W * E.PX * k)), h = Math.max(8, Math.round(E.H * E.PX * k));
+  const w = Math.max(8, Math.round(E.VW * E.PX * k)), h = Math.max(8, Math.round(E.VH * E.PX * k));   // área visível (no modo horizontal é maior que o palco)
   let c = _blurPool.find(b => !b.busy && b.width === w && b.height === h);
   if (!c) { c = document.createElement('canvas'); c.width = w; c.height = h; _blurPool.push(c); }
   c.busy = true; const x = c.getContext('2d'); x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, w, h);
-  x.setTransform(w / E.W, 0, 0, h / E.H, 0, 0); cam ? layer(x, cam, depth, fn) : fn(x);
+  x.setTransform(w / E.VW, 0, 0, h / E.VH, -E.VX * w / E.VW, -E.VY * h / E.VH); cam ? layer(x, cam, depth, fn) : fn(x);
   // blur at the small size (fast), then upscale smoothly
   if (!c.b) { c.b = document.createElement('canvas'); }
   if (c.b.width !== w || c.b.height !== h) { c.b.width = w; c.b.height = h; }
   const bx = c.b.getContext('2d'); bx.setTransform(1, 0, 0, 1, 0, 0); bx.clearRect(0, 0, w, h);
   bx.filter = `blur(${Math.max(0.4, amount * E.PX * k)}px)`; bx.drawImage(c, 0, 0); bx.filter = 'none';
   g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.imageSmoothingEnabled = true; g.imageSmoothingQuality = 'high';
-  g.drawImage(c.b, 0, 0, E.W * E.PX, E.H * E.PX); g.restore(); c.busy = false;
+  g.drawImage(c.b, E.OX + E.VX * E.PX, E.OY + E.VY * E.PX, E.VW * E.PX, E.VH * E.PX); g.restore(); c.busy = false;
 }
 
 // ---------- shot registry ----------
