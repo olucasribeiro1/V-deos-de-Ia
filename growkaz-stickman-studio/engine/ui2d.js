@@ -83,7 +83,9 @@ export function endScreen(g, t, o = {}) {
 export function captions(g, globalT, o = {}) {
   const words = E.words; if (!words.length) return; const { y = V(E.H - 150, 1350), size = V(58, 76), max = V(4, 3), color = '#ffffff', hi = S().ui.gold, maxW = V(E.W * 0.88, 800) } = o;   // 9:16: dentro da safe zone (base 1440, coluna de botões à direita)
   let i = -1; for (let k = words.length - 1; k >= 0; k--) if (globalT >= words[k].start - 0.05) { if (globalT <= words[k].end + 0.35) i = k; break; } if (i < 0) return;
-  const st = Math.floor(i / max) * max, group = words.slice(st, st + max); const strs = group.map(w => w.word.trim().toUpperCase());
+  // agrupa por frase: quebra em pontuação final, pausa longa ou troca de personagem (nunca mistura falas)
+  if (E._capSrc !== words || E._capMax !== max) { const G = []; let cur = []; words.forEach((w, k) => { cur.push(k); const nx = words[k + 1]; if (cur.length >= max || !nx || /[.!?:…]["')]*$/.test(w.word.trim()) || nx.start - w.end > 0.45 || (nx.spk || '') !== (w.spk || '')) { G.push(cur); cur = []; } }); E._capSrc = words; E._capMax = max; E._capIdx = []; G.forEach(gr => gr.forEach(k => { E._capIdx[k] = gr; })); }
+  const idx = E._capIdx[i], st = idx[0], group = idx.map(k => words[k]); const strs = group.map(w => w.word.trim().toUpperCase());
   const w0 = strs.map(s => measure(g, s, size)).reduce((a, b) => a + b, 0) + size * 0.3 * (strs.length - 1);
   const sz = size * Math.min(1, maxW / w0);   // shrink long phrases to fit the frame
   const gap = sz * 0.3, widths = strs.map(s => measure(g, s, sz)), total = widths.reduce((a, b) => a + b, 0) + gap * (strs.length - 1);

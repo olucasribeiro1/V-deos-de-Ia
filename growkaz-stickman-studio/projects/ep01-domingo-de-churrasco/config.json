@@ -1,0 +1,23 @@
+{
+ "title": "O Que a Mamae Sabia - Ep1 - Domingo de Churrasco",
+ "aspect": "9:16",
+ "resolution": "1080p",
+ "fps": 24,
+ "style": "urbano",
+ "voiceover": "input/voiceover.wav",
+ "script": null,
+ "duration": 57.952,
+ "captions": true,
+ "bars": null,
+ "fadeIn": 0.3,
+ "fadeOut": 0.5,
+ "music": {
+  "enabled": true,
+  "gainDb": -19
+ },
+ "sfx": {
+  "enabled": true,
+  "gainDb": -6
+ },
+ "loudness": -14
+}
