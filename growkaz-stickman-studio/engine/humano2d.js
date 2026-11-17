@@ -141,7 +141,7 @@ export function drawHumano(g, o = {}) {
   if (t != null && o.breathe !== false) p = respira(p, t, seed);
   const blink = o.blink ?? (t != null ? piscando(t, seed) : false);
   g.save(); if (o.alpha != null) g.globalAlpha *= o.alpha;
-  DIM = o.dim ? (o.dim === true ? 0.42 : o.dim) : 0; OLW = 6.5 * (o.contorno ?? 1);
+  DIM = o.dim ? (o.dim === true ? 0.42 : o.dim) : 0; OLW = 7.5 * (o.contorno ?? 1);
   const luz = o.luz ?? -1; LX = 2.2 * luz * f; LY = -1.4;
   if (o.shadow !== false && !o.rot) { g.fillStyle = 'rgba(20,18,40,.22)'; g.beginPath(); g.ellipse(o.x + 2 * s * f, o.y + 1, 38 * s, 7 * s, 0, 0, Math.PI * 2); g.fill(); }
   g.translate(o.x, o.y); g.scale(f * s, s);

@@ -112,6 +112,6 @@ STYLES.fantasia = { ...STYLES.urbano, name: 'Fantasia', desc: 'Mundo medieval m�
 STYLES.cartoon = { ...STYLES.urbano, name: 'Cartoon', desc: 'Cartoon vetorial: bordas pretas, cores vibrantes, limpo.', outline: { color: '#000000', w: 4 }, grade: { ...STYLES.urbano.grade, sat: 1.45, contrast: 1.12, lift: [0, 0, 0], gamma: [1, 1, 1], gain: [1.02, 1.02, 1.02], vignette: 0.22, grain: 0.025, grunge: 0, bloom: 0.45 } };
 
 // Vitinho: vetor limpo, contorno azul-marinho, tons quentes e pastéis, brilho suave, sem grão
-STYLES.vitinho = { ...STYLES.urbano, name: 'Vitinho', desc: 'Cartoon vetorial fofo e limpo (Aprendendo com Vitinho).', outline: { color: '#2b3347', w: 4 }, grade: { ...STYLES.urbano.grade, sat: 1.22, contrast: 1.04, lift: [0.02, 0.015, 0.01], gamma: [1, 1, 1], gain: [1.03, 1.0, 0.98], vignette: 0.12, grain: 0.0, grunge: 0, bloom: 0.35 } };
+STYLES.vitinho = { ...STYLES.urbano, name: 'Vitinho', desc: 'Cartoon vetorial fofo e limpo (Aprendendo com Vitinho).', outline: { color: '#2b3347', w: 4 }, grade: { ...STYLES.urbano.grade, sat: 1.5, contrast: 1.1, lift: [0.01, 0.01, 0.01], gamma: [1, 1, 1], gain: [1.03, 1.0, 0.98], vignette: 0.12, grain: 0.0, grunge: 0, bloom: 0.35 } };
 
 export const STYLE_IDS = Object.keys(STYLES);
