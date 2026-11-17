@@ -12,6 +12,7 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
+export const RAPIDO = { ativo: true, escala: 0.55 };   // modo rápido: 3D em resolução menor, sem desfoque
 export const LENTE = { uniforms: { tDiffuse: { value: null }, barril: { value: 0 }, aberr: { value: 0.0015 }, vinheta: { value: 0.45 }, grao: { value: 0.035 }, tempo: { value: 0 }, quente: { value: 0.05 }, sat: { value: 1.12 }, contraste: { value: 1.06 } },
   vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }',
   fragmentShader: `uniform sampler2D tDiffuse; uniform float barril, aberr, vinheta, grao, tempo, quente, sat, contraste; varying vec2 vUv;
@@ -25,10 +26,12 @@ export const LENTE = { uniforms: { tDiffuse: { value: null }, barril: { value: 0
 // palco turbinado: substitui o composer padrão do kit
 export function palco(T, o = {}) {
   const THREE = T.THREE, st = T.stage({ ...o, bloom: 0 });
+  if (RAPIDO.ativo) { o = { ...o, dof: false, ao: false }; }
   const R = st.composer.renderer; R.shadowMap.type = THREE.VSMShadowMap; R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = o.exposicao ?? 1.05;
   const pm = new THREE.PMREMGenerator(R); st.scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture; st.scene.environmentIntensity = o.env ?? 0.55;
   st.sun.shadow.radius = 6; st.sun.shadow.blurSamples = 12; st.sun.shadow.mapSize.set(2048, 2048);
-  const w = Math.round(E.W * E.PX), h = Math.round(E.H * E.PX);
+  const esc = RAPIDO.ativo ? RAPIDO.escala : 1; R.setPixelRatio(esc); R.setSize(Math.round(E.W * E.PX), Math.round(E.H * E.PX), false); if (RAPIDO.ativo) st.sun.shadow.mapSize.set(1024, 1024);
+  const w = Math.round(E.W * E.PX * esc), h = Math.round(E.H * E.PX * esc);
   const comp = new EffectComposer(R, new THREE.WebGLRenderTarget(w, h, { samples: 4, type: THREE.HalfFloatType }));
   comp.addPass(new RenderPass(st.scene, st.camera));
   let ao = null; if (o.ao !== false) { ao = new GTAOPass(st.scene, st.camera, w, h); ao.blendIntensity = o.aoForca ?? 0.9; ao.updateGtaoMaterial({ radius: o.aoRaio ?? 0.6, distanceExponent: 1.5, thickness: 1.2, scale: 1 }); comp.addPass(ao); }
