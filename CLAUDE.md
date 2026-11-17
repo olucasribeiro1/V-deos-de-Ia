@@ -88,5 +88,6 @@ Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**,
 - **Acabamento:** textura leve de papel (estilo `vitinho`), contorno azul-marinho, protagonista do canal (`PROTAGONISTA_A`).
 - **Legendas:** em minúsculas, letra arredondada grossa, contorno azul-marinho e a palavra-chave em amarelo (`captionStyle: { minusculas: true, destaque: '#f5c84a', corContorno: '#2b3347' }` no config.json).
 - **Câmera perto e viva:** nunca mais de 2 s no mesmo enquadramento. A cada ~1,8 s troca entre plano médio e close no rosto (dentro da safe zone), ou muda de cenário/situação (`DIRETOR` em `series/mamae/camera.js` + alvos por plano). Câmera perto do personagem, nunca distante.
+- **Insertos de objeto (como no exemplo do Vitinho):** a cada frase que cita um objeto, ~1,2 s do objeto em close sobre fundo liso (moeda, caderno, calendário virando, placa, crachá), entrando com snap. Pergunta de engajamento em balão no meio do vídeo ("E VOCÊ?"). Sunburst nas revelações.
 - **Revisar a pose:** sentado tem que encostar no assento (sem flutuar).
 - **Exceção:** vídeos de terror terão outra métrica, a combinar com o usuário.
