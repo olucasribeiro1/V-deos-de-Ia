@@ -115,7 +115,7 @@ export function mapaAldoria(T, o = {}) {
   for (let i = 0; i < 16; i++) { const a = i / 16 * Math.PI * 2, R = 1.0 + rN() * 0.12, nx = Math.cos(a) * (W / 2 + 22) * R, nz = Math.sin(a) * (D / 2 + 22) * R, ng = new THREE.Group(); for (let j = 0; j < 5; j++) { const s = 4 + rN() * 4; const b = new THREE.Mesh(new THREE.SphereGeometry(s, 18, 12), nuvM); b.position.set((rN() - 0.5) * 12, rN() * 2, (rN() - 0.5) * 8); b.scale.y = 0.65; ng.add(b); } ng.position.set(nx, -1 + rN() * 3, nz); G.add(ng); }
 
   // ---------- NORTE: floresta élfica ----------
-  const rA = rnd(11), arv = []; for (let x = -W / 2; x < W / 2; x += 1.15) for (let z = -D / 2; z < -8; z += 1.15) { const jx = x + (rA() - 0.5) * 1.0, jz = z + (rA() - 0.5) * 1.0, h = alt(jx, jz); const { wN } = pesos(jx, jz); if (wN > 0.55 && h > 0.9 && rA() < 0.86 && Math.hypot(jx - ALD.torre[0], jz - ALD.torre[1]) > 4.5) arv.push([jx, h, jz, rA()]); }
+  const rA = rnd(11), arv = []; for (let x = -W / 2; x < W / 2; x += 1.15) for (let z = -D / 2; z < -8; z += 1.15) { const jx = x + (rA() - 0.5) * 1.0, jz = z + (rA() - 0.5) * 1.0, h = alt(jx, jz); const { wN } = pesos(jx, jz); if (wN > 0.55 && h > 0.9 && rA() < 0.86 && Math.hypot(jx - ALD.torre[0], jz - ALD.torre[1]) > 4.5 && Math.hypot(jx - ALD.torre[0] - 5, jz - ALD.torre[1] - 7) > 3.2) arv.push([jx, h, jz, rA()]); }
   const copa = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(1, 2), new THREE.MeshStandardMaterial({ roughness: 0.75 }), arv.length), pinho = new THREE.InstancedMesh(new THREE.ConeGeometry(1, 1, 9), new THREE.MeshStandardMaterial({ roughness: 0.8 }), arv.length), tronco = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.16, 0.24, 1, 6), pbr(T, '#7a5232'), arv.length);
   const M4 = new THREE.Matrix4(), Q = new THREE.Quaternion(), S3 = new THREE.Vector3(), PV = new THREE.Vector3(), ZERO = new THREE.Matrix4().makeScale(0, 0, 0), VERDES = ['#2f9a3e', '#3cb84a', '#228a46', '#4fd06a', '#1f7a52', '#5adf8a'];
   arv.forEach(([x, h, z, r], i) => { const s = 0.6 + r * 0.6, pin = r < 0.42; M4.compose(PV.set(x, h + 0.6 * s, z), Q.identity(), S3.set(1, 1.2 * s, 1)); tronco.setMatrixAt(i, M4);
@@ -216,8 +216,8 @@ export function mapaAldoria(T, o = {}) {
 
   // ---------- miniaturas (peças do tabuleiro): elfo arqueiro, anão no martelo, Rei Mago no portão ----------
   if (o.figuras !== false) { const E2 = o.escalaFiguras ?? 2.4, figs = [];
-    const poe = (preset, x, z, rot, estado) => { const f = pessoa3D(T, { ...preset }); f.position.set(x, alt(x, z) - 0.05, z); f.rotation.y = rot; f.scale.setScalar(E2); f.traverse(q => { if (q.isMesh) { q.castShadow = true; } }); G.add(f); figs.push([f, estado]); return f; };
-    poe(ELFO, ALD.torre[0] + 5, ALD.torre[1] + 7, 0.3, 'arco'); poe(ANAO, 19.5, -2.5, -0.6, 'martelar'); poe(REI_MAGO, ALD.castelo[0] + 3.5, ALD.castelo[1] + 7.2, 0.4, 'cajado');
+    const poe = (preset, x, z, rot, estado, ks = 1) => { const f = pessoa3D(T, { ...preset }); f.position.set(x, alt(x, z) - 0.05, z); f.rotation.y = rot; f.scale.setScalar(E2 * ks); f.traverse(q => { if (q.isMesh) { q.castShadow = true; } }); G.add(f); figs.push([f, estado]); return f; };
+    poe(ELFO, ALD.torre[0] + 5, ALD.torre[1] + 7, 0.3, 'arco', 1.25); poe(ANAO, 18.5, -9, -0.6, 'martelar', 1.5); poe(REI_MAGO, ALD.castelo[0] + 3.5, ALD.castelo[1] + 7.2, 0.4, 'cajado');
     upd.push((t) => figs.forEach(([f, e], i) => { try { f.anima(t + i, e); } catch (err) { } })); G.figuras = figs.map(f => f[0]); }
   // ---------- pontos para a câmera / rótulos ----------
   const pt = ([x, z], dy = 0) => V3(x, Math.max(0.5, alt(x, z)) + dy, z);

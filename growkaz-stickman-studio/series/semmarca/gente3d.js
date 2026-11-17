@@ -74,6 +74,32 @@ const EXPR = {
   medo: { olho: [1.15, 1.2], sob: [-0.45, 0.45, 0.06, 0.06], boca: { t: 'aberta', w: 0.65, h: 0.32 }, treme: 1 },
 };
 
+// ---------------- marca 3D ----------------
+// Traços pintados na bochecha: faixa afilada (grossa em cima, ponta embaixo) que segue a curva da esfera da cabeça,
+// com contorno escuro mais largo por baixo + brilho emissivo. Fica 1-2 mm acima da pele (os vértices da esfera estão
+// exatamente em R e as faces ficam por dentro), com polygonOffset: sem z-fighting. Lado: +x (olho esquerdo do personagem).
+const MMAT = new Map();
+function marcaMat(T, cor, brilho, contorno) { const k = (contorno ? 'c' : cor) + '|' + (contorno ? 0 : brilho); let m = MMAT.get(k); if (m) return m; const THREE = T.THREE;
+  m = contorno ? new THREE.MeshStandardMaterial({ color: new THREE.Color('#0b0b0d'), roughness: 0.6, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 })
+    : new THREE.MeshStandardMaterial({ color: new THREE.Color(cor), roughness: 0.45, emissive: new THREE.Color(cor), emissiveIntensity: 0.35 + 0.55 * clamp(brilho, 0, 1.5), polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -4 });
+  MMAT.set(k, m); return m; }
+// faixa na esfera: centro (yaw0,pitch0) no topo, desce L metros; meia-largura hw(u) em metros; inclina 'inc' rad de yaw até a ponta
+function faixa(acc, R, yaw0, pitch0, L, hw, inc, ext, raio) { const N = 14, { pos, nor, idx } = acc, b0 = pos.length / 3;
+  for (let k = 0; k <= N; k++) { const u = -ext / L + (k / N) * (1 + 2 * ext / L), uc = clamp(u), pitch = pitch0 - (L / R) * u, yaw = yaw0 + inc * uc;
+    const f = uc < 0.2 ? Math.sqrt(Math.max(0, 1 - ((0.2 - uc) / 0.2) ** 2)) : Math.pow(1 - (uc - 0.2) / 0.8, 0.85) * 0.88 + 0.12 * (1 - uc);
+    const w = hw * f + ext, dy = w / (R * Math.cos(pitch));
+    for (const s of [-1, 1]) { const y = yaw + s * dy, cp = Math.cos(pitch); const nx = cp * Math.sin(y), ny = Math.sin(pitch), nz = cp * Math.cos(y); pos.push(nx * raio, ny * raio, nz * raio); nor.push(nx, ny, nz); } }
+  for (let k = 0; k < N; k++) { const a = b0 + k * 2; idx.push(a, a + 2, a + 1, a + 1, a + 2, a + 3); } }
+const geoDe = (T, acc) => { const g = new T.THREE.BufferGeometry(); g.setAttribute('position', new T.THREE.Float32BufferAttribute(acc.pos, 3)); g.setAttribute('normal', new T.THREE.Float32BufferAttribute(acc.nor, 3)); g.setIndex(acc.idx); return g; };
+export function marca3D(T, R, mk = {}) { const THREE = T.THREE, n = clamp(mk.n | 0 || 1, 1, 3), cor = mk.cor || ELEMENTOS.fogo, br = mk.brilho ?? 0.6, g = new THREE.Group();
+  const hw = [0.0095, 0.0082, 0.0072][n - 1] * (mk.largura ?? 1), o = 0.0032, L = mk.curta ? 0.05 : 0.068, gap = 0.0045, passo = 2 * (hw + o) + gap;
+  const pitch0 = -0.29, yc = 0.44, mC = marcaMat(T, cor, br, false), mO = marcaMat(T, cor, br, true);
+  const k = [n, R, mk.curta, mk.largura].join('_'), mk2 = (ext, raio) => { const acc = { pos: [], nor: [], idx: [] };
+    for (let i = 0; i < n; i++) { const di = i - (n - 1) / 2; faixa(acc, R, yc + di * passo / (R * Math.cos(pitch0)), pitch0 - Math.abs(di) * 0.02, L, hw, 0.04 + di * 0.025, ext, raio); } return geoDe(T, acc); };
+  const a = new THREE.Mesh(geo('mkO' + k, () => mk2(o, R + 0.0012)), mO), b = new THREE.Mesh(geo('mkC' + k, () => mk2(0, R + 0.0024)), mC);
+  a.renderOrder = 1; b.renderOrder = 2; a.castShadow = b.castShadow = false; a.receiveShadow = b.receiveShadow = true; g.add(a, b);
+  g.userData.mat = mC; return g; }
+
 // ---------------- pessoa ----------------
 const DEF = { pele: '#f2c29a', cabelo: { tipo: 'curto', cor: '#5a3a22' }, chapeu: null, chapeuCor: '#5a4632', roupa: 'tunica', cor: '#3a7ad8', cor2: '#f2ead8', capa: null, calca: '#5a4a3a', bota: '#4a3020', marca: { n: 1, cor: ELEMENTOS.fogo, brilho: 0.6 }, barba: null, orelhaElfo: false, anao: false, crianca: false, seed: 1 };
 
@@ -139,12 +165,9 @@ export function pessoa3D(T, opc = {}) {
   rosto.boca = bocaA; rosto.bocaO = bocaO; rosto.bocaS = bocaS;
   // marca: traços presos à bochecha (filhos do grupo da cabeça)
   const mk = o.marca;
-  if (mk && mk.n > 0) { const n = clamp(mk.n | 0, 1, 3), cor = mk.cor || ELEMENTOS.fogo, mM = mat(T, cor, { r: 0.4, e: cor, ei: mk.brilho ?? 0.6 });
-    for (let i = 0; i < n; i++) { const yaw = 0.42 + (i - (n - 1) / 2) * 0.12, sm = sock(T, cab, R, yaw, -0.27 + Math.abs(i - (n - 1) / 2) * 0.025, -0.004);
-      const tr = malha(T, G.gota(T), mM, 0, 0, 0, false); tr.scale.set(0.013, 0.042, 0.012); tr.rotation.z = -0.1; sm.add(tr); }
-    rosto.marca = mM; }
+  if (mk && mk.n > 0) { const m = marca3D(T, R, { ...mk, curta: !!barbaC }); cab.add(m); rosto.marca = m.userData.mat; rosto.marcaGrupo = m; }
   // bochechas rosadas (mais pra fora/acima, sem colidir com a marca) e óculos redondos opcionais
-  if (o.blush !== false) { const mb = mat(T, o.blushCor || '#ff8a9a', { r: 0.8 }); for (const s of [-1, 1]) { const so = sock(T, cab, R, s * 0.66, -0.1, -0.008); const b = malha(T, G.esfP(T), mb, 0, 0, 0, false); b.scale.set(0.034, 0.024, 0.012); so.add(b); } }
+  if (o.blush !== false) { const mb = mat(T, o.blushCor || '#ff8a9a', { r: 0.8 }); for (const s of [-1, 1]) { const so = sock(T, cab, R, s * 0.72, -0.05, -0.008); const b = malha(T, G.esfP(T), mb, 0, 0, 0, false); b.scale.set(0.03, 0.021, 0.012); so.add(b); } }
   if (o.oculos) { const mo = mat(T, o.oculos === true ? '#3a2a1a' : o.oculos, { r: 0.35, m: 0.5 }); for (const s of [-1, 1]) { const so = sock(T, cab, R, s * 0.3, 0.03, 0.022); so.add(malha(T, geo('aro', () => new THREE.TorusGeometry(0.058, 0.008, 6, 20)), mo, 0, 0, 0, false)); }
     const ponte = add(cab, malha(T, geo('ponte', () => new THREE.CylinderGeometry(0.006, 0.006, 0.05, 5)), mo, 0, 0.02, R * 1.05, false)); ponte.rotation.z = Math.PI / 2; }
   // cabelo
@@ -177,9 +200,11 @@ export function pessoa3D(T, opc = {}) {
   // barba
   if (barbaC) { const mb = mat(T, barbaC, { r: 0.85, flat: true });
     const longa = !anao && (opc.barbaLonga ?? true), mtx = o.barbaCompr ?? 1;
-    const bd = longa ? add(cab, malha(T, G.gota(T), mb, 0, -R * (0.95 + 0.55 * mtx), R * 0.5)) : add(cab, malha(T, G.esfF(T), mb, 0, anao ? -R * 0.98 : -R * 1.0, R * (anao ? 0.52 : 0.5)));
-    if (longa) { bd.scale.set(0.16, 0.2 + 0.14 * mtx, 0.11); bd.rotation.x = 0.22; } else { bd.scale.set(anao ? 0.2 : 0.15, anao ? 0.24 : 0.1, anao ? 0.13 : 0.1); bd.rotation.x = 0.18; if (!anao) bd.position.set(0, -R * 0.82, R * 0.45); }
-    for (const s of [-1, 1]) { const bg = add(cab, malha(T, G.esfF(T), mb, s * 0.038, -R * 0.5, R * 0.9, false)); bg.scale.set(0.045, 0.024, 0.03); bg.rotation.z = s * 0.35; } }
+    // a barba começa abaixo da faixa da marca (y < -0.13): a bochecha fica livre
+    let bd; if (longa) { const sy = 0.2 + 0.14 * mtx; bd = add(cab, malha(T, G.gota(T), mb, 0, -0.12 - sy, R * 0.5)); bd.scale.set(0.15, sy, 0.11); bd.rotation.x = 0.12; }
+    else if (anao) { bd = add(cab, malha(T, G.gota(T), mb, 0, -0.36, R * 0.48)); bd.scale.set(0.21, 0.23, 0.13); bd.rotation.set(0.1, 0, Math.PI); }
+    else { bd = add(cab, malha(T, G.esfF(T), mb, 0, -0.225, R * 0.45)); bd.scale.set(0.15, 0.095, 0.1); bd.rotation.x = 0.18; }
+    for (const s of [-1, 1]) { const bg = add(cab, malha(T, G.esfF(T), mb, s * 0.03, -0.122, R * 0.9, false)); bg.scale.set(0.033, 0.02, 0.026); bg.rotation.z = s * 0.35; } }
   // capa (presa ao topo do tronco) + gola
   let capa = null;
   if (o.capa) { const mc = mat(T, o.capa, { r: 0.85, ds: true, flat: facet }); capa = new THREE.Group(); capa.position.set(0, H * 0.9, -0.02); torso.add(capa);
