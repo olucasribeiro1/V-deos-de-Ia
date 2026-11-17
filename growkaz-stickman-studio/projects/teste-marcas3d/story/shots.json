@@ -1,1 +1,1 @@
-{"title": "teste marcas 3d", "duration": 9, "shots": [{"id": "R", "start": 0, "end": 9, "in": {"type": "cut"}, "params": {}, "sfx": []}], "numbers": [], "hud": [], "music": [], "sfx": []}
+{"title": "teste marcas 3d", "duration": 11, "shots": [{"id": "R", "start": 0, "end": 9, "in": {"type": "cut"}, "params": {}, "sfx": []}, {"id": "D", "start": 9, "end": 11, "in": {"type": "cut"}, "params": {}, "sfx": []}], "numbers": [], "hud": [], "music": [], "sfx": []}

@@ -245,11 +245,11 @@ export function chavesVoo(k, mapa) {
   const N = { pos: add(P.norte, 14, 12, 46), look: add(P.norte, 0, -6, 0), fov: 42 }, N2 = { pos: add(P.norte, 7, 8, 38), look: add(P.norte, 0, -4, 0), fov: 42 };
   const M = { pos: add(P.montanhas, -30, 30, 40), look: add(P.montanhas, 2, 3, -5), fov: 42 }, M2 = { pos: add(P.montanhas, -24, 25, 33), look: add(P.montanhas, 3, 4, -6), fov: 42 };
   const C = { pos: add(P.centro, 14, 20, 34), look: add(P.centro, 0, -1, 0), fov: 42 }, C2 = { pos: add(P.centro, 8, 15, 27), look: add(P.centro, 0, 0, 0), fov: 42 };
-  const S = { pos: add(P.sul, 6, 14, -62), look: add(P.sul, 0, 1, 0), fov: 44 }, S2 = { pos: add(P.sul, 2, 9, -48), look: add(P.sul, 0, 6, 0), fov: 44 };
+  const S = { pos: add(P.sul, 6, 14, -58), look: add(P.sul, 0, 1, 0), fov: 44 }, S2 = { pos: add(P.sul, 2, 9, -48), look: add(P.sul, 0, 6, 0), fov: 44 };
   const K = [[0, visao[0]], [t0, visao[0]]];
   const segue = (t, A, B, prox) => { K.push([t - 0.25, K[K.length - 1][1]]); K.push([t + ida, A]); K.push([Math.max(t + ida + 0.1, prox - 0.25), B]); };
   K.push([k.tNorte - 0.25, visao[1]]); segue(k.tNorte, N, N2, k.tMontanhas); K.splice(K.length - 3, 1);
-  segue(k.tMontanhas, M, M2, k.tCentro); segue(k.tCentro, C, C2, k.tSul); K.push([k.tSul - 0.25, C2]); K.push([k.tSul + ida + 0.2, S]); K.push([fim, S2]);
+  segue(k.tMontanhas, M, M2, k.tCentro); segue(k.tCentro, C, C2, k.tSul); K.push([k.tSul - 0.25, C2]); K.push([k.tSul + 0.55, { pos: [P.centro.x + 4, 48, P.centro.z - 4], look: [P.sul.x, 4, P.sul.z - 6], fov: 44 }]); K.push([k.tSul + ida + 0.6, S]); K.push([Math.max(fim, k.tSul + ida + 0.8), S2]);
   return K.filter((x, i, arr) => i === 0 || x[0] > arr[i - 1][0]);
 }
 export function voo(camera, t, k, mapa) { const K = mapa._K || (mapa._K = chavesVoo(k, mapa)); const v = key(t, K); camera.position.set(...v.pos); camera.lookAt(...v.look); if (v.fov && camera.fov !== v.fov) { camera.fov = v.fov; camera.updateProjectionMatrix(); } return Math.hypot(v.pos[0] - v.look[0], v.pos[1] - v.look[1], v.pos[2] - v.look[2]); }

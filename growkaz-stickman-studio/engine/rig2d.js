@@ -358,8 +358,8 @@ export function marcaRosto(g, hx, hy, r, front, m, t = 0) {
     g.quadraticCurveTo(x0, y0 - w0 * 0.8, x0 - w0 * sx, y0); g.closePath(); };
   g.save(); g.beginPath(); g.arc(hx, hy, r * 0.985, 0, Math.PI * 2); g.clip();
   const off = (i) => (i - (n - 1) / 2) * gap;
-  if (b > 0 && r > 45) { g.save(); g.globalCompositeOperation = 'lighter'; g.shadowColor = cor; g.shadowBlur = r * 0.35 * b; g.fillStyle = alpha(cor, 0.55 * b); for (let i = 0; i < n; i++) { traco(off(i)); g.fill(); } g.restore(); }
-  for (let i = 0; i < n; i++) { traco(off(i)); g.fillStyle = cor; g.fill(); if (r > 45) { g.lineWidth = r * 0.03; g.strokeStyle = 'rgba(11,11,13,.85)'; g.stroke(); }
+  if (b > 0 && r > 18) { g.save(); g.globalCompositeOperation = 'lighter'; g.shadowColor = cor; g.shadowBlur = r * 0.35 * b; g.fillStyle = alpha(cor, 0.55 * b); for (let i = 0; i < n; i++) { traco(off(i)); g.fill(); } g.restore(); }
+  for (let i = 0; i < n; i++) { traco(off(i)); g.lineWidth = Math.max(2.2, r * 0.045); g.strokeStyle = 'rgba(11,11,13,.9)'; g.lineJoin = 'round'; g.stroke(); g.fillStyle = cor; g.fill(); // contorno sempre (legível em qualquer pele/elemento)
     g.save(); traco(off(i)); g.clip(); g.fillStyle = 'rgba(255,255,255,.45)'; g.fillRect(ex + off(i) - w0 * 1.2, ey - w0, w0 * 0.8 * sx, L * 0.5); g.restore(); }
   g.restore();
 }

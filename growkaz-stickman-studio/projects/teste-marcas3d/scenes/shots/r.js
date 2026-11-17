@@ -14,13 +14,12 @@ registerShot('R', { kind: '3d',
         p.position.set((c - 2.5) * 1.05, r * 1.0, -r * 1.2); st.add(p); grade.push(p); }); });
     // closes
     const closes = [[{ pele: PELES[0], marca: { n: 3, cor: ELEMENTOS.vento } }], [{ pele: PELES[0], marca: { n: 2, cor: ELEMENTOS.raio }, oculos: true }], [{ pele: PELES[3], marca: { n: 3, cor: ELEMENTOS.terra } }], [{ pele: PELES[2], marca: { n: 1, cor: ELEMENTOS.agua }, chapeu: 'capuz', chapeuCor: '#2f8a3a' }],
-      [REI_MAGO], [ANAO], [GUARDA], [{ pele: PELES[1], barba: '#2a1a12', barbaLonga: false, marca: { n: 3, cor: ELEMENTOS.fogo } }]].map(([o], i) => { const p = pessoa3D(T, { roupa: 'tunica', cor: ROUP[i % 6], seed: 100 + i, ...o }); p.position.set(40 + (i % 4) * 0.8, 0, (i < 4 ? 0 : -30)); st.add(p); return p; });
+      [REI_MAGO], [ANAO], [GUARDA], [{ pele: PELES[1], barba: '#2a1a12', barbaLonga: false, marca: { n: 3, cor: ELEMENTOS.fogo } }]].map(([o], i) => { const p = pessoa3D(T, { roupa: 'tunica', cor: ROUP[i % 6], seed: 100 + i, ...o }); p.position.set(40 + Math.floor(i / 2) * 5 + (i % 2) * 0.62, 0, 0); st.add(p); return p; });
     return { stage: st, st, grade, closes }; },
   draw(s, lt, info, T) { const cam = s.st.camera, seg = Math.floor(lt / 3);
     s.grade.forEach((p, i) => { p.anima(lt, 'parado'); p.olhar(Math.sin(lt * 0.7 + i) * 0.3, 0); });
     const EX = ['neutro', 'riso', 'surpreso', 'nojo', 'raiva', 'desconfiado', 'orgulho', 'medo', 'sorriso'];
-    s.closes.forEach((p, i) => { p.expressao(EX[(Math.floor(lt * 2) + i) % 9]); p.olhar(Math.sin(lt * 1.1 + i * 0.8) * 1.0, Math.sin(lt * 0.8 + i) * 0.3); p.anima(lt, i % 2 ? 'falar' : 'parado', { intensidade: 0.5 }); });
+    s.closes.forEach((p, i) => { p.expressao(EX[(Math.floor(lt * 2) + i) % 9]); p.olhar(Math.sin(lt * 1.1 + i * 0.8) * 0.9, Math.sin(lt * 0.8 + i) * 0.3); p.anima(lt, i % 2 ? 'falar' : 'parado', { intensidade: 0.5 }); });
     if (seg === 0) { cam.position.set(0, 3.0, 17.0); cam.lookAt(0, 2.3, -1.8); s.st.foco(18); }
-    else if (seg === 1) { cam.position.set(41.2, 1.45, 3.4); cam.lookAt(41.2, 1.35, 0); s.st.foco(3.4); }
-    else { cam.position.set(41.2, 1.45, -26.6); cam.lookAt(41.2, 1.35, -30); s.st.foco(3.4); }
+    else { const pi = Math.min(3, Math.floor((lt - 3) / 1.5)), x = 40.31 + pi * 5; cam.position.set(x, 1.45, 3.3); cam.lookAt(x, 1.38, 0); s.st.foco(3.3); }
     s.st.tick(lt); } });

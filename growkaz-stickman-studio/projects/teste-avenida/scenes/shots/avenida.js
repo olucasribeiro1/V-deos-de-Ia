@@ -7,10 +7,14 @@ registerShot('R', { kind: '3d',
     av.children.forEach((ch, k) => { ch.visible = true; });
     s.c.gato.visible = true; s.c.truck.visible = true; s.c.update(4.4);
     const T = s.T.THREE;
-    if (i === 1) s.c.gato.visible = false;
+    const ms = av.children.filter(ch => ch.isMesh); const rm = ms[0].material; s.orig ||= { r: rm.roughness, m: rm.metalness, rmap: rm.roughnessMap, map: rm.map };
+    Object.assign(rm, { roughness: s.orig.r, metalness: s.orig.m, roughnessMap: s.orig.rmap, map: s.orig.map });
+    if (i === 3) { rm.metalness = 0; } if (i === 4) { rm.roughnessMap = null; rm.roughness = 0.5; } if (i === 7) { rm.map = null; } rm.needsUpdate = true;
+    if (i === 1) ms[0].visible = false;
+    
     if (i === 2) av.children.forEach(ch => { if (ch.isMesh) ch.visible = false; });
-    if (i === 3) av.children.forEach(ch => { if (ch.isGroup) ch.visible = false; });
-    if (i === 4) av.children.forEach(ch => { if (ch.isLight) ch.visible = false; });
+    
+    
     if (i === 5) s.c.eu.visible = false;
     if (i === 6) av.children.forEach(ch => { if (!ch.isMesh && !ch.isGroup && !ch.isLight) ch.visible = false; });
   } });

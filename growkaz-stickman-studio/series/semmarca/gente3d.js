@@ -92,8 +92,8 @@ function faixa(acc, R, yaw0, pitch0, L, hw, inc, ext, raio) { const N = 14, { po
   for (let k = 0; k < N; k++) { const a = b0 + k * 2; idx.push(a, a + 2, a + 1, a + 1, a + 2, a + 3); } }
 const geoDe = (T, acc) => { const g = new T.THREE.BufferGeometry(); g.setAttribute('position', new T.THREE.Float32BufferAttribute(acc.pos, 3)); g.setAttribute('normal', new T.THREE.Float32BufferAttribute(acc.nor, 3)); g.setIndex(acc.idx); return g; };
 export function marca3D(T, R, mk = {}) { const THREE = T.THREE, n = clamp(mk.n | 0 || 1, 1, 3), cor = mk.cor || ELEMENTOS.fogo, br = mk.brilho ?? 0.6, g = new THREE.Group();
-  const hw = [0.0095, 0.0082, 0.0072][n - 1] * (mk.largura ?? 1), o = 0.0032, L = mk.curta ? 0.05 : 0.068, gap = 0.0045, passo = 2 * (hw + o) + gap;
-  const pitch0 = -0.29, yc = 0.44, mC = marcaMat(T, cor, br, false), mO = marcaMat(T, cor, br, true);
+  const hw = [0.0125, 0.0105, 0.009][n - 1] * (mk.largura ?? 1), o = 0.0045, L = mk.curta ? 0.056 : 0.084, gap = 0.0035, passo = 2 * (hw + o) + gap;
+  const pitch0 = -0.29, yc = 0.47, mC = marcaMat(T, cor, br, false), mO = marcaMat(T, cor, br, true);
   const k = [n, R, mk.curta, mk.largura].join('_'), mk2 = (ext, raio) => { const acc = { pos: [], nor: [], idx: [] };
     for (let i = 0; i < n; i++) { const di = i - (n - 1) / 2; faixa(acc, R, yc + di * passo / (R * Math.cos(pitch0)), pitch0 - Math.abs(di) * 0.02, L, hw, 0.04 + di * 0.025, ext, raio); } return geoDe(T, acc); };
   const a = new THREE.Mesh(geo('mkO' + k, () => mk2(o, R + 0.0012)), mO), b = new THREE.Mesh(geo('mkC' + k, () => mk2(0, R + 0.0024)), mC);
