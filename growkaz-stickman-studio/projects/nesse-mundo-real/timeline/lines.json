@@ -1,0 +1,189 @@
+{
+ "duration": 122.759,
+ "lines": [
+  {
+   "id": "n01",
+   "spk": "NARRADOR",
+   "text": "[misterioso, rápido] Nesse mundo, existe um anjo que cuida da economia do universo. E numa segunda-feira, ele resolveu trocar o dinheiro da Terra inteira.",
+   "start": 0.3,
+   "end": 6.764,
+   "file": "projects/nesse-mundo-real/input/clips/n01_57c6ba98bc_t1.25.wav"
+  },
+  {
+   "id": "n02",
+   "spk": "NARRADOR",
+   "text": "[rápido] Cortou quatro zeros de tudo. Salário, preço, poupança. Ninguém ficou mais pobre: o pão de mil reais virou pão de dez centavos.",
+   "start": 6.864,
+   "end": 13.073,
+   "file": "projects/nesse-mundo-real/input/clips/n02_b6342c4d9f_t1.25.wav"
+  },
+  {
+   "id": "n03",
+   "spk": "NARRADOR",
+   "text": "[curioso, rápido] Parece loucura? O Brasil fez isso de verdade. Entre mil novecentos e oitenta e seis e mil novecentos e noventa e quatro, a gente teve cinco moedas diferentes: cruzado, cruzado novo, cruzeiro, cruzeiro real... e o real.",
+   "start": 13.223,
+   "end": 23.861,
+   "file": "projects/nesse-mundo-real/input/clips/n03_0004452f6b_t1.25.wav"
+  },
+  {
+   "id": "n04",
+   "spk": "NARRADOR",
+   "text": "[irônico, rápido] Só que o anjo esqueceu de converter uma pessoa. O Guilherme. Dezenove anos, rei do videogame, e dono da maior conta de fiado da padaria.",
+   "start": 24.061,
+   "end": 30.655,
+   "file": "projects/nesse-mundo-real/input/clips/n04_dc10ffbc3c_t1.25.wav"
+  },
+  {
+   "id": "a1",
+   "spk": "ANJO",
+   "text": "[nervoso, olhando a planilha] Hm... deve ser nada.",
+   "start": 30.755,
+   "end": 32.94,
+   "file": "projects/nesse-mundo-real/input/clips/a1_4577aaea45_t1.10.wav"
+  },
+  {
+   "id": "n05",
+   "spk": "NARRADOR",
+   "text": "[rápido] Na terça de manhã, ele foi comprar pão com a única moeda que tinha: um real. Só que um real dele... valia dez mil reais do dinheiro novo.",
+   "start": 33.14,
+   "end": 40.062,
+   "file": "projects/nesse-mundo-real/input/clips/n05_d06a785abc_t1.25.wav"
+  },
+  {
+   "id": "m1",
+   "spk": "MANOEL",
+   "text": "[chocado, gaguejando] Menino... com isso aqui tu compra o pão, o forno... e eu.",
+   "start": 40.162,
+   "end": 44.895,
+   "file": "projects/nesse-mundo-real/input/clips/m1_6daea64170_t1.10.wav"
+  },
+  {
+   "id": "n06",
+   "spk": "NARRADOR",
+   "text": "[misterioso, rápido] E o bug tinha mais um efeito: todo dia, o dinheiro dele se multiplicava por dez. Desde que ele não gastasse nada. Gastou um centavo? Trava pra sempre.",
+   "start": 45.095,
+   "end": 52.516,
+   "file": "projects/nesse-mundo-real/input/clips/n06_ff7b981752_t1.25.wav"
+  },
+  {
+   "id": "n07",
+   "spk": "NARRADOR",
+   "text": "[empolgado, rápido] Dia um: dez mil. Ele guarda. Dia dois: cem mil. Ele come miojo cru. Dia três: um milhão. A mãe dele vende o micro-ondas.",
+   "start": 52.716,
+   "end": 60.204,
+   "file": "projects/nesse-mundo-real/input/clips/n07_58abf9e994_t1.25.wav"
+  },
+  {
+   "id": "ma1",
+   "spk": "MAE",
+   "text": "[brava, gritando] Guilherme, eu juro por Deus...",
+   "start": 60.304,
+   "end": 62.857,
+   "file": "projects/nesse-mundo-real/input/clips/ma1_8c8f8f01e5_t1.10.wav"
+  },
+  {
+   "id": "n08",
+   "spk": "NARRADOR",
+   "text": "[épico] Dia quatro: dez milhões de reais. Num cofrinho de porquinho.",
+   "start": 62.957,
+   "end": 67.127,
+   "file": "projects/nesse-mundo-real/input/clips/n08_9239b88d84_t1.25.wav"
+  },
+  {
+   "id": "n09",
+   "spk": "NARRADOR",
+   "text": "[tenso] E aí bateu o medo: e se o anjo perceber amanhã? O Guilherme, que só sabia jogar... jogou certo.",
+   "start": 67.377,
+   "end": 72.887,
+   "file": "projects/nesse-mundo-real/input/clips/n09_0995caacb1_t1.25.wav"
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "text": "[rápido, empolgado] Comprou a padaria do Seu Manoel. O terreno do lado. Pagou o fiado da rua inteira. E o Seu Manoel ganhou um crachá de gerente.",
+   "start": 73.087,
+   "end": 78.714,
+   "file": "projects/nesse-mundo-real/input/clips/n10_21c8a7e5de_t1.25.wav"
+  },
+  {
+   "id": "m2",
+   "spk": "MANOEL",
+   "text": "[emocionado] Eu vou ter vale-refeição?",
+   "start": 78.814,
+   "end": 80.636,
+   "file": "projects/nesse-mundo-real/input/clips/m2_0a8e9ca21d_t1.10.wav"
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "text": "[explicando, rápido] E ele fez bem em não guardar. Quando um único cara joga milhões numa rua, o pão é o mesmo, mas tem muito mais dinheiro correndo atrás dele. O preço sobe. Isso é inflação.",
+   "start": 80.886,
+   "end": 89.216,
+   "file": "projects/nesse-mundo-real/input/clips/n11_60326653b1_t1.25.wav"
+  },
+  {
+   "id": "n12",
+   "spk": "NARRADOR",
+   "text": "[sério, rápido] E o Brasil sabe bem: em mil novecentos e noventa e três, os preços subiram mais de dois mil por cento num ano. O mercado remarcava a etiqueta todo dia. Por isso ele trocou o dinheiro por coisa que não derrete.",
+   "start": 89.366,
+   "end": 98.848,
+   "file": "projects/nesse-mundo-real/input/clips/n12_103675eaa3_t1.25.wav"
+  },
+  {
+   "id": "n13",
+   "spk": "NARRADOR",
+   "text": "[misterioso] Naquela noite, o chefe do anjo achou o erro.",
+   "start": 99.148,
+   "end": 102.48,
+   "file": "projects/nesse-mundo-real/input/clips/n13_693481cc7f_t1.25.wav"
+  },
+  {
+   "id": "c1",
+   "spk": "CHEFE",
+   "text": "Estagiário.",
+   "start": 102.58,
+   "end": 103.86,
+   "file": "projects/nesse-mundo-real/input/clips/c1_f353683d3b.mp3"
+  },
+  {
+   "id": "a2",
+   "spk": "ANJO",
+   "text": "[engolindo seco] ...Ctrl Z?",
+   "start": 103.96,
+   "end": 105.099,
+   "file": "projects/nesse-mundo-real/input/clips/a2_32e64e6226_t1.10.wav"
+  },
+  {
+   "id": "n14",
+   "spk": "NARRADOR",
+   "text": "[rápido] De manhã, o real dele voltou a valer um real. Mas a padaria... continuou sendo dele.",
+   "start": 105.399,
+   "end": 109.501,
+   "file": "projects/nesse-mundo-real/input/clips/n14_a8090410f7_t1.25.wav"
+  },
+  {
+   "id": "g1",
+   "spk": "GUILHERME",
+   "text": "[sorrindo, convencido] Agora quem anota o fiado sou eu.",
+   "start": 109.651,
+   "end": 112.128,
+   "file": "projects/nesse-mundo-real/input/clips/g1_6ad4bb6b5b_t1.10.wav"
+  },
+  {
+   "id": "n15",
+   "spk": "NARRADOR",
+   "text": "[animado] E você? Torrava tudo no primeiro dia ou esperava? Comenta aí.",
+   "start": 112.328,
+   "end": 115.84,
+   "file": "projects/nesse-mundo-real/input/clips/n15_be8bc30d8c_t1.25.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Segue a página pra mais Nesse Mundo!",
+   "start": 118.84,
+   "end": 120.759,
+   "file": "projects/nesse-mundo-real/input/clips/cta_fa2c381ba1_t1.25.wav"
+  }
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "model": "eleven_v4",
+ "_nota": "Nesse mundo: troca de moeda, real do Guilherme não convertido. Dados: 5 moedas 1986-1994; IPCA 1993 ~2.477% (IBGE).",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.25,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  },
+  "ANJO": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  },
+  "CHEFE": {
+   "id": "HoWXGRJgqYolkEBcxmGm",
+   "tempo": 1.0,
+   "settings": {
+    "stability": 0.7,
+    "similarity_boost": 0.8,
+    "speed": 0.95
+   },
+   "model": "eleven_multilingual_v2"
+  },
+  "MAE": {
+   "id": "EXAVITQu4vr4xnSDxMaL",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  },
+  "MANOEL": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  },
+  "GUILHERME": {
+   "id": "IKne3meq5aSn9XLyUdCD",
+   "tempo": 1.1,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[misterioso, rápido] Nesse mundo, existe um anjo que cuida da economia do universo. E numa segunda-feira, ele resolveu trocar o dinheiro da Terra inteira."
+  },
+  {
+   "id": "n02",
+   "spk": "NARRADOR",
+   "gap": 0.1,
+   "text": "[rápido] Cortou quatro zeros de tudo. Salário, preço, poupança. Ninguém ficou mais pobre: o pão de mil reais virou pão de dez centavos."
+  },
+  {
+   "id": "n03",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[curioso, rápido] Parece loucura? O Brasil fez isso de verdade. Entre mil novecentos e oitenta e seis e mil novecentos e noventa e quatro, a gente teve cinco moedas diferentes: cruzado, cruzado novo, cruzeiro, cruzeiro real... e o real."
+  },
+  {
+   "id": "n04",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[irônico, rápido] Só que o anjo esqueceu de converter uma pessoa. O Guilherme. Dezenove anos, rei do videogame, e dono da maior conta de fiado da padaria."
+  },
+  {
+   "id": "a1",
+   "spk": "ANJO",
+   "gap": 0.1,
+   "text": "[nervoso, olhando a planilha] Hm... deve ser nada."
+  },
+  {
+   "id": "n05",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido] Na terça de manhã, ele foi comprar pão com a única moeda que tinha: um real. Só que um real dele... valia dez mil reais do dinheiro novo."
+  },
+  {
+   "id": "m1",
+   "spk": "MANOEL",
+   "gap": 0.1,
+   "text": "[chocado, gaguejando] Menino... com isso aqui tu compra o pão, o forno... e eu."
+  },
+  {
+   "id": "n06",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[misterioso, rápido] E o bug tinha mais um efeito: todo dia, o dinheiro dele se multiplicava por dez. Desde que ele não gastasse nada. Gastou um centavo? Trava pra sempre."
+  },
+  {
+   "id": "n07",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[empolgado, rápido] Dia um: dez mil. Ele guarda. Dia dois: cem mil. Ele come miojo cru. Dia três: um milhão. A mãe dele vende o micro-ondas."
+  },
+  {
+   "id": "ma1",
+   "spk": "MAE",
+   "gap": 0.1,
+   "text": "[brava, gritando] Guilherme, eu juro por Deus..."
+  },
+  {
+   "id": "n08",
+   "spk": "NARRADOR",
+   "gap": 0.1,
+   "text": "[épico] Dia quatro: dez milhões de reais. Num cofrinho de porquinho."
+  },
+  {
+   "id": "n09",
+   "spk": "NARRADOR",
+   "gap": 0.25,
+   "text": "[tenso] E aí bateu o medo: e se o anjo perceber amanhã? O Guilherme, que só sabia jogar... jogou certo."
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido, empolgado] Comprou a padaria do Seu Manoel. O terreno do lado. Pagou o fiado da rua inteira. E o Seu Manoel ganhou um crachá de gerente."
+  },
+  {
+   "id": "m2",
+   "spk": "MANOEL",
+   "gap": 0.1,
+   "text": "[emocionado] Eu vou ter vale-refeição?"
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "gap": 0.25,
+   "text": "[explicando, rápido] E ele fez bem em não guardar. Quando um único cara joga milhões numa rua, o pão é o mesmo, mas tem muito mais dinheiro correndo atrás dele. O preço sobe. Isso é inflação."
+  },
+  {
+   "id": "n12",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[sério, rápido] E o Brasil sabe bem: em mil novecentos e noventa e três, os preços subiram mais de dois mil por cento num ano. O mercado remarcava a etiqueta todo dia. Por isso ele trocou o dinheiro por coisa que não derrete."
+  },
+  {
+   "id": "n13",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[misterioso] Naquela noite, o chefe do anjo achou o erro."
+  },
+  {
+   "id": "c1",
+   "spk": "CHEFE",
+   "gap": 0.1,
+   "text": "Estagiário."
+  },
+  {
+   "id": "a2",
+   "spk": "ANJO",
+   "gap": 0.1,
+   "text": "[engolindo seco] ...Ctrl Z?"
+  },
+  {
+   "id": "n14",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[rápido] De manhã, o real dele voltou a valer um real. Mas a padaria... continuou sendo dele."
+  },
+  {
+   "id": "g1",
+   "spk": "GUILHERME",
+   "gap": 0.15,
+   "text": "[sorrindo, convencido] Agora quem anota o fiado sou eu."
+  },
+  {
+   "id": "n15",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[animado] E você? Torrava tudo no primeiro dia ou esperava? Comenta aí."
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 3.0,
+   "text": "[animado] Segue a página pra mais Nesse Mundo!"
+  }
+ ]
+}
