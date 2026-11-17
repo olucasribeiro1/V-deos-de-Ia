@@ -120,6 +120,21 @@
      "at": 5.532,
      "name": "glitch",
      "gain": -10
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
     }
    ],
    "nums": false,
@@ -244,6 +259,21 @@
      "at": 4.342,
      "name": "ding",
      "gain": -12
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
     }
    ],
    "nums": false,
@@ -383,6 +413,31 @@
      "at": 6.23,
      "name": "hit",
      "gain": -10
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 7.2,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 9.0,
+     "name": "whoosh",
+     "gain": -17
     }
    ],
    "nums": false,
@@ -507,6 +562,46 @@
      "at": 6.644,
      "name": "blip",
      "gain": -12
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 7.2,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 4.118,
+     "name": "swish",
+     "gain": -9
+    },
+    {
+     "at": 4.178,
+     "name": "ding",
+     "gain": -13
+    },
+    {
+     "at": 5.91,
+     "name": "swish",
+     "gain": -9
+    },
+    {
+     "at": 5.97,
+     "name": "ding",
+     "gain": -13
     }
    ],
    "nums": false,
@@ -631,6 +726,46 @@
      "at": 7.172,
      "name": "impact",
      "gain": -10
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 7.2,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 9.0,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 10.8,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 2.326,
+     "name": "swish",
+     "gain": -9
+    },
+    {
+     "at": 2.386,
+     "name": "ding",
+     "gain": -13
     }
    ],
    "amb": {
@@ -759,6 +894,26 @@
      "at": 6.71,
      "name": "hit",
      "gain": -6
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 7.2,
+     "name": "swish",
+     "gain": -17
     }
    ],
    "nums": false,
@@ -898,6 +1053,71 @@
      "at": 13.335,
      "name": "ding",
      "gain": -10
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 7.2,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 9.0,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 10.8,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 12.6,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.862,
+     "name": "swish",
+     "gain": -9
+    },
+    {
+     "at": 3.922,
+     "name": "ding",
+     "gain": -13
+    },
+    {
+     "at": 6.934,
+     "name": "swish",
+     "gain": -9
+    },
+    {
+     "at": 6.994,
+     "name": "ding",
+     "gain": -13
+    },
+    {
+     "at": 13.335,
+     "name": "swish",
+     "gain": -9
+    },
+    {
+     "at": 13.395,
+     "name": "ding",
+     "gain": -13
     }
    ],
    "nums": false,
@@ -1017,6 +1237,21 @@
      "at": 4.904,
      "name": "powerup",
      "gain": -8
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
     }
    ],
    "nums": false,
@@ -1151,6 +1386,46 @@
      "at": 5.877,
      "name": "cheer",
      "gain": -18
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 7.2,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 1.686,
+     "name": "swish",
+     "gain": -9
+    },
+    {
+     "at": 1.746,
+     "name": "ding",
+     "gain": -13
+    },
+    {
+     "at": 4.822,
+     "name": "swish",
+     "gain": -9
+    },
+    {
+     "at": 4.882,
+     "name": "ding",
+     "gain": -13
     }
    ],
    "amb": {
@@ -1284,6 +1559,61 @@
      "at": 17.032,
      "name": "ding",
      "gain": -10
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 7.2,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 9.0,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 10.8,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 12.6,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 14.4,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 16.2,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 8.88,
+     "name": "swish",
+     "gain": -9
+    },
+    {
+     "at": 8.94,
+     "name": "ding",
+     "gain": -13
     }
    ],
    "nums": false,
@@ -1408,6 +1738,21 @@
      "at": 5.462,
      "name": "whoosh",
      "gain": -6
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
     }
    ],
    "nums": false,
@@ -1527,6 +1872,46 @@
      "at": 4.502,
      "name": "pop",
      "gain": -12
+    },
+    {
+     "at": 1.8,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 3.6,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 5.4,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 7.2,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 9.0,
+     "name": "whoosh",
+     "gain": -17
+    },
+    {
+     "at": 10.8,
+     "name": "swish",
+     "gain": -17
+    },
+    {
+     "at": 0.786,
+     "name": "swish",
+     "gain": -9
+    },
+    {
+     "at": 0.846,
+     "name": "ding",
+     "gain": -13
     }
    ],
    "amb": {

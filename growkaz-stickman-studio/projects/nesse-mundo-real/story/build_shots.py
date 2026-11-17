@@ -18,3 +18,24 @@ S = [
 ]
 monta(__file__, S, "Nesse Mundo So o Seu Real Nao Foi Trocado", sem_nums=tuple(x[0] for x in S), sem_hud=tuple(x[0] for x in S), sem_leg=("T", "Kc"),
       musica=[(0, "mystery", 0.5), ("B", "tension", 0.5), ("C", "calm", 0.45), ("D", "mystery", 0.45), ("E", "tension", 0.6), ("G", "tension", 0.65), ("H", "dark", 0.6), ("I", "calm", 0.5), ("J", "tension", 0.55), ("K", "dark", 0.6), ("L", "calm", 0.5), ("T", "mystery", 0.5)])
+
+# ---- SFX extras (estilo Vitinho): "vulto" a cada troca de enquadramento (1,8 s) e "plim" nos insertos de objeto ----
+import json, re
+P = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); F = P + "/story/shots.json"
+L = {l["id"]: l["start"] for l in json.load(open(P + "/timeline/lines.json"))["lines"]}; Wd = json.load(open(P + "/timeline/words.json"))["words"]
+LE = {l["id"]: l["end"] for l in json.load(open(P + "/timeline/lines.json"))["lines"]}
+def w(word, line):
+    h = [x["start"] for x in Wd if L[line] - 0.01 <= x["start"] <= LE[line] and re.sub(r"[^\w]+", "", x["word"].lower()).startswith(word)]
+    return h[0] if h else None
+ins = [w("videogame", "n04"), w("fiado", "n04"), w("moeda", "n05"), w("miojo", "n07"), w("micro", "n07"), w("cofrinho", "n08"), w("terreno", "n10"), w("crachá", "n10"), L["n12"] + 0.2, (w("real", "n14") or 0) - 0.2]
+d = json.load(open(F))
+for sh in d["shots"]:
+    if sh["id"] in ("T", "Kc"): continue
+    t = 1.8
+    while sh["start"] + t < sh["end"] - 0.3:
+        sh["sfx"].append({"at": round(t, 3), "name": "whoosh" if int(t / 1.8) % 2 else "swish", "gain": -17}); t += 1.8
+    for ti in ins:
+        if ti and sh["start"] <= ti < sh["end"]:
+            sh["sfx"] += [{"at": round(ti - sh["start"], 3), "name": "swish", "gain": -9}, {"at": round(ti - sh["start"] + 0.06, 3), "name": "ding", "gain": -13}]
+json.dump(d, open(F, "w"), ensure_ascii=False, indent=1)
+print("sfx extras:", sum(len(s["sfx"]) for s in d["shots"]))

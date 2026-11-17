@@ -21,6 +21,7 @@ def monta(arquivo, S, titulo, hud=(), musica=(), sem_nums=(), sem_hud=(), sem_le
         return hits[nth - 1]
     def at(spec):
         if isinstance(spec, (int, float)): return spec
+        if spec[0] == "abs": return spec[1]
         if spec[0] == "end": return L[spec[1]][1] + spec[2]
         if len(spec) == 2: return L[spec[0]][0] + spec[1]
         return word(spec[0], spec[1], spec[3] if len(spec) > 3 else 1) + spec[2]
