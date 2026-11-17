@@ -43,7 +43,10 @@ function quadrosPT(THREE, cs, ts, ref) { const out = [], n = (ref || new THREE.V
 function curvoGeo(T, pts, r0, r1, o = {}) { const THREE = T.THREE, nA = o.nA ?? 14, nR = o.nR ?? 10, cv = new THREE.CatmullRomCurve3(pts.map((p) => new THREE.Vector3(...p))), geo = tuboGeo(THREE, nA, nR), cs = [], ts = [];
   for (let i = 0; i < nA; i++) { const u = i / (nA - 1); cs.push(cv.getPoint(u)); ts.push(cv.getTangent(u)); }
   const F = quadrosPT(THREE, cs, ts, o.ref); const pw = o.pw ?? 1;
-  tuboPoe(geo, (i) => { const u = i / (nA - 1), r = Math.max(0.002, lerp(r0, r1, Math.pow(u, pw))) ; return { ...F[i], ry: r * (o.sy ?? 1), rz: r * (o.sz ?? 1) }; }); return geo; }
+  tuboPoe(geo, (i) => { const u = i / (nA - 1), r = Math.max(0.002, lerp(r0, r1, Math.pow(u, pw))) ; return { ...F[i], ry: r * (o.sy ?? 1), rz: r * (o.sz ?? 1) }; });
+  const c0 = new THREE.Color(o.base ?? '#7a5a40'), c1 = new THREE.Color(o.ponta ?? '#fff6e2'), col = new Float32Array(nA * (nR + 1) * 3), tc = new THREE.Color();
+  for (let i = 0; i < nA; i++) { tc.copy(c0).lerp(c1, ss(0, 0.75, i / (nA - 1))); for (let j = 0; j <= nR; j++) { const k = (i * (nR + 1) + j) * 3; col[k] = tc.r; col[k + 1] = tc.g; col[k + 2] = tc.b; } }
+  geo.setAttribute('color', new THREE.BufferAttribute(col, 3)); return geo; }
 // pinta vértices conforme a normal (cima/baixo)
 function pintaVert(T, geo, cTop, cMid, cBot, k = [0.35, -0.25]) { const THREE = T.THREE, N = geo.attributes.normal, n = N.count, col = new Float32Array(n * 3), a = new THREE.Color(cTop), b = new THREE.Color(cMid), c = new THREE.Color(cBot), tmp = new THREE.Color();
   for (let i = 0; i < n; i++) { const y = N.getY(i); tmp.copy(b); if (y > 0) tmp.lerp(a, ss(0, 1, y) * k[0] * 2); else tmp.lerp(c, ss(k[1] + 0.05, k[1] - 0.35, y)); col[i * 3] = tmp.r; col[i * 3 + 1] = tmp.g; col[i * 3 + 2] = tmp.b; }
@@ -73,18 +76,18 @@ export function dragao3D(T, o = {}) {
   const azul = !!o.cor && C(o.cor).b > C(o.cor).r;
   const cor = C(o.cor ?? '#b8202a'), corB = C(o.barriga ?? (azul ? '#ffd27a' : '#ffb34a'));
   const corM = C(o.membrana ?? (o.cor ? '#' + C(o.cor).multiplyScalar(0.5).getHexString() : '#6a1018'));
-  const corDorso = cor.clone().multiplyScalar(0.62), corChifre = o.chifre ?? '#f3e4c4', corEsp = o.espinho ?? (azul ? '#ffd27a' : '#ffb34a');
+  const corDorso = cor.clone().multiplyScalar(0.62), corChifre = o.chifre ?? '#ffffff', corEsp = o.espinho ?? (azul ? '#ffd27a' : '#ffb34a');
   const tex = o.escamas === false ? null : escamas(T);
   const mPele = new THREE.MeshStandardMaterial({ vertexColors: true, map: tex, bumpMap: tex, bumpScale: 1.2, roughness: 0.5, metalness: 0.05 });
   const mCab = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.48, metalness: 0.05 });
   const mCor = new THREE.MeshStandardMaterial({ color: cor, roughness: 0.5, metalness: 0.05 });
   const mEsc = new THREE.MeshStandardMaterial({ color: corDorso, roughness: 0.5 });
-  const mChifre = new THREE.MeshStandardMaterial({ color: C(corChifre), roughness: 0.4 });
+  const mChifre = new THREE.MeshStandardMaterial({ vertexColors: true, color: C(corChifre), roughness: 0.38 });
   const mEsp = new THREE.MeshStandardMaterial({ color: C(corEsp), roughness: 0.42, emissive: C(corEsp), emissiveIntensity: 0.06 });
-  const mMemb = new THREE.MeshStandardMaterial({ vertexColors: true, side: THREE.DoubleSide, transparent: (o.opacMembrana ?? 0.94) < 1, opacity: o.opacMembrana ?? 0.94, roughness: 0.62, emissive: corM, emissiveIntensity: 0.22 });
+  const mMemb = new THREE.MeshStandardMaterial({ vertexColors: true, side: THREE.DoubleSide, transparent: (o.opacMembrana ?? 0.94) < 1, opacity: o.opacMembrana ?? 0.94, roughness: 0.62, emissive: corM, emissiveIntensity: 0.32 });
   const mOlho = new THREE.MeshStandardMaterial({ color: C(o.olho ?? '#ffe45a'), emissive: C(o.olho ?? '#ffc21a'), emissiveIntensity: 2.4, roughness: 0.2 });
   const mPreto = new THREE.MeshStandardMaterial({ color: C('#140606'), roughness: 0.25 });
-  const mBoca = new THREE.MeshStandardMaterial({ color: C('#4a0610'), roughness: 0.7, side: THREE.DoubleSide });
+  const mBoca = new THREE.MeshStandardMaterial({ color: C(o.dbgBoca ?? '#4a0610'), roughness: 0.7, side: THREE.DoubleSide });
   const mLingua = new THREE.MeshStandardMaterial({ color: C('#d4505e'), roughness: 0.5 });
   const mDente = new THREE.MeshStandardMaterial({ color: C('#fff8ea'), roughness: 0.3 });
   const sombra = o.sombra !== false;
@@ -126,40 +129,41 @@ export function dragao3D(T, o = {}) {
   const ponta = mk(paGeo, mEsp, 0, 0, 0, raiz);
 
   // ---------- cabeça (local: +X focinho, +Y cima, origem na nuca) ----------
-  const cab = new THREE.Group(); raiz.add(cab); const cabI = new THREE.Group(); cab.add(cabI); cabI.scale.setScalar(o.cabEscala ?? 1.12);
-  const cranioG = pintaVert(T, pilula(T, 1.2, 0.44, 0.4, { p: 2.3, sz: 1.04, seg: 28 }), corDorso, cor, cor);
-  mk(cranioG, mCab, -0.42, 0.12, 0, cabI);
-  const fsY = 0.07, FS = [0.32, 1.95, 0.34, 0.2, 0.68, 1.0]; // x0, len, r0, r1, sy, sz do focinho
-  const focG = pintaVert(T, pilula(T, FS[1] - FS[0], FS[2], FS[3], { p: 2.6, sy: FS[4], sz: FS[5], seg: 28 }), corDorso, cor, cor.clone().lerp(corB, 0.35));
+  const cab = new THREE.Group(); raiz.add(cab); const cabI = new THREE.Group(); cab.add(cabI); cabI.scale.setScalar(o.cabEscala ?? 1.22);
+  const cranioG = pintaVert(T, pilula(T, 1.25, 0.36, 0.42, { p: 2.4, sy: 0.95, sz: 1.08, seg: 28 }), corDorso, cor, cor);
+  mk(cranioG, mCab, -0.45, 0.13, 0, cabI);
+  for (const s of [-1, 1]) { const bo = mk(new THREE.SphereGeometry(1, 20, 14), mCab, 0.2, -0.06, s * 0.27, cabI); bo.geometry = pintaVert(T, new THREE.SphereGeometry(1, 20, 14), cor, cor, cor.clone().lerp(corB, 0.3)); bo.scale.set(0.34, 0.26, 0.2); } // bochechas (músculo da mandíbula)
+  const fsY = 0.07, FS = [0.3, 1.8, 0.37, 0.25, 0.64, 1.0]; // x0, len, r0, r1, sy, sz do focinho
+  const focG = pintaVert(T, pilula(T, FS[1] - FS[0], FS[2], FS[3], { p: 3.0, sy: FS[4], sz: FS[5], seg: 28 }), corDorso, cor, cor.clone().lerp(corB, 0.35));
   const foc = mk(focG, mCab, FS[0], fsY, 0, cabI); foc.rotation.z = -0.05;
-  const rFoc = (x) => { const q = clamp01((x - FS[0]) / (FS[1] - FS[0])), xx = q * 2 - 1; return Math.pow(Math.max(0, 1 - Math.pow(Math.abs(xx), 2.6)), 1 / 2.6) * lerp(FS[2], FS[3], q); };
+  const rFoc = (x) => { const q = clamp01((x - FS[0]) / (FS[1] - FS[0])), xx = q * 2 - 1; return Math.pow(Math.max(0, 1 - Math.pow(Math.abs(xx), 3.0)), 1 / 3.0) * lerp(FS[2], FS[3], q); };
   const fundoFoc = (x) => fsY - (x - FS[0]) * 0.05 - rFoc(x) * FS[4];
   // ponte do focinho (crista) e narinas
-  const crista = mk(pilula(T, 1.1, 0.09, 0.05, { p: 2 }), mEsc, 0.55, fsY + 0.2, 0, cabI); crista.rotation.z = -0.14;
-  for (const s of [-1, 1]) { const nar = mk(new THREE.SphereGeometry(0.075, 14, 10), mCor, 1.72, fsY + 0.11, s * 0.11, cabI); nar.scale.set(1.2, 0.8, 1); const bur = mk(new THREE.SphereGeometry(0.045, 12, 8), mPreto, 1.79, fsY + 0.12, s * 0.115, cabI); bur.scale.set(0.7, 0.6, 1); }
+  const crista = mk(pilula(T, 1.0, 0.09, 0.05, { p: 2 }), mEsc, 0.5, fsY + 0.2, 0, cabI); crista.rotation.z = -0.14;
+  const ponte = mk(new THREE.SphereGeometry(1, 20, 14), mCab, 1.52, fsY + 0.08, 0, cabI); ponte.geometry = pintaVert(T, new THREE.SphereGeometry(1, 20, 14), corDorso, cor, cor); ponte.scale.set(0.22, 0.13, 0.2);
+  for (const s of [-1, 1]) { const nar = mk(new THREE.SphereGeometry(0.075, 14, 10), mCor, 1.62, fsY + 0.13, s * 0.11, cabI); nar.scale.set(1.2, 0.8, 1); const bur = mk(new THREE.SphereGeometry(0.045, 12, 8), mPreto, 1.69, fsY + 0.14, s * 0.115, cabI); bur.scale.set(0.7, 0.6, 1); }
   // mandíbula inferior (gira em Z no pivô)
   const mand = new THREE.Group(); mand.position.set(0.28, -0.13, 0); cabI.add(mand);
-  const MD = [1.5, 0.27, 0.13, 0.55, 0.88], mdY = -0.05;
+  const MD = [1.38, 0.3, 0.15, 0.68, 0.92], mdY = -0.05;
   mk(pintaVert(T, pilula(T, MD[0], MD[1], MD[2], { p: 2.6, sy: MD[3], sz: MD[4], seg: 24 }), cor, cor, corB, [0.2, -0.15]), mCab, 0, mdY, 0, mand);
   const rMd = (x) => { const q = clamp01(x / MD[0]), xx = q * 2 - 1; return Math.pow(Math.max(0, 1 - Math.pow(Math.abs(xx), 2.6)), 1 / 2.6) * lerp(MD[1], MD[2], q); };
   mk(pilula(T, 1.0, 0.13, 0.08, { sy: 0.4, p: 2.2 }), mLingua, 0.12, mdY + rMd(0.6) * MD[3] * 0.55, 0, mand);
   // dentes
   const denteG = new THREE.ConeGeometry(1, 1, 7); denteG.translate(0, -0.5, 0);
-  for (const s of [-1, 1]) { for (let k = 0; k < 7; k++) { const x = 0.62 + k * 0.17, L = k === 5 ? 0.2 : 0.1 + (k % 2) * 0.03, d = mk(denteG, mDente, x, fundoFoc(x) + 0.05, s * rFoc(x) * FS[5] * 0.78, cabI); d.scale.set(0.035 + L * 0.12, L + 0.05, 0.035 + L * 0.12); }
+  for (const s of [-1, 1]) { for (let k = 0; k < 7; k++) { const x = 0.6 + k * 0.155, L = k === 5 ? 0.2 : 0.1 + (k % 2) * 0.03, d = mk(denteG, mDente, x, fundoFoc(x) + 0.05, s * rFoc(x) * FS[5] * 0.78, cabI); d.scale.set(0.035 + L * 0.12, L + 0.05, 0.035 + L * 0.12); }
     for (let k = 0; k < 6; k++) { const x = 0.3 + k * 0.17, L = k === 4 ? 0.17 : 0.09, d = mk(denteG, mDente, x, mdY + rMd(x) * MD[3] - 0.04, s * rMd(x) * MD[4] * 0.74, mand); d.rotation.z = Math.PI; d.scale.set(0.032 + L * 0.12, L + 0.04, 0.032 + L * 0.12); } }
   // interior da boca: faixa escura entre as arcadas (recalculada) + garganta
   const NB = 10, bocaGeo = new THREE.BufferGeometry(), bocaPos = new Float32Array((NB + 1) * 2 * 3), bIdx = [];
   for (let k = 0; k < NB; k++) { const a = k * 2, b = a + 2; bIdx.push(a, b, a + 1, b, b + 1, a + 1); }
   bocaGeo.setAttribute('position', new THREE.BufferAttribute(bocaPos, 3)); bocaGeo.setIndex(bIdx);
   const bocaM = mk(bocaGeo, mBoca, 0, 0, 0, cabI); bocaM.castShadow = false; bocaM.frustumCulled = false;
-  const bocaM2 = mk(bocaGeo, mBoca, 0, 0, 0, cabI); bocaM2.castShadow = false; bocaM2.frustumCulled = false;
   const garg = mk(new THREE.SphereGeometry(1, 18, 12), mBoca, 0.38, -0.08, 0, cabI); garg.scale.set(0.38, 0.26, 0.3); garg.castShadow = false;
   // olhos com pupila em fenda, sobrancelhas
   for (const s of [-1, 1]) { const ol = new THREE.Group(); ol.position.set(0.5, 0.26, s * 0.335); ol.rotation.set(0, -s * 0.5, s * -0.1); cabI.add(ol);
     const bo = mk(new THREE.SphereGeometry(0.105, 20, 14), mOlho, 0, 0, 0, ol); bo.scale.set(1.25, 0.85, 0.75); bo.castShadow = false;
     const pu = mk(new THREE.SphereGeometry(0.1, 12, 10), mPreto, 0, 0, s * 0.072, ol); pu.scale.set(0.16, 0.78, 0.12);
     const pal = mk(new THREE.SphereGeometry(0.12, 18, 12), mCor, 0, 0.055, -s * 0.005, ol); pal.scale.set(1.35, 0.55, 0.8); // pálpebra superior
-    const sob = mk(pilula(T, 0.62, 0.1, 0.07, { p: 2.2, sz: 1.1 }), mEsc, 0.18, 0.4, s * 0.3, cabI); sob.rotation.set(s * 0.18, s * 0.25, -0.38); // sobrancelha brava
+    const sob = mk(pilula(T, 0.78, 0.13, 0.07, { p: 2.2, sz: 1.2 }), mEsc, 0.1, 0.44, s * 0.3, cabI); sob.rotation.set(s * 0.2, s * 0.22, -0.34); // sobrancelha brava
     const ch = mk(curvoGeo(T, [[0, 0, 0], [-0.4, 0.22, s * 0.08], [-0.9, 0.3, s * 0.16], [-1.35, 0.14, s * 0.2], [-1.6, -0.12, s * 0.2]], 0.13, 0.008, { nA: 18, pw: 0.8 }), mChifre, 0.0, 0.46, s * 0.24, cabI); // chifre maior
     mk(curvoGeo(T, [[0, 0, 0], [-0.35, -0.04, s * 0.12], [-0.7, -0.02, s * 0.22], [-0.95, 0.08, s * 0.26]], 0.075, 0.006, { nA: 14 }), mChifre, -0.05, 0.02, s * 0.36, cabI); // chifre da bochecha
     for (let k = 0; k < 3; k++) mk(curvoGeo(T, [[0, 0, 0], [-0.12, -0.06, s * 0.08], [-0.24, -0.16, s * 0.1]], 0.04, 0.004, { nA: 8, nR: 7 }), mChifre, 0.75 + k * 0.22, -0.24 + k * 0.02, s * (0.22 - k * 0.03), mand); // espinhos do queixo
@@ -167,10 +171,10 @@ export function dragao3D(T, o = {}) {
   for (let k = 0; k < 4; k++) { const sp = mk(espGeo, mEsp, -0.2 - k * 0.2, 0.52 - k * 0.07, 0, cabI); sp.rotation.z = 0.7; sp.scale.set(0.07, 0.17 - k * 0.02, 0.03); } // crista da nuca
 
   // ---------- asas ----------
-  const ossoG = pilula(T, 1, 1, 0.72, { p: 2.2, seg: 12, n: 12 }); ossoG.rotateZ(Math.PI / 2); // ao longo de +Y (0..1)
+  const ossoG = pilula(T, 1, 1, 0.62, { p: 3.4, seg: 14, n: 16 }); ossoG.rotateZ(Math.PI / 2); // ao longo de +Y (0..1)
   const juntaG = new THREE.SphereGeometry(1, 16, 12);
   const garraG = curvoGeo(T, [[0, 0, 0], [0.12, 0.02, 0], [0.22, -0.04, 0], [0.27, -0.13, 0]], 0.055, 0.004, { nA: 10, nR: 8 });
-  const DED = [[0.3, 4.6], [-0.2, 4.1], [-0.68, 3.5], [-1.18, 2.8]]; // ângulo base (rad, + = para frente) e comprimento dos dedos
+  const DED = [[0.3, 5.3], [-0.2, 4.7], [-0.68, 4.0], [-1.18, 3.2]]; // ângulo base (rad, + = para frente) e comprimento dos dedos
   const H = new V3(-3.0, -0.12, -0.15); // ponto onde a membrana encosta no flanco
   // regiões da membrana: 4 entre dedos (0-1,1-2,2-3) + interna (dedo 3 / braço até o corpo) + borda de ataque
   const RG = []; let nv = 0; const reg = (na, nb) => { const r = { na, nb, o: nv }; nv += na * nb; RG.push(r); return r; };
@@ -191,10 +195,10 @@ export function dragao3D(T, o = {}) {
 
   const dirE = (th, e, v = new V3()) => v.set(Math.sin(th), Math.sin(e) * Math.cos(th), Math.cos(e) * Math.cos(th));
   // calcula as juntas da asa (coordenadas locais da asa: +X frente, +Y cima, +Z para fora)
-  const juntas = (ph, bat, aberta) => { const Aa = 0.85 * bat, base = lerp(0.42, 0.12, bat) * aberta + (1 - aberta) * 0.5, f = clamp01(bat * 0.48 * (0.5 + 0.5 * Math.cos(ph)) + (1 - aberta));
+  const juntas = (ph, bat, aberta) => { const Aa = 0.78 * bat, base = lerp(0.42, 0.24, bat) * aberta + (1 - aberta) * 0.5, f = clamp01(bat * 0.48 * (0.5 + 0.5 * Math.cos(ph)) + (1 - aberta));
     const e1 = base + Aa * Math.sin(ph), e2 = base + Aa * 1.05 * Math.sin(ph - 0.45), e3 = base + Aa * 1.12 * Math.sin(ph - 0.9), e4 = base + Aa * 1.18 * Math.sin(ph - 1.3) - 0.04;
     const sw = 0.14 * bat * Math.cos(ph);
-    const S = new V3(), E = S.clone().addScaledVector(dirE(-0.62 + sw - f * 0.35, e1), 1.85), W = E.clone().addScaledVector(dirE(0.5 + sw + f * 1.35, e2), 2.35);
+    const S = new V3(), E = S.clone().addScaledVector(dirE(-0.62 + sw - f * 0.35, e1), 2.1), W = E.clone().addScaledVector(dirE(0.5 + sw + f * 1.35, e2), 2.7);
     const K = [], P = []; DED.forEach(([th0, L], i) => { const th = th0 + sw * 0.5 - f * (1.05 + 0.32 * i); const k = W.clone().addScaledVector(dirE(th, e3), L * 0.55); K.push(k); P.push(k.clone().addScaledVector(dirE(th - 0.13 - 0.03 * i, e4), L * 0.45)); });
     return { S, E, W, K, P, e2, e3, f, sag: -0.32 * bat * Math.cos(ph) + 0.1 * aberta }; };
   // polilinha parametrizada por comprimento
@@ -220,14 +224,14 @@ export function dragao3D(T, o = {}) {
     w.garra.position.copy(J.W); tC.subVectors(J.W, J.E).normalize().multiplyScalar(0.5).add(tB.set(0.6, 0.75, 0)).normalize(); w.garra.quaternion.setFromUnitVectors(tA.set(1, 0, 0), tC); };
 
   // ---------- patas ----------
-  const pataD = { tras: { L: [1.15, 1.0, 0.55], r: [0.36, 0.18, 0.12], voo: [-150, -178, -160], chao: [-72, -118, -82] }, frente: { L: [0.78, 0.72, 0.36], r: [0.24, 0.14, 0.1], voo: [-125, -25, -85], chao: [-96, -84, -70] } };
+  const pataD = { tras: { L: [1.15, 1.0, 0.55], r: [0.4, 0.19, 0.12], voo: [-112, -196, -178], chao: [-72, -118, -82] }, frente: { L: [0.78, 0.72, 0.36], r: [0.24, 0.14, 0.1], voo: [-118, -32, -98], chao: [-96, -84, -70] } };
   const patas = []; for (const tipo of ['frente', 'tras']) for (const lado of [-1, 1]) { const P = new THREE.Group(); raiz.add(P); const d = pataD[tipo];
-    const seg = d.L.map((_, i) => mk(ossoG, i === 0 ? mCor : mCor, 0, 0, 0, P)), jt = d.L.map((_, i) => { const j = mk(juntaG, mCor, 0, 0, 0, P); j.scale.setScalar(d.r[i] * (i === 0 ? 1.0 : 1.05)); return j; });
+    const seg = d.L.map((_, i) => mk(ossoG, i === 0 ? mCor : mCor, 0, 0, 0, P)), jt = d.L.map((_, i) => { const j = mk(juntaG, mCor, 0, 0, 0, P); j.scale.setScalar(d.r[i] * [0.85, 1.15, 1.1][i]); return j; });
     const pe = new THREE.Group(); P.add(pe); const sola = mk(juntaG, mCor, 0.06, 0, 0, pe); sola.scale.set(d.r[2] * 1.6, d.r[2] * 0.85, d.r[2] * 1.5);
     for (let k = -1; k <= 1; k++) { const gr = mk(garraG, mChifre, 0.1, -0.02, k * d.r[2] * 0.85, pe); gr.rotation.y = -k * 0.35; gr.scale.setScalar(tipo === 'tras' ? 1.1 : 0.85); }
     patas.push({ tipo, lado, P, seg, jt, pe, d }); }
   const poePata = (pt, k) => { const d = pt.d, pts = [new V3()]; let acc = 0; d.L.forEach((L, i) => { const a = lerp(d.voo[i], d.chao[i], k) * D; acc = a; pts.push(pts[i].clone().add(new V3(Math.cos(a) * L, Math.sin(a) * L, 0.06 * (i + 1) * (1 - k)))); });
-    d.L.forEach((_, i) => { liga(THREE, pt.seg[i], pts[i], pts[i + 1], d.r[i], 0.05); pt.jt[i].position.copy(pts[i + 1]); }); pt.jt[0].position.copy(pts[0]); pt.jt[0].scale.setScalar(d.r[0] * 1.15);
+    d.L.forEach((_, i) => { liga(THREE, pt.seg[i], pts[i], pts[i + 1], d.r[i], 0.05); pt.jt[i].position.copy(pts[i]); });
     pt.pe.position.copy(pts[3]); pt.pe.rotation.set(0, 0, lerp(acc + 0.35, 0, k)); };
 
   // ---------- animação ----------
@@ -247,10 +251,10 @@ export function dragao3D(T, o = {}) {
     quadro(0, q); tA.copy(q.t).negate(); tC.crossVectors(tA, q.n).normalize(); M4.makeBasis(tA, q.n, tC); ponta.quaternion.setFromRotationMatrix(M4); ponta.position.copy(q.c).addScaledVector(q.t, 0.06); ponta.scale.setScalar(1.15);
     // cabeça
     quadro(1, q); prende(cab, q, 0, 0); cabI.rotation.set(0, st.olhar, st.cabeca - 0.12 + rug * 0.35 + 0.04 * Math.sin(w1 * 0.8)); if (rug > 0) cabI.rotation.x = Math.sin(t * 40) * 0.025 * rug;
-    const boca = Math.max(clamp01(st.boca), rug); mand.rotation.z = -boca * 0.62 - 0.02;
-    { const cz = Math.cos(mand.rotation.z), sz = Math.sin(mand.rotation.z); for (let k = 0; k <= NB; k++) { const fx = k / NB, xu = lerp(0.36, 1.82, fx), xl = lerp(0.05, 1.42, fx), yu = fundoFoc(xu) + 0.05, yl0 = mdY + rMd(xl) * MD[3] - 0.03;
-        const xl2 = xl * cz - yl0 * sz + mand.position.x, yl2 = xl * sz + yl0 * cz + mand.position.y, a = k * 2 * 3; bocaPos[a] = xu; bocaPos[a + 1] = yu; bocaPos[a + 2] = 0.06; bocaPos[a + 3] = xl2; bocaPos[a + 4] = yl2; bocaPos[a + 5] = 0.06; }
-      bocaGeo.attributes.position.needsUpdate = true; bocaGeo.computeVertexNormals(); bocaM2.position.z = -0.12; }
+    const boca = Math.max(clamp01(st.boca), rug); mand.rotation.z = -boca * 0.5 - 0.02;
+    { const cz = Math.cos(mand.rotation.z), sz = Math.sin(mand.rotation.z); for (let k = 0; k <= NB; k++) { const fx = k / NB, xu = lerp(0.36, FS[1] - 0.08, fx), xl = lerp(0.05, MD[0] - 0.08, fx), yu = fundoFoc(xu) + 0.05, yl0 = mdY + rMd(xl) * MD[3] - 0.03;
+        const xl2 = xl * cz - yl0 * sz + mand.position.x, yl2 = xl * sz + yl0 * cz + mand.position.y, a = k * 2 * 3; bocaPos[a] = xu; bocaPos[a + 1] = yu; bocaPos[a + 2] = 0; bocaPos[a + 3] = xl2; bocaPos[a + 4] = yl2; bocaPos[a + 5] = 0; }
+      bocaGeo.attributes.position.needsUpdate = true; bocaGeo.computeVertexNormals(); }
     // asas
     quadro(8.7 / (nE - 1), q); const ab = clamp01(st.asas);
     for (const w of asas) { prende(w.A, q, q.ry * 0.5, w.lado * q.rz * 0.6, 0, w.lado < 0); poeAsa(w, juntas(ph, bat, ab)); }
@@ -269,14 +273,14 @@ export function dragao3D(T, o = {}) {
 // o: { alt (0.35), cor, listra, creme, olhosBrilho 0..1 }   update(t, { olhosBrilho, piscar (bool), cauda (amplitude) })
 export function gato3D(T, o = {}) {
   const THREE = T.THREE, V3 = THREE.Vector3, C = (c) => new THREE.Color(c);
-  const cor = o.cor ?? '#f29a3a', listra = o.listra ?? '#c4601a', creme = o.creme ?? '#fff1dc';
+  const cor = o.cor ?? '#f29a3a', listra = o.listra ?? '#b8500f', creme = o.creme ?? '#ffe8c8';
   const pelo = (rep, cab) => T.canvasTex(512, 256, (g, w, h) => { g.fillStyle = cor; g.fillRect(0, 0, w, h);
     const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, 'rgba(255,200,120,0)'); gr.addColorStop(0.75, 'rgba(255,214,160,0)'); gr.addColorStop(1, 'rgba(255,236,210,.9)'); g.fillStyle = gr; g.fillRect(0, 0, w, h);
     g.fillStyle = listra; const faixa = (u, v0, v1, lw) => { g.beginPath(); const x = u * w; g.moveTo(x - lw, v0 * h); g.quadraticCurveTo(x + lw * 0.6, (v0 + v1) / 2 * h, x, v1 * h); g.quadraticCurveTo(x - lw * 0.2, (v0 + v1) / 2 * h, x + lw, v0 * h); g.closePath(); g.fill(); };
-    if (cab) { [0.215, 0.25, 0.285].forEach((u, i) => faixa(u, 0.02, i === 1 ? 0.3 : 0.24, 9)); for (const u of [0.0, 0.5, 1.0]) for (let k = 0; k < 3; k++) { g.beginPath(); g.ellipse(u * w, (0.38 + k * 0.08) * h, 22 - k * 4, 5, 0, 0, Math.PI * 2); g.fill(); } }
-    else for (let i = 0; i < 14; i++) { const u = (i + 0.5) / 14; if (Math.abs(u - 0.25) < 0.08) continue; faixa(u, 0.0, 0.55 + (i % 3) * 0.08, 12); } }, rep);
-  const mPelo = new THREE.MeshStandardMaterial({ color: '#ffffff', map: pelo([1, 1], false), roughness: 0.82 }), mCab = new THREE.MeshStandardMaterial({ color: '#ffffff', map: pelo([1, 1], true), roughness: 0.82 });
-  const mLar = new THREE.MeshStandardMaterial({ color: C(cor), roughness: 0.82 }), mCreme = new THREE.MeshStandardMaterial({ color: C(creme), roughness: 0.85 }), mRosa = new THREE.MeshStandardMaterial({ color: C('#ff9fb0'), roughness: 0.7 });
+    if (cab) { [0.215, 0.25, 0.285].forEach((u, i) => faixa(u, 0.02, i === 1 ? 0.32 : 0.26, 14)); for (const u of [0.0, 0.5, 1.0]) for (let k = 0; k < 3; k++) { g.beginPath(); g.ellipse(u * w, (0.38 + k * 0.08) * h, 22 - k * 4, 5, 0, 0, Math.PI * 2); g.fill(); } }
+    else for (let i = 0; i < 12; i++) { const u = (i + 0.5) / 12; if (Math.abs(u - 0.25) < 0.08) continue; faixa(u, 0.0, 0.55 + (i % 3) * 0.08, 20); } }, rep);
+  const tinta = o.tinta ?? '#ffe2d2', mPelo = new THREE.MeshStandardMaterial({ color: tinta, map: pelo([1, 1], false), roughness: 0.82 }), mCab = new THREE.MeshStandardMaterial({ color: tinta, map: pelo([1, 1], true), roughness: 0.82 });
+  const mLar = new THREE.MeshStandardMaterial({ color: C(cor).multiply(C(tinta)), roughness: 0.82 }), mCreme = new THREE.MeshStandardMaterial({ color: C(creme), roughness: 0.85 }), mRosa = new THREE.MeshStandardMaterial({ color: C('#ff9fb0'), roughness: 0.7 });
   const mNariz = new THREE.MeshStandardMaterial({ color: C('#ff7f94'), roughness: 0.4 }), mPreto = new THREE.MeshStandardMaterial({ color: C('#120c0a'), roughness: 0.2 }), mBranco = new THREE.MeshBasicMaterial({ color: C('#ffffff') });
   const mIris = new THREE.MeshStandardMaterial({ color: C('#c6ec3a'), emissive: C('#b4ff2a'), emissiveIntensity: 0.15, roughness: 0.15 });
   const mBigode = new THREE.MeshStandardMaterial({ color: C('#fffaf0'), roughness: 0.5 });

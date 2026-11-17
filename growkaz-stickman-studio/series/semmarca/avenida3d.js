@@ -317,7 +317,7 @@ export function caminhao3D(T, o = {}) { const THREE = T.THREE, g = new THREE.Gro
   g.farois(o.farois ?? 1);
   let ang = 0; g.rodar = (dx) => { ang += dx / 0.54; rodas.forEach((r) => (r.rotation.z = ang)); };
   g.faroisMundo = () => luzes.map((v) => body.localToWorld(v.clone()));
-  g.frente = 4.1; g.body = body; return g; }
+  g.frente = 4.1; g.body = body; g.cones = cones; g.glows = glows; g.spots = spots; return g; }
 
 // ---------- gato provisório (troque por gato3D do dragao3d.js) — frente em +X local ----------
 export function gatoPlaceholder(T) { const THREE = T.THREE, g = new THREE.Group(); g.name = 'gato';
@@ -344,7 +344,7 @@ function keysAt(t, keys) { if (t <= keys[0][0]) return keys[0][1]; for (let i = 
 export function cenaMorte(T, o = {}) { const THREE = T.THREE;
   const tm = { tGato: 2.0, tCaminhao: 3.4, tCorre: 5.0, tPulo: 6.2, tImpacto: 6.9, tIleso: 7.6, fim: 10, ...o };
   const { tGato, tCaminhao, tCorre, tPulo, tImpacto, tIleso, fim } = tm;
-  const st = palco(T, { sky: ['#07051a', '#1c0f44', '#4a1a6a', '#8a2a7a'], fog: [35, 165], fogColor: '#2a1450', keyColor: '#8aa8ff', keyIntensity: 0.55, keyPos: [-12, 30, 14], ambient: 0.9, ambientSky: '#7a6ad8', shadowSize: 22, fov: 50, foco: 8, abertura: 0.0004, maxblur: 0.006, bloom: 0.75, bloomLimiar: 0.72, barril: 0.06, sat: 1.25, quente: 0, env: 0.9, exposicao: 1.05, ao: o.ao ?? false });
+  const st = palco(T, { sky: ['#07051a', '#1c0f44', '#4a1a6a', '#8a2a7a'], fog: [35, 165], fogColor: '#2a1450', keyColor: '#8aa8ff', keyIntensity: 0.55, keyPos: [-12, 30, 14], ambient: 0.9, ambientSky: '#7a6ad8', shadowSize: 22, fov: 50, foco: 8, abertura: 0.0004, maxblur: 0.006, bloom: 0.75, bloomLimiar: 0.72, barril: 0.06, sat: 1.25, quente: 0, env: 0.9, exposicao: 1.05, ao: o.ao ?? false, dof: o.dof ?? true });
   st.hemi.groundColor = C(T, '#2a1a3a');
   ambienteNeon(T, st, 0.9);
   // estrelas
@@ -371,7 +371,7 @@ export function cenaMorte(T, o = {}) { const THREE = T.THREE;
   const KF = [[tImpacto + 0.12, { pos: [-1.9, 0.52, -2.4], look: [1.5, 0.45, -6.5], fov: 42 }], [fim, { pos: [-0.5, 0.42, -3.7], look: [1.5, 0.42, -6.5], fov: 34 }]];
   const update = (t) => {
     const fx = frenteX(t), depois = t > tImpacto + 0.1; truck.visible = !depois; truck.position.x = fx + truck.frente; if (ultimoX != null) truck.rodar(ultimoX - truck.position.x); ultimoX = truck.position.x;
-    const perto = clamp(1 - (fx - 1) / 70); truck.farois(t < tCaminhao - 0.6 ? 0.25 : 0.6 + 0.9 * perto * perto);
+    const perto = clamp(1 - (fx - 1) / 70); truck.farois(o.dbgF ?? (t < tCaminhao - 0.6 ? 0.25 : 0.6 + 0.9 * perto * perto)); if (o.dbgSemTruck) truck.visible = false; if (o.dbgH) { truck.cones.forEach(c => c.visible = !o.dbgH.includes('cones')); truck.glows.forEach(c => c.visible = !o.dbgH.includes('glows')); truck.spots.forEach(c => c.visible = !o.dbgH.includes('spots')); }
     truck.body.position.y = Math.sin(t * 23) * 0.012; truck.body.rotation.x = Math.sin(t * 17) * 0.004;
     av.semaforo.set(t < tCaminhao ? 'verde' : t < tCorre ? 'amarelo' : 'vermelho');
     const e = euEm(t); eu.visible = !depois; eu.position.copy(e.p);
@@ -383,12 +383,12 @@ export function cenaMorte(T, o = {}) { const THREE = T.THREE;
       cam.position.set(...P.pos); look.set(...P.look); cam.lookAt(look); cam.fov = P.fov; cam.updateProjectionMatrix();
       if (t > tCaminhao && !depois) { const tr = 0.03 * perto * perto; cam.position.x += Math.sin(t * 41) * tr; cam.position.y += Math.sin(t * 37) * tr; }
       st.foco(depois ? cam.position.distanceTo(gato.position) : t < tGato ? 20 : cam.position.distanceTo(t < tCorre ? gato.position : eu.position), 0.0004); }
-    st.bloom.strength = 0.75 + (depois ? 0 : 1.2 * Math.pow(perto, 3));
+    if (o.semBloom) st.bloom.strength = 0; else st.bloom.strength = 0.75 + (depois ? 0 : 1.2 * Math.pow(perto, 3));
     st.lente.uniforms.aberr && (st.lente.uniforms.aberr.value = 0.0015 + (depois ? 0 : 0.006 * Math.pow(perto, 3)));
     av.update(t, cam); st.tick(t); };
   const V = new THREE.Vector3();
   const proj = (v) => { V.copy(v).project(cam); return { x: (V.x + 1) / 2 * E.W, y: (1 - V.y) / 2 * E.H, ok: V.z < 1 && V.z > -1 }; };
-  const overlay = (g, t) => { const depois = t > tImpacto + 0.1;
+  const overlay = (g, t) => { if (o.semOverlay) return; const depois = t > tImpacto + 0.1;
     if (!depois && t > tCaminhao - 0.8) { const fx = frenteX(t), perto = clamp(1 - (fx - 1) / 70), ps = truck.faroisMundo().map(proj).filter((q) => q.ok); g.save(); g.globalCompositeOperation = 'lighter';
       for (const q of ps) { const R = 40 + 260 * perto * perto, gr = g.createRadialGradient(q.x, q.y, 0, q.x, q.y, R); gr.addColorStop(0, 'rgba(255,250,235,.95)'); gr.addColorStop(0.25, `rgba(255,220,170,${0.35 + 0.3 * perto})`); gr.addColorStop(1, 'rgba(255,200,140,0)'); g.fillStyle = gr; g.fillRect(q.x - R, q.y - R, R * 2, R * 2);
         const sw = 120 + 900 * perto, gs = g.createLinearGradient(q.x - sw, 0, q.x + sw, 0); gs.addColorStop(0, 'rgba(120,200,255,0)'); gs.addColorStop(0.5, `rgba(170,225,255,${0.25 + 0.4 * perto})`); gs.addColorStop(1, 'rgba(120,200,255,0)'); g.fillStyle = gs; g.fillRect(q.x - sw, q.y - 3 - 4 * perto, sw * 2, 6 + 8 * perto); }

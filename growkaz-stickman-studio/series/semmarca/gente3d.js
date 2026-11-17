@@ -104,7 +104,6 @@ export function pessoa3D(T, opc = {}) {
   const hips = grp('hips', corpo, 0, hipY, 0);
   const torso = grp('torso', hips);
   const tm = add(torso, malha(T, G.tronco(T, P.tr, H, anao), mTorso)); tm.scale.z = 0.84;
-  add(hips, malha(T, G.esfP(T), mCalca, 0, -0.02, 0)).scale.set(P.tr * 0.85, 0.09, P.tr * 0.72);
   // cinto
   const cinto = add(torso, malha(T, geo('cinto' + P.tr, () => new THREE.TorusGeometry(P.tr * 1.0, 0.026, 6, 20)), robe ? mRoupa2 : mCinto, 0, 0.08, 0)); cinto.rotation.x = Math.PI / 2; cinto.scale.y = 0.86;
   if (!robe) add(torso, malha(T, G.esfP(T), mOuro, 0, 0.08, P.tr * 0.86 + 0.02, false)).scale.set(0.032, 0.03, 0.012);
@@ -141,8 +140,8 @@ export function pessoa3D(T, opc = {}) {
   // marca: traços presos à bochecha (filhos do grupo da cabeça)
   const mk = o.marca;
   if (mk && mk.n > 0) { const n = clamp(mk.n | 0, 1, 3), cor = mk.cor || ELEMENTOS.fogo, mM = mat(T, cor, { r: 0.4, e: cor, ei: mk.brilho ?? 0.6 });
-    for (let i = 0; i < n; i++) { const yaw = 0.42 + (i - (n - 1) / 2) * 0.12, sm = sock(T, cab, R, yaw, -0.3 + Math.abs(i - (n - 1) / 2) * 0.025, -0.004);
-      const tr = malha(T, G.gota(T), mM, 0, 0, 0, false); tr.scale.set(0.014, 0.048, 0.013); tr.rotation.z = -0.1; sm.add(tr); }
+    for (let i = 0; i < n; i++) { const yaw = 0.42 + (i - (n - 1) / 2) * 0.12, sm = sock(T, cab, R, yaw, -0.27 + Math.abs(i - (n - 1) / 2) * 0.025, -0.004);
+      const tr = malha(T, G.gota(T), mM, 0, 0, 0, false); tr.scale.set(0.013, 0.042, 0.012); tr.rotation.z = -0.1; sm.add(tr); }
     rosto.marca = mM; }
   // bochechas rosadas (mais pra fora/acima, sem colidir com a marca) e óculos redondos opcionais
   if (o.blush !== false) { const mb = mat(T, o.blushCor || '#ff8a9a', { r: 0.8 }); for (const s of [-1, 1]) { const so = sock(T, cab, R, s * 0.66, -0.1, -0.008); const b = malha(T, G.esfP(T), mb, 0, 0, 0, false); b.scale.set(0.034, 0.024, 0.012); so.add(b); } }
@@ -150,9 +149,7 @@ export function pessoa3D(T, opc = {}) {
     const ponte = add(cab, malha(T, geo('ponte', () => new THREE.CylinderGeometry(0.006, 0.006, 0.05, 5)), mo, 0, 0.02, R * 1.05, false)); ponte.rotation.z = Math.PI / 2; }
   // cabelo
   const tipo = o.cabelo?.tipo || 'curto', cobre = ['elmo', 'capuz', 'lenco', 'pontudo'].includes(o.chapeu);
-  if (tipo !== 'careca' && !cobre) { const cp = add(cab, malha(T, geo('cabelo', () => new THREE.SphereGeometry(1, 18, 12, 0, Math.PI * 2, 0, 1.55)), mCab)); cp.scale.setScalar(R * 1.055); cp.rotation.x = -0.47;
-    // franja
-    add(cab, malha(T, G.esfP(T), mCab, -0.05, R * 0.63, R * 0.66)).scale.set(0.1, 0.05, 0.05); add(cab, malha(T, G.esfP(T), mCab, 0.07, R * 0.66, R * 0.62)).scale.set(0.08, 0.045, 0.05); }
+  if (tipo !== 'careca' && !cobre) { const cp = add(cab, malha(T, geo('cabelo', () => new THREE.SphereGeometry(1, 18, 12, 0, Math.PI * 2, 0, 1.55)), mCab)); cp.scale.setScalar(R * 1.055); cp.rotation.x = -0.5; cp.rotation.z = (rr() - 0.5) * 0.12; }
   if (tipo === 'coque' && !cobre) add(cab, malha(T, G.esfF(T), mCab, 0, R * 0.78, -R * 0.62)).scale.setScalar(0.1);
   if (tipo === 'longo' && o.chapeu !== 'elmo') { const cm = o.cabelo.compr ?? 1, lg = add(cab, malha(T, cm > 1.2 ? G.gota(T) : G.esfF(T), mCab, 0, -R * (0.38 + 0.5 * (cm - 1)), -R * 0.42)); lg.scale.set(R * 1.02, R * 1.15 * cm, R * 0.62); }
   // chapéus
@@ -181,8 +178,8 @@ export function pessoa3D(T, opc = {}) {
   if (barbaC) { const mb = mat(T, barbaC, { r: 0.85, flat: true });
     const longa = !anao && (opc.barbaLonga ?? true), mtx = o.barbaCompr ?? 1;
     const bd = longa ? add(cab, malha(T, G.gota(T), mb, 0, -R * (0.95 + 0.55 * mtx), R * 0.5)) : add(cab, malha(T, G.esfF(T), mb, 0, anao ? -R * 0.98 : -R * 1.0, R * (anao ? 0.52 : 0.5)));
-    if (longa) { bd.scale.set(0.16, 0.2 + 0.14 * mtx, 0.11); bd.rotation.x = 0.22; } else { bd.scale.set(anao ? 0.2 : 0.13, anao ? 0.24 : 0.13, anao ? 0.13 : 0.09); bd.rotation.x = 0.18; }
-    for (const s of [-1, 1]) { const bg = add(cab, malha(T, G.esfF(T), mb, s * 0.05, -R * 0.53, R * 0.9, false)); bg.scale.set(0.06, 0.028, 0.035); bg.rotation.z = s * 0.35; } }
+    if (longa) { bd.scale.set(0.16, 0.2 + 0.14 * mtx, 0.11); bd.rotation.x = 0.22; } else { bd.scale.set(anao ? 0.2 : 0.15, anao ? 0.24 : 0.1, anao ? 0.13 : 0.1); bd.rotation.x = 0.18; if (!anao) bd.position.set(0, -R * 0.82, R * 0.45); }
+    for (const s of [-1, 1]) { const bg = add(cab, malha(T, G.esfF(T), mb, s * 0.038, -R * 0.5, R * 0.9, false)); bg.scale.set(0.045, 0.024, 0.03); bg.rotation.z = s * 0.35; } }
   // capa (presa ao topo do tronco) + gola
   let capa = null;
   if (o.capa) { const mc = mat(T, o.capa, { r: 0.85, ds: true, flat: facet }); capa = new THREE.Group(); capa.position.set(0, H * 0.9, -0.02); torso.add(capa);
@@ -202,7 +199,7 @@ export function pessoa3D(T, opc = {}) {
   }
   // pernas
   for (const [s, L] of [[1, 'L'], [-1, 'R']]) {
-    const lg = grp('leg' + L, hips, s * P.quad, 0, 0); add(lg, malha(T, G.cap(T, 0.072, P.coxa), mCalca));
+    const lg = grp('leg' + L, hips, s * P.quad, 0, 0); if (!(vestido || robe)) add(lg, malha(T, G.cap(T, 0.072, P.coxa), mCalca)); // coxa escondida sob saia longa
     const kn = grp('kn' + L, lg, 0, -P.coxa, 0); add(kn, malha(T, G.cap(T, 0.064, P.canela - 0.02), mBota));
     const ft = grp('ft' + L, kn, 0, -P.canela, 0); add(ft, malha(T, G.esf(T), mBota, 0, -pe + 0.058, 0.045)).scale.set(0.08, 0.058, 0.13);
   }
@@ -212,7 +209,7 @@ export function pessoa3D(T, opc = {}) {
   const prop = (nome) => { if (props[nome]) return props[nome]; let p;
     if (nome === 'caixa') { p = malha(T, geo('caixa', () => new THREE.BoxGeometry(0.62, 0.4, 0.48)), mat(T, '#ffffff', { r: 0.8, tex: 'madeira' })); corpo.add(p); }
     if (nome === 'martelo') { p = new THREE.Group(); add(p, malha(T, geo('cabo', () => new THREE.CylinderGeometry(0.018, 0.022, 0.36, 8)), mat(T, '#7a4e2e', { r: 0.7 }), 0, 0, 0.13)).rotation.x = Math.PI / 2;
-      add(p, malha(T, geo('cabecaM', () => new THREE.BoxGeometry(0.07, 0.17, 0.08)), mat(T, '#6a6e78', { r: 0.35, m: 0.8 }), 0, 0, 0.3)); p.position.set(0, -0.04, 0); mao.R.add(p); }
+      add(p, malha(T, geo('cabecaM', () => new THREE.BoxGeometry(0.07, 0.17, 0.08)), mat(T, '#6a6e78', { r: 0.35, m: 0.8 }), 0, 0, 0.3)); p.position.set(0, -0.04, 0); p.scale.setScalar(o.anao ? 1.4 : 1.15); mao.R.add(p); }
     if (nome === 'arco') { p = new THREE.Group(); // arco no plano YZ local da mão: empunhadura na origem, barriga do arco pra frente (-y local), limbos ao longo de z
       add(p, malha(T, geo('arcoB', () => { const g = new THREE.TorusGeometry(0.5, 0.018, 6, 24, 1.7); g.rotateZ(-Math.PI / 2 - 0.85); g.rotateY(Math.PI / 2); g.translate(0, 0.5, 0); return g; }), mat(T, '#8a5a2e', { r: 0.6 })));
       const corda = add(p, malha(T, geo('corda', () => new THREE.CylinderGeometry(0.004, 0.004, 0.75, 4)), mat(T, '#f2ead8', { r: 0.5 }), 0, 0.5 - 0.5 * Math.cos(0.85), 0)); corda.rotation.x = Math.PI / 2;
@@ -314,13 +311,13 @@ const POSE = {
     p.shL = [0.0, 0, 0.32]; p.elL = [-0.5, 0, -0.9]; p.torso = [0.06, -0.14, 0]; p.head = [0.02, 0.1, 0]; p.legR = [-0.15, 0, -0.04]; p.knR = [0.1, 0, 0]; if (op.fala) p.boca = bocaFala(t, op.fala); return p; },
   rir: (t, op, ctx) => { const p = base(t, ctx), c = Math.sin(t * 15), s = Math.sin(t * 1.4);
     p.torso = [-0.12 + 0.28 * Math.max(0, s) + 0.025 * c, 0, 0]; p.head = [-0.32 + 0.12 * Math.max(0, s) + 0.06 * c, 0, 0.05 * Math.sin(t * 2)];
-    p.shL = [-0.55, 0, 0.42 + 0.03 * c]; p.shR = [-0.55, 0, -0.42 - 0.03 * c]; p.elL = [-1.15, 0, -0.75]; p.elR = [-1.15, 0, 0.75]; p.ombY = 0.012 * Math.abs(c);
+    p.shL = [-0.25, 0, 0.5 + 0.03 * c]; p.shR = [-0.25, 0, -0.5 - 0.03 * c]; p.elL = [-0.7, 0, -1.2]; p.elR = [-0.7, 0, 1.2]; p.ombY = 0.012 * Math.abs(c);
     p.y = -0.01 + 0.006 * c; p.boca = 0.85 + 0.15 * Math.abs(c); p.fecha = 1; return p; },
   cochichar: (t, op, ctx) => { const p = base(t, ctx), l = op.lado ?? 1;
     p.torso = [0.2, 0.15 * l, -0.12 * l]; p.head = [0.14, 0.25 * l, -0.22 * l]; p.shR = [-1.25, 0, -0.75]; p.elR = [-1.95, 0, 0.55]; p.haR = [0, 0, 0.5];
     p.shL = [0.1, 0, 0.22]; p.elL = [-0.3, 0, 0]; p.boca = 0.35 * bocaFala(t, 1); p.legL = [-0.15 * l, 0, 0.05]; p.knL = [0.2, 0, 0]; return p; },
   carregar: (t, op, ctx) => { const and = (op.vel ?? 0) > 0 || op.dist != null; const p = and ? POSE.andar(t, op, ctx) : base(t, ctx);
-    p.shL = [-0.12, 0, 2.95]; p.shR = [-0.12, 0, -2.95]; p.elL = [0, 0, -0.35]; p.elR = [0, 0, 0.35]; p.haL = [0, 0, -0.5]; p.haR = [0, 0, 0.5]; p.ombY = 0.03;
+    p.shL = [-0.04, 0, 3.0]; p.shR = [-0.04, 0, -3.0]; p.elL = [0, 0, -0.1]; p.elR = [0, 0, 0.1]; p.haL = [0, 0, -0.4]; p.haR = [0, 0, 0.4]; p.ombY = 0.02;
     p.torso = [0.02, (p.torso[1] || 0) * 0.3, 0]; p.head = [0.06, p.head[1] * 0.4, 0]; p.prop = 'caixa'; p.y = (p.y || 0) - 0.01; return p; },
   martelar: (t, op, ctx) => { const p = base(t, ctx), per = op.periodo ?? 0.9, u = frac(t / per); const sobe = u < 0.62 ? ease.inOut(u / 0.62) : 1 - ease.in((u - 0.62) / 0.12);
     const k = u < 0.74 ? sobe : 0; p.shR = [lerp(-0.85, -2.7, k), 0, -0.2]; p.elR = [lerp(-0.55, -1.25, k), 0, 0]; p.haR = [lerp(0.5, -0.2, k), 0, 0];
@@ -330,7 +327,7 @@ const POSE = {
     p.shL = [-1.5, 0.0, 0.12]; p.elL = [0, 0, 0]; p.haL = [0, 0, 0]; p.shR = [-1.45, 0, -0.35 - 0.25 * d]; p.elR = [-1.2 - 0.9 * d, 0.0, 0.7 * d]; p.haR = [0, 0, 0];
     p.torso = [0.02, -0.25, 0]; p.head = [0.05, 0.22, 0.05]; p.legL = [-0.25, 0, 0.12]; p.legR = [0.2, 0, -0.12]; p.knL = [0.15, 0, 0]; p.prop = 'arco'; return p; },
   bracos_cruzados: (t, op, ctx) => { const p = base(t, ctx), br = Math.sin(t * 2) * 0.015;
-    p.shL = [-0.42 + br, 0, 0.42]; p.shR = [-0.42 + br, 0, -0.42]; p.elL = [-1.25, 0, -1.55]; p.elR = [-1.15, 0, 1.55]; p.torso = [-0.04, 0, 0]; p.head = add3(p.head, [-0.06, 0, 0]); return p; },
+    p.shL = [-0.44 + br, 0.33, 0.13]; p.shR = [-0.4 + br, -0.33, -0.15]; p.elL = [-0.64, 0.1, -1.61]; p.elR = [-0.8, -0.1, 1.61]; p.haL = [0, 0, -0.2]; p.haR = [0, 0, 0.2]; p.torso = [-0.04, 0, 0]; p.head = add3(p.head, [-0.06, 0, 0]); return p; },
   surpreso: (t, op, ctx) => { const p = base(t, ctx), k = op.k ?? (op.t0 != null ? ease.outBack(clamp((t - ctx.fase - op.t0) / 0.35)) : 1), tr = Math.sin(t * 30) * 0.015 * k;
     p.z = -0.1 * k; p.torso = [-0.16 * k, 0, 0]; p.head = [-0.1 * k + tr, p.head[1], 0]; p.shL = [-1.0 * k, 0, 0.13 + 0.55 * k]; p.shR = [-1.0 * k, 0, -0.13 - 0.55 * k];
     p.elL = [-0.18 - 1.45 * k, 0, 0]; p.elR = [-0.18 - 1.45 * k, 0, 0]; p.haL = [-0.4 * k, 0, 0]; p.haR = [-0.4 * k, 0, 0]; p.legR = [0.25 * k, 0, -0.03]; p.knR = [0.15 * k, 0, 0]; p.legL = [-0.06 * k, 0, 0.03]; return p; },

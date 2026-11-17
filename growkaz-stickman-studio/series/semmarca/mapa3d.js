@@ -37,7 +37,7 @@ export function alturaAldoria(x, z) {
   let h = hN * wN + hC * (wC + wM) + hS * wS;
   h += wM * (2 + ridged(x * 0.075, z * 0.075, 9) * 17) * sst(0.05, 0.4, wM);
   const [vx, vz] = ALD.vulcao, dv = Math.hypot(x - vx, z - vz); if (dv < 11) h += 11 * sst(11, 2.5, dv) - (dv < 2.2 ? 3 * sst(2.2, 0, dv) : 0);
-  const [cx, cz] = ALD.castelo, dc = Math.hypot(x - cx, z - cz); if (dc < 9) h = lerp(h, 1.7, sst(9, 5.5, dc));
+  const [cx, cz] = ALD.castelo, dc = Math.hypot(x - cx, z - cz); if (dc < 13) h = lerp(h, 1.2 + 2.6 * sst(12, 4, dc), sst(13, 9, dc)) ; if (dc < 5.5) h = lerp(h, 3.8, sst(5.5, 4.2, dc));
   const dr = distRio(x, z); if (dr < 3.2 && z > -6) h = lerp(0.15, h, sst(1.1, 3.2, dr));
   return lerp(-3.2 + fbm(x * 0.04, z * 0.04, 12) * 0.8, h, terra);
 }
@@ -87,16 +87,17 @@ export function mapaAldoria(T, o = {}) {
   // ---------- terreno com cores por vértice ----------
   const geo = new THREE.PlaneGeometry(W, D, o.res ?? 186, Math.round((o.res ?? 186) * D / W)); geo.rotateX(-Math.PI / 2);
   const P = geo.attributes.position, cols = new Float32Array(P.count * 3), c = new THREE.Color(), tmp = new THREE.Color();
-  const CO = { areia: new THREE.Color('#f0dca0'), areia2: new THREE.Color('#d8c48a'), fundo: new THREE.Color('#5aa8b8'), norte1: new THREE.Color('#3aa848'), norte2: new THREE.Color('#2a8a40'), norte3: new THREE.Color('#5cc85a'), camp1: new THREE.Color('#8ed850'), camp2: new THREE.Color('#e8d24a'), camp3: new THREE.Color('#b8e060'), camp4: new THREE.Color('#5fbf48'), rocha1: new THREE.Color('#9a96a2'), rocha2: new THREE.Color('#6f6878'), neve: new THREE.Color('#f6f9ff'), sul1: new THREE.Color('#3a2448'), sul2: new THREE.Color('#1c1222'), sul3: new THREE.Color('#5a2a3a'), margem: new THREE.Color('#6abf5a') };
+  const CO = { areia: new THREE.Color('#f0dca0'), areia2: new THREE.Color('#d8c48a'), fundo: new THREE.Color('#5aa8b8'), norte1: new THREE.Color('#3aa848'), norte2: new THREE.Color('#2a8a40'), norte3: new THREE.Color('#5cc85a'), camp1: new THREE.Color('#7ee04a'), camp2: new THREE.Color('#d8e04a'), camp3: new THREE.Color('#a8ea5a'), camp4: new THREE.Color('#62d040'), rocha1: new THREE.Color('#8c7c72'), rocha2: new THREE.Color('#584a48'), neve: new THREE.Color('#f6f9ff'), sul1: new THREE.Color('#3a2448'), sul2: new THREE.Color('#1c1222'), sul3: new THREE.Color('#5a2a3a'), margem: new THREE.Color('#6abf5a') };
   for (let i = 0; i < P.count; i++) { const x = P.getX(i), z = P.getZ(i), h = alt(x, z); P.setY(i, h); const { wN, wM, wC, wS } = pesos(x, z), n1 = fbm(x * 0.12, z * 0.12, 20) * 0.5 + 0.5;
     // regiões
     c.setRGB(0, 0, 0);
     tmp.copy(CO.norte1).lerp(CO.norte2, n1).lerp(CO.norte3, clamp(fbm(x * 0.3, z * 0.3, 21))); c.add(tmp.multiplyScalar(wN));
-    const px = Math.floor((x + 200) / 3.2 + fbm(z * 0.2, 3) * 1.5), pz = Math.floor((z + 200) / 2.6 + fbm(x * 0.2, 4) * 1.5), q = hs(px, pz, 3); tmp.copy(q < 0.3 ? CO.camp1 : q < 0.5 ? CO.camp2 : q < 0.75 ? CO.camp3 : CO.camp4); if (Math.hypot(x - ALD.castelo[0], z - ALD.castelo[1]) > 22 || h > 2.5) tmp.copy(CO.camp4).lerp(CO.camp1, n1); c.add(tmp.multiplyScalar(wC));
-    tmp.copy(CO.rocha1).lerp(CO.rocha2, n1); if (h > 11 + fbm(x * 0.4, z * 0.4, 8) * 2) tmp.copy(CO.neve); else if (h < 3.2) tmp.lerp(CO.camp4, sst(3.2, 1.5, h)); c.add(tmp.multiplyScalar(wM));
+    const px = Math.floor((x + 200) / 3.2 + fbm(z * 0.2, 3) * 1.5), pz = Math.floor((z + 200) / 2.6 + fbm(x * 0.2, 4) * 1.5), q = hs(px, pz, 3); tmp.copy(q < 0.3 ? CO.camp1 : q < 0.42 ? CO.camp2 : q < 0.75 ? CO.camp3 : CO.camp4); if (Math.hypot(x - ALD.castelo[0] + 10, z - ALD.castelo[1] - 12) > 12 || h > 2.5) tmp.copy(CO.camp4).lerp(CO.camp1, n1); c.add(tmp.multiplyScalar(wC));
+    tmp.copy(CO.rocha1).lerp(CO.rocha2, n1); if (h > 13.5 + fbm(x * 0.4, z * 0.4, 8) * 2) tmp.copy(CO.neve); else if (h < 2.4) tmp.lerp(CO.camp4, sst(2.4, 1.2, h)); c.add(tmp.multiplyScalar(wM));
+    if (wS < 0.5) { const kr = sst(3.2, 6.5, h + fbm(x * 0.3, z * 0.3, 14) * 1.2) * (1 - wS * 2); if (kr > 0) { tmp.copy(CO.rocha1).lerp(CO.rocha2, n1); c.multiplyScalar(1 - kr).add(tmp.multiplyScalar(kr)); } if (h > 13.5 + fbm(x * 0.4, z * 0.4, 8) * 2) c.lerp(CO.neve, (1 - wS) * 0.95); }
     tmp.copy(CO.sul1).lerp(CO.sul2, n1).lerp(CO.sul3, clamp(fbm(x * 0.25, z * 0.25, 30) * 1.4)); c.add(tmp.multiplyScalar(wS));
     // praia, margens do rio, fundo do mar
-    if (h < 0.75) c.lerp(wS > 0.5 ? CO.sul2 : CO.areia, sst(0.75, 0.3, h)); if (h < -0.3) c.copy(CO.areia2).lerp(CO.fundo, sst(-0.3, -2.8, h));
+    if (h < 0.75) c.lerp(wS > 0.5 && h > 0.1 ? CO.sul2 : CO.areia, sst(0.75, 0.3, h)); if (h < -0.3) c.copy(CO.areia2).lerp(CO.fundo, sst(-0.3, -2.8, h));
     const dr = distRio(x, z); if (dr < 3.2 && z > -6 && h > 0.1) c.lerp(CO.margem, 0.5 * sst(3.2, 1.2, dr));
     cols[i * 3] = c.r; cols[i * 3 + 1] = c.g; cols[i * 3 + 2] = c.b; }
   geo.setAttribute('color', new THREE.BufferAttribute(cols, 3)); geo.computeVertexNormals();
@@ -113,31 +114,31 @@ export function mapaAldoria(T, o = {}) {
   for (let i = 0; i < 16; i++) { const a = i / 16 * Math.PI * 2, R = 1.0 + rN() * 0.12, nx = Math.cos(a) * (W / 2 + 22) * R, nz = Math.sin(a) * (D / 2 + 22) * R, ng = new THREE.Group(); for (let j = 0; j < 5; j++) { const s = 4 + rN() * 4; const b = new THREE.Mesh(new THREE.SphereGeometry(s, 18, 12), nuvM); b.position.set((rN() - 0.5) * 12, rN() * 2, (rN() - 0.5) * 8); b.scale.y = 0.65; ng.add(b); } ng.position.set(nx, -1 + rN() * 3, nz); G.add(ng); }
 
   // ---------- NORTE: floresta élfica ----------
-  const rA = rnd(11), arv = []; for (let x = -W / 2; x < W / 2; x += 1.55) for (let z = -D / 2; z < -8; z += 1.55) { const jx = x + (rA() - 0.5) * 1.3, jz = z + (rA() - 0.5) * 1.3, h = alt(jx, jz); const { wN } = pesos(jx, jz); if (wN > 0.55 && h > 0.9 && rA() < 0.86 && Math.hypot(jx - ALD.torre[0], jz - ALD.torre[1]) > 4.5) arv.push([jx, h, jz, rA()]); }
+  const rA = rnd(11), arv = []; for (let x = -W / 2; x < W / 2; x += 1.15) for (let z = -D / 2; z < -8; z += 1.15) { const jx = x + (rA() - 0.5) * 1.0, jz = z + (rA() - 0.5) * 1.0, h = alt(jx, jz); const { wN } = pesos(jx, jz); if (wN > 0.55 && h > 0.9 && rA() < 0.86 && Math.hypot(jx - ALD.torre[0], jz - ALD.torre[1]) > 4.5) arv.push([jx, h, jz, rA()]); }
   const copa = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(1, 2), new THREE.MeshStandardMaterial({ roughness: 0.75 }), arv.length), pinho = new THREE.InstancedMesh(new THREE.ConeGeometry(1, 1, 9), new THREE.MeshStandardMaterial({ roughness: 0.8 }), arv.length), tronco = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.16, 0.24, 1, 6), pbr(T, '#7a5232'), arv.length);
   const M4 = new THREE.Matrix4(), Q = new THREE.Quaternion(), S3 = new THREE.Vector3(), PV = new THREE.Vector3(), ZERO = new THREE.Matrix4().makeScale(0, 0, 0), VERDES = ['#2f9a3e', '#3cb84a', '#228a46', '#4fd06a', '#1f7a52', '#5adf8a'];
-  arv.forEach(([x, h, z, r], i) => { const s = 0.9 + r * 0.9, pin = r < 0.42; M4.compose(PV.set(x, h + 0.6 * s, z), Q.identity(), S3.set(1, 1.2 * s, 1)); tronco.setMatrixAt(i, M4);
+  arv.forEach(([x, h, z, r], i) => { const s = 0.6 + r * 0.6, pin = r < 0.42; M4.compose(PV.set(x, h + 0.6 * s, z), Q.identity(), S3.set(1, 1.2 * s, 1)); tronco.setMatrixAt(i, M4);
     if (pin) { M4.compose(PV.set(x, h + 2.2 * s, z), Q, S3.set(0.95 * s, 3.4 * s, 0.95 * s)); pinho.setMatrixAt(i, M4); copa.setMatrixAt(i, ZERO); pinho.setColorAt(i, c.set(VERDES[(i * 7) % 6]).offsetHSL(0, 0, -0.05)); copa.setColorAt(i, c); }
     else { M4.compose(PV.set(x, h + 1.9 * s, z), Q, S3.set(1.25 * s, 1.15 * s, 1.25 * s)); copa.setMatrixAt(i, M4); pinho.setMatrixAt(i, ZERO); copa.setColorAt(i, c.set(VERDES[(i * 5) % 6]).offsetHSL((r - 0.5) * 0.04, 0, (r - 0.5) * 0.12)); pinho.setColorAt(i, c); } });
   for (const im of [copa, pinho, tronco]) { im.castShadow = true; im.receiveShadow = true; G.add(im); }
   // torre élfica prateada + 2 menores
   const prata = pbr(T, '#eef2fa', { r: 0.25, m: 0.35 }), ouroE = pbr(T, '#e8c66a', { r: 0.3, m: 0.6 }), cristalM = new THREE.MeshStandardMaterial({ color: '#c8fff4', emissive: '#4affd8', emissiveIntensity: 2.2, roughness: 0.1, flatShading: true });
-  const torre = (x, z, Hh, s) => { const g = new THREE.Group(), y0 = alt(x, z) - 0.3; g.add(m(T, new THREE.CylinderGeometry(0.75 * s, 1.25 * s, Hh, 20), prata, 0, Hh / 2, 0)); for (let k = 1; k < 4; k++) g.add(m(T, new THREE.TorusGeometry((1.15 - k * 0.12) * s, 0.12 * s, 8, 28), ouroE, 0, Hh * k / 4, 0)).rotation.x = Math.PI / 2;
+  const torre = (x, z, Hh, s) => { const g = new THREE.Group(), y0 = alt(x, z) - 0.3; g.add(m(T, new THREE.CylinderGeometry(0.75 * s, 1.25 * s, Hh, 20), prata, 0, Hh / 2, 0)); for (let k = 1; k < 4; k++) { const an = m(T, new THREE.TorusGeometry((1.15 - k * 0.12) * s, 0.14 * s, 8, 28), ouroE, 0, Hh * k / 4, 0); an.rotation.x = Math.PI / 2; g.add(an); }
     g.add(m(T, new THREE.CylinderGeometry(1.3 * s, 0.8 * s, 0.9 * s, 20), prata, 0, Hh + 0.3 * s, 0)); g.add(m(T, new THREE.ConeGeometry(1.05 * s, 4.2 * s, 20), pbr(T, '#7ad8c8', { r: 0.3, m: 0.2 }), 0, Hh + 2.8 * s, 0));
     const cr = new THREE.Mesh(new THREE.OctahedronGeometry(0.75 * s, 0), cristalM); cr.position.y = Hh + 6.0 * s; g.add(cr); g.cr = cr; g.position.set(x, y0, z); return g; };
-  const T1 = torre(ALD.torre[0], ALD.torre[1], 13, 1.15), T2 = torre(ALD.torre[0] - 4, ALD.torre[1] + 2.5, 7, 0.75), T3 = torre(ALD.torre[0] + 3.8, ALD.torre[1] + 2.8, 8.5, 0.8); G.add(T1, T2, T3);
-  const luzE = new THREE.PointLight('#5affd8', 40, 30, 1.6); luzE.position.set(ALD.torre[0], alt(...ALD.torre) + 22, ALD.torre[1]); G.add(luzE);
+  const T1 = torre(ALD.torre[0], ALD.torre[1], 19, 1.2), T2 = torre(ALD.torre[0] - 4, ALD.torre[1] + 2.5, 7, 0.75), T3 = torre(ALD.torre[0] + 3.8, ALD.torre[1] + 2.8, 8.5, 0.8); G.add(T1, T2, T3);
+  const luzE = new THREE.PointLight('#5affd8', 40, 30, 1.6); luzE.position.set(ALD.torre[0], alt(...ALD.torre) + 30, ALD.torre[1]); G.add(luzE);
   const vaga = brasas(T, [ALD.norte[0], 2, ALD.norte[1]], [40, 8, 26], { n: 160, cor: '#b8ffb0', tam: 0.55, vel: 0.05, seed: 3 }); G.add(vaga);
   upd.push((t) => { for (const tw of [T1, T2, T3]) { tw.cr.rotation.y = t * 1.2; tw.cr.position.y += Math.sin(t * 2) * 0.004; } cristalM.emissiveIntensity = 1.9 + 0.5 * Math.sin(t * 3); vaga.update(t); });
 
   // ---------- MONTANHAS: nação anã (lava, forjas, fumaça) ----------
-  const lavaM = new THREE.MeshStandardMaterial({ color: '#ff6a10', emissive: '#ff5a10', emissiveIntensity: 2.4, roughness: 0.5 }), canais = [];
+  const lavaM = new THREE.MeshStandardMaterial({ color: '#ff4a00', emissive: '#ff3a00', emissiveIntensity: 2.4, roughness: 0.5 }), canais = [];
   const desce = (x, z, passos) => { const pts = []; for (let i = 0; i < passos; i++) { const h = alt(x, z); pts.push(V3(x, h + 0.12, z)); const e = 0.4, gx = alt(x + e, z) - alt(x - e, z), gz = alt(x, z + e) - alt(x, z - e), L = Math.hypot(gx, gz) || 1; x -= gx / L * 0.9 + Math.sin(i * 0.9) * 0.15; z -= gz / L * 0.9; if (h < 2.2) break; } return pts; };
   const rL = rnd(17); for (let i = 0; i < 10; i++) { const a = rL() * 6.28, d = 3 + rL() * 9, pts = desce(ALD.montanhas[0] + Math.cos(a) * d, ALD.montanhas[1] + Math.sin(a) * d * 1.3, 40); if (pts.length > 4) { const tb = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), pts.length * 3, 0.28 + rL() * 0.15, 6, false), lavaM); G.add(tb); canais.push(pts[pts.length - 1]); } }
   const pedraM = pbr(T, '#5a5260', { r: 0.9 }), portaM = new THREE.MeshStandardMaterial({ color: '#ffb040', emissive: '#ff8a20', emissiveIntensity: 3 }), forjas = [];
-  const sitios = [[15.5, -20], [17, -6], [33, 2], [37, -24], [22, -30]]; sitios.forEach(([x, z], i) => { const y = alt(x, z), g = new THREE.Group(); g.add(m(T, new THREE.BoxGeometry(2.4, 1.6, 2.0), pedraM, 0, 0.6, 0)); g.add(m(T, new THREE.ConeGeometry(1.9, 1.3, 4), pbr(T, '#3a3440'), 0, 2.05, 0)).rotation.y = Math.PI / 4; g.add(m(T, new THREE.CylinderGeometry(0.3, 0.4, 2.6, 8), pedraM, 0.7, 2.1, 0.4)); const pt = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 1.0), portaM); pt.position.set(0, 0.45, 1.01); g.add(pt);
+  const sitios = [[15.5, -20], [17, -6], [33, 2], [37, -24], [22, -30]]; sitios.forEach(([x, z], i) => { const y = alt(x, z), g = new THREE.Group(); g.add(m(T, new THREE.BoxGeometry(2.4, 1.6, 2.0), pedraM, 0, 0.6, 0)); { const tt = m(T, new THREE.ConeGeometry(1.9, 1.3, 4), pbr(T, '#3a3440'), 0, 2.05, 0); tt.rotation.y = Math.PI / 4; g.add(tt); } g.add(m(T, new THREE.CylinderGeometry(0.3, 0.4, 2.6, 8), pedraM, 0.7, 2.1, 0.4)); const pt = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 1.0), portaM); pt.position.set(0, 0.45, 1.01); g.add(pt);
     const lz = new THREE.PointLight('#ff7a20', 18, 9, 1.8); lz.position.set(0, 1.0, 1.8); g.add(lz); g.position.set(x, y - 0.1, z); g.lookAt(ALD.centro[0], y, ALD.centro[1] + 10); G.add(g); forjas.push([x + 0.7, y + 3.5, z + 0.4]); });
-  const fum = fumaca(T, forjas.concat(canais.slice(0, 4).map(v => [v.x, v.y + 0.5, v.z])), { n: 170, cor: '#c4bcc8', tam: 2.6, opac: 0.42, altura: 10, vel: 0.12, seed: 3 }); G.add(fum);
+  const fum = fumaca(T, forjas, { n: 90, cor: '#a8a0b0', tam: 1.6, opac: 0.32, altura: 9, vel: 0.12, seed: 3 }); G.add(fum);
   const luzM = new THREE.PointLight('#ff6a20', 60, 26, 1.5); luzM.position.set(ALD.montanhas[0] - 4, 9, ALD.montanhas[1] + 4); G.add(luzM);
   upd.push((t) => { lavaM.emissiveIntensity = 2.2 + 0.8 * Math.sin(t * 2.4); portaM.emissiveIntensity = 2.6 + 0.6 * Math.sin(t * 9) * Math.sin(t * 3.3); fum.update(t); });
 
@@ -149,7 +150,7 @@ export function mapaAldoria(T, o = {}) {
   const [ccx, ccz] = ALD.castelo, cy0 = alt(ccx, ccz) - 0.2; const Rw = 4.4;
   for (let i = 0; i < 8; i++) { const a = i / 8 * Math.PI * 2 + Math.PI / 8, a2 = a + Math.PI / 8; const wl = m(T, new THREE.BoxGeometry(2 * Rw * Math.sin(Math.PI / 8) + 0.2, 1.8, 0.6), pedraC, Math.cos(a2) * Rw * Math.cos(Math.PI / 8), 0.9, Math.sin(a2) * Rw * Math.cos(Math.PI / 8)); wl.rotation.y = -a2 + Math.PI / 2; cast.add(wl);
     cast.add(m(T, new THREE.CylinderGeometry(0.62, 0.7, 3.0, 16), pedraC, Math.cos(a) * Rw, 1.5, Math.sin(a) * Rw)); cast.add(m(T, new THREE.ConeGeometry(0.85, 1.6, 16), i % 2 ? azul : verm, Math.cos(a) * Rw, 3.8, Math.sin(a) * Rw)); }
-  cast.add(m(T, new THREE.BoxGeometry(3.6, 3.6, 3.0), pedraC, 0, 1.8, 0)); cast.add(m(T, new THREE.ConeGeometry(2.6, 2.0, 4), azul, 0, 4.6, 0)).rotation.y = Math.PI / 4;
+  cast.add(m(T, new THREE.BoxGeometry(3.6, 3.6, 3.0), pedraC, 0, 1.8, 0)); { const tt = m(T, new THREE.ConeGeometry(2.6, 2.0, 4), azul, 0, 4.6, 0); tt.rotation.y = Math.PI / 4; cast.add(tt); }
   for (const [x, z, H, cr] of [[0, 0, 7.5, azul], [-1.4, 1.0, 5.5, verm], [1.5, 0.9, 5.8, verm], [0, -1.2, 6.2, azul]]) { cast.add(m(T, new THREE.CylinderGeometry(0.62, 0.72, H, 16), pedraC, x, H / 2, z)); cast.add(m(T, new THREE.ConeGeometry(0.95, 2.4, 16), cr, x, H + 1.2, z));
     cast.add(m(T, new THREE.CylinderGeometry(0.04, 0.04, 1.6, 6), pbr(T, '#5a4a3a'), x, H + 3.0, z)); const bd = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 0.6, 8, 1), new THREE.MeshStandardMaterial({ color: cr === azul ? '#ffd23a' : '#e0383a', side: THREE.DoubleSide, roughness: 0.8 })); bd.geometry.translate(0.55, 0, 0); bd.position.set(x, H + 3.5, z); cast.add(bd); bandeiras.push(bd); }
   for (let i = 0; i < 6; i++) { const w = new THREE.Mesh(new THREE.PlaneGeometry(0.35, 0.55), new THREE.MeshStandardMaterial({ color: '#ffe8a0', emissive: '#ffcf6a', emissiveIntensity: 0.6 })); const a = i / 6 * Math.PI * 2; w.position.set(Math.cos(a) * 1.82, 2.4, Math.sin(a) * 1.52); w.lookAt(Math.cos(a) * 9, 2.4, Math.sin(a) * 9); cast.add(w); }
@@ -159,6 +160,22 @@ export function mapaAldoria(T, o = {}) {
   casas.forEach(([x, y, z, r], i) => { Q.setFromAxisAngle(PV.set(0, 1, 0), r * 3); const s = 0.8 + r * 0.5; M4.compose(PV.set(x, y + 0.35 * s, z), Q, S3.set(1.1 * s, 0.9 * s, 0.9 * s)); pared.setMatrixAt(i, M4); pared.setColorAt(i, c.set(['#fff4dc', '#ffe8c8', '#f4ecff', '#e8f4ff'][i % 4]));
     const Q2 = Q.clone().multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.PI / 4)); M4.compose(PV.set(x, y + 1.18 * s, z), Q2, S3.set(1.0 * s, 1.0 * s, 0.82 * s)); telh.setMatrixAt(i, M4); telh.setColorAt(i, c.set(['#e0483a', '#e86a2a', '#c83a3a', '#3a7ae0'][(i * 3) % 4])); });
   for (const im of [pared, telh]) { im.castShadow = true; im.receiveShadow = true; G.add(im); }
+
+  // gramado vivo do reino: tufos, flores, árvores redondas facetadas, trilha sinuosa até o castelo
+  const rG = rnd(61), tufos = [], flores = [], redondas = []; const [kx, kz] = ALD.castelo;
+  for (let i = 0; i < 9000 && tufos.length < 4200; i++) { const x = kx + (rG() - 0.5) * 70, z = kz + (rG() - 0.5) * 44; const h = alt(x, z), { wC } = pesos(x, z); if (wC < 0.7 || h < 0.7 || distRio(x, z) < 2.4 || Math.hypot(x - kx, z - kz) < 5.5) continue; tufos.push([x, h, z, rG()]); if (rG() < 0.18) flores.push([x + 0.3, h, z + 0.2, rG()]); if (rG() < 0.022 && Math.hypot(x - kx, z - kz) > 9) redondas.push([x, h, z, rG()]); }
+  const tufoG = new THREE.ConeGeometry(0.16, 0.7, 4); tufoG.translate(0, 0.3, 0); const itu = new THREE.InstancedMesh(tufoG, new THREE.MeshStandardMaterial({ roughness: 0.85 }), tufos.length);
+  tufos.forEach(([x, h, z, r], i) => { M4.compose(PV.set(x, h - 0.05, z), Q.setFromEuler(new THREE.Euler((r - 0.5) * 0.4, r * 6, 0)), S3.set(1, 0.7 + r * 0.8, 1)); itu.setMatrixAt(i, M4); itu.setColorAt(i, c.set('#4ec83a').offsetHSL((r - 0.5) * 0.05, 0.05, (r - 0.5) * 0.16)); }); itu.receiveShadow = true; G.add(itu);
+  const ifl = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(0.17, 0), new THREE.MeshStandardMaterial({ roughness: 0.5, emissive: '#222222' }), flores.length); flores.forEach(([x, h, z, r], i) => { M4.compose(PV.set(x, h + 0.4, z), Q.identity(), S3.set(1, 1, 1)); ifl.setMatrixAt(i, M4); ifl.setColorAt(i, c.set(['#ffffff', '#ffe14a', '#ff6aa8', '#b88aff', '#ff8a3a'][Math.floor(r * 5)])); }); G.add(ifl);
+  const fofa = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(1, 1), new THREE.MeshStandardMaterial({ roughness: 0.8, flatShading: true }), redondas.length), tr2 = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.18, 0.26, 1, 6), pbr(T, '#8a5a34'), redondas.length);
+  redondas.forEach(([x, h, z, r], i) => { const s = 0.75 + r * 0.55; M4.compose(PV.set(x, h + 0.8 * s, z), Q.identity(), S3.set(1, 1.6 * s, 1)); tr2.setMatrixAt(i, M4); M4.compose(PV.set(x, h + 2.3 * s, z), Q.setFromEuler(new THREE.Euler(0, r * 6, 0)), S3.set(1.5 * s, 1.4 * s, 1.5 * s)); fofa.setMatrixAt(i, M4); fofa.setColorAt(i, c.set(['#4cc83e', '#62d64a', '#3aae3a'][i % 3])); });
+  for (const im of [fofa, tr2]) { im.castShadow = true; im.receiveShadow = true; G.add(im); }
+  const trilhaPts = []; for (let i = 0; i <= 60; i++) { const k = i / 60, a = k * 4.2 + 0.6, r = lerp(4.6, 14, k); trilhaPts.push([kx + Math.cos(a) * r + k * 3, kz + Math.sin(a) * r * 0.85 + k * 4]); }
+  const tp = new Float32Array(trilhaPts.length * 2 * 3), ti = []; trilhaPts.forEach(([x, z], i) => { const [x2, z2] = trilhaPts[Math.min(i + 1, trilhaPts.length - 1)], [x0, z0] = trilhaPts[Math.max(i - 1, 0)], dx = x2 - x0, dz = z2 - z0, L = Math.hypot(dx, dz) || 1, nx = -dz / L * 0.55, nz = dx / L * 0.55; tp.set([x + nx, alt(x + nx, z + nz) + 0.1, z + nz, x - nx, alt(x - nx, z - nz) + 0.1, z - nz], i * 6); if (i < trilhaPts.length - 1) ti.push(i * 2, i * 2 + 1, i * 2 + 2, i * 2 + 1, i * 2 + 3, i * 2 + 2); });
+  const tg2 = new THREE.BufferGeometry(); tg2.setAttribute('position', new THREE.BufferAttribute(tp, 3)); tg2.setIndex(ti); tg2.computeVertexNormals(); const trilha = new THREE.Mesh(tg2, new THREE.MeshStandardMaterial({ color: '#f2dca0', roughness: 0.95, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -2 })); trilha.receiveShadow = true; G.add(trilha);
+  // pico facetado de topo branco (marco da nação anã, visto do reino) + feixes de luz suaves
+  const pico = new THREE.Group(), pk = [34, -24], py0 = alt(...pk) - 2; const cone1 = m(T, new THREE.ConeGeometry(10, 22, 7, 3), new THREE.MeshStandardMaterial({ color: '#7a6e78', roughness: 0.9, flatShading: true }), 0, 11, 0); pico.add(cone1);
+  const cap = m(T, new THREE.ConeGeometry(4.6, 10.1, 7, 1), new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: 0.6, flatShading: true }), 0, 22 - 5.05 + 0.02, 0); cap.scale.set(1.04, 1, 1.04); pico.add(cap); pico.position.set(pk[0], py0, pk[1]); pico.rotation.y = 0.3; G.add(pico);
   upd.push((t) => { bandeiras.forEach((b, i) => { const p = b.geometry.attributes.position; for (let j = 0; j < p.count; j++) { const x = p.getX(j); p.setZ(j, Math.sin(t * 6 + x * 5 + i) * 0.12 * x); } p.needsUpdate = true; b.rotation.y = 0.3 * Math.sin(t * 0.7 + i); }); rioM.emissiveIntensity = 0.3 + 0.08 * Math.sin(t * 2); });
 
   // ---------- SUL: terras do Rei Demônio ----------
@@ -178,26 +195,25 @@ export function mapaAldoria(T, o = {}) {
   const cab = new THREE.Mesh(new THREE.DodecahedronGeometry(2.9, 0), demM); cab.position.set(0, 14.8, 0.8); cab.scale.set(1, 1.05, 0.95); cab.castShadow = true; dem.add(cab);
   const mand = new THREE.Mesh(new THREE.IcosahedronGeometry(1.6, 0), demM); mand.scale.set(1.3, 0.9, 1); mand.position.set(0, 12.9, 2.0); dem.add(mand);
   for (const s of [-1, 1]) { dem.add(chifre(T, [[s * 2.0, 16.3, 0.6], [s * 4.8, 17.6, 0.4], [s * 6.6, 20.2, 0.0], [s * 6.2, 23.6, -0.6], [s * 4.6, 25.4, -1.0]], 1.25, osso));
-    const olho = new THREE.Mesh(new THREE.SphereGeometry(0.55, 16, 10), new THREE.MeshStandardMaterial({ color: '#fff0a0', emissive: '#ffb020', emissiveIntensity: 5 })); olho.position.set(s * 1.15, 15.2, 3.4); olho.scale.set(1.3, 0.6, 0.6); olho.rotation.z = s * 0.35; dem.add(olho); }
+    const olho = new THREE.Mesh(new THREE.SphereGeometry(0.55, 16, 10), new THREE.MeshStandardMaterial({ color: '#fff0a0', emissive: '#ffb020', emissiveIntensity: 5 })); olho.position.set(s * 1.15, 15.3, 3.65); olho.scale.set(1.3, 0.6, 0.6); olho.rotation.z = s * 0.35; dem.add(olho); }
   const nuc = new THREE.Mesh(new THREE.IcosahedronGeometry(1.6, 1), nucleoM); nuc.position.set(0, 7.2, 3.9); dem.add(nuc); const luzN = new THREE.PointLight('#ff6a1a', 120, 30, 1.4); luzN.position.set(0, 7.5, 7); dem.add(luzN);
-  dem.position.set(dx, dy, dz); dem.scale.setScalar(o.escalaDemonio ?? 1); G.add(dem);
+  dem.position.set(dx, dy, dz); dem.rotation.y = Math.PI; dem.scale.setScalar(o.escalaDemonio ?? 1); G.add(dem);
   // fortaleza de espinhos à frente do colosso
   const fort = new THREE.Group(), escuro = new THREE.MeshStandardMaterial({ map: rMap, emissiveMap: rEm, emissive: new THREE.Color('#ff4a10'), emissiveIntensity: 1.8, roughness: 0.6, flatShading: true });
   for (const [x, z, H, r] of [[0, 0, 7, 1.3], [-3.2, 1.4, 5, 0.9], [3.2, 1.4, 5.4, 0.9], [-5.6, 3.4, 3.6, 0.7], [5.6, 3.4, 3.8, 0.7], [-1.6, 3.6, 3.2, 0.6], [1.6, 3.6, 3.4, 0.6]]) { fort.add(m(T, new THREE.CylinderGeometry(r * 0.75, r, H, 6), escuro, x, H / 2, z)); fort.add(m(T, new THREE.ConeGeometry(r * 0.95, H * 0.7, 6), escuro, x, H + H * 0.35, z));
     for (let k = 0; k < 3; k++) { const sp = m(T, new THREE.ConeGeometry(0.22, 1.6, 5), osso, x + Math.cos(k * 2.1) * r, H * 0.75, z + Math.sin(k * 2.1) * r); sp.rotation.set(Math.sin(k * 2.1) * 0.9, 0, -Math.cos(k * 2.1) * 0.9); fort.add(sp); } }
   fort.add(m(T, new THREE.BoxGeometry(12, 1.8, 0.8), escuro, 0, 0.9, 4.6)); const portal = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 2.0), nucleoM); portal.position.set(0, 1.1, 5.05); fort.add(portal);
-  fort.position.set(dx, alt(dx, dz - 10) - 0.3, dz - 10); G.add(fort);
+  fort.position.set(dx, alt(dx, dz - 10) - 0.3, dz - 10); fort.rotation.y = Math.PI; G.add(fort);
   // névoa vermelha + brasas + nuvem escura
-  const nvT = nevoaTex(T), nevoas = [], rF = rnd(51); for (let i = 0; i < 16; i++) { const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: nvT, color: new THREE.Color(i % 3 ? '#ff2a3a' : '#a01a50'), transparent: true, opacity: 0.22, depthWrite: false })); const s = 12 + rF() * 12; sp.scale.set(s, s * 0.45, 1); sp.position.set(-30 + rF() * 60, 2 + rF() * 4, 24 + rF() * 30); sp.base = sp.position.clone(); sp.fase = rF() * 6; G.add(sp); nevoas.push(sp); }
+  const nvT = nevoaTex(T), nevoas = [], rF = rnd(51); for (let i = 0; i < 16; i++) { const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: nvT, color: new THREE.Color(i % 3 ? '#ff2a3a' : '#a01a50'), transparent: true, opacity: 0.3, depthWrite: false })); const s = 16 + rF() * 14; sp.scale.set(s, s * 0.45, 1); sp.position.set(-30 + rF() * 60, 2 + rF() * 4, 24 + rF() * 30); sp.base = sp.position.clone(); sp.fase = rF() * 6; G.add(sp); nevoas.push(sp); }
   const cinza = brasas(T, [0, 1, 40], [60, 18, 30], { n: 240, cor: '#ff7a2a', tam: 0.45, vel: 0.07, seed: 12 }); G.add(cinza);
-  const nuvD = pbr(T, '#3a2a44', { r: 1, extra: { emissive: new THREE.Color('#ff2a1a'), emissiveIntensity: 0.12 } }); for (let i = 0; i < 9; i++) { const b = new THREE.Mesh(new THREE.SphereGeometry(4 + (i % 3) * 1.5, 16, 10), nuvD); b.scale.y = 0.45; b.position.set(-16 + i * 4.5, 30 + (i % 2) * 1.5, dz + 2 + (i % 3) * 2); G.add(b); }
   const fumV = fumaca(T, [[vx, alt(vx, vz) + 1, vz]], { n: 60, cor: '#5a4a5a', tam: 4, opac: 0.5, altura: 16, vel: 0.08, seed: 8 }); G.add(fumV);
   upd.push((t) => { const p = 0.5 + 0.5 * Math.sin(t * 2.2); crackM.emissiveIntensity = 2 + 1.2 * p; demM.emissiveIntensity = 1.8 + 1.0 * p; escuro.emissiveIntensity = 1.5 + 0.8 * p; nucleoM.emissiveIntensity = 3.5 + 1.5 * Math.sin(t * 3.1); luzN.intensity = 100 + 40 * Math.sin(t * 3.1); luzV.intensity = 50 + 20 * p;
-    nuc.rotation.y = t * 0.8; nuc.scale.setScalar(1 + 0.06 * Math.sin(t * 6)); nevoas.forEach(s => { s.position.x = s.base.x + Math.sin(t * 0.25 + s.fase) * 3; s.material.opacity = 0.18 + 0.08 * Math.sin(t * 0.8 + s.fase); }); cinza.update(t); fumV.update(t); });
+    nuc.rotation.y = t * 0.8; nuc.scale.setScalar(1 + 0.06 * Math.sin(t * 6)); nevoas.forEach(s => { s.position.x = s.base.x + Math.sin(t * 0.25 + s.fase) * 3; s.material.opacity = 0.26 + 0.1 * Math.sin(t * 0.8 + s.fase); }); cinza.update(t); fumV.update(t); });
 
   // ---------- pontos para a câmera / rótulos ----------
   const pt = ([x, z], dy = 0) => V3(x, Math.max(0.5, alt(x, z)) + dy, z);
-  G.pontos = { aldoria: V3(0, 0, 0), norte: pt(ALD.norte, 2), montanhas: pt(ALD.montanhas, 1), centro: pt(ALD.castelo, 3), sul: V3(dx, dy + 10, dz) };
+  G.pontos = { aldoria: V3(0, 0, 0), norte: pt(ALD.torre, 12), montanhas: pt(ALD.montanhas, 1), centro: pt(ALD.castelo, 3), sul: V3(dx, dy + 10, dz) };
   G.alt = alt;
   const vv = new THREE.Vector3(); G.tela = (camera, p) => { vv.copy(typeof p === 'string' ? G.pontos[p] : p); G.localToWorld(vv); vv.project(camera); return [(vv.x + 1) / 2 * E.W, (1 - vv.y) / 2 * E.H, vv.z < 1]; };
   G.update = (t) => upd.forEach(f => f(t));
@@ -206,7 +222,7 @@ export function mapaAldoria(T, o = {}) {
 
 // palco pronto para o mapa: céu azul, sol que cobre o tabuleiro com sombra, bloom suave para a lava
 export function palcoMapa(T, o = {}) {
-  const st = palco(T, { sky: ['#0a4ad0', '#3aa8ff', '#d8f4ff'], fog: [260, 700], fogColor: '#cfeaff', keyColor: '#fff2d8', keyIntensity: 3.2, keyPos: [-40, 70, 30], ambient: 1.15, ambientSky: '#cfe6ff', fov: 40, foco: 80, abertura: 0.00006, maxblur: 0.006, bloom: 0.45, bloomLimiar: 0.86, barril: 0.06, sat: 1.18, env: 0.45, exposicao: 0.95, aoRaio: 1.2, aoForca: 0.7, ...o });
+  const st = palco(T, { sky: ['#0a4ad0', '#3aa8ff', '#d8f4ff'], fog: [260, 700], fogColor: '#cfeaff', keyColor: '#fff2d8', keyIntensity: 2.7, keyPos: [-40, 70, 30], ambient: 0.85, ambientSky: '#cfe6ff', fov: 40, foco: 80, abertura: 0.00006, maxblur: 0.006, bloom: 0.3, bloomLimiar: 0.96, barril: 0.06, sat: 1.2, env: 0.35, exposicao: 0.9, aoRaio: 1.2, aoForca: 0.7, ...o });
   const s = st.sun; s.position.set(-70, 110, 50); Object.assign(s.shadow.camera, { left: -90, right: 90, top: 100, bottom: -100, near: 10, far: 360 }); s.shadow.camera.updateProjectionMatrix(); s.shadow.bias = -0.0006; s.shadow.normalBias = 0.05; s.shadow.radius = 3;
   st.camera.far = 1200; st.camera.updateProjectionMatrix();
   return st;
@@ -218,17 +234,17 @@ export function chavesVoo(k, mapa) {
   const P = mapa.pontos, a = (v) => [v.x, v.y, v.z], add = (v, dx, dy, dz) => [v.x + dx, v.y + dy, v.z + dz];
   const t0 = k.tAldoria ?? 0, fim = k.fim ?? (k.tSul + 4), ida = 1.1;
   const visao = [{ pos: [0, 175, 92], look: [0, 0, 2], fov: 46 }, { pos: [8, 150, 78], look: [2, 0, 0], fov: 44 }];
-  const N = { pos: add(P.norte, 10, 24, 30), look: add(P.norte, 0, -1, -2), fov: 42 }, N2 = { pos: add(P.norte, 4, 19, 25), look: add(P.norte, -1, 0, -3), fov: 42 };
-  const M = { pos: add(P.montanhas, -24, 16, 22), look: add(P.montanhas, 2, 3, -2), fov: 42 }, M2 = { pos: add(P.montanhas, -20, 13, 18), look: add(P.montanhas, 2, 3, -3), fov: 41 };
-  const C = { pos: add(P.centro, 9, 13, 19), look: add(P.centro, 0, -1, 0), fov: 42 }, C2 = { pos: add(P.centro, 5, 10, 15), look: add(P.centro, 0, -0.5, 0), fov: 41 };
-  const S = { pos: add(P.sul, 3, 7, -42), look: add(P.sul, 0, 2, 0), fov: 44 }, S2 = { pos: add(P.sul, 1, 3, -30), look: add(P.sul, 0, 4, 0), fov: 42 };
+  const N = { pos: add(P.norte, 14, 12, 46), look: add(P.norte, 0, -6, 0), fov: 42 }, N2 = { pos: add(P.norte, 7, 8, 38), look: add(P.norte, 0, -4, 0), fov: 42 };
+  const M = { pos: add(P.montanhas, -30, 30, 40), look: add(P.montanhas, 2, 3, -5), fov: 42 }, M2 = { pos: add(P.montanhas, -24, 25, 33), look: add(P.montanhas, 3, 4, -6), fov: 42 };
+  const C = { pos: add(P.centro, 14, 20, 34), look: add(P.centro, 0, -1, 0), fov: 42 }, C2 = { pos: add(P.centro, 8, 15, 27), look: add(P.centro, 0, 0, 0), fov: 42 };
+  const S = { pos: add(P.sul, 6, 14, -62), look: add(P.sul, 0, 1, 0), fov: 44 }, S2 = { pos: add(P.sul, 2, 9, -48), look: add(P.sul, 0, 6, 0), fov: 44 };
   const K = [[0, visao[0]], [t0, visao[0]]];
   const segue = (t, A, B, prox) => { K.push([t - 0.25, K[K.length - 1][1]]); K.push([t + ida, A]); K.push([Math.max(t + ida + 0.1, prox - 0.25), B]); };
   K.push([k.tNorte - 0.25, visao[1]]); segue(k.tNorte, N, N2, k.tMontanhas); K.splice(K.length - 3, 1);
   segue(k.tMontanhas, M, M2, k.tCentro); segue(k.tCentro, C, C2, k.tSul); K.push([k.tSul - 0.25, C2]); K.push([k.tSul + ida + 0.2, S]); K.push([fim, S2]);
   return K.filter((x, i, arr) => i === 0 || x[0] > arr[i - 1][0]);
 }
-export function voo(camera, t, k, mapa) { const K = mapa._K || (mapa._K = chavesVoo(k, mapa)); const v = key(t, K); camera.position.set(...v.pos); camera.lookAt(...v.look); if (v.fov && camera.fov !== v.fov) { camera.fov = v.fov; camera.updateProjectionMatrix(); } }
+export function voo(camera, t, k, mapa) { const K = mapa._K || (mapa._K = chavesVoo(k, mapa)); const v = key(t, K); camera.position.set(...v.pos); camera.lookAt(...v.look); if (v.fov && camera.fov !== v.fov) { camera.fov = v.fov; camera.updateProjectionMatrix(); } return Math.hypot(v.pos[0] - v.look[0], v.pos[1] - v.look[1], v.pos[2] - v.look[2]); }
 
 // ---------- rótulos 2D das nações ----------
 export const NACOES = {
