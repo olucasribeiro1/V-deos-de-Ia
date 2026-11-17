@@ -18,7 +18,7 @@ function tela(nome, w, h) { let c = POOL[nome]; if (!c) { c = POOL[nome] = docum
 // isola um canal de cor (multiply + recorta pelo alfa original)
 function canal(src, cor, nome) { const [c, x] = tela(nome, src.width, src.height); x.drawImage(src, 0, 0); x.globalCompositeOperation = 'multiply'; x.fillStyle = cor; x.fillRect(0, 0, c.width, c.height); x.globalCompositeOperation = 'destination-in'; x.drawImage(src, 0, 0); return c; }
 // compõe src em dst (pixels de saída) em faixas horizontais, algumas deslocadas, com separação RGB
-function compoeGlitch(dst, src, I, seed, a = 1) {
+function compoeGlitch(dst, src, I, seed, a = 1, riscos = true) {
   const W = src.width, H = src.height; dst.save(); dst.setTransform(1, 0, 0, 1, 0, 0); dst.globalAlpha = a;
   if (I <= 0.01) { dst.drawImage(src, 0, 0); dst.restore(); return; }
   const r = rng(seed * 7919 + 17), d = Math.round(W * 0.012 * I + 1), bands = [];
@@ -29,12 +29,12 @@ function compoeGlitch(dst, src, I, seed, a = 1) {
     else dst.drawImage(src, 0, y, W, h, dx, y, W, h);
   }
   dst.globalCompositeOperation = 'lighter';
-  for (let i = 0; i < 2 + I * 8; i++) { if (r() > 0.5 + I * 0.4) continue; const y = r() * H, h = 2 + r() * H * 0.012; dst.globalAlpha = a * (0.15 + 0.35 * I); dst.fillStyle = r() < 0.5 ? '#40e8ff' : '#ff3aa0'; dst.fillRect(r() * W * 0.3, y, W * (0.3 + r() * 0.7), h); }
+  if (riscos) for (let i = 0; i < 2 + I * 8; i++) { if (r() > 0.5 + I * 0.4) continue; const y = r() * H, h = 2 + r() * H * 0.012; dst.globalAlpha = a * (0.15 + 0.35 * I); dst.fillStyle = r() < 0.5 ? '#40e8ff' : '#ff3aa0'; dst.fillRect(r() * W * 0.3, y, W * (0.3 + r() * 0.7), h); }
   dst.restore();
 }
 // desenha fn num canvas fora da tela (com a mesma transformação de g) e compõe em g com glitch I
 function holo(g, I, seed, a, fn) {
-  const cv = g.canvas, [c, x] = tela('_holo', cv.width, cv.height); x.setTransform(g.getTransform()); fn(x); compoeGlitch(g, c, I, seed, a);
+  const cv = g.canvas, [c, x] = tela('_holo', cv.width, cv.height); x.setTransform(g.getTransform()); fn(x); compoeGlitch(g, c, I, seed, a, false);
 }
 
 // glitch de tela inteira: fatias deslocadas + separação RGB + riscos coloridos. I 0..1, seed muda por quadro.
@@ -245,4 +245,43 @@ export function popupMissao(g, T, o = {}) {
       x.globalCompositeOperation = 'source-over'; text(x, s2, 0, 0, { size: 210, color: '#ffffff', font: FONTS.title, weight: 700, spacing: 12, glow: 30, glowColor: alpha(C.ciano, 0.9) }); x.restore(); }
     if (o.sub) text(x, digita(o.sub, prog(k, 0.6, 1.0)), 0, TOP + PH - 64, { size: 40, color: C.dim, font: FONTS.ui, weight: 900, spacing: 3 });
   });
+}
+
+// ======================================================================
+// RÓTULO TÉCNICO (estilo "explicação científica"): anel-âncora num ponto, linha fina branca até o rótulo:
+// título pequeno espaçado, VALOR grande em negrito + unidade menor, e (opcional) 1–2 linhas de explicação.
+// o = { t0, t1, px, py (ponto), lx, ly (canto sup. esq. do rótulo; automático se omitido), titulo, valor, unidade, linhas:[], cor, escala }
+// Fica sempre dentro de x 60–940, y 220–1440. Largura máx. ~520.
+// ======================================================================
+export function rotuloTecnico(g, T, o = {}) {
+  const t0 = o.t0 ?? 0, k = T - t0; if (k < 0) return; const t1 = o.t1 ?? null; const fade = t1 != null ? 1 - prog(T, t1, t1 + 0.3) : 1; if (fade <= 0) return;
+  const cor = o.cor || '#ffffff', esc = o.escala ?? 1, px = o.px ?? 500, py = o.py ?? 900, linhas = o.linhas || [];
+  const sT = 34 * esc, sV = 112 * esc, sU = 46 * esc, sL = 38 * esc, MAXW = 520;
+  const wT = o.titulo ? measure(g, o.titulo.toUpperCase(), sT, FONTS.ui, 900) + o.titulo.length * 4 : 0, wV = o.valor != null ? measure(g, String(o.valor), sV, FONTS.title, 700) : 0, wU = o.unidade ? measure(g, o.unidade, sU, FONTS.title, 700) + 12 : 0;
+  // quebra das linhas de explicação na largura máxima
+  const ls = []; for (const l of linhas) { let cur = ''; for (const w of l.split(' ')) { const tt = cur ? cur + ' ' + w : w; if (measure(g, tt, sL, FONTS.ui, 900) > MAXW && cur) { ls.push(cur); cur = w; } else cur = tt; } if (cur) ls.push(cur); }
+  const wL = Math.max(0, ...ls.map(l => measure(g, l, sL, FONTS.ui, 900))), w = Math.min(MAXW + 20, Math.max(wT, wV + wU, wL, 160));
+  const hT = o.titulo ? sT * 1.25 : 0, hV = o.valor != null ? sV * 0.95 : 0, hL = ls.length * sL * 1.25, h = hT + hV + 22 + hL;
+  const dir = o.lx != null ? (o.lx + w / 2 > px ? 1 : -1) : (px < 500 ? 1 : -1);
+  let lx = o.lx ?? (dir > 0 ? px + 70 : px - 70 - w), ly = o.ly ?? (py - h - 150); lx = clamp(lx, 70, 930 - w); ly = clamp(ly, 230, 1430 - h);
+  const uy = ly + hT + hV + 10, ex = dir > 0 ? lx - 6 : lx + w + 6; // sublinhado e cotovelo
+  const kl = ease.out(prog(k, 0.05, 0.35)), kr = ease.outBack(prog(k, 0, 0.25)), kt = ease.outBack(prog(k, 0.2, 0.5));
+  g.save(); g.globalAlpha *= fade;
+  // sombra suave atrás do texto
+  if (kt > 0) { g.save(); g.globalAlpha *= clamp(kt); const gr = g.createRadialGradient(lx + w / 2, ly + h / 2, 10, lx + w / 2, ly + h / 2, Math.max(w, h) * 0.75); gr.addColorStop(0, 'rgba(0,0,0,0.55)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(lx - w * 0.4, ly - h * 0.5, w * 1.8, h * 2); g.restore(); }
+  // âncora
+  const pul = (T * 1.2) % 1; g.save(); g.shadowColor = 'rgba(0,0,0,.6)'; g.shadowBlur = 8; g.strokeStyle = alpha(cor, 0.9 * (1 - pul)); g.lineWidth = 3; g.beginPath(); g.arc(px, py, (16 + pul * 26) * kr, 0, 7); g.stroke();
+  g.strokeStyle = cor; g.lineWidth = 4; g.beginPath(); g.arc(px, py, 15 * kr, 0, 7); g.stroke(); g.fillStyle = cor; g.beginPath(); g.arc(px, py, 6 * kr, 0, 7); g.fill();
+  // linha-guia: ponto -> cotovelo -> sublinhado
+  if (kl > 0) { const a0 = Math.atan2(uy - py, ex - px), sx = px + Math.cos(a0) * 15, sy = py + Math.sin(a0) * 15, L1 = Math.hypot(ex - sx, uy - sy), L2 = w + 6, tot = L1 + L2, d = tot * kl;
+    g.strokeStyle = cor; g.lineWidth = 3; g.lineCap = 'round'; g.beginPath(); g.moveTo(sx, sy); if (d <= L1) g.lineTo(sx + (ex - sx) * d / L1, sy + (uy - sy) * d / L1); else { g.lineTo(ex, uy); g.lineTo(ex + dir * (d - L1), uy); } g.stroke(); }
+  g.restore();
+  // texto
+  if (kt > 0) { g.save(); g.globalAlpha *= clamp(kt * 1.5); const ox = lx, s = 0.85 + 0.15 * kt; g.translate(ox, uy); g.scale(s, s); g.translate(-ox, -uy);
+    const sh = { stroke: 0 }; let y = ly;
+    if (o.titulo) { text(g, o.titulo.toUpperCase(), lx, y + sT * 0.6, { size: sT, color: alpha(cor, 0.85), font: FONTS.ui, weight: 900, align: 'left', spacing: 4, glow: 10, glowColor: 'rgba(0,0,0,.8)' }); y += hT; }
+    if (o.valor != null) { text(g, String(o.valor), lx, y + sV * 0.48, { size: sV, color: cor, font: FONTS.title, weight: 700, align: 'left', glow: 18, glowColor: 'rgba(0,0,0,.75)' }); if (o.unidade) text(g, o.unidade, lx + wV + 12, y + sV * 0.48 + (sV - sU) * 0.28, { size: sU, color: alpha(cor, 0.9), font: FONTS.title, weight: 700, align: 'left', glow: 12, glowColor: 'rgba(0,0,0,.75)' }); }
+    let yl = uy + 18; for (const l of ls) { text(g, l, lx, yl + sL * 0.55, { size: sL, color: alpha(cor, 0.92), font: FONTS.ui, weight: 900, align: 'left', glow: 10, glowColor: 'rgba(0,0,0,.85)', ...sh }); yl += sL * 1.25; }
+    g.restore(); }
+  g.restore();
 }

@@ -1,1 +1,1 @@
-{"title": "teste", "duration": 3, "shots": [{"id": "R", "start": 0, "end": 3, "in": {"type": "cut"}, "params": {}, "sfx": []}], "numbers": [], "hud": [], "music": [], "sfx": []}
+{"title": "teste", "duration": 3, "shots": [{"id": "R", "start": 0, "end": 3, "in": {"type": "cut"}, "live": false, "params": {}, "sfx": []}], "numbers": [], "hud": [], "music": [], "sfx": []}

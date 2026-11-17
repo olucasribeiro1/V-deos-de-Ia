@@ -1,6 +1,6 @@
 import { E, registerShot, blurLayer, glow, veil, circle, poly } from '/engine/core.js';
 import { drawFigure, POSES, breathe } from '/engine/rig2d.js';
-import { painelStatus, tagNivel, popupMissao, glitch } from '/series/semmarca/hud.js';
+import { painelStatus, tagNivel, popupMissao, glitch, rotuloTecnico } from '/series/semmarca/hud.js';
 import { PROTAGONISTA } from '../cast.js';
 const fundo = (g, t) => { g.fillStyle = '#0a2a4a'; g.fillRect(0, 0, E.W, E.H); blurLayer(g, 14, (g) => { const gr = g.createLinearGradient(0, 0, 0, E.H); gr.addColorStop(0, '#2a7ad8'); gr.addColorStop(1, '#1a5a3a'); g.fillStyle = gr; g.fillRect(0, 0, E.W, E.H);
   for (let i = 0; i < 9; i++) poly(g, [[i * 140 - 60, 1500], [i * 140 + 10, 900 + (i % 3) * 80], [i * 140 + 80, 1500]], '#1f6a3a'); g.fillStyle = '#3a8a3a'; g.fillRect(0, 1450, E.W, 500);
@@ -8,4 +8,4 @@ const fundo = (g, t) => { g.fillStyle = '#0a2a4a'; g.fillRect(0, 0, E.W, E.H); b
 const S = [{ id: 'FOR', nome: 'FORÇA', v: 10, t: 1.2 }, { id: 'VEL', nome: 'VELOCIDADE', v: 8, t: 1.6 }, { id: 'INT', nome: 'INTELIGÊNCIA', v: 12, t: 2.0 }, { id: 'MAG', nome: 'MAGIA', v: 0, t: 2.4, travado: true }];
 registerShot('H1', { draw(g, t) { fundo(g, t); painelStatus(g, t, { t0: 0.2, nome: 'VOCÊ', titulo: 'Reencarnado', nivel: 0, xp: 0, stats: S.map(s => ({ ...s })), marca: '—', tSobe: 3.4, tTrava: 4.6, sai: 7.4 }); } });
 registerShot('H2', { draw(g, t, info) { const T = info.globalT; fundo(g, t); drawFigure(g, { x: 500, y: 1400, s: 2.4, outfit: PROTAGONISTA, pose: breathe(POSES.stand, T, 1, 1), expr: 'suspicious', t: T });
-  tagNivel(g, 500, 640, { nome: 'VOCÊ', nivel: 0, xp: 0.35, T, t0: 8.1 }); popupMissao(g, T, { t0: 9.0, cy: 560 }); if (T > 10.6) glitch(g, 0.8, Math.floor(T * 24)); } });
+  if (T < 8.2 || T > 9.0) tagNivel(g, 500, 640, { nome: 'VOCÊ', nivel: 0, xp: 0.35, T, t0: 7.9 }); rotuloTecnico(g, T, { t0: 8.2, t1: 8.95, px: 560, py: 1050, lx: 380, ly: 300, titulo: 'Pressão', valor: '0,90', unidade: 'atm', linhas: ['ar sai da alta', 'pra baixa pressão'] }); rotuloTecnico(g, T, { t0: 8.4, t1: 8.95, px: 470, py: 1330, titulo: 'Raio', valor: '30.000', unidade: '°C' }); popupMissao(g, T, { t0: 9.0, cy: 560 }); if (T > 10.6) glitch(g, 0.8, Math.floor(T * 24)); } });
