@@ -1,5 +1,5 @@
 {
- "duration": 103.62,
+ "duration": 134.606,
  "lines": [
   {
    "id": "n01",
@@ -76,57 +76,105 @@
   {
    "id": "n09",
    "spk": "NARRADOR",
-   "text": "[empolgado, rápido] E a cor é o elemento. Vermelha, fogo. Azul, água. Marrom, terra. Branca, vento. Amarela, raio. E a dourada, a mais rara de todas, só o próprio Rei Mago tem.",
+   "text": "[empolgado, rápido] E a cor é o elemento. E repara: não é truque, é física.",
    "start": 49.633,
-   "end": 59.106,
-   "file": "projects/sem-marca-v2/input/clips/n09_8dec9c3cf0_t1.30.wav"
+   "end": 52.962,
+   "file": "projects/sem-marca-v2/input/clips/n09_4870c5e429_t1.30.wav"
+  },
+  {
+   "id": "n09a",
+   "spk": "NARRADOR",
+   "text": "[rápido, explicando] Vermelha, fogo. O mago junta calor, combustível e oxigênio, o tal triângulo do fogo, e solta tudo num jato.",
+   "start": 53.082,
+   "end": 58.936,
+   "file": "projects/sem-marca-v2/input/clips/n09a_e30316360f_t1.30.wav"
+  },
+  {
+   "id": "n09b",
+   "spk": "NARRADOR",
+   "text": "[rápido, explicando] Azul, água. O ar tá cheio de vapor invisível. Ele esfria o ar em volta da mão, o vapor condensa e vira água, igual copo gelado suando.",
+   "start": 59.056,
+   "end": 65.532,
+   "file": "projects/sem-marca-v2/input/clips/n09b_c2de226670_t1.30.wav"
+  },
+  {
+   "id": "n09c",
+   "spk": "NARRADOR",
+   "text": "[rápido, explicando] Marrom, terra. Ele faz o chão vibrar, os grãos se apertam, e a terra sobe dura feito pedra.",
+   "start": 65.652,
+   "end": 70.583,
+   "file": "projects/sem-marca-v2/input/clips/n09c_56f8b6d28b_t1.30.wav"
+  },
+  {
+   "id": "n09d",
+   "spk": "NARRADOR",
+   "text": "[rápido, explicando] Branca, vento. Vento é só ar correndo da pressão alta pra pressão baixa. Ele cria essa diferença, e o ar sai empurrando até navio.",
+   "start": 70.703,
+   "end": 76.741,
+   "file": "projects/sem-marca-v2/input/clips/n09d_59428c659c_t1.30.wav"
+  },
+  {
+   "id": "n09e",
+   "spk": "NARRADOR",
+   "text": "[rápido, crescendo] Amarela, raio. Ele separa cargas elétricas, igual nuvem de tempestade, e a descarga chega a uns trinta mil graus. Cinco vezes mais quente que a superfície do Sol.",
+   "start": 76.861,
+   "end": 84.62,
+   "file": "projects/sem-marca-v2/input/clips/n09e_67219614c5_t1.30.wav"
+  },
+  {
+   "id": "n09f",
+   "spk": "NARRADOR",
+   "text": "[misterioso] E a dourada, a mais rara de todas, ninguém sabe explicar. Só o próprio Rei Mago tem.",
+   "start": 84.74,
+   "end": 90.092,
+   "file": "projects/sem-marca-v2/input/clips/n09f_8bc0ff9f6c_t1.30.wav"
   },
   {
    "id": "n10",
    "spk": "NARRADOR",
    "text": "[tenso, rápido] Aí você corre até um lago, se olha na água... e nada. Rosto liso. Nenhuma marca. Ferrou. Na cidade, todo mundo te encara: criança aponta, guarda já põe a mão na lança.",
-   "start": 59.306,
-   "end": 67.922,
+   "start": 90.292,
+   "end": 98.908,
    "file": "projects/sem-marca-v2/input/clips/n10_7c5589c3e1_t1.30.wav"
   },
   {
    "id": "n11",
    "spk": "NARRADOR",
    "text": "[rápido, crescendo] Te levam pra Academia Real, pro Teste do Cristal. O garoto antes de você encosta, e o cristal pega fogo. Sua vez. Você encosta... e nada. Nem uma faísca. A sala inteira cai na gargalhada.",
-   "start": 68.072,
-   "end": 77.185,
+   "start": 99.058,
+   "end": 108.171,
    "file": "projects/sem-marca-v2/input/clips/n11_34885beeb0_t1.30.wav"
   },
   {
    "id": "n12",
    "spk": "NARRADOR",
    "text": "[sério, firme] Até que o diretor bate o cajado no chão, e todo mundo cala a boca. Ele chega perto e fala baixinho, só pra você:",
-   "start": 77.335,
-   "end": 83.427,
+   "start": 108.321,
+   "end": 114.414,
    "file": "projects/sem-marca-v2/input/clips/n12_353091c93d_t1.30.wav"
   },
   {
    "id": "d1",
    "spk": "DIRETOR",
    "text": "[sussurrando, grave] O último sem marca foi o meu irmão. Exilaram ele pro sul, pras terras do Rei Demônio. Ele nunca mais voltou.",
-   "start": 83.577,
-   "end": 90.224,
+   "start": 114.564,
+   "end": 121.21,
    "file": "projects/sem-marca-v2/input/clips/d1_32fa05d3f8_t1.12.wav"
   },
   {
    "id": "n13",
    "spk": "NARRADOR",
    "text": "[misterioso, lento] E aí você escuta um miado. Em cima da estante, te encarando... o mesmo gato que você salvou.",
-   "start": 90.524,
-   "end": 96.445,
+   "start": 121.51,
+   "end": 127.432,
    "file": "projects/sem-marca-v2/input/clips/n13_eb900ef5f0_t1.30.wav"
   },
   {
    "id": "cta",
    "spk": "NARRADOR",
    "text": "[animado] Segue a página pra ver o episódio dois!",
-   "start": 99.645,
-   "end": 101.62,
+   "start": 130.632,
+   "end": 132.606,
    "file": "projects/sem-marca-v2/input/clips/cta_50881f9db3_t1.30.wav"
   }
  ]

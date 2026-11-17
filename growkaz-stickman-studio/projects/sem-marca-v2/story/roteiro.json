@@ -93,7 +93,43 @@
    "id": "n09",
    "spk": "NARRADOR",
    "gap": 0.1,
-   "text": "[empolgado, rápido] E a cor é o elemento. Vermelha, fogo. Azul, água. Marrom, terra. Branca, vento. Amarela, raio. E a dourada, a mais rara de todas, só o próprio Rei Mago tem."
+   "text": "[empolgado, rápido] E a cor é o elemento. E repara: não é truque, é física."
+  },
+  {
+   "id": "n09a",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[rápido, explicando] Vermelha, fogo. O mago junta calor, combustível e oxigênio, o tal triângulo do fogo, e solta tudo num jato."
+  },
+  {
+   "id": "n09b",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[rápido, explicando] Azul, água. O ar tá cheio de vapor invisível. Ele esfria o ar em volta da mão, o vapor condensa e vira água, igual copo gelado suando."
+  },
+  {
+   "id": "n09c",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[rápido, explicando] Marrom, terra. Ele faz o chão vibrar, os grãos se apertam, e a terra sobe dura feito pedra."
+  },
+  {
+   "id": "n09d",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[rápido, explicando] Branca, vento. Vento é só ar correndo da pressão alta pra pressão baixa. Ele cria essa diferença, e o ar sai empurrando até navio."
+  },
+  {
+   "id": "n09e",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[rápido, crescendo] Amarela, raio. Ele separa cargas elétricas, igual nuvem de tempestade, e a descarga chega a uns trinta mil graus. Cinco vezes mais quente que a superfície do Sol."
+  },
+  {
+   "id": "n09f",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[misterioso] E a dourada, a mais rara de todas, ninguém sabe explicar. Só o próprio Rei Mago tem."
   },
   {
    "id": "n10",

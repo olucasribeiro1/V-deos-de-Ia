@@ -28,31 +28,41 @@
 [00:45.90 -> 00:46.92] Soldado, ferreiro.
 [00:46.96 -> 00:47.39] Três?
 [00:47.41 -> 00:49.53] Trabalho pesado, e ninguém nem olha na sua cara.
-[00:49.69 -> 00:50.84] E a cor é o elemento.
-[00:50.92 -> 00:51.94] Vermelha, fogo.
-[00:51.97 -> 00:52.86] Azul, água.
-[00:52.89 -> 00:53.84] Marrom, terra.
-[00:53.86 -> 00:54.71] Branca, vento.
-[00:54.74 -> 00:55.75] Amarela, raio.
-[00:55.77 -> 00:59.11] E a dourada, a mais rara de todas, só o próprio Rei Mago tem.
-[00:59.37 -> 01:01.43] Aí você corre até um lago, se olha na água...
-[01:01.46 -> 01:02.11] e nada.
-[01:02.14 -> 01:02.84] Rosto liso.
-[01:02.88 -> 01:03.74] Nenhuma marca.
-[01:03.80 -> 01:04.44] Ferrou.
-[01:04.47 -> 01:07.92] Na cidade, todo mundo te encara: criança aponta, guarda já põe a mão na lança.
-[01:08.13 -> 01:10.13] Te levam pra Academia Real, pro Teste do Cristal.
-[01:10.29 -> 01:12.66] O garoto antes de você encosta, e o cristal pega fogo.
-[01:12.69 -> 01:13.30] Sua vez.
-[01:13.36 -> 01:14.07] Você encosta...
-[01:14.10 -> 01:14.75] e nada.
-[01:14.78 -> 01:15.67] Nem uma faísca.
-[01:15.70 -> 01:17.19] A sala inteira cai na gargalhada.
-[01:17.40 -> 01:20.87] Até que o diretor bate o cajado no chão, e todo mundo cala a boca.
-[01:20.90 -> 01:25.94] Ele chega perto e fala baixinho, só pra você: O último sem marca foi o meu irmão.
-[01:26.04 -> 01:28.94] Exilaram ele pro sul, pras terras do Rei Demônio.
-[01:29.04 -> 01:30.22] Ele nunca mais voltou.
-[01:30.65 -> 01:32.34] E aí você escuta um miado.
-[01:32.56 -> 01:34.65] Em cima da estante, te encarando...
-[01:34.74 -> 01:36.44] o mesmo gato que você salvou.
-[01:39.77 -> 01:41.61] Segue a página pra ver o episódio dois!
+[00:49.69 -> 00:50.96] E a cor é o elemento.
+[00:50.99 -> 00:52.96] E repara: não é truque, é física.
+[00:53.29 -> 00:54.16] Vermelha, fogo.
+[00:54.31 -> 00:58.94] O mago junta calor, combustível e oxigênio, o tal triângulo do fogo, e solta tudo num jato.
+[00:59.23 -> 00:59.98] Azul, água.
+[01:00.10 -> 01:01.58] O ar tá cheio de vapor invisível.
+[01:01.70 -> 01:05.53] Ele esfria o ar em volta da mão, o vapor condensa e vira água, igual copo gelado suando.
+[01:05.82 -> 01:06.61] Marrom, terra.
+[01:06.76 -> 01:10.58] Ele faz o chão vibrar, os grãos se apertam, e a terra sobe dura feito pedra.
+[01:10.92 -> 01:11.84] Branca, vento.
+[01:11.87 -> 01:14.33] Vento é só ar correndo da pressão alta pra pressão baixa.
+[01:14.40 -> 01:16.73] Ele cria essa diferença, e o ar sai empurrando até navio.
+[01:16.97 -> 01:17.91] Amarela, raio.
+[01:18.03 -> 01:22.49] Ele separa cargas elétricas, igual nuvem de tempestade, e a descarga chega a uns trinta mil graus.
+[01:22.52 -> 01:24.61] Cinco vezes mais quente que a superfície do Sol.
+[01:24.80 -> 01:28.68] E a dourada, a mais rara de todas, ninguém sabe explicar.
+[01:28.74 -> 01:30.09] Só o próprio Rei Mago tem.
+[01:30.35 -> 01:32.42] Aí você corre até um lago, se olha na água...
+[01:32.45 -> 01:33.09] e nada.
+[01:33.12 -> 01:33.83] Rosto liso.
+[01:33.86 -> 01:34.72] Nenhuma marca.
+[01:34.78 -> 01:35.43] Ferrou.
+[01:35.46 -> 01:38.91] Na cidade, todo mundo te encara: criança aponta, guarda já põe a mão na lança.
+[01:39.11 -> 01:41.12] Te levam pra Academia Real, pro Teste do Cristal.
+[01:41.27 -> 01:43.64] O garoto antes de você encosta, e o cristal pega fogo.
+[01:43.67 -> 01:44.29] Sua vez.
+[01:44.35 -> 01:45.06] Você encosta...
+[01:45.09 -> 01:45.73] e nada.
+[01:45.77 -> 01:46.66] Nem uma faísca.
+[01:46.69 -> 01:48.17] A sala inteira cai na gargalhada.
+[01:48.38 -> 01:51.86] Até que o diretor bate o cajado no chão, e todo mundo cala a boca.
+[01:51.89 -> 01:56.92] Ele chega perto e fala baixinho, só pra você: O último sem marca foi o meu irmão.
+[01:57.03 -> 01:59.92] Exilaram ele pro sul, pras terras do Rei Demônio.
+[02:00.03 -> 02:01.21] Ele nunca mais voltou.
+[02:01.63 -> 02:03.33] E aí você escuta um miado.
+[02:03.54 -> 02:05.63] Em cima da estante, te encarando...
+[02:05.73 -> 02:07.43] o mesmo gato que você salvou.
+[02:10.75 -> 02:12.60] Segue a página pra ver o episódio dois!

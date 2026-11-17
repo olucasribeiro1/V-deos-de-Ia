@@ -182,169 +182,229 @@
  {
   "i": 30,
   "start": 49.69,
-  "end": 50.843,
+  "end": 50.956,
   "text": "E a cor é o elemento."
  },
  {
   "i": 31,
-  "start": 50.925,
-  "end": 51.94,
-  "text": "Vermelha, fogo."
+  "start": 50.986,
+  "end": 52.962,
+  "text": "E repara: não é truque, é física."
  },
  {
   "i": 32,
-  "start": 51.971,
-  "end": 52.863,
-  "text": "Azul, água."
+  "start": 53.294,
+  "end": 54.159,
+  "text": "Vermelha, fogo."
  },
  {
   "i": 33,
-  "start": 52.894,
-  "end": 53.838,
-  "text": "Marrom, terra."
+  "start": 54.313,
+  "end": 58.936,
+  "text": "O mago junta calor, combustível e oxigênio, o tal triângulo do fogo, e solta tudo num jato."
  },
  {
   "i": 34,
-  "start": 53.858,
-  "end": 54.71,
-  "text": "Branca, vento."
+  "start": 59.225,
+  "end": 59.979,
+  "text": "Azul, água."
  },
  {
   "i": 35,
-  "start": 54.74,
-  "end": 55.746,
-  "text": "Amarela, raio."
+  "start": 60.102,
+  "end": 61.579,
+  "text": "O ar tá cheio de vapor invisível."
  },
  {
   "i": 36,
-  "start": 55.766,
-  "end": 59.106,
-  "text": "E a dourada, a mais rara de todas, só o próprio Rei Mago tem."
+  "start": 61.702,
+  "end": 65.532,
+  "text": "Ele esfria o ar em volta da mão, o vapor condensa e vira água, igual copo gelado suando."
  },
  {
   "i": 37,
-  "start": 59.368,
-  "end": 61.429,
-  "text": "Aí você corre até um lago, se olha na água..."
+  "start": 65.824,
+  "end": 66.606,
+  "text": "Marrom, terra."
  },
  {
   "i": 38,
-  "start": 61.46,
-  "end": 62.106,
-  "text": "e nada."
+  "start": 66.76,
+  "end": 70.575,
+  "text": "Ele faz o chão vibrar, os grãos se apertam, e a terra sobe dura feito pedra."
  },
  {
   "i": 39,
-  "start": 62.137,
-  "end": 62.845,
-  "text": "Rosto liso."
+  "start": 70.916,
+  "end": 71.842,
+  "text": "Branca, vento."
  },
  {
   "i": 40,
-  "start": 62.875,
-  "end": 63.737,
-  "text": "Nenhuma marca."
+  "start": 71.873,
+  "end": 74.334,
+  "text": "Vento é só ar correndo da pressão alta pra pressão baixa."
  },
  {
   "i": 41,
-  "start": 63.798,
-  "end": 64.445,
-  "text": "Ferrou."
+  "start": 74.396,
+  "end": 76.734,
+  "text": "Ele cria essa diferença, e o ar sai empurrando até navio."
  },
  {
   "i": 42,
-  "start": 64.475,
-  "end": 67.922,
-  "text": "Na cidade, todo mundo te encara: criança aponta, guarda já põe a mão na lança."
+  "start": 76.975,
+  "end": 77.907,
+  "text": "Amarela, raio."
  },
  {
   "i": 43,
-  "start": 68.129,
-  "end": 70.134,
-  "text": "Te levam pra Academia Real, pro Teste do Cristal."
+  "start": 78.031,
+  "end": 82.492,
+  "text": "Ele separa cargas elétricas, igual nuvem de tempestade, e a descarga chega a uns trinta mil graus."
  },
  {
   "i": 44,
-  "start": 70.287,
-  "end": 72.657,
-  "text": "O garoto antes de você encosta, e o cristal pega fogo."
+  "start": 82.523,
+  "end": 84.615,
+  "text": "Cinco vezes mais quente que a superfície do Sol."
  },
  {
   "i": 45,
-  "start": 72.687,
-  "end": 73.303,
-  "text": "Sua vez."
+  "start": 84.801,
+  "end": 88.678,
+  "text": "E a dourada, a mais rara de todas, ninguém sabe explicar."
  },
  {
   "i": 46,
-  "start": 73.364,
-  "end": 74.072,
-  "text": "Você encosta..."
+  "start": 88.74,
+  "end": 90.092,
+  "text": "Só o próprio Rei Mago tem."
  },
  {
   "i": 47,
-  "start": 74.103,
-  "end": 74.749,
-  "text": "e nada."
+  "start": 90.354,
+  "end": 92.415,
+  "text": "Aí você corre até um lago, se olha na água..."
  },
  {
   "i": 48,
-  "start": 74.78,
-  "end": 75.672,
-  "text": "Nem uma faísca."
+  "start": 92.446,
+  "end": 93.092,
+  "text": "e nada."
  },
  {
   "i": 49,
-  "start": 75.703,
-  "end": 77.185,
-  "text": "A sala inteira cai na gargalhada."
+  "start": 93.123,
+  "end": 93.831,
+  "text": "Rosto liso."
  },
  {
   "i": 50,
-  "start": 77.397,
-  "end": 80.874,
-  "text": "Até que o diretor bate o cajado no chão, e todo mundo cala a boca."
+  "start": 93.862,
+  "end": 94.723,
+  "text": "Nenhuma marca."
  },
  {
   "i": 51,
-  "start": 80.904,
-  "end": 85.935,
-  "text": "Ele chega perto e fala baixinho, só pra você: O último sem marca foi o meu irmão."
+  "start": 94.785,
+  "end": 95.431,
+  "text": "Ferrou."
  },
  {
   "i": 52,
-  "start": 86.042,
-  "end": 88.935,
-  "text": "Exilaram ele pro sul, pras terras do Rei Demônio."
+  "start": 95.462,
+  "end": 98.908,
+  "text": "Na cidade, todo mundo te encara: criança aponta, guarda já põe a mão na lança."
  },
  {
   "i": 53,
-  "start": 89.042,
-  "end": 90.224,
-  "text": "Ele nunca mais voltou."
+  "start": 99.115,
+  "end": 101.12,
+  "text": "Te levam pra Academia Real, pro Teste do Cristal."
  },
  {
   "i": 54,
-  "start": 90.647,
-  "end": 92.34,
-  "text": "E aí você escuta um miado."
+  "start": 101.274,
+  "end": 103.643,
+  "text": "O garoto antes de você encosta, e o cristal pega fogo."
  },
  {
   "i": 55,
-  "start": 92.555,
-  "end": 94.647,
-  "text": "Em cima da estante, te encarando..."
+  "start": 103.674,
+  "end": 104.289,
+  "text": "Sua vez."
  },
  {
   "i": 56,
-  "start": 94.74,
-  "end": 96.445,
-  "text": "o mesmo gato que você salvou."
+  "start": 104.351,
+  "end": 105.058,
+  "text": "Você encosta..."
  },
  {
   "i": 57,
-  "start": 99.769,
-  "end": 101.615,
+  "start": 105.089,
+  "end": 105.735,
+  "text": "e nada."
+ },
+ {
+  "i": 58,
+  "start": 105.766,
+  "end": 106.658,
+  "text": "Nem uma faísca."
+ },
+ {
+  "i": 59,
+  "start": 106.689,
+  "end": 108.171,
+  "text": "A sala inteira cai na gargalhada."
+ },
+ {
+  "i": 60,
+  "start": 108.383,
+  "end": 111.86,
+  "text": "Até que o diretor bate o cajado no chão, e todo mundo cala a boca."
+ },
+ {
+  "i": 61,
+  "start": 111.891,
+  "end": 116.921,
+  "text": "Ele chega perto e fala baixinho, só pra você: O último sem marca foi o meu irmão."
+ },
+ {
+  "i": 62,
+  "start": 117.028,
+  "end": 119.921,
+  "text": "Exilaram ele pro sul, pras terras do Rei Demônio."
+ },
+ {
+  "i": 63,
+  "start": 120.028,
+  "end": 121.21,
+  "text": "Ele nunca mais voltou."
+ },
+ {
+  "i": 64,
+  "start": 121.633,
+  "end": 123.326,
+  "text": "E aí você escuta um miado."
+ },
+ {
+  "i": 65,
+  "start": 123.541,
+  "end": 125.633,
+  "text": "Em cima da estante, te encarando..."
+ },
+ {
+  "i": 66,
+  "start": 125.726,
+  "end": 127.432,
+  "text": "o mesmo gato que você salvou."
+ },
+ {
+  "i": 67,
+  "start": 130.755,
+  "end": 132.601,
   "text": "Segue a página pra ver o episódio dois!"
  }
 ]
