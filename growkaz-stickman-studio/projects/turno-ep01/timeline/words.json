@@ -1,0 +1,1895 @@
+{
+ "source": "estimado",
+ "words": [
+  {
+   "word": "Mais",
+   "start": 0.8,
+   "end": 1.099,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "uma",
+   "start": 1.132,
+   "end": 1.415,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "noite",
+   "start": 1.446,
+   "end": 1.761,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "de",
+   "start": 1.796,
+   "end": 2.062,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "serviço.",
+   "start": 2.092,
+   "end": 2.439,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Três",
+   "start": 2.778,
+   "end": 3.077,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "da",
+   "start": 3.11,
+   "end": 3.376,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "manhã,",
+   "start": 3.406,
+   "end": 3.721,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "cafeteira",
+   "start": 3.876,
+   "end": 4.256,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "pingando,",
+   "start": 4.298,
+   "end": 4.662,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "geladeira",
+   "start": 4.822,
+   "end": 5.202,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "zumbindo.",
+   "start": 5.244,
+   "end": 5.608,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Eu",
+   "start": 5.948,
+   "end": 6.214,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "repondo",
+   "start": 6.244,
+   "end": 6.591,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "bolacha...",
+   "start": 6.63,
+   "end": 6.977,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "e",
+   "start": 7.466,
+   "end": 7.716,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "o",
+   "start": 7.744,
+   "end": 7.994,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Tico",
+   "start": 8.022,
+   "end": 8.321,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "fazendo",
+   "start": 8.354,
+   "end": 8.701,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "o",
+   "start": 8.74,
+   "end": 8.99,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "que",
+   "start": 9.018,
+   "end": 9.301,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "ele",
+   "start": 9.332,
+   "end": 9.615,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "faz",
+   "start": 9.646,
+   "end": 9.929,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "de",
+   "start": 9.96,
+   "end": 10.226,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "melhor.",
+   "start": 10.256,
+   "end": 10.587,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Coxinha",
+   "start": 11.224,
+   "end": 11.571,
+   "spk": "TICO"
+  },
+  {
+   "word": "que",
+   "start": 11.61,
+   "end": 11.893,
+   "spk": "TICO"
+  },
+  {
+   "word": "passa",
+   "start": 11.924,
+   "end": 12.239,
+   "spk": "TICO"
+  },
+  {
+   "word": "da",
+   "start": 12.274,
+   "end": 12.54,
+   "spk": "TICO"
+  },
+  {
+   "word": "meia-noite",
+   "start": 12.57,
+   "end": 12.966,
+   "spk": "TICO"
+  },
+  {
+   "word": "é",
+   "start": 13.01,
+   "end": 13.26,
+   "spk": "TICO"
+  },
+  {
+   "word": "perda,",
+   "start": 13.288,
+   "end": 13.603,
+   "spk": "TICO"
+  },
+  {
+   "word": "Lucas.",
+   "start": 13.758,
+   "end": 14.073,
+   "spk": "TICO"
+  },
+  {
+   "word": "Eu",
+   "start": 14.408,
+   "end": 14.674,
+   "spk": "TICO"
+  },
+  {
+   "word": "tô",
+   "start": 14.704,
+   "end": 14.97,
+   "spk": "TICO"
+  },
+  {
+   "word": "salvando",
+   "start": 15.0,
+   "end": 15.364,
+   "spk": "TICO"
+  },
+  {
+   "word": "a",
+   "start": 15.404,
+   "end": 15.654,
+   "spk": "TICO"
+  },
+  {
+   "word": "empresa.",
+   "start": 15.682,
+   "end": 16.029,
+   "spk": "TICO"
+  },
+  {
+   "word": "Só",
+   "start": 16.868,
+   "end": 17.134,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "que",
+   "start": 17.164,
+   "end": 17.447,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "naquela",
+   "start": 17.478,
+   "end": 17.825,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "noite",
+   "start": 17.864,
+   "end": 18.179,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "a",
+   "start": 18.214,
+   "end": 18.464,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "BR",
+   "start": 18.492,
+   "end": 18.758,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "tava",
+   "start": 18.788,
+   "end": 19.087,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "quieta",
+   "start": 19.12,
+   "end": 19.451,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "demais.",
+   "start": 19.488,
+   "end": 19.819,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Duas",
+   "start": 20.156,
+   "end": 20.455,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "horas",
+   "start": 20.488,
+   "end": 20.803,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "sem",
+   "start": 20.838,
+   "end": 21.121,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "passar",
+   "start": 21.152,
+   "end": 21.483,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "um",
+   "start": 21.52,
+   "end": 21.786,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "caminhão.",
+   "start": 21.816,
+   "end": 22.18,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Pô,",
+   "start": 22.82,
+   "end": 23.086,
+   "spk": "TICO"
+  },
+  {
+   "word": "até",
+   "start": 23.236,
+   "end": 23.519,
+   "spk": "TICO"
+  },
+  {
+   "word": "os",
+   "start": 23.55,
+   "end": 23.816,
+   "spk": "TICO"
+  },
+  {
+   "word": "caminhoneiros",
+   "start": 23.846,
+   "end": 24.291,
+   "spk": "TICO"
+  },
+  {
+   "word": "tiraram",
+   "start": 24.34,
+   "end": 24.687,
+   "spk": "TICO"
+  },
+  {
+   "word": "folga.",
+   "start": 24.726,
+   "end": 25.041,
+   "spk": "TICO"
+  },
+  {
+   "word": "Só",
+   "start": 25.376,
+   "end": 25.642,
+   "spk": "TICO"
+  },
+  {
+   "word": "nós",
+   "start": 25.672,
+   "end": 25.955,
+   "spk": "TICO"
+  },
+  {
+   "word": "dois",
+   "start": 25.986,
+   "end": 26.285,
+   "spk": "TICO"
+  },
+  {
+   "word": "de",
+   "start": 26.318,
+   "end": 26.584,
+   "spk": "TICO"
+  },
+  {
+   "word": "otário",
+   "start": 26.614,
+   "end": 26.945,
+   "spk": "TICO"
+  },
+  {
+   "word": "aqui.",
+   "start": 26.982,
+   "end": 27.281,
+   "spk": "TICO"
+  },
+  {
+   "word": "Aí",
+   "start": 28.214,
+   "end": 28.48,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "passou",
+   "start": 28.51,
+   "end": 28.841,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "um",
+   "start": 28.878,
+   "end": 29.144,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "carro.",
+   "start": 29.174,
+   "end": 29.489,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Na",
+   "start": 29.824,
+   "end": 30.09,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "contramão.",
+   "start": 30.12,
+   "end": 30.5,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Sem",
+   "start": 30.842,
+   "end": 31.125,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "farol.",
+   "start": 31.156,
+   "end": 31.471,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Arrastando",
+   "start": 31.806,
+   "end": 32.202,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "alguma",
+   "start": 32.246,
+   "end": 32.577,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "coisa",
+   "start": 32.614,
+   "end": 32.929,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "no",
+   "start": 32.964,
+   "end": 33.23,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "para-choque.",
+   "start": 33.26,
+   "end": 33.672,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Isso",
+   "start": 34.318,
+   "end": 34.617,
+   "spk": "TICO"
+  },
+  {
+   "word": "aí",
+   "start": 34.65,
+   "end": 34.916,
+   "spk": "TICO"
+  },
+  {
+   "word": "era",
+   "start": 34.946,
+   "end": 35.229,
+   "spk": "TICO"
+  },
+  {
+   "word": "um...",
+   "start": 35.26,
+   "end": 35.526,
+   "spk": "TICO"
+  },
+  {
+   "word": "saco",
+   "start": 36.006,
+   "end": 36.305,
+   "spk": "TICO"
+  },
+  {
+   "word": "de",
+   "start": 36.338,
+   "end": 36.604,
+   "spk": "TICO"
+  },
+  {
+   "word": "lixo.",
+   "start": 36.634,
+   "end": 36.933,
+   "spk": "TICO"
+  },
+  {
+   "word": "Né?",
+   "start": 37.266,
+   "end": 37.532,
+   "spk": "TICO"
+  },
+  {
+   "word": "Não",
+   "start": 38.262,
+   "end": 38.545,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "era.",
+   "start": 38.576,
+   "end": 38.859,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Alerta",
+   "start": 39.89,
+   "end": 40.221,
+   "spk": "TV"
+  },
+  {
+   "word": "do",
+   "start": 40.258,
+   "end": 40.524,
+   "spk": "TV"
+  },
+  {
+   "word": "Ministério",
+   "start": 40.554,
+   "end": 40.95,
+   "spk": "TV"
+  },
+  {
+   "word": "da",
+   "start": 40.994,
+   "end": 41.26,
+   "spk": "TV"
+  },
+  {
+   "word": "Saúde.",
+   "start": 41.29,
+   "end": 41.605,
+   "spk": "TV"
+  },
+  {
+   "word": "Surtos",
+   "start": 41.94,
+   "end": 42.271,
+   "spk": "TV"
+  },
+  {
+   "word": "de",
+   "start": 42.308,
+   "end": 42.574,
+   "spk": "TV"
+  },
+  {
+   "word": "agressividade",
+   "start": 42.604,
+   "end": 43.049,
+   "spk": "TV"
+  },
+  {
+   "word": "e",
+   "start": 43.098,
+   "end": 43.348,
+   "spk": "TV"
+  },
+  {
+   "word": "febre",
+   "start": 43.376,
+   "end": 43.691,
+   "spk": "TV"
+  },
+  {
+   "word": "alta",
+   "start": 43.726,
+   "end": 44.025,
+   "spk": "TV"
+  },
+  {
+   "word": "na",
+   "start": 44.058,
+   "end": 44.324,
+   "spk": "TV"
+  },
+  {
+   "word": "região",
+   "start": 44.354,
+   "end": 44.685,
+   "spk": "TV"
+  },
+  {
+   "word": "metropolitana.",
+   "start": 44.722,
+   "end": 45.167,
+   "spk": "TV"
+  },
+  {
+   "word": "Evitem",
+   "start": 45.516,
+   "end": 45.847,
+   "spk": "TV"
+  },
+  {
+   "word": "contato",
+   "start": 45.884,
+   "end": 46.231,
+   "spk": "TV"
+  },
+  {
+   "word": "físico.",
+   "start": 46.27,
+   "end": 46.601,
+   "spk": "TV"
+  },
+  {
+   "word": "Permaneçam",
+   "start": 46.938,
+   "end": 47.334,
+   "spk": "TV"
+  },
+  {
+   "word": "em",
+   "start": 47.378,
+   "end": 47.644,
+   "spk": "TV"
+  },
+  {
+   "word": "locais",
+   "start": 47.674,
+   "end": 48.005,
+   "spk": "TV"
+  },
+  {
+   "word": "fechados.",
+   "start": 48.042,
+   "end": 48.406,
+   "spk": "TV"
+  },
+  {
+   "word": "Mais",
+   "start": 49.046,
+   "end": 49.345,
+   "spk": "TICO"
+  },
+  {
+   "word": "uma",
+   "start": 49.378,
+   "end": 49.661,
+   "spk": "TICO"
+  },
+  {
+   "word": "gripe.",
+   "start": 49.692,
+   "end": 50.007,
+   "spk": "TICO"
+  },
+  {
+   "word": "Na",
+   "start": 50.342,
+   "end": 50.608,
+   "spk": "TICO"
+  },
+  {
+   "word": "última",
+   "start": 50.638,
+   "end": 50.969,
+   "spk": "TICO"
+  },
+  {
+   "word": "eu",
+   "start": 51.006,
+   "end": 51.272,
+   "spk": "TICO"
+  },
+  {
+   "word": "fiquei",
+   "start": 51.302,
+   "end": 51.633,
+   "spk": "TICO"
+  },
+  {
+   "word": "rico",
+   "start": 51.67,
+   "end": 51.969,
+   "spk": "TICO"
+  },
+  {
+   "word": "vendendo",
+   "start": 52.002,
+   "end": 52.366,
+   "spk": "TICO"
+  },
+  {
+   "word": "álcool",
+   "start": 52.406,
+   "end": 52.737,
+   "spk": "TICO"
+  },
+  {
+   "word": "em",
+   "start": 52.774,
+   "end": 53.04,
+   "spk": "TICO"
+  },
+  {
+   "word": "gel.",
+   "start": 53.07,
+   "end": 53.353,
+   "spk": "TICO"
+  },
+  {
+   "word": "Aí",
+   "start": 54.284,
+   "end": 54.55,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "o",
+   "start": 54.58,
+   "end": 54.83,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Seu",
+   "start": 54.858,
+   "end": 55.141,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Alberto",
+   "start": 55.172,
+   "end": 55.519,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "entrou.",
+   "start": 55.558,
+   "end": 55.889,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Toda",
+   "start": 56.226,
+   "end": 56.525,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "semana",
+   "start": 56.558,
+   "end": 56.889,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "ele",
+   "start": 56.926,
+   "end": 57.209,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "para",
+   "start": 57.24,
+   "end": 57.539,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "aqui.",
+   "start": 57.572,
+   "end": 57.871,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Mas",
+   "start": 58.204,
+   "end": 58.487,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "ele",
+   "start": 58.518,
+   "end": 58.801,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "tava",
+   "start": 58.832,
+   "end": 59.131,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "branco.",
+   "start": 59.164,
+   "end": 59.495,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Suando.",
+   "start": 59.832,
+   "end": 60.163,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Com",
+   "start": 60.5,
+   "end": 60.783,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "um",
+   "start": 60.814,
+   "end": 61.08,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "pano",
+   "start": 61.11,
+   "end": 61.409,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "amarrado",
+   "start": 61.442,
+   "end": 61.806,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "no",
+   "start": 61.846,
+   "end": 62.112,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "braço,",
+   "start": 62.142,
+   "end": 62.457,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "encharcado.",
+   "start": 62.612,
+   "end": 63.008,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Me",
+   "start": 63.652,
+   "end": 63.918,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "vê",
+   "start": 63.948,
+   "end": 64.214,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "um",
+   "start": 64.244,
+   "end": 64.51,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "café,",
+   "start": 64.54,
+   "end": 64.839,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "filho.",
+   "start": 64.992,
+   "end": 65.307,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "Um",
+   "start": 65.642,
+   "end": 65.908,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "louco",
+   "start": 65.938,
+   "end": 66.253,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "tentou",
+   "start": 66.288,
+   "end": 66.619,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "abrir",
+   "start": 66.656,
+   "end": 66.971,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "a",
+   "start": 67.006,
+   "end": 67.256,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "porta",
+   "start": 67.284,
+   "end": 67.599,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "do",
+   "start": 67.634,
+   "end": 67.9,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "caminhão",
+   "start": 67.93,
+   "end": 68.294,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "no",
+   "start": 68.334,
+   "end": 68.6,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "pedágio.",
+   "start": 68.63,
+   "end": 68.977,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "Me",
+   "start": 69.316,
+   "end": 69.582,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "mordeu,",
+   "start": 69.612,
+   "end": 69.943,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "acredita?",
+   "start": 70.1,
+   "end": 70.464,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "Seu",
+   "start": 71.104,
+   "end": 71.387,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Alberto,",
+   "start": 71.418,
+   "end": 71.765,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "o",
+   "start": 71.924,
+   "end": 72.174,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "senhor",
+   "start": 72.202,
+   "end": 72.533,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "precisa",
+   "start": 72.57,
+   "end": 72.917,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "de",
+   "start": 72.956,
+   "end": 73.222,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "hospital.",
+   "start": 73.252,
+   "end": 73.616,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Hospital",
+   "start": 74.356,
+   "end": 74.72,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "é",
+   "start": 74.76,
+   "end": 75.01,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "na",
+   "start": 75.038,
+   "end": 75.304,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "cidade,",
+   "start": 75.334,
+   "end": 75.665,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "filho.",
+   "start": 75.822,
+   "end": 76.137,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "E",
+   "start": 76.472,
+   "end": 76.722,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "a",
+   "start": 76.75,
+   "end": 77.0,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "cidade...",
+   "start": 77.028,
+   "end": 77.359,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "tá",
+   "start": 77.846,
+   "end": 78.112,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "pior",
+   "start": 78.142,
+   "end": 78.441,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "que",
+   "start": 78.474,
+   "end": 78.757,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "eu.",
+   "start": 78.788,
+   "end": 79.054,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "Ele",
+   "start": 79.984,
+   "end": 80.267,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "pagou",
+   "start": 80.298,
+   "end": 80.613,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "o",
+   "start": 80.648,
+   "end": 80.898,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "café",
+   "start": 80.926,
+   "end": 81.225,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "e",
+   "start": 81.258,
+   "end": 81.508,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "foi",
+   "start": 81.536,
+   "end": 81.819,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "embora.",
+   "start": 81.85,
+   "end": 82.181,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Dois",
+   "start": 82.518,
+   "end": 82.817,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "minutos",
+   "start": 82.85,
+   "end": 83.197,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "depois...",
+   "start": 83.236,
+   "end": 83.567,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Mano...",
+   "start": 85.654,
+   "end": 85.953,
+   "spk": "TICO"
+  },
+  {
+   "word": "isso",
+   "start": 86.436,
+   "end": 86.735,
+   "spk": "TICO"
+  },
+  {
+   "word": "foi",
+   "start": 86.768,
+   "end": 87.051,
+   "spk": "TICO"
+  },
+  {
+   "word": "ele.",
+   "start": 87.082,
+   "end": 87.365,
+   "spk": "TICO"
+  },
+  {
+   "word": "Quando",
+   "start": 88.396,
+   "end": 88.727,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "a",
+   "start": 88.764,
+   "end": 89.014,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "fumaça",
+   "start": 89.042,
+   "end": 89.373,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "baixou,",
+   "start": 89.41,
+   "end": 89.741,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "eu",
+   "start": 89.898,
+   "end": 90.164,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "vi.",
+   "start": 90.194,
+   "end": 90.46,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Na",
+   "start": 90.79,
+   "end": 91.056,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "beira",
+   "start": 91.086,
+   "end": 91.401,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "do",
+   "start": 91.436,
+   "end": 91.702,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "mato,",
+   "start": 91.732,
+   "end": 92.031,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "bem",
+   "start": 92.184,
+   "end": 92.467,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "onde",
+   "start": 92.498,
+   "end": 92.797,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "a",
+   "start": 92.83,
+   "end": 93.08,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "luz",
+   "start": 93.108,
+   "end": 93.391,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "do",
+   "start": 93.422,
+   "end": 93.688,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "posto",
+   "start": 93.718,
+   "end": 94.033,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "acaba...",
+   "start": 94.068,
+   "end": 94.383,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "tinha",
+   "start": 94.868,
+   "end": 95.183,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "gente",
+   "start": 95.218,
+   "end": 95.533,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "parada.",
+   "start": 95.568,
+   "end": 95.899,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Olhando",
+   "start": 96.236,
+   "end": 96.583,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "pra",
+   "start": 96.622,
+   "end": 96.905,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "gente.",
+   "start": 96.936,
+   "end": 97.251,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Nenhum",
+   "start": 97.586,
+   "end": 97.917,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "passava",
+   "start": 97.954,
+   "end": 98.301,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "da",
+   "start": 98.34,
+   "end": 98.606,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "luz.",
+   "start": 98.636,
+   "end": 98.919,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Lucas...",
+   "start": 99.85,
+   "end": 100.165,
+   "spk": "TICO"
+  },
+  {
+   "word": "a",
+   "start": 100.65,
+   "end": 100.9,
+   "spk": "TICO"
+  },
+  {
+   "word": "lâmpada",
+   "start": 100.928,
+   "end": 101.275,
+   "spk": "TICO"
+  },
+  {
+   "word": "daquele",
+   "start": 101.314,
+   "end": 101.661,
+   "spk": "TICO"
+  },
+  {
+   "word": "poste",
+   "start": 101.7,
+   "end": 102.015,
+   "spk": "TICO"
+  },
+  {
+   "word": "tá",
+   "start": 102.05,
+   "end": 102.316,
+   "spk": "TICO"
+  },
+  {
+   "word": "queimando.",
+   "start": 102.346,
+   "end": 102.726,
+   "spk": "TICO"
+  },
+  {
+   "word": "Uma",
+   "start": 103.868,
+   "end": 104.151,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "hora",
+   "start": 104.182,
+   "end": 104.481,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "depois,",
+   "start": 104.514,
+   "end": 104.845,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "bateram",
+   "start": 105.002,
+   "end": 105.349,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "no",
+   "start": 105.388,
+   "end": 105.654,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "vidro.",
+   "start": 105.684,
+   "end": 105.999,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Era",
+   "start": 106.334,
+   "end": 106.617,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "o",
+   "start": 106.648,
+   "end": 106.898,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Seu",
+   "start": 106.926,
+   "end": 107.209,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Alberto.",
+   "start": 107.24,
+   "end": 107.587,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Inteiro.",
+   "start": 107.926,
+   "end": 108.273,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Sem",
+   "start": 108.612,
+   "end": 108.895,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "sangue.",
+   "start": 108.926,
+   "end": 109.257,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Sem",
+   "start": 109.594,
+   "end": 109.877,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "curativo.",
+   "start": 109.908,
+   "end": 110.272,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Me",
+   "start": 111.112,
+   "end": 111.378,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "vê",
+   "start": 111.408,
+   "end": 111.674,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "um",
+   "start": 111.704,
+   "end": 111.97,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "café,",
+   "start": 112.0,
+   "end": 112.299,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "filho.",
+   "start": 112.452,
+   "end": 112.767,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "Um",
+   "start": 113.102,
+   "end": 113.368,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "louco",
+   "start": 113.398,
+   "end": 113.713,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "tentou",
+   "start": 113.748,
+   "end": 114.079,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "abrir",
+   "start": 114.116,
+   "end": 114.431,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "a",
+   "start": 114.466,
+   "end": 114.716,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "porta",
+   "start": 114.744,
+   "end": 115.059,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "do",
+   "start": 115.094,
+   "end": 115.36,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "caminhão",
+   "start": 115.39,
+   "end": 115.754,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "no",
+   "start": 115.794,
+   "end": 116.06,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "pedágio.",
+   "start": 116.09,
+   "end": 116.437,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "Me",
+   "start": 116.776,
+   "end": 117.042,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "mordeu,",
+   "start": 117.072,
+   "end": 117.403,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "acredita?",
+   "start": 117.56,
+   "end": 117.924,
+   "spk": "ALBERTO"
+  },
+  {
+   "word": "Palavra",
+   "start": 118.764,
+   "end": 119.111,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "por",
+   "start": 119.15,
+   "end": 119.433,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "palavra.",
+   "start": 119.464,
+   "end": 119.811,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "A",
+   "start": 120.15,
+   "end": 120.4,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "mesma",
+   "start": 120.428,
+   "end": 120.743,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "pausa.",
+   "start": 120.778,
+   "end": 121.093,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "O",
+   "start": 121.428,
+   "end": 121.678,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "mesmo",
+   "start": 121.706,
+   "end": 122.021,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "acredita.",
+   "start": 122.056,
+   "end": 122.42,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Ele...",
+   "start": 123.06,
+   "end": 123.343,
+   "spk": "TICO"
+  },
+  {
+   "word": "ele",
+   "start": 123.824,
+   "end": 124.107,
+   "spk": "TICO"
+  },
+  {
+   "word": "não",
+   "start": 124.138,
+   "end": 124.421,
+   "spk": "TICO"
+  },
+  {
+   "word": "tava",
+   "start": 124.452,
+   "end": 124.751,
+   "spk": "TICO"
+  },
+  {
+   "word": "no",
+   "start": 124.784,
+   "end": 125.05,
+   "spk": "TICO"
+  },
+  {
+   "word": "caminhão",
+   "start": 125.08,
+   "end": 125.444,
+   "spk": "TICO"
+  },
+  {
+   "word": "que",
+   "start": 125.484,
+   "end": 125.767,
+   "spk": "TICO"
+  },
+  {
+   "word": "bateu?",
+   "start": 125.798,
+   "end": 126.113,
+   "spk": "TICO"
+  },
+  {
+   "word": "Eu",
+   "start": 127.048,
+   "end": 127.314,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "corri",
+   "start": 127.344,
+   "end": 127.659,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "pro",
+   "start": 127.694,
+   "end": 127.977,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "fundo",
+   "start": 128.008,
+   "end": 128.323,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "pegar",
+   "start": 128.358,
+   "end": 128.673,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "o",
+   "start": 128.708,
+   "end": 128.958,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "cadeado.",
+   "start": 128.986,
+   "end": 129.333,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "E",
+   "start": 129.672,
+   "end": 129.922,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "lá",
+   "start": 129.95,
+   "end": 130.216,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "do",
+   "start": 130.246,
+   "end": 130.512,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "estoque,",
+   "start": 130.542,
+   "end": 130.889,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "no",
+   "start": 131.048,
+   "end": 131.314,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "escuro,",
+   "start": 131.344,
+   "end": 131.675,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "eu",
+   "start": 131.832,
+   "end": 132.098,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "ouvi:",
+   "start": 132.128,
+   "end": 132.427,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Coxinha",
+   "start": 133.18,
+   "end": 133.527,
+   "spk": "TICO_FALSO"
+  },
+  {
+   "word": "que",
+   "start": 133.566,
+   "end": 133.849,
+   "spk": "TICO_FALSO"
+  },
+  {
+   "word": "passa",
+   "start": 133.88,
+   "end": 134.195,
+   "spk": "TICO_FALSO"
+  },
+  {
+   "word": "da",
+   "start": 134.23,
+   "end": 134.496,
+   "spk": "TICO_FALSO"
+  },
+  {
+   "word": "meia-noite",
+   "start": 134.526,
+   "end": 134.922,
+   "spk": "TICO_FALSO"
+  },
+  {
+   "word": "é",
+   "start": 134.966,
+   "end": 135.216,
+   "spk": "TICO_FALSO"
+  },
+  {
+   "word": "perda,",
+   "start": 135.244,
+   "end": 135.559,
+   "spk": "TICO_FALSO"
+  },
+  {
+   "word": "Lucas.",
+   "start": 135.714,
+   "end": 136.029,
+   "spk": "TICO_FALSO"
+  },
+  {
+   "word": "Só",
+   "start": 137.164,
+   "end": 137.43,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "que",
+   "start": 137.46,
+   "end": 137.743,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "o",
+   "start": 137.774,
+   "end": 138.024,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Tico...",
+   "start": 138.052,
+   "end": 138.351,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "tava",
+   "start": 138.834,
+   "end": 139.133,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "do",
+   "start": 139.166,
+   "end": 139.432,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "meu",
+   "start": 139.462,
+   "end": 139.745,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "lado.",
+   "start": 139.776,
+   "end": 140.075,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "Segue",
+   "start": 143.808,
+   "end": 144.123,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "a",
+   "start": 144.158,
+   "end": 144.408,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "página",
+   "start": 144.436,
+   "end": 144.767,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "pro",
+   "start": 144.804,
+   "end": 145.087,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "episódio",
+   "start": 145.118,
+   "end": 145.482,
+   "spk": "LUCAS"
+  },
+  {
+   "word": "dois.",
+   "start": 145.522,
+   "end": 145.821,
+   "spk": "LUCAS"
+  }
+ ]
+}

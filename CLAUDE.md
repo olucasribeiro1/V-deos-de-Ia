@@ -91,3 +91,10 @@ Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**,
 - **Insertos de objeto (como no exemplo do Vitinho):** a cada frase que cita um objeto, ~1,2 s do objeto em close sobre fundo liso (moeda, caderno, calendário virando, placa, crachá), entrando com snap. Pergunta de engajamento em balão no meio do vídeo ("E VOCÊ?"). Sunburst nas revelações.
 - **Revisar a pose:** sentado tem que encostar no assento (sem flutuar).
 - **Exceção:** vídeos de terror terão outra métrica, a combinar com o usuário.
+
+## Métrica do terror (série "Turno da Madrugada" e próximos de terror)
+- **Visual:** tudo em 3D low poly retrô, estilo PS1 e jogo indie (render em baixa resolução ampliado sem suavizar, pontilhado, grão, névoa). Tons escuros: noite azul-petróleo, fluorescente frio por dentro e luz amarela do posto como a "linha de segurança". Módulos em `series/turno/`.
+- **Câmera:** primeira pessoa (os olhos do Lucas), lenta, respirando, virando para quem fala ou para o som. Quase sem cortes, dissolve suave ≤ 0,6 s; zoom só quando a tensão pede; corte seco só no susto final.
+- **Narração:** mais lenta, português claro e correto, sem erro, com suspense e pausas. O vídeo é feito antes da voz (timeline estimada); a narração só é gerada depois que o usuário aprovar o vídeo.
+- **Som:** ambiente de noite com grilos, zumbido de geladeira e fluorescente, chiado de TV, estrondo distante, batida no vidro, porta rangendo, coração e riser.
+- **Formato:** episódios de ~2 min na vertical; depois juntar na horizontal para o YouTube.

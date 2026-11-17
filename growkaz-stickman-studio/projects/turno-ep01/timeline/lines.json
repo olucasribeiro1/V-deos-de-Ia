@@ -1,0 +1,180 @@
+{
+ "duration": 146.654,
+ "lines": [
+  {
+   "id": "l01",
+   "spk": "LUCAS",
+   "text": "[cansado, calmo] Mais uma noite de serviço. Três da manhã, cafeteira pingando, geladeira zumbindo. Eu repondo bolacha... e o Tico fazendo o que ele faz de melhor.",
+   "start": 0.8,
+   "end": 10.924
+  },
+  {
+   "id": "t01",
+   "spk": "TICO",
+   "text": "[de boca cheia, brincalhão] Coxinha que passa da meia-noite é perda, Lucas. Eu tô salvando a empresa.",
+   "start": 11.224,
+   "end": 16.368
+  },
+  {
+   "id": "l02",
+   "spk": "LUCAS",
+   "text": "[calmo, desconfiado] Só que naquela noite a BR tava quieta demais. Duas horas sem passar um caminhão.",
+   "start": 16.868,
+   "end": 22.52
+  },
+  {
+   "id": "t02",
+   "spk": "TICO",
+   "text": "[rindo] Pô, até os caminhoneiros tiraram folga. Só nós dois de otário aqui.",
+   "start": 22.82,
+   "end": 27.614
+  },
+  {
+   "id": "l03",
+   "spk": "LUCAS",
+   "text": "[tenso, baixo] Aí passou um carro. Na contramão. Sem farol. Arrastando alguma coisa no para-choque.",
+   "start": 28.214,
+   "end": 34.018
+  },
+  {
+   "id": "t03",
+   "spk": "TICO",
+   "text": "[rindo nervoso] Isso aí era um... saco de lixo. Né?",
+   "start": 34.318,
+   "end": 37.862
+  },
+  {
+   "id": "l04",
+   "spk": "LUCAS",
+   "text": "[seco] Não era.",
+   "start": 38.262,
+   "end": 39.19
+  },
+  {
+   "id": "tv1",
+   "spk": "TV",
+   "text": "Alerta do Ministério da Saúde. Surtos de agressividade e febre alta na região metropolitana. Evitem contato físico. Permaneçam em locais fechados.",
+   "start": 39.89,
+   "end": 48.746
+  },
+  {
+   "id": "t04",
+   "spk": "TICO",
+   "text": "[debochado] Mais uma gripe. Na última eu fiquei rico vendendo álcool em gel.",
+   "start": 49.046,
+   "end": 53.684
+  },
+  {
+   "id": "l05",
+   "spk": "LUCAS",
+   "text": "[preocupado] Aí o Seu Alberto entrou. Toda semana ele para aqui. Mas ele tava branco. Suando. Com um pano amarrado no braço, encharcado.",
+   "start": 54.284,
+   "end": 63.352
+  },
+  {
+   "id": "a01",
+   "spk": "ALBERTO",
+   "text": "[ofegante, cansado] Me vê um café, filho. Um louco tentou abrir a porta do caminhão no pedágio. Me mordeu, acredita?",
+   "start": 63.652,
+   "end": 70.804
+  },
+  {
+   "id": "l06",
+   "spk": "LUCAS",
+   "text": "[preocupado] Seu Alberto, o senhor precisa de hospital.",
+   "start": 71.104,
+   "end": 73.956
+  },
+  {
+   "id": "a02",
+   "spk": "ALBERTO",
+   "text": "[sombrio] Hospital é na cidade, filho. E a cidade... tá pior que eu.",
+   "start": 74.356,
+   "end": 79.384
+  },
+  {
+   "id": "l07",
+   "spk": "LUCAS",
+   "text": "[calmo, tenso] Ele pagou o café e foi embora. Dois minutos depois...",
+   "start": 79.984,
+   "end": 84.054
+  },
+  {
+   "id": "t05",
+   "spk": "TICO",
+   "text": "[baixinho, sem graça] Mano... isso foi ele.",
+   "start": 85.654,
+   "end": 87.696
+  },
+  {
+   "id": "l08",
+   "spk": "LUCAS",
+   "text": "[sussurrando] Quando a fumaça baixou, eu vi. Na beira do mato, bem onde a luz do posto acaba... tinha gente parada. Olhando pra gente. Nenhum passava da luz.",
+   "start": 88.396,
+   "end": 99.25
+  },
+  {
+   "id": "t06",
+   "spk": "TICO",
+   "text": "[sussurrando] Lucas... a lâmpada daquele poste tá queimando.",
+   "start": 99.85,
+   "end": 103.068
+  },
+  {
+   "id": "l09",
+   "spk": "LUCAS",
+   "text": "[tenso] Uma hora depois, bateram no vidro. Era o Seu Alberto. Inteiro. Sem sangue. Sem curativo.",
+   "start": 103.868,
+   "end": 110.612
+  },
+  {
+   "id": "a03",
+   "spk": "ALBERTO",
+   "text": "[voz idêntica, sorrindo] Me vê um café, filho. Um louco tentou abrir a porta do caminhão no pedágio. Me mordeu, acredita?",
+   "start": 111.112,
+   "end": 118.264
+  },
+  {
+   "id": "l10",
+   "spk": "LUCAS",
+   "text": "[sussurrando] Palavra por palavra. A mesma pausa. O mesmo acredita.",
+   "start": 118.764,
+   "end": 122.76
+  },
+  {
+   "id": "t07",
+   "spk": "TICO",
+   "text": "[assustado] Ele... ele não tava no caminhão que bateu?",
+   "start": 123.06,
+   "end": 126.448
+  },
+  {
+   "id": "l11",
+   "spk": "LUCAS",
+   "text": "[tenso, rápido] Eu corri pro fundo pegar o cadeado. E lá do estoque, no escuro, eu ouvi:",
+   "start": 127.048,
+   "end": 132.58
+  },
+  {
+   "id": "t08",
+   "spk": "TICO_FALSO",
+   "text": "[voz perfeita, calma] Coxinha que passa da meia-noite é perda, Lucas.",
+   "start": 133.18,
+   "end": 136.364
+  },
+  {
+   "id": "l12",
+   "spk": "LUCAS",
+   "text": "[sussurrando] Só que o Tico... tava do meu lado.",
+   "start": 137.164,
+   "end": 140.408
+  },
+  {
+   "id": "cta",
+   "spk": "LUCAS",
+   "text": "[calmo] Segue a página pro episódio dois.",
+   "start": 143.808,
+   "end": 146.154
+  }
+ ]
+}
