@@ -1,12 +1,13 @@
 // "Nesse mundo": cenários 2D (escritório celestial, quarto, padaria, rua, mercado, linha do tempo das moedas) com camadas de profundidade.
 import { E, layer, linGrad, radGrad, rr, seg, poly, circle, glow, alpha, mix, shade, rng, text, FONTS, ease, prog, clamp, lerp, veil } from '/engine/core.js';
 import * as FX from '/engine/fx2d.js';
-import { drawFigure, POSES } from '/engine/rig2d.js';
+import { POSES } from '/engine/rig2d.js';
+import { drawHumano as drawFigure, ANJO_ESTAGIARIO, SEU_MANOEL, MAE as MAE_H } from '/engine/humano2d.js';
 export const INK = '#0b0b0d', GY = 1305.6, WH = '#f1efe9';
 export const box = (g, x, y, w, h, c, r = 8, lw = 6) => { rr(g, x, y, w, h, r); g.fillStyle = c; g.fill(); if (lw) { g.strokeStyle = INK; g.lineWidth = lw; g.stroke(); } };
-export const ANJO = { top: 'tshirt', color: '#eef4ff', head: 'none', face: 'glasses' };
-export const MANOEL = { top: 'labcoat', head: 'beanie', headColor: '#ffffff' };
-export const MAE = { top: 'dress', color: '#e05a8a', head: 'bun' };
+export const ANJO = ANJO_ESTAGIARIO;
+export const MANOEL = SEU_MANOEL;
+export const MAE = MAE_H;
 
 // ---------- céu / escritório celestial ----------
 export function ceu(g, t, cam, o = {}) { const { noite = 0 } = o;

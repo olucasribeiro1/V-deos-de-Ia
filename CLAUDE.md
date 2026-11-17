@@ -3,10 +3,11 @@
 Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**, narrados, no estilo "stick figure" urbano e escuro.
 
 ## Regras fixas (nunca quebrar)
-1. **Personagem fixo.** O protagonista é sempre o mesmo: boneco **branco com contorno preto**, cabeça redonda grande, olhos pretos simples, **boné vermelho** (`#d8342b`). Sem roupa, sem outras cores, sem acessórios, sem mudar proporções.
-   - Código: `growkaz-stickman-studio/personagem/protagonista.js` → `PROTAGONISTA` (e `FIGURANTE` para as outras pessoas: mesmo corpo, sem boné). Em cada projeto, `scenes/cast.js` apenas re-exporta esse arquivo.
-   - Referências visuais: `growkaz-stickman-studio/personagem/referencias/ref_01.jpg` … `ref_06.jpg`.
-   - Ninguém além do protagonista usa vermelho no corpo/cabeça.
+1. **Personagem fixo (estilo humanizado, escolhido pelo usuário: versão A).** O protagonista é sempre o mesmo: **pele branca, boné vermelho** (`#d8342b`), camiseta cinza-ardósia, calça jeans e tênis branco, com corpo humano em 2D (mãos, sapatos, rosto expressivo) e contorno escuro.
+   - Código: `growkaz-stickman-studio/engine/humano2d.js` → `drawHumano` / `bigHumano` com `PROTAGONISTA_A`. Os figurantes usam os presets do mesmo arquivo (`SEU_MANOEL`, `MAE`, `SENHORA`, `JOVEM_MOLETOM`, `MOCA` etc.).
+   - Estilo de referência: cartoon vetorial humanizado (cabeça redonda, olhos grandes, sobrancelha grossa, contorno forte, cores vibrantes), como nos canais Cineplay, Histórias em Pixels e SouLucasHey.
+   - Ninguém além do protagonista usa vermelho (o código troca automaticamente).
+   - O boneco palito antigo (`personagem/protagonista.js`) fica só para os vídeos antigos e para a série Sem Marca.
 2. **Estética fixa:** estilo `urbano` (`engine/styles.js`): bonecos brancos com contorno preto, levemente modelados (mãos, pés, sombra suave no corpo — sem exagero). **Cenários coloridos** e brasileiros (tijolo aparente, casas coloridas, varal, caixa d'água azul, plantas), com grão, vinheta e textura leve. Cenas de tensão/noite escurecem; vermelho forte fica para o boné do protagonista e para alertas/botões.
 3. **Formato:** 9:16, **720p (720×1280)**, 24 fps, legendas ligadas (pt-BR), agrupadas por frase e por personagem. Episódios de 1min30 a 2min.
 4. **Safe zone Instagram + TikTok:** rostos, números, títulos e legendas sempre dentro de x 60–940, y 220–1440 (constante `SAFE` em `engine/core.js`). Fora disso só cenário. Conferir com `node render.mjs --project projects/<slug> --stills t1,t2 --safe`.

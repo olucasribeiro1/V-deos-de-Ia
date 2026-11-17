@@ -1,6 +1,7 @@
 // NESSE MUNDO, SÓ O SEU REAL NÃO FOI TROCADO · 2D, câmera sempre andando, dissolves suaves
 import { E, registerShot, layer, veil, ease, prog, clamp, lerp, rr, seg, poly, circle, glow, alpha, mix, text, FONTS, rng, linGrad } from '/engine/core.js';
-import { drawFigure, POSES, breathe, walkPose, bigFace } from '/engine/rig2d.js';
+import { POSES, breathe, walkPose } from '/engine/rig2d.js';
+import { drawHumano as drawFigure, bigHumano as bigFace, PROTAGONISTA_A, JOVEM_MOLETOM, SENHORA, MOCA, TRABALHADOR, CHEFE_ANJO } from '/engine/humano2d.js';
 import * as FX from '/engine/fx2d.js';
 import * as UI from '/engine/ui2d.js';
 import { foco, K } from '/series/mamae/camera.js';
@@ -8,7 +9,7 @@ import { W, mist, rotulo, legendaTopo } from '/series/mamae/comum.js';
 import { globo } from '/series/ese/mundo.js';
 import { cadeado, barraOuro, glitch, rotuloTecnico } from '/series/semmarca/hud.js';
 import { INK, GY, WH, box, ANJO, MANOEL, MAE, ceu, mesaAnjo, anjo, asas, aureola, quarto, padaria, caderno, moeda, porquinho, nota, fachada, mercado } from '/series/nessemundo/cenas.js';
-import { PROTAGONISTA as GUI, FIGURANTE as FG } from '../cast.js';
+const GUI = PROTAGONISTA_A; const FG = JOVEM_MOLETOM; const FILA = [JOVEM_MOLETOM, SENHORA, MOCA, TRABALHADOR, JOVEM_MOLETOM, SENHORA];
 const pop = (T, t0, d = 0.25) => ease.outBack(prog(T, t0 - 0.1, t0 + d));
 const brl = (v) => 'R$ ' + Math.round(v).toLocaleString('pt-BR');
 const hudSaldo = (g, T, v, o = {}) => { const a = o.a ?? 1; if (a <= 0) return; g.save(); g.globalAlpha *= a; g.translate(540, o.y ?? 300); rr(g, -330, -70, 660, 140, 30); g.fillStyle = 'rgba(10,14,30,.88)'; g.fill(); g.strokeStyle = '#ffd23a'; g.lineWidth = 5; g.stroke();
@@ -143,8 +144,8 @@ registerShot('K', { draw(g, t, info) { const T = info.globalT, L = info.L, t0 = 
 registerShot('L', { draw(g, t, info) { const T = info.globalT, L = info.L, t0 = info.shot.start, tPa = W('padaria', L.n14), tG = L.g1[0], tCo = W('comenta', L.n15);
   const cam = K(T, [[t0, foco(520, 1000, 1.2)], [tPa, foco(560, 1000, 1.0)], [tG - 0.2, foco(520, 1150, 1.9)], [L.n15[0] + 0.5, foco(560, 900, 0.9)], [info.shot.end, foco(560, 200, 1.0)]]);
   fachada(g, t, cam, { placa: 'PADARIA DO GUILHERME', manha: 1 });
-  layer(g, cam, 0.85, g => { for (let i = 0; i < 6; i++) drawFigure(g, { x: 900 + i * 110, y: GY + 120 + (i % 2) * 20, s: 1.4, facing: -1, outfit: FG, pose: breathe(POSES.relaxed, t, 1, i), expr: 'smile', t });
-    drawFigure(g, { x: 470, y: GY + 130, s: 1.75, facing: 1, outfit: { ...GUI, top: 'labcoat' }, pose: breathe(T > tG ? { ...POSES.holdFront, eF: [26, -150], hF: [50, -164] } : POSES.stand, t, 1, 1), expr: T > tG ? 'proud' : 'smile', talk: T > tG && T < L.g1[1] ? Math.max(0, Math.sin(t * 13)) : 0, t });
+  layer(g, cam, 0.85, g => { for (let i = 0; i < 6; i++) drawFigure(g, { x: 900 + i * 110, y: GY + 120 + (i % 2) * 20, s: 1.4, facing: -1, outfit: FILA[i], pose: breathe(POSES.relaxed, t, 1, i), expr: 'smile', t });
+    drawFigure(g, { x: 470, y: GY + 130, s: 1.75, facing: 1, outfit: { ...GUI, roupa: { tipo: 'avental', cor: '#f2ead8', cor2: '#5d6675' } }, pose: breathe(T > tG ? { ...POSES.holdFront, eF: [26, -150], hF: [50, -164] } : POSES.stand, t, 1, 1), expr: T > tG ? 'proud' : 'smile', talk: T > tG && T < L.g1[1] ? Math.max(0, Math.sin(t * 13)) : 0, t });
     if (T > tG - 0.2) caderno(g, 560, GY - 90, 0.5, t, { valor: 'Seu Zé: R$ 4' }); });
   layer(g, cam, 0.2, g => { if (T > L.n15[0]) anjo(g, 560, -320, 1.2, t, { pose: { ...POSES.stand, eF: [24, -150], hF: [40, -110] }, expr: 'sad', emote: 'gloom' }); });
   if (T < tPa) { moeda(g, 540, 420, 60, t, { brilho: 0.3 }); rotulo(g, 'R$ 1 = R$ 1', T - t0 - 0.2, 560, WH, 80); }
