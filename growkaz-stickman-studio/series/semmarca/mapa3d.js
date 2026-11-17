@@ -217,7 +217,7 @@ export function mapaAldoria(T, o = {}) {
   // ---------- miniaturas (peças do tabuleiro): elfo arqueiro, anão no martelo, Rei Mago no portão ----------
   if (o.figuras !== false) { const E2 = o.escalaFiguras ?? 2.4, figs = [];
     const poe = (preset, x, z, rot, estado, ks = 1) => { const f = pessoa3D(T, { ...preset }); f.position.set(x, alt(x, z) - 0.05, z); f.rotation.y = rot; f.scale.setScalar(E2 * ks); f.traverse(q => { if (q.isMesh) { q.castShadow = true; } }); G.add(f); figs.push([f, estado]); return f; };
-    poe(ELFO, ALD.torre[0] + 5, ALD.torre[1] + 7, 0.3, 'arco', 1.25); poe(ANAO, 18.5, -9, -0.6, 'martelar', 1.5); poe(REI_MAGO, ALD.castelo[0] + 3.5, ALD.castelo[1] + 7.2, 0.4, 'cajado');
+    poe(ELFO, ALD.torre[0] + 5, ALD.torre[1] + 7, 0.3, 'arco', 1.25); poe(ANAO, 15, -3.5, -0.6, 'martelar', 1.5); poe(REI_MAGO, ALD.castelo[0] + 3.5, ALD.castelo[1] + 7.2, 0.4, 'cajado');
     upd.push((t) => figs.forEach(([f, e], i) => { try { f.anima(t + i, e); } catch (err) { } })); G.figuras = figs.map(f => f[0]); }
   // ---------- pontos para a câmera / rótulos ----------
   const pt = ([x, z], dy = 0) => V3(x, Math.max(0.5, alt(x, z)) + dy, z);
