@@ -19,5 +19,11 @@
   "enabled": true,
   "gainDb": -6
  },
- "loudness": -14
+ "loudness": -14,
+ "captionStyle": {
+  "minusculas": true,
+  "destaque": "#f5c84a",
+  "corContorno": "#2b3347",
+  "contorno": 0.2
+ }
 }

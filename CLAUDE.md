@@ -81,3 +81,10 @@ Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**,
   - narração em 1ª pessoa, calma e nostálgica, com pausas.
 - Visual: protagonista humanizado do canal; cores frias no conflito com um único ponto de luz quente; dourado na resolução (`fase()` em `series/nessemundo/vfx.js`).
 - O vídeo "Nesse mundo, só o seu real não foi trocado" manteve a narração antiga; a fórmula nova vale a partir dos próximos.
+
+## Estilo Vitinho (padrão visual dos próximos vídeos, pedido do usuário)
+- **Tudo em 2D.** 3D só em detalhe que precise muito (poucos efeitos). A sensação de profundidade vem de perspectiva (corredor em ponto de fuga, plano baixo do pé no chão) e de sombra suave.
+- **Paleta pastel quente:** menta e verde-água, creme e papel, coral e salmão, mostarda, azul-céu, lilás, madeira clara. Noite em azul-marinho profundo com pontinhos de luz. Tokens em `series/nessemundo/paleta.js`.
+- **Acabamento:** textura leve de papel (estilo `vitinho`), contorno azul-marinho, protagonista do canal (`PROTAGONISTA_A`).
+- **Legendas:** em minúsculas, letra arredondada grossa, contorno azul-marinho e a palavra-chave em amarelo (`captionStyle: { minusculas: true, destaque: '#f5c84a', corContorno: '#2b3347' }` no config.json).
+- **Exceção:** vídeos de terror terão outra métrica, a combinar com o usuário.

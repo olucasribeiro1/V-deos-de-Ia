@@ -32,23 +32,23 @@ export function anjo(g, x, y, s, t, o = {}) { asas(g, x - 4 * s, y - 165 * s, s,
 
 // ---------- quarto do Guilherme ----------
 export function quarto(g, t, cam, o = {}) { const { dia = 0, vazio = 0 } = o;
-  layer(g, cam, 0.5, g => { g.fillStyle = '#6a8ae0'; g.fillRect(-E.W * 2, -E.H, E.W * 5, E.H * 3); g.fillStyle = '#5a78c8'; for (let x = -E.W * 2; x < E.W * 3; x += 120) g.fillRect(x, -E.H, 60, E.H * 3);
-    box(g, 640, 380, 300, 360, '#9fd8ff', 12); seg(g, [[790, 380], [790, 740]], 8, INK); seg(g, [[640, 560], [940, 560]], 8, INK); glow(g, 790, 560, 300, '#fff6c0', 0.3);
-    for (const [px, c] of [[120, '#ff4a6a'], [300, '#ffd23a']]) { box(g, px, 420, 140, 190, c, 6); circle(g, px + 70, 500, 40, alpha('#fff', 0.5)); }
+  layer(g, cam, 0.5, g => { g.fillStyle = '#cfeee4'; g.fillRect(-E.W * 2, -E.H, E.W * 5, E.H * 3); g.fillStyle = '#b5e2d4'; for (let x = -E.W * 2; x < E.W * 3; x += 120) g.fillRect(x, -E.H, 60, E.H * 3);
+    box(g, 640, 380, 300, 360, '#a9d6f2', 12); seg(g, [[790, 380], [790, 740]], 8, INK); seg(g, [[640, 560], [940, 560]], 8, INK); glow(g, 790, 560, 300, '#fff6c0', 0.3);
+    for (const [px, c] of [[120, '#ef8a7a'], [300, '#f2c14e']]) { box(g, px, 420, 140, 190, c, 6); circle(g, px + 70, 500, 40, alpha('#fff', 0.5)); }
     // calendário
     box(g, 120, 700, 170, 200, '#ffffff', 10); g.fillStyle = '#d8342b'; g.fillRect(124, 704, 162, 50); text(g, 'DIA', 205, 730, { size: 30, color: '#fff', font: FONTS.ui, weight: 900 }); text(g, String(dia), 205, 830, { size: 88, color: INK }); });
-  layer(g, cam, 0.85, g => { g.fillStyle = '#c8945a'; g.fillRect(-E.W * 2, GY - 40, E.W * 5, E.H); g.strokeStyle = alpha(INK, 0.25); g.lineWidth = 3; for (let x = -E.W * 2; x < E.W * 3; x += 160) seg(g, [[x, GY - 40], [x + 300, E.H + 200]], 3, alpha(INK, 0.2));
-    box(g, 80, GY - 260, 560, 220, '#3a8a7a', 40); box(g, 60, GY - 130, 600, 110, '#2f7a6a', 30); // sofá
+  layer(g, cam, 0.85, g => { g.fillStyle = '#d8b08a'; g.fillRect(-E.W * 2, GY - 40, E.W * 5, E.H); g.strokeStyle = alpha(INK, 0.25); g.lineWidth = 3; for (let x = -E.W * 2; x < E.W * 3; x += 160) seg(g, [[x, GY - 40], [x + 300, E.H + 200]], 3, alpha(INK, 0.2));
+    box(g, 80, GY - 260, 560, 220, '#5fae9c', 40); box(g, 60, GY - 130, 600, 110, '#4f9a88', 30); // sofá
     box(g, 700, GY - 470, 300, 210, '#16161c', 10); rr(g, 716, GY - 456, 268, 180, 6); g.fillStyle = mix('#2a5ad8', '#7dff4a', (Math.sin(t * 3) + 1) / 2); g.fill(); glow(g, 850, GY - 366, 260, '#7fd8ff', 0.3); box(g, 740, GY - 260, 220, 120, '#6a4a2a', 6);
     if (vazio < 1) { box(g, 1020, GY - 300, 180, 140, '#d8d8e0', 10); rr(g, 1036, GY - 284, 110, 100, 6); g.fillStyle = '#2a2a34'; g.fill(); }
     for (let i = 0; i < 5; i++) box(g, 300 + i * 70, GY + 60 + (i % 2) * 20, 50, 34, ['#ffd23a', '#ff4a6a', '#7dff4a', '#2a9dff', '#ff8a3a'][i], 6, 4); });
 }
 // ---------- padaria por dentro ----------
 export function padaria(g, t, cam, o = {}) {
-  layer(g, cam, 0.45, g => { g.fillStyle = '#ffe2b0'; g.fillRect(-E.W * 2, -E.H, E.W * 5, E.H * 3); g.fillStyle = '#e8a060'; for (let x = -E.W * 2; x < E.W * 3; x += 90) for (let y = -400; y < GY; y += 90) if (((x + y) / 90) % 2 === 0) g.fillRect(x, y, 90, 90);
-    box(g, -200, 280, 1500, 90, '#c0462a', 10); text(g, o.placa || 'PADARIA DO SEU MANOEL', 550, 325, { size: 52, color: '#fff2c0', font: FONTS.title });
+  layer(g, cam, 0.45, g => { g.fillStyle = '#f6ecd8'; g.fillRect(-E.W * 2, -E.H, E.W * 5, E.H * 3); g.fillStyle = '#efe0c4'; for (let x = -E.W * 2; x < E.W * 3; x += 90) for (let y = -400; y < GY; y += 90) if (((x + y) / 90) % 2 === 0) g.fillRect(x, y, 90, 90);
+    box(g, -200, 280, 1500, 90, '#ef8a7a', 10); text(g, o.placa || 'PADARIA DO SEU MANOEL', 550, 325, { size: 52, color: '#fff2c0', font: FONTS.title });
     for (let r = 0; r < 3; r++) { box(g, -100, 470 + r * 190, 1300, 26, '#8a5a30', 4); for (let i = 0; i < 16; i++) { const x = -60 + i * 80, y = 450 + r * 190; g.fillStyle = INK; g.beginPath(); g.ellipse(x, y, 36, 22, 0, 0, 7); g.fill(); g.fillStyle = ['#e8a050', '#d88a3a', '#f2c070'][(i + r) % 3]; g.beginPath(); g.ellipse(x, y, 31, 17, 0, 0, 7); g.fill(); seg(g, [[x - 14, y - 6], [x - 4, y + 6]], 3, alpha('#8a4a1a', 0.6)); seg(g, [[x + 4, y - 6], [x + 14, y + 6]], 3, alpha('#8a4a1a', 0.6)); } } });
-  layer(g, cam, 0.85, g => { g.fillStyle = '#d8c8b0'; g.fillRect(-E.W * 2, GY - 40, E.W * 5, E.H); g.strokeStyle = alpha(INK, 0.2); for (let x = -E.W * 2; x < E.W * 3; x += 120) seg(g, [[x, GY - 40], [x, E.H * 2]], 3, alpha(INK, 0.15));
+  layer(g, cam, 0.85, g => { g.fillStyle = '#d8b08a'; g.fillRect(-E.W * 2, GY - 40, E.W * 5, E.H); g.strokeStyle = alpha(INK, 0.2); for (let x = -E.W * 2; x < E.W * 3; x += 120) seg(g, [[x, GY - 40], [x, E.H * 2]], 3, alpha(INK, 0.15));
     box(g, 360, GY - 300, 900, 280, '#f2ead8', 14); g.fillStyle = alpha('#9fd8ff', 0.45); g.fillRect(380, GY - 290, 860, 140); for (let i = 0; i < 6; i++) { g.fillStyle = INK; g.beginPath(); g.ellipse(440 + i * 130, GY - 210, 46, 26, 0, 0, 7); g.fill(); g.fillStyle = '#ffb46a'; g.beginPath(); g.ellipse(440 + i * 130, GY - 210, 40, 20, 0, 0, 7); g.fill(); }
     box(g, 1060, GY - 420, 160, 120, '#2a2a34', 12); rr(g, 1074, GY - 406, 132, 60, 6); g.fillStyle = '#7dff4a'; g.fill(); text(g, o.caixa || 'CAIXA', 1140, GY - 376, { size: 26, color: INK, font: FONTS.ui, weight: 900 }); });
 }

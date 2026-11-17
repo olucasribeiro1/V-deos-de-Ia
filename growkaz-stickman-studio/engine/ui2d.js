@@ -85,11 +85,11 @@ export function captions(g, globalT, o = {}) {
   let i = -1; for (let k = words.length - 1; k >= 0; k--) if (globalT >= words[k].start - 0.05) { if (globalT <= words[k].end + 0.35) i = k; break; } if (i < 0) return;
   // agrupa por frase: quebra em pontuação final, pausa longa ou troca de personagem (nunca mistura falas)
   if (E._capSrc !== words || E._capMax !== max) { const G = []; let cur = []; words.forEach((w, k) => { cur.push(k); const nx = words[k + 1]; if (cur.length >= max || !nx || /[.!?:…]["')]*$/.test(w.word.trim()) || nx.start - w.end > 0.45 || (nx.spk || '') !== (w.spk || '')) { G.push(cur); cur = []; } }); E._capSrc = words; E._capMax = max; E._capIdx = []; G.forEach(gr => gr.forEach(k => { E._capIdx[k] = gr; })); }
-  const idx = E._capIdx[i], st = idx[0], group = idx.map(k => words[k]); const strs = group.map(w => w.word.trim().toUpperCase());
+  const idx = E._capIdx[i], st = idx[0], group = idx.map(k => words[k]); const low = E.cfg.captionStyle?.minusculas, strs = group.map(w => low ? w.word.trim().toLowerCase() : w.word.trim().toUpperCase());
   const w0 = strs.map(s => measure(g, s, size)).reduce((a, b) => a + b, 0) + size * 0.3 * (strs.length - 1);
   const sz = size * Math.min(1, maxW / w0);   // shrink long phrases to fit the frame
   const gap = sz * 0.3, widths = strs.map(s => measure(g, s, sz)), total = widths.reduce((a, b) => a + b, 0) + gap * (strs.length - 1);
-  let x = V(E.W / 2, 520) - total / 2; strs.forEach((s, k) => { const cur = st + k === i; const pop = cur ? 1 + 0.08 * ease.out(prog(globalT, group[k].start, group[k].start + 0.12)) : 1; g.save(); g.translate(x + widths[k] / 2, y); g.scale(pop, pop); text(g, s, 0, 0, { size: sz, color: cur ? hi : color, stroke: sz * 0.16, strokeColor: 'rgba(0,0,0,.85)' }); g.restore(); x += widths[k] + gap; });
+  let x = V(E.W / 2, 520) - total / 2; strs.forEach((s, k) => { const cur = st + k === i; const pop = cur ? 1 + 0.08 * ease.out(prog(globalT, group[k].start, group[k].start + 0.12)) : 1; g.save(); g.translate(x + widths[k] / 2, y); g.scale(pop, pop); text(g, s, 0, 0, { size: sz, color: cur ? (E.cfg.captionStyle?.destaque || hi) : color, stroke: sz * (E.cfg.captionStyle?.contorno ?? 0.16), strokeColor: E.cfg.captionStyle?.corContorno || 'rgba(0,0,0,.85)' }); g.restore(); x += widths[k] + gap; });
 }
 
 // Cartão final "segue a página" (Instagram/TikTok), dentro da safe zone. Use no último plano de cada episódio.
