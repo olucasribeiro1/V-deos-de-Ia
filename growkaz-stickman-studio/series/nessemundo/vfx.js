@@ -22,3 +22,19 @@ export function flash(g, T, t0, cor = '#ffffff', dur = 0.18) { const k = (T - t0
 export function sunburst(g, T, cores = ['#ffe600', '#ffb800'], cx = 540, cy = 900) { g.save(); g.translate(cx, cy); g.rotate(T * 0.25); for (let i = 0; i < 24; i++) { g.fillStyle = cores[i % 2]; g.beginPath(); g.moveTo(0, 0); g.arc(0, 0, 2400, i / 24 * Math.PI * 2, (i + 1) / 24 * Math.PI * 2); g.closePath(); g.fill(); } g.restore(); }
 // número que salta com contorno grosso e brilho
 export function numeroPop(g, T, t0, x, y, str, o = {}) { const a = ease.outBack(clamp((T - t0) / 0.25)); if (a <= 0) return; const sz = o.tam ?? 130; g.save(); g.translate(x, y); g.scale(a, a); g.rotate(o.rot ?? -0.04); glow(g, 0, 0, sz * 2, o.brilho ?? '#ffe600', 0.35); text(g, str, 0, 0, { size: sz, color: o.cor ?? '#ffe600', font: FONTS.viral || FONTS.title, stroke: sz * 0.22, strokeColor: INK }); g.restore(); }
+// ---------- paleta por fase (fórmula "Nesta cidade"): frio no conflito + um ponto de luz quente; dourado na resolução ----------
+export function fase(g, tipo, k = 1, T = 0, o = {}) { if (k <= 0) return; g.save();
+  if (tipo === 'frio') {
+    g.globalCompositeOperation = 'saturation'; g.fillStyle = `rgba(128,128,128,${0.5 * k})`; g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
+    g.globalCompositeOperation = 'multiply'; g.fillStyle = `rgba(150,172,204,${0.32 * k})`; g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
+    // único ponto de luz quente: facho dourado entrando pelo alto
+    const lx = o.lx ?? 860, ly = o.ly ?? 120; g.globalCompositeOperation = 'lighter';
+    const gr = g.createLinearGradient(lx, ly, lx - 420, ly + 1500); gr.addColorStop(0, `rgba(255,196,90,${0.42 * k})`); gr.addColorStop(1, 'rgba(255,196,90,0)');
+    g.fillStyle = gr; g.beginPath(); g.moveTo(lx - 60, ly - 200); g.lineTo(lx + 90, ly - 200); g.lineTo(lx - 280, ly + 1700); g.lineTo(lx - 760, ly + 1700); g.closePath(); g.fill();
+    for (let i = 0; i < 14; i++) { const ph = (T * 0.08 + i * 0.071) % 1; circle(g, lx - 120 - ph * 380 + Math.sin(i * 3 + T) * 30, ly + ph * 1400, 3 + (i % 3), `rgba(255,225,160,${0.5 * k * (1 - ph)})`); }
+    if (o.foco) glow(g, o.foco[0], o.foco[1], o.foco[2] ?? 260, '#ffc45a', 0.35 * k);
+  } else if (tipo === 'quente') {
+    g.globalCompositeOperation = 'soft-light'; g.fillStyle = `rgba(255,170,60,${0.45 * k})`; g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
+    g.globalCompositeOperation = 'lighter'; const gr = g.createRadialGradient(540, 250, 0, 540, 250, 1300); gr.addColorStop(0, `rgba(255,210,120,${0.28 * k})`); gr.addColorStop(1, 'rgba(255,210,120,0)'); g.fillStyle = gr; g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
+  }
+  g.restore(); }

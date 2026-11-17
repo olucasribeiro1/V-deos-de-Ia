@@ -1,8 +1,10 @@
 // Camada de VFX cartoon por cima dos planos (estouros, onomatopeias, brilhos, confete, velocidade, flash, tremida)
 import { getShot, registerShot } from '/engine/core.js';
 import { W } from '/series/mamae/comum.js';
-import { estouro, onomato, brilhos, confete, velocidade, flash, numeroPop } from '/series/nessemundo/vfx.js';
-const embrulha = (id, fx, tremor) => { const d = getShot(id); if (!d) return; const orig = d.draw; registerShot(id, { ...d, draw(g, t, info) { const T = info.globalT; let dx = 0, dy = 0; if (tremor) { const k = tremor(T, info.L); if (k > 0) { dx = Math.sin(T * 80) * 14 * k; dy = Math.cos(T * 70) * 14 * k; } } g.save(); g.translate(dx, dy); orig.call(this, g, t, info); g.restore(); fx(g, T, info.L, info); } }); };
+import { estouro, onomato, brilhos, confete, velocidade, flash, numeroPop, fase } from '/series/nessemundo/vfx.js';
+// paleta por fase: frio no conflito (com um ponto de luz quente), dourado quando ele acerta e no final
+const FASES = { A: ['frio', 0.45], B: ['frio', 0.35], C: ['frio', 0.25], D: ['frio', 0.6], E: ['frio', 0.5, { foco: [700, 1100, 220] }], F: ['frio', 0.7, { foco: [540, 1000, 300] }], G: ['frio', 0.6], H: ['frio', 0.75, { foco: [540, 730, 260] }], I: ['quente', 1], J: ['frio', 0.45], K: ['frio', 0.85, { lx: 300 }], L: ['quente', 1], T: ['quente', 0.6] };
+const embrulha = (id, fx, tremor) => { const d = getShot(id); if (!d) return; const orig = d.draw; registerShot(id, { ...d, draw(g, t, info) { const T = info.globalT; let dx = 0, dy = 0; if (tremor) { const k = tremor(T, info.L); if (k > 0) { dx = Math.sin(T * 80) * 14 * k; dy = Math.cos(T * 70) * 14 * k; } } g.save(); g.translate(dx, dy); orig.call(this, g, t, info); g.restore(); const f = FASES[id]; if (f) fase(g, f[0], f[1], T, f[2] || {}); fx(g, T, info.L, info); } }); };
 const pico = (T, t0, d = 0.35) => (T > t0 && T < t0 + d ? 1 - (T - t0) / d : 0);
 embrulha('A', (g, T, L) => { const tt = W('trocar', L.n01); estouro(g, T, tt + 0.3, 600, 1100, { cor: '#ff2e88' }); flash(g, T, tt + 0.35, '#ffe600'); onomato(g, T, tt + 0.35, 760, 760, 'CLICK!', { tam: 80, fundo: '#22e1ff' }); }, (T, L) => pico(T, W('trocar', L.n01) + 0.3));
 embrulha('B', (g, T, L, info) => { estouro(g, T, info.shot.start + 0.1, 540, 900, { cor: '#ffe600', n: 22 }); brilhos(g, T, W('pão', L.n02), 540, 1000, { n: 18 }); onomato(g, T, W('ninguém', L.n02) + 0.3, 800, 620, 'UFA!', { tam: 80, fundo: '#39ff5a', cor: '#ffffff' }); }, (T, L, i) => 0);
@@ -16,3 +18,5 @@ embrulha('I', (g, T, L) => { brilhos(g, T, W('padaria', L.n10), 540, 760, { n: 1
 embrulha('J', (g, T, L) => { estouro(g, T, W('inflação', L.n11), 540, 1340, { cor: '#ff2e88' }); flash(g, T, L.n12[0], '#ffb800'); onomato(g, T, W('remarcava', L.n12), 820, 640, 'PLIC!', { tam: 70, fundo: '#ff7a1a' }); }, (T, L) => pico(T, W('inflação', L.n11), 0.4));
 embrulha('K', (g, T, L) => { flash(g, T, L.c1[0], '#ffffff', 0.3); estouro(g, T, L.c1[0], 540, 1240, { cor: '#ffb800' }); onomato(g, T, L.a2[0] + 0.5, 760, 700, 'ZÁS!', { tam: 90, fundo: '#22e1ff' }); velocidade(g, T, pico(T, L.a2[0] + 0.4, 0.8)); }, (T, L) => pico(T, L.c1[0], 0.6));
 embrulha('L', (g, T, L) => { confete(g, T, L.g1[0] - 0.2, { dur: 2.6 }); brilhos(g, T, W('padaria', L.n14), 540, 1150, { n: 16, raio: 300 }); });
+
+embrulha('T', () => {});

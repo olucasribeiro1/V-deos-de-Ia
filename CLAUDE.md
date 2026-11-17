@@ -73,3 +73,11 @@ Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**,
   - nada no canto inferior direito;
   - testar a leitura em tamanho pequeno.
   - Checklist em `series/design_thumbnails.md`.
+
+## Próximos vídeos: fórmula "Nesta cidade..." (pedido do usuário)
+- Roteiro e narração seguem `growkaz-stickman-studio/roteiros/formula_nesta_cidade.md`:
+  - regra fantástica no presente, normalidade cotidiana, conflito, investigação;
+  - virada emocional de sacrifício escondido, resolução por empatia, frase-sermão e fechamento circular;
+  - narração em 1ª pessoa, calma e nostálgica, com pausas.
+- Visual: protagonista humanizado do canal; cores frias no conflito com um único ponto de luz quente; dourado na resolução (`fase()` em `series/nessemundo/vfx.js`).
+- O vídeo "Nesse mundo, só o seu real não foi trocado" manteve a narração antiga; a fórmula nova vale a partir dos próximos.
