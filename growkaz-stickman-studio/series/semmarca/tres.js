@@ -1,11 +1,12 @@
 // Série "Sem Marca": peças 3D com sombreamento de desenho (toon em 3 tons) e contorno preto (casco invertido).
 import { rng } from '/engine/core.js';
 let GRAD = null;
-export function toon(T, c, o = {}) { const THREE = T.THREE; if (!GRAD) { const d = new Uint8Array([70, 70, 70, 255, 160, 160, 160, 255, 255, 255, 255, 255]); GRAD = new THREE.DataTexture(d, 3, 1, THREE.RGBAFormat); GRAD.minFilter = GRAD.magFilter = THREE.NearestFilter; GRAD.needsUpdate = true; }
+export const MODO = { pbr: false };
+export function toon(T, c, o = {}) { const THREE = T.THREE; if (MODO.pbr) return new THREE.MeshStandardMaterial({ color: new THREE.Color(c), roughness: 0.65, ...o }); if (!GRAD) { const d = new Uint8Array([70, 70, 70, 255, 160, 160, 160, 255, 255, 255, 255, 255]); GRAD = new THREE.DataTexture(d, 3, 1, THREE.RGBAFormat); GRAD.minFilter = GRAD.magFilter = THREE.NearestFilter; GRAD.needsUpdate = true; }
   return new THREE.MeshToonMaterial({ color: new THREE.Color(c), gradientMap: GRAD, ...o }); }
 const OLM = {}; const olMat = (T) => (OLM.m ||= new T.THREE.MeshBasicMaterial({ color: 0x0b0b0d, side: T.THREE.BackSide }));
 // contorno: casco invertido em cada malha do objeto (w = espessura relativa)
-export function ol(T, obj, w = 0.04) { const add = []; obj.traverse(m => { if (m.isMesh && !m.userData.ol && !m.userData.noOl) { const h = new T.THREE.Mesh(m.geometry, olMat(T)); h.userData.ol = true; h.scale.setScalar(1 + w); m.add(h); } }); return obj; }
+export function ol(T, obj, w = 0.04) { if (MODO.pbr) return obj; const add = []; obj.traverse(m => { if (m.isMesh && !m.userData.ol && !m.userData.noOl) { const h = new T.THREE.Mesh(m.geometry, olMat(T)); h.userData.ol = true; h.scale.setScalar(1 + w); m.add(h); } }); return obj; }
 export function mesh(T, geo, c, x = 0, y = 0, z = 0, o = {}) { const m = new T.THREE.Mesh(geo, typeof c === 'string' ? toon(T, c, o) : c); m.position.set(x, y, z); m.castShadow = true; m.receiveShadow = true; return m; }
 
 // ---------- dragão low-poly (asas batendo via .update(t)) ----------
@@ -25,11 +26,11 @@ export function dragao(T, cor = '#c0283a') { const THREE = T.THREE, g = new THRE
 
 // ---------- duas luas (não sofrem neblina) ----------
 export function luas(T) { const THREE = T.THREE, g = new THREE.Group(); const L = (r, c, x, y, z) => { const m = new THREE.Mesh(new THREE.SphereGeometry(r, 32, 16), new THREE.MeshBasicMaterial({ color: new THREE.Color(c), fog: false })); m.position.set(x, y, z); m.userData.noOl = true; g.add(m); };
-  L(14, '#fbe8ff', 60, 70, -150); L(6, '#c8f6ff', -40, 45, -140); return g; }
+  L(14, '#f4f8ff', 60, 70, -150); L(6, '#dff8ff', -40, 45, -140); return g; }
 
 // ---------- cidade murada (centro cx, cz) ----------
 export function cidade3D(T, cx = 45, cz = 0, seed = 3) { const THREE = T.THREE, g = new THREE.Group(), r = rng(seed);
-  const pedra = '#d8cce8', tetos = ['#d8342b', '#2a5ad8', '#3a9a4a', '#8a3ab0', '#e8a030'], paredes = ['#ffd2a0', '#a0d8ff', '#ffb0c8', '#c8f0a0', '#fff0a0', '#e8c8ff'];
+  const pedra = '#eeeaf4', tetos = ['#d8342b', '#2a5ad8', '#3a9a4a', '#8a3ab0', '#e8a030'], paredes = ['#ffd2a0', '#a0d8ff', '#ffb0c8', '#c8f0a0', '#fff0a0', '#e8c8ff'];
   const R = 16, muro = mesh(T, new THREE.CylinderGeometry(R, R, 3.2, 40, 1, true), toon(T, pedra, { side: THREE.DoubleSide }), cx, 1.6, cz); g.add(muro);
   for (let i = 0; i < 10; i++) { const a = i / 10 * Math.PI * 2, x = cx + Math.cos(a) * R, z = cz + Math.sin(a) * R; g.add(mesh(T, new THREE.CylinderGeometry(1.2, 1.3, 5.5, 10), pedra, x, 2.75, z)); g.add(mesh(T, new THREE.ConeGeometry(1.6, 2.6, 10), tetos[i % 2], x, 6.8, z)); }
   for (let i = 0; i < 70; i++) { const a = r() * Math.PI * 2, d = 4 + r() * 10.5, x = cx + Math.cos(a) * d, z = cz + Math.sin(a) * d, w = 1.4 + r() * 1.2, h = 1.4 + r() * 1.6;

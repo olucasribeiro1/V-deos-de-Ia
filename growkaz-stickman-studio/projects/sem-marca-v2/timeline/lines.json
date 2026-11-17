@@ -1,0 +1,157 @@
+{
+ "duration": 128.941,
+ "lines": [
+  {
+   "id": "n01",
+   "spk": "NARRADOR",
+   "text": "[irônico, rápido] Você morreu salvando um gato. Sério.",
+   "start": 0.3,
+   "end": 2.332,
+   "file": "projects/sem-marca-v2/input/clips/n01_e16a148fbf_t1.30.wav"
+  },
+  {
+   "id": "n02",
+   "spk": "NARRADOR",
+   "text": "[rápido, tenso] Ele tava parado no meio da avenida, o caminhão vinha voando, e você nem pensou: pulou.",
+   "start": 2.432,
+   "end": 6.433,
+   "file": "projects/sem-marca-v2/input/clips/n02_bec0a063ee_t1.30.wav"
+  },
+  {
+   "id": "n03",
+   "spk": "NARRADOR",
+   "text": "[seco, irônico] O gato saiu ileso. Você... virou estatística.",
+   "start": 6.583,
+   "end": 9.737,
+   "file": "projects/sem-marca-v2/input/clips/n03_1b09700c9d_t1.30.wav"
+  },
+  {
+   "id": "n04",
+   "spk": "NARRADOR",
+   "text": "[maravilhado, rápido] Só que aí você abre o olho. E o céu tá azul. Tem duas luas lá em cima, e um dragão do tamanho de um prédio acabou de passar por cima de você.",
+   "start": 10.037,
+   "end": 16.259,
+   "file": "projects/sem-marca-v2/input/clips/n04_449175676b_t1.30.wav"
+  },
+  {
+   "id": "n05",
+   "spk": "NARRADOR",
+   "text": "[empolgado] Lá embaixo, uma cidade cheia de muralha e torre. É, parceiro. Você foi parar em outro mundo.",
+   "start": 16.379,
+   "end": 21.868,
+   "file": "projects/sem-marca-v2/input/clips/n05_6ea3ef0a05_t1.30.wav"
+  },
+  {
+   "id": "n06",
+   "spk": "NARRADOR",
+   "text": "[curioso, rápido] E logo você repara numa coisa estranha: todo mundo aqui tem uns riscos no rosto. Isso é a Marca. A pessoa já nasce com ela, e é ela que decide tudo.",
+   "start": 22.068,
+   "end": 29.404,
+   "file": "projects/sem-marca-v2/input/clips/n06_251e5d17a0_t1.30.wav"
+  },
+  {
+   "id": "n07",
+   "spk": "NARRADOR",
+   "text": "[rápido, explicando] Nasceu com uma linha só? É elite: magia monstra, entra direto na Academia Real. Duas linhas? Magia mais ou menos, vira soldado ou ferreiro. Três linhas... aí é magia fraquinha, trabalho pesado, e ninguém nem olha na sua cara.",
+   "start": 29.524,
+   "end": 40.114,
+   "file": "projects/sem-marca-v2/input/clips/n07_eb503547e6_t1.30.wav"
+  },
+  {
+   "id": "n08",
+   "spk": "NARRADOR",
+   "text": "[empolgado, rápido] E repara na cor, porque a cor é o elemento. Quem tem marca vermelha solta fogo e derrete armadura. A azul controla a água e fecha ferida na hora.",
+   "start": 40.264,
+   "end": 47.345,
+   "file": "projects/sem-marca-v2/input/clips/n08_905f19e510_t1.30.wav"
+  },
+  {
+   "id": "n09",
+   "spk": "NARRADOR",
+   "text": "[empolgado, rápido] A marrom levanta muralha do chão. A branca é vento, faz até navio voar. E a amarela é raio: derruba monstro de dez metros com um estalo.",
+   "start": 47.445,
+   "end": 54.101,
+   "file": "projects/sem-marca-v2/input/clips/n09_3ec1e0b284_t1.30.wav"
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "text": "[misterioso] E tem as marcas que quase ninguém tem: a dourada, de luz; a preta, de sombra; e a violeta, que controla a gravidade. No reino inteiro, só três pessoas vivas têm uma dessas.",
+   "start": 54.251,
+   "end": 65.028,
+   "file": "projects/sem-marca-v2/input/clips/n10_c299be462f_t1.30.wav"
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "text": "[tenso, rápido] Aí você corre até um lago, se olha na água... e nada. Seu rosto tá liso. Nenhuma linha, nenhuma cor.",
+   "start": 65.228,
+   "end": 70.345,
+   "file": "projects/sem-marca-v2/input/clips/n11_fdb0199976_t1.30.wav"
+  },
+  {
+   "id": "n12",
+   "spk": "NARRADOR",
+   "text": "[tenso] E quando você entra na cidade, todo mundo para. Criança aponta, gente cochicha, guarda já põe a mão na lança. Porque aqui, quem não tem marca... simplesmente não deveria existir.",
+   "start": 70.465,
+   "end": 79.882,
+   "file": "projects/sem-marca-v2/input/clips/n12_99e341a204_t1.30.wav"
+  },
+  {
+   "id": "n13",
+   "spk": "NARRADOR",
+   "text": "[rápido] No dia seguinte, te levam pra Academia Real pro Teste do Cristal. Funciona assim: encostou a mão, o cristal acende na cor do seu elemento.",
+   "start": 80.082,
+   "end": 85.883,
+   "file": "projects/sem-marca-v2/input/clips/n13_7726314266_t1.30.wav"
+  },
+  {
+   "id": "n14",
+   "spk": "NARRADOR",
+   "text": "[narrando, crescendo] O garoto antes de você tem uma linha vermelha: o cristal pega fogo e a plateia vai à loucura. Aí chega a sua vez. Você encosta... e nada. Nem uma faisquinha. E a sala inteira cai na gargalhada.",
+   "start": 86.003,
+   "end": 96.466,
+   "file": "projects/sem-marca-v2/input/clips/n14_e06880ff31_t1.30.wav"
+  },
+  {
+   "id": "n15",
+   "spk": "NARRADOR",
+   "text": "[sério, firme] Até que o diretor, um velho de linha dourada, bate o cajado no chão, e todo mundo cala a boca.",
+   "start": 96.616,
+   "end": 101.48,
+   "file": "projects/sem-marca-v2/input/clips/n15_1eee4372be_t1.30.wav"
+  },
+  {
+   "id": "n16",
+   "spk": "NARRADOR",
+   "text": "[misterioso, baixo] Ele abre um livro de mil anos e vira pra você um desenho: um rosto igualzinho ao seu. Sem marca nenhuma. Embaixo, uma palavra só: Vazio.",
+   "start": 101.6,
+   "end": 110.405,
+   "file": "projects/sem-marca-v2/input/clips/n16_ff132d32ad_t1.30.wav"
+  },
+  {
+   "id": "n17",
+   "spk": "NARRADOR",
+   "text": "[sussurrando] Em toda a história, só existiu mais um. E a página seguinte... foi arrancada.",
+   "start": 110.525,
+   "end": 115.518,
+   "file": "projects/sem-marca-v2/input/clips/n17_da29169589_t1.30.wav"
+  },
+  {
+   "id": "n18",
+   "spk": "NARRADOR",
+   "text": "[misterioso, lento] E aí você escuta um miado. Em cima da estante, te encarando... o mesmo gato que você salvou.",
+   "start": 115.768,
+   "end": 121.567,
+   "file": "projects/sem-marca-v2/input/clips/n18_eb900ef5f0_t1.30.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Segue a página pra ver o episódio dois!",
+   "start": 124.967,
+   "end": 126.941,
+   "file": "projects/sem-marca-v2/input/clips/cta_50881f9db3_t1.30.wav"
+  }
+ ]
+}

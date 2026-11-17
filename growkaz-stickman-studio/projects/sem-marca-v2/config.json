@@ -1,0 +1,23 @@
+{
+ "title": "Sem Marca - Ep1 - O Vazio",
+ "aspect": "9:16",
+ "resolution": "720p",
+ "fps": 24,
+ "style": "fantasia",
+ "voiceover": "input/voiceover.wav",
+ "script": null,
+ "duration": 128.941,
+ "captions": true,
+ "bars": null,
+ "fadeIn": 0.3,
+ "fadeOut": 0.5,
+ "music": {
+  "enabled": true,
+  "gainDb": -19
+ },
+ "sfx": {
+  "enabled": true,
+  "gainDb": -6
+ },
+ "loudness": -14
+}

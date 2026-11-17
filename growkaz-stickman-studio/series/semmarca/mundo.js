@@ -4,19 +4,19 @@ import * as FX from '/engine/fx2d.js';
 export const INK = '#0b0b0d', GY = 1305.6;
 export const COR = { fogo: '#ff4a1a', agua: '#2a9dff', terra: '#b8743a', vento: '#e8f4ff', raio: '#ffe23a', luz: '#ffd76a', sombra: '#1a1024', gravidade: '#a64bff' };
 export const box = (g, x, y, w, h, c, r = 6, lw = 5) => { rr(g, x, y, w, h, r); g.fillStyle = c; g.fill(); if (lw) { g.strokeStyle = INK; g.lineWidth = lw; g.stroke(); } };
-const haze = (c, k, to = '#b9a0e0') => mix(c, to, k);           // perspectiva atmosférica
+const haze = (c, k, to = '#bfe4ff') => mix(c, to, k);           // perspectiva atmosférica
 
 // ---------- céu roxo com duas luas ----------
 export function ceu(g, t, cam, o = {}) {
-  const { top = '#1a0b3a', mid = '#5a2a8a', bot = '#f0a0c8', luas = true, d = 0.05 } = o;
+  const { top = '#0f5ad8', mid = '#3aa8ff', bot = '#c8f0ff', luas = true, d = 0.05 } = o;
   layer(g, cam, d, g => { g.fillStyle = linGrad(g, 0, -900, 0, GY, [top, mid, bot]); g.fillRect(-E.W * 3, -E.H * 2, E.W * 7, E.H * 4);
     FX.stars(g, t, { count: 90, seed: 11, area: [-E.W * 2, -E.H, E.W * 5, E.H * 0.9] });
-    if (luas) { glow(g, 760, 260, 360, '#ffd8f0', 0.35); circle(g, 760, 260, 120, '#fbe8ff'); circle(g, 730, 240, 26, alpha('#d8b8e8', 0.6)); circle(g, 800, 300, 18, alpha('#d8b8e8', 0.6));
+    if (luas) { glow(g, 760, 260, 360, '#ffffff', 0.3); circle(g, 760, 260, 120, '#f4f8ff'); circle(g, 730, 240, 26, alpha('#d8b8e8', 0.6)); circle(g, 800, 300, 18, alpha('#d8b8e8', 0.6));
       glow(g, 330, 420, 200, '#9ff0ff', 0.3); circle(g, 330, 420, 56, '#c8f6ff'); circle(g, 318, 410, 12, alpha('#8ad0e0', 0.6)); }
-    for (let i = 0; i < 5; i++) { const x = ((i * 470 + t * 12) % 2600) - 900, y = 520 + (i % 3) * 90; g.fillStyle = alpha('#ffc8ec', 0.18); g.beginPath(); g.ellipse(x, y, 260, 34, 0, 0, 7); g.ellipse(x + 120, y - 20, 160, 30, 0, 0, 7); g.fill(); } });
+    for (let i = 0; i < 5; i++) { const x = ((i * 470 + t * 12) % 2600) - 900, y = 520 + (i % 3) * 90; g.fillStyle = alpha('#ffffff', 0.55); g.beginPath(); g.ellipse(x, y, 260, 34, 0, 0, 7); g.ellipse(x + 120, y - 20, 160, 30, 0, 0, 7); g.fill(); } });
 }
 export function montanhas(g, cam, o = {}) {
-  const { d = 0.15, y = 1000, cores = ['#7a5aa8', '#5a3e88', '#3e2a66'] } = o;
+  const { d = 0.15, y = 1000, cores = ['#7ab8e8', '#4a9ad0', '#2f8a6a'] } = o;
   cores.forEach((c, k) => layer(g, cam, d + k * 0.1, g => { const r = rng(5 + k); g.fillStyle = c; g.beginPath(); g.moveTo(-E.W * 3, GY + 400); for (let x = -E.W * 3; x <= E.W * 4; x += 160 + r() * 140) { const h = 220 + r() * 380 - k * 60; g.lineTo(x, y - h + k * 90); g.lineTo(x + 90, y - h * 0.6 + k * 90); } g.lineTo(E.W * 4, GY + 400); g.fill();
     if (k === 0) { g.fillStyle = alpha('#ffffff', 0.55); const r2 = rng(5); for (let x = -E.W * 3; x <= E.W * 4; x += 160 + r2() * 140) { const h = 220 + r2() * 380; poly(g, [[x, y - h], [x - 40, y - h + 60], [x + 40, y - h + 60]], alpha('#ffffff', 0.5)); } } }));
 }
@@ -44,25 +44,25 @@ export function casa(g, x, y, w, h, c, o = {}) { const { teto = '#a8432a', luz =
 // ---------- cidade medieval (rua com profundidade) ----------
 export function cidade(g, t, cam, o = {}) {
   const { noite = 0, castle = true } = o;
-  ceu(g, t, cam, { top: mix('#2a5ad8', '#1a0b3a', noite), mid: mix('#8ac8ff', '#5a2a8a', noite), bot: mix('#ffe0b0', '#f0a0c8', noite), luas: noite > 0.5 });
+  ceu(g, t, cam, { top: mix('#0f5ad8', '#0a1a4a', noite), mid: mix('#3aa8ff', '#1a3a8a', noite), bot: mix('#e0f6ff', '#3a6ab0', noite), luas: noite > 0.5 });
   montanhas(g, cam, { y: 980 });
-  if (castle) layer(g, cam, 0.3, g => { castelo(g, 560, 860, 0.9, { t }); veil2(g, '#b9a0e0', 0.25); });
-  layer(g, cam, 0.5, g => { const r = rng(3), cs = ['#ffd2a0', '#a0d8ff', '#ffb0c8', '#c8f0a0', '#e8c8ff', '#fff0a0']; for (let i = -6; i < 12; i++) casa(g, i * 230 - 60, GY - 130, 200, 260 + r() * 120, haze(cs[(i + 12) % 6], 0.25), { teto: haze(['#a8432a', '#2a5ad8', '#3a8a4a'][(i + 12) % 3], 0.25), seed: i + 20 }); veil2(g, '#b9a0e0', 0.15); });
+  if (castle) layer(g, cam, 0.3, g => { castelo(g, 560, 860, 0.9, { t }); veil2(g, '#bfe4ff', 0.18); });
+  layer(g, cam, 0.5, g => { const r = rng(3), cs = ['#ffd2a0', '#a0d8ff', '#ffb0c8', '#c8f0a0', '#e8c8ff', '#fff0a0']; for (let i = -6; i < 12; i++) casa(g, i * 230 - 60, GY - 130, 200, 260 + r() * 120, haze(cs[(i + 12) % 6], 0.25), { teto: haze(['#a8432a', '#2a5ad8', '#3a8a4a'][(i + 12) % 3], 0.25), seed: i + 20 }); veil2(g, '#bfe4ff', 0.1); });
   layer(g, cam, 0.8, g => { const cs = ['#ffb46a', '#6ab8ff', '#ff7aa0', '#8ade6a', '#c48aff', '#ffe06a']; const r = rng(8);
     for (let i = -5; i < 10; i++) { casa(g, i * 330 - 40, GY, 290, 360 + r() * 140, cs[(i + 10) % 6], { teto: ['#c0462a', '#2a5ad8', '#3a8a4a', '#8a3ab0'][(i + 12) % 4], seed: i + 3 }); }
     for (let i = -5; i < 10; i += 2) { const x = i * 330 + 270; seg(g, [[x - 300, GY - 320], [x, GY - 300]], 3, INK); for (let k = 0; k < 6; k++) { const fx = x - 280 + k * 46, fy = GY - 318 + Math.sin(k / 5 * 3.14) * 12; poly(g, [[fx, fy], [fx + 30, fy], [fx + 15, fy + 40 + Math.sin(t * 3 + k) * 3]], ['#ff4a6a', '#ffd23a', '#2a9dff', '#4ade6a'][k % 4]); } }
     for (let i = -4; i < 10; i += 3) { const x = i * 330 + 160; seg(g, [[x, GY], [x, GY - 300]], 10, INK); box(g, x - 22, GY - 340, 44, 50, '#3a2a20', 8, 4); circle(g, x, GY - 315, 12, '#ffd27a'); glow(g, x, GY - 315, 160, '#ffb84a', 0.3); } });
   layer(g, cam, 0.92, g => { g.fillStyle = '#8a7a8e'; g.fillRect(-E.W * 3, GY, E.W * 7, E.H); const r = rng(9); g.strokeStyle = alpha(INK, 0.35); g.lineWidth = 3; for (let j = 0; j < 9; j++) for (let i = -40; i < 60; i++) { const x = i * 70 + (j % 2) * 35, y = GY + 10 + j * 46; rr(g, x, y, 62, 40, 12); g.fillStyle = shade('#9a8a9e', (r() - 0.5) * 0.2 + j * 0.02); g.fill(); g.stroke(); } });
-  if (noite) veil(g, '#1a0b3a', 0.25 * noite);
+  if (noite) veil(g, '#0a1a4a', 0.2 * noite);
   return { GY };
 }
 const veil2 = (g, c, a) => { g.save(); g.fillStyle = alpha(c, a); g.fillRect(-E.W * 3, -E.H * 2, E.W * 7, E.H * 4); g.restore(); };
 
 // ---------- campo de treino (para os elementos) ----------
 export function campo(g, t, cam, o = {}) {
-  ceu(g, t, cam, { top: '#3a6ad8', mid: '#9ad0ff', bot: '#ffe8c0', luas: false });
-  montanhas(g, cam, { y: 1020, cores: ['#9a8ac8', '#7a6aa8', '#5a8a6a'] });
-  layer(g, cam, 0.35, g => { castelo(g, 2400, 980, 0.7, { t }); castelo(g, -900, 990, 0.5, { t }); veil2(g, '#c8b8f0', 0.25); });
+  ceu(g, t, cam, { top: '#0f5ad8', mid: '#5ab8ff', bot: '#e8f8ff', luas: false });
+  montanhas(g, cam, { y: 1020, cores: ['#7ab8e8', '#4a9ad0', '#3aa86a'] });
+  layer(g, cam, 0.35, g => { castelo(g, 2400, 980, 0.7, { t }); castelo(g, -900, 990, 0.5, { t }); veil2(g, '#c8e8ff', 0.15); });
   layer(g, cam, 0.6, g => { FX.hills(g, { y: GY - 40, amp: 120, color: '#5ab05a', seed: 4 }); for (let i = -10; i < 30; i++) { const x = i * 190 + (i % 3) * 40; FX.tree(g, x, GY - 60 - (i % 4) * 16, 1.2, ['#2f8a3e', '#3fa04a', '#257a36'][i % 3]); } });
   layer(g, cam, 0.9, g => { g.fillStyle = linGrad(g, 0, GY, 0, GY + 700, ['#6ac85a', '#3a8a3a']); g.fillRect(-E.W * 3, GY, E.W * 9, E.H); const r = rng(2); for (let i = 0; i < 260; i++) { const x = -E.W * 3 + r() * E.W * 9, y = GY + 20 + r() * 600; seg(g, [[x, y], [x + 4, y - 18]], 3, alpha('#2a6a2a', 0.6)); }
     for (let i = -6; i < 30; i++) { const x = i * 160; seg(g, [[x, GY + 40], [x, GY - 50]], 10, '#6a4a2a'); } seg(g, [[-1000, GY - 30], [4800, GY - 30]], 8, '#7a5a3a'); seg(g, [[-1000, GY + 10], [4800, GY + 10]], 8, '#7a5a3a'); });
@@ -142,7 +142,7 @@ export function muralha(g, x, y, s, k) { if (k <= 0) return; g.save(); g.transla
   g.restore(); if (k < 1) for (let i = 0; i < 12; i++) circle(g, x - 300 + i * 55, y - 20 - ((k * 3 + i * 0.3) % 1) * 160, 16, alpha('#a8642a', 0.7)); }
 export function raio(g, x0, y0, x1, y1, t, a = 1) { if (a <= 0) return; const r = rng(Math.floor(t * 20)); let px = x0, py = y0; g.lineCap = 'round'; for (let i = 1; i <= 10; i++) { const k = i / 10, nx = lerp(x0, x1, k) + (i < 10 ? (r() - 0.5) * 120 : 0), ny = lerp(y0, y1, k); seg(g, [[px, py], [nx, ny]], 22 * a, alpha('#fff6a0', 0.6 * a)); seg(g, [[px, py], [nx, ny]], 8 * a, '#ffffff'); px = nx; py = ny; } glow(g, x1, y1, 400, '#ffe23a', 0.8 * a); }
 export function agua(g, x, y, s, t, a = 1) { if (a <= 0) return; for (let i = 0; i < 16; i++) { const ang = t * 3 + i * 0.39, rr2 = (90 + Math.sin(t * 4 + i) * 20) * s; circle(g, x + Math.cos(ang) * rr2, y + Math.sin(ang) * rr2 * 0.6, 14 * s * a, alpha('#6ac8ff', 0.85 * a)); } glow(g, x, y, 220 * s, '#2a9dff', 0.5 * a); }
-export function lago(g, t, cam) { ceu(g, t, cam, { top: '#2a3a9a', mid: '#9a6ad0', bot: '#ffc0d8' }); montanhas(g, cam, { y: 1000 });
+export function lago(g, t, cam) { ceu(g, t, cam, { top: '#0f5ad8', mid: '#4ab0ff', bot: '#d8f4ff' }); montanhas(g, cam, { y: 1000 });
   layer(g, cam, 0.6, g => { FX.hills(g, { y: GY - 60, amp: 90, color: '#3a8a4a', seed: 6 }); for (let i = -8; i < 20; i++) FX.pine(g, i * 120, GY - 60 - (i % 3) * 10, 1.1, '#1f5a34'); });
   layer(g, cam, 0.9, g => { g.fillStyle = '#4ab05a'; g.fillRect(-E.W * 3, GY - 40, E.W * 7, 120); g.fillStyle = linGrad(g, 0, GY + 60, 0, GY + 700, ['#5a8ae0', '#2a3a8a']); g.beginPath(); g.ellipse(540, GY + 380, 1100, 330, 0, 0, 7); g.fill(); g.strokeStyle = INK; g.lineWidth = 8; g.stroke();
     for (let i = 0; i < 8; i++) { g.strokeStyle = alpha('#fff', 0.25); g.lineWidth = 4; g.beginPath(); g.ellipse(540 + Math.sin(i) * 300, GY + 220 + i * 50, 120 + Math.sin(t * 2 + i) * 20, 10, 0, 0, 7); g.stroke(); } });
