@@ -15,7 +15,7 @@
 import { clamp, lerp, mix, rgb } from './core.js';
 import { POSES, EXPR, emote } from './rig2d.js';
 
-export const INK = '#1d1b2e';
+export const INK = '#000000';
 export const VERMELHO_PROTAGONISTA = '#d8342b';
 export const PELES = { branca: '#ffffff', clara: '#f7d6bd', rosada: '#f1c0a2', media: '#e2a97f', morena: '#c98b5e', parda: '#a8703f', escura: '#7d4a2b', negra: '#5b3420' };
 const SOMBRA = '#2a2452';          // a sombra (cel) puxa para um azul-violeta: cores vivas, sem "sujar"
@@ -141,7 +141,7 @@ export function drawHumano(g, o = {}) {
   if (t != null && o.breathe !== false) p = respira(p, t, seed);
   const blink = o.blink ?? (t != null ? piscando(t, seed) : false);
   g.save(); if (o.alpha != null) g.globalAlpha *= o.alpha;
-  DIM = o.dim ? (o.dim === true ? 0.42 : o.dim) : 0; OLW = 4 * (o.contorno ?? 1);
+  DIM = o.dim ? (o.dim === true ? 0.42 : o.dim) : 0; OLW = 6.5 * (o.contorno ?? 1);
   const luz = o.luz ?? -1; LX = 2.2 * luz * f; LY = -1.4;
   if (o.shadow !== false && !o.rot) { g.fillStyle = 'rgba(20,18,40,.22)'; g.beginPath(); g.ellipse(o.x + 2 * s * f, o.y + 1, 38 * s, 7 * s, 0, 0, Math.PI * 2); g.fill(); }
   g.translate(o.x, o.y); g.scale(f * s, s);

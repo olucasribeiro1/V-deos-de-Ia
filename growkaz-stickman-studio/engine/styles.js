@@ -108,4 +108,7 @@ STYLES.urbanoRGB = { ...STYLES.urbano, name: 'Urbano RGB', desc: 'Urbano com cor
 // Fantasia (série Sem Marca): urbano com cores vivas, bloom mágico e menos sujeira
 STYLES.fantasia = { ...STYLES.urbano, name: 'Fantasia', desc: 'Mundo medieval mágico, cores vivas, luz e bloom.', grade: { ...STYLES.urbano.grade, sat: 1.35, contrast: 1.1, grunge: 0.25, bloom: 0.6, vignette: 0.5, grain: 0.06 } };
 
+// Cartoon (padrão dos vídeos humanizados): cores RGB saturadas, sem sujeira, vinheta leve
+STYLES.cartoon = { ...STYLES.urbano, name: 'Cartoon', desc: 'Cartoon vetorial: bordas pretas, cores vibrantes, limpo.', outline: { color: '#000000', w: 4 }, grade: { ...STYLES.urbano.grade, sat: 1.45, contrast: 1.12, lift: [0, 0, 0], gamma: [1, 1, 1], gain: [1.02, 1.02, 1.02], vignette: 0.22, grain: 0.025, grunge: 0, bloom: 0.45 } };
+
 export const STYLE_IDS = Object.keys(STYLES);
