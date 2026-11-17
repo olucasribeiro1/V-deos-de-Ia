@@ -65,9 +65,9 @@ function fachada(T, cor, w, h, seed, terreo) { const key = `fach${cor}${w}${h}${
     if (r() < 0.3) { g.strokeStyle = 'rgba(20,20,26,.8)'; g.lineWidth = 3; for (let k = 1; k < 6; k++) { g.beginPath(); g.moveTo(x + ww * k / 6, y); g.lineTo(x + ww * k / 6, y + hh); g.stroke(); } e.fillStyle = '#000'; for (let k = 1; k < 6; k++) e.fillRect(x + ww * k / 6 - 1, y, 3, hh); } }
   // térreo: loja com vitrine acesa ou porta de enrolar
   const ty = H - 3.4 * PX; g.fillStyle = 'rgba(0,0,0,.25)'; g.fillRect(0, ty - 6, W, 8);
-  if (terreo === 'loja') { const vc = ['#ffd890', '#9fe0ff', '#ffa8d8', '#a8ffc0'][Math.floor(r() * 4)]; g.fillStyle = '#2a2a30'; g.fillRect(W * 0.06, ty + 0.5 * PX, W * 0.88, 2.9 * PX); g.fillStyle = vc; g.fillRect(W * 0.08, ty + 0.6 * PX, W * 0.84, 2.7 * PX); e.fillStyle = vc; e.fillRect(W * 0.08, ty + 0.6 * PX, W * 0.84, 2.7 * PX);
+  if (terreo === 'loja') { const vc = ['#ffd890', '#9fe0ff', '#ffa8d8', '#a8ffc0'][Math.floor(r() * 4)]; g.fillStyle = '#2a2a30'; g.fillRect(W * 0.06, ty + 0.5 * PX, W * 0.88, 2.9 * PX); g.fillStyle = vc; g.fillRect(W * 0.08, ty + 0.6 * PX, W * 0.84, 2.7 * PX); g.fillStyle = 'rgba(20,10,40,.45)'; g.fillRect(W * 0.08, ty + 0.6 * PX, W * 0.84, 2.7 * PX); e.globalAlpha = 0.4; e.fillStyle = vc; e.fillRect(W * 0.08, ty + 0.6 * PX, W * 0.84, 2.7 * PX);
     // prateleiras/pessoas dentro (silhuetas)
-    for (let i = 0; i < 6; i++) { const sx = W * 0.1 + r() * W * 0.78; const sc = ['#e85a8a', '#3a9dff', '#ffd23a', '#4ac07a'][i % 4]; g.fillStyle = sc; e.fillStyle = sc; g.fillRect(sx, ty + 1.2 * PX + (i % 3) * 0.6 * PX, W * 0.08, 0.3 * PX); e.fillRect(sx, ty + 1.2 * PX + (i % 3) * 0.6 * PX, W * 0.08, 0.3 * PX); }
+    e.globalAlpha = 1; for (let i = 0; i < 6; i++) { const sx = W * 0.1 + r() * W * 0.78; const sc = ['#e85a8a', '#3a9dff', '#ffd23a', '#4ac07a'][i % 4]; g.fillStyle = sc; e.fillStyle = sc; g.fillRect(sx, ty + 1.2 * PX + (i % 3) * 0.6 * PX, W * 0.08, 0.3 * PX); e.fillRect(sx, ty + 1.2 * PX + (i % 3) * 0.6 * PX, W * 0.08, 0.3 * PX); }
     g.fillStyle = 'rgba(30,30,40,.9)'; for (let k = 1; k < 4; k++) { g.fillRect(W * 0.08 + W * 0.84 * k / 4 - 2, ty + 0.6 * PX, 4, 2.7 * PX); e.fillStyle = '#000'; e.fillRect(W * 0.08 + W * 0.84 * k / 4 - 2, ty + 0.6 * PX, 4, 2.7 * PX); } }
   else { g.fillStyle = '#6a6e78'; g.fillRect(W * 0.08, ty + 0.5 * PX, W * 0.84, 2.9 * PX); for (let y = ty + 0.5 * PX; y < H; y += 8) { g.fillStyle = 'rgba(0,0,0,.25)'; g.fillRect(W * 0.08, y, W * 0.84, 2); }
     g.strokeStyle = ['#ff4ac8', '#3ae8ff', '#ffd23a', '#111'][Math.floor(r() * 4)]; g.lineWidth = 6; g.lineCap = 'round'; for (let k = 0; k < 3; k++) { g.beginPath(); let x = W * 0.15 + r() * W * 0.5, y = ty + 1.4 * PX + r() * PX; g.moveTo(x, y); for (let j = 0; j < 8; j++) { x += 10 + r() * 22; y += (r() - 0.5) * 40; g.lineTo(x, y); } g.stroke(); } }
@@ -310,10 +310,10 @@ export function caminhao3D(T, o = {}) { const THREE = T.THREE, g = new THREE.Gro
   for (const x of [-2.85, 1.9]) for (const s of [-1, 1]) body.add(mk(T, new THREE.BoxGeometry(0.04, 0.5, 0.5), preto, x + 0.7, 0.55, s * 1.05)); // para-barro
   // luz: 2 SpotLights (sem sombra) + cones volumétricos + brilho
   const spots = [], cones = [], glows = [];
-  for (const v of luzes) { const sp = new THREE.SpotLight(C(T, '#fff2d8'), 0, 70, 0.42, 0.55, 1.2); sp.castShadow = false; sp.position.copy(v); sp.target.position.set(v.x - 30, 0, v.z * 1.4); body.add(sp, sp.target); spots.push(sp);
+  for (const v of luzes) { const sp = new THREE.SpotLight(C(T, '#fff2d8'), 0, 45, 0.42, 0.55, 1.5); sp.castShadow = false; sp.position.copy(v); sp.target.position.set(v.x - 30, 0, v.z * 1.4); body.add(sp, sp.target); spots.push(sp);
     const cn = new THREE.Mesh(geo('farolCone', () => new THREE.ConeGeometry(2.6, 16, 28, 1, true).translate(0, -8, 0).rotateZ(-Math.PI / 2 - 0.04)), add(T, '#fff0d0', 0.1, fadeTex(T))); cn.position.copy(v); body.add(cn); cones.push(cn);
     const gl = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex(T), color: C(T, '#fff4e0'), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true })); gl.position.copy(v).add(new THREE.Vector3(-0.2, 0, 0)); body.add(gl); glows.push(gl); }
-  g.farois = (k, ks = 1) => { k = clamp(k, 0, 1.5); farM.color.setRGB(1, 0.96, 0.88).multiplyScalar(1 + 9 * k); spots.forEach((s) => { s.intensity = 420 * k * ks; s.visible = ks > 0.001; }); cones.forEach((c) => (c.material.opacity = 0.11 * k)); glows.forEach((s) => { s.scale.setScalar(1.2 + 3.5 * k); s.material.opacity = Math.min(1, k); }); };
+  g.farois = (k, ks = 1) => { k = clamp(k, 0, 1.5); farM.color.setRGB(1, 0.96, 0.88).multiplyScalar(1 + 4 * k); spots.forEach((s) => { s.intensity = 150 * k * ks; s.visible = ks > 0.001; }); cones.forEach((c) => (c.material.opacity = 0.07 * k)); glows.forEach((s) => { s.scale.setScalar(1.0 + 2.2 * k); s.material.opacity = Math.min(0.85, k * 0.7); }); };
   g.farois(o.farois ?? 1);
   let ang = 0; g.rodar = (dx) => { ang += dx / 0.54; rodas.forEach((r) => (r.rotation.z = ang)); };
   g.faroisMundo = () => luzes.map((v) => body.localToWorld(v.clone()));
@@ -327,6 +327,11 @@ export function gatoPlaceholder(T) { const THREE = T.THREE, g = new THREE.Group(
   for (const s of [-1, 1]) { const e = mk(T, new THREE.ConeGeometry(0.05, 0.1, 4), lar, 0.06, 0.53, s * 0.06); e.rotation.x = s * 0.25; g.add(e); g.add(mk(T, new THREE.SphereGeometry(0.018, 8, 6), new THREE.MeshBasicMaterial({ color: '#111' }), 0.19, 0.43, s * 0.045, false)); }
   const rabo = mk(T, new THREE.TorusGeometry(0.14, 0.03, 8, 16, Math.PI * 1.1), lar, -0.16, 0.12, 0); rabo.rotation.y = Math.PI / 2; g.add(rabo);
   return g; }
+
+// ---------- blindagem: limita o HDR de cada material (evita Inf/NaN no half-float que o bloom espalha pela tela) ----------
+export function blindar(obj, max = 24) { obj.traverse((o) => { for (const mt of [].concat(o.material || [])) { if (!mt || mt.userData.blindado || !(mt.isMeshStandardMaterial || mt.isMeshBasicMaterial)) continue; mt.userData.blindado = true;
+  const prev = mt.onBeforeCompile; mt.onBeforeCompile = (sh, r) => { prev?.call(mt, sh, r); sh.fragmentShader = sh.fragmentShader.replace(/}\s*$/, `  { vec3 c_ = gl_FragColor.rgb; if (any(isnan(c_)) || any(isinf(c_))) c_ = vec3(0.0); gl_FragColor.rgb = min(c_, vec3(${max.toFixed(1)})); }\n}`); };
+  mt.customProgramCacheKey = () => 'blindado' + max; mt.needsUpdate = true; } }); }
 
 // ---------- environment neon (reflexos coloridos no asfalto e cromados) ----------
 export function ambienteNeon(T, st, k = 0.9) { const THREE = T.THREE, sc = new THREE.Scene();
@@ -352,8 +357,9 @@ export function cenaMorte(T, o = {}) { const THREE = T.THREE;
   const av = avenida3D(T, { x0: -60, x1: 160, focoX: 1 }); st.add(av); av.semaforo.set('verde');
   const truck = caminhao3D(T); truck.position.set(150, 0, -1.25); st.add(truck);
   const gato = o.gato || gatoPlaceholder(T); st.add(gato); const gatoRot = o.gatoRotY ?? 0;
-  const eu = boneco2D(T, { auto: 0.55 }); st.add(eu);
-  const GATO0 = new THREE.Vector3(1.0, 0, -1.25), GATO1 = new THREE.Vector3(1.5, 0.18, -6.5), EU0 = new THREE.Vector3(1.1, 0.18, 6.6), ZPULO = 0.9;
+  const eu = boneco2D(T, { auto: 0.5 }); st.add(eu);
+  blindar(st.scene, 12);
+  const GATO0 = new THREE.Vector3(1.0, 0, -1.25), GATO1 = new THREE.Vector3(0.4, 0.18, -6.4), EU0 = new THREE.Vector3(1.1, 0.18, 6.6), ZPULO = 0.9;
   // caminhão: 22 m/s, câmera lenta (6 m/s) durante o mergulho; para-choque 1.6 m antes de você no clarão
   const vel = 22, velLenta = 6, xImp = 1.1 + 1.6;
   const frenteX = (t) => t >= tPulo ? xImp + velLenta * (tImpacto - t) : xImp + velLenta * (tImpacto - tPulo) + vel * (tPulo - t);
@@ -367,12 +373,15 @@ export function cenaMorte(T, o = {}) { const THREE = T.THREE;
   const gatoEm = (t) => { if (t < tEmp) return { p: GATO0.clone(), ry: Math.PI, giro: 0 }; const k = prog(t, tEmp, tImpacto + 0.45); const p = GATO0.clone().lerp(GATO1, ease.out(k)); p.y = lerp(0, GATO1.y, k) + Math.sin(k * Math.PI) * 0.7; return { p, ry: lerp(Math.PI, -2.3, k), giro: k < 1 ? k * Math.PI * 2 : 0 }; };
   const cam = st.camera, look = new THREE.Vector3();
   const K = [[0, { pos: [-36, 17, 3.5], look: [22, 1.5, 0], fov: 56 }], [tGato - 0.4, { pos: [-15, 5.0, 4.5], look: [2, 0.9, 1.5], fov: 50 }], [tGato + 0.7, { pos: [-4.2, 0.75, -0.6], look: [1.0, 0.35, -1.25], fov: 40 }], [tCaminhao, { pos: [-3.8, 0.62, -0.9], look: [8, 0.75, -1.25], fov: 38 }], [tCorre, { pos: [-3.2, 0.58, -1.0], look: [9, 0.9, -1.2], fov: 36 }]];
-  const segue = (t, p) => { const k = prog(t, tPulo, tImpacto); return { pos: [p.x - 7.0 + 1.8 * k, 1.3 - 0.25 * k, p.z * 0.55 - 0.6], look: [p.x + 4, 0.95, p.z * 0.97 - 0.15], fov: lerp(44, 38, k) }; };
-  const KF = [[tImpacto + 0.12, { pos: [-2.6, 0.55, -1.2], look: [1.8, 2.2, -8.5], fov: 50 }], [fim, { pos: [-1.2, 0.45, -2.6], look: [1.7, 1.7, -8.5], fov: 44 }]];
+  const dP = new THREE.Vector3(), dT = new THREE.Vector3();
+  // segue você e mantém o caminhão no quadro: olha para uma mistura das direções (você 62% / faróis 38%)
+  const segue = (t, p) => { const k = prog(t, tPulo, tImpacto); const c = new THREE.Vector3(p.x - 10 + 4.5 * k, 1.35 - 0.3 * k, p.z * 0.5 - 0.7);
+    dP.set(p.x, 0.95, p.z).sub(c).normalize(); dT.set(frenteX(t), 1.3, -1.25).sub(c).normalize(); const d = dP.multiplyScalar(0.62).add(dT.multiplyScalar(0.38)).normalize().multiplyScalar(10).add(c);
+    return { pos: c.toArray(), look: d.toArray(), fov: lerp(46, 40, k) }; };
+  const KF = [[tImpacto + 0.12, { pos: [0.15, 0.32, -4.7], look: [0.5, 0.42, -6.5], fov: 40 }], [tIleso + 0.3, { pos: [0.0, 0.36, -4.4], look: [0.5, 0.5, -6.5], fov: 40 }], [fim, { pos: [-1.0, 0.9, -0.6], look: [1.3, 2.3, -9.5], fov: 50 }]];
   const update = (t) => {
     const fx = frenteX(t), depois = t > tImpacto + 0.1; truck.visible = !depois; truck.position.x = fx + truck.frente; if (ultimoX != null) truck.rodar(ultimoX - truck.position.x); ultimoX = truck.position.x;
     const perto = clamp(1 - (fx - 1) / 70); // SpotLights só quando o caminhão está perto (longe, o brilho especular rasante no asfalto estoura o half-float e o bloom espalha NaN)
-    truck.farois(t < tCaminhao - 0.6 ? 0.25 : 0.6 + 0.9 * perto * perto, clamp((34 - (fx - cam.position.x)) / 12));
     truck.body.position.y = Math.sin(t * 23) * 0.012; truck.body.rotation.x = Math.sin(t * 17) * 0.004;
     av.semaforo.set(t < tCaminhao ? 'verde' : t < tCorre ? 'amarelo' : 'vermelho');
     const e = euEm(t); eu.visible = !depois; eu.position.copy(e.p);
@@ -384,18 +393,19 @@ export function cenaMorte(T, o = {}) { const THREE = T.THREE;
       cam.position.set(...P.pos); look.set(...P.look); cam.lookAt(look); cam.fov = P.fov; cam.updateProjectionMatrix();
       if (t > tCaminhao && !depois) { const tr = 0.03 * perto * perto; cam.position.x += Math.sin(t * 41) * tr; cam.position.y += Math.sin(t * 37) * tr; }
       st.foco(depois ? cam.position.distanceTo(gato.position) : t < tGato ? 20 : cam.position.distanceTo(t < tCorre ? gato.position : eu.position), 0.0004); }
-    if (o.semBloom) st.bloom.strength = 0; else st.bloom.strength = 0.5 + (depois ? 0 : 0.7 * Math.pow(perto, 3));
+    truck.farois(t < tCaminhao - 0.6 ? 0.25 : 0.6 + 0.9 * perto * perto, clamp((34 - (fx - cam.position.x)) / 12));
+    if (o.semBloom) st.bloom.strength = 0; else st.bloom.strength = 0.5 + (depois ? 0 : 0.35 * Math.pow(perto, 3));
     st.lente.uniforms.aberr && (st.lente.uniforms.aberr.value = 0.0015 + (depois ? 0 : 0.006 * Math.pow(perto, 3)));
     av.update(t, cam); st.tick(t); };
   const V = new THREE.Vector3();
   const proj = (v) => { V.copy(v).project(cam); return { x: (V.x + 1) / 2 * E.W, y: (1 - V.y) / 2 * E.H, ok: V.z < 1 && V.z > -1 }; };
   const overlay = (g, t) => { if (o.semOverlay) return; const depois = t > tImpacto + 0.1;
     if (!depois && t > tCaminhao - 0.8) { const fx = frenteX(t), perto = clamp(1 - (fx - 1) / 70), ps = truck.faroisMundo().map(proj).filter((q) => q.ok); g.save(); g.globalCompositeOperation = 'lighter';
-      for (const q of ps) { const R = 40 + 260 * perto * perto, gr = g.createRadialGradient(q.x, q.y, 0, q.x, q.y, R); gr.addColorStop(0, 'rgba(255,250,235,.95)'); gr.addColorStop(0.25, `rgba(255,220,170,${0.35 + 0.3 * perto})`); gr.addColorStop(1, 'rgba(255,200,140,0)'); g.fillStyle = gr; g.fillRect(q.x - R, q.y - R, R * 2, R * 2);
+      for (const q of ps) { const R = 30 + 200 * perto * perto, gr = g.createRadialGradient(q.x, q.y, 0, q.x, q.y, R); gr.addColorStop(0, 'rgba(255,250,235,.95)'); gr.addColorStop(0.25, `rgba(255,220,170,${0.35 + 0.3 * perto})`); gr.addColorStop(1, 'rgba(255,200,140,0)'); g.fillStyle = gr; g.fillRect(q.x - R, q.y - R, R * 2, R * 2);
         const sw = 120 + 900 * perto, gs = g.createLinearGradient(q.x - sw, 0, q.x + sw, 0); gs.addColorStop(0, 'rgba(120,200,255,0)'); gs.addColorStop(0.5, `rgba(170,225,255,${0.25 + 0.4 * perto})`); gs.addColorStop(1, 'rgba(120,200,255,0)'); g.fillStyle = gs; g.fillRect(q.x - sw, q.y - 3 - 4 * perto, sw * 2, 6 + 8 * perto); }
       if (ps.length) { const cx = (ps[0].x + (ps[1] || ps[0]).x) / 2, cy = (ps[0].y + (ps[1] || ps[0]).y) / 2, dx = E.W / 2 - cx, dy = E.H / 2 - cy;
         [[0.5, 30, 'rgba(120,255,200,'], [0.9, 70, 'rgba(255,120,220,'], [1.4, 46, 'rgba(120,180,255,'], [1.75, 110, 'rgba(255,220,120,']].forEach(([f, r, c]) => { const x = cx + dx * f, y = cy + dy * f, rr = r * (0.6 + perto), gr = g.createRadialGradient(x, y, rr * 0.6, x, y, rr); gr.addColorStop(0, c + (0.05 + 0.12 * perto) + ')'); gr.addColorStop(0.85, c + (0.08 + 0.15 * perto) + ')'); gr.addColorStop(1, c + '0)'); g.fillStyle = gr; g.beginPath(); g.arc(x, y, rr, 0, 7); g.fill(); });
-        const lav = Math.pow(perto, 4) * 0.55; if (lav > 0.01) { const gr = g.createRadialGradient(cx, cy, 0, cx, cy, E.H); gr.addColorStop(0, `rgba(255,245,225,${lav})`); gr.addColorStop(1, `rgba(255,235,210,${lav * 0.4})`); g.fillStyle = gr; g.fillRect(0, 0, E.W, E.H); } }
+        const lav = Math.pow(perto, 4) * 0.3; if (lav > 0.01) { const gr = g.createRadialGradient(cx, cy, 0, cx, cy, E.H); gr.addColorStop(0, `rgba(255,245,225,${lav})`); gr.addColorStop(1, `rgba(255,235,210,${lav * 0.4})`); g.fillStyle = gr; g.fillRect(0, 0, E.W, E.H); } }
       g.restore(); }
     // clarão branco ANTES da batida, segura e abre no gato a salvo
     const a = t < tImpacto ? ease.in(prog(t, tImpacto - 0.22, tImpacto)) : 1 - ease.inOut(prog(t, tImpacto + 0.25, tIleso));
