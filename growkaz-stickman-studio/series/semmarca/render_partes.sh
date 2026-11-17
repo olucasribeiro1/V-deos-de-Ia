@@ -17,4 +17,4 @@ for i in $(seq 0 $((K-1))); do
   [ -s $F ] || { echo "FALHOU parte $i"; exit 1; }
   echo "file 'p$i.mp4'" >> $P/build/partes/lista.txt; echo "parte $i/$K ok $(date +%T)"
 done
-ffmpeg -v error -y -f concat -safe 0 -i $P/build/partes/lista.txt -c copy $P/build/video_silent.mp4 && python3 audio/mix.py --project $P > $P/build/partes/mix.log 2>&1 && F=$(ls -t $P/out/*.mp4 | grep -v -e 720p -e Teste | head -1) && ffmpeg -v error -y -i "$F" -c:v libx264 -preset slow -crf 24 -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart $P/out/${N}_720p.mp4 && echo "erros: $(grep -h 'SHOT ERROR' $P/build/partes/p*.log | wc -l)" && echo "PRONTO $P/out/${N}_720p.mp4"
+ffmpeg -v error -y -f concat -safe 0 -i $P/build/partes/lista.txt -c copy $P/build/video_silent.mp4 && python3 audio/mix.py --project $P > $P/build/partes/mix.log 2>&1 && F=$(ls -t $P/out/*.mp4 | grep -v -e _720p -e Teste | head -1) && ffmpeg -v error -y -i "$F" -c:v libx264 -preset slow -crf 24 -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart $P/out/${N}_720p.mp4 && echo "erros: $(grep -h 'SHOT ERROR' $P/build/partes/p*.log | wc -l)" && echo "PRONTO $P/out/${N}_720p.mp4"
