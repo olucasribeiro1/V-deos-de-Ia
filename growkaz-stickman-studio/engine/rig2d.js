@@ -258,6 +258,7 @@ function parts(g, o, p, of, ink, far, pass, grow = 0) {
   if (!['ponytail', 'bun', 'hood', 'none', undefined].includes(of.head)) drawHeadwear(g, of, p.head[0], p.head[1], HR, pass);
   if (sil) return;
   face(g, p.head[0], p.head[1], HR, { expr: o.expr, talk: o.talk, blink: o.blink, look: o.look, override: o.face });
+  if (o.marca) marcaRosto(g, p.head[0], p.head[1], HR, false, o.marca, o.t ?? 0);
   if (of.face === 'glasses') { const c = S().feature; g.strokeStyle = c; g.lineWidth = 2.4; for (const dx of [-6.5, 10]) { g.beginPath(); g.arc(p.head[0] + 9 + dx, p.head[1] - 4, 7, 0, Math.PI * 2); g.stroke(); } seg(g, [[p.head[0] + 9.5, p.head[1] - 4], [p.head[0] + 12.5, p.head[1] - 4]], 2, c); }
   if (of.face === 'sunglasses') { g.fillStyle = '#05060a'; rr(g, p.head[0] - 1, p.head[1] - 10, 16, 11, 4); g.fill(); rr(g, p.head[0] + 17, p.head[1] - 10, 15, 11, 4); g.fill(); seg(g, [[p.head[0] - 4, p.head[1] - 7], [p.head[0] + 33, p.head[1] - 7]], 2.5, '#05060a'); g.fillStyle = '#9fe8ff'; g.fillRect(p.head[0] + 2, p.head[1] - 8, 4, 2); g.fillRect(p.head[0] + 20, p.head[1] - 8, 4, 2); }
   if (of.head === 'hood') { g.strokeStyle = shade(of.headColor || of.color || '#d64a33', 0.15); g.lineWidth = 5; g.beginPath(); g.arc(p.head[0] - 6, p.head[1] + 2, HR * 1.18, Math.PI * 0.9, Math.PI * 1.75); g.stroke(); }
@@ -303,6 +304,7 @@ export function bigFace(g, cx, cy, r, o = {}) {
   if (ol && st.rig?.headShade) { g.save(); g.beginPath(); g.arc(0, 0, r, 0, Math.PI * 2); g.clip(); circle(g, -side * r * 0.4, r * 0.3, r, alpha(st.rig.headShade, 0.3)); circle(g, side * r * 0.12, -r * 0.1, r * 0.95, ink); g.restore(); }
   if (of.head && !['hood', 'none'].includes(of.head)) drawHeadwear(g, { ...of, _ink: ink }, 0, 0, r, 'main');
   face(g, 0, 0, r, { expr: o.expr, talk: o.talk, blink: o.blink, look: o.look, front: true, override: o.face });
+  if (o.marca) marcaRosto(g, 0, 0, r, true, o.marca, o.t ?? 0);
   if (o.emote) emote(g, 0, 0, r * 0.62, o.emote, o.t ?? 0);
   if (of.face === 'glasses') { g.strokeStyle = st.feature; g.lineWidth = r * 0.06; for (const dx of [-0.34, 0.34]) { g.beginPath(); g.arc(dx * r, -r * 0.16, r * 0.26, 0, Math.PI * 2); g.stroke(); } }
   if (of.face === 'sunglasses') { g.fillStyle = '#05060a'; rr(g, -r * 0.66, -r * 0.34, r * 0.6, r * 0.4, r * 0.12); g.fill(); rr(g, r * 0.06, -r * 0.34, r * 0.6, r * 0.4, r * 0.12); g.fill(); g.fillStyle = 'rgba(160,230,255,.6)'; g.fillRect(-r * 0.55, -r * 0.28, r * 0.12, r * 0.05); }
@@ -325,4 +327,17 @@ export function emote(g, hx, hy, r, kind, t = 0) {
       case 'steam': { for (const sd of [-1, 1]) { const ph = (t * 1.5) % 1; g.fillStyle = `rgba(230,230,235,${0.7 * (1 - ph)})`; g.beginPath(); g.arc(hx + sd * r * (0.9 + ph * 0.4), hy - r * (0.9 + ph * 0.6), r * (0.15 + ph * 0.25), 0, 7); g.fill(); } break; }
     }
     g.restore(); }
+}
+
+// ---------- marca no rosto (série Sem Marca): n riscos verticais sob o olho, na cor do elemento, com brilho ----------
+// o.marca = { n: 1..3, cor: '#ff4a2a', brilho: 0..1 }
+export function marcaRosto(g, hx, hy, r, front, m, t = 0) {
+  const n = m.n || 1, cor = m.cor || '#ff4a2a', b = (m.brilho ?? 0.6) * (0.8 + 0.2 * Math.sin(t * 4));
+  const cx = front ? hx + r * 0.34 : hx + r * 0.5, y0 = hy + r * 0.06, y1 = hy + r * 0.4, gap = r * (front ? 0.13 : 0.1);
+  g.save(); g.lineCap = 'round';
+  for (let i = 0; i < n; i++) { const x = cx + (i - (n - 1) / 2) * gap;
+    if (b > 0) { g.globalCompositeOperation = 'lighter'; g.strokeStyle = cor; g.globalAlpha = 0.35 * b; g.lineWidth = r * 0.16; g.beginPath(); g.moveTo(x, y0); g.lineTo(x - r * 0.02, y1); g.stroke(); g.globalCompositeOperation = 'source-over'; g.globalAlpha = 1; }
+    g.strokeStyle = '#0b0b0d'; g.lineWidth = r * 0.085; g.beginPath(); g.moveTo(x, y0); g.lineTo(x - r * 0.02, y1); g.stroke();
+    g.strokeStyle = cor; g.lineWidth = r * 0.05; g.beginPath(); g.moveTo(x, y0); g.lineTo(x - r * 0.02, y1); g.stroke(); }
+  g.restore();
 }

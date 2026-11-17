@@ -1,0 +1,131 @@
+{
+ "model": "eleven_v4",
+ "_nota": "Sem Marca Ep1. Isekai. Força do protagonista NÃO aparece no Ep1.",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.3,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[irônico, rápido] Você morreu salvando um gato. Sério."
+  },
+  {
+   "id": "n02",
+   "spk": "NARRADOR",
+   "gap": 0.1,
+   "text": "[rápido, tenso] Ele tava parado no meio da avenida, o caminhão vinha voando, e você nem pensou: pulou."
+  },
+  {
+   "id": "n03",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[seco, irônico] O gato saiu ileso. Você... virou estatística."
+  },
+  {
+   "id": "n04",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[maravilhado, rápido] Só que aí você abre o olho. E o céu tá roxo. Tem duas luas lá em cima, e um dragão do tamanho de um prédio acabou de passar por cima de você."
+  },
+  {
+   "id": "n05",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[empolgado] Lá embaixo, uma cidade cheia de muralha e torre. É, parceiro. Você foi parar em outro mundo."
+  },
+  {
+   "id": "n06",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[curioso, rápido] E logo você repara numa coisa estranha: todo mundo aqui tem uns riscos no rosto. Isso é a Marca. A pessoa já nasce com ela, e é ela que decide tudo."
+  },
+  {
+   "id": "n07",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[rápido, explicando] Nasceu com uma linha só? É elite: magia monstra, entra direto na Academia Real. Duas linhas? Magia mais ou menos, vira soldado ou ferreiro. Três linhas... aí é magia fraquinha, trabalho pesado, e ninguém nem olha na sua cara."
+  },
+  {
+   "id": "n08",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[empolgado, rápido] E repara na cor, porque a cor é o elemento. Quem tem marca vermelha solta fogo e derrete armadura. A azul controla a água e fecha ferida na hora."
+  },
+  {
+   "id": "n09",
+   "spk": "NARRADOR",
+   "gap": 0.1,
+   "text": "[empolgado, rápido] A marrom levanta muralha do chão. A branca é vento, faz até navio voar. E a amarela é raio: derruba monstro de dez metros com um estalo."
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[misterioso] E tem as marcas que quase ninguém tem: a dourada, de luz; a preta, de sombra; e a violeta, que controla a gravidade. No reino inteiro, só três pessoas vivas têm uma dessas."
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[tenso, rápido] Aí você corre até um lago, se olha na água... e nada. Seu rosto tá liso. Nenhuma linha, nenhuma cor."
+  },
+  {
+   "id": "n12",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[tenso] E quando você entra na cidade, todo mundo para. Criança aponta, gente cochicha, guarda já põe a mão na lança. Porque aqui, quem não tem marca... simplesmente não deveria existir."
+  },
+  {
+   "id": "n13",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido] No dia seguinte, te levam pra Academia Real pro Teste do Cristal. Funciona assim: encostou a mão, o cristal acende na cor do seu elemento."
+  },
+  {
+   "id": "n14",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[narrando, crescendo] O garoto antes de você tem uma linha vermelha: o cristal pega fogo e a plateia vai à loucura. Aí chega a sua vez. Você encosta... e nada. Nem uma faisquinha. E a sala inteira cai na gargalhada."
+  },
+  {
+   "id": "n15",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[sério, firme] Até que o diretor, um velho de linha dourada, bate o cajado no chão, e todo mundo cala a boca."
+  },
+  {
+   "id": "n16",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[misterioso, baixo] Ele abre um livro de mil anos e vira pra você um desenho: um rosto igualzinho ao seu. Sem marca nenhuma. Embaixo, uma palavra só: Vazio."
+  },
+  {
+   "id": "n17",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[sussurrando] Em toda a história, só existiu mais um. E a página seguinte... foi arrancada."
+  },
+  {
+   "id": "n18",
+   "spk": "NARRADOR",
+   "gap": 0.25,
+   "text": "[misterioso, lento] E aí você escuta um miado. Em cima da estante, te encarando... o mesmo gato que você salvou."
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 3.4,
+   "text": "[animado] Segue a página pra ver o episódio dois!"
+  }
+ ]
+}
