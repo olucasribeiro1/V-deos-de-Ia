@@ -15,7 +15,7 @@
 import { clamp, lerp, mix, rgb } from './core.js';
 import { POSES, EXPR, emote } from './rig2d.js';
 
-export const INK = '#000000';
+export const INK = '#2b3347';   // azul-marinho (estilo Aprendendo com Vitinho)
 export const VERMELHO_PROTAGONISTA = '#d8342b';
 export const PELES = { branca: '#ffffff', clara: '#f7d6bd', rosada: '#f1c0a2', media: '#e2a97f', morena: '#c98b5e', parda: '#a8703f', escura: '#7d4a2b', negra: '#5b3420' };
 const SOMBRA = '#2a2452';          // a sombra (cel) puxa para um azul-violeta: cores vivas, sem "sujar"
@@ -369,6 +369,7 @@ function cabeca(g, o, of, sk, blink, t) {
   if (of.chapeu) chapeu(g, of.chapeu, r, fs, t);
 }
 
+const IRIS = { claro: '#8fb8ec', escuro: '#3d64a8' };
 function olho(g, x, y, rx, ry, pr, look, lid, slant, inner, kind, pele, t) {
   const lw = Math.max(1.2, rx * 0.26);
   if (kind === 'blink' || kind === 'closed') { stroke(g, () => { g.moveTo(x - rx * 0.95, y + ry * 0.1); g.quadraticCurveTo(x, y + ry * 0.75, x + rx * 0.95, y + ry * 0.1); }, lw * 1.1, INK); return; }
@@ -376,8 +377,10 @@ function olho(g, x, y, rx, ry, pr, look, lid, slant, inner, kind, pele, t) {
   if (kind === 'squeeze') { stroke(g, () => { g.moveTo(x - inner * rx * 0.9, y - ry * 0.55); g.lineTo(x + inner * rx * 0.6, y); g.lineTo(x - inner * rx * 0.9, y + ry * 0.55); }, lw * 1.2, INK); return; }
   g.save(); g.beginPath(); ell(g, x, y, rx, ry); g.lineWidth = lw * 2; g.strokeStyle = C(INK); g.stroke(); g.fillStyle = C('#ffffff'); g.fill(); g.clip();
   const px = x + look[0] * rx * 0.42, py = y + look[1] * ry * 0.4 + ry * 0.05;
-  g.fillStyle = C('#191827'); g.beginPath(); g.arc(px, py, pr, 0, Math.PI * 2); g.fill();
-  g.fillStyle = C('#ffffff'); g.beginPath(); g.arc(px + pr * 0.35, py - pr * 0.4, Math.max(0.7, pr * 0.32), 0, Math.PI * 2); g.fill();
+  const ir = pr * 1.75, gi = g.createRadialGradient(px, py + ir * 0.3, ir * 0.1, px, py, ir); gi.addColorStop(0, C(IRIS.claro)); gi.addColorStop(1, C(IRIS.escuro));
+  g.fillStyle = gi; g.beginPath(); g.arc(px, py, ir, 0, Math.PI * 2); g.fill(); g.lineWidth = Math.max(1, ir * 0.18); g.strokeStyle = C(INK); g.stroke();
+  g.fillStyle = C('#1e2436'); g.beginPath(); g.arc(px, py, pr * 0.95, 0, Math.PI * 2); g.fill();
+  g.fillStyle = C('#ffffff'); g.beginPath(); g.arc(px + ir * 0.35, py - ir * 0.38, Math.max(0.8, ir * 0.3), 0, Math.PI * 2); g.fill(); g.beginPath(); g.arc(px - ir * 0.3, py + ir * 0.35, Math.max(0.5, ir * 0.13), 0, Math.PI * 2); g.fill();
   if (lid > 0.01) { const top = y - ry - 1, h = 2 * ry * lid, dl = ry * 0.45 * slant;
     const yl = top + h + (inner < 0 ? dl : -dl), yr = top + h + (inner < 0 ? -dl : dl);
     g.fillStyle = C(esc(pele, 0.05)); g.beginPath(); g.moveTo(x - rx - 2, top - 2); g.lineTo(x + rx + 2, top - 2); g.lineTo(x + rx + 2, yr); g.lineTo(x - rx - 2, yl); g.closePath(); g.fill();
@@ -389,7 +392,7 @@ function olho(g, x, y, rx, ry, pr, look, lid, slant, inner, kind, pele, t) {
 function rosto(g, o, of, ex, r, fx, fs, blink, t) {
   const pele = of.pele, look = o.look || ex.look || [fs ? 0.35 : 0, 0];
   const ey = -r * 0.04 + EYOFF * r, ex0 = fs ? [fx - r * 0.3, fx + r * 0.32] : [-r * 0.33, r * 0.33];
-  let rx = r * 0.18, ry = r * 0.22, pr = r * 0.09, kind = 'open';
+  let rx = r * 0.21, ry = r * 0.25, pr = r * 0.075, kind = 'open';
   switch (ex.eyes) {
     case 'ring': rx *= 1.12; ry *= 1.12; pr *= 0.95; break;
     case 'wide': rx *= 1.22; ry *= 1.22; pr *= 0.72; break;

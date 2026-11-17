@@ -3,7 +3,7 @@ import { E, layer, linGrad, radGrad, rr, seg, poly, circle, glow, alpha, mix, sh
 import * as FX from '/engine/fx2d.js';
 import { POSES } from '/engine/rig2d.js';
 import { drawHumano as drawFigure, ANJO_ESTAGIARIO, SEU_MANOEL, MAE as MAE_H } from '/engine/humano2d.js';
-export const INK = '#000000', GY = 1305.6, WH = '#f1efe9';
+export const INK = '#2b3347', GY = 1305.6, WH = '#f1efe9';
 export const box = (g, x, y, w, h, c, r = 8, lw = 8) => { rr(g, x, y, w, h, r); g.fillStyle = c; g.fill(); if (lw) { g.strokeStyle = INK; g.lineWidth = lw; g.stroke(); } };
 export const ANJO = ANJO_ESTAGIARIO;
 export const MANOEL = SEU_MANOEL;

@@ -1,6 +1,6 @@
 // VFX de cartoon para os vídeos humanizados: explosão de linhas, estrelas, onomatopeias, linhas de velocidade, confete, flash, tremida.
 import { E, ease, prog, clamp, lerp, rr, poly, circle, glow, alpha, text, FONTS, rng } from '/engine/core.js';
-const INK = '#000000', CORES = ['#ff2e88', '#22e1ff', '#ffe600', '#39ff5a', '#ff7a1a', '#a64bff'];
+const INK = '#2b3347', CORES = ['#ff2e88', '#22e1ff', '#ffe600', '#39ff5a', '#ff7a1a', '#a64bff'];
 // explosão de linhas radiais (impacto) a partir de (x,y) no tempo t0
 export function estouro(g, T, t0, x, y, o = {}) { const k = (T - t0) / (o.dur ?? 0.45); if (k < 0 || k > 1) return; const n = o.n ?? 16, r0 = (o.r0 ?? 60) + k * 140, r1 = r0 + (1 - k) * (o.len ?? 170), c = o.cor ?? '#ffe600';
   g.save(); g.lineCap = 'round'; for (let i = 0; i < n; i++) { const a = i / n * Math.PI * 2 + (i % 2) * 0.12, w = (i % 2 ? 10 : 18) * (1 - k); g.strokeStyle = INK; g.lineWidth = w + 8; g.beginPath(); g.moveTo(x + Math.cos(a) * r0, y + Math.sin(a) * r0); g.lineTo(x + Math.cos(a) * r1, y + Math.sin(a) * r1); g.stroke(); g.strokeStyle = c; g.lineWidth = w; g.stroke(); } g.restore(); }
