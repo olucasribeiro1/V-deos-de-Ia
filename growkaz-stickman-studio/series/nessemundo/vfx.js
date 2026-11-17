@@ -25,8 +25,7 @@ export function numeroPop(g, T, t0, x, y, str, o = {}) { const a = ease.outBack(
 // ---------- paleta por fase (fórmula "Nesta cidade"): frio no conflito + um ponto de luz quente; dourado na resolução ----------
 export function fase(g, tipo, k = 1, T = 0, o = {}) { if (k <= 0) return; g.save();
   if (tipo === 'frio') {
-    g.globalCompositeOperation = 'saturation'; g.fillStyle = `rgba(128,128,128,${0.5 * k})`; g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
-    g.globalCompositeOperation = 'multiply'; g.fillStyle = `rgba(150,172,204,${0.32 * k})`; g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
+    g.globalCompositeOperation = 'multiply'; g.fillStyle = `rgba(200,222,236,${0.45 * k})`; g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
     // único ponto de luz quente: facho dourado entrando pelo alto
     const lx = o.lx ?? 860, ly = o.ly ?? 120; g.globalCompositeOperation = 'lighter';
     const gr = g.createLinearGradient(lx, ly, lx - 420, ly + 1500); gr.addColorStop(0, `rgba(255,196,90,${0.42 * k})`); gr.addColorStop(1, 'rgba(255,196,90,0)');
