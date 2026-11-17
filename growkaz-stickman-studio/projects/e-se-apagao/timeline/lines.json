@@ -1,0 +1,165 @@
+{
+ "duration": 136.608,
+ "lines": [
+  {
+   "id": "n01",
+   "spk": "NARRADOR",
+   "text": "[tenso, rápido] Terça-feira, sete e quarenta da noite. Você tá no ônibus, celular com doze por cento de bateria...",
+   "start": 0.16,
+   "end": 4.315,
+   "file": "projects/e-se-apagao/input/clips/n01_c74a828065_t1.33.wav"
+  },
+  {
+   "id": "n02",
+   "spk": "NARRADOR",
+   "text": "[choque] e tudo apaga. Semáforo, poste, prédio. A cidade inteira.",
+   "start": 4.435,
+   "end": 9.312,
+   "file": "projects/e-se-apagao/input/clips/n02_11cdc28b88_t1.33.wav"
+  },
+  {
+   "id": "n03",
+   "spk": "NARRADOR",
+   "text": "[urgente] Em dez segundos, você vira parte do maior apagão da história do Brasil. E isso começou do outro lado do mundo.",
+   "start": 9.472,
+   "end": 14.597,
+   "file": "projects/e-se-apagao/input/clips/n03_44c3a78c5b_t1.33.wav"
+  },
+  {
+   "id": "n04",
+   "spk": "NARRADOR",
+   "text": "[rápido, informativo] Seis meses antes, o Oceano Pacífico esquentou. É o El Niño. Ele bagunça a chuva do planeta: seca no Norte e no Nordeste, temporal no Sul.",
+   "start": 14.757,
+   "end": 21.207,
+   "file": "projects/e-se-apagao/input/clips/n04_1477ab2457_t1.33.wav"
+  },
+  {
+   "id": "n05",
+   "spk": "NARRADOR",
+   "text": "[rápido] E o Brasil tira mais da metade da energia da água dos rios. Em dois mil e vinte e três, o El Niño ajudou a secar o Rio Negro, em Manaus, ao menor nível em mais de cento e vinte anos. Agora imagina um ainda mais forte.",
+   "start": 21.327,
+   "end": 30.536,
+   "file": "projects/e-se-apagao/input/clips/n05_e6636fbbda_t1.33.wav"
+  },
+  {
+   "id": "n06",
+   "spk": "NARRADOR",
+   "text": "[tenso] Represa baixa, onda de calor, todo mundo no ar-condicionado ao mesmo tempo. Uma linha de transmissão cai, a carga pula pra outra, que cai também. Efeito dominó.",
+   "start": 30.696,
+   "end": 38.871,
+   "file": "projects/e-se-apagao/input/clips/n06_0c0cbb2247_t1.33.wav"
+  },
+  {
+   "id": "n07",
+   "spk": "NARRADOR",
+   "text": "[sério] Em agosto de dois mil e vinte e três, um apagão assim atingiu vinte e cinco estados e o Distrito Federal em segundos.",
+   "start": 38.991,
+   "end": 44.474,
+   "file": "projects/e-se-apagao/input/clips/n07_a8f85554f4_t1.33.wav"
+  },
+  {
+   "id": "n08",
+   "spk": "NARRADOR",
+   "text": "[rápido] Primeira hora. Você desce do ônibus parado. Todo mundo na rua, celular pro alto, procurando sinal. Ninguém sabe o que aconteceu.",
+   "start": 44.634,
+   "end": 50.238,
+   "file": "projects/e-se-apagao/input/clips/n08_714d14f6d3_t1.33.wav"
+  },
+  {
+   "id": "n09",
+   "spk": "NARRADOR",
+   "text": "[firme] As torres de celular funcionam com bateria, e bateria acaba. Dica real: modo avião, brilho no mínimo, e mande mensagem em vez de ligar. Mensagem passa quando ligação não passa.",
+   "start": 50.358,
+   "end": 59.507,
+   "file": "projects/e-se-apagao/input/clips/n09_0f479dec40_t1.33.wav"
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "text": "[tenso] No dia seguinte, o mercado tá lotado. Sem energia, não tem maquininha, não tem Pix, não tem caixa eletrônico. Quem tem dinheiro vivo compra. Você, com o cartão na mão, não compra nada.",
+   "start": 59.667,
+   "end": 69.005,
+   "file": "projects/e-se-apagao/input/clips/n10_92c7a03fd0_t1.33.wav"
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "text": "[firme] Por isso os guias de emergência mandam: tenha dinheiro trocado em casa.",
+   "start": 69.125,
+   "end": 72.669,
+   "file": "projects/e-se-apagao/input/clips/n11_520227a103_t1.33.wav"
+  },
+  {
+   "id": "n12",
+   "spk": "NARRADOR",
+   "text": "[rápido] Em casa, a geladeira vira contagem regressiva. Com a porta fechada, ela segura o frio por umas quatro horas. O freezer cheio, até quarenta e oito. Abriu, perdeu. E água: quatro litros por pessoa, por dia, pra pelo menos três dias.",
+   "start": 72.829,
+   "end": 83.063,
+   "file": "projects/e-se-apagao/input/clips/n12_7b1f9d92fa_t1.33.wav"
+  },
+  {
+   "id": "n13",
+   "spk": "NARRADOR",
+   "text": "[tenso, sombrio] Dia três. A bomba do posto é elétrica: sem combustível. A bomba d'água do prédio também: sem água. Começam os saques.",
+   "start": 83.223,
+   "end": 90.096,
+   "file": "projects/e-se-apagao/input/clips/n13_078d3f21a0_t1.33.wav"
+  },
+  {
+   "id": "n14",
+   "spk": "NARRADOR",
+   "text": "[firme, baixo] Regra: você não sai à noite, não mostra o que tem em casa e não enfrenta multidão. Nada que você guardou vale mais que você.",
+   "start": 90.216,
+   "end": 96.655,
+   "file": "projects/e-se-apagao/input/clips/n14_2a3e67f6d0_t1.33.wav"
+  },
+  {
+   "id": "n15",
+   "spk": "NARRADOR",
+   "text": "[rápido] E não fica só aqui. Porto parado não embarca carga. Servidor desligado derruba banco e aplicativo. O mundo é uma rede, e rede cai em cadeia.",
+   "start": 96.815,
+   "end": 103.14,
+   "file": "projects/e-se-apagao/input/clips/n15_6c0b19a87f_t1.33.wav"
+  },
+  {
+   "id": "n16",
+   "spk": "NARRADOR",
+   "text": "[sério, rápido] Gerador só do lado de fora, longe das janelas: dentro de casa ele solta monóxido de carbono, um gás sem cheiro que mata dormindo. Lanterna, nunca vela. E quando a luz voltar, tire os aparelhos da tomada antes, porque o pico queima eletrônico.",
+   "start": 103.3,
+   "end": 113.42,
+   "file": "projects/e-se-apagao/input/clips/n16_e3062446e2_t1.33.wav"
+  },
+  {
+   "id": "n17",
+   "spk": "NARRADOR",
+   "text": "[grave] O apagão não avisa. Ele chega numa terça qualquer, com o seu celular em doze por cento.",
+   "start": 113.58,
+   "end": 118.214,
+   "file": "projects/e-se-apagao/input/clips/n17_28194a181a_t1.33.wav"
+  },
+  {
+   "id": "n18",
+   "spk": "NARRADOR",
+   "text": "[firme] A diferença entre passar aperto e passar bem é o que você faz hoje: dinheiro trocado, água guardada, lanterna na gaveta.",
+   "start": 118.334,
+   "end": 124.598,
+   "file": "projects/e-se-apagao/input/clips/n18_18433a6980_t1.33.wav"
+  },
+  {
+   "id": "n19",
+   "spk": "NARRADOR",
+   "text": "[sussurrando] Porque quando a luz apaga... já é tarde pra se preparar.",
+   "start": 124.758,
+   "end": 127.778,
+   "file": "projects/e-se-apagao/input/clips/n19_3c1af1e77e_t1.33.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "[animado] Segue a página! E comenta aí: qual vai ser o próximo E se?",
+   "start": 131.178,
+   "end": 134.608,
+   "file": "projects/e-se-apagao/input/clips/cta_039cd6d472_t1.33.wav"
+  }
+ ]
+}
