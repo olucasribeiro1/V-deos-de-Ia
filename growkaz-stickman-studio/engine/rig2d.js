@@ -329,15 +329,23 @@ export function emote(g, hx, hy, r, kind, t = 0) {
     g.restore(); }
 }
 
-// ---------- marca no rosto (série Sem Marca): n riscos verticais sob o olho, na cor do elemento, com brilho ----------
-// o.marca = { n: 1..3, cor: '#ff4a2a', brilho: 0..1 }
+// ---------- marca no rosto (série Sem Marca): traços pintados sob o olho que acompanham a curva da bochecha ----------
+// o.marca = { n: 1..3, cor, brilho: 0..1 }. Desenhada no mesmo transform do rosto (gira e espelha junto) e recortada na cabeça.
 export function marcaRosto(g, hx, hy, r, front, m, t = 0) {
-  const n = m.n || 1, cor = m.cor || '#ff4a2a', b = (m.brilho ?? 0.6) * (0.8 + 0.2 * Math.sin(t * 4));
-  const cx = front ? hx + r * 0.34 : hx + r * 0.5, y0 = hy + r * 0.06, y1 = hy + r * 0.4, gap = r * (front ? 0.13 : 0.1);
-  g.save(); g.lineCap = 'round';
-  for (let i = 0; i < n; i++) { const x = cx + (i - (n - 1) / 2) * gap;
-    if (b > 0) { g.globalCompositeOperation = 'lighter'; g.strokeStyle = cor; g.globalAlpha = 0.35 * b; g.lineWidth = r * 0.16; g.beginPath(); g.moveTo(x, y0); g.lineTo(x - r * 0.02, y1); g.stroke(); g.globalCompositeOperation = 'source-over'; g.globalAlpha = 1; }
-    g.strokeStyle = '#0b0b0d'; g.lineWidth = r * 0.085; g.beginPath(); g.moveTo(x, y0); g.lineTo(x - r * 0.02, y1); g.stroke();
-    g.strokeStyle = cor; g.lineWidth = r * 0.05; g.beginPath(); g.moveTo(x, y0); g.lineTo(x - r * 0.02, y1); g.stroke(); }
+  const n = m.n || 1, cor = m.cor || '#ff4a2a', b = (m.brilho ?? 0.6) * (0.85 + 0.15 * Math.sin(t * 4));
+  // olho de referência: no close (front) é o olho direito da tela; de perfil é o olho da frente
+  // âncora na maçã do rosto, por fora do olho e longe da boca
+  const ex = front ? hx + r * 0.5 : hx + r * 0.1, ey = hy - r * 0.04;
+  const sx = front ? 1 : 0.7;                       // de perfil a bochecha fica "achatada"
+  const L = r * 0.28, w0 = r * 0.06, gap = r * 0.12 * sx, ang = front ? 0.12 : -0.05;
+  const traco = (dx) => { // traço afilado: grosso em cima, fino embaixo, levemente curvo seguindo a bochecha
+    const x0 = ex + dx, y0 = ey, x1 = x0 + Math.sin(ang) * L * sx * 2, y1 = y0 + L, cxp = x0 + r * 0.04 * sx, cyp = y0 + L * 0.55;
+    g.beginPath(); g.moveTo(x0 - w0 * sx, y0); g.quadraticCurveTo(cxp - w0 * sx, cyp, x1, y1); g.quadraticCurveTo(cxp + w0 * sx, cyp, x0 + w0 * sx, y0);
+    g.quadraticCurveTo(x0, y0 - w0 * 0.8, x0 - w0 * sx, y0); g.closePath(); };
+  g.save(); g.beginPath(); g.arc(hx, hy, r * 0.985, 0, Math.PI * 2); g.clip();
+  const off = (i) => (i - (n - 1) / 2) * gap;
+  if (b > 0 && r > 45) { g.save(); g.globalCompositeOperation = 'lighter'; g.shadowColor = cor; g.shadowBlur = r * 0.35 * b; g.fillStyle = alpha(cor, 0.55 * b); for (let i = 0; i < n; i++) { traco(off(i)); g.fill(); } g.restore(); }
+  for (let i = 0; i < n; i++) { traco(off(i)); g.fillStyle = cor; g.fill(); if (r > 45) { g.lineWidth = r * 0.03; g.strokeStyle = 'rgba(11,11,13,.85)'; g.stroke(); }
+    g.save(); traco(off(i)); g.clip(); g.fillStyle = 'rgba(255,255,255,.45)'; g.fillRect(ex + off(i) - w0 * 1.2, ey - w0, w0 * 0.8 * sx, L * 0.5); g.restore(); }
   g.restore();
 }
