@@ -45,8 +45,8 @@ const asfalto = (T) => tx(T, 'asf', 512, 512, (g, w, h) => { const r = rng(11); 
   for (let i = 0; i < 6; i++) { g.fillStyle = 'rgba(15,15,22,.35)'; g.beginPath(); g.ellipse(r() * w, r() * h, 40 + r() * 90, 18 + r() * 40, r() * 3, 0, 7); g.fill(); }
   g.strokeStyle = 'rgba(10,10,14,.5)'; g.lineWidth = 2; for (let i = 0; i < 5; i++) { g.beginPath(); let x = r() * w, y = r() * h; g.moveTo(x, y); for (let k = 0; k < 6; k++) { x += (r() - 0.5) * 60; y += (r() - 0.5) * 60; g.lineTo(x, y); } g.stroke(); } }, [16, 1]);
 // rugosidade: poças (escuras = espelho)
-const poca = (T) => tx(T, 'poca', 512, 512, (g, w, h) => { const r = rng(21); g.fillStyle = 'rgb(120,120,120)'; g.fillRect(0, 0, w, h);
-  for (let i = 0; i < 14; i++) { const x = r() * w, y = r() * h, rx = 30 + r() * 110, ry = 12 + r() * 50; const gr = g.createRadialGradient(x, y, 0, x, y, rx); gr.addColorStop(0, 'rgb(48,48,48)'); gr.addColorStop(0.7, 'rgb(58,58,58)'); gr.addColorStop(1, 'rgba(120,120,120,0)'); g.fillStyle = gr; g.beginPath(); g.ellipse(x, y, rx, ry, r() * 3, 0, 7); g.fill(); } }, [16, 1]);
+const poca = (T) => tx(T, 'poca', 512, 512, (g, w, h) => { const r = rng(21); g.fillStyle = 'rgb(150,150,150)'; g.fillRect(0, 0, w, h);
+  for (let i = 0; i < 14; i++) { const x = r() * w, y = r() * h, rx = 30 + r() * 110, ry = 12 + r() * 50; const gr = g.createRadialGradient(x, y, 0, x, y, rx); gr.addColorStop(0, 'rgb(80,80,80)'); gr.addColorStop(0.7, 'rgb(92,92,92)'); gr.addColorStop(1, 'rgba(150,150,150,0)'); g.fillStyle = gr; g.beginPath(); g.ellipse(x, y, rx, ry, r() * 3, 0, 7); g.fill(); } }, [16, 1]);
 const calcadaTex = (T) => tx(T, 'calc', 256, 256, (g, w, h) => { g.fillStyle = '#7a7480'; g.fillRect(0, 0, w, h); const r = rng(4); for (let y = 0; y < h; y += 64) for (let x = 0; x < w; x += 64) { const v = 112 + r() * 26; g.fillStyle = `rgb(${v},${v - 4},${v + 6})`; g.fillRect(x + 2, y + 2, 60, 60); } for (let i = 0; i < 800; i++) { g.fillStyle = 'rgba(0,0,0,.08)'; g.fillRect(r() * w, r() * h, 3, 3); } }, [60, 1.5]);
 // fachada (cor + janelas) e mapa emissivo (só o que acende)
 function fachada(T, cor, w, h, seed, terreo) { const key = `fach${cor}${w}${h}${seed}`; if (TX[key]) return TX[key];
@@ -196,7 +196,7 @@ function pintura(T, rects, cor) { const THREE = T.THREE; const gs = rects.map(([
 export function avenida3D(T, o = {}) { const THREE = T.THREE, g = new THREE.Group(), r = rng(o.seed ?? 7);
   const x0 = o.x0 ?? -60, x1 = o.x1 ?? 150, L = x1 - x0, xc = (x0 + x1) / 2, focoX = o.focoX ?? 0;
   // asfalto molhado (rugosidade baixa + poças quase espelho)
-  const ruaM = new THREE.MeshStandardMaterial({ color: C(T, '#ffffff'), map: asfalto(T), roughnessMap: poca(T), roughness: 0.9, metalness: 0.25, envMapIntensity: 1.6 });
+  const ruaM = new THREE.MeshStandardMaterial({ color: C(T, '#ffffff'), map: asfalto(T), roughnessMap: poca(T), roughness: 1.0, metalness: 0.2, envMapIntensity: 1.8 });
   const rua = mk(T, new THREE.PlaneGeometry(L, 10), ruaM, xc, 0, 0, false); rua.rotation.x = -Math.PI / 2; g.add(rua);
   // calçadas + meio-fio
   const calM = new THREE.MeshStandardMaterial({ color: C(T, '#ffffff'), map: calcadaTex(T), roughness: 0.45, metalness: 0.1, envMapIntensity: 1.0 }), mfM = std(T, '#b8b6c0', { r: 0.6 });
@@ -313,7 +313,7 @@ export function caminhao3D(T, o = {}) { const THREE = T.THREE, g = new THREE.Gro
   for (const v of luzes) { const sp = new THREE.SpotLight(C(T, '#fff2d8'), 0, 70, 0.42, 0.55, 1.2); sp.castShadow = false; sp.position.copy(v); sp.target.position.set(v.x - 30, 0, v.z * 1.4); body.add(sp, sp.target); spots.push(sp);
     const cn = new THREE.Mesh(geo('farolCone', () => new THREE.ConeGeometry(2.6, 16, 28, 1, true).translate(0, -8, 0).rotateZ(-Math.PI / 2 - 0.04)), add(T, '#fff0d0', 0.1, fadeTex(T))); cn.position.copy(v); body.add(cn); cones.push(cn);
     const gl = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex(T), color: C(T, '#fff4e0'), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true })); gl.position.copy(v).add(new THREE.Vector3(-0.2, 0, 0)); body.add(gl); glows.push(gl); }
-  g.farois = (k) => { k = clamp(k, 0, 1.5); farM.color.setRGB(1, 0.96, 0.88).multiplyScalar(1 + 9 * k); spots.forEach((s) => (s.intensity = 520 * k)); cones.forEach((c) => (c.material.opacity = 0.11 * k)); glows.forEach((s) => { s.scale.setScalar(1.2 + 3.5 * k); s.material.opacity = Math.min(1, k); }); };
+  g.farois = (k, ks = 1) => { k = clamp(k, 0, 1.5); farM.color.setRGB(1, 0.96, 0.88).multiplyScalar(1 + 9 * k); spots.forEach((s) => { s.intensity = 420 * k * ks; s.visible = ks > 0.001; }); cones.forEach((c) => (c.material.opacity = 0.11 * k)); glows.forEach((s) => { s.scale.setScalar(1.2 + 3.5 * k); s.material.opacity = Math.min(1, k); }); };
   g.farois(o.farois ?? 1);
   let ang = 0; g.rodar = (dx) => { ang += dx / 0.54; rodas.forEach((r) => (r.rotation.z = ang)); };
   g.faroisMundo = () => luzes.map((v) => body.localToWorld(v.clone()));
@@ -371,7 +371,8 @@ export function cenaMorte(T, o = {}) { const THREE = T.THREE;
   const KF = [[tImpacto + 0.12, { pos: [-2.6, 0.55, -1.2], look: [1.8, 2.2, -8.5], fov: 50 }], [fim, { pos: [-1.2, 0.45, -2.6], look: [1.7, 1.7, -8.5], fov: 44 }]];
   const update = (t) => {
     const fx = frenteX(t), depois = t > tImpacto + 0.1; truck.visible = !depois; truck.position.x = fx + truck.frente; if (ultimoX != null) truck.rodar(ultimoX - truck.position.x); ultimoX = truck.position.x;
-    const perto = clamp(1 - (fx - 1) / 70); truck.farois(o.dbgF ?? (t < tCaminhao - 0.6 ? 0.25 : 0.6 + 0.9 * perto * perto)); if (o.dbgSemTruck) truck.visible = false; if (o.dbgH) { truck.cones.forEach(c => c.visible = !o.dbgH.includes('cones')); truck.glows.forEach(c => c.visible = !o.dbgH.includes('glows')); truck.spots.forEach(c => c.visible = !o.dbgH.includes('spots')); }
+    const perto = clamp(1 - (fx - 1) / 70); // SpotLights só quando o caminhão está perto (longe, o brilho especular rasante no asfalto estoura o half-float e o bloom espalha NaN)
+    truck.farois(t < tCaminhao - 0.6 ? 0.25 : 0.6 + 0.9 * perto * perto, clamp((34 - (fx - cam.position.x)) / 12));
     truck.body.position.y = Math.sin(t * 23) * 0.012; truck.body.rotation.x = Math.sin(t * 17) * 0.004;
     av.semaforo.set(t < tCaminhao ? 'verde' : t < tCorre ? 'amarelo' : 'vermelho');
     const e = euEm(t); eu.visible = !depois; eu.position.copy(e.p);
