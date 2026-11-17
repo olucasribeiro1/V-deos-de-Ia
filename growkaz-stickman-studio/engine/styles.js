@@ -102,4 +102,7 @@ STYLES.urbano = {
   },
 };
 
+// Variante de cores vivas (RGB saturado) para os vídeos "E se"
+STYLES.urbanoRGB = { ...STYLES.urbano, name: 'Urbano RGB', desc: 'Urbano com cores vivas e saturadas, luzes neon.', grade: { ...STYLES.urbano.grade, sat: 1.35, contrast: 1.12, grunge: 0.4, bloom: 0.5, vignette: 0.5 } };
+
 export const STYLE_IDS = Object.keys(STYLES);

@@ -1,0 +1,137 @@
+{
+ "model": "eleven_v4",
+ "_nota": "E se: apagão + El Niño. Dicas: Ready.gov/FEMA. Fatos: ONS 15/08/2023, Rio Negro 2023.",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.33,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[tenso, rápido] Terça-feira, sete e quarenta da noite. Você tá no ônibus, celular com doze por cento de bateria..."
+  },
+  {
+   "id": "n02",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[choque] e tudo apaga. Semáforo, poste, prédio. A cidade inteira."
+  },
+  {
+   "id": "n03",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[urgente] Em dez segundos, você vira parte do maior apagão da história do Brasil. E isso começou do outro lado do mundo."
+  },
+  {
+   "id": "n04",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[rápido, informativo] Seis meses antes, o Oceano Pacífico esquentou. É o El Niño. Ele bagunça a chuva do planeta: seca no Norte e no Nordeste, temporal no Sul."
+  },
+  {
+   "id": "n05",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[rápido] E o Brasil tira mais da metade da energia da água dos rios. Em dois mil e vinte e três, o El Niño ajudou a secar o Rio Negro, em Manaus, ao menor nível em mais de cento e vinte anos. Agora imagina um ainda mais forte."
+  },
+  {
+   "id": "n06",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[tenso] Represa baixa, onda de calor, todo mundo no ar-condicionado ao mesmo tempo. Uma linha de transmissão cai, a carga pula pra outra, que cai também. Efeito dominó."
+  },
+  {
+   "id": "n07",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[sério] Em agosto de dois mil e vinte e três, um apagão assim atingiu vinte e cinco estados e o Distrito Federal em segundos."
+  },
+  {
+   "id": "n08",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[rápido] Primeira hora. Você desce do ônibus parado. Todo mundo na rua, celular pro alto, procurando sinal. Ninguém sabe o que aconteceu."
+  },
+  {
+   "id": "n09",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[firme] As torres de celular funcionam com bateria, e bateria acaba. Dica real: modo avião, brilho no mínimo, e mande mensagem em vez de ligar. Mensagem passa quando ligação não passa."
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[tenso] No dia seguinte, o mercado tá lotado. Sem energia, não tem maquininha, não tem Pix, não tem caixa eletrônico. Quem tem dinheiro vivo compra. Você, com o cartão na mão, não compra nada."
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[firme] Por isso os guias de emergência mandam: tenha dinheiro trocado em casa."
+  },
+  {
+   "id": "n12",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[rápido] Em casa, a geladeira vira contagem regressiva. Com a porta fechada, ela segura o frio por umas quatro horas. O freezer cheio, até quarenta e oito. Abriu, perdeu. E água: quatro litros por pessoa, por dia, pra pelo menos três dias."
+  },
+  {
+   "id": "n13",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[tenso, sombrio] Dia três. A bomba do posto é elétrica: sem combustível. A bomba d'água do prédio também: sem água. Começam os saques."
+  },
+  {
+   "id": "n14",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[firme, baixo] Regra: você não sai à noite, não mostra o que tem em casa e não enfrenta multidão. Nada que você guardou vale mais que você."
+  },
+  {
+   "id": "n15",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[rápido] E não fica só aqui. Porto parado não embarca carga. Servidor desligado derruba banco e aplicativo. O mundo é uma rede, e rede cai em cadeia."
+  },
+  {
+   "id": "n16",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[sério, rápido] Gerador só do lado de fora, longe das janelas: dentro de casa ele solta monóxido de carbono, um gás sem cheiro que mata dormindo. Lanterna, nunca vela. E quando a luz voltar, tire os aparelhos da tomada antes, porque o pico queima eletrônico."
+  },
+  {
+   "id": "n17",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[grave] O apagão não avisa. Ele chega numa terça qualquer, com o seu celular em doze por cento."
+  },
+  {
+   "id": "n18",
+   "spk": "NARRADOR",
+   "gap": 0.12,
+   "text": "[firme] A diferença entre passar aperto e passar bem é o que você faz hoje: dinheiro trocado, água guardada, lanterna na gaveta."
+  },
+  {
+   "id": "n19",
+   "spk": "NARRADOR",
+   "gap": 0.16,
+   "text": "[sussurrando] Porque quando a luz apaga... já é tarde pra se preparar."
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 3.4,
+   "text": "[animado] Segue a página! E comenta aí: qual vai ser o próximo E se?"
+  }
+ ]
+}

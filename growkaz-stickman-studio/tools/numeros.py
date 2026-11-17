@@ -38,11 +38,16 @@ def achar_numeros(words, dur=1.6):
             k2 = j + 2; mins = _num(n(words[j + 1]["word"]))
             if k2 + 1 < len(words) and n(words[k2 + 1]["word"]) == "e" and k2 + 2 < len(words) and _num(n(words[k2 + 2]["word"])) is not None and mins % 10 == 0: mins += _num(n(words[k2 + 2]["word"])); k2 += 2
             if k2 + 1 < len(words) and n(words[k2]["word"]) in ("da", "de") and n(words[k2 + 1]["word"]) in ("manhã", "manha", "tarde", "noite", "madrugada"):
-                out.append({"t": words[i]["start"], "str": f"{int(v)}:{int(mins):02d}"}); i = k2 + 2; continue
+                hh = int(v) + (12 if n(words[k2 + 1]["word"]) in ("tarde", "noite") and v < 12 else 0); out.append({"t": words[i]["start"], "str": f"{hh}:{int(mins):02d}"}); i = k2 + 2; continue
         # composto: só junta "e" quando o primeiro é dezena/centena redonda ("vinte e dois", "cento e dez")
         while j + 1 < len(words) and n(words[j]["word"]) == "e" and _num(n(words[j + 1]["word"])) is not None and total >= 20 and total % 10 == 0 and _num(n(words[j + 1]["word"])) < (10 if total < 100 else 100):
             total += _num(n(words[j + 1]["word"])); j += 2
         if j < len(words) and n(words[j]["word"]) == "mil" and total < 1000: total *= 1000; j += 1
+        if total >= 1000 and j + 1 < len(words) and n(words[j]["word"]) == "e" and _num(n(words[j + 1]["word"])) is not None and _num(n(words[j + 1]["word"])) < 1000:   # dois mil e vinte e três -> 2023
+            rest = _num(n(words[j + 1]["word"])); j += 2
+            while j + 1 < len(words) and n(words[j]["word"]) == "e" and _num(n(words[j + 1]["word"])) is not None and rest >= 20 and rest % 10 == 0 and _num(n(words[j + 1]["word"])) < (10 if rest < 100 else 100):
+                rest += _num(n(words[j + 1]["word"])); j += 2
+            total += rest
         if j + 1 < len(words) and n(words[j]["word"]) == "vírgula" and _num(n(words[j + 1]["word"])) is not None:   # zero vírgula um -> 0,1
             dec = int(_num(n(words[j + 1]["word"]))); total = float(f"{int(total)}.{dec}"); j += 2
         nxt = n(words[j]["word"]) if j < len(words) else ""; nxt2 = n(words[j + 1]["word"]) if j + 1 < len(words) else ""
