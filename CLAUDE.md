@@ -43,3 +43,21 @@ Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**,
 - Se o Chromium do Playwright não estiver instalado, use o do sistema: `CHROMIUM_PATH=/caminho/do/chrome node render.mjs ...`.
 - `tools/verify_kit.py` vai acusar diferenças: é esperado, o motor foi personalizado (contorno, estilo urbano, safe zone, acentos pt-BR).
 - Na raiz (`src/`, `remotion.config.ts`) existe um setup alternativo com Remotion + Three.js; o fluxo principal do canal é o estúdio.
+
+## Formato "2D no mundo 3D" (padrão dos novos vídeos virais; série Sem Marca e próximas)
+- **Visual:** só o protagonista é 2D (boneco de boné vermelho, como folha dentro da cena 3D, recebendo luz e sombra). Todo o resto é 3D: cenário, pessoas, monstros e efeitos.
+  - Bem detalhado, mas só o necessário.
+  - Fundo com desfoque (profundidade de campo), cores vibrantes, céu azul de dia.
+  - Módulos: `series/semmarca/` → `turbo.js` (render), `gente3d.js` (pessoas), `cidade3d.js`, `magia3d.js`, `dragao3d.js`, `avenida3d.js`, `hud.js`, `mapa3d.js`.
+  - Referências acumuladas: `series/semmarca/referencias.md`.
+- **Marca no rosto:** todo mundo tem, menos o protagonista. Tem que ser visível em qualquer tom de pele, sem sobrepor nada e sem falhas. Revisar em close e a meia distância.
+- **Retenção:** gancho forte no começo e no fim. Informação rápida na tela, câmera que acompanha, sem corte seco (corte só em susto), dissolve ≤ 0,6 s.
+  - Todo número falado aparece na tela.
+  - Menu de status no estilo isekai (HUD de videogame).
+  - Explicação técnica e científica de cada poder ou efeito (narrada, com rótulo técnico na tela), sempre com dado real.
+- **Episódios autoexplicativos:** do Ep. 2 em diante, cada episódio abre com um gancho que já contextualiza a premissa em 1–2 frases ("Você morreu, acordou num mundo de magia e é o único sem marca..."). Quem cair direto no Ep. 4 tem que entender. O Ep. 1 fica como está.
+- **Narração:** linguagem brasileira e próxima ("virou estatística", "parceiro", "ferrou"). Palavrão só com bipe (`tools/bipe.py`), com a legenda censurada ("P*RRA!"). Mandar a narração ao usuário para checar antes de renderizar o vídeo. Pode passar de 2 min quando o usuário pedir.
+- **Som:** efeito em toda ação. Ambiente de noite com grilos. Caprichado, mas sem exagero, para economizar créditos.
+- **Revisão:** revisar cada etapa antes da próxima, com quadros de teste. Safe zone do Instagram/TikTok sempre conferida. Nada com falha.
+- **Trabalho em equipe:** usar agentes por função (modelagem/personagens, cenário, efeitos, HUD e mapa), cada um revisando o próprio trabalho. O agente de modelagem cuida das marcas no rosto.
+- **Custos:** no fim de cada projeto, informar o gasto de todas as IAs usadas (créditos do ElevenLabs etc.).
