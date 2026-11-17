@@ -38,2589 +38,2007 @@
    "spk": "NARRADOR"
   },
   {
-   "word": "Ele",
-   "start": 2.544,
-   "end": 2.555,
+   "word": "O",
+   "start": 2.488,
+   "end": 2.494,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "bichano",
+   "start": 2.525,
+   "end": 2.802,
    "spk": "NARRADOR"
   },
   {
    "word": "tava",
-   "start": 2.586,
-   "end": 2.74,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "parado",
-   "start": 2.802,
+   "start": 2.863,
    "end": 2.986,
    "spk": "NARRADOR"
   },
   {
+   "word": "parado",
+   "start": 3.048,
+   "end": 3.232,
+   "spk": "NARRADOR"
+  },
+  {
    "word": "no",
-   "start": 3.078,
-   "end": 3.171,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "meio",
-   "start": 3.232,
-   "end": 3.355,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "da",
-   "start": 3.386,
+   "start": 3.325,
    "end": 3.417,
    "spk": "NARRADOR"
   },
   {
-   "word": "avenida,",
-   "start": 3.54,
-   "end": 3.878,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "o",
-   "start": 3.971,
-   "end": 4.032,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "caminhão",
-   "start": 4.063,
-   "end": 4.34,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "vinha",
-   "start": 4.371,
-   "end": 4.525,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "voando,",
-   "start": 4.586,
-   "end": 5.094,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 5.109,
-   "end": 5.125,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "você",
-   "start": 5.14,
-   "end": 5.325,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "nem",
-   "start": 5.365,
-   "end": 5.448,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "pensou:",
-   "start": 5.509,
-   "end": 5.909,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "pulou.",
-   "start": 5.94,
-   "end": 6.432,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "O",
-   "start": 6.645,
-   "end": 6.706,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "gato",
-   "start": 6.768,
-   "end": 7.014,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "saiu",
-   "start": 7.076,
-   "end": 7.26,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ileso.",
-   "start": 7.383,
-   "end": 7.876,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Você...",
-   "start": 8.06,
-   "end": 8.737,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "virou",
-   "start": 8.799,
-   "end": 8.922,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "estatística.",
-   "start": 8.983,
-   "end": 9.737,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Só",
-   "start": 10.098,
-   "end": 10.16,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "que",
-   "start": 10.221,
-   "end": 10.283,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "aí",
-   "start": 10.314,
-   "end": 10.406,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "você",
-   "start": 10.467,
-   "end": 10.59,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "abre",
-   "start": 10.652,
-   "end": 10.775,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "o",
-   "start": 10.806,
-   "end": 10.837,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "olho.",
-   "start": 10.898,
-   "end": 11.288,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "E",
-   "start": 11.308,
-   "end": 11.329,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "o",
-   "start": 11.36,
-   "end": 11.39,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "céu",
-   "start": 11.452,
-   "end": 11.575,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "tá",
-   "start": 11.606,
-   "end": 11.637,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "azul.",
-   "start": 11.76,
-   "end": 12.221,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Tem",
-   "start": 12.252,
-   "end": 12.437,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "duas",
-   "start": 12.498,
-   "end": 12.683,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "luas",
-   "start": 12.744,
-   "end": 12.929,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "lá",
-   "start": 12.96,
-   "end": 12.99,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "em",
-   "start": 13.052,
-   "end": 13.114,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cima,",
-   "start": 13.175,
-   "end": 13.56,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 13.575,
-   "end": 13.59,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "um",
-   "start": 13.606,
-   "end": 13.667,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "dragão",
-   "start": 13.76,
-   "end": 13.914,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "do",
-   "start": 13.975,
-   "end": 14.037,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "tamanho",
-   "start": 14.139,
-   "end": 14.344,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "de",
-   "start": 14.375,
-   "end": 14.406,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "um",
-   "start": 14.467,
-   "end": 14.529,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "prédio",
-   "start": 14.59,
-   "end": 14.775,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "acabou",
-   "start": 14.837,
-   "end": 15.144,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "de",
-   "start": 15.206,
-   "end": 15.267,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "passar",
-   "start": 15.329,
-   "end": 15.452,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "por",
-   "start": 15.514,
-   "end": 15.637,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cima",
-   "start": 15.667,
-   "end": 15.76,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "de",
-   "start": 15.821,
-   "end": 15.883,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "você.",
-   "start": 15.965,
-   "end": 16.259,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Lá",
-   "start": 16.492,
-   "end": 16.533,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "embaixo,",
-   "start": 16.564,
-   "end": 17.179,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "uma",
-   "start": 17.241,
-   "end": 17.302,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cidade",
-   "start": 17.364,
-   "end": 17.671,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cheia",
-   "start": 17.794,
-   "end": 18.041,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "de",
-   "start": 18.102,
-   "end": 18.164,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "muralha",
-   "start": 18.266,
-   "end": 18.502,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 18.533,
-   "end": 18.656,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "torre.",
-   "start": 18.748,
-   "end": 19.21,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "É,",
-   "start": 19.271,
-   "end": 19.518,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "parceiro.",
-   "start": 19.61,
-   "end": 20.277,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Você",
-   "start": 20.358,
-   "end": 20.441,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "foi",
-   "start": 20.471,
-   "end": 20.564,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "parar",
-   "start": 20.656,
-   "end": 20.81,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "em",
-   "start": 20.871,
-   "end": 20.994,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "outro",
-   "start": 21.056,
-   "end": 21.364,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "mundo.",
-   "start": 21.394,
-   "end": 21.868,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "E",
-   "start": 22.179,
-   "end": 22.185,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "logo",
-   "start": 22.191,
-   "end": 22.376,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "você",
-   "start": 22.407,
-   "end": 22.561,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "repara",
-   "start": 22.622,
-   "end": 22.868,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "numa",
-   "start": 22.93,
-   "end": 23.053,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "coisa",
-   "start": 23.084,
-   "end": 23.238,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "estranha:",
-   "start": 23.361,
-   "end": 23.976,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "todo",
-   "start": 24.038,
-   "end": 24.222,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "mundo",
-   "start": 24.284,
-   "end": 24.468,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "aqui",
-   "start": 24.53,
-   "end": 24.653,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "tem",
-   "start": 24.715,
-   "end": 24.776,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "uns",
-   "start": 24.838,
-   "end": 24.961,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "riscos",
-   "start": 24.991,
-   "end": 25.268,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "no",
-   "start": 25.299,
-   "end": 25.33,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "rosto.",
-   "start": 25.391,
-   "end": 25.915,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Isso",
-   "start": 25.945,
-   "end": 26.13,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "é",
-   "start": 26.151,
-   "end": 26.171,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 26.191,
-   "end": 26.315,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Marca.",
-   "start": 26.561,
-   "end": 26.838,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "A",
-   "start": 26.868,
-   "end": 26.93,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "pessoa",
-   "start": 27.012,
-   "end": 27.176,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "já",
-   "start": 27.238,
-   "end": 27.361,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "nasce",
-   "start": 27.422,
-   "end": 27.607,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "com",
-   "start": 27.668,
-   "end": 27.73,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ela,",
-   "start": 27.791,
-   "end": 28.058,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 28.078,
-   "end": 28.099,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "é",
-   "start": 28.222,
-   "end": 28.284,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ela",
-   "start": 28.345,
-   "end": 28.468,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "que",
-   "start": 28.53,
-   "end": 28.591,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "decide",
-   "start": 28.684,
-   "end": 29.022,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "tudo.",
-   "start": 29.053,
-   "end": 29.404,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Nasceu",
-   "start": 29.687,
-   "end": 29.832,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "com",
-   "start": 29.863,
-   "end": 29.894,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "uma",
-   "start": 29.955,
-   "end": 30.078,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "linha",
-   "start": 30.171,
-   "end": 30.263,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "só?",
-   "start": 30.324,
-   "end": 30.724,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "É",
-   "start": 30.755,
-   "end": 30.899,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "elite:",
-   "start": 31.042,
-   "end": 31.217,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "magia",
-   "start": 31.247,
-   "end": 31.555,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "monstra,",
-   "start": 31.647,
-   "end": 31.955,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "entra",
-   "start": 31.986,
-   "end": 32.171,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "direto",
-   "start": 32.294,
-   "end": 32.478,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "na",
-   "start": 32.509,
-   "end": 32.54,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Academia",
-   "start": 32.571,
-   "end": 32.847,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Real.",
-   "start": 32.909,
-   "end": 33.381,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Duas",
-   "start": 33.422,
-   "end": 33.524,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "linhas?",
-   "start": 33.586,
-   "end": 34.078,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Magia",
-   "start": 34.14,
-   "end": 34.263,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "mais",
-   "start": 34.324,
-   "end": 34.386,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ou",
-   "start": 34.447,
-   "end": 34.509,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "menos,",
-   "start": 34.632,
-   "end": 34.909,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "vira",
-   "start": 34.94,
-   "end": 35.001,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "soldado",
-   "start": 35.124,
-   "end": 35.432,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ou",
-   "start": 35.494,
-   "end": 35.555,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ferreiro.",
-   "start": 35.617,
-   "end": 36.15,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Três",
-   "start": 36.191,
-   "end": 36.355,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "linhas...",
-   "start": 36.417,
-   "end": 36.94,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "aí",
-   "start": 36.971,
-   "end": 37.114,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "é",
-   "start": 37.134,
-   "end": 37.155,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "magia",
-   "start": 37.247,
-   "end": 37.463,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "fraquinha,",
-   "start": 37.555,
-   "end": 37.986,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "trabalho",
-   "start": 38.017,
-   "end": 38.263,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "pesado,",
-   "start": 38.417,
-   "end": 38.776,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 38.796,
-   "end": 38.817,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ninguém",
-   "start": 38.878,
-   "end": 39.124,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "nem",
-   "start": 39.155,
-   "end": 39.309,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "olha",
-   "start": 39.371,
-   "end": 39.494,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "na",
-   "start": 39.555,
-   "end": 39.617,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "sua",
-   "start": 39.657,
-   "end": 39.74,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cara.",
-   "start": 39.801,
-   "end": 40.114,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "E",
-   "start": 40.321,
-   "end": 40.325,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "repara",
-   "start": 40.418,
-   "end": 40.633,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "na",
-   "start": 40.695,
-   "end": 40.818,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cor,",
-   "start": 40.879,
-   "end": 41.156,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "porque",
-   "start": 41.248,
-   "end": 41.372,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 41.464,
-   "end": 41.556,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cor",
-   "start": 41.648,
-   "end": 41.741,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "é",
-   "start": 41.772,
-   "end": 41.802,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "o",
-   "start": 41.823,
-   "end": 41.843,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "elemento.",
-   "start": 41.864,
-   "end": 42.5,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Quem",
-   "start": 42.52,
-   "end": 42.602,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "tem",
-   "start": 42.664,
-   "end": 42.725,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "marca",
-   "start": 42.818,
-   "end": 42.91,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "vermelha",
-   "start": 42.972,
-   "end": 43.341,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "solta",
-   "start": 43.433,
-   "end": 43.71,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "fogo",
-   "start": 43.772,
-   "end": 43.956,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 43.987,
-   "end": 44.018,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "derrete",
-   "start": 44.11,
-   "end": 44.387,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "armadura.",
-   "start": 44.448,
-   "end": 45.033,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "A",
-   "start": 45.064,
-   "end": 45.125,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "azul",
-   "start": 45.218,
-   "end": 45.433,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "controla",
-   "start": 45.587,
-   "end": 45.802,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 45.843,
-   "end": 45.885,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "água",
-   "start": 45.925,
-   "end": 46.048,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 46.11,
-   "end": 46.172,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "fecha",
-   "start": 46.295,
-   "end": 46.418,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ferida",
-   "start": 46.479,
-   "end": 46.725,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "na",
-   "start": 46.787,
-   "end": 46.848,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "hora.",
-   "start": 46.972,
-   "end": 47.345,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "A",
-   "start": 47.502,
-   "end": 47.506,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "marrom",
-   "start": 47.599,
-   "end": 47.814,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "levanta",
-   "start": 47.937,
-   "end": 48.245,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "muralha",
-   "start": 48.276,
-   "end": 48.552,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "do",
-   "start": 48.583,
-   "end": 48.614,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "chão.",
-   "start": 48.737,
-   "end": 49.137,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "A",
-   "start": 49.168,
-   "end": 49.199,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "branca",
-   "start": 49.229,
-   "end": 49.476,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "é",
-   "start": 49.537,
-   "end": 49.568,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "vento,",
-   "start": 49.599,
-   "end": 49.876,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "faz",
-   "start": 49.906,
-   "end": 50.029,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "até",
-   "start": 50.122,
-   "end": 50.245,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "navio",
-   "start": 50.276,
-   "end": 50.583,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "voar.",
-   "start": 50.645,
-   "end": 51.096,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "E",
-   "start": 51.116,
-   "end": 51.137,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 51.168,
-   "end": 51.199,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "amarela",
-   "start": 51.26,
-   "end": 51.506,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "é",
-   "start": 51.629,
-   "end": 51.691,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "raio:",
-   "start": 51.752,
-   "end": 52.091,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "derruba",
-   "start": 52.122,
-   "end": 52.368,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "monstro",
-   "start": 52.46,
-   "end": 52.676,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "de",
-   "start": 52.768,
-   "end": 52.86,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "dez",
-   "start": 52.983,
-   "end": 53.106,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "metros",
-   "start": 53.26,
-   "end": 53.414,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "com",
-   "start": 53.445,
-   "end": 53.476,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "um",
-   "start": 53.506,
-   "end": 53.537,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "estalo.",
-   "start": 53.66,
-   "end": 54.101,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "E",
-   "start": 54.313,
-   "end": 54.375,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "tem",
-   "start": 54.436,
-   "end": 54.559,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "as",
-   "start": 54.621,
-   "end": 54.682,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "marcas",
-   "start": 54.744,
-   "end": 55.113,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "que",
-   "start": 55.205,
-   "end": 55.298,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "quase",
-   "start": 55.359,
-   "end": 55.667,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ninguém",
-   "start": 55.759,
-   "end": 55.975,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "tem:",
-   "start": 56.098,
-   "end": 56.713,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 56.744,
-   "end": 56.775,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "dourada,",
-   "start": 56.836,
-   "end": 57.451,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "de",
-   "start": 57.513,
-   "end": 57.575,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "luz;",
-   "start": 57.636,
-   "end": 58.313,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 58.344,
-   "end": 58.375,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "preta,",
-   "start": 58.498,
-   "end": 58.99,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "de",
-   "start": 59.021,
-   "end": 59.051,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "sombra;",
-   "start": 59.175,
-   "end": 59.851,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 59.882,
-   "end": 59.913,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 59.944,
-   "end": 59.975,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "violeta,",
-   "start": 60.036,
-   "end": 60.59,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "que",
-   "start": 60.651,
-   "end": 60.713,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "controla",
-   "start": 60.898,
-   "end": 61.103,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 61.123,
-   "end": 61.144,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "gravidade.",
-   "start": 61.205,
-   "end": 62.005,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "No",
-   "start": 62.067,
-   "end": 62.128,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "reino",
-   "start": 62.19,
-   "end": 62.313,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "inteiro,",
-   "start": 62.375,
-   "end": 62.867,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "só",
-   "start": 62.928,
-   "end": 63.113,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "três",
-   "start": 63.175,
-   "end": 63.359,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "pessoas",
-   "start": 63.421,
-   "end": 63.79,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "vivas",
-   "start": 63.821,
-   "end": 64.098,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "têm",
-   "start": 64.159,
-   "end": 64.221,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "uma",
-   "start": 64.282,
-   "end": 64.405,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "dessas.",
-   "start": 64.498,
-   "end": 65.028,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Aí",
-   "start": 65.284,
-   "end": 65.32,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "você",
-   "start": 65.351,
-   "end": 65.535,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "corre",
-   "start": 65.597,
-   "end": 65.751,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "até",
-   "start": 65.781,
-   "end": 65.904,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "um",
-   "start": 65.935,
-   "end": 65.966,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "lago,",
-   "start": 65.997,
-   "end": 66.335,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "se",
-   "start": 66.458,
-   "end": 66.52,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "olha",
-   "start": 66.581,
-   "end": 66.704,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "na",
-   "start": 66.766,
-   "end": 66.828,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "água...",
-   "start": 66.889,
-   "end": 67.361,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 67.402,
-   "end": 67.443,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "nada.",
-   "start": 67.474,
-   "end": 68.038,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Seu",
-   "start": 68.079,
-   "end": 68.151,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "rosto",
-   "start": 68.181,
-   "end": 68.366,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "tá",
-   "start": 68.428,
-   "end": 68.489,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "liso.",
-   "start": 68.52,
-   "end": 69.012,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Nenhuma",
-   "start": 69.043,
-   "end": 69.289,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "linha,",
-   "start": 69.351,
-   "end": 69.566,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "nenhuma",
-   "start": 69.597,
-   "end": 69.904,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cor.",
-   "start": 69.997,
-   "end": 70.335,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "E",
-   "start": 70.571,
-   "end": 70.588,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "quando",
-   "start": 70.619,
-   "end": 70.773,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "você",
-   "start": 70.804,
-   "end": 71.019,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "entra",
-   "start": 71.081,
-   "end": 71.204,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "na",
-   "start": 71.265,
-   "end": 71.327,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cidade,",
-   "start": 71.388,
-   "end": 72.004,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "todo",
-   "start": 72.096,
-   "end": 72.188,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "mundo",
-   "start": 72.25,
-   "end": 72.434,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "para.",
-   "start": 72.557,
-   "end": 72.742,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Criança",
-   "start": 73.05,
-   "end": 73.357,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "aponta,",
-   "start": 73.419,
-   "end": 73.85,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "gente",
-   "start": 73.911,
-   "end": 74.096,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cochicha,",
-   "start": 74.188,
-   "end": 74.834,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "guarda",
-   "start": 74.896,
-   "end": 75.142,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "já",
-   "start": 75.173,
-   "end": 75.265,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "põe",
-   "start": 75.327,
-   "end": 75.388,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 75.419,
-   "end": 75.45,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "mão",
-   "start": 75.481,
-   "end": 75.573,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "na",
-   "start": 75.604,
-   "end": 75.634,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "lança.",
-   "start": 75.696,
-   "end": 76.188,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Porque",
-   "start": 76.373,
-   "end": 76.557,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "aqui,",
-   "start": 76.619,
-   "end": 76.988,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "quem",
-   "start": 77.111,
-   "end": 77.234,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "não",
-   "start": 77.265,
-   "end": 77.357,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "tem",
-   "start": 77.419,
-   "end": 77.542,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "marca...",
-   "start": 77.696,
-   "end": 78.281,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "simplesmente",
-   "start": 78.373,
-   "end": 78.834,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "não",
-   "start": 78.855,
-   "end": 78.896,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "deveria",
-   "start": 78.957,
-   "end": 79.265,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "existir.",
-   "start": 79.388,
-   "end": 79.882,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "No",
-   "start": 80.187,
-   "end": 80.205,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "dia",
-   "start": 80.266,
-   "end": 80.328,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "seguinte,",
-   "start": 80.389,
-   "end": 80.718,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "te",
-   "start": 80.759,
-   "end": 80.82,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "levam",
-   "start": 80.882,
-   "end": 81.066,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "pra",
-   "start": 81.097,
-   "end": 81.128,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Academia",
-   "start": 81.189,
-   "end": 81.497,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Real",
-   "start": 81.559,
-   "end": 81.743,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "pro",
-   "start": 81.836,
-   "end": 81.928,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Teste",
-   "start": 82.02,
-   "end": 82.174,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "do",
-   "start": 82.205,
-   "end": 82.236,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Cristal.",
-   "start": 82.266,
-   "end": 82.83,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Funciona",
-   "start": 82.872,
-   "end": 83.036,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "assim:",
-   "start": 83.159,
-   "end": 83.497,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "encostou",
-   "start": 83.528,
-   "end": 83.836,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 83.866,
-   "end": 83.897,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "mão,",
-   "start": 83.928,
-   "end": 84.226,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "o",
-   "start": 84.246,
-   "end": 84.266,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cristal",
-   "start": 84.297,
-   "end": 84.512,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "acende",
-   "start": 84.636,
-   "end": 84.882,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "na",
-   "start": 84.943,
-   "end": 85.005,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cor",
-   "start": 85.066,
-   "end": 85.128,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "do",
-   "start": 85.189,
-   "end": 85.251,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "seu",
-   "start": 85.282,
-   "end": 85.343,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "elemento.",
-   "start": 85.374,
-   "end": 85.883,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "O",
-   "start": 86.06,
-   "end": 86.064,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "garoto",
-   "start": 86.157,
-   "end": 86.433,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "antes",
-   "start": 86.495,
-   "end": 86.68,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "de",
-   "start": 86.71,
-   "end": 86.741,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "você",
-   "start": 86.803,
-   "end": 87.049,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "tem",
-   "start": 87.172,
-   "end": 87.233,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "uma",
-   "start": 87.295,
-   "end": 87.418,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "linha",
-   "start": 87.51,
-   "end": 87.603,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "vermelha:",
-   "start": 87.664,
-   "end": 88.249,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "o",
-   "start": 88.403,
-   "end": 88.464,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cristal",
-   "start": 88.495,
-   "end": 88.772,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "pega",
-   "start": 88.833,
-   "end": 89.018,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "fogo",
-   "start": 89.08,
-   "end": 89.264,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 89.295,
-   "end": 89.326,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 89.357,
-   "end": 89.387,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "plateia",
-   "start": 89.449,
-   "end": 89.818,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "vai",
-   "start": 89.88,
-   "end": 90.003,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "à",
-   "start": 90.033,
-   "end": 90.064,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "loucura.",
-   "start": 90.095,
-   "end": 90.833,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Aí",
-   "start": 90.864,
-   "end": 91.049,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "chega",
-   "start": 91.08,
-   "end": 91.172,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 91.233,
-   "end": 91.295,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "sua",
-   "start": 91.336,
-   "end": 91.418,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "vez.",
-   "start": 91.48,
-   "end": 91.941,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Você",
-   "start": 91.972,
-   "end": 92.095,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "encosta...",
-   "start": 92.218,
-   "end": 92.936,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 92.977,
-   "end": 93.018,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "nada.",
-   "start": 93.08,
-   "end": 93.603,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Nem",
-   "start": 93.633,
-   "end": 93.757,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "uma",
-   "start": 93.818,
-   "end": 93.941,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "faisquinha.",
-   "start": 94.023,
-   "end": 94.7,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "E",
-   "start": 94.72,
-   "end": 94.741,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 94.803,
-   "end": 94.864,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "sala",
-   "start": 94.895,
-   "end": 95.049,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "inteira",
-   "start": 95.203,
-   "end": 95.541,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cai",
-   "start": 95.603,
-   "end": 95.726,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "na",
-   "start": 95.787,
-   "end": 95.849,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "gargalhada.",
-   "start": 95.88,
-   "end": 96.466,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Até",
-   "start": 96.677,
-   "end": 96.893,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "que",
-   "start": 96.923,
-   "end": 96.954,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "o",
-   "start": 96.985,
-   "end": 97.016,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "diretor,",
-   "start": 97.047,
-   "end": 97.539,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "um",
-   "start": 97.662,
-   "end": 97.785,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "velho",
-   "start": 97.847,
-   "end": 98.093,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "de",
-   "start": 98.123,
-   "end": 98.154,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "linha",
-   "start": 98.247,
-   "end": 98.339,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "dourada,",
-   "start": 98.37,
-   "end": 98.975,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "bate",
-   "start": 99.057,
-   "end": 99.139,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "o",
-   "start": 99.17,
-   "end": 99.2,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cajado",
-   "start": 99.262,
-   "end": 99.508,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "no",
-   "start": 99.57,
-   "end": 99.631,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "chão,",
-   "start": 99.693,
-   "end": 100.093,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 100.123,
-   "end": 100.308,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "todo",
-   "start": 100.431,
-   "end": 100.554,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "mundo",
-   "start": 100.616,
-   "end": 100.862,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cala",
-   "start": 100.923,
-   "end": 100.985,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 101.047,
-   "end": 101.108,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "boca.",
-   "start": 101.139,
-   "end": 101.48,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Ele",
-   "start": 101.825,
-   "end": 101.846,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "abre",
-   "start": 101.907,
-   "end": 102.092,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "um",
-   "start": 102.123,
-   "end": 102.154,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "livro",
-   "start": 102.215,
-   "end": 102.461,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "de",
-   "start": 102.523,
-   "end": 102.584,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "mil",
-   "start": 102.646,
-   "end": 102.83,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "anos",
-   "start": 102.954,
-   "end": 103.384,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "e",
-   "start": 103.446,
-   "end": 103.507,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "vira",
-   "start": 103.569,
-   "end": 103.692,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "pra",
-   "start": 103.723,
-   "end": 103.754,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "você",
-   "start": 103.815,
-   "end": 104.0,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "um",
-   "start": 104.03,
-   "end": 104.061,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "desenho:",
-   "start": 104.123,
-   "end": 104.861,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "um",
-   "start": 104.923,
-   "end": 104.984,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "rosto",
-   "start": 105.046,
-   "end": 105.477,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "igualzinho",
-   "start": 105.569,
-   "end": 106.092,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ao",
-   "start": 106.154,
-   "end": 106.215,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "seu.",
-   "start": 106.277,
-   "end": 106.83,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Sem",
-   "start": 106.923,
-   "end": 107.015,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "marca",
-   "start": 107.138,
-   "end": 107.261,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "nenhuma.",
-   "start": 107.323,
-   "end": 108.0,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Embaixo,",
-   "start": 108.092,
-   "end": 108.615,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "uma",
-   "start": 108.677,
-   "end": 108.738,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "palavra",
-   "start": 108.8,
-   "end": 109.107,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "só:",
-   "start": 109.169,
-   "end": 109.723,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Vazio.",
-   "start": 109.784,
-   "end": 110.405,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Em",
-   "start": 110.586,
-   "end": 110.771,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "toda",
-   "start": 110.802,
-   "end": 110.956,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 110.976,
-   "end": 110.996,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "história,",
-   "start": 111.017,
-   "end": 111.756,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "só",
-   "start": 111.817,
-   "end": 111.909,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "existiu",
-   "start": 111.94,
-   "end": 112.309,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "mais",
-   "start": 112.371,
-   "end": 112.556,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "um.",
-   "start": 112.617,
-   "end": 113.171,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "E",
-   "start": 113.202,
-   "end": 113.233,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "a",
-   "start": 113.263,
-   "end": 113.294,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "página",
-   "start": 113.356,
-   "end": 113.602,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "seguinte...",
-   "start": 113.663,
-   "end": 114.525,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "foi",
-   "start": 114.586,
-   "end": 114.679,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "arrancada.",
-   "start": 114.709,
-   "end": 115.509,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "E",
-   "start": 115.885,
-   "end": 115.892,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "aí",
-   "start": 115.953,
-   "end": 116.138,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "você",
-   "start": 116.199,
-   "end": 116.384,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "escuta",
-   "start": 116.507,
-   "end": 116.753,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "um",
-   "start": 116.815,
-   "end": 116.876,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "miado.",
-   "start": 116.938,
-   "end": 117.522,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "Em",
-   "start": 117.738,
-   "end": 117.922,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "cima",
-   "start": 117.953,
-   "end": 118.107,
+   "word": "meio",
+   "start": 3.448,
+   "end": 3.602,
    "spk": "NARRADOR"
   },
   {
    "word": "da",
-   "start": 118.168,
-   "end": 118.199,
+   "start": 3.622,
+   "end": 3.642,
    "spk": "NARRADOR"
   },
   {
-   "word": "estante,",
-   "start": 118.23,
-   "end": 118.845,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "te",
-   "start": 118.876,
-   "end": 118.907,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "encarando...",
-   "start": 118.999,
-   "end": 119.83,
+   "word": "avenida,",
+   "start": 3.663,
+   "end": 4.063,
    "spk": "NARRADOR"
   },
   {
    "word": "o",
-   "start": 119.922,
-   "end": 120.015,
+   "start": 4.155,
+   "end": 4.217,
    "spk": "NARRADOR"
   },
   {
-   "word": "mesmo",
-   "start": 120.076,
-   "end": 120.445,
+   "word": "caminhão",
+   "start": 4.248,
+   "end": 4.525,
    "spk": "NARRADOR"
   },
   {
-   "word": "gato",
-   "start": 120.528,
-   "end": 120.692,
+   "word": "vinha",
+   "start": 4.555,
+   "end": 4.709,
    "spk": "NARRADOR"
   },
   {
-   "word": "que",
-   "start": 120.753,
-   "end": 120.815,
+   "word": "voando,",
+   "start": 4.771,
+   "end": 5.171,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 5.202,
+   "end": 5.232,
    "spk": "NARRADOR"
   },
   {
    "word": "você",
-   "start": 120.845,
-   "end": 120.999,
+   "start": 5.263,
+   "end": 5.448,
    "spk": "NARRADOR"
   },
   {
-   "word": "salvou.",
-   "start": 121.061,
-   "end": 121.567,
+   "word": "nem",
+   "start": 5.488,
+   "end": 5.571,
    "spk": "NARRADOR"
   },
   {
-   "word": "Segue",
-   "start": 125.09,
-   "end": 125.213,
+   "word": "pensou:",
+   "start": 5.602,
+   "end": 6.022,
    "spk": "NARRADOR"
   },
   {
-   "word": "a",
-   "start": 125.274,
-   "end": 125.336,
+   "word": "pulou,",
+   "start": 6.042,
+   "end": 6.402,
    "spk": "NARRADOR"
   },
   {
-   "word": "página",
-   "start": 125.367,
-   "end": 125.644,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "pra",
-   "start": 125.705,
-   "end": 125.767,
-   "spk": "NARRADOR"
-  },
-  {
-   "word": "ver",
-   "start": 125.828,
-   "end": 125.89,
+   "word": "empurrou",
+   "start": 6.432,
+   "end": 6.74,
    "spk": "NARRADOR"
   },
   {
    "word": "o",
-   "start": 125.92,
-   "end": 125.951,
+   "start": 6.771,
+   "end": 6.802,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "gato",
+   "start": 6.832,
+   "end": 6.986,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pra",
+   "start": 7.017,
+   "end": 7.048,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "calçada...",
+   "start": 7.14,
+   "end": 7.663,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "O",
+   "start": 7.878,
+   "end": 7.94,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "gato",
+   "start": 8.002,
+   "end": 8.248,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "saiu",
+   "start": 8.309,
+   "end": 8.494,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ileso.",
+   "start": 8.617,
+   "end": 9.109,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Você...",
+   "start": 9.294,
+   "end": 9.971,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "virou",
+   "start": 10.032,
+   "end": 10.155,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "estatística.",
+   "start": 10.217,
+   "end": 10.97,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Aí",
+   "start": 11.435,
+   "end": 11.474,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "você",
+   "start": 11.505,
+   "end": 11.628,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "abre",
+   "start": 11.689,
+   "end": 11.813,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 11.843,
+   "end": 11.874,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "olho.",
+   "start": 11.936,
+   "end": 12.213,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Céu",
+   "start": 12.366,
+   "end": 12.52,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "azul,",
+   "start": 12.551,
+   "end": 12.951,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "duas",
+   "start": 13.043,
+   "end": 13.289,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "luas",
+   "start": 13.351,
+   "end": 13.536,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "lá",
+   "start": 13.566,
+   "end": 13.597,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "em",
+   "start": 13.659,
+   "end": 13.72,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cima...",
+   "start": 13.782,
+   "end": 14.182,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 14.213,
+   "end": 14.243,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "um",
+   "start": 14.274,
+   "end": 14.336,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dragão",
+   "start": 14.459,
+   "end": 14.643,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "do",
+   "start": 14.705,
+   "end": 14.766,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tamanho",
+   "start": 14.849,
+   "end": 15.013,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 15.043,
+   "end": 15.074,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "um",
+   "start": 15.166,
+   "end": 15.259,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "prédio",
+   "start": 15.32,
+   "end": 15.566,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "passa",
+   "start": 15.628,
+   "end": 15.751,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "raspando",
+   "start": 15.874,
+   "end": 16.182,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "na",
+   "start": 16.243,
+   "end": 16.305,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sua",
+   "start": 16.346,
+   "end": 16.428,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cabeça.",
+   "start": 16.459,
+   "end": 16.93,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Eita,",
+   "start": 17.103,
+   "end": 17.503,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "P*RRA!",
+   "start": 17.596,
+   "end": 18.272,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "É,",
+   "start": 18.858,
+   "end": 18.889,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "parceiro.",
+   "start": 18.905,
+   "end": 19.412,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Você",
+   "start": 19.474,
+   "end": 19.535,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "foi",
+   "start": 19.597,
+   "end": 19.699,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "parar",
+   "start": 19.741,
+   "end": 19.843,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "em",
+   "start": 19.905,
+   "end": 19.966,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "outro",
+   "start": 20.028,
+   "end": 20.274,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mundo.",
+   "start": 20.335,
+   "end": 20.848,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "E",
+   "start": 20.868,
+   "end": 20.889,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "na",
+   "start": 20.951,
+   "end": 21.012,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sua",
+   "start": 21.074,
+   "end": 21.197,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "frente",
+   "start": 21.258,
+   "end": 21.382,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "aparece",
+   "start": 21.443,
+   "end": 21.628,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "uma",
+   "start": 21.689,
+   "end": 21.874,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tela,",
+   "start": 21.976,
+   "end": 22.212,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "igual",
+   "start": 22.243,
+   "end": 22.428,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 22.458,
+   "end": 22.489,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "videogame:",
+   "start": 22.551,
+   "end": 23.05,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Nível",
+   "start": 23.211,
+   "end": 23.396,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "zero.",
+   "start": 23.457,
+   "end": 23.765,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Força",
+   "start": 23.888,
+   "end": 24.134,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dez,",
+   "start": 24.257,
+   "end": 24.411,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "velocidade",
+   "start": 24.442,
+   "end": 24.873,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "oito,",
+   "start": 24.934,
+   "end": 25.15,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "inteligência",
+   "start": 25.18,
+   "end": 25.673,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "doze.",
+   "start": 25.734,
+   "end": 26.165,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Matou",
+   "start": 26.227,
+   "end": 26.35,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "monstro,",
+   "start": 26.411,
+   "end": 26.842,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tudo",
+   "start": 26.903,
+   "end": 27.027,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sobe.",
+   "start": 27.057,
+   "end": 27.519,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Menos",
+   "start": 27.55,
+   "end": 27.642,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "uma",
+   "start": 27.703,
+   "end": 27.765,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "coisa:",
+   "start": 27.827,
+   "end": 28.257,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 28.278,
+   "end": 28.298,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "magia.",
+   "start": 28.319,
+   "end": 28.934,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Essa",
+   "start": 28.996,
+   "end": 29.242,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tá",
+   "start": 29.303,
+   "end": 29.365,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "travada",
+   "start": 29.396,
+   "end": 29.673,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "no",
+   "start": 29.734,
+   "end": 29.796,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "zero.",
+   "start": 29.857,
+   "end": 30.233,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Esse",
+   "start": 30.546,
+   "end": 30.618,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mundo",
+   "start": 30.679,
+   "end": 30.802,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "se",
+   "start": 30.864,
+   "end": 30.987,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "chama",
+   "start": 31.018,
+   "end": 31.172,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Aldoria",
+   "start": 31.233,
+   "end": 31.602,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 31.633,
+   "end": 31.664,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tem",
+   "start": 31.725,
+   "end": 31.91,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "quatro",
+   "start": 31.972,
+   "end": 32.095,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "nações.",
+   "start": 32.156,
+   "end": 32.792,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "No",
+   "start": 32.812,
+   "end": 32.833,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "norte,",
+   "start": 32.895,
+   "end": 33.243,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "os",
+   "start": 33.285,
+   "end": 33.325,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "elfos:",
+   "start": 33.387,
+   "end": 33.848,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "arco",
+   "start": 33.879,
+   "end": 34.125,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 34.187,
+   "end": 34.248,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cura.",
+   "start": 34.464,
+   "end": 34.7,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Nas",
+   "start": 34.72,
+   "end": 34.802,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "montanhas,",
+   "start": 34.895,
+   "end": 35.274,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "os",
+   "start": 35.315,
+   "end": 35.356,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "anões,",
+   "start": 35.418,
+   "end": 35.695,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "os",
+   "start": 35.725,
+   "end": 35.787,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "melhores",
+   "start": 35.848,
+   "end": 36.156,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ferreiros",
+   "start": 36.218,
+   "end": 36.525,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "que",
+   "start": 36.556,
+   "end": 36.587,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "existem.",
+   "start": 36.648,
+   "end": 37.12,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "No",
+   "start": 37.162,
+   "end": 37.202,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "centro,",
+   "start": 37.264,
+   "end": 37.592,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 37.612,
+   "end": 37.633,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "reino",
+   "start": 37.695,
+   "end": 37.818,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "humano,",
+   "start": 37.941,
+   "end": 38.218,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "governado",
+   "start": 38.248,
+   "end": 38.618,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pelo",
+   "start": 38.648,
+   "end": 38.802,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Rei",
+   "start": 38.833,
+   "end": 38.925,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Mago.",
+   "start": 38.987,
+   "end": 39.377,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "E",
+   "start": 39.397,
+   "end": 39.418,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "no",
+   "start": 39.479,
+   "end": 39.602,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sul,",
+   "start": 39.633,
+   "end": 39.931,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 39.951,
+   "end": 39.972,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "onde",
+   "start": 40.064,
+   "end": 40.156,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ninguém",
+   "start": 40.218,
+   "end": 40.464,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "volta...",
+   "start": 40.556,
+   "end": 40.987,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 41.018,
+   "end": 41.079,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Rei",
+   "start": 41.141,
+   "end": 41.264,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Demônio.",
+   "start": 41.325,
+   "end": 41.941,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "E",
+   "start": 42.199,
+   "end": 42.204,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "aqui",
+   "start": 42.265,
+   "end": 42.512,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "todo",
+   "start": 42.604,
+   "end": 42.696,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mundo",
+   "start": 42.758,
+   "end": 42.942,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "nasce",
+   "start": 43.035,
+   "end": 43.189,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "com",
+   "start": 43.219,
+   "end": 43.25,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "uma",
+   "start": 43.312,
+   "end": 43.435,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "marca",
+   "start": 43.558,
+   "end": 43.681,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "no",
+   "start": 43.712,
+   "end": 43.742,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "rosto.",
+   "start": 43.835,
+   "end": 44.255,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Uma",
+   "start": 44.275,
+   "end": 44.358,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "linha?",
+   "start": 44.419,
+   "end": 45.035,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Elite.",
+   "start": 45.219,
+   "end": 45.445,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Duas?",
+   "start": 45.486,
+   "end": 45.865,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Soldado,",
+   "start": 45.896,
+   "end": 46.368,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ferreiro.",
+   "start": 46.409,
+   "end": 46.922,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Três?",
+   "start": 46.963,
+   "end": 47.394,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Trabalho",
+   "start": 47.414,
+   "end": 47.619,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pesado,",
+   "start": 47.773,
+   "end": 48.132,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 48.152,
+   "end": 48.173,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ninguém",
+   "start": 48.235,
+   "end": 48.542,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "nem",
+   "start": 48.573,
+   "end": 48.727,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "olha",
+   "start": 48.789,
+   "end": 48.912,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "na",
+   "start": 48.973,
+   "end": 49.035,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sua",
+   "start": 49.075,
+   "end": 49.158,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cara.",
+   "start": 49.219,
+   "end": 49.533,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "E",
+   "start": 49.69,
+   "end": 49.694,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 49.756,
+   "end": 49.817,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cor",
+   "start": 49.879,
+   "end": 50.063,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "é",
+   "start": 50.125,
+   "end": 50.186,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 50.207,
+   "end": 50.227,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "elemento.",
+   "start": 50.248,
+   "end": 50.843,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Vermelha,",
+   "start": 50.925,
+   "end": 51.386,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "fogo.",
+   "start": 51.479,
+   "end": 51.94,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Azul,",
+   "start": 51.971,
+   "end": 52.402,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "água.",
+   "start": 52.463,
+   "end": 52.863,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Marrom,",
+   "start": 52.894,
+   "end": 53.263,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "terra.",
+   "start": 53.325,
+   "end": 53.838,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Branca,",
+   "start": 53.858,
+   "end": 54.217,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "vento.",
+   "start": 54.248,
+   "end": 54.71,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Amarela,",
+   "start": 54.74,
+   "end": 55.202,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "raio.",
+   "start": 55.233,
+   "end": 55.746,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "E",
+   "start": 55.766,
+   "end": 55.786,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 55.817,
+   "end": 55.848,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "dourada,",
+   "start": 55.91,
+   "end": 56.433,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 56.463,
+   "end": 56.586,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mais",
+   "start": 56.648,
+   "end": 56.894,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "rara",
+   "start": 56.925,
+   "end": 57.079,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 57.14,
+   "end": 57.263,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "todas,",
+   "start": 57.325,
+   "end": 57.756,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "só",
+   "start": 57.817,
+   "end": 57.91,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 57.94,
+   "end": 58.063,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "próprio",
+   "start": 58.125,
+   "end": 58.371,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Rei",
+   "start": 58.402,
+   "end": 58.494,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Mago",
+   "start": 58.556,
+   "end": 58.802,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "tem.",
+   "start": 58.894,
+   "end": 59.106,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Aí",
+   "start": 59.368,
+   "end": 59.429,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "você",
+   "start": 59.46,
+   "end": 59.614,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "corre",
+   "start": 59.675,
+   "end": 59.829,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "até",
+   "start": 59.86,
+   "end": 59.952,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "um",
+   "start": 59.983,
+   "end": 60.045,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "lago,",
+   "start": 60.075,
+   "end": 60.414,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "se",
+   "start": 60.537,
+   "end": 60.598,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "olha",
+   "start": 60.66,
+   "end": 60.783,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "na",
+   "start": 60.814,
+   "end": 60.845,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "água...",
+   "start": 60.968,
+   "end": 61.429,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 61.46,
+   "end": 61.522,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "nada.",
+   "start": 61.583,
+   "end": 62.106,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Rosto",
+   "start": 62.137,
+   "end": 62.383,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "liso.",
+   "start": 62.414,
+   "end": 62.845,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Nenhuma",
+   "start": 62.875,
+   "end": 63.183,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "marca.",
+   "start": 63.429,
+   "end": 63.737,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Ferrou.",
+   "start": 63.798,
+   "end": 64.445,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Na",
+   "start": 64.475,
+   "end": 64.537,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cidade,",
+   "start": 64.598,
+   "end": 64.968,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "todo",
+   "start": 65.06,
+   "end": 65.152,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mundo",
+   "start": 65.214,
+   "end": 65.337,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "te",
+   "start": 65.398,
+   "end": 65.429,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "encara:",
+   "start": 65.46,
+   "end": 65.932,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "criança",
+   "start": 65.973,
+   "end": 66.137,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "aponta,",
+   "start": 66.198,
+   "end": 66.629,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "guarda",
+   "start": 66.691,
+   "end": 66.875,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "já",
+   "start": 66.937,
+   "end": 67.06,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "põe",
+   "start": 67.122,
+   "end": 67.183,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 67.214,
+   "end": 67.245,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mão",
+   "start": 67.275,
+   "end": 67.368,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "na",
+   "start": 67.398,
+   "end": 67.429,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "lança.",
+   "start": 67.491,
+   "end": 67.922,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Te",
+   "start": 68.129,
+   "end": 68.134,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "levam",
+   "start": 68.195,
+   "end": 68.38,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pra",
+   "start": 68.411,
+   "end": 68.441,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Academia",
+   "start": 68.472,
+   "end": 68.749,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Real,",
+   "start": 68.811,
+   "end": 69.118,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pro",
+   "start": 69.18,
+   "end": 69.303,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Teste",
+   "start": 69.364,
+   "end": 69.549,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "do",
+   "start": 69.58,
+   "end": 69.611,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Cristal.",
+   "start": 69.672,
+   "end": 70.134,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "O",
+   "start": 70.287,
+   "end": 70.318,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "garoto",
+   "start": 70.349,
+   "end": 70.595,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "antes",
+   "start": 70.657,
+   "end": 70.78,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "de",
+   "start": 70.811,
+   "end": 70.841,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "você",
+   "start": 70.872,
+   "end": 71.087,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "encosta,",
+   "start": 71.18,
+   "end": 71.549,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 71.641,
+   "end": 71.662,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 71.682,
+   "end": 71.703,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cristal",
+   "start": 71.734,
+   "end": 71.949,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pega",
+   "start": 71.98,
+   "end": 72.134,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "fogo.",
+   "start": 72.195,
+   "end": 72.657,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Sua",
+   "start": 72.687,
+   "end": 72.749,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "vez.",
+   "start": 72.811,
+   "end": 73.303,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Você",
+   "start": 73.364,
+   "end": 73.426,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "encosta...",
+   "start": 73.518,
+   "end": 74.072,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 74.103,
+   "end": 74.164,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "nada.",
+   "start": 74.226,
+   "end": 74.749,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Nem",
+   "start": 74.78,
+   "end": 74.903,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "uma",
+   "start": 74.995,
+   "end": 75.087,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "faísca.",
+   "start": 75.149,
+   "end": 75.672,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "A",
+   "start": 75.703,
+   "end": 75.734,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "sala",
+   "start": 75.764,
+   "end": 75.887,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "inteira",
+   "start": 75.949,
+   "end": 76.318,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cai",
+   "start": 76.38,
+   "end": 76.441,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "na",
+   "start": 76.503,
+   "end": 76.564,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "gargalhada.",
+   "start": 76.595,
+   "end": 77.185,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Até",
+   "start": 77.397,
+   "end": 77.612,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "que",
+   "start": 77.643,
+   "end": 77.674,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 77.704,
+   "end": 77.735,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "diretor",
+   "start": 77.766,
+   "end": 78.135,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "bate",
+   "start": 78.197,
+   "end": 78.381,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 78.402,
+   "end": 78.422,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cajado",
+   "start": 78.443,
+   "end": 78.75,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "no",
+   "start": 78.812,
+   "end": 78.874,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "chão,",
+   "start": 78.935,
+   "end": 79.274,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 79.304,
+   "end": 79.489,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "todo",
+   "start": 79.612,
+   "end": 79.735,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mundo",
+   "start": 79.797,
+   "end": 80.043,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cala",
+   "start": 80.104,
+   "end": 80.166,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 80.197,
+   "end": 80.227,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "boca.",
+   "start": 80.289,
+   "end": 80.874,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Ele",
+   "start": 80.904,
+   "end": 81.027,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "chega",
+   "start": 81.058,
+   "end": 81.274,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "perto",
+   "start": 81.304,
+   "end": 81.704,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "e",
+   "start": 81.766,
+   "end": 81.827,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "fala",
+   "start": 81.858,
+   "end": 82.012,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "baixinho,",
+   "start": 82.043,
+   "end": 82.658,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "só",
+   "start": 82.689,
+   "end": 82.812,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pra",
+   "start": 82.843,
+   "end": 82.874,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "você:",
+   "start": 82.935,
+   "end": 83.427,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "O",
+   "start": 83.72,
+   "end": 83.756,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "último",
+   "start": 83.792,
+   "end": 84.077,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "sem",
+   "start": 84.149,
+   "end": 84.363,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "marca",
+   "start": 84.542,
+   "end": 84.72,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "foi",
+   "start": 84.792,
+   "end": 84.887,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "o",
+   "start": 84.91,
+   "end": 84.935,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "meu",
+   "start": 84.97,
+   "end": 85.077,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "irmão.",
+   "start": 85.185,
+   "end": 85.935,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "Exilaram",
+   "start": 86.042,
+   "end": 86.435,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "ele",
+   "start": 86.506,
+   "end": 86.577,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "pro",
+   "start": 86.685,
+   "end": 86.792,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "sul,",
+   "start": 86.863,
+   "end": 87.292,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "pras",
+   "start": 87.399,
+   "end": 87.506,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "terras",
+   "start": 87.577,
+   "end": 87.863,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "do",
+   "start": 87.899,
+   "end": 87.935,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "Rei",
+   "start": 88.006,
+   "end": 88.077,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "Demônio.",
+   "start": 88.149,
+   "end": 88.935,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "Ele",
+   "start": 89.042,
+   "end": 89.149,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "nunca",
+   "start": 89.22,
+   "end": 89.506,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "mais",
+   "start": 89.542,
+   "end": 89.649,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "voltou.",
+   "start": 89.72,
+   "end": 90.224,
+   "spk": "DIRETOR"
+  },
+  {
+   "word": "E",
+   "start": 90.647,
+   "end": 90.678,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "aí",
+   "start": 90.709,
+   "end": 90.893,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "você",
+   "start": 90.955,
+   "end": 91.14,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "escuta",
+   "start": 91.232,
+   "end": 91.509,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "um",
+   "start": 91.57,
+   "end": 91.632,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "miado.",
+   "start": 91.724,
+   "end": 92.34,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Em",
+   "start": 92.555,
+   "end": 92.74,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "cima",
+   "start": 92.77,
+   "end": 92.924,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "da",
+   "start": 92.955,
+   "end": 92.986,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "estante,",
+   "start": 93.047,
+   "end": 93.663,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "te",
+   "start": 93.724,
+   "end": 93.786,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "encarando...",
+   "start": 93.847,
+   "end": 94.647,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 94.74,
+   "end": 94.832,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "mesmo",
+   "start": 94.955,
+   "end": 95.201,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "gato",
+   "start": 95.263,
+   "end": 95.509,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "que",
+   "start": 95.57,
+   "end": 95.632,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "você",
+   "start": 95.693,
+   "end": 95.816,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "salvou.",
+   "start": 95.878,
+   "end": 96.445,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "Segue",
+   "start": 99.769,
+   "end": 99.892,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "a",
+   "start": 99.953,
+   "end": 100.015,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "página",
+   "start": 100.045,
+   "end": 100.322,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "pra",
+   "start": 100.384,
+   "end": 100.445,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "ver",
+   "start": 100.507,
+   "end": 100.569,
+   "spk": "NARRADOR"
+  },
+  {
+   "word": "o",
+   "start": 100.599,
+   "end": 100.63,
    "spk": "NARRADOR"
   },
   {
    "word": "episódio",
-   "start": 126.013,
-   "end": 126.382,
+   "start": 100.692,
+   "end": 101.061,
    "spk": "NARRADOR"
   },
   {
    "word": "dois!",
-   "start": 126.444,
-   "end": 126.936,
+   "start": 101.122,
+   "end": 101.615,
    "spk": "NARRADOR"
   }
  ]

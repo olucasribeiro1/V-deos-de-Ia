@@ -1,12 +1,30 @@
 {
  "model": "eleven_v4",
- "_nota": "Sem Marca Ep1. Isekai. Força do protagonista NÃO aparece no Ep1.",
+ "_nota": "Sem Marca Ep1 v2 (aprovado). 'porra' com bipe na mixagem (tools/bipe.py).",
  "voices": {
   "NARRADOR": {
    "id": "ZqE9vIHPcrC35dZv0Svu",
    "tempo": 1.3,
    "settings": {
     "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  },
+  "DIRETOR": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "tempo": 1.12,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.0
+   }
+  },
+  "HUD": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.3,
+   "settings": {
+    "stability": 0.7,
     "similarity_boost": 0.8,
     "speed": 1.08
    }
@@ -23,7 +41,7 @@
    "id": "n02",
    "spk": "NARRADOR",
    "gap": 0.1,
-   "text": "[rápido, tenso] Ele tava parado no meio da avenida, o caminhão vinha voando, e você nem pensou: pulou."
+   "text": "[rápido, tenso] O bichano tava parado no meio da avenida, o caminhão vinha voando, e você nem pensou: pulou, empurrou o gato pra calçada..."
   },
   {
    "id": "n03",
@@ -34,97 +52,83 @@
   {
    "id": "n04",
    "spk": "NARRADOR",
-   "gap": 0.3,
-   "text": "[maravilhado, rápido] Só que aí você abre o olho. E o céu tá azul. Tem duas luas lá em cima, e um dragão do tamanho de um prédio acabou de passar por cima de você."
+   "gap": 0.35,
+   "text": "[maravilhado, rápido] Aí você abre o olho. Céu azul, duas luas lá em cima... e um dragão do tamanho de um prédio passa raspando na sua cabeça."
+  },
+  {
+   "id": "n04b",
+   "spk": "NARRADOR",
+   "gap": 0.05,
+   "text": "[assustado, gritando] Eita, porra!",
+   "caption": [
+    "Eita,",
+    "P*RRA!"
+   ]
   },
   {
    "id": "n05",
    "spk": "NARRADOR",
-   "gap": 0.12,
-   "text": "[empolgado] Lá embaixo, uma cidade cheia de muralha e torre. É, parceiro. Você foi parar em outro mundo."
+   "gap": 0.15,
+   "text": "[empolgado, rápido] É, parceiro. Você foi parar em outro mundo. E na sua frente aparece uma tela, igual de videogame:"
   },
   {
    "id": "n06",
    "spk": "NARRADOR",
-   "gap": 0.2,
-   "text": "[curioso, rápido] E logo você repara numa coisa estranha: todo mundo aqui tem uns riscos no rosto. Isso é a Marca. A pessoa já nasce com ela, e é ela que decide tudo."
+   "gap": 0.1,
+   "text": "[rápido] Nível zero. Força dez, velocidade oito, inteligência doze. Matou monstro, tudo sobe. Menos uma coisa: a magia. Essa tá travada no zero."
   },
   {
    "id": "n07",
    "spk": "NARRADOR",
-   "gap": 0.12,
-   "text": "[rápido, explicando] Nasceu com uma linha só? É elite: magia monstra, entra direto na Academia Real. Duas linhas? Magia mais ou menos, vira soldado ou ferreiro. Três linhas... aí é magia fraquinha, trabalho pesado, e ninguém nem olha na sua cara."
+   "gap": 0.2,
+   "text": "[rápido, épico] Esse mundo se chama Aldoria e tem quatro nações. No norte, os elfos: arco e cura. Nas montanhas, os anões, os melhores ferreiros que existem. No centro, o reino humano, governado pelo Rei Mago. E no sul, de onde ninguém volta... o Rei Demônio."
   },
   {
    "id": "n08",
    "spk": "NARRADOR",
-   "gap": 0.15,
-   "text": "[empolgado, rápido] E repara na cor, porque a cor é o elemento. Quem tem marca vermelha solta fogo e derrete armadura. A azul controla a água e fecha ferida na hora."
+   "gap": 0.2,
+   "text": "[rápido, explicando] E aqui todo mundo nasce com uma marca no rosto. Uma linha? Elite. Duas? Soldado, ferreiro. Três? Trabalho pesado, e ninguém nem olha na sua cara."
   },
   {
    "id": "n09",
    "spk": "NARRADOR",
    "gap": 0.1,
-   "text": "[empolgado, rápido] A marrom levanta muralha do chão. A branca é vento, faz até navio voar. E a amarela é raio: derruba monstro de dez metros com um estalo."
+   "text": "[empolgado, rápido] E a cor é o elemento. Vermelha, fogo. Azul, água. Marrom, terra. Branca, vento. Amarela, raio. E a dourada, a mais rara de todas, só o próprio Rei Mago tem."
   },
   {
    "id": "n10",
    "spk": "NARRADOR",
-   "gap": 0.15,
-   "text": "[misterioso] E tem as marcas que quase ninguém tem: a dourada, de luz; a preta, de sombra; e a violeta, que controla a gravidade. No reino inteiro, só três pessoas vivas têm uma dessas."
+   "gap": 0.2,
+   "text": "[tenso, rápido] Aí você corre até um lago, se olha na água... e nada. Rosto liso. Nenhuma marca. Ferrou. Na cidade, todo mundo te encara: criança aponta, guarda já põe a mão na lança."
   },
   {
    "id": "n11",
    "spk": "NARRADOR",
-   "gap": 0.2,
-   "text": "[tenso, rápido] Aí você corre até um lago, se olha na água... e nada. Seu rosto tá liso. Nenhuma linha, nenhuma cor."
+   "gap": 0.15,
+   "text": "[rápido, crescendo] Te levam pra Academia Real, pro Teste do Cristal. O garoto antes de você encosta, e o cristal pega fogo. Sua vez. Você encosta... e nada. Nem uma faísca. A sala inteira cai na gargalhada."
   },
   {
    "id": "n12",
    "spk": "NARRADOR",
-   "gap": 0.12,
-   "text": "[tenso] E quando você entra na cidade, todo mundo para. Criança aponta, gente cochicha, guarda já põe a mão na lança. Porque aqui, quem não tem marca... simplesmente não deveria existir."
+   "gap": 0.15,
+   "text": "[sério, firme] Até que o diretor bate o cajado no chão, e todo mundo cala a boca. Ele chega perto e fala baixinho, só pra você:"
+  },
+  {
+   "id": "d1",
+   "spk": "DIRETOR",
+   "gap": 0.15,
+   "text": "[sussurrando, grave] O último sem marca foi o meu irmão. Exilaram ele pro sul, pras terras do Rei Demônio. Ele nunca mais voltou."
   },
   {
    "id": "n13",
    "spk": "NARRADOR",
-   "gap": 0.2,
-   "text": "[rápido] No dia seguinte, te levam pra Academia Real pro Teste do Cristal. Funciona assim: encostou a mão, o cristal acende na cor do seu elemento."
-  },
-  {
-   "id": "n14",
-   "spk": "NARRADOR",
-   "gap": 0.12,
-   "text": "[narrando, crescendo] O garoto antes de você tem uma linha vermelha: o cristal pega fogo e a plateia vai à loucura. Aí chega a sua vez. Você encosta... e nada. Nem uma faisquinha. E a sala inteira cai na gargalhada."
-  },
-  {
-   "id": "n15",
-   "spk": "NARRADOR",
-   "gap": 0.15,
-   "text": "[sério, firme] Até que o diretor, um velho de linha dourada, bate o cajado no chão, e todo mundo cala a boca."
-  },
-  {
-   "id": "n16",
-   "spk": "NARRADOR",
-   "gap": 0.12,
-   "text": "[misterioso, baixo] Ele abre um livro de mil anos e vira pra você um desenho: um rosto igualzinho ao seu. Sem marca nenhuma. Embaixo, uma palavra só: Vazio."
-  },
-  {
-   "id": "n17",
-   "spk": "NARRADOR",
-   "gap": 0.12,
-   "text": "[sussurrando] Em toda a história, só existiu mais um. E a página seguinte... foi arrancada."
-  },
-  {
-   "id": "n18",
-   "spk": "NARRADOR",
-   "gap": 0.25,
+   "gap": 0.3,
    "text": "[misterioso, lento] E aí você escuta um miado. Em cima da estante, te encarando... o mesmo gato que você salvou."
   },
   {
    "id": "cta",
    "spk": "NARRADOR",
-   "gap": 3.4,
+   "gap": 3.2,
    "text": "[animado] Segue a página pra ver o episódio dois!"
   }
  ]

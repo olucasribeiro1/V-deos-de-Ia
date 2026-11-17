@@ -1,56 +1,58 @@
 [00:00.36 -> 00:01.81] Você morreu salvando um gato.
 [00:01.96 -> 00:02.33] Sério.
-[00:02.54 -> 00:06.43] Ele tava parado no meio da avenida, o caminhão vinha voando, e você nem pensou: pulou.
-[00:06.64 -> 00:07.88] O gato saiu ileso.
-[00:08.06 -> 00:08.74] Você...
-[00:08.80 -> 00:09.74] virou estatística.
-[00:10.10 -> 00:11.29] Só que aí você abre o olho.
-[00:11.31 -> 00:12.22] E o céu tá azul.
-[00:12.25 -> 00:16.26] Tem duas luas lá em cima, e um dragão do tamanho de um prédio acabou de passar por cima de você.
-[00:16.49 -> 00:19.21] Lá embaixo, uma cidade cheia de muralha e torre.
-[00:19.27 -> 00:20.28] É, parceiro.
-[00:20.36 -> 00:21.87] Você foi parar em outro mundo.
-[00:22.18 -> 00:25.91] E logo você repara numa coisa estranha: todo mundo aqui tem uns riscos no rosto.
-[00:25.95 -> 00:26.84] Isso é a Marca.
-[00:26.87 -> 00:29.40] A pessoa já nasce com ela, e é ela que decide tudo.
-[00:29.69 -> 00:30.72] Nasceu com uma linha só?
-[00:30.75 -> 00:33.38] É elite: magia monstra, entra direto na Academia Real.
-[00:33.42 -> 00:34.08] Duas linhas?
-[00:34.14 -> 00:36.15] Magia mais ou menos, vira soldado ou ferreiro.
-[00:36.19 -> 00:36.94] Três linhas...
-[00:36.97 -> 00:40.11] aí é magia fraquinha, trabalho pesado, e ninguém nem olha na sua cara.
-[00:40.32 -> 00:42.50] E repara na cor, porque a cor é o elemento.
-[00:42.52 -> 00:45.03] Quem tem marca vermelha solta fogo e derrete armadura.
-[00:45.06 -> 00:47.34] A azul controla a água e fecha ferida na hora.
-[00:47.50 -> 00:49.14] A marrom levanta muralha do chão.
-[00:49.17 -> 00:51.10] A branca é vento, faz até navio voar.
-[00:51.12 -> 00:54.10] E a amarela é raio: derruba monstro de dez metros com um estalo.
-[00:54.31 -> 01:02.01] E tem as marcas que quase ninguém tem: a dourada, de luz; a preta, de sombra; e a violeta, que controla a gravidade.
-[01:02.07 -> 01:05.03] No reino inteiro, só três pessoas vivas têm uma dessas.
-[01:05.28 -> 01:07.36] Aí você corre até um lago, se olha na água...
-[01:07.40 -> 01:08.04] e nada.
-[01:08.08 -> 01:09.01] Seu rosto tá liso.
-[01:09.04 -> 01:10.33] Nenhuma linha, nenhuma cor.
-[01:10.57 -> 01:12.74] E quando você entra na cidade, todo mundo para.
-[01:13.05 -> 01:16.19] Criança aponta, gente cochicha, guarda já põe a mão na lança.
-[01:16.37 -> 01:18.28] Porque aqui, quem não tem marca...
-[01:18.37 -> 01:19.88] simplesmente não deveria existir.
-[01:20.19 -> 01:22.83] No dia seguinte, te levam pra Academia Real pro Teste do Cristal.
-[01:22.87 -> 01:25.88] Funciona assim: encostou a mão, o cristal acende na cor do seu elemento.
-[01:26.06 -> 01:30.83] O garoto antes de você tem uma linha vermelha: o cristal pega fogo e a plateia vai à loucura.
-[01:30.86 -> 01:31.94] Aí chega a sua vez.
-[01:31.97 -> 01:32.94] Você encosta...
-[01:32.98 -> 01:33.60] e nada.
-[01:33.63 -> 01:34.70] Nem uma faisquinha.
-[01:34.72 -> 01:36.47] E a sala inteira cai na gargalhada.
-[01:36.68 -> 01:41.48] Até que o diretor, um velho de linha dourada, bate o cajado no chão, e todo mundo cala a boca.
-[01:41.83 -> 01:46.83] Ele abre um livro de mil anos e vira pra você um desenho: um rosto igualzinho ao seu.
-[01:46.92 -> 01:48.00] Sem marca nenhuma.
-[01:48.09 -> 01:50.41] Embaixo, uma palavra só: Vazio.
-[01:50.59 -> 01:53.17] Em toda a história, só existiu mais um.
-[01:53.20 -> 01:54.53] E a página seguinte...
-[01:54.59 -> 01:55.51] foi arrancada.
-[01:55.89 -> 01:57.52] E aí você escuta um miado.
-[01:57.74 -> 01:59.83] Em cima da estante, te encarando...
-[01:59.92 -> 02:01.57] o mesmo gato que você salvou.
-[02:05.09 -> 02:06.94] Segue a página pra ver o episódio dois!
+[00:02.49 -> 00:07.66] O bichano tava parado no meio da avenida, o caminhão vinha voando, e você nem pensou: pulou, empurrou o gato pra calçada...
+[00:07.88 -> 00:09.11] O gato saiu ileso.
+[00:09.29 -> 00:09.97] Você...
+[00:10.03 -> 00:10.97] virou estatística.
+[00:11.44 -> 00:12.21] Aí você abre o olho.
+[00:12.37 -> 00:14.18] Céu azul, duas luas lá em cima...
+[00:14.21 -> 00:16.93] e um dragão do tamanho de um prédio passa raspando na sua cabeça.
+[00:17.10 -> 00:18.27] Eita, P*RRA!
+[00:18.86 -> 00:19.41] É, parceiro.
+[00:19.47 -> 00:20.85] Você foi parar em outro mundo.
+[00:20.87 -> 00:23.77] E na sua frente aparece uma tela, igual de videogame: Nível zero.
+[00:23.89 -> 00:26.16] Força dez, velocidade oito, inteligência doze.
+[00:26.23 -> 00:27.52] Matou monstro, tudo sobe.
+[00:27.55 -> 00:28.93] Menos uma coisa: a magia.
+[00:29.00 -> 00:30.23] Essa tá travada no zero.
+[00:30.55 -> 00:32.79] Esse mundo se chama Aldoria e tem quatro nações.
+[00:32.81 -> 00:34.70] No norte, os elfos: arco e cura.
+[00:34.72 -> 00:37.12] Nas montanhas, os anões, os melhores ferreiros que existem.
+[00:37.16 -> 00:39.38] No centro, o reino humano, governado pelo Rei Mago.
+[00:39.40 -> 00:40.99] E no sul, de onde ninguém volta...
+[00:41.02 -> 00:41.94] o Rei Demônio.
+[00:42.20 -> 00:44.26] E aqui todo mundo nasce com uma marca no rosto.
+[00:44.27 -> 00:45.03] Uma linha?
+[00:45.22 -> 00:45.45] Elite.
+[00:45.49 -> 00:45.87] Duas?
+[00:45.90 -> 00:46.92] Soldado, ferreiro.
+[00:46.96 -> 00:47.39] Três?
+[00:47.41 -> 00:49.53] Trabalho pesado, e ninguém nem olha na sua cara.
+[00:49.69 -> 00:50.84] E a cor é o elemento.
+[00:50.92 -> 00:51.94] Vermelha, fogo.
+[00:51.97 -> 00:52.86] Azul, água.
+[00:52.89 -> 00:53.84] Marrom, terra.
+[00:53.86 -> 00:54.71] Branca, vento.
+[00:54.74 -> 00:55.75] Amarela, raio.
+[00:55.77 -> 00:59.11] E a dourada, a mais rara de todas, só o próprio Rei Mago tem.
+[00:59.37 -> 01:01.43] Aí você corre até um lago, se olha na água...
+[01:01.46 -> 01:02.11] e nada.
+[01:02.14 -> 01:02.84] Rosto liso.
+[01:02.88 -> 01:03.74] Nenhuma marca.
+[01:03.80 -> 01:04.44] Ferrou.
+[01:04.47 -> 01:07.92] Na cidade, todo mundo te encara: criança aponta, guarda já põe a mão na lança.
+[01:08.13 -> 01:10.13] Te levam pra Academia Real, pro Teste do Cristal.
+[01:10.29 -> 01:12.66] O garoto antes de você encosta, e o cristal pega fogo.
+[01:12.69 -> 01:13.30] Sua vez.
+[01:13.36 -> 01:14.07] Você encosta...
+[01:14.10 -> 01:14.75] e nada.
+[01:14.78 -> 01:15.67] Nem uma faísca.
+[01:15.70 -> 01:17.19] A sala inteira cai na gargalhada.
+[01:17.40 -> 01:20.87] Até que o diretor bate o cajado no chão, e todo mundo cala a boca.
+[01:20.90 -> 01:25.94] Ele chega perto e fala baixinho, só pra você: O último sem marca foi o meu irmão.
+[01:26.04 -> 01:28.94] Exilaram ele pro sul, pras terras do Rei Demônio.
+[01:29.04 -> 01:30.22] Ele nunca mais voltou.
+[01:30.65 -> 01:32.34] E aí você escuta um miado.
+[01:32.56 -> 01:34.65] Em cima da estante, te encarando...
+[01:34.74 -> 01:36.44] o mesmo gato que você salvou.
+[01:39.77 -> 01:41.61] Segue a página pra ver o episódio dois!
