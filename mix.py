@@ -19,7 +19,7 @@ a = p.parse_args()
 if not (a.voz or a.musica):
     # modo master: só normaliza o áudio que já está no vídeo (ex.: episódio mixado no Remotion)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", a.video, "-af",
-                    f"loudnorm=I={m['targetLufs']}:TP=-1.5:LRA=11", "-c:v", "copy",
+                    f"loudnorm=I={m['targetLufs']}:TP=-2:LRA=11,alimiter=limit=0.85:level=false", "-c:v", "libx264", "-crf", "24", "-preset", "slow", "-movflags", "+faststart",
                     "-c:a", "aac", "-b:a", "192k", "-ar", "48000", a.saida], check=True)
     print(f"✅ {a.saida} (master {m['targetLufs']} LUFS)")
     sys.exit(0)
