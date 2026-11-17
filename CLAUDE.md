@@ -61,3 +61,13 @@ Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**,
 - **Revisão:** revisar cada etapa antes da próxima, com quadros de teste. Safe zone do Instagram/TikTok sempre conferida. Nada com falha.
 - **Trabalho em equipe:** usar agentes por função (modelagem/personagens, cenário, efeitos, HUD e mapa), cada um revisando o próprio trabalho. O agente de modelagem cuida das marcas no rosto.
 - **Custos:** no fim de cada projeto, informar o gasto de todas as IAs usadas (créditos do ElevenLabs etc.).
+- **Ao final de todo vídeo, um agente de descrições** entrega `projects/<slug>/out/descricao.md` com:
+  - a transcrição do que é falado;
+  - a descrição do que aparece em cada cena;
+  - legenda de Reels/TikTok com gancho e hashtags;
+  - para vídeos longos: títulos, descrição, capítulos e tags do YouTube, otimizados para o algoritmo entender o assunto.
+- **Thumbnails só para vídeos longos**, feitas pelo agente de design. Regras:
+  - protagonista grande e expressivo, alto contraste, 3–4 palavras grandes, gancho de curiosidade;
+  - nada no canto inferior direito;
+  - testar a leitura em tamanho pequeno.
+  - Checklist em `series/design_thumbnails.md`.
