@@ -155,4 +155,4 @@ registerShot('L', { draw(g, t, info) { const T = info.globalT, L = info.L, t0 = 
 // T — título · Kc — siga
 registerShot('T', { draw(g, t) { g.fillStyle = '#0a1030'; g.fillRect(0, 0, E.W, E.H); glow(g, 540, 900, 700, '#ffd23a', 0.2); moeda(g, 540, 520, 120, t, { brilho: 0.7 });
   const a = ease.outBack(prog(t, 0.15, 0.5)); g.save(); g.translate(540, 1000); g.scale(a, a); text(g, 'NESSE MUNDO,', 0, -90, { size: 76, color: '#9fd8ff', font: FONTS.ui, weight: 900 }); text(g, 'SÓ O SEU REAL', 0, 20, { size: 110, color: WH, stroke: 18, strokeColor: INK }); text(g, 'NÃO FOI TROCADO', 0, 140, { size: 96, color: '#ffd23a', stroke: 18, strokeColor: INK }); g.restore(); } });
-registerShot('Kc', { draw(g, t) { UI.seguir(g, t, { linha1: 'CURTIU?', proximo: 'MAIS NESSE MUNDO — TODA SEMANA NA PÁGINA', outfit: GUI }); } });
+registerShot('Kc', { draw(g, t) { UI.seguir(g, t, { linha1: 'CURTIU?', proximo: 'MAIS NESSE MUNDO — TODA SEMANA NA PÁGINA', outfit: null }); const a1 = ease.out(prog(t, 0.05, 0.4)); drawFigure(g, { x: 500, y: 1452 + (1 - a1) * 60, s: 1.0, facing: 1, outfit: GUI, pose: t < 0.9 ? POSES.relaxed : POSES.pointUp, expr: 'smile', t, alpha: a1 }); } });
