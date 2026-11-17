@@ -313,7 +313,7 @@ export function caminhao3D(T, o = {}) { const THREE = T.THREE, g = new THREE.Gro
   for (const v of luzes) { const sp = new THREE.SpotLight(C(T, '#fff2d8'), 0, 45, 0.42, 0.55, 1.5); sp.castShadow = false; sp.position.copy(v); sp.target.position.set(v.x - 30, 0, v.z * 1.4); body.add(sp, sp.target); spots.push(sp);
     const cn = new THREE.Mesh(geo('farolCone', () => new THREE.ConeGeometry(2.6, 16, 28, 1, true).translate(0, -8, 0).rotateZ(-Math.PI / 2 - 0.04)), add(T, '#fff0d0', 0.1, fadeTex(T))); cn.position.copy(v); body.add(cn); cones.push(cn);
     const gl = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex(T), color: C(T, '#fff4e0'), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true })); gl.position.copy(v).add(new THREE.Vector3(-0.2, 0, 0)); body.add(gl); glows.push(gl); }
-  g.farois = (k, ks = 1) => { k = clamp(k, 0, 1.5); farM.color.setRGB(1, 0.96, 0.88).multiplyScalar(1 + 4 * k); spots.forEach((s) => { s.intensity = 150 * k * ks; s.visible = ks > 0.001; }); cones.forEach((c) => (c.material.opacity = 0.07 * k)); glows.forEach((s) => { s.scale.setScalar(1.0 + 2.2 * k); s.material.opacity = Math.min(0.85, k * 0.7); }); };
+  g.farois = (k, ks = 1) => { k = clamp(k, 0, 1.5); farM.color.setRGB(1, 0.96, 0.88).multiplyScalar(1 + 4 * k); spots.forEach((s) => { s.intensity = 55 * k * ks; s.visible = ks > 0.001; }); cones.forEach((c) => (c.material.opacity = 0.05 * k)); glows.forEach((s) => { s.scale.setScalar(1.0 + 2.2 * k); s.material.opacity = Math.min(0.85, k * 0.7); }); };
   g.farois(o.farois ?? 1);
   let ang = 0; g.rodar = (dx) => { ang += dx / 0.54; rodas.forEach((r) => (r.rotation.z = ang)); };
   g.faroisMundo = () => luzes.map((v) => body.localToWorld(v.clone()));
@@ -376,9 +376,9 @@ export function cenaMorte(T, o = {}) { const THREE = T.THREE;
   const dP = new THREE.Vector3(), dT = new THREE.Vector3();
   // segue você e mantém o caminhão no quadro: olha para uma mistura das direções (você 62% / faróis 38%)
   const segue = (t, p) => { const k = prog(t, tPulo, tImpacto); const c = new THREE.Vector3(p.x - 10 + 4.5 * k, 1.35 - 0.3 * k, p.z * 0.5 - 0.7);
-    dP.set(p.x, 0.95, p.z).sub(c).normalize(); dT.set(frenteX(t), 1.3, -1.25).sub(c).normalize(); const d = dP.multiplyScalar(0.62).add(dT.multiplyScalar(0.38)).normalize().multiplyScalar(10).add(c);
+    dP.set(p.x, 0.95, p.z - 0.5 * k).sub(c).normalize(); dT.set(frenteX(t), 1.3, -1.25).sub(c).normalize(); const d = dP.multiplyScalar(0.7).add(dT.multiplyScalar(0.3)).normalize().multiplyScalar(10).add(c);
     return { pos: c.toArray(), look: d.toArray(), fov: lerp(46, 40, k) }; };
-  const KF = [[tImpacto + 0.12, { pos: [0.15, 0.32, -4.7], look: [0.5, 0.42, -6.5], fov: 40 }], [tIleso + 0.3, { pos: [0.0, 0.36, -4.4], look: [0.5, 0.5, -6.5], fov: 40 }], [fim, { pos: [-1.0, 0.9, -0.6], look: [1.3, 2.3, -9.5], fov: 50 }]];
+  const KF = [[tImpacto + 0.12, { pos: [0.15, 0.32, -4.7], look: [0.5, 0.42, -6.5], fov: 40 }], [tIleso + 0.3, { pos: [0.0, 0.36, -4.4], look: [0.5, 0.5, -6.5], fov: 40 }], [fim, { pos: [-0.3, 0.5, -3.4], look: [0.7, 1.15, -9.5], fov: 50 }]];
   const update = (t) => {
     const fx = frenteX(t), depois = t > tImpacto + 0.1; truck.visible = !depois; truck.position.x = fx + truck.frente; if (ultimoX != null) truck.rodar(ultimoX - truck.position.x); ultimoX = truck.position.x;
     const perto = clamp(1 - (fx - 1) / 70); // SpotLights só quando o caminhão está perto (longe, o brilho especular rasante no asfalto estoura o half-float e o bloom espalha NaN)
@@ -392,20 +392,21 @@ export function cenaMorte(T, o = {}) { const THREE = T.THREE;
       if (depois) P = keysAt(t, KF); else { const A = keysAt(t, K); const w = ease.inOut(prog(t, tCorre - 0.15, tCorre + 0.55)); P = w > 0 ? mixPose(A, segue(t, e.p), w) : A; }
       cam.position.set(...P.pos); look.set(...P.look); cam.lookAt(look); cam.fov = P.fov; cam.updateProjectionMatrix();
       if (t > tCaminhao && !depois) { const tr = 0.03 * perto * perto; cam.position.x += Math.sin(t * 41) * tr; cam.position.y += Math.sin(t * 37) * tr; }
+      eu.olha(cam);
       st.foco(depois ? cam.position.distanceTo(gato.position) : t < tGato ? 20 : cam.position.distanceTo(t < tCorre ? gato.position : eu.position), 0.0004); }
     truck.farois(t < tCaminhao - 0.6 ? 0.25 : 0.6 + 0.9 * perto * perto, clamp((34 - (fx - cam.position.x)) / 12));
-    if (o.semBloom) st.bloom.strength = 0; else st.bloom.strength = 0.5 + (depois ? 0 : 0.35 * Math.pow(perto, 3));
+    if (o.semBloom) st.bloom.strength = 0; else st.bloom.strength = 0.5 - (depois ? 0 : 0.15 * Math.pow(perto, 2));
     st.lente.uniforms.aberr && (st.lente.uniforms.aberr.value = 0.0015 + (depois ? 0 : 0.006 * Math.pow(perto, 3)));
     av.update(t, cam); st.tick(t); };
   const V = new THREE.Vector3();
   const proj = (v) => { V.copy(v).project(cam); return { x: (V.x + 1) / 2 * E.W, y: (1 - V.y) / 2 * E.H, ok: V.z < 1 && V.z > -1 }; };
   const overlay = (g, t) => { if (o.semOverlay) return; const depois = t > tImpacto + 0.1;
     if (!depois && t > tCaminhao - 0.8) { const fx = frenteX(t), perto = clamp(1 - (fx - 1) / 70), ps = truck.faroisMundo().map(proj).filter((q) => q.ok); g.save(); g.globalCompositeOperation = 'lighter';
-      for (const q of ps) { const R = 30 + 200 * perto * perto, gr = g.createRadialGradient(q.x, q.y, 0, q.x, q.y, R); gr.addColorStop(0, 'rgba(255,250,235,.95)'); gr.addColorStop(0.25, `rgba(255,220,170,${0.35 + 0.3 * perto})`); gr.addColorStop(1, 'rgba(255,200,140,0)'); g.fillStyle = gr; g.fillRect(q.x - R, q.y - R, R * 2, R * 2);
-        const sw = 120 + 900 * perto, gs = g.createLinearGradient(q.x - sw, 0, q.x + sw, 0); gs.addColorStop(0, 'rgba(120,200,255,0)'); gs.addColorStop(0.5, `rgba(170,225,255,${0.25 + 0.4 * perto})`); gs.addColorStop(1, 'rgba(120,200,255,0)'); g.fillStyle = gs; g.fillRect(q.x - sw, q.y - 3 - 4 * perto, sw * 2, 6 + 8 * perto); }
+      for (const q of ps) { const R = 18 + 80 * perto * perto, gr = g.createRadialGradient(q.x, q.y, 0, q.x, q.y, R); gr.addColorStop(0, 'rgba(255,250,235,.95)'); gr.addColorStop(0.25, `rgba(255,220,170,${0.15 + 0.15 * perto})`); gr.addColorStop(1, 'rgba(255,200,140,0)'); g.fillStyle = gr; g.fillRect(q.x - R, q.y - R, R * 2, R * 2);
+        const sw = 100 + 520 * perto, gs = g.createLinearGradient(q.x - sw, 0, q.x + sw, 0); gs.addColorStop(0, 'rgba(120,200,255,0)'); gs.addColorStop(0.5, `rgba(170,225,255,${0.2 + 0.25 * perto})`); gs.addColorStop(1, 'rgba(120,200,255,0)'); g.fillStyle = gs; g.fillRect(q.x - sw, q.y - 3 - 4 * perto, sw * 2, 6 + 8 * perto); }
       if (ps.length) { const cx = (ps[0].x + (ps[1] || ps[0]).x) / 2, cy = (ps[0].y + (ps[1] || ps[0]).y) / 2, dx = E.W / 2 - cx, dy = E.H / 2 - cy;
-        [[0.5, 30, 'rgba(120,255,200,'], [0.9, 70, 'rgba(255,120,220,'], [1.4, 46, 'rgba(120,180,255,'], [1.75, 110, 'rgba(255,220,120,']].forEach(([f, r, c]) => { const x = cx + dx * f, y = cy + dy * f, rr = r * (0.6 + perto), gr = g.createRadialGradient(x, y, rr * 0.6, x, y, rr); gr.addColorStop(0, c + (0.05 + 0.12 * perto) + ')'); gr.addColorStop(0.85, c + (0.08 + 0.15 * perto) + ')'); gr.addColorStop(1, c + '0)'); g.fillStyle = gr; g.beginPath(); g.arc(x, y, rr, 0, 7); g.fill(); });
-        const lav = Math.pow(perto, 4) * 0.3; if (lav > 0.01) { const gr = g.createRadialGradient(cx, cy, 0, cx, cy, E.H); gr.addColorStop(0, `rgba(255,245,225,${lav})`); gr.addColorStop(1, `rgba(255,235,210,${lav * 0.4})`); g.fillStyle = gr; g.fillRect(0, 0, E.W, E.H); } }
+        [[0.5, 30, 'rgba(120,255,200,'], [0.9, 70, 'rgba(255,120,220,'], [1.4, 46, 'rgba(120,180,255,'], [1.75, 110, 'rgba(255,220,120,']].forEach(([f, r, c]) => { const x = cx + dx * f, y = cy + dy * f, rr = r * (0.6 + perto), gr = g.createRadialGradient(x, y, rr * 0.6, x, y, rr); gr.addColorStop(0, c + (0.03 + 0.05 * perto) + ')'); gr.addColorStop(0.85, c + (0.05 + 0.07 * perto) + ')'); gr.addColorStop(1, c + '0)'); g.fillStyle = gr; g.beginPath(); g.arc(x, y, rr, 0, 7); g.fill(); });
+        const lav = 0.35 * prog(t, tImpacto - 0.5, tImpacto); if (lav > 0.01) { const gr = g.createRadialGradient(cx, cy, 0, cx, cy, E.H); gr.addColorStop(0, `rgba(255,245,225,${lav})`); gr.addColorStop(1, `rgba(255,235,210,${lav * 0.4})`); g.fillStyle = gr; g.fillRect(0, 0, E.W, E.H); } }
       g.restore(); }
     // clarão branco ANTES da batida, segura e abre no gato a salvo
     const a = t < tImpacto ? ease.in(prog(t, tImpacto - 0.22, tImpacto)) : 1 - ease.inOut(prog(t, tImpacto + 0.25, tIleso));
