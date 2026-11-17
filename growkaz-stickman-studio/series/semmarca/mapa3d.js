@@ -13,6 +13,7 @@
 //   rotulosMapa(g, t, o)            -> cartões 2D com o nome de cada nação (t e o.t* no MESMO relógio), o.tela = {norte:[x,y],...} opcional p/ o alfinete
 import { E, rr, text, glow, alpha, ease, prog, clamp, lerp, key, FONTS, measure } from '/engine/core.js';
 import { palco, pbr, m } from '/series/semmarca/turbo.js';
+import { pessoa3D, ELFO, ANAO, REI_MAGO } from '/series/semmarca/gente3d.js';
 
 // ---------- ruído 2D ----------
 const hs = (x, z, s) => { const n = Math.sin(x * 127.1 + z * 311.7 + s * 74.7) * 43758.5453; return n - Math.floor(n); };
@@ -205,12 +206,19 @@ export function mapaAldoria(T, o = {}) {
   fort.add(m(T, new THREE.BoxGeometry(12, 1.8, 0.8), escuro, 0, 0.9, 4.6)); const portal = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 2.0), nucleoM); portal.position.set(0, 1.1, 5.05); fort.add(portal);
   fort.position.set(dx, alt(dx, dz - 10) - 0.3, dz - 10); fort.rotation.y = Math.PI; G.add(fort);
   // névoa vermelha + brasas + nuvem escura
-  const nvT = nevoaTex(T), nevoas = [], rF = rnd(51); for (let i = 0; i < 16; i++) { const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: nvT, color: new THREE.Color(i % 3 ? '#ff2a3a' : '#a01a50'), transparent: true, opacity: 0.3, depthWrite: false })); const s = 16 + rF() * 14; sp.scale.set(s, s * 0.45, 1); sp.position.set(-30 + rF() * 60, 2 + rF() * 4, 24 + rF() * 30); sp.base = sp.position.clone(); sp.fase = rF() * 6; G.add(sp); nevoas.push(sp); }
+  const rF = rnd(51), nN = 22, nPos = new Float32Array(nN * 3), nBase = []; for (let i = 0; i < nN; i++) { nBase.push([-30 + rF() * 60, 2 + rF() * 5, 24 + rF() * 30, rF() * 6]); }
+  const nGeo = new THREE.BufferGeometry(); nGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3)); const nevoaM = new THREE.PointsMaterial({ map: nevoaTex(T), color: new THREE.Color('#ff2a3a'), size: 26, transparent: true, opacity: 0.3, depthWrite: false, sizeAttenuation: true });
+  const nevoa = new THREE.Points(nGeo, nevoaM); nevoa.frustumCulled = false; G.add(nevoa); // Points: o GTAO ignora (sprites viravam retângulos escuros)
   const cinza = brasas(T, [0, 1, 40], [60, 18, 30], { n: 240, cor: '#ff7a2a', tam: 0.45, vel: 0.07, seed: 12 }); G.add(cinza);
   const fumV = fumaca(T, [[vx, alt(vx, vz) + 1, vz]], { n: 60, cor: '#5a4a5a', tam: 4, opac: 0.5, altura: 16, vel: 0.08, seed: 8 }); G.add(fumV);
   upd.push((t) => { const p = 0.5 + 0.5 * Math.sin(t * 2.2); crackM.emissiveIntensity = 2 + 1.2 * p; demM.emissiveIntensity = 1.8 + 1.0 * p; escuro.emissiveIntensity = 1.5 + 0.8 * p; nucleoM.emissiveIntensity = 3.5 + 1.5 * Math.sin(t * 3.1); luzN.intensity = 100 + 40 * Math.sin(t * 3.1); luzV.intensity = 50 + 20 * p;
-    nuc.rotation.y = t * 0.8; nuc.scale.setScalar(1 + 0.06 * Math.sin(t * 6)); nevoas.forEach(s => { s.position.x = s.base.x + Math.sin(t * 0.25 + s.fase) * 3; s.material.opacity = 0.26 + 0.1 * Math.sin(t * 0.8 + s.fase); }); cinza.update(t); fumV.update(t); });
+    nuc.rotation.y = t * 0.8; nuc.scale.setScalar(1 + 0.06 * Math.sin(t * 6)); nBase.forEach(([x, y, z, f], i) => nPos.set([x + Math.sin(t * 0.25 + f) * 3, y, z], i * 3)); nGeo.attributes.position.needsUpdate = true; nevoaM.opacity = 0.28 + 0.06 * Math.sin(t * 0.8); cinza.update(t); fumV.update(t); });
 
+  // ---------- miniaturas (peças do tabuleiro): elfo arqueiro, anão no martelo, Rei Mago no portão ----------
+  if (o.figuras !== false) { const E2 = o.escalaFiguras ?? 2.4, figs = [];
+    const poe = (preset, x, z, rot, estado) => { const f = pessoa3D(T, { ...preset }); f.position.set(x, alt(x, z) - 0.05, z); f.rotation.y = rot; f.scale.setScalar(E2); f.traverse(q => { if (q.isMesh) { q.castShadow = true; } }); G.add(f); figs.push([f, estado]); return f; };
+    poe(ELFO, ALD.torre[0] + 5, ALD.torre[1] + 7, 0.3, 'arco'); poe(ANAO, 19.5, -2.5, -0.6, 'martelar'); poe(REI_MAGO, ALD.castelo[0] + 3.5, ALD.castelo[1] + 7.2, 0.4, 'cajado');
+    upd.push((t) => figs.forEach(([f, e], i) => { try { f.anima(t + i, e); } catch (err) { } })); G.figuras = figs.map(f => f[0]); }
   // ---------- pontos para a câmera / rótulos ----------
   const pt = ([x, z], dy = 0) => V3(x, Math.max(0.5, alt(x, z)) + dy, z);
   G.pontos = { aldoria: V3(0, 0, 0), norte: pt(ALD.torre, 12), montanhas: pt(ALD.montanhas, 1), centro: pt(ALD.castelo, 3), sul: V3(dx, dy + 10, dz) };

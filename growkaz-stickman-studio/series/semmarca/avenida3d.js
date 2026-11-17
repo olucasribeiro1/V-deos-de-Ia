@@ -46,7 +46,7 @@ const asfalto = (T) => tx(T, 'asf', 512, 512, (g, w, h) => { const r = rng(11); 
   g.strokeStyle = 'rgba(10,10,14,.5)'; g.lineWidth = 2; for (let i = 0; i < 5; i++) { g.beginPath(); let x = r() * w, y = r() * h; g.moveTo(x, y); for (let k = 0; k < 6; k++) { x += (r() - 0.5) * 60; y += (r() - 0.5) * 60; g.lineTo(x, y); } g.stroke(); } }, [16, 1]);
 // rugosidade: poças (escuras = espelho)
 const poca = (T) => tx(T, 'poca', 512, 512, (g, w, h) => { const r = rng(21); g.fillStyle = 'rgb(120,120,120)'; g.fillRect(0, 0, w, h);
-  for (let i = 0; i < 14; i++) { const x = r() * w, y = r() * h, rx = 30 + r() * 110, ry = 12 + r() * 50; const gr = g.createRadialGradient(x, y, 0, x, y, rx); gr.addColorStop(0, 'rgb(8,8,8)'); gr.addColorStop(0.7, 'rgb(20,20,20)'); gr.addColorStop(1, 'rgba(120,120,120,0)'); g.fillStyle = gr; g.beginPath(); g.ellipse(x, y, rx, ry, r() * 3, 0, 7); g.fill(); } }, [16, 1]);
+  for (let i = 0; i < 14; i++) { const x = r() * w, y = r() * h, rx = 30 + r() * 110, ry = 12 + r() * 50; const gr = g.createRadialGradient(x, y, 0, x, y, rx); gr.addColorStop(0, 'rgb(48,48,48)'); gr.addColorStop(0.7, 'rgb(58,58,58)'); gr.addColorStop(1, 'rgba(120,120,120,0)'); g.fillStyle = gr; g.beginPath(); g.ellipse(x, y, rx, ry, r() * 3, 0, 7); g.fill(); } }, [16, 1]);
 const calcadaTex = (T) => tx(T, 'calc', 256, 256, (g, w, h) => { g.fillStyle = '#7a7480'; g.fillRect(0, 0, w, h); const r = rng(4); for (let y = 0; y < h; y += 64) for (let x = 0; x < w; x += 64) { const v = 112 + r() * 26; g.fillStyle = `rgb(${v},${v - 4},${v + 6})`; g.fillRect(x + 2, y + 2, 60, 60); } for (let i = 0; i < 800; i++) { g.fillStyle = 'rgba(0,0,0,.08)'; g.fillRect(r() * w, r() * h, 3, 3); } }, [60, 1.5]);
 // fachada (cor + janelas) e mapa emissivo (só o que acende)
 function fachada(T, cor, w, h, seed, terreo) { const key = `fach${cor}${w}${h}${seed}`; if (TX[key]) return TX[key];
@@ -65,7 +65,7 @@ function fachada(T, cor, w, h, seed, terreo) { const key = `fach${cor}${w}${h}${
     if (r() < 0.3) { g.strokeStyle = 'rgba(20,20,26,.8)'; g.lineWidth = 3; for (let k = 1; k < 6; k++) { g.beginPath(); g.moveTo(x + ww * k / 6, y); g.lineTo(x + ww * k / 6, y + hh); g.stroke(); } e.fillStyle = '#000'; for (let k = 1; k < 6; k++) e.fillRect(x + ww * k / 6 - 1, y, 3, hh); } }
   // térreo: loja com vitrine acesa ou porta de enrolar
   const ty = H - 3.4 * PX; g.fillStyle = 'rgba(0,0,0,.25)'; g.fillRect(0, ty - 6, W, 8);
-  if (terreo === 'loja') { const vc = ['#fff2c8', '#d8f4ff', '#ffe0f0', '#e0ffe8'][Math.floor(r() * 4)]; g.fillStyle = '#2a2a30'; g.fillRect(W * 0.06, ty + 0.5 * PX, W * 0.88, 2.9 * PX); g.fillStyle = vc; g.fillRect(W * 0.08, ty + 0.6 * PX, W * 0.84, 2.7 * PX); e.fillStyle = vc; e.fillRect(W * 0.08, ty + 0.6 * PX, W * 0.84, 2.7 * PX);
+  if (terreo === 'loja') { const vc = ['#ffd890', '#9fe0ff', '#ffa8d8', '#a8ffc0'][Math.floor(r() * 4)]; g.fillStyle = '#2a2a30'; g.fillRect(W * 0.06, ty + 0.5 * PX, W * 0.88, 2.9 * PX); g.fillStyle = vc; g.fillRect(W * 0.08, ty + 0.6 * PX, W * 0.84, 2.7 * PX); e.fillStyle = vc; e.fillRect(W * 0.08, ty + 0.6 * PX, W * 0.84, 2.7 * PX);
     // prateleiras/pessoas dentro (silhuetas)
     for (let i = 0; i < 6; i++) { const sx = W * 0.1 + r() * W * 0.78; const sc = ['#e85a8a', '#3a9dff', '#ffd23a', '#4ac07a'][i % 4]; g.fillStyle = sc; e.fillStyle = sc; g.fillRect(sx, ty + 1.2 * PX + (i % 3) * 0.6 * PX, W * 0.08, 0.3 * PX); e.fillRect(sx, ty + 1.2 * PX + (i % 3) * 0.6 * PX, W * 0.08, 0.3 * PX); }
     g.fillStyle = 'rgba(30,30,40,.9)'; for (let k = 1; k < 4; k++) { g.fillRect(W * 0.08 + W * 0.84 * k / 4 - 2, ty + 0.6 * PX, 4, 2.7 * PX); e.fillStyle = '#000'; e.fillRect(W * 0.08 + W * 0.84 * k / 4 - 2, ty + 0.6 * PX, 4, 2.7 * PX); } }
@@ -89,8 +89,8 @@ const geo = (key, make) => GEO[key] || (GEO[key] = make());
 // carro simples arredondado (frente em +X local)
 export function carro3D(T, cor = '#3a9dff', o = {}) { const THREE = T.THREE, g = new THREE.Group(), on = o.ligado ?? false;
   const corpo = geo('cb', () => new RoundedBoxGeometry(4.1, 0.78, 1.8, 3, 0.28)), cab = geo('cc', () => new RoundedBoxGeometry(2.1, 0.7, 1.62, 3, 0.26)), roda = geo('cr', () => new THREE.CylinderGeometry(0.33, 0.33, 0.24, 16).rotateX(Math.PI / 2)), farol = geo('cf', () => new THREE.BoxGeometry(0.06, 0.16, 0.36));
-  g.add(mk(T, corpo, new THREE.MeshPhysicalMaterial({ color: C(T, cor), roughness: 0.35, metalness: 0.2, clearcoat: 1, clearcoatRoughness: 0.15 }), 0, 0.62, 0));
-  g.add(mk(T, cab, new THREE.MeshStandardMaterial({ color: C(T, '#0d1622'), roughness: 0.06, metalness: 0.7 }), -0.25, 1.28, 0));
+  g.add(mk(T, corpo, new THREE.MeshPhysicalMaterial({ color: C(T, cor), roughness: 0.35, metalness: 0.2, clearcoat: 1, clearcoatRoughness: 0.25 }), 0, 0.62, 0));
+  g.add(mk(T, cab, new THREE.MeshStandardMaterial({ color: C(T, '#0d1622'), roughness: 0.15, metalness: 0.7 }), -0.25, 1.28, 0));
   const pneu = std(T, '#141418', { r: 0.9 }); for (const [x, z] of [[1.3, 0.82], [1.3, -0.82], [-1.3, 0.82], [-1.3, -0.82]]) g.add(mk(T, roda, pneu, x, 0.33, z));
   const fM = on ? hdr(T, '#fff4d8', 5) : std(T, '#d8dce8', { r: 0.2, m: 0.5 }), tM = hdr(T, '#ff2a2a', on ? 3 : 0.6);
   for (const z of [0.6, -0.6]) { g.add(mk(T, farol, fM, 2.06, 0.75, z, false)); g.add(mk(T, farol, tM, -2.06, 0.78, z, false)); }
@@ -128,7 +128,7 @@ function pontoOnibus(T) { const THREE = T.THREE, g = new THREE.Group(), met = st
 function predio(T, o, r) { const THREE = T.THREE, g = new THREE.Group();
   const w = o.w, andares = o.andares, h = 3.4 + andares * 3 + 0.6, d = 8;
   const [mp, me] = fachada(T, o.cor, w, h, o.seed, o.letreiro || r() < 0.5 ? 'loja' : 'porta');
-  const front = new THREE.MeshStandardMaterial({ map: mp, emissiveMap: me, emissive: C(T, '#ffffff'), emissiveIntensity: 1.6, roughness: 0.85 });
+  const front = new THREE.MeshStandardMaterial({ map: mp, emissiveMap: me, emissive: C(T, '#ffffff'), emissiveIntensity: 0.95, roughness: 0.85 });
   const side = std(T, o.cor, { r: 0.9 }), roof = std(T, '#3a3640', { r: 0.95 });
   g.add(mk(T, new THREE.BoxGeometry(w, h, d), [side, side, roof, roof, front, side], 0, h / 2, -d / 2));
   // marquise de concreto sobre o térreo
@@ -267,8 +267,8 @@ export function avenida3D(T, o = {}) { const THREE = T.THREE, g = new THREE.Grou
 // ====================================================================================================
 // caminhão cara-chata brasileiro, frente para -X. Origem: chão, centro do veículo.
 export function caminhao3D(T, o = {}) { const THREE = T.THREE, g = new THREE.Group(), body = new THREE.Group(); g.add(body);
-  const cor = o.cor ?? '#1f6ad8', tinta = new THREE.MeshPhysicalMaterial({ color: C(T, cor), roughness: 0.3, metalness: 0.25, clearcoat: 1, clearcoatRoughness: 0.1 });
-  const cromo = new THREE.MeshStandardMaterial({ color: C(T, '#eef2f8'), roughness: 0.12, metalness: 1.0, envMapIntensity: 1.6 }), preto = std(T, '#16161a', { r: 0.7 }), vidro = new THREE.MeshStandardMaterial({ color: C(T, '#0c1826'), roughness: 0.04, metalness: 0.85, envMapIntensity: 1.8 });
+  const cor = o.cor ?? '#1f6ad8', tinta = new THREE.MeshPhysicalMaterial({ color: C(T, cor), roughness: 0.3, metalness: 0.25, clearcoat: 1, clearcoatRoughness: 0.22 });
+  const cromo = new THREE.MeshStandardMaterial({ color: C(T, '#eef2f8'), roughness: 0.22, metalness: 1.0, envMapIntensity: 1.6 }), preto = std(T, '#16161a', { r: 0.7 }), vidro = new THREE.MeshStandardMaterial({ color: C(T, '#0c1826'), roughness: 0.14, metalness: 0.85, envMapIntensity: 1.8 });
   const F = -4.0; // x da frente da cabine
   body.add(mk(T, new THREE.BoxGeometry(7.6, 0.32, 1.1), preto, 0.1, 0.78, 0)); // longarina
   body.add(mk(T, new RoundedBoxGeometry(2.35, 2.4, 2.5, 4, 0.22), tinta, F + 1.18, 2.25, 0)); // cabine
@@ -313,7 +313,7 @@ export function caminhao3D(T, o = {}) { const THREE = T.THREE, g = new THREE.Gro
   for (const v of luzes) { const sp = new THREE.SpotLight(C(T, '#fff2d8'), 0, 70, 0.42, 0.55, 1.2); sp.castShadow = false; sp.position.copy(v); sp.target.position.set(v.x - 30, 0, v.z * 1.4); body.add(sp, sp.target); spots.push(sp);
     const cn = new THREE.Mesh(geo('farolCone', () => new THREE.ConeGeometry(2.6, 16, 28, 1, true).translate(0, -8, 0).rotateZ(-Math.PI / 2 - 0.04)), add(T, '#fff0d0', 0.1, fadeTex(T))); cn.position.copy(v); body.add(cn); cones.push(cn);
     const gl = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex(T), color: C(T, '#fff4e0'), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true })); gl.position.copy(v).add(new THREE.Vector3(-0.2, 0, 0)); body.add(gl); glows.push(gl); }
-  g.farois = (k) => { k = clamp(k, 0, 1.5); farM.color.setRGB(1, 0.96, 0.88).multiplyScalar(1 + 9 * k); spots.forEach((s) => (s.intensity = 900 * k)); cones.forEach((c) => (c.material.opacity = 0.11 * k)); glows.forEach((s) => { s.scale.setScalar(1.2 + 3.5 * k); s.material.opacity = Math.min(1, k); }); };
+  g.farois = (k) => { k = clamp(k, 0, 1.5); farM.color.setRGB(1, 0.96, 0.88).multiplyScalar(1 + 9 * k); spots.forEach((s) => (s.intensity = 520 * k)); cones.forEach((c) => (c.material.opacity = 0.11 * k)); glows.forEach((s) => { s.scale.setScalar(1.2 + 3.5 * k); s.material.opacity = Math.min(1, k); }); };
   g.farois(o.farois ?? 1);
   let ang = 0; g.rodar = (dx) => { ang += dx / 0.54; rodas.forEach((r) => (r.rotation.z = ang)); };
   g.faroisMundo = () => luzes.map((v) => body.localToWorld(v.clone()));
@@ -344,7 +344,7 @@ function keysAt(t, keys) { if (t <= keys[0][0]) return keys[0][1]; for (let i = 
 export function cenaMorte(T, o = {}) { const THREE = T.THREE;
   const tm = { tGato: 2.0, tCaminhao: 3.4, tCorre: 5.0, tPulo: 6.2, tImpacto: 6.9, tIleso: 7.6, fim: 10, ...o };
   const { tGato, tCaminhao, tCorre, tPulo, tImpacto, tIleso, fim } = tm;
-  const st = palco(T, { sky: ['#07051a', '#1c0f44', '#4a1a6a', '#8a2a7a'], fog: [35, 165], fogColor: '#2a1450', keyColor: '#8aa8ff', keyIntensity: 0.55, keyPos: [-12, 30, 14], ambient: 0.9, ambientSky: '#7a6ad8', shadowSize: 22, fov: 50, foco: 8, abertura: 0.0004, maxblur: 0.006, bloom: 0.75, bloomLimiar: 0.72, barril: 0.06, sat: 1.25, quente: 0, env: 0.9, exposicao: 1.05, ao: o.ao ?? false, dof: o.dof ?? true });
+  const st = palco(T, { sky: ['#07051a', '#1c0f44', '#4a1a6a', '#8a2a7a'], fog: [35, 165], fogColor: '#2a1450', keyColor: '#8aa8ff', keyIntensity: 0.55, keyPos: [-12, 30, 14], ambient: 0.9, ambientSky: '#7a6ad8', shadowSize: 22, fov: 50, foco: 8, abertura: 0.0004, maxblur: 0.006, bloom: 0.5, bloomLimiar: 0.88, barril: 0.06, sat: 1.25, quente: 0, env: 0.9, exposicao: 1.05, ao: o.ao ?? false, dof: o.dof ?? true });
   st.hemi.groundColor = C(T, '#2a1a3a');
   ambienteNeon(T, st, 0.9);
   // estrelas
@@ -367,8 +367,8 @@ export function cenaMorte(T, o = {}) { const THREE = T.THREE;
   const gatoEm = (t) => { if (t < tEmp) return { p: GATO0.clone(), ry: Math.PI, giro: 0 }; const k = prog(t, tEmp, tImpacto + 0.45); const p = GATO0.clone().lerp(GATO1, ease.out(k)); p.y = lerp(0, GATO1.y, k) + Math.sin(k * Math.PI) * 0.7; return { p, ry: lerp(Math.PI, -2.3, k), giro: k < 1 ? k * Math.PI * 2 : 0 }; };
   const cam = st.camera, look = new THREE.Vector3();
   const K = [[0, { pos: [-36, 17, 3.5], look: [22, 1.5, 0], fov: 56 }], [tGato - 0.4, { pos: [-15, 5.0, 4.5], look: [2, 0.9, 1.5], fov: 50 }], [tGato + 0.7, { pos: [-4.2, 0.75, -0.6], look: [1.0, 0.35, -1.25], fov: 40 }], [tCaminhao, { pos: [-3.8, 0.62, -0.9], look: [8, 0.75, -1.25], fov: 38 }], [tCorre, { pos: [-3.2, 0.58, -1.0], look: [9, 0.9, -1.2], fov: 36 }]];
-  const segue = (t, p) => { const k = prog(t, tPulo, tImpacto); return { pos: [p.x - 7.2 + 1.8 * k, 1.35 - 0.25 * k, p.z * 0.55 - 0.55], look: [p.x + 4, 0.95, p.z * 0.72 - 0.35], fov: lerp(44, 38, k) }; };
-  const KF = [[tImpacto + 0.12, { pos: [-1.9, 0.52, -2.4], look: [1.5, 0.45, -6.5], fov: 42 }], [fim, { pos: [-0.5, 0.42, -3.7], look: [1.5, 0.42, -6.5], fov: 34 }]];
+  const segue = (t, p) => { const k = prog(t, tPulo, tImpacto); return { pos: [p.x - 7.0 + 1.8 * k, 1.3 - 0.25 * k, p.z * 0.55 - 0.6], look: [p.x + 4, 0.95, p.z * 0.97 - 0.15], fov: lerp(44, 38, k) }; };
+  const KF = [[tImpacto + 0.12, { pos: [-2.6, 0.55, -1.2], look: [1.8, 2.2, -8.5], fov: 50 }], [fim, { pos: [-1.2, 0.45, -2.6], look: [1.7, 1.7, -8.5], fov: 44 }]];
   const update = (t) => {
     const fx = frenteX(t), depois = t > tImpacto + 0.1; truck.visible = !depois; truck.position.x = fx + truck.frente; if (ultimoX != null) truck.rodar(ultimoX - truck.position.x); ultimoX = truck.position.x;
     const perto = clamp(1 - (fx - 1) / 70); truck.farois(o.dbgF ?? (t < tCaminhao - 0.6 ? 0.25 : 0.6 + 0.9 * perto * perto)); if (o.dbgSemTruck) truck.visible = false; if (o.dbgH) { truck.cones.forEach(c => c.visible = !o.dbgH.includes('cones')); truck.glows.forEach(c => c.visible = !o.dbgH.includes('glows')); truck.spots.forEach(c => c.visible = !o.dbgH.includes('spots')); }
@@ -383,7 +383,7 @@ export function cenaMorte(T, o = {}) { const THREE = T.THREE;
       cam.position.set(...P.pos); look.set(...P.look); cam.lookAt(look); cam.fov = P.fov; cam.updateProjectionMatrix();
       if (t > tCaminhao && !depois) { const tr = 0.03 * perto * perto; cam.position.x += Math.sin(t * 41) * tr; cam.position.y += Math.sin(t * 37) * tr; }
       st.foco(depois ? cam.position.distanceTo(gato.position) : t < tGato ? 20 : cam.position.distanceTo(t < tCorre ? gato.position : eu.position), 0.0004); }
-    if (o.semBloom) st.bloom.strength = 0; else st.bloom.strength = 0.75 + (depois ? 0 : 1.2 * Math.pow(perto, 3));
+    if (o.semBloom) st.bloom.strength = 0; else st.bloom.strength = 0.5 + (depois ? 0 : 0.7 * Math.pow(perto, 3));
     st.lente.uniforms.aberr && (st.lente.uniforms.aberr.value = 0.0015 + (depois ? 0 : 0.006 * Math.pow(perto, 3)));
     av.update(t, cam); st.tick(t); };
   const V = new THREE.Vector3();

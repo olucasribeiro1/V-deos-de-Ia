@@ -3,7 +3,7 @@ import { registerShot, clamp } from '/engine/core.js';
 import { palco, pbr, m, terreno, arvore } from '/series/semmarca/turbo.js';
 import { luas } from '/series/semmarca/tres.js';
 import { dragao3D, gato3D } from '/series/semmarca/dragao3d.js';
-const FLAP = false;
+const FLAP = false, EXTRA = false;
 registerShot('R', { kind: '3d',
   init(T) { const THREE = T.THREE;
     const st = palco(T, { sky: ['#0a4ad0', '#3aa8ff', '#d8f4ff'], fog: [140, 420], fogColor: '#bfe4ff', exposicao: 0.95, keyColor: '#fff2d8', keyIntensity: 3.4, keyPos: [-30, 40, 20], ambient: 1.0, ambientSky: '#bfe0ff', shadowSize: 30, fov: 50, foco: 30, abertura: 0.0004, bloom: 0.35, bloomLimiar: 0.9, barril: 0.1, quente: 0.02, sat: 1.25, env: 0.5 });
@@ -15,6 +15,7 @@ registerShot('R', { kind: '3d',
     return { stage: st, st, dr, dr2, gato, ter, V: THREE.Vector3 }; },
   draw(s, lt, info, T) { const cam = s.st.camera, V = s.V; s.dr2.update(lt + 0.4);
     const tg = s.gato.position;
+    if (EXTRA) { s.dr.position.set(0, 60, -80); const d = s.dr2; d.scale.setScalar(1); d.position.set(0, 14, 0); d.rotation.set(0, 0, 0); d.update(lt, lt < 1 ? { bater: 0, asas: 0.2, patas: 1, rugido: 1 } : lt < 2 ? { bater: 0, asas: 1, patas: 0.5 } : { bater: 1, rugido: 0, boca: 0.5, patas: 0 }); cam.position.set(6, 17, 22); cam.lookAt(0.5, 14.3, 0); cam.fov = 45; cam.updateProjectionMatrix(); s.st.foco(22, 0.0002); s.st.tick(lt); return; }
     if (lt < 0.65 || FLAP) { // (a) lateral, asas no meio do bater
       s.dr.position.set(0, 14, 0); s.dr.rotation.set(0, 0, 0); s.dr.update(lt, { bater: 1, boca: 0.15 }); cam.position.set(14, 22, 28); cam.lookAt(0.3, 14.3, 0); cam.fov = 45; s.st.foco(34, 0.0002); }
     else if (lt < 1.35) { // (b) passando por cima, visto de baixo em 3/4

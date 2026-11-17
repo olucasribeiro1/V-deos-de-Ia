@@ -172,7 +172,7 @@ export function dragao3D(T, o = {}) {
 
   // ---------- asas ----------
   const ossoG = pilula(T, 1, 1, 0.62, { p: 3.4, seg: 14, n: 16 }); ossoG.rotateZ(Math.PI / 2); // ao longo de +Y (0..1)
-  const juntaG = new THREE.SphereGeometry(1, 16, 12);
+  const juntaG = new THREE.SphereGeometry(1, 16, 12), coxaG = pilula(T, 1, 1, 0.55, { p: 2.3, seg: 16, n: 16 }); coxaG.rotateZ(Math.PI / 2);
   const garraG = curvoGeo(T, [[0, 0, 0], [0.12, 0.02, 0], [0.22, -0.04, 0], [0.27, -0.13, 0]], 0.055, 0.004, { nA: 10, nR: 8 });
   const DED = [[0.3, 5.3], [-0.2, 4.7], [-0.68, 4.0], [-1.18, 3.2]]; // ângulo base (rad, + = para frente) e comprimento dos dedos
   const H = new V3(-3.0, -0.12, -0.15); // ponto onde a membrana encosta no flanco
@@ -226,7 +226,7 @@ export function dragao3D(T, o = {}) {
   // ---------- patas ----------
   const pataD = { tras: { L: [1.15, 1.0, 0.55], r: [0.4, 0.19, 0.12], voo: [-112, -196, -178], chao: [-72, -118, -82] }, frente: { L: [0.78, 0.72, 0.36], r: [0.24, 0.14, 0.1], voo: [-118, -32, -98], chao: [-96, -84, -70] } };
   const patas = []; for (const tipo of ['frente', 'tras']) for (const lado of [-1, 1]) { const P = new THREE.Group(); raiz.add(P); const d = pataD[tipo];
-    const seg = d.L.map((_, i) => mk(ossoG, i === 0 ? mCor : mCor, 0, 0, 0, P)), jt = d.L.map((_, i) => { const j = mk(juntaG, mCor, 0, 0, 0, P); j.scale.setScalar(d.r[i] * [0.85, 1.15, 1.1][i]); return j; });
+    const seg = d.L.map((_, i) => mk(i === 0 ? coxaG : ossoG, mCor, 0, 0, 0, P)), jt = d.L.map((_, i) => { const j = mk(juntaG, mCor, 0, 0, 0, P); j.scale.setScalar(d.r[i] * [0.85, 1.15, 1.1][i]); return j; });
     const pe = new THREE.Group(); P.add(pe); const sola = mk(juntaG, mCor, 0.06, 0, 0, pe); sola.scale.set(d.r[2] * 1.6, d.r[2] * 0.85, d.r[2] * 1.5);
     for (let k = -1; k <= 1; k++) { const gr = mk(garraG, mChifre, 0.1, -0.02, k * d.r[2] * 0.85, pe); gr.rotation.y = -k * 0.35; gr.scale.setScalar(tipo === 'tras' ? 1.1 : 0.85); }
     patas.push({ tipo, lado, P, seg, jt, pe, d }); }
