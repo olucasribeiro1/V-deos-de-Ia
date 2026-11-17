@@ -2,10 +2,10 @@
 import * as THREE from 'three';
 
 // Textura em degraus: cria o sombreado "chapado" típico de desenho
-export function toonGradient(steps = 3) {
+export function toonGradient(steps = 3, min = 0) {
   const data = new Uint8Array(steps * 4);
   for (let i = 0; i < steps; i++) {
-    const v = Math.round((i / (steps - 1)) * 255);
+    const v = Math.round((min + (1 - min) * (i / (steps - 1))) * 255);
     data.set([v, v, v, 255], i * 4);
   }
   const tex = new THREE.DataTexture(data, steps, 1, THREE.RGBAFormat);

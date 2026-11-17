@@ -20,6 +20,7 @@ await renderMedia({
   composition, serveUrl, inputProps, browserExecutable,
   codec: m.codec, crf: m.crf,
   outputLocation: output,
+  concurrency: Number(process.env.CONCURRENCY) || null,
   // 'swangle' = WebGL por software (funciona sem GPU). Com GPU: REMOTION_GL=angle
   chromiumOptions: { gl: process.env.REMOTION_GL || 'swangle' },
   onProgress: ({ progress }) => process.stdout.write(`\rRenderizando ${(progress * 100).toFixed(0)}%`),

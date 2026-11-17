@@ -2,6 +2,7 @@
 """mix.py — mixa narração + música (com ducking) e junta ao vídeo, via ffmpeg.
 
 Uso:
+  python3 mix.py out/video.mp4 -o out/final.mp4          # só masteriza o áudio do vídeo
   python3 mix.py out/video.mp4 --voz audio/voz.mp3 --musica audio/musica.mp3 -o out/final.mp4
 """
 import argparse, json, subprocess, sys
@@ -16,7 +17,12 @@ p.add_argument("--musica")
 p.add_argument("-o", "--saida", default="out/final.mp4")
 a = p.parse_args()
 if not (a.voz or a.musica):
-    sys.exit("Informe --voz e/ou --musica")
+    # modo master: só normaliza o áudio que já está no vídeo (ex.: episódio mixado no Remotion)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", a.video, "-af",
+                    f"loudnorm=I={m['targetLufs']}:TP=-1.5:LRA=11", "-c:v", "copy",
+                    "-c:a", "aac", "-b:a", "192k", "-ar", "48000", a.saida], check=True)
+    print(f"✅ {a.saida} (master {m['targetLufs']} LUFS)")
+    sys.exit(0)
 
 cmd = ["ffmpeg", "-y", "-i", a.video]
 f, idx = [], 1
