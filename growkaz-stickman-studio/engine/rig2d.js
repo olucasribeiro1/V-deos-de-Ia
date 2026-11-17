@@ -176,6 +176,10 @@ function drawHeadwear(g, o, hx, hy, r, pass) {
     case 'ponytail': { g.strokeStyle = fill(o._ink); g.lineWidth = r * 0.42; g.lineCap = 'round'; g.beginPath(); g.moveTo(hx - r * 0.7, hy - r * 0.55); g.quadraticCurveTo(hx - r * 1.7, hy - r * 0.4, hx - r * 1.45, hy + r * 0.75); g.stroke();
       if (o.headColor && !sil) seg(g, [[hx - r * 0.9, hy - r * 0.75], [hx - r * 0.8, hy - r * 0.35]], r * 0.22, o.headColor); break; }
     case 'bun': circle(g, hx - r * 0.55, hy - r * 0.95, r * 0.45, fill(o._ink)); break;
+    case 'chapeu': { g.fillStyle = fill(c); g.beginPath(); g.ellipse(hx, hy - r * 0.6, r * 1.45, r * 0.28, -0.08, 0, Math.PI * 2); g.fill(); g.beginPath(); g.moveTo(hx - r * 0.85, hy - r * 0.62); g.quadraticCurveTo(hx - r * 0.6, hy - r * 1.7, hx + r * 0.3, hy - r * 1.55); g.quadraticCurveTo(hx + r * 0.95, hy - r * 1.2, hx + r * 0.85, hy - r * 0.62); g.closePath(); g.fill();
+      if (!sil) { g.fillStyle = dark; g.fillRect(hx - r * 0.85, hy - r * 0.86, r * 1.7, r * 0.2); g.strokeStyle = o.color2 || '#e8e0c8'; g.lineWidth = r * 0.12; g.lineCap = 'round'; g.beginPath(); g.moveTo(hx - r * 0.6, hy - r * 0.95); g.quadraticCurveTo(hx - r * 1.4, hy - r * 1.9, hx - r * 0.7, hy - r * 2.2); g.stroke(); } break; }
+    case 'lenco': { g.save(); g.beginPath(); g.arc(hx, hy, r * 1.06, 0, Math.PI * 2); g.clip(); g.fillStyle = fill(c); g.fillRect(hx - r * 1.2, hy - r * 1.2, r * 2.4, r * 0.75); g.restore(); g.fillStyle = fill(c); g.beginPath(); g.moveTo(hx - r * 0.9, hy - r * 0.5); g.quadraticCurveTo(hx - r * 1.5, hy - r * 0.1, hx - r * 1.25, hy + r * 0.45); g.lineTo(hx - r * 0.75, hy - r * 0.1); g.fill(); if (!sil) seg(g, [[hx - r * 1.0, hy - r * 0.48], [hx + r * 1.0, hy - r * 0.48]], r * 0.1, dark); break; }
+    case 'elmo': { g.save(); g.beginPath(); g.arc(hx, hy, r * 1.08, Math.PI, Math.PI * 2); g.lineTo(hx + r * 1.08, hy - r * 0.15); g.lineTo(hx - r * 1.08, hy - r * 0.15); g.closePath(); g.fillStyle = fill(c); g.fill(); g.restore(); if (!sil) { seg(g, [[hx - r * 1.15, hy - r * 0.18], [hx + r * 1.15, hy - r * 0.18]], r * 0.16, dark); seg(g, [[hx, hy - r * 1.05], [hx, hy - r * 0.2]], r * 0.1, hi); seg(g, [[hx + r * 0.35, hy - r * 0.2], [hx + r * 0.42, hy + r * 0.25]], r * 0.14, fill(c)); } break; }
     case 'curly': for (let i = 0; i < 7; i++) { const a = Math.PI * (1.05 + i * 0.13); circle(g, hx + Math.cos(a) * r * 0.92, hy + Math.sin(a) * r * 0.92, r * 0.34, fill(o._ink)); } break;
     case 'spiky': g.fillStyle = fill(o._ink); g.beginPath(); for (let i = 0; i <= 6; i++) { const a = Math.PI * (1.05 + i * 0.15); const rr2 = i % 2 ? r * 1.45 : r * 0.95; g.lineTo(hx + Math.cos(a) * rr2, hy + Math.sin(a) * rr2); } g.closePath(); g.fill(); break;
   }
@@ -194,6 +198,14 @@ function torsoWear(g, o, p, pass) {
       if (!sil && o.top === 'jersey' && o.number) { g.fillStyle = o.color2 || '#fff'; g.font = '700 24px Nunito'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(o.number, (sx + hx) / 2 + 2, (sy + hy) / 2); }
       if (!sil && o.top === 'tracksuit') seg(g, [[sx + 12, sy + 2], [hx + 12, hy]], 3, o.color2 || '#ffffff');
       break; }
+    case 'tunica': case 'vestido': {   // medieval: túnica com cinto (até a coxa) / vestido longo com avental
+      const col = c, dk = sil ? o._sil : shade(o.color || '#8a5a3a', -0.28), top = sy - 7, len = o.top === 'vestido' ? 92 : 40, wid = o.top === 'vestido' ? 40 : 26;
+      g.fillStyle = col; g.beginPath(); g.moveTo(sx - 15, top + 6); g.quadraticCurveTo(sx, top - 4, sx + 15, top + 6); g.lineTo(hx + 16, hy - 4); g.lineTo(hx + wid, hy + len); g.quadraticCurveTo(hx, hy + len + 6, hx - wid, hy + len); g.lineTo(hx - 16, hy - 4); g.closePath(); g.fill();
+      if (!sil) { g.fillStyle = dk; g.fillRect(hx - 18, hy - 10, 36, 7); circle(g, hx + 3, hy - 6.5, 3.5, '#d8b04a');
+        g.strokeStyle = dk; g.lineWidth = 3; g.beginPath(); g.moveTo(sx - 9, top + 2); g.quadraticCurveTo(sx, top + 12, sx + 9, top + 2); g.stroke();
+        if (o.top === 'vestido' && o.color2) { poly(g, [[hx - 12, hy - 3], [hx + 12, hy - 3], [hx + 20, hy + len - 14], [hx - 20, hy + len - 14]], o.color2); }
+        g.strokeStyle = alpha('#000', 0.18); g.lineWidth = 2; for (const dx of [-0.5, 0.5]) { g.beginPath(); g.moveTo(hx + dx * 14, hy); g.lineTo(hx + dx * (wid + 4), hy + len - 4); g.stroke(); } }
+      break; }
     case 'labcoat': case 'trench': {
       const col = sil ? o._sil : o.top === 'labcoat' ? '#ebe7f0' : o.color || '#2c2833';
       g.fillStyle = col; g.beginPath(); g.moveTo(sx - 15, sy - 5); g.lineTo(sx + 15, sy - 5); g.lineTo(hx + 25, hy + 44); g.lineTo(hx - 23, hy + 44); g.closePath(); g.fill();
@@ -202,7 +214,7 @@ function torsoWear(g, o, p, pass) {
       break; }
   }
 }
-function sleeve(o) { if (['hoodie', 'tracksuit', 'labcoat', 'trench', 'suit'].includes(o.top)) return 'long'; if (['jersey', 'tshirt'].includes(o.top)) return 'short'; return null; }
+function sleeve(o) { if (['hoodie', 'tracksuit', 'labcoat', 'trench', 'suit', 'tunica', 'vestido'].includes(o.top)) return 'long'; if (['jersey', 'tshirt'].includes(o.top)) return 'short'; return null; }
 function sleeveColor(o, far) { const c = o.top === 'labcoat' ? '#f3f0f6' : o.top === 'trench' ? o.color || '#2c2833' : o.top === 'suit' ? o.color || '#2a2833' : o.color || '#d64a33'; return far ? shade(c, -0.3) : c; }
 
 // ---------- main draw ----------
@@ -239,6 +251,7 @@ function parts(g, o, p, of, ink, far, pass, grow = 0) {
   if (of.gloves) circle(g, p.hB[0], p.hB[1], 8.5 + grow, sil ? ink : shade(of.gloves, -0.2));
   // hair / hood behind head
   if (of.top === 'hoodie' && of.head !== 'hood') { g.fillStyle = sil ? ink : shade(of.color || '#d64a33', -0.28); g.beginPath(); g.ellipse(p.sh[0] - 9, p.sh[1] - 6, 15 + grow, 11 + grow, -0.3, 0, Math.PI * 2); g.fill(); }
+  if (of.manto && !sil) { const mc = of.manto; g.fillStyle = shade(mc, -0.2); g.beginPath(); g.moveTo(p.sh[0] - 16, p.sh[1] - 6); g.quadraticCurveTo(p.sh[0] - 30, p.hip[1], p.hip[0] - 34 + Math.sin((o.t || 0) * 3) * 4, p.hip[1] + 70); g.lineTo(p.hip[0] + 10, p.hip[1] + 66); g.lineTo(p.sh[0] + 14, p.sh[1] - 6); g.closePath(); g.fill(); seg(g, [[p.sh[0] - 14, p.sh[1] - 4], [p.sh[0] + 14, p.sh[1] - 4]], 7, mc); circle(g, p.sh[0] + 10, p.sh[1] - 2, 4, '#d8b04a'); }
   if (of.head === 'hood') { const c = of.headColor || of.color || '#d64a33'; circle(g, p.head[0] - 6, p.head[1] + 2, HR * 1.22, sil ? ink : shade(c, -0.12)); }
   if (['ponytail', 'bun'].includes(of.head)) drawHeadwear(g, of, p.head[0], p.head[1], HR, pass);
   // torso
@@ -247,6 +260,7 @@ function parts(g, o, p, of, ink, far, pass, grow = 0) {
   if (of.top && of.top !== 'none') torsoWear(g, of, p, pass);
   // near leg
   seg(g, [p.hip, p.kF, p.fF, [p.fF[0] + 13, p.fF[1]]], L, sil ? ink : of.legs || ink); foot(p.fF, sil ? ink : of.legs || ink);
+  if (of.top === 'vestido' || of.top === 'tunica') torsoWear(g, of, p, pass);
   if (!sil && ['labcoat', 'trench'].includes(of.top)) { const c = of.top === 'labcoat' ? '#ebe7f0' : of.color || '#2c2833'; poly(g, [[p.sh[0] - 4, p.sh[1] + 40], [p.hip[0] + 25, p.hip[1] + 44], [p.hip[0] - 23, p.hip[1] + 44]], c); }
   // near arm
   seg(g, [p.sh, p.eF, p.hF], A, ink); hand(p.hF, ink);

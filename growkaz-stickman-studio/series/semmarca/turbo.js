@@ -54,7 +54,7 @@ export function boneco2D(T, o = {}) { const THREE = T.THREE, W = 512, H = 768, a
   me.customDepthMaterial = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking, map: tex, alphaTest: 0.35 });
   const grp = new THREE.Group(); grp.add(me);
   // escala do rig: figura ~ 230 px de altura (s=1) -> ocupa ~85% da textura
-  grp.desenha = (opts) => { g.clearRect(0, 0, W, H); const s = (H * 0.86) / 230; drawFigure(g, { x: W / 2, y: H - 20, s, ...opts }); tex.needsUpdate = true; };
+  grp.desenha = (opts) => { g.clearRect(0, 0, W, H); const s = (H * 0.86) / 230; drawFigure(g, { x: W / 2, y: H - 20, s, ...opts }); if (opts.caixa) { const cx = W / 2 + (opts.facing ?? 1) * 4 * s, cy = H - 20 - 250 * s; g.fillStyle = '#0b0b0d'; g.fillRect(cx - 34 * s, cy - 26 * s, 68 * s, 46 * s); g.fillStyle = '#b07a44'; g.fillRect(cx - 31 * s, cy - 23 * s, 62 * s, 40 * s); g.fillStyle = '#8a5a30'; g.fillRect(cx - 31 * s, cy - 6 * s, 62 * s, 5 * s); } tex.needsUpdate = true; };
   grp.olha = (cam) => { const v = new THREE.Vector3(); cam.getWorldPosition(v); grp.rotation.y = Math.atan2(v.x - grp.position.x, v.z - grp.position.z); };
   return grp; }
 
@@ -91,3 +91,28 @@ export function terreno(T, o = {}) { const THREE = T.THREE, g = new THREE.Group(
 export function arvore(T, x, z, y, s = 1, seed = 1) { const THREE = T.THREE, g = new THREE.Group(), r = rng(seed); g.add(m(T, new THREE.CylinderGeometry(0.18 * s, 0.3 * s, 2.4 * s, 7), pbr(T, '#6a4630'), 0, 1.2 * s, 0));
   const cs = ['#3e9a3a', '#4fb446', '#2f7f30', '#5cc04f']; for (let i = 0; i < 6; i++) { const b = m(T, new THREE.IcosahedronGeometry((0.9 + r() * 0.6) * s, 1), pbr(T, cs[i % 4], { r: 0.8 }), (r() - 0.5) * 1.6 * s, (2.6 + r() * 1.4) * s, (r() - 0.5) * 1.6 * s); g.add(b); }
   g.position.set(x, y, z); return g; }
+
+// ---------- multidão viva: gente andando, conversando em pares, vendendo, parada ----------
+// specs: { tipo: 'anda'|'conversa'|'parado'|'carrega', x, z, x1 (anda), vel, frente (+1/-1 em x), outfit, fase, marca, alt }
+import { POSES, walkPose, breathe, posesAt } from '/engine/rig2d.js';
+export function multidao(T, specs) { const THREE = T.THREE, g = new THREE.Group(), gente = [];
+  const GESTOS = [POSES.talk, POSES.explain, POSES.shrug, { ...POSES.talk, eF: [26, -170], hF: [40, -210] }, POSES.crossArms, POSES.point, POSES.think];
+  specs.forEach((sp, i) => { const b = boneco2D(T, { alt: sp.alt ?? 1.75, auto: 0.12 }); b.sp = { fase: i * 1.37, vel: 1.2, ...sp }; b.position.set(sp.x, 0, sp.z); g.add(b); gente.push(b); });
+  const right = new THREE.Vector3(), fw = new THREE.Vector3();
+  // o: { congela: t (todos param e olham pro alvo), alvoX, expr (fn), extra (fn por pessoa) }
+  g.update = (t, cam, o = {}) => { cam.getWorldDirection(fw); right.crossVectors(fw, cam.up).normalize();
+    for (const b of gente) { const sp = b.sp, ph = t + sp.fase, parado = o.congela != null && t > o.congela;
+      let x = sp.x, dir = sp.frente ?? 1, pose, talk = 0, expr = sp.expr || 'neutral';
+      if (sp.tipo === 'anda' || sp.tipo === 'carrega') { const L = (sp.x1 ?? sp.x + 20) - sp.x, tt = parado ? o.congela + sp.fase : ph; const k = ((tt * sp.vel) % (2 * L) + 2 * L) % (2 * L); x = sp.x + (k < L ? k : 2 * L - k); dir = k < L ? 1 : -1; if (sp.vaiVolta === false) { x = sp.x + ((tt * sp.vel) % L); dir = 1; }
+        pose = parado ? POSES.stand : walkPose(tt * sp.vel * 1.6, {}); if (sp.tipo === 'carrega' && !parado) pose = { ...pose, eF: [14, -190], hF: [6, -238], eB: [-12, -190], hB: [-4, -238] }; expr = sp.expr || (sp.tipo === 'carrega' ? 'gloom' : 'neutral'); }
+      else if (sp.tipo === 'conversa') { const vez = Math.floor(ph / 1.9) % 2 === (sp.lado ?? 0); talk = vez && !parado ? Math.max(0, Math.sin(ph * 9)) * 0.9 : 0; const gi = Math.floor(ph / 1.3 + sp.fase) % GESTOS.length; pose = breathe(parado ? POSES.stand : (vez ? GESTOS[gi] : POSES.relaxed), t, 1, sp.fase); expr = sp.expr || (vez ? ['smile', 'joy', 'neutral', 'suspicious'][gi % 4] : 'neutral'); }
+      else pose = breathe(sp.pose || POSES.relaxed, t, 1, sp.fase);
+      if (parado && o.alvoX != null) dir = o.alvoX > x ? 1 : -1;
+      if (parado && o.expr) expr = o.expr(b, sp) || expr;
+      b.position.x = x; b.olha(cam);
+      const tela = right.x * dir; // sentido do movimento na tela
+      const extra = o.extra ? o.extra(b, sp, t) || {} : {};
+      b.desenha({ facing: tela >= 0 ? 1 : -1, outfit: sp.outfit, pose: extra.pose || pose, expr: extra.expr || expr, talk, t, marca: sp.marca, emote: extra.emote, look: extra.look, caixa: sp.tipo === 'carrega' && !parado });
+      if (sp.tipo === 'carrega') b.children[0].material.map && 0; }
+  };
+  g.gente = gente; return g; }

@@ -3,7 +3,8 @@ from build import monta, amb, DIS, ZOOM, CUT
 S = [
  ("A", 0, None, amb("hum", -34), [(("n01", 0), "carpass", -14), (("n02", "caminhão", 0), "whoosh", -8), (("n02", "pulou", 0), "impact", -2), (("n03", "ileso", 0), "ding", -12), (("n03", "estatística", 0), "hit", -10)]),
  ("B", ("n04", -0.1), {"type": "fade", "dur": 0.5}, amb("wind", -30), [(("n04", 0.2), "shimmer", -10), (("n04", "dragão", 0), "riser", -8), (("n04", "dragão", 0.6), "whoosh", -4), (("n05", "mundo", 0), "stinger", -10)]),
- ("C", ("n06", -0.2), DIS, amb("murmur", -26), [(("n06", "marca", 0), "shimmer", -10), (("n06", "decide", 0), "hit", -10)]),
+ ("C0", ("n06", -0.2), DIS, amb("murmur", -24), [(("n06", "riscos", 0), "pop", -12)]),
+ ("C", ("n06", "marca", -0.35), ZOOM, None, [(("n06", "marca", 0), "shimmer", -10), (("n06", "decide", 0), "hit", -10)]),
  ("D", ("n07", -0.12), DIS, amb("murmur", -28), [(("n07", "elite", 0), "ding", -12), (("n07", "duas", 0), "pop", -10), (("n07", "três", 0), "pop", -10)]),
  ("E", ("n08", -0.15), DIS, amb("wind", -32), [(("n08", "vermelha", 0), "whoosh", -10), (("n08", "azul", 0), "shimmer", -12), (("n09", "marrom", 0), "impact", -10), (("n09", "branca", 0), "whoosh", -8), (("n09", "estalo", -0.05), "thunder", -4), (("n09", "estalo", 0), "impact", -6)]),
  ("F", ("n10", -0.15), DIS, None, [(("n10", "dourada", 0), "shimmer", -10), (("n10", "preta", 0), "riser", -14), (("n10", "violeta", 0), "slowmo", -12)]),
@@ -16,5 +17,5 @@ S = [
  ("T", ("end", "n18", 0.7), DIS, None, [(0.05, "stinger", -8)]),
  ("Kc", ("cta", -0.45), {"type": "fade", "dur": 0.4}, None, [(0.5, "pop", -10), (1.3, "ding", -12)]),
 ]
-monta(__file__, S, "Sem Marca - Ep1 - O Vazio (v2)", sem_nums=("A", "B", "C", "D", "E", "F", "G", "I", "J", "K", "T", "Kc"), sem_hud=tuple(x[0] for x in S), sem_leg=("T", "Kc"),
+monta(__file__, S, "Sem Marca - Ep1 - O Vazio (v2)", sem_nums=("A", "B", "C0", "C", "D", "E", "F", "G", "I", "J", "K", "T", "Kc"), sem_hud=tuple(x[0] for x in S), sem_leg=("T", "Kc"),
       musica=[(0, "tension", 0.6), ("B", "mystery", 0.55), ("C", "calm", 0.45), ("E", "tension", 0.65), ("F", "mystery", 0.5), ("G", "sad", 0.45), ("H", "dark", 0.6), ("I", "tension", 0.6), ("J", "sad", 0.45), ("K", "mystery", 0.6), ("L", "dark", 0.55), ("T", "mystery", 0.5)])

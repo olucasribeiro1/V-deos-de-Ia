@@ -84,3 +84,90 @@ registerShot('I', { kind: '3d',
     if (Tg > L.n14[0] && Tg < tFo + 0.6) balao(g, 540, 560, '1 LINHA VERMELHA', pop(Tg, W('vermelha', L.n14)), '#ff8a6a');
     if (Tg > tFo - 0.1) { const [cx, cy] = proj(s, 0, 3.8, -6); chamas(g, cx, cy + 40, 1.0, Tg, 0.7 * prog(Tg, tFo - 0.1, tFo + 0.3)); }
     if (Tg > tPl - 0.1) rotulo(g, 'A PLATEIA PIRA', Tg - tPl + 0.1, 470, '#ffd23a', 92); } });
+
+// ====================== RUA 3D (C0, D, H) ======================
+import { rua3D, castelo3D, barraca, caixote } from '/series/semmarca/cidade3d.js';
+import { multidao } from '/series/semmarca/turbo.js';
+import { aldeao, GUARDA, CRIANCA } from '/series/semmarca/povo.js';
+import { rng as RNG } from '/engine/core.js';
+const CORES = ['#ff4a1a', '#2a9dff', '#b8743a', '#e8f4ff', '#ffe23a'];
+const marcaR = (r) => ({ n: 1 + Math.floor(r() * 3), cor: CORES[Math.floor(r() * 5)], brilho: 0.4 });
+function povoRua(seed, x0, x1, extra = []) { const r = RNG(seed), L = [];
+  for (let i = 0; i < 7; i++) { const x = x0 + r() * (x1 - x0 - 10); L.push({ tipo: 'anda', x, x1: x + 8 + r() * 10, z: -3.6 + r() * 2.8, vel: 0.9 + r() * 0.6, outfit: aldeao(Math.floor(r() * 8)), marca: marcaR(r), alt: 1.6 + r() * 0.25 }); }
+  for (let i = 0; i < 4; i++) { const x = x0 + 3 + r() * (x1 - x0 - 6), z = -(2.4 + r() * 1.2); L.push({ tipo: 'conversa', x, z, frente: 1, lado: 0, outfit: aldeao(Math.floor(r() * 8)), marca: marcaR(r), alt: 1.7 }); L.push({ tipo: 'conversa', x: x + 1.1, z: z + 0.1, frente: -1, lado: 1, outfit: aldeao(Math.floor(r() * 8)), marca: marcaR(r), alt: 1.65 }); }
+  return L.concat(extra); }
+const palcoDia = (T, o = {}) => palco(T, { sky: ['#0a4ad0', '#3aa8ff', '#d8f4ff'], fog: [70, 260], fogColor: '#bfe4ff', keyColor: '#fff2d8', keyIntensity: 3.4, keyPos: [-20, 30, 25], ambient: 1.1, ambientSky: '#bfe0ff', shadowSize: 22, fov: 46, foco: 8, abertura: 0.0008, bloom: 0.25, bloomLimiar: 0.94, barril: 0.08, sat: 1.15, env: 0.35, exposicao: 0.88, ...o });
+
+// C0 — a rua viva: você anda e repara nos riscos no rosto de todo mundo
+registerShot('C0', { kind: '3d',
+  init(T) { MODO.pbr = true; const st = palcoDia(T); st.add(rua3D(T, { x0: -15, x1: 70, poco: true, pocoX: 22 }));
+    const tR0 = 4.0; const mul = multidao(T, povoRua(11, -5, 40, [{ tipo: 'conversa', x: 2 + tR0 * 1.3 + 4.6, z: -1.6, frente: 1, lado: 0, outfit: aldeao(0), marca: { n: 1, cor: '#ff4a1a', brilho: 0.8 } }, { tipo: 'conversa', x: 2 + tR0 * 1.3 + 5.7, z: -1.5, frente: -1, lado: 1, outfit: aldeao(1), marca: { n: 2, cor: '#2a9dff', brilho: 0.8 } }])); st.add(mul); const eu = boneco2D(T); eu.position.set(0, 0, 0.3); st.add(eu);
+    return { stage: st, st, mul, eu, V: T.THREE.Vector3 }; },
+  draw(s, lt, info, T) { const Tg = info.globalT, L = info.L, t0 = info.shot.start, tR = W('riscos', L.n06), ex = 2 + lt * 1.3;
+    s.eu.position.x = ex; const k = clamp((Tg - tR + 0.3) / 0.8);
+    const kk = ease.inOut(k); s.st.camera.position.set(lerp(ex - 5.2, ex + 1.6, kk), lerp(2.0, 1.7, kk), lerp(1.5, 1.4, kk)); s.st.camera.lookAt(lerp(ex + 12, ex + 5.2, kk), lerp(2.0, 1.55, kk), lerp(-0.5, -1.6, kk)); s.st.camera.fov = 46; s.st.camera.updateProjectionMatrix();
+    s.mul.update(Tg, s.st.camera); s.eu.olha(s.st.camera); s.eu.desenha({ facing: 1, outfit: VC, pose: walkPose(Tg * 2.1), expr: Tg > tR ? 'suspicious' : 'nervous', look: [0.6, -0.1], t: Tg, emote: Tg > tR ? 'question' : null });
+    s.st.foco(k > 0.5 ? s.st.camera.position.distanceTo(new s.V(ex + 5, 1.6, -1.6)) : 6, 0.0008); s.st.tick(Tg); },
+  overlay(g, lt, info) { const Tg = info.globalT, L = info.L, tR = W('riscos', L.n06); if (Tg > tR - 0.1) rotulo(g, 'RISCOS NO ROSTO', Tg - tR + 0.1, 470, '#ffd23a', 92); } });
+
+// C (2D) — close da Marca e o bebê (a rua agora é o C0 em 3D)
+import { bigFace } from '/engine/rig2d.js';
+import { mist, legendaTopo } from '/series/mamae/comum.js';
+import { box as box2 } from '/series/semmarca/mundo.js';
+import { glow, seg } from '/engine/core.js';
+registerShot('C', { draw(g, t, info) { const T = info.globalT, L = info.L, tMa = W('marca', L.n06), tNa = W('nasce', L.n06), tDe = W('decide', L.n06), kN = ease.inOut(prog(T, tNa - 0.35, tNa + 0.1));
+  const M = (n, c, b = 1) => ({ n, cor: c, brilho: b });
+  const close = (g) => { g.fillStyle = '#0a2a6a'; g.fillRect(0, 0, E.W, E.H); glow(g, 540, 800, 700, '#ff6a2a', 0.3); const z = 1 + 0.05 * (T - tMa); bigFace(g, 540, 780, 300 * z, { outfit: aldeao(0), expr: 'proud', t, marca: M(1, '#ff4a1a'), rimColor: '#ff8a4a' });
+    if (T > tMa) { const a = pop(T, tMa); g.save(); g.translate(540, 1200); g.scale(a, a); text(g, 'A MARCA', 0, 0, { size: 130, color: '#ffd23a', stroke: 22, strokeColor: '#0b0b0d' }); g.restore(); } };
+  const bebe = (g) => { g.fillStyle = '#1a3a7a'; g.fillRect(0, 0, E.W, E.H); glow(g, 540, 900, 600, '#ffd27a', 0.35);
+    box2(g, 220, 1000, 640, 240, '#c8945a', 30, 8); for (let i = 0; i < 9; i++) seg(g, [[250 + i * 72, 860], [250 + i * 72, 1000]], 10, '#8a5a30'); seg(g, [[220, 860], [860, 860]], 14, '#8a5a30');
+    g.fillStyle = '#e8f0ff'; g.beginPath(); g.ellipse(540, 980, 220, 70, 0, 0, 7); g.fill(); bigFace(g, 540, 890, 120, { outfit: { kid: true }, expr: 'smile', t, marca: M(2, '#2a9dff') }); glow(g, 580, 900, 200, '#2a9dff', 0.4 + 0.2 * Math.sin(t * 6)); legendaTopo(g, 'DESDE O BERÇO', 470);
+    if (T > tDe - 0.1) { const a = pop(T, tDe); g.save(); g.translate(540, 1180); g.scale(a, a); text(g, 'DECIDE TUDO', 0, 0, { size: 104, color: '#ff4a6a', stroke: 20, strokeColor: '#0b0b0d' }); g.restore(); } };
+  mist(g, kN, close, bebe); } });
+
+// D — a hierarquia descendo a rua: portão da Academia (1 linha), ferreiro e guarda (2), carregadores (3)
+registerShot('D', { kind: '3d',
+  init(T) { MODO.pbr = true; const THREE = T.THREE; const st = palcoDia(T); st.add(rua3D(T, { x0: -10, x1: 90, poco: false, seed: 8 }));
+        const bigorna = new THREE.Group(); bigorna.add(new THREE.Mesh(new THREE.BoxGeometry(0.8, 0.5, 0.4), pbr(T, '#3a3a44', { m: 0.7, r: 0.4 }))); bigorna.children[0].position.y = 0.9; bigorna.add(m(T, new THREE.BoxGeometry(0.3, 0.7, 0.3), pbr(T, '#2a2a30'), 0, 0.35, 0)); bigorna.position.set(30, 0, -2.6); st.add(bigorna);
+    const forno = m(T, new THREE.BoxGeometry(1.6, 1.6, 1.2), new THREE.MeshStandardMaterial({ color: '#8a7a70', roughness: 0.9 }), 31.8, 0.8, -3.9); st.add(forno); const fogo = new THREE.PointLight('#ff7a2a', 10, 7, 2); fogo.position.set(31.8, 1.2, -3.0); st.add(fogo);
+    const brasa = particulas(T, { n: 120, centro: [31.4, 1.0, -3.2], ext: [1.0, 2.5, 1.0], cor: '#ff9a3a', tam: 0.08, sobe: 1.2, seed: 5 }); st.add(brasa);
+    const r = RNG(4); const L = povoRua(21, -5, 80, [
+      { tipo: 'parado', x: 6, z: -1.2, outfit: { top: 'vestido', color: '#c0283a', color2: '#ffd23a', head: 'none', manto: '#ffd23a' }, pose: { ...POSES.stand, eF: [26, -150], hF: [54, -180] }, marca: { n: 1, cor: '#ff4a1a', brilho: 1 }, expr: 'proud', alt: 1.8 },
+      { tipo: 'parado', x: 29.4, z: -2.8, outfit: aldeao(0), pose: POSES.stand, marca: { n: 2, cor: '#b8743a', brilho: 0.5 }, martelo: true, alt: 1.75 },
+      { tipo: 'parado', x: 34, z: -2.6, outfit: GUARDA, pose: POSES.stand, marca: { n: 2, cor: '#2a9dff', brilho: 0.5 }, expr: 'determined', alt: 1.8 },
+      { tipo: 'carrega', x: 56, x1: 66, z: -2.4, vel: 0.7, outfit: aldeao(4), marca: { n: 3, cor: '#e8f4ff', brilho: 0.2 } },
+      { tipo: 'carrega', x: 56, x1: 66, z: -1.2, vel: 0.6, outfit: aldeao(7), marca: { n: 3, cor: '#ffe23a', brilho: 0.2 }, fase: 3 },
+      { tipo: 'carrega', x: 57, x1: 65, z: -0.4, vel: 0.8, outfit: aldeao(2), marca: { n: 3, cor: '#b8743a', brilho: 0.2 }, fase: 6 } ]);
+    const mul = multidao(T, L); st.add(mul); return { stage: st, st, mul, brasa, fogo, V: THREE.Vector3 }; },
+  draw(s, lt, info, T) { const Tg = info.globalT, L = info.L, t0 = info.shot.start, tAc = W('academia', L.n07), t2 = W('duas', L.n07), t3 = W('três', L.n07), tNi = W('ninguém', L.n07), k = (x) => x - t0;
+    T.dolly(s.st.camera, lt, [[0, { pos: [2.2, 1.7, 1.4], look: [12, 3.5, -1.5], fov: 46 }], [k(tAc), { pos: [2.6, 1.9, 1.2], look: [40, 7, -0.5], fov: 46 }], [k(t2) - 0.3, { pos: [25, 1.8, 2.2], look: [35, 1.6, -2.4], fov: 46 }], [k(t3) - 0.3, { pos: [49, 1.9, 2.2], look: [62, 1.6, -1.2], fov: 46 }], [k(tNi), { pos: [55, 1.7, 1.6], look: [61, 1.5, -1.2], fov: 44 }], [info.dur, { pos: [56, 1.6, 1.4], look: [61, 1.5, -1.2], fov: 42 }]]);
+    s.fogo.intensity = 8 + Math.sin(Tg * 13) * 3; s.brasa.update(Tg);
+    s.mul.update(Tg, s.st.camera, { extra: (b, sp, t) => sp.martelo ? { pose: Math.sin(t * 6) > 0 ? { ...POSES.stand, eF: [24, -180], hF: [40, -220] } : { ...POSES.stand, eF: [30, -150], hF: [60, -150] }, expr: 'determined' } : null });
+    s.st.foco(6, 0.0007); s.st.tick(Tg); },
+  overlay(g, lt, info) { const Tg = info.globalT, L = info.L, t2 = W('duas', L.n07), t3 = W('três', L.n07), tNi = W('ninguém', L.n07);
+    const lab = (str, sub, c, tt, end) => { if (Tg < tt - 0.1 || Tg > end) return; const a = pop(Tg, tt); g.save(); g.translate(540, 360); g.scale(a, a); text(g, str, 0, 0, { size: 112, color: c, stroke: 20, strokeColor: '#0b0b0d' }); text(g, sub, 0, 100, { size: 50, color: '#f1efe9', stroke: 12, strokeColor: '#0b0b0d', font: FONTS.ui, weight: 900 }); g.restore(); };
+    lab('1 LINHA', 'ELITE · MAGIA MONSTRA', '#ffd23a', W('linha', L.n07), t2 - 0.2); lab('2 LINHAS', 'SOLDADO · FERREIRO', '#9fd8ff', t2, t3 - 0.2); lab('3 LINHAS', 'TRABALHO PESADO', '#ff6a6a', t3, 99);
+    if (Tg > tNi) rotulo(g, 'NINGUÉM OLHA', Tg - tNi, 640, '#f1efe9', 76); } });
+
+// H — você entra na cidade: todo mundo para, criança aponta, cochicho, guarda na lança
+registerShot('H', { kind: '3d',
+  init(T) { MODO.pbr = true; const st = palcoDia(T, { keyIntensity: 3.0, quente: 0 }); st.add(rua3D(T, { x0: -15, x1: 70, poco: true, pocoX: 30, seed: 13 }));
+    const L = povoRua(31, -2, 30, [
+      { tipo: 'parado', x: 11, z: -1.6, outfit: CRIANCA(1), pose: POSES.relaxed, alt: 1.15, crianca: true },
+      { tipo: 'conversa', x: 15, z: 1.8, frente: 1, lado: 0, outfit: aldeao(3), marca: { n: 1, cor: '#2a9dff', brilho: 0.6 }, cochicho: true },
+      { tipo: 'conversa', x: 15.9, z: 1.9, frente: -1, lado: 1, outfit: aldeao(5), marca: { n: 2, cor: '#ffe23a', brilho: 0.6 }, cochicho: true },
+      { tipo: 'parado', x: 20, z: -2.2, outfit: GUARDA, pose: POSES.stand, marca: { n: 2, cor: '#2a9dff', brilho: 0.5 }, guarda: true, alt: 1.85 } ]);
+    const mul = multidao(T, L); st.add(mul); const eu = boneco2D(T); eu.position.set(0, 0, 0.2); st.add(eu);
+    const lanca = new T.THREE.Group(); lanca.add(m(T, new T.THREE.CylinderGeometry(0.04, 0.04, 2.8, 6), pbr(T, '#6a4a2a'), 0, 1.4, 0)); lanca.add(m(T, new T.THREE.ConeGeometry(0.1, 0.4, 6), pbr(T, '#c8ccd8', { m: 0.8, r: 0.3 }), 0, 3.0, 0)); lanca.position.set(19.6, 0, -2.0); st.add(lanca);
+    return { stage: st, st, mul, eu, lanca, V: T.THREE.Vector3 }; },
+  draw(s, lt, info, T) { const Tg = info.globalT, L = info.L, t0 = info.shot.start, tPa = W('para', L.n12), tCr = W('criança', L.n12), tCo = W('cochicha', L.n12), tGu = W('guarda', L.n12), tPo = W('porque', L.n12), k = (x) => x - t0;
+    const ex = Math.min(2 + (Tg - t0) * 1.25, 2 + (tPo - t0) * 1.25); s.eu.position.x = ex;
+    T.dolly(s.st.camera, lt, [[0, { pos: [ex - 6, 2.2, 2.0], look: [ex + 10, 1.8, -0.5], fov: 48 }], [k(tCr), { pos: [8.5, 1.6, 1.4], look: [11, 1.0, -1.6], fov: 44 }], [k(tCo), { pos: [13, 1.7, -0.4], look: [15.4, 1.6, 1.9], fov: 44 }], [k(tGu), { pos: [17, 1.9, 0.6], look: [20, 2.0, -2.2], fov: 44 }], [k(tPo) - 0.1, { pos: [ex + 3.2, 1.7, 1.6], look: [ex, 1.55, 0.2], fov: 42 }], [info.dur, { pos: [ex + 2.0, 1.65, 1.0], look: [ex, 1.55, 0.2], fov: 38 }]]);
+    s.mul.update(Tg, s.st.camera, { congela: tPa, alvoX: ex, expr: (b, sp) => sp.crianca ? 'shocked' : sp.guarda ? 'suspicious' : ['disgust', 'shocked', 'suspicious', 'gulp'][Math.floor(sp.fase) % 4],
+      extra: (b, sp) => sp.crianca && Tg > tCr ? { pose: POSES.point, emote: 'exclaim', expr: 'shocked' } : sp.guarda && Tg > tGu ? { pose: { ...POSES.ready }, expr: 'angry' } : sp.cochicho && Tg > tCo ? { pose: { ...POSES.talk, eF: [20, -160], hF: [30, -196] }, expr: 'disgust' } : null });
+    s.lanca.rotation.z = Tg > tGu ? -0.5 * clamp((Tg - tGu) / 0.3) : 0;
+    s.eu.olha(s.st.camera); s.eu.desenha({ facing: 1, outfit: VC, pose: Tg < tPo ? walkPose(Tg * 2) : breathe(POSES.stand, Tg, 1, 1), expr: Tg > tPo ? 'gulp' : 'nervous', look: [0.3, -0.1], t: Tg, emote: Tg > tGu ? 'sweat' : null });
+    s.st.foco(s.st.camera.position.distanceTo(new s.V(Tg > tPo ? ex : 12, 1.5, 0)), 0.0009); s.st.tick(Tg); },
+  overlay(g, lt, info) { const Tg = info.globalT, L = info.L, tCo = W('cochicha', L.n12), tPo = W('porque', L.n12), tEx = W('existir', L.n12);
+    if (Tg > tCo && Tg < tPo) { balao(g, 330, 560, 'psiu...', pop(Tg, tCo)); balao(g, 720, 680, 'sem marca?!', pop(Tg, tCo + 0.3)); }
+    if (Tg > tPo) { g.save(); g.fillStyle = `rgba(80,0,20,${0.35 * prog(Tg, tPo, tPo + 0.6)})`; g.fillRect(0, 0, E.W, E.H); g.restore(); if (Tg > tEx - 0.2) { const a = pop(Tg, tEx); g.save(); g.translate(540, 470); g.scale(a, a); text(g, 'NÃO DEVERIA', 0, 0, { size: 96, color: '#f1efe9', stroke: 18, strokeColor: '#0b0b0d' }); text(g, 'EXISTIR', 0, 110, { size: 128, color: '#ff3a4a', stroke: 22, strokeColor: '#0b0b0d' }); g.restore(); } } } });

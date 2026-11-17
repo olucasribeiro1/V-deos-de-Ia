@@ -1,0 +1,131 @@
+{
+ "model": "eleven_v4",
+ "_nota": "PROPOSTA v2 (aguardando aprovação). 'porra' recebe bipe na mixagem.",
+ "voices": {
+  "NARRADOR": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.3,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  },
+  "DIRETOR": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "tempo": 1.12,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 1.0
+   }
+  },
+  "HUD": {
+   "id": "ZqE9vIHPcrC35dZv0Svu",
+   "tempo": 1.3,
+   "settings": {
+    "stability": 0.7,
+    "similarity_boost": 0.8,
+    "speed": 1.08
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[irônico, rápido] Você morreu salvando um gato. Sério."
+  },
+  {
+   "id": "n02",
+   "spk": "NARRADOR",
+   "gap": 0.1,
+   "text": "[rápido, tenso] O bichano tava parado no meio da avenida, o caminhão vinha voando, e você nem pensou: pulou, empurrou o gato pra calçada..."
+  },
+  {
+   "id": "n03",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[seco, irônico] O gato saiu ileso. Você... virou estatística."
+  },
+  {
+   "id": "n04",
+   "spk": "NARRADOR",
+   "gap": 0.35,
+   "text": "[maravilhado, rápido] Aí você abre o olho. Céu azul, duas luas lá em cima... e um dragão do tamanho de um prédio passa raspando na sua cabeça."
+  },
+  {
+   "id": "n04b",
+   "spk": "NARRADOR",
+   "gap": 0.05,
+   "text": "[assustado, gritando] Eita, porra!"
+  },
+  {
+   "id": "n05",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[empolgado, rápido] É, parceiro. Você foi parar em outro mundo. E na sua frente aparece uma tela, igual de videogame:"
+  },
+  {
+   "id": "n06",
+   "spk": "NARRADOR",
+   "gap": 0.1,
+   "text": "[rápido] Nível zero. Força dez, velocidade oito, inteligência doze. Matou monstro, tudo sobe. Menos uma coisa: a magia. Essa tá travada no zero."
+  },
+  {
+   "id": "n07",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido, épico] Esse mundo se chama Aldoria e tem quatro nações. No norte, os elfos: arco e cura. Nas montanhas, os anões, os melhores ferreiros que existem. No centro, o reino humano, governado pelo Rei Mago. E no sul, de onde ninguém volta... o Rei Demônio."
+  },
+  {
+   "id": "n08",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[rápido, explicando] E aqui todo mundo nasce com uma marca no rosto. Uma linha? Elite. Duas? Soldado, ferreiro. Três? Trabalho pesado, e ninguém nem olha na sua cara."
+  },
+  {
+   "id": "n09",
+   "spk": "NARRADOR",
+   "gap": 0.1,
+   "text": "[empolgado, rápido] E a cor é o elemento. Vermelha, fogo. Azul, água. Marrom, terra. Branca, vento. Amarela, raio. E a dourada, a mais rara de todas, só o próprio Rei Mago tem."
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "gap": 0.2,
+   "text": "[tenso, rápido] Aí você corre até um lago, se olha na água... e nada. Rosto liso. Nenhuma marca. Ferrou. Na cidade, todo mundo te encara: criança aponta, guarda já põe a mão na lança."
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[rápido, crescendo] Te levam pra Academia Real, pro Teste do Cristal. O garoto antes de você encosta, e o cristal pega fogo. Sua vez. Você encosta... e nada. Nem uma faísca. A sala inteira cai na gargalhada."
+  },
+  {
+   "id": "n12",
+   "spk": "NARRADOR",
+   "gap": 0.15,
+   "text": "[sério, firme] Até que o diretor bate o cajado no chão, e todo mundo cala a boca. Ele chega perto e fala baixinho, só pra você:"
+  },
+  {
+   "id": "d1",
+   "spk": "DIRETOR",
+   "gap": 0.15,
+   "text": "[sussurrando, grave] O último sem marca foi o meu irmão. Exilaram ele pro sul, pras terras do Rei Demônio. Ele nunca mais voltou."
+  },
+  {
+   "id": "n13",
+   "spk": "NARRADOR",
+   "gap": 0.3,
+   "text": "[misterioso, lento] E aí você escuta um miado. Em cima da estante, te encarando... o mesmo gato que você salvou."
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "gap": 3.2,
+   "text": "[animado] Segue a página pra ver o episódio dois!"
+  }
+ ]
+}
