@@ -17,6 +17,8 @@ export type PuppetProps = {
   upperOnly?: boolean;
   /** draw as an empty silhouette outline (vacuum left behind by a jump) */
   ghost?: {opacity: number; color: string; dash?: number};
+  /** something held in front of the chest, drawn between torso and arms (local units) */
+  heldProp?: React.ReactNode;
 };
 
 const HIP_Y = -480;
@@ -46,7 +48,7 @@ export const DEFAULT_POSE: Required<Pose> = {
   bob: 0,
 };
 
-export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, light = SUNSET_LIGHT, upperOnly, ghost}) => {
+export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, light = SUNSET_LIGHT, upperOnly, ghost, heldProp}) => {
   const p = {...DEFAULT_POSE, ...pose};
   const tid = useUid('torso');
   const tshade = useUid('tshade');
@@ -167,6 +169,7 @@ export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, lig
           </g>
         )}
 
+        {heldProp}
         {/* arms */}
         <Limb pts={[shL, elbL, wrL]} w={armW} tone={top} light={light} />
         <Limb pts={[shR, elbR, wrR]} w={armW} tone={top} light={light} />
@@ -194,7 +197,7 @@ export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, lig
 };
 
 /** Wraps a puppet in an <svg> sized in px; `height` is the on-screen height of ~1000 units. */
-export const PuppetSvg: React.FC<PuppetProps & {height: number; style?: React.CSSProperties; flip?: boolean}> = ({height, style, flip, ...rest}) => {
+export const PuppetSvg: React.FC<PuppetProps & {height: number; style?: React.CSSProperties; flip?: boolean; children?: React.ReactNode}> = ({height, style, flip, children, ...rest}) => {
   const k = height / 1000;
   return (
     <svg
@@ -205,13 +208,14 @@ export const PuppetSvg: React.FC<PuppetProps & {height: number; style?: React.CS
     >
       <g transform={flip ? 'scale(-1,1)' : undefined}>
         <Puppet {...rest} />
+        {children}
       </g>
     </svg>
   );
 };
 
 /** Positions a puppet so that its feet land on screen point (x, y). */
-export const PlacedPuppet: React.FC<PuppetProps & {x: number; y: number; height: number; flip?: boolean; blur?: number}> = ({x, y, height, blur, ...rest}) => {
+export const PlacedPuppet: React.FC<PuppetProps & {x: number; y: number; height: number; flip?: boolean; blur?: number; children?: React.ReactNode}> = ({x, y, height, blur, ...rest}) => {
   const k = height / 1000;
   return (
     <PuppetSvg

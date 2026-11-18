@@ -21,21 +21,21 @@ export type Actor = {
 export type SetProp = {kind: PropKind; x: number; z: number; seed?: number; scale?: number};
 
 export const COPA_PROPS: SetProp[] = [
-  {kind: 'palm', x: -7.5, z: 15.2, seed: 1},
-  {kind: 'palm', x: 9.5, z: 15.6, seed: 2},
-  {kind: 'palm', x: -21, z: 15.4, seed: 3},
-  {kind: 'palm', x: 24, z: 15.8, seed: 4},
-  {kind: 'palm', x: -38, z: 15.5, seed: 5},
-  {kind: 'kiosk', x: 4.6, z: 14.2},
-  {kind: 'lamp', x: -3.2, z: 14.6},
-  {kind: 'lamp', x: 14, z: 14.6},
+  {kind: 'palm', x: -4.4, z: 15.4, seed: 1, scale: 0.85},
+  {kind: 'palm', x: 7.6, z: 15.8, seed: 2, scale: 0.9},
+  {kind: 'palm', x: -13, z: 15.4, seed: 3, scale: 0.85},
+  {kind: 'palm', x: 17, z: 15.8, seed: 4, scale: 0.9},
+  {kind: 'palm', x: -26, z: 15.5, seed: 5, scale: 0.85},
+  {kind: 'kiosk', x: 3.4, z: 14.2},
+  {kind: 'lamp', x: -8.6, z: 14.6},
+  {kind: 'lamp', x: 12, z: 14.6},
   {kind: 'umbrella', x: -12, z: 28, seed: 0},
   {kind: 'umbrella', x: -4, z: 34, seed: 1},
   {kind: 'umbrella', x: 3, z: 26, seed: 2},
   {kind: 'umbrella', x: 15, z: 31, seed: 3},
   {kind: 'umbrella', x: 26, z: 27, seed: 1},
-  {kind: 'person', x: -9, z: 30, seed: 0},
-  {kind: 'person', x: 11, z: 38, seed: 0},
+  {kind: 'person', x: -6, z: 30, seed: 0},
+  {kind: 'person', x: 9, z: 38, seed: 0},
   {kind: 'person', x: 1, z: 40, seed: 0},
 ];
 
@@ -119,13 +119,14 @@ export const Copacabana: React.FC<CopacabanaProps> = ({
     return `M${out[0].sx},${hy + 2} ` + out.map((p) => `L${p.sx},${p.sy}`).join(' ') + ` L${out[out.length - 1].sx},${hy + 2} Z`;
   };
   const hillsBack = hill([
-    [-5200, 0], [-4400, 160], [-3900, 230], [-3300, 180], [-2900, 120], [-2500, 60], [-2200, 0],
+    [-1900, 0], [-1600, 120], [-1400, 170], [-1150, 140], [-950, 90], [-800, 40], [-700, 0],
   ]);
+  // Sugarloaf-like dome pair (stylised, left of the sun)
   const sugarloaf = hill([
-    [-3600, 0], [-3500, 150], [-3350, 330], [-3200, 400], [-3050, 380], [-2950, 240], [-2860, 120], [-2700, 90], [-2550, 140], [-2420, 120], [-2300, 40], [-2200, 0],
+    [-1250, 0], [-1210, 120], [-1150, 280], [-1090, 330], [-1030, 310], [-985, 200], [-950, 90], [-890, 70], [-840, 110], [-790, 95], [-740, 30], [-700, 0],
   ]);
   const hillsRight = hill([
-    [1500, 0], [1900, 90], [2400, 170], [2900, 260], [3300, 230], [3800, 300], [4500, 200], [5200, 120], [6400, 0],
+    [600, 0], [760, 70], [950, 130], [1150, 190], [1300, 170], [1500, 220], [1750, 150], [2000, 90], [2400, 0],
   ]);
 
   const seaTop = hy;

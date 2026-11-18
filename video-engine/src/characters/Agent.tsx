@@ -45,6 +45,6 @@ export const AGENT_OUTFITS: Record<AgentVariant, Outfit> = {
 type P = Omit<PuppetProps, 'outfit'> & {variant?: AgentVariant};
 export const Agent: React.FC<P> = ({variant = 'agentA', ...props}) => <Puppet outfit={AGENT_OUTFITS[variant]} {...props} />;
 export const Rocha: React.FC<Omit<P, 'variant'>> = (props) => <Agent variant="rocha" {...props} />;
-export const PlacedAgent: React.FC<P & {x: number; y: number; height: number; blur?: number; flip?: boolean}> = ({variant = 'agentA', ...props}) => (
+export const PlacedAgent: React.FC<P & {x: number; y: number; height: number; blur?: number; flip?: boolean; children?: React.ReactNode}> = ({variant = 'agentA', ...props}) => (
   <PlacedPuppet outfit={AGENT_OUTFITS[variant]} {...props} />
 );

@@ -153,7 +153,7 @@ export const Head: React.FC<{
 
   const brow = (side: -1 | 1) => {
     const bx = fx + side * 42;
-    const by = -42 - raise * 13 - (side === 1 ? asym * 12 : 0) - wide * 10;
+    const by = -42 - raise * 13 - (side === 1 ? asym * 12 : 0);
     const inner: Pt = [bx - side * 24, by - tilt * 9];
     const outer: Pt = [bx + side * 26, by + tilt * 5];
     const mid: Pt = [bx, by - 7 - Math.abs(tilt) * 2];
