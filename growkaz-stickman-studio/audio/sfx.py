@@ -287,6 +287,136 @@ def buzz(dur=1.5, seed=35, **_):
     return normalize(np.stack([x * l, x * r], 1).astype(np.float32), -6)
 
 
+# ---------- Turno da Madrugada (terror PS1): ambientes de posto e efeitos ----------
+def _grilos(n, seed, dens=1.0, dist=0.5):
+    """chirps de grilo espalhados (trens de 3-5 pulsos ~4.5 kHz)."""
+    r = rng(seed); x = np.zeros(n, np.float32); t = 0.0; dur = n / SR
+    while t < dur:
+        f = 4200 + r.random() * 700; k = int(r.integers(3, 6)); a = 0.4 + r.random() * 0.6
+        for j in range(k):
+            s = secs(t + j * 0.045); m = min(secs(0.028), n - s)
+            if m > 0: x[s:s + m] += sine(f, m) * np.sin(np.pi * np.linspace(0, 1, m)) * a
+        t += (0.35 + r.random() * 1.1) / dens
+    return lp(x, 6000 - 2500 * dist)
+
+
+@sfx("noite com grilos aqui e ali (loopable)", 6.0)
+def crickets(dur=6.0, seed=40, **_):
+    n = secs(dur); x = _grilos(n, seed, 1.0) * 0.5 + _grilos(n, seed + 7, 0.6, 0.9) * 0.3
+    x += lp(noise(n, seed + 3, "brown"), 160) * 0.35
+    return normalize(reverb(stereo(x, 0, 1.0), 1.8, 0.3, seed), -10)
+
+
+@sfx("zumbido de lâmpada fluorescente (reator 120 Hz + chiado) (loopable)", 6.0)
+def fluorescent(dur=6.0, seed=41, **_):
+    n = secs(dur); t = t_axis(n)
+    x = sum(sine(120 * h, n) * a for h, a in [(1, 0.5), (2, 0.25), (3, 0.18), (5, 0.08), (7, 0.05)])
+    x = x * (0.9 + 0.1 * np.sin(2 * np.pi * 0.7 * t)) + hp(noise(n, seed), 6000) * 0.04
+    return normalize(fade(stereo(lp(x, 2500), 0, 0.5), 0.05, 0.05), -12)
+
+
+@sfx("loja de conveniência de madrugada: geladeira + fluorescente + grilos lá fora (loopable)", 6.0)
+def conveniencia(dur=6.0, seed=42, **_):
+    n = secs(dur); t = t_axis(n)
+    fr = lp(sine(50, n) * 0.6 + sine(100, n) * 0.3 + osc("saw", 50, n) * 0.15, 300) * (0.85 + 0.15 * np.sin(2 * np.pi * 0.23 * t))
+    fl = sum(sine(120 * h, n) * a for h, a in [(1, 0.3), (2, 0.15), (3, 0.1), (5, 0.04)])
+    x = fr * 0.8 + lp(fl, 2000) * 0.35 + _grilos(n, seed, 0.5, 1.0) * 0.08 + lp(noise(n, seed + 1, "brown"), 300) * 0.2
+    return normalize(stereo(x, 0, 0.8), -12)
+
+
+@sfx("estalo e falha de lâmpada fluorescente/poste piscando", 1.2)
+def flicker(dur=1.2, seed=43, **_):
+    n = secs(dur); r = rng(seed); g = np.zeros(n, np.float32); a = 0
+    while a < n:
+        m = int(r.integers(secs(0.02), secs(0.12))); g[a:a + m] = 1.0 if r.random() < 0.55 else 0.0; a += m
+    x = (sine(120, n) * 0.5 + sine(240, n) * 0.3 + hp(noise(n, seed), 3000) * 0.3) * g
+    clicks = np.zeros(n, np.float32); idx = np.flatnonzero(np.abs(np.diff(g)) > 0)
+    for i in idx: clicks[i:i + 200] += noise(min(200, n - i), int(i)) * np.exp(-np.arange(min(200, n - i)) / 30)
+    return normalize(stereo(x + clicks * 0.8), -4)
+
+
+@sfx("cafeteira pingando (gotas + chiado de vapor)", 4.0)
+def cafeteira(dur=4.0, seed=44, **_):
+    n = secs(dur); r = rng(seed); x = hp(noise(n, seed, "pink"), 2500) * 0.05 * (0.6 + 0.4 * lp(noise(n, seed + 1), 3) * 6)
+    t = 0.1
+    while t < dur - 0.1:
+        s = secs(t); m = min(secs(0.06), n - s); f = 700 + r.random() * 500
+        x[s:s + m] += sine(f * (1 + 1.5 * np.exp(-np.arange(m) / 400)), m) * np.exp(-np.arange(m) / (SR * 0.012)) * 0.7
+        t += 0.35 + r.random() * 0.5
+    return normalize(reverb(stereo(x), 0.6, 0.15, seed), -6)
+
+
+@sfx("chiado de TV de tubo / estática + zumbido de 15 kHz", 2.0)
+def tv_static(dur=2.0, seed=45, **_):
+    n = secs(dur); x = bp(noise(n, seed), 800, 9000) * (0.7 + 0.3 * np.sign(np.sin(2 * np.pi * 60 * t_axis(n)))) + sine(15700, n) * 0.04
+    return normalize(fade(stereo(x, 0, 0.4), 0.01, 0.15), -6)
+
+
+@sfx("pancadas no vidro (3 batidas secas na porta de vidro)", 1.6)
+def glass_knock(dur=1.6, seed=46, **_):
+    n = secs(dur); x = np.zeros(n, np.float32)
+    for k, a in [(0.0, 1.0), (0.38, 0.85), (0.74, 1.0)]:
+        s = secs(k); m = min(secs(0.5), n - s); tt = t_axis(m)
+        y = _thump(m, 260, 120, 0.05, 0.5, seed + int(k * 10)) * 0.6 + sum(sine(f, m) * np.exp(-tt / 0.09) * w for f, w in [(1850, 0.3), (2930, 0.2), (4400, 0.1)])
+        x[s:s + m] += y * a
+    return normalize(reverb(stereo(x), 0.9, 0.25, seed), -1)
+
+
+@sfx("porta rangendo devagar (dobradiça)", 2.6)
+def door_creak(dur=2.6, seed=47, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); f = 180 + 140 * np.sin(np.pi * u * 1.3) + 40 * lp(noise(n, seed), 4) * 10
+    gate = 0.5 + 0.5 * np.sign(np.sin(2 * np.pi * np.cumsum(28 + 20 * u) / SR))
+    x = osc("saw", f, n) * gate * np.sin(np.pi * u) ** 0.5
+    x = bp(x, 300, 3000) + bp(noise(n, seed + 2), 1500, 4000) * 0.05
+    return normalize(reverb(stereo(x), 1.6, 0.3, seed), -3)
+
+
+@sfx("batida de carro distante: estrondo abafado + metal + eco", 4.5)
+def distant_crash(dur=4.5, seed=48, **_):
+    n = secs(dur); t = t_axis(n); x = lp(_thump(n, 90, 30, 0.7, 0.4, seed), 400) * 1.4
+    x += lp(noise(n, seed, "brown"), 300) * np.exp(-t / 0.9) * 0.8
+    r = rng(seed)
+    for k in range(8):
+        s = secs(0.05 + r.random() * 0.6); m = min(secs(0.4), n - s)
+        x[s:s + m] += lp(bp(noise(m, seed + k), 600, 2500) * np.exp(-np.arange(m) / (SR * 0.06)), 1800) * 0.25
+    return normalize(reverb(stereo(lp(x, 1500), 0, 0.6), 3.5, 0.55, seed), -1)
+
+
+@sfx("sininho de porta de loja (sino de entrada)", 1.8)
+def door_chime(dur=1.8, seed=49, **_):
+    n = secs(dur); t = t_axis(n); x = np.zeros(n, np.float32)
+    for k, f in [(0.0, 1568), (0.09, 1319), (0.2, 1568)]:
+        s = secs(k); m = n - s; tt = t_axis(m)
+        x[s:] += (sine(f, m) + sine(f * 2.76, m) * 0.25) * np.exp(-tt / 0.5) * 0.5
+    return normalize(reverb(stereo(x), 1.0, 0.2, seed), -4)
+
+
+@sfx("metal arrastando no asfalto com faíscas (passa da direita pra esquerda)", 4.0)
+def metal_drag(dur=4.0, seed=50, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); prox = np.exp(-((u - 0.45) ** 2) / 0.05)
+    x = bp(noise(n, seed), 1500, 7000) * (0.5 + 0.5 * np.abs(lp(noise(n, seed + 1), 30) * 8)) + osc("saw", 90 + 30 * lp(noise(n, seed + 2), 5) * 10, n) * 0.15
+    x = x * prox + lp(noise(n, seed + 3, "brown"), 200) * prox * 0.6
+    pan = np.clip((0.5 - u) * 2.2, -1, 1); l = np.cos((pan + 1) * np.pi / 4); r = np.sin((pan + 1) * np.pi / 4)
+    return normalize(np.stack([x * l, x * r], 1).astype(np.float32), -3)
+
+
+@sfx("motor de caminhão ligando e indo embora (diesel)", 5.0)
+def truck_leave(dur=5.0, seed=51, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); f = 32 + 18 * np.clip(u * 2.5, 0, 1) + 10 * u
+    eng = osc("saw", f, n) * (0.6 + 0.4 * np.sign(np.sin(2 * np.pi * np.cumsum(f * 0.5) / SR)))
+    x = lp(eng, 380) + lp(noise(n, seed, "brown"), 250) * 0.4
+    x *= np.minimum(1, u * 8) * (1 - u) ** 1.2
+    return normalize(reverb(stereo(x, 0.3, 0.4), 1.5, 0.2, seed), -3)
+
+
+@sfx("subgrave de tensão crescendo (drone de terror)", 6.0)
+def dread(dur=6.0, seed=52, **_):
+    n = secs(dur); u = np.linspace(0, 1, n)
+    x = osc("saw", 41 + 2 * u, n) * 0.5 + osc("saw", 41.7 + 3 * u, n) * 0.5 + sine(82, n) * 0.3
+    x = sweep_filter(x, 120, 900, q=0.9, kind="lp", curve=1.4) * (u ** 1.3) + bp(noise(n, seed), 2000, 6000) * 0.03 * u ** 3
+    return normalize(reverb(stereo(x, 0, 0.6), 2.5, 0.3, seed), -3)
+
+
 def make(name, **kw):
     if name not in LIB: raise KeyError(f"unknown sfx '{name}'. Available: {', '.join(LIB)}")
     k = {"dur": LIB[name]["dur"], **{a: b for a, b in kw.items() if b is not None}}
