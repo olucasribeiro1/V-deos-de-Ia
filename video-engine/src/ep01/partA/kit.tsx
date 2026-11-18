@@ -48,8 +48,9 @@ export const Cam2D: React.FC<{
     const o = shake(frame, sh.at, sh.dur, sh.amp, sh.seed ?? 2);
     x += o.x;
     y += o.y;
-    r += o.r * 57;
+    r += o.r * 14;
   }
+  if (shakes.length) s *= 1.04;
   let blur = 0;
   if (whip) {
     const w = 1 - kf(frame, [0, 6], [0, 1], easeOut);

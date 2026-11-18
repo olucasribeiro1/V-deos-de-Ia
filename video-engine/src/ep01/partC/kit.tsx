@@ -68,16 +68,20 @@ export const Rig: React.FC<{
   }
   const whip = (w: Whip, k: number) => {
     // k: 1 at the cut edge, 0 when settled
-    const d = 900 * k * k;
+    const d = 240 * k * k;
     if (w === 'left') x -= d;
     if (w === 'right') x += d;
     if (w === 'up') y -= d;
     if (w === 'down') y += d;
-    if (w === 'zoom') s *= 1 + 0.6 * k * k;
+    s *= 1 + (w === 'zoom' ? 0.6 : 0.5) * k * k;
     blur = Math.max(blur, 26 * k);
   };
   if (whipIn) whip(whipIn, clamp(1 - frame / 5));
   if (whipOut) whip(whipOut, clamp((frame - (dur - 4)) / 4));
+  // overscan so rotation / shake / whip never reveal the frame edge
+  const rr = (Math.abs(r) * Math.PI) / 180;
+  s *= Math.cos(rr) + (1920 / 1080) * Math.sin(rr);
+  s *= 1 + Math.min(0.3, Math.max(0, Math.abs(x) - (s - 1) * 540) / 540) + Math.min(0.2, Math.max(0, Math.abs(y) - (s - 1) * 960) / 960);
   return (
     <AbsoluteFill style={{overflow: 'hidden'}}>
       <AbsoluteFill

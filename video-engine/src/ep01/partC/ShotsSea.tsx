@@ -11,7 +11,7 @@ import {Flash, Rastro} from '../../fx/Rastro';
 import {Particles} from '../../fx/Particles';
 import {HudLabel} from '../../ui/HudLabel';
 import {Finish} from '../../scenes/common';
-import {Cam, project} from '../../lib/camera';
+import {Cam, horizonY, project} from '../../lib/camera';
 import {H, W} from '../../lib/constants';
 import {HUD_FONT} from '../../lib/fonts';
 import {clamp, easeIn, easeOut, kf, lerp, shake, wobble} from '../../lib/anim';
@@ -22,11 +22,22 @@ const T0 = 86; // seconds offset for shimmer continuity
 /** c12 — "E mar é tudo igual": split wipe Copacabana sea | mid-Atlantic sea. */
 export const SeaSame: React.FC = () => {
   const {frame, t, p} = useShot();
-  const cam: Cam = {x: 0, y: 3.2, z: 40 + p * 2.5, pitch: 16, f: 1500, cy: H * 0.5};
+  const cam: Cam = {x: 0, y: 3.2, z: 47 + p * 2.5, pitch: 12, f: 1500, cy: H * 0.5};
   const split = kf(frame, [0, 10], [W + 40, W / 2], easeOut);
   return (
     <Rig s0={1.04} s1={1.12} r0={-1} r1={1} whipIn="right">
-      <Copacabana cam={cam} t={t + T0} focus={30} aperture={3} props={[]} />
+      <Ocean cam={{...cam, z: 0}} t={t + T0 + 1.3} />
+      <Svg>
+        {(() => {
+          const hy = horizonY(cam);
+          return (
+            <g opacity={0.95}>
+              <path d={`M0,${hy + 2} L0,${hy - 30} Q60,${hy - 50} 120,${hy - 40} Q170,${hy - 130} 215,${hy - 125} Q250,${hy - 110} 262,${hy - 50} Q300,${hy - 70} 340,${hy - 40} L380,${hy + 2} Z`} fill="#8d5f7b" />
+              <path d={`M380,${hy + 2} Q430,${hy - 26} 470,${hy - 20} L540,${hy + 2} Z`} fill="#a0727a" />
+            </g>
+          );
+        })()}
+      </Svg>
       <AbsoluteFill style={{clipPath: `polygon(${split}px 0, ${W}px 0, ${W}px ${H}px, ${split}px ${H}px)`}}>
         <Ocean cam={{...cam, z: 0}} t={t + T0} />
       </AbsoluteFill>
@@ -85,7 +96,7 @@ export const FallSplash: React.FC = () => {
   const APPEAR = 1;
   const HIT = 15;
   const cam: Cam = {x: 0.2, y: 1.6 - p * 0.2, z: 0 + p * 1.2, pitch: -6, f: 1500, cy: H * 0.56};
-  const Z = 11;
+  const Z = 7.5;
   const tt = Math.max(0, (frame - APPEAR) / 30);
   const yFeet = Math.max(-1.4, 1.1 - 0.5 * 9.8 * tt * tt);
   const water = project(cam, 0, 0, Z)!;
@@ -95,9 +106,8 @@ export const FallSplash: React.FC = () => {
   const hpx = ppm * 1.75;
   const fallPose = {shL: -160, elL: -10, shR: 150, elR: 10, hipL: -12, knL: 25, hipR: 14, knR: 30, headTilt: -6};
   const rochaPose = {shL: -150, elL: 0, shR: 40, elR: 30, hipL: -10, knL: 20, hipR: 18, knR: 10};
-  const sh = shake(frame, HIT, 14, 30, 5);
   return (
-    <Rig s0={1.0} s1={1.12} x0={sh.x} x1={sh.x} y0={sh.y} y1={sh.y} impacts={[{at: HIT, amp: 26, zoom: 0.06}]} whipIn="zoom">
+    <Rig s0={1.0} s1={1.12} impacts={[{at: HIT, amp: 26, zoom: 0.06}]} whipIn="zoom">
       <Ocean
         cam={cam}
         t={t + T0}
@@ -188,7 +198,7 @@ export const Drone: React.FC = () => {
   const cam: Cam = {x: 0, y: h, z: Z - h / Math.tan((pitch * Math.PI) / 180), pitch, f: 1400, cy: H * 0.5};
   const c = project(cam, 0, 0, Z)!;
   return (
-    <Rig s0={1.0} s1={1.04} r0={-4} r1={6} whipIn="up" ease={(x) => x}>
+    <Rig s0={1.0} s1={1.04} r0={-2} r1={2} whipIn="up" ease={(x) => x}>
       <Ocean
         cam={cam}
         t={t + T0 + 3}
