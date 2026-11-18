@@ -50,7 +50,7 @@ export const TICO = { pele: '#c08a62', sombra: '#a07050', cabelo: '#2a1a12', sob
 export const TICO_PALIDO = { ...TICO, pele: '#b8a898', sombra: '#958676', labio: '#8a7a72', olheira: '#7a6a62' };
 export const ALBERTO = { pele: '#d8cfc2', sombra: '#b0a698', cabelo: null, sobr: '#8a8a88', olho: '#2a2420', bigode: '#9a9690', camisa: '#3d5a3a', xadrez: '#1f2f22', xadrez2: '#7a6a3a', calca: '#2a3448', sapato: '#2a1e16', bone: '#1f2a44', boneTras: false, larg: 1.22, barriga: 0.12, alt: 1.76, suor: true, olheira: '#8a7e78', mancha: '#c9b8a8', curativo: true, labio: '#8a6a62' };
 export const MIMICO = { ...ALBERTO, pele: '#e2b292', sombra: '#c49474', suor: false, olheira: null, mancha: null, curativo: false, olhosFixos: true, labio: '#9a4a3a' };
-export const VULTO = { vulto: true, pele: '#1a1b1f', sombra: '#141519', sobr: '#141519', olho: '#141519', camisa: '#1c1d22', calca: '#16171b', sapato: '#0e0e10', bone: null, larg: 0.85, barriga: 0, alt: 1.95 };
+export const VULTO = { vulto: true, pele: '#3a3a42', sombra: '#141519', sobr: '#141519', olho: '#141519', camisa: '#36363e', calca: '#2c2c34', sapato: '#0e0e10', bone: null, larg: 0.85, barriga: 0, alt: 1.95 };
 
 // pessoa low poly. Retorna Group com controles: rosto(nome), braco(lado, frente, abre, cotovelo), anda(fase, k), cabeca
 export function pessoa(o) {
@@ -73,7 +73,7 @@ export function pessoa(o) {
     const cot = new THREE.Group(); cot.position.y = -0.3; om.add(cot);
     const curativo = o.curativo && lado === 'D';
     cot.add(box(0.11, 0.27, 0.12, curativo ? lam('#8a1a14') : (o.vulto ? mCam : mPele), 0, -0.13, 0));
-    if (curativo) cot.add(box(0.125, 0.12, 0.135, lam('#b8a890'), 0, -0.05, 0), box(0.126, 0.05, 0.136, lam('#6a0c0a'), 0, -0.16, 0));
+    if (curativo) cot.add(box(0.13, 0.17, 0.14, lam('#8a1410'), 0, -0.1, 0), box(0.132, 0.03, 0.142, lam('#c8b898'), 0, -0.02, 0), box(0.132, 0.03, 0.142, lam('#c8b898'), 0, -0.19, 0), box(0.04, 0.09, 0.03, lam('#c8b898'), 0.05, -0.08, 0.08));
     const mao = box(0.1, 0.1, 0.08, o.vulto ? lam('#0e0e11') : mPele, 0, -0.31, 0); cot.add(mao);
     bracos[lado] = { om, cot, mao };
   }
@@ -81,7 +81,7 @@ export function pessoa(o) {
   const cab = new THREE.Group(); cab.position.y = 0.66; tronco.add(cab);
   cab.add(box(0.1, 0.08, 0.1, mPele, 0, 0.02, 0));
   let faces = null, mFace = null;
-  if (o.vulto) { cab.add(box(0.2, 0.26, 0.22, lam('#121316'), 0, 0.18, 0)); }
+  if (o.vulto) { cab.add(box(0.2, 0.26, 0.22, lam(o.pele), 0, 0.18, 0)); for (const s of [-1, 1]) cab.add(box(0.035, 0.018, 0.01, luz('#d8d4b8'), s * 0.05, 0.2, 0.112)); }
   else {
     faces = rostos({ pele: o.pele, sombra: o.sombra, cabelo: o.cabelo, sobr: o.sobr, olho: o.olho, bigode: o.bigode, suor: o.suor, olheira: o.olheira, mancha: o.mancha, olhosFixos: o.olhosFixos, labio: o.labio });
     mFace = lam('#ffffff', { map: faces.normal });
@@ -101,7 +101,7 @@ export function pessoa(o) {
   root.parado = () => { pernas[0].rotation.x = pernas[1].rotation.x = 0; corpo.position.y = 0; };
   root.respira = (T, k = 1) => { tronco.scale.y = 1 + 0.012 * k * Math.sin(T * 1.7); };
   // olha para um ponto do mundo (só a cabeça; limitado)
-  root.olhaPara = (p, lim = 0.9) => { const w = new THREE.Vector3(); root.getWorldPosition(w); const ang = Math.atan2(p[0] - w.x, p[2] - w.z) - root.rotation.y; let a = ((ang + Math.PI) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI) - Math.PI; cab.rotation.y = clamp(a, -lim, lim); const dy = p[1] - (w.y + 1.62 * S), dist = Math.hypot(p[0] - w.x, p[2] - w.z); cab.rotation.x = clamp(-Math.atan2(dy, dist), -0.5, 0.5); };
+  root.olhaPara = (p, lim = 0.9) => { const w = root.position; const ang = Math.atan2(p[0] - w.x, p[2] - w.z) - root.rotation.y; let a = ((ang + Math.PI) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI) - Math.PI; cab.rotation.y = clamp(a, -lim, lim); const dy = p[1] - (w.y + 1.62 * S), dist = Math.hypot(p[0] - w.x, p[2] - w.z); cab.rotation.x = clamp(-Math.atan2(dy, dist), -0.5, 0.5); };
   root.vira = (p) => { root.rotation.y = Math.atan2(p[0] - root.position.x, p[2] - root.position.z); };
   return root;
 }

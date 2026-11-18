@@ -56,10 +56,11 @@ export function tv() {
 
 // ---------- carro sem farol (contramão) ----------
 export function carro() {
-  const g = new THREE.Group(), lat = lam('#20262c'), vid = lam('#07090c'), pneu = lam('#0b0b0c');
+  const g = new THREE.Group(), lat = lam('#8a929c'), vid = lam('#07090c'), pneu = lam('#0b0b0c');
   g.add(box(4.2, 0.65, 1.8, lat, 0, 0.6, 0)); g.add(box(2.2, 0.55, 1.6, vid, 0.2, 1.2, 0)); g.add(box(2.0, 0.08, 1.62, lat, 0.2, 1.5, 0));
   for (const [x, z] of [[-1.3, 0.85], [1.3, 0.85], [-1.3, -0.85], [1.3, -0.85]]) { const w = cil(0.33, 0.33, 0.24, pneu, x, 0.33, z, 8); w.rotation.x = Math.PI / 2; g.add(w); }
   g.add(box(0.1, 0.12, 1.6, lam('#3a1010'), 2.1, 0.75, 0));      // lanterna apagada
+  const fl = new THREE.PointLight(new THREE.Color('#ff9a40'), 6, 6, 1.2); fl.position.set(-2.6, 0.4, 0); g.add(fl); g.faisca = fl;
   // a "coisa" presa no para-choque (vai na frente, lado -x)
   const coisa = new THREE.Group(); coisa.add(box(0.9, 0.35, 0.6, lam('#1a1512'), -2.5, 0.2, 0.1)); const b = new THREE.Mesh(new THREE.IcosahedronGeometry(0.4, 0), lam('#2a1a16')); b.position.set(-2.8, 0.25, -0.3); b.scale.set(1.3, 0.6, 1); coisa.add(b);
   coisa.add(box(0.7, 0.12, 0.18, lam('#3a2a22'), -2.9, 0.12, 0.5)); g.add(coisa);
@@ -68,7 +69,7 @@ export function carro() {
 // faíscas: pontos aditivos nascendo no para-choque (posição do carro em função do tempo)
 export function faiscas(n = 90) {
   const pos = new Float32Array(n * 3), geo = new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  const p = new THREE.Points(geo, new THREE.PointsMaterial({ color: new THREE.Color('#ffc060'), size: 2.2, sizeAttenuation: false, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, fog: false }));
+  const p = new THREE.Points(geo, new THREE.PointsMaterial({ color: new THREE.Color('#ffc060'), size: 3.2, sizeAttenuation: false, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, fog: false }));
   p.frustumCulled = false; const R = rng(5), base = []; for (let i = 0; i < n; i++) base.push([R(), R(), R(), R()]);
   // carX(t) -> posição x da frente do carro; ativo: [t0, t1]
   p.update = (T, carX, z, t0, t1) => {
@@ -100,7 +101,7 @@ export function caminhao() {
 export function batida(pos = [75, 0, -70]) {
   const g = new THREE.Group(); g.position.set(...pos);
   const sprite = tex(16, 16, (c) => { const gr = c.createRadialGradient(8, 8, 0, 8, 8, 8); gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(0.5, 'rgba(255,255,255,.5)'); gr.addColorStop(1, 'rgba(255,255,255,0)'); c.fillStyle = gr; c.fillRect(0, 0, 16, 16); });
-  const brilho = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: new THREE.Color('#ff8a2a'), blending: THREE.AdditiveBlending, fog: false, depthWrite: false, transparent: true })); brilho.scale.set(40, 22, 1); brilho.position.y = 4; g.add(brilho);
+  const brilho = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: new THREE.Color('#ff8a2a'), blending: THREE.AdditiveBlending, fog: false, depthWrite: false, transparent: true })); brilho.scale.set(70, 40, 1); brilho.position.y = 9; g.add(brilho);
   const fogo = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: new THREE.Color('#ffd070'), blending: THREE.AdditiveBlending, fog: false, depthWrite: false, transparent: true })); fogo.scale.set(8, 6, 1); fogo.position.y = 2; g.add(fogo);
   const fumaca = []; const smk = tex(16, 16, (c) => { const r = rng(3); for (let i = 0; i < 40; i++) { c.fillStyle = `rgba(${60 + r() * 30 | 0},${55 + r() * 25 | 0},${55 + r() * 20 | 0},${0.5 + r() * 0.5})`; const a = r() * 6.28, d = r() * 6; c.fillRect(8 + Math.cos(a) * d - 2 | 0, 8 + Math.sin(a) * d - 2 | 0, 4, 4); } });
   for (let i = 0; i < 9; i++) { const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: smk, color: new THREE.Color('#6a5a52'), transparent: true, fog: false, depthWrite: false })); g.add(s); fumaca.push(s); }
@@ -109,7 +110,7 @@ export function batida(pos = [75, 0, -70]) {
   g.update = (T, t0, baixa = 0) => {
     const k = T - t0; g.visible = k > 0; if (k <= 0) return;
     const flash = Math.exp(-k * 2.2), fl = 0.75 + 0.25 * noise(T * 6, 2);
-    brilho.material.opacity = clamp(0.25 + 0.75 * flash) * fl * (1 - 0.5 * baixa); brilho.scale.set(40 + 30 * flash, 20 + 16 * flash, 1);
+    brilho.material.opacity = clamp(0.25 + 0.75 * flash) * fl * (1 - 0.5 * baixa); brilho.scale.set(70 + 40 * flash, 36 + 24 * flash, 1);
     fogo.material.opacity = clamp(0.5 + flash) * fl * (1 - 0.3 * baixa); fogo.scale.set(6 + 10 * flash, 5 + 8 * flash, 1);
     fumaca.forEach((s, i) => { const ph = ((k * 0.12 + i / 9) % 1); s.position.set(Math.sin(i * 2.1) * 3 + ph * 8, 3 + ph * 30 * (1 - 0.5 * baixa), Math.cos(i * 1.7) * 3); const sc = 6 + ph * 18; s.scale.set(sc, sc, 1); s.material.opacity = clamp(k * 0.5) * Math.sin(ph * Math.PI) * 0.85 * (1 - 0.6 * baixa); s.material.color.setRGB(0.42 + 0.3 * (1 - ph) * fl, 0.36 + 0.12 * (1 - ph), 0.32); });
   };
@@ -128,18 +129,17 @@ export function posto(st, o = {}) {
   const mPar = lam('#ffffff', { map: tParede() }), mPar2 = lam('#ffffff', { map: tParede() }); mPar2.map = tParede(); mPar2.map.repeat.set(5, 1);
   const pe = pl(10, 3, mPar, -6, 1.5, 5); pe.rotation.y = Math.PI / 2; loja.add(pe);
   const pd = pl(10, 3, mPar, 6, 1.5, 5); pd.rotation.y = -Math.PI / 2; loja.add(pd);
-  const pf = pl(12, 3, mPar2, 0, 1.5, 10); pf.rotation.y = Math.PI; loja.add(pf);
+  { const a = pl(0.9, 3, lam('#ffffff', { map: tParede() }), -5.55, 1.5, 10); a.material.map.repeat.set(0.45, 1); a.rotation.y = Math.PI; loja.add(a); const b = pl(10.1, 3, mPar2, 0.95, 1.5, 10); b.rotation.y = Math.PI; loja.add(b); const c = pl(1.0, 0.8, lam('#d8d6c8'), -4.6, 2.6, 10); c.rotation.y = Math.PI; loja.add(c); }
   // fachada de vidro (z=0): montantes, faixa superior, vidro levemente azulado
   const mont = lam('#3a3e44');
-  for (const x of [-6, -4, -2, -0.55, 0.55, 2, 4, 6]) loja.add(box(0.09, 3, 0.12, mont, x, 1.5, 0));
+  for (const x of [-6, -4.6, -2.3, -0.55, 0.55, 2, 4, 6]) loja.add(box(0.09, 3, 0.12, mont, x, 1.5, 0));
   loja.add(box(12, 0.5, 0.15, lam('#2f8a7a'), 0, 2.75, 0)); loja.add(box(12, 0.1, 0.14, mont, 0, 0.05, 0)); loja.add(box(12, 0.06, 0.13, mont, 0, 1.05, 0.01));
   const vidro = luz('#9ec8d8', { transparent: true, opacity: 0.06, depthWrite: false, side: THREE.DoubleSide });
-  for (const [x, w] of [[-5, 2], [-3, 2], [-1.275, 1.45], [1.275, 1.45], [3, 2], [5, 2]]) loja.add(pl(w - 0.1, 2.5, vidro, x, 1.25, 0));
+  for (const [x, w] of [[-5.3, 1.4], [-3.45, 2.3], [-1.425, 1.75], [1.275, 1.45], [3, 2], [5, 2]]) loja.add(pl(w - 0.1, 2.5, vidro, x, 1.25, 0));
   // porta de vidro (dobradiça em x=-0.55; abre pra fora, -z)
   const porta = new THREE.Group(); porta.position.set(-0.55, 0, 0); loja.add(porta);
   porta.add(box(0.06, 2.5, 0.06, mont, 0.03, 1.25, 0), box(0.06, 2.5, 0.06, mont, 1.07, 1.25, 0), box(1.1, 0.06, 0.06, mont, 0.55, 2.5, 0), box(1.1, 0.12, 0.06, mont, 0.55, 0.06, 0), box(0.5, 0.04, 0.05, lam('#c0c4c8'), 0.55, 1.1, -0.05));
   porta.add(pl(1.0, 2.4, vidro, 0.55, 1.25, 0));
-  porta.add(pl(0.34, 0.1, luz('#e8e0b0', { map: tex(16, 4, (g) => { g.fillStyle = '#d8d0a0'; g.fillRect(0, 0, 16, 4); g.fillStyle = '#202020'; g.fillRect(2, 1, 12, 2); }) }), 0.55, 1.3, 0.02));
   M.porta = porta;
   // letreiro 24H em neon verde, pendurado no vidro
   const neon = pl(0.9, 0.36, luz('#ffffff', { map: tex(24, 10, (g) => { g.fillStyle = '#05140c'; g.fillRect(0, 0, 24, 10); g.fillStyle = '#5cff9a'; g.font = 'bold 9px monospace'; g.textBaseline = 'top'; g.fillText('24H', 3, 0); }) }), 3.0, 2.1, 0.08); loja.add(neon); M.neon = neon;
@@ -164,8 +164,14 @@ export function posto(st, o = {}) {
   for (let i = 0; i < 4; i++) { loja.add(box(0.4, 0.03, 7, lam('#c4c6c8'), -5.8, 0.3 + i * 0.4, 5.5)); const pp = pl(7, 0.34, lam('#ffffff', { map: tProdutos(90 + i), flat: false }), -5.6, 0.48 + i * 0.4, 5.5); pp.rotation.y = Math.PI / 2; pp.material.map.repeat.set(3, 1); pp.material.map.wrapS = THREE.RepeatWrapping; loja.add(pp); }
   // geladeiras no fundo (portas que brilham)
   M.geladeiras = [];
-  for (let i = 0; i < 6; i++) { const x = -1.6 + i * 1.15; loja.add(box(1.15, 2.2, 0.8, lam('#c8ccd0'), x, 1.1, 9.55)); const p = pl(1.0, 1.9, luz('#ffffff', { map: tGeladeira(30 + i) }), x, 1.12, 9.14); p.rotation.y = Math.PI; loja.add(p); loja.add(box(0.04, 0.6, 0.05, lam('#9aa0a8'), x + 0.42, 1.2, 9.1)); M.geladeiras.push(p); }
-  const pg = new THREE.PointLight(new THREE.Color('#bfe6ff'), 3, 4, 1.5); pg.position.set(1.3, 1.4, 8.4); loja.add(pg);
+  for (let i = 0; i < 4; i++) { const z = 5.9 + i * 1.05; loja.add(box(0.8, 2.2, 1.05, lam('#c8ccd0'), 5.6, 1.1, z)); const p = pl(0.92, 1.9, luz('#ffffff', { map: tGeladeira(30 + i) }), 5.19, 1.12, z); p.rotation.y = -Math.PI / 2; loja.add(p); loja.add(box(0.05, 0.6, 0.04, lam('#9aa0a8'), 5.16, 1.2, z - 0.38)); M.geladeiras.push(p); }
+  const pg = new THREE.PointLight(new THREE.Color('#bfe6ff'), 3, 4, 1.5); pg.position.set(4.4, 1.4, 7.4); loja.add(pg);
+  // fundo: prateleira de parede + cartaz
+  for (let i = 0; i < 4; i++) { loja.add(box(5.5, 0.03, 0.4, lam('#c4c6c8'), 1.6, 0.3 + i * 0.4, 9.8)); const pp = pl(5.4, 0.34, lam('#ffffff', { map: tProdutos(60 + i), flat: false }), 1.6, 0.48 + i * 0.4, 9.6); pp.rotation.y = Math.PI; pp.material.map.repeat.set(2, 1); pp.material.map.wrapS = THREE.RepeatWrapping; loja.add(pp); }
+  // ilha de bolachas (onde o Lucas repõe)
+  const ilha = new THREE.Group(); ilha.position.set(1.6, 0, 6.3); loja.add(ilha); ilha.add(box(1.2, 0.75, 0.8, lam('#2f8a7a'), 0, 0.375, 0)); ilha.add(box(1.25, 0.04, 0.85, lam('#e2c040'), 0, 0.77, 0));
+  for (let i = 0; i < 12; i++) ilha.add(box(0.22, 0.07, 0.12, lam(['#e8c040', '#d06a2a', '#3a6ad0', '#e8e0d0'][i % 4]), -0.45 + (i % 4) * 0.3, 0.83 + Math.floor(i / 8) * 0.07, -0.25 + Math.floor(i / 4) % 2 * 0.3));
+  M.ilha = ilha;
   // balcão do caixa (frente em z=1.85; atendente atrás em z~2.9)
   loja.add(box(3.2, 1.0, 0.7, lam('#2f8a7a'), 3.4, 0.5, 2.2)); loja.add(box(3.3, 0.06, 0.8, lam('#d0ccc0'), 3.4, 1.03, 2.2)); loja.add(box(3.2, 0.12, 0.05, lam('#e2c040'), 3.4, 0.8, 1.84));
   loja.add(box(0.7, 1.0, 0.7, lam('#2f8a7a'), 1.45, 0.5, 2.55));
@@ -186,11 +192,11 @@ export function posto(st, o = {}) {
   caf.add(box(0.5, 0.65, 0.4, lam('#202226'), 0, 0.37, 0)); caf.add(box(0.3, 0.06, 0.06, luz('#ff9a30'), 0, 0.55, 0.21)); caf.add(cil(0.09, 0.08, 0.16, lam('#3a2a1e', { emissive: '#1a0c04' }), 0, 0.12, 0.08, 6));
   M.gota = box(0.015, 0.03, 0.015, luz('#5a3a20'), 0, 0.2, 0.08); caf.add(M.gota);
   // prateleira de cigarros atrás do caixa
-  loja.add(box(2.2, 0.9, 0.25, lam('#2a2c30'), 3.6, 1.95, 3.85)); const cg = pl(2.1, 0.8, lam('#ffffff', { map: tProdutos(77) }), 3.6, 1.95, 3.72); cg.rotation.y = Math.PI; loja.add(cg);
+  loja.add(box(0.25, 0.7, 1.6, lam('#2a2c30'), 5.85, 2.25, 3.6)); const cg = pl(1.5, 0.6, lam('#ffffff', { map: tProdutos(77) }), 5.72, 2.25, 3.6); cg.rotation.y = -Math.PI / 2; loja.add(cg);
   // cartaz de promoção
-  const cart = pl(0.9, 0.6, lam('#ffffff', { map: tex(24, 16, (g) => { g.fillStyle = '#f2e04a'; g.fillRect(0, 0, 24, 16); g.fillStyle = '#1a1a1a'; g.font = 'bold 6px monospace'; g.textBaseline = 'top'; g.fillText('CAFÉ', 2, 1); g.fillText('+PÃO', 2, 8); }) }), 5.95, 2.2, 5.5); cart.rotation.y = -Math.PI / 2; loja.add(cart);
+  const cart = pl(0.9, 0.6, lam('#ffffff', { map: tex(24, 16, (g) => { g.fillStyle = '#f2e04a'; g.fillRect(0, 0, 24, 16); g.fillStyle = '#1a1a1a'; g.font = 'bold 6px monospace'; g.textBaseline = 'top'; g.fillText('CAFÉ', 2, 1); g.fillText('+PÃO', 2, 8); }) }), 5.95, 2.3, 2.9); cart.rotation.y = -Math.PI / 2; loja.add(cart);
   // TV no canto do teto (frente direita), virada pro meio da loja
-  const T = tv(); T.position.set(5.35, 2.42, 0.55); T.rotation.y = -2.2; T.rotation.x = -0.18; loja.add(T); M.tv = T;
+  const T = tv(); T.position.set(5.35, 2.42, 0.55); T.rotation.order = 'YXZ'; T.rotation.y = -1.14; T.rotation.x = 0.2; loja.add(T); M.tv = T;
   // porta do estoque (fundo à esquerda) + corredor escuro
   loja.add(box(1.2, 0.1, 0.12, lam('#5a5048'), -4.6, 2.25, 9.95));
   const pEst = new THREE.Group(); pEst.position.set(-5.1, 0, 9.97); loja.add(pEst);
@@ -202,7 +208,7 @@ export function posto(st, o = {}) {
   est2.add(box(0.05, 3, 6, lam('#151412'), -0.9, 1.5, 3)); est2.add(box(0.05, 3, 6, lam('#151412'), 0.9, 1.5, 3)); est2.add(box(1.8, 3, 0.05, lam('#0a0a0a'), 0, 1.5, 6)); est2.add(box(1.8, 0.05, 6, lam('#0e0e0e'), 0, 2.6, 3));
   M.estoque = est2;
   // quadro de chaves com o cadeado
-  loja.add(box(0.5, 0.4, 0.03, lam('#8a6a40'), -3.3, 1.45, 9.97)); M.cadeado = new THREE.Group(); M.cadeado.position.set(-3.3, 1.38, 9.93); loja.add(M.cadeado); M.cadeado.add(box(0.07, 0.07, 0.03, lam('#c8a83a'))); for (const dx of [-0.15, 0.13]) loja.add(box(0.03, 0.08, 0.02, lam('#c0c0c0'), -3.3 + dx, 1.5, 9.94));
+  loja.add(box(0.5, 0.4, 0.03, lam('#8a6a40'), -3.3, 1.45, 9.97)); M.cadeado = new THREE.Group(); M.cadeado.position.set(-3.3, 1.38, 9.93); loja.add(M.cadeado); M.cadeado.add(box(0.07, 0.07, 0.03, lam('#c8a83a'))); for (const dx of [-0.18, -0.06, 0.06, 0.18]) loja.add(box(0.025, 0.07, 0.02, lam('#c0c0c0'), -3.3 + dx, 1.58, 9.94));
   // lixeira, tapete, extintor
   loja.add(cil(0.2, 0.18, 0.6, lam('#3a5a3a'), 1.0, 0.3, 1.0, 6)); const tap = pl(1.6, 0.9, lam('#2a2e34'), 0, 0.01, 0.8); tap.rotation.x = -Math.PI / 2; loja.add(tap);
   loja.add(cil(0.08, 0.08, 0.45, lam('#b02a20'), -5.85, 0.6, 1.0, 6));
@@ -218,37 +224,38 @@ export function posto(st, o = {}) {
   for (const z of [-16.4, -25.6]) { const f = pl(400, 0.15, mFx, 0, 0.02, z); f.rotation.x = -Math.PI / 2; fora.add(f); }
   // guard-rail do outro lado
   for (let x = -120; x < 120; x += 4) fora.add(box(0.1, 0.6, 0.1, lam('#5a5c60'), x, 0.3, -26.6)); fora.add(box(240, 0.25, 0.06, lam('#8a8c90'), 0, 0.55, -26.6));
+  for (const x of [-22, -4, 14, 32]) { fora.add(cil(0.08, 0.1, 8, lam('#3a3c40'), x, 4, -27.2, 5)); fora.add(box(1.6, 0.08, 0.08, lam('#3a3c40'), x, 8, -26.5)); fora.add(box(0.5, 0.1, 0.25, luz('#ffcf80'), x, 7.95, -25.8)); const p = new THREE.PointLight(new THREE.Color(SODIO), 40, 16, 1.3); p.position.set(x, 7.5, -24.5); fora.add(p); }
   // calçada do posto
   fora.add(box(34, 0.15, 0.4, lam('#8a8880'), 3, 0.07, -15.8));
   // cobertura (luz de sódio amarela = a linha de segurança)
   const cob = new THREE.Group(); fora.add(cob);
   cob.add(box(16, 0.5, 9, lam('#d8d6cc'), 1, 5.3, -8)); cob.add(box(16.1, 0.7, 9.1, lam('#2f8a7a'), 1, 5.75, -8)); cob.add(box(16.12, 0.15, 9.12, lam('#e2c040'), 1, 5.45, -8));
-  for (const [x, z] of [[-6, -4.5], [8, -4.5], [-6, -11.5], [8, -11.5]]) cob.add(box(0.4, 5.1, 0.4, lam('#c8c6bc'), x, 2.55, z));
+  for (const [x, z] of [[-5, -4.5], [8, -4.5], [-5, -11.5], [8, -11.5]]) cob.add(box(0.4, 5.1, 0.4, lam('#c8c6bc'), x, 2.55, z));
   M.sodio = [];
   for (const x of [-4.5, -1, 2.5, 6]) for (const z of [-5.5, -10.5]) { const l = box(1.4, 0.05, 0.6, luz('#ffd890'), x, 5.03, z); cob.add(l); }
   for (const [x, z] of [[-3.5, -6], [3.5, -6], [-3.5, -11], [3.5, -11]]) { const p = new THREE.PointLight(new THREE.Color(SODIO), 18, 16, 1.4); p.position.set(x, 4.8, z); cob.add(p); M.sodio.push(p); }
   // bombas
-  for (const x of [-2.2, 3.8]) { cob.add(box(1.2, 0.2, 3, lam('#8a8880'), x, 0.1, -8)); for (const z of [-7.2, -8.8]) { cob.add(box(0.7, 1.6, 0.4, lam('#e8e4d8'), x, 1.0, z)); cob.add(box(0.72, 0.3, 0.42, lam('#2f8a7a'), x, 1.65, z)); const tl = pl(0.4, 0.22, luz('#90e0a0'), x, 1.2, z - 0.205); tl.rotation.y = Math.PI; cob.add(tl); const tl2 = pl(0.4, 0.22, luz('#90e0a0'), x, 1.2, z + 0.205); cob.add(tl2); cob.add(box(0.05, 0.5, 0.05, lam('#1a1a1a'), x + 0.38, 0.9, z)); } }
+  for (const x of [-4, 5.5]) { cob.add(box(1.2, 0.2, 3, lam('#8a8880'), x, 0.1, -8)); for (const z of [-7.2, -8.8]) { cob.add(box(0.7, 1.6, 0.4, lam('#e8e4d8'), x, 1.0, z)); cob.add(box(0.72, 0.3, 0.42, lam('#2f8a7a'), x, 1.65, z)); const tl = pl(0.4, 0.22, luz('#90e0a0'), x, 1.2, z - 0.205); tl.rotation.y = Math.PI; cob.add(tl); const tl2 = pl(0.4, 0.22, luz('#90e0a0'), x, 1.2, z + 0.205); cob.add(tl2); cob.add(box(0.05, 0.5, 0.05, lam('#1a1a1a'), x + 0.38, 0.9, z)); } }
   // totem de preços (sem marca real)
   const tot = new THREE.Group(); tot.position.set(13, 0, -14.5); fora.add(tot); tot.add(box(0.3, 4, 0.3, lam('#3a3c40'), 0, 2, 0)); tot.add(box(2, 2.4, 0.4, lam('#2f8a7a'), 0, 4.8, 0));
   const pr = pl(1.8, 2.2, luz('#ffffff', { map: tex(18, 22, (g) => { g.fillStyle = '#103a34'; g.fillRect(0, 0, 18, 22); g.fillStyle = '#e2c040'; g.fillRect(0, 0, 18, 6); g.fillStyle = '#103a34'; g.font = 'bold 5px monospace'; g.textBaseline = 'top'; g.fillText('POSTO', 2, 0); g.fillStyle = '#ff9a40'; g.fillRect(2, 9, 14, 4); g.fillRect(2, 15, 14, 4); }) }), 0, 4.8, -0.21); pr.rotation.y = Math.PI; tot.add(pr);
+  { const d = new THREE.Mesh(new THREE.CircleGeometry(8.5, 10), lam('#3e382c')); d.rotation.x = -Math.PI / 2; d.position.set(POSTE[0], 0.005, POSTE[1]); fora.add(d); }
   // poste que pisca (lado esquerdo, antes do mato)
   const pos = new THREE.Group(); pos.position.set(POSTE[0], 0, POSTE[1]); fora.add(pos);
-  pos.add(cil(0.1, 0.14, 7.2, lam('#4a4c50'), 0, 3.6, 0, 5)); pos.add(box(1.4, 0.1, 0.1, lam('#4a4c50'), 0.6, 7.1, 0));
-  const lampOn = luz('#ffd27a'), lampOff = lam('#2a2a2a'); const lamp = box(0.5, 0.12, 0.25, lampOn, 1.2, 7.0, 0); pos.add(lamp);
-  const spot = new THREE.SpotLight(new THREE.Color(SODIO), 120, 16, 0.62, 0.35, 1.3); spot.position.set(POSTE[0] + 1.2, 6.9, POSTE[1]); spot.target.position.set(POSTE[0] - 0.5, 0, POSTE[1]); fora.add(spot, spot.target);
-  const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex(16, 16, (c) => { const gr = c.createRadialGradient(8, 8, 0, 8, 8, 8); gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(1, 'rgba(255,255,255,0)'); c.fillStyle = gr; c.fillRect(0, 0, 16, 16); }), color: new THREE.Color('#ffb04a'), blending: THREE.AdditiveBlending, transparent: true, depthWrite: false, opacity: 0.5 })); halo.position.set(POSTE[0] + 1.2, 6.9, POSTE[1]); halo.scale.set(2.2, 2.2, 1); fora.add(halo);
-  M.poste = (k) => { lamp.material = k > 0.5 ? lampOn : lampOff; spot.intensity = 120 * k; halo.material.opacity = 0.5 * k; };
+  pos.add(cil(0.1, 0.14, 5.6, lam('#4a4c50'), 0, 2.8, 0, 5)); pos.add(box(1.4, 0.1, 0.1, lam('#4a4c50'), 0.6, 5.5, 0));
+  const lampOn = luz('#ffd27a'), lampOff = lam('#2a2a2a'); const lamp = box(0.5, 0.12, 0.25, lampOn, 1.2, 5.4, 0); pos.add(lamp);
+  const spot = new THREE.PointLight(new THREE.Color(SODIO), 40, 12, 1.1); spot.position.set(POSTE[0] + 0.6, 4.9, POSTE[1]); fora.add(spot);
+  const poca = new THREE.Mesh(new THREE.CircleGeometry(5.6, 16), luz('#ffb04a', { add: true, transparent: true, opacity: 0.55, map: tex(32, 32, (c) => { const gr = c.createRadialGradient(16, 16, 0, 16, 16, 16); gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(0.75, 'rgba(255,255,255,.55)'); gr.addColorStop(0.9, 'rgba(255,255,255,.25)'); gr.addColorStop(1, 'rgba(255,255,255,0)'); c.fillStyle = gr; c.fillRect(0, 0, 32, 32); }) })); poca.rotation.x = -Math.PI / 2; poca.position.set(POSTE[0] - 0.3, 0.03, POSTE[1]); fora.add(poca);
+  const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex(16, 16, (c) => { const gr = c.createRadialGradient(8, 8, 0, 8, 8, 8); gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(1, 'rgba(255,255,255,0)'); c.fillStyle = gr; c.fillRect(0, 0, 16, 16); }), color: new THREE.Color('#ffb04a'), blending: THREE.AdditiveBlending, transparent: true, depthWrite: false, opacity: 0.5 })); halo.position.set(POSTE[0] + 1.2, 5.35, POSTE[1]); halo.scale.set(2.2, 2.2, 1); fora.add(halo);
+  M.poste = (k) => { lamp.material = k > 0.5 ? lampOn : lampOff; spot.intensity = 40 * k; halo.material.opacity = 0.5 * k; poca.visible = k > 0.5; };
   // mato: pinheiros/árvores escuras low poly
   const mArv = [lam('#0d1a14'), lam('#0a140f'), lam('#122018')], mTr = lam('#140f0c');
-  const arv = (x, z, s) => { const g = new THREE.Group(); g.position.set(x, 0, z); g.add(cil(0.12 * s, 0.18 * s, 2 * s, mTr, 0, s, 0, 4)); for (let i = 0; i < 3; i++) { const c = new THREE.Mesh(new THREE.ConeGeometry((1.6 - i * 0.4) * s, 2.2 * s, 5), mArv[(i + (x | 0)) % 3]); c.position.y = (2 + i * 1.3) * s; c.rotation.y = R() * 3; g.add(c); } fora.add(g); };
+  const arv = (x, z, s) => { const g = new THREE.Group(); g.position.set(x, 0, z); g.add(cil(0.12 * s, 0.18 * s, 2 * s, mTr, 0, s, 0, 4)); for (let i = 0; i < 3; i++) { const c = new THREE.Mesh(new THREE.ConeGeometry((1.6 - i * 0.4) * s, 2.2 * s, 5), mArv[Math.abs(i + (x | 0)) % 3]); c.position.y = (2 + i * 1.3) * s; c.rotation.y = R() * 3; g.add(c); } fora.add(g); };
   // mato além da BR
   for (let i = 0; i < 70; i++) arv(-90 + i * 2.6 + R() * 1.5, -30 - R() * 14, 1.2 + R() * 1.2);
   // mato do lado esquerdo do posto: começa logo depois do círculo de luz do poste
-  for (let i = 0; i < 60; i++) { const a = R() * 6.28, x = -15.5 - R() * 22, z = 2 - R() * 18; arv(x, z, 1.1 + R() * 1.1); }
-  for (let i = 0; i < 12; i++) arv(-15 - R() * 0.8, 1 - i * 1.5, 1.2 + R() * 0.6);
+  for (let i = 0, n = 0; i < 400 && n < 75; i++) { const x = -13.3 - R() * 26, z = 3 - R() * 24; if (Math.hypot(x - POSTE[0], z - POSTE[1]) < 6.4 || z < -16.2) continue; arv(x, z, 1.1 + R() * 1.1); n++; }
   // lado direito, longe: campo aberto com poucas árvores (a cidade fica pra lá)
-  for (let i = 0; i < 18; i++) arv(22 + R() * 50, -2 - R() * 14 - (i % 3) * 6, 0.9 + R());
   // céu: gradiente azul-petróleo -> preto + estrelas
   const ceu = new THREE.Mesh(new THREE.SphereGeometry(220, 12, 8), new THREE.MeshBasicMaterial({ side: THREE.BackSide, fog: false, map: tex(4, 64, (g) => { const gr = g.createLinearGradient(0, 0, 0, 64); gr.addColorStop(0, '#010103'); gr.addColorStop(0.36, '#03070d'); gr.addColorStop(0.5, '#0c2230'); gr.addColorStop(0.53, '#06121a'); gr.addColorStop(1, '#020305'); g.fillStyle = gr; g.fillRect(0, 0, 4, 64); }) }));
   ceu.material.map.magFilter = THREE.LinearFilter; ceu.material.map.minFilter = THREE.LinearFilter; ceu.material.map.generateMipmaps = false; S.add(ceu);
