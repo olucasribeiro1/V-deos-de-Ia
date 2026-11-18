@@ -3,3 +3,4 @@ out/
 *.mp4
 *.mov
 .DS_Store
+public/ep01/mix.wav
