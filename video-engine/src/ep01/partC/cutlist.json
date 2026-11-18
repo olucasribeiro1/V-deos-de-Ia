@@ -1,0 +1,31 @@
+{
+  "cuts": [
+    {"id": "c01_mathFace", "line": "L17", "word": 0, "desc": "Extreme close on Davi's face, eyes narrow; chalk-blue math (v = 1.674 x cos φ) sketches around him; fast push-in, impact zoom on 'conta'"},
+    {"id": "c02_globeSpin", "line": "L17", "word": 7, "desc": "Wide: stylised globe spinning, ground-speed arrows streaming east along the surface; whip-in"},
+    {"id": "c03_twoThings", "line": "L17", "word": 11, "desc": "Globe tilts; two HUD chips pop: 1 LATITUDE (↕) and 2 LONGITUDE (↔); push-in"},
+    {"id": "c04_equator", "line": "L17", "word": 16, "desc": "Equator line ignites around the globe; push-in toward the equator"},
+    {"id": "c05_meridian", "line": "L17", "word": 21, "desc": "Whip-rotation of the globe; Rio's meridian (43° W) lights up pole to pole"},
+    {"id": "c06_rioPin", "line": "L18", "word": 1, "desc": "Detail: red pin drops on Rio, impact zoom + shake"},
+    {"id": "c07_south23", "line": "L18", "word": 6, "desc": "Angle arc sweeps from the equator down to Rio: HUD 23° S"},
+    {"id": "c08_north23", "line": "L18", "word": 9, "desc": "Mirror: arc sweeps up the same meridian to 23° N, blue pin pops; tilt up"},
+    {"id": "c09_sameLine", "line": "L18", "word": 15, "desc": "Camera tracks along the meridian from Rio to 23° N, pulse travels the line"},
+    {"id": "c10_sameSpeed", "line": "L18", "word": 19, "desc": "Two identical east arrows on both points, HUD 1.540 km/h each + 23° S = 23° N"},
+    {"id": "c11_atlantic", "line": "L19", "word": 0, "desc": "Crash zoom into the 23° N point: middle of the Atlantic, nothing but water"},
+    {"id": "c12_seaSame", "line": "L19", "word": 6, "desc": "Split screen wipe: Copacabana sea vs mid-Atlantic sea, identical horizons (RIO | 23° N)"},
+    {"id": "c13_daviSmile", "line": "L19", "word": 11, "desc": "Close: Davi looks at the sea, half smile; slow push + tilt"},
+    {"id": "c14_estalo", "line": "L20", "word": 0, "desc": "Kiosk: Rocha gripping Davi's wrist -> both vanish: Rastro, flash, shockwave, heavy shake"},
+    {"id": "c15_splash", "line": "L20", "word": 1, "desc": "Open ocean: Rastro tear in mid-air, both drop into the water, big splash"},
+    {"id": "c16_floating", "line": "L20", "word": 6, "desc": "Close at water level: the two heads bobbing, parados, glove still on the yellow wrist"},
+    {"id": "c17_drone", "line": "L20", "word": 10, "desc": "Drone pull-back straight up: two dots in an endless ocean, HUD TERRA 1.900 km"},
+    {"id": "c18_release", "line": "L20", "word": 14, "desc": "Detail: black glove lets go of the yellow sleeve over the water"},
+    {"id": "c19_swim", "line": "L20", "word": 19, "desc": "Rocha splashes to swim; Davi blinks out with a Rastro"},
+    {"id": "c20_backAcai", "line": "L21", "word": 1, "desc": "Kiosk: Rastro, Davi pops back in, açaí in hand, takes a spoonful"},
+    {"id": "c21_buoy", "line": "L21", "word": 5, "desc": "Ocean: orange ring buoy falls from the sky, plops next to Rocha"},
+    {"id": "c22_phone", "line": "L21", "word": 10, "desc": "Detail: phone in Davi's hand calling MARINHA, ringing pulses"},
+    {"id": "c23_agents", "line": "L22", "word": 0, "desc": "High angle: three suits run up to the kiosk, look around, nobody there"},
+    {"id": "c24_rochaBuoy", "line": "L22", "word": 8, "desc": "Close: Rocha in the water wearing the buoy, sunglasses crooked, furious"},
+    {"id": "c25_toss", "line": "L22", "word": 13, "desc": "Medium: Davi at the kiosk tossing a red can, smirk"},
+    {"id": "c26_canSpin", "line": "L22", "word": 17, "desc": "Final close: can spinning above his hand, Rastro zaps around it, flash"},
+    {"id": "c27_black", "abs": 101.0, "desc": "Hard cut to black"}
+  ]
+}

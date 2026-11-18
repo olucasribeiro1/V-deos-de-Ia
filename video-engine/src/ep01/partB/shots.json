@@ -1,0 +1,598 @@
+[
+ {
+  "id": "vanish",
+  "start": 34.76,
+  "end": 35.665,
+  "desc": "Calçadão, push-in rápido; Davi some no Rastro azul em \"salto\"",
+  "sfx": [
+   {
+    "t": 34.76,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 35.131,
+    "what": "zap elétrico do Rastro + sucção de ar"
+   }
+  ]
+ },
+ {
+  "id": "ghost",
+  "start": 35.665,
+  "end": 36.722,
+  "desc": "Silhueta tracejada vazia (o buraco) com colchetes de medida, push-in",
+  "sfx": [
+   {
+    "t": 35.665,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 35.715,
+    "what": "drone grave de vácuo (tom contínuo)"
+   }
+  ]
+ },
+ {
+  "id": "rush",
+  "start": 36.722,
+  "end": 37.778,
+  "desc": "Moléculas de ar começam a correr pro buraco; HUD VÁCUO 70 L",
+  "sfx": [
+   {
+    "t": 36.722,
+    "what": "whoosh lateral (whip)"
+   },
+   {
+    "t": 37.314,
+    "what": "tick de HUD + contagem"
+   },
+   {
+    "t": 36.822,
+    "what": "chiado de ar sugado"
+   }
+  ]
+ },
+ {
+  "id": "void",
+  "start": 37.778,
+  "end": 38.788,
+  "desc": "Close extremo no vazio: moléculas riscando pra dentro, push no centro escuro",
+  "sfx": [
+   {
+    "t": 37.778,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 38.15,
+    "what": "sucção crescendo (riser)"
+   }
+  ]
+ },
+ {
+  "id": "collapse",
+  "start": 38.788,
+  "end": 39.752,
+  "desc": "Moléculas batem no centro: o ar fecha o buraco (ponto de luz)",
+  "sfx": [
+   {
+    "t": 38.788,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 39.09,
+    "what": "riser rápido / sucção reversa"
+   }
+  ]
+ },
+ {
+  "id": "bang",
+  "start": 39.752,
+  "end": 40.634,
+  "desc": "ESTALO: vista alta do calçadão, ondas de choque, pombos voando, tremor forte",
+  "sfx": [
+   {
+    "t": 39.798,
+    "what": "THUNDER-CLAP / estalo seco 140 dB + sub-boom"
+   },
+   {
+    "t": 39.848,
+    "what": "revoada de pombos (asas)"
+   },
+   {
+    "t": 39.898,
+    "what": "zumbido agudo no ouvido (tinnitus) curto"
+   }
+  ]
+ },
+ {
+  "id": "glass",
+  "start": 40.634,
+  "end": 41.807,
+  "desc": "Vidro da janela do quiosque tremendo e trincando; HUD ESTALO 140 dB",
+  "sfx": [
+   {
+    "t": 40.634,
+    "what": "vidro vibrando / tilintar"
+   },
+   {
+    "t": 40.804,
+    "what": "trinca de vidro"
+   },
+   {
+    "t": 40.704,
+    "what": "tick de HUD + contagem"
+   }
+  ]
+ },
+ {
+  "id": "ear",
+  "start": 41.807,
+  "end": 43.328,
+  "desc": "Close da orelha; pistola de largada dispara pro alto ao lado; ondas entram no ouvido",
+  "sfx": [
+   {
+    "t": 41.807,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 41.981,
+    "what": "tiro (estampido de pistola de largada)"
+   },
+   {
+    "t": 42.596,
+    "what": "apito de tinnitus abafado"
+   }
+  ]
+ },
+ {
+  "id": "wave",
+  "start": 43.328,
+  "end": 44.814,
+  "desc": "Onda sonora corre pelo calçadão e atinge microfone escondido no poste (LED vermelho)",
+  "sfx": [
+   {
+    "t": 43.328,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 43.99,
+    "what": "ping de microfone (bip eletrônico)"
+   }
+  ]
+ },
+ {
+  "id": "rocha",
+  "start": 44.814,
+  "end": 46.381,
+  "desc": "Rocha surge do escuro; emblema antigo da Linha atrás; HUD A LINHA · ROCHA",
+  "sfx": [
+   {
+    "t": 44.814,
+    "what": "hit grave de tensão (tension hit)"
+   },
+   {
+    "t": 45.975,
+    "what": "tick de HUD"
+   },
+   {
+    "t": 44.914,
+    "what": "drone sombrio"
+   }
+  ]
+ },
+ {
+  "id": "mic",
+  "start": 46.381,
+  "end": 47.252,
+  "desc": "Whip-down do céu até microfone num poste, LED piscando",
+  "sfx": [
+   {
+    "t": 46.381,
+    "what": "whoosh vertical (whip)"
+   },
+   {
+    "t": 46.788,
+    "what": "ping de microfone"
+   }
+  ]
+ },
+ {
+  "id": "city",
+  "start": 47.252,
+  "end": 48.1,
+  "desc": "Mapa aéreo da cidade: dezenas de microfones acendendo, zoom-out",
+  "sfx": [
+   {
+    "t": 47.252,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 47.352,
+    "what": "pings de microfone em cascata"
+   }
+  ]
+ },
+ {
+  "id": "three",
+  "start": 48.1,
+  "end": 49.667,
+  "desc": "Tela dividida: 3 microfones em postes diferentes acendem em sequência",
+  "sfx": [
+   {
+    "t": 48.1,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 48.367,
+    "what": "ping 1"
+   },
+   {
+    "t": 48.877,
+    "what": "ping 2"
+   },
+   {
+    "t": 49.144,
+    "what": "ping 3"
+   }
+  ]
+ },
+ {
+  "id": "scope",
+  "start": 49.667,
+  "end": 50.584,
+  "desc": "Três ondas de áudio com picos deslocados; colchete Δt 0,004 s",
+  "sfx": [
+   {
+    "t": 49.667,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 49.771,
+    "what": "bips de osciloscópio"
+   },
+   {
+    "t": 50.317,
+    "what": "tick de HUD"
+   }
+  ]
+ },
+ {
+  "id": "map",
+  "start": 50.584,
+  "end": 51.408,
+  "desc": "Mapa: 3 anéis se cruzam, pino vermelho cai em \"foi\"",
+  "sfx": [
+   {
+    "t": 50.584,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 50.956,
+    "what": "impacto do pino (thud digital) + alarme curto"
+   }
+  ]
+ },
+ {
+  "id": "watch",
+  "start": 51.408,
+  "end": 52.221,
+  "desc": "Cronômetro: ponteiro vai a 2 s, zoom de impacto",
+  "sfx": [
+   {
+    "t": 51.408,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 51.458,
+    "what": "tique-taque de cronômetro"
+   },
+   {
+    "t": 51.908,
+    "what": "click de parar cronômetro"
+   }
+  ]
+ },
+ {
+  "id": "car",
+  "start": 52.221,
+  "end": 53.092,
+  "desc": "Carro escuro: Rocha olha o tablet com o pino, sorriso de canto",
+  "sfx": [
+   {
+    "t": 52.221,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 52.271,
+    "what": "motor/rua noturna abafada"
+   },
+   {
+    "t": 52.384,
+    "what": "bip de tablet"
+   }
+  ]
+ },
+ {
+  "id": "gun",
+  "start": 53.092,
+  "end": 54.555,
+  "desc": "Pistola genérica girando no escuro; X vermelho risca em \"arma\"",
+  "sfx": [
+   {
+    "t": 53.092,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 53.812,
+    "what": "risco/slash + hit grave"
+   }
+  ]
+ },
+ {
+  "id": "gloveon",
+  "start": 54.555,
+  "end": 55.6,
+  "desc": "Close: luva preta de couro sendo calçada, estalo do punho",
+  "sfx": [
+   {
+    "t": 54.555,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 54.605,
+    "what": "couro rangendo"
+   },
+   {
+    "t": 54.91,
+    "what": "estalo de couro (snap)"
+   }
+  ]
+ },
+ {
+  "id": "dossier",
+  "start": 55.6,
+  "end": 56.691,
+  "desc": "Dossiê desliza na mesa e abre: foto do Davi",
+  "sfx": [
+   {
+    "t": 55.6,
+    "what": "pasta deslizando na mesa"
+   },
+   {
+    "t": 56.192,
+    "what": "papel virando"
+   }
+  ]
+ },
+ {
+  "id": "photo",
+  "start": 56.691,
+  "end": 57.55,
+  "desc": "Close na foto: Davi segurando a lata; círculo vermelho de caneta",
+  "sfx": [
+   {
+    "t": 56.691,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 56.791,
+    "what": "caneta riscando"
+   }
+  ]
+ },
+ {
+  "id": "stamp",
+  "start": 57.55,
+  "end": 58.502,
+  "desc": "Carimbo CONFIDENCIAL bate no dossiê",
+  "sfx": [
+   {
+    "t": 57.6,
+    "what": "carimbo batendo (thump) + tremor"
+   }
+  ]
+ },
+ {
+  "id": "friday",
+  "start": 58.502,
+  "end": 59.895,
+  "desc": "Copacabana fim de tarde, grua descendo rápido; HUD SEXTA 17:40",
+  "sfx": [
+   {
+    "t": 58.502,
+    "what": "whoosh corte + ambiente praia (ondas, gente)"
+   },
+   {
+    "t": 58.802,
+    "what": "tick de HUD"
+   }
+  ]
+ },
+ {
+  "id": "acai",
+  "start": 59.895,
+  "end": 61.335,
+  "desc": "Davi no quiosque pega o açaí, sorriso",
+  "sfx": [
+   {
+    "t": 59.895,
+    "what": "whoosh lateral (whip)"
+   },
+   {
+    "t": 60.662,
+    "what": "copo entregue / colher"
+   }
+  ]
+ },
+ {
+  "id": "suit",
+  "start": 61.335,
+  "end": 62.101,
+  "desc": "Por cima do ombro do Davi: homem de terno se aproximando",
+  "sfx": [
+   {
+    "t": 61.335,
+    "what": "corte seco + passos de sapato social"
+   },
+   {
+    "t": 61.435,
+    "what": "tension hit leve"
+   }
+  ]
+ },
+ {
+  "id": "grab",
+  "start": 62.101,
+  "end": 63.437,
+  "desc": "Close: luva com polegar e dedos fecha no pulso amarelo",
+  "sfx": [
+   {
+    "t": 62.101,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 62.484,
+    "what": "couro apertando (leather squeeze) + hit"
+   }
+  ]
+ },
+ {
+  "id": "davieyes",
+  "start": 63.437,
+  "end": 64.667,
+  "desc": "Close do Davi, olhar desce pro pulso e volta; faísca azul nos olhos",
+  "sfx": [
+   {
+    "t": 63.437,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 63.831,
+    "what": "zumbido elétrico leve"
+   }
+  ]
+ },
+ {
+  "id": "imagine",
+  "start": 64.667,
+  "end": 65.422,
+  "desc": "Imaginação (cinza): Rastro abre e o cara sai disparado na horizontal",
+  "sfx": [
+   {
+    "t": 64.667,
+    "what": "zap do Rastro + whoosh enorme"
+   }
+  ]
+ },
+ {
+  "id": "fly",
+  "start": 65.422,
+  "end": 66.374,
+  "desc": "Silhueta do Rocha voando com linhas de velocidade; HUD ROCHA 2.000 km/h",
+  "sfx": [
+   {
+    "t": 65.422,
+    "what": "vento forte / jato passando"
+   },
+   {
+    "t": 65.522,
+    "what": "tick de HUD + contagem"
+   }
+  ]
+ },
+ {
+  "id": "wall",
+  "start": 66.374,
+  "end": 67.314,
+  "desc": "Silhueta bate no muro e vira parede: tijolos trincam, poeira",
+  "sfx": [
+   {
+    "t": 66.595,
+    "what": "impacto pesado no muro (crunch) + poeira"
+   },
+   {
+    "t": 66.374,
+    "what": "whoosh chegando"
+   }
+  ]
+ },
+ {
+  "id": "daviNo",
+  "start": 67.314,
+  "end": 68.499,
+  "desc": "Close do Davi franzindo, balança a cabeça: ele não mata ninguém",
+  "sfx": [
+   {
+    "t": 67.314,
+    "what": "corte seco, som volta ao normal"
+   },
+   {
+    "t": 67.697,
+    "what": "pulso grave suave"
+   }
+  ]
+ },
+ {
+  "id": "rochaKnows",
+  "start": 68.499,
+  "end": 69.683,
+  "desc": "Contra-plongée do Rocha, sorriso de canto; reflexo do Davi nos óculos",
+  "sfx": [
+   {
+    "t": 68.499,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 68.719,
+    "what": "tension hit"
+   }
+  ]
+ },
+ {
+  "id": "standoff",
+  "start": 69.683,
+  "end": 70.646,
+  "desc": "Plano dos dois parados, pulso preso: empate",
+  "sfx": [
+   {
+    "t": 69.683,
+    "what": "hit de tensão (boom grave) + silêncio"
+   }
+  ]
+ },
+ {
+  "id": "smile",
+  "start": 70.646,
+  "end": 71.552,
+  "desc": "Close do sorriso do Rocha",
+  "sfx": [
+   {
+    "t": 70.646,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 70.867,
+    "what": "risadinha / couro"
+   }
+  ]
+ },
+ {
+  "id": "three_suits",
+  "start": 71.552,
+  "end": 72.55,
+  "desc": "Câmera alta: 3 ternos atravessando o calçadão",
+  "sfx": [
+   {
+    "t": 71.552,
+    "what": "whoosh corte"
+   },
+   {
+    "t": 71.652,
+    "what": "passos sincronizados de sapatos"
+   },
+   {
+    "t": 72.04,
+    "what": "riser de tensão até o fim"
+   }
+  ]
+ }
+]
