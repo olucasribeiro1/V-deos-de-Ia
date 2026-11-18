@@ -126,7 +126,6 @@ const PolarGlobe: React.FC<{frame: number; t: number; zoom: number; spin: number
     radius={400}
     zoom={zoom}
     t={t}
-    highlightEquator={1}
     grid={0.3}
     pins={[
       {lat: -RIO.lat, lon: RIO.lon, label: 'RIO', drop: pins, pulse: (frame % 24) / 24},

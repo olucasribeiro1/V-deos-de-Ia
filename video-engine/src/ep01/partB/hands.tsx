@@ -85,12 +85,6 @@ export const Glove2: React.FC<{ax: number; ay: number; aw: number; reach: number
       <path d={`M${bx + 420},${ay - 120} q 30,120 0,250`} stroke="#2c2f36" strokeWidth={6} fill="none" opacity={0.6} />
       <rect x={bx + 190} y={ay - 122} width={52} height={256} rx={14} fill="#eef0f3" />
       <rect x={bx + 208} y={ay - 6} width={16} height={16} rx={3} fill="#c9b27a" />
-      {/* thumb (behind fingers, wraps from the lower palm) */}
-      <Finger
-        pts={chain([bx + 70, ay + 104], lerp(120, 200, grip), [lerp(96, 110, grip), lerp(80, 90, grip)], [0, lerp(10, 18, grip)])}
-        ws={[60, 52]}
-        {...LEATHER}
-      />
       {/* back of the hand with glove points */}
       <path
         d={`M${bx + 4},${ay - 104} Q${bx + 70},${ay - 132} ${bx + 210},${ay - 108} L${bx + 214},${ay + 112} Q${bx + 120},${ay + 150} ${bx + 30},${ay + 110} Q${bx - 10},${ay} ${bx + 4},${ay - 104} Z`}
@@ -102,6 +96,9 @@ export const Glove2: React.FC<{ax: number; ay: number; aw: number; reach: number
         <path key={i} d={`M${bx + 70 + i * 6},${ay + o - 20} Q ${bx + 130},${ay + o * 0.8} ${bx + 180},${ay + o * 0.6 + 10}`} stroke="#3c404b" strokeWidth={3} strokeDasharray="7 6" fill="none" />
       ))}
       <path d={`M${bx + 20},${ay - 96} Q${bx + 110},${ay - 124} ${bx + 200},${ay - 104}`} stroke={rim} strokeWidth={5} fill="none" opacity={0.6} />
+      {/* thumb: from the lower palm, wraps under the pinky */}
+      <Finger pts={chain([bx + 60, ay + 112], lerp(120, 168, grip), [lerp(90, 104, grip), lerp(76, 84, grip)], [0, lerp(8, 22, grip)])} ws={[58, 50]} {...LEATHER} />
+      <ellipse cx={bx + 60} cy={ay + 112} rx={34} ry={30} fill="#1d1e24" />
       {/* fingers: knuckle at back-of-hand left edge, wrap leftwards across the front */}
       {fy.map((y, i) => {
         const L = span * fl[i];
@@ -242,7 +239,7 @@ export const GloveOn: React.FC<{x: number; y: number; tug: number; flex: number;
       {/* suit sleeve + shirt cuff */}
       <path d={`M${x - 170},${y + 2000} L${x - 150},${y + 300} L${x + 160},${y + 300} L${x + 190},${y + 2000} Z`} fill="#2c2f36" />
       <path d={`M${x + 150},${y + 300} L${x + 180},${y + 2000}`} stroke={rim} strokeWidth={6} opacity={0.5} />
-      <rect x={x - 150} y={y + 250} width={300} height={70} rx={16} fill="#dfe3ea" />
+      <rect x={x - 132} y={y + 262} width={264} height={52} rx={14} fill="#dfe3ea" />
       {/* thumb */}
       <Finger pts={chain([x - 120, y + 20], lerp(-150, -130, flex), [90, 80], [0, lerp(12, 30, flex)])} ws={[62, 54]} {...LEATHER} hi={rim} />
       {/* back of hand + cuff of glove */}

@@ -70,7 +70,7 @@ export const Rig: React.FC<{
     const sh = shake(fr, s.at, s.dur ?? 14, s.amp ?? 22, s.at + 3);
     x += sh.x;
     y += sh.y;
-    r += sh.r * 57;
+    r += sh.r * 57 * 0.15;
   }
   return (
     <AbsoluteFill style={{overflow: 'hidden', background: bg}}>

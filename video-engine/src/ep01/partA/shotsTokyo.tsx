@@ -395,15 +395,22 @@ export const S30EmptyHand: React.FC<ShotProps> = ({d}) => {
   return (
     <Cam2D d={d} zoom={[1.0, 1.12]} origin={[700, 900]} roll={[2, -1]} whip="right">
       <TokyoStreet cam={{x: 0.2, y: 1.5, z: 3, pitch: 0, f: 1400, cy: H * 0.5}} t={t} blur={12} />
-      <PuppetSvg
+<PuppetSvg
         outfit={DAVI_OUTFIT}
         light={NEON_LIGHT}
-        height={1900}
+        height={1500}
         upperOnly
         pose={{facing: 0.35, headTilt: 10, shR: 35, elR: 105, shL: -8}}
         expr={{lookX: 0.9, lookY: 1, browTilt: 0.6, browRaise: 0.4, mouthOpen: 0.15}}
-        style={{left: 540 - 350 * 1.9 - 60, top: 1950 - 1100 * 1.9}}
+        style={{left: 330 - 525, top: 1950 - 1650}}
       />
+      {/* where the can used to be */}
+      <svg width={W} height={H} style={{position: 'absolute', overflow: 'visible', opacity: kf(frame, [4, 12], [0, 0.85])}}>
+        <g transform="translate(835,830) scale(1.05)">
+          <path d="M-60,-120 L60,-120 L60,115 L-60,115 Z" fill="none" stroke="#ff4b4b" strokeWidth={6} strokeDasharray="20 14" />
+          <text x={0} y={18} textAnchor="middle" fontFamily={HUD_FONT} fontWeight={700} fontSize={90} fill="#ff4b4b">?</text>
+        </g>
+      </svg>
       <Particles t={t} seed="a30" count={18} bokeh={10} color="255,180,230" bokehColor="255,90,200" driftX={-10} />
       <Finish vignette={0.6} />
     </Cam2D>

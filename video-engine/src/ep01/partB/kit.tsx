@@ -39,7 +39,7 @@ export const Pigeon2: React.FC<{x: number; y: number; size: number; flap: number
         </linearGradient>
       </defs>
       {flying > 0.05 && (
-        <g transform={`translate(4,-30) rotate(${ang + 12}) scale(1,${fore * 0.9})`}>
+        <g transform={`translate(4,-30) rotate(${ang + 12}) scale(0.78,${fore * 0.7})`}>
           <path d={wing} fill="#5e6678" />
         </g>
       )}
@@ -66,7 +66,7 @@ export const Pigeon2: React.FC<{x: number; y: number; size: number; flap: number
       <ellipse cx={54} cy={-56} rx={3.5} ry={2.2} fill="#f2efe8" />
       {/* near wing */}
       {flying > 0.05 && (
-        <g transform={`translate(8,-30) rotate(${ang}) scale(1,${fore})`}>
+        <g transform={`translate(8,-30) rotate(${ang}) scale(0.82,${fore * 0.8})`}>
           <path d={wing} fill="#7d879b" />
           <path d="M -20,-20 L -52,-66" stroke="#2c303b" strokeWidth={6} strokeLinecap="round" opacity={0.75} />
           <path d="M -8,-10 L -34,-50" stroke="#2c303b" strokeWidth={6} strokeLinecap="round" opacity={0.75} />

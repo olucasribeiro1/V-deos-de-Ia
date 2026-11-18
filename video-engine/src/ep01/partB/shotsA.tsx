@@ -201,7 +201,7 @@ export const SBang: React.FC<ShotP> = (p) => {
             sharp: true,
             render: ({sx, sy, ppm}) => (
               <svg width={W} height={H} style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}}>
-                <Flock frame={fr} start={B} ox={sx} oy={sy + ppm * 0.6} count={18} spread={ppm * 2.6} size={ppm * 0.6} seed="bb" speed={1.4} />
+                <Flock frame={fr} start={B} ox={sx} oy={sy + ppm * 0.6} count={16} spread={ppm * 3.4} size={ppm * 0.34} seed="bb" speed={1.4} />
               </svg>
             ),
           },
@@ -333,7 +333,7 @@ export const SEar: React.FC<ShotP> = (p) => {
             return <path key={i} d={`M ${canal.x - r * 0.7},${canal.y - r * 0.7} A ${r} ${r} 0 0 0 ${canal.x - r * 0.7},${canal.y + r * 0.7}`} stroke="#fff" strokeWidth={10 - i} fill="none" opacity={0.85 - i * 0.12} style={{filter: 'drop-shadow(0 0 10px rgba(160,220,255,0.9))'}} />;
           })}
         {/* starter pistol pointing up (left of the ear) */}
-        <g transform={`translate(${lerp(-200, 210, gunIn)},${1260}) rotate(-8)`}>
+        <g transform={`translate(${lerp(-200, 300, gunIn)},${1260}) rotate(-8)`}>
           <path d="M -40,0 L 40,0 L 50,200 L -20,210 Z" fill="#1d1e24" />
           <rect x={-46} y={-260} width={70} height={270} rx={14} fill="#2b2d34" />
           <rect x={-30} y={-420} width={40} height={180} rx={8} fill="#3a3d46" />

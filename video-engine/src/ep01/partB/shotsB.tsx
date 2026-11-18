@@ -72,8 +72,8 @@ export const SWave: React.FC<ShotP> = (p) => {
           const d2 = wall.map((q, j) => (q ? `${j ? 'L' : 'M'}${q.sx.toFixed(1)},${q.sy.toFixed(1)}` : '')).join(' ');
           return (
             <g key={i} opacity={0.9 - i * 0.25}>
-              <path d={d.replace(/^ +/, '').replace(/^L/, 'M')} stroke="#fff" strokeWidth={6 - i * 2} fill="none" />
-              <path d={d2.replace(/^ +/, '').replace(/^L/, 'M')} stroke="#bfe6ff" strokeWidth={3} fill="none" opacity={0.5} />
+              <path d={d.replace(/^ +/, '').replace(/^L/, 'M')} stroke="#fff" strokeWidth={12 - i * 3} fill="none" />
+              <path d={d2.replace(/^ +/, '').replace(/^L/, 'M')} stroke="#bfe6ff" strokeWidth={6} fill="none" opacity={0.7} />
             </g>
           );
         })}
@@ -188,7 +188,7 @@ export const SThree: React.FC<ShotP> = (p) => {
             <div style={{position: 'absolute', left: -i * 120 - 240, top: 0, width: W, height: H, transform: `scale(${push})`, transformOrigin: `${i * 120 + 240 + 180}px 950px`}}>
               <DuskCity t={t} seed={`th${i}`} hue={i * 25 - 20} offset={i * 60} />
               <svg width={W} height={H} style={{position: 'absolute'}}>
-                <PoleWithMic x={i * 120 + 240 + 270} topY={200 + i * 90} micY={860 + i * 40} scale={1.05} led={led} ping={ping(fr, at[i], 14)} arm={i !== 1} />
+                <PoleWithMic x={i * 120 + 240 + 300} topY={200 + i * 90} micY={860 + i * 40} scale={0.9} led={led} ping={ping(fr, at[i], 14)} arm={i !== 1} />
               </svg>
               {fr >= at[i] && <AbsoluteFill style={{background: `rgba(255,70,70,${0.25 * (1 - ping(fr, at[i], 10))})`, mixBlendMode: 'screen'}} />}
             </div>
@@ -362,18 +362,19 @@ export const SCar: React.FC<ShotP> = (p) => (
 export const SGun: React.FC<ShotP> = (p) => {
   const fr = useCurrentFrame();
   const X = ev(p, 'L13', 4);
-  const spin = Math.cos(fr * 0.09 + 0.4);
+  const spin = 0.8 + 0.2 * Math.cos(fr * 0.12);
   const s1 = kf(fr, [X, X + 3], [0, 1], easeOut);
   const s2 = kf(fr, [X + 3, X + 6], [0, 1], easeOut);
   return (
     <Rig dur={p.dur} zoom={[1.0, 1.12]} origin={[540, 960]} punches={[{at: X, amt: 0.12}]} shakes={[{at: X, dur: 12, amp: 22}]} rot={[2, -1]}>
-      <AbsoluteFill style={{background: 'radial-gradient(ellipse 55% 35% at 50% 50%, #3a3f4c 0%, #101218 55%, #050608 100%)'}} />
+      <AbsoluteFill style={{background: 'radial-gradient(ellipse 55% 35% at 50% 50%, #5a6070 0%, #15171e 55%, #050608 100%)'}} />
       <svg width={W} height={H} style={{position: 'absolute', filter: `brightness(${fr >= X ? 0.55 : 1})`}}>
         <ellipse cx={540} cy={1240} rx={360} ry={50} fill="#000" opacity={0.5} />
-        <g transform={`translate(540,960) scale(${0.35 + 0.65 * Math.abs(spin)},1) scale(${spin < 0 ? -1 : 1},1)`}>
-          <path d="M -330,-120 L 300,-120 Q 330,-120 330,-90 L 330,-30 L -100,-30 L -110,10 Q -60,60 -60,80 L -90,90 L -150,10 L -170,-30 L -330,-30 Z" fill="#2a2d35" />
-          <path d="M -170,-30 L -100,-30 L -60,260 Q -60,290 -100,290 L -220,290 Q -250,290 -245,260 Z" fill="#1d1f25" />
-          <path d="M -330,-120 L 300,-120 L 300,-100 L -330,-100 Z" fill="#7b808d" />
+        <g transform={`translate(540,960) scale(${spin},1) rotate(${-4 + fr * 0.15})`}>
+          <path d="M -330,-120 L 300,-120 Q 330,-120 330,-90 L 330,-30 L -100,-30 L -110,10 Q -60,60 -60,80 L -90,90 L -150,10 L -170,-30 L -330,-30 Z" fill="#5a5f6b" stroke="#a9b0bf" strokeWidth={4} />
+          <path d="M -170,-30 L -100,-30 L -60,260 Q -60,290 -100,290 L -220,290 Q -250,290 -245,260 Z" fill="#3a3d46" stroke="#8a90a0" strokeWidth={4} />
+          <path d="M -330,-120 L 300,-120 L 300,-100 L -330,-100 Z" fill="#c9cfdb" />
+          <rect x={250} y={-112} width={60} height={70} fill="#2a2d35" />
           {Array.from({length: 6}).map((_, i) => (
             <line key={i} x1={-220 + i * 18} y1={0} x2={-200 + i * 18} y2={260} stroke="#0d0e12" strokeWidth={5} />
           ))}
@@ -477,13 +478,13 @@ const Dossier: React.FC<{open: number; slide: number; stamp?: number; canPhoto?:
             <DaviPhoto x={340} y={1180} w={300} rot={4} can circle={1} />
           </g>
           {/* cover */}
-          <g transform={`translate(540,0) scale(${1 - fold * 2},1) translate(-540,0)`}>
-            <rect x={540} y={540} width={450} height={860} rx={8} fill={fold > 0.5 ? '#c9a462' : '#e2c181'} />
+          <g transform={`translate(90,0) scale(${1 - fold * 2.1},1) translate(-90,0)`}>
+            <rect x={90} y={540} width={900} height={860} rx={8} fill={fold > 0.5 ? '#c9a462' : '#e2c181'} />
             <rect x={840} y={500} width={140} height={50} rx={8} fill="#e2c181" />
             {fold < 0.5 && (
               <g>
-                <LinhaEmblemSmall x={765} y={900} />
-                <text x={765} y={1060} textAnchor="middle" fontFamily={HUD_FONT} fontWeight={700} fontSize={34} fill="#5a3f1c" letterSpacing={6}>
+                <LinhaEmblemSmall x={540} y={900} />
+                <text x={540} y={1060} textAnchor="middle" fontFamily={HUD_FONT} fontWeight={700} fontSize={34} fill="#5a3f1c" letterSpacing={6}>
                   DOSSIÊ 07
                 </text>
               </g>
@@ -515,7 +516,7 @@ const LinhaEmblemSmall: React.FC<{x: number; y: number}> = ({x, y}) => (
 export const SDossier: React.FC<ShotP> = (p) => {
   const fr = useCurrentFrame();
   const slide = kf(fr, [0, 8], [1, 0], easeOut);
-  const open = kf(fr, [8, 18], [0, 1], easeOut);
+  const open = kf(fr, [6, 14], [0, 1], easeOut);
   return (
     <Rig dur={p.dur} zoom={[1.02, 1.2]} rot={[-3, 0]} origin={[400, 900]}>
       <Dossier slide={slide} open={open} />

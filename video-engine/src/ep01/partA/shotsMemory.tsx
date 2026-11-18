@@ -81,7 +81,7 @@ export const S07Bridge: React.FC<ShotProps> = ({d}) => {
         light={DUSK_LIGHT}
         x={kidX + slip * 120}
         y={deckY - 150 + slip * 140}
-        height={330}
+        height={430}
         pose={{
           lean: 6 + slip * 40,
           shL: -120 + flail * 30,
@@ -315,7 +315,7 @@ export const S11Bed: React.FC<ShotProps> = ({start, d}) => {
         })}
       </svg>
       <BedFront />
-      <Rastro x={520} y={1640} height={1100} life={kf(frame, [0, 18], [0.12, 0.99], (x) => x)} frame={frame} seed="a11" />
+      <Rastro x={520} y={1640} height={1100} life={kf(frame, [0, 10], [0.2, 0.99], (x) => x)} frame={frame} seed="a11" />
       <Flash k={kf(frame, [0, 1, 5], [0, 0.6, 0], (x) => x)} />
       <MemoryGrade frame={frame} />
       <Finish vignette={0.6} grain={0.18} />

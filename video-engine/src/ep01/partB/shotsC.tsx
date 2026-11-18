@@ -487,7 +487,7 @@ export const SThreeSuits: React.FC<ShotP> = (p) => {
   const fr = useCurrentFrame();
   const t = abs(p, fr);
   const k = easeOut(clamp(fr / p.dur));
-  const cam: Cam = {x: 0.6, y: lerp(9, 7, k), z: lerp(-2, 0.5, k), pitch: lerp(30, 26, k), f: 1500, cy: H * 0.5};
+  const cam: Cam = {x: 0.6, y: lerp(6.5, 5, k), z: lerp(4, 6, k), pitch: lerp(30, 24, k), f: 1500, cy: H * 0.5};
   const zz = lerp(15.2, 13.6, clamp(fr / p.dur));
   const suits: {v: AgentVariant; x: number; dz: number; ph: number}[] = [
     {v: 'agentA', x: -1.6, dz: 0.4, ph: 0},
