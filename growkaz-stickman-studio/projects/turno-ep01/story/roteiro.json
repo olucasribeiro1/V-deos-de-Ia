@@ -1,7 +1,54 @@
 {
  "model": "eleven_v4",
  "_nota": "Turno da Madrugada Ep1. Timeline ESTIMADA (sem voz ainda).",
- "voices": {},
+ "voices": {
+  "LUCAS": {
+   "id": "IKne3meq5aSn9XLyUdCD",
+   "tempo": 1.0,
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.8,
+    "speed": 0.95
+   }
+  },
+  "TICO": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tempo": 1.08,
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  },
+  "TICO_FALSO": {
+   "id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tempo": 1.08,
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.8,
+    "speed": 1.05
+   }
+  },
+  "ALBERTO": {
+   "id": "vCoCktSILN9EF9KwhL6O",
+   "tempo": 1.0,
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "speed": 0.95
+   }
+  },
+  "TV": {
+   "model": "eleven_multilingual_v2",
+   "id": "HoWXGRJgqYolkEBcxmGm",
+   "tempo": 1.05,
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.8,
+    "speed": 1.0
+   }
+  }
+ },
  "lines": [
   {
    "id": "l01",
@@ -49,7 +96,8 @@
    "id": "tv1",
    "spk": "TV",
    "gap": 0.7,
-   "text": "Alerta do Ministério da Saúde. Surtos de agressividade e febre alta na região metropolitana. Evitem contato físico. Permaneçam em locais fechados."
+   "text": "Alerta do Ministério da Saúde. Surtos de agressividade e febre alta na região metropolitana. Evitem contato físico. Permaneçam em locais fechados.",
+   "fx": "radio"
   },
   {
    "id": "t04",
@@ -115,7 +163,7 @@
    "id": "a03",
    "spk": "ALBERTO",
    "gap": 0.5,
-   "text": "[voz idêntica, sorrindo] Me vê um café, filho. Um louco tentou abrir a porta do caminhão no pedágio. Me mordeu, acredita?"
+   "text": "[ofegante, cansado] Me vê um café, filho. Um louco tentou abrir a porta do caminhão no pedágio. Me mordeu, acredita?"
   },
   {
    "id": "l10",
@@ -137,9 +185,20 @@
   },
   {
    "id": "t08",
-   "spk": "TICO_FALSO",
+   "spk": "TICO",
    "gap": 0.6,
-   "text": "[voz perfeita, calma] Coxinha que passa da meia-noite é perda, Lucas."
+   "text": "[de boca cheia, brincalhão] Coxinha que passa da meia-noite é perda, Lucas. Eu tô salvando a empresa.",
+   "cut_end": 1.41,
+   "caption": [
+    "Coxinha",
+    "que",
+    "passa",
+    "da",
+    "meia-noite",
+    "é",
+    "perda,",
+    "Lucas."
+   ]
   },
   {
    "id": "l12",
