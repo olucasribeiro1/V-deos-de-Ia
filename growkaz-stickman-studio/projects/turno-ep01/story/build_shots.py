@@ -58,9 +58,9 @@ S = [
     (("t08", 0), "dread", -18),
     (("l12", "tico", 0), "heartbeat", -12),
     (("l12", "lado", 0), "heartbeat", -10),
-    (("end", "l12", 0.0), "door_creak", -6),
-    (("end", "l12", 0.4), "riser", -12)]),
- ("T", ("end", "l12", 1.0), CUT, None, [(0.45, "flicker", -12), (0.95, "impact", -14)]),
+    (("end", "l12", 0.15), "door_creak", -6),
+    (("end", "l12", 0.45), "riser", -12)]),
+ ("T", ("end", "l12", 1.15), CUT, None, [(0.45, "flicker", -12), (0.95, "impact", -14)]),
  ("Kc", ("cta", -0.45), {"type": "fade", "dur": 0.4}, None, [(0.5, "pop", -14), (1.3, "ding", -16)]),
 ]
 monta(__file__, S, "Turno da Madrugada - Ep1 - O Ultimo Cafe", sem_nums=tuple(x[0] for x in S), sem_hud=tuple(x[0] for x in S), sem_leg=("T", "Kc"),

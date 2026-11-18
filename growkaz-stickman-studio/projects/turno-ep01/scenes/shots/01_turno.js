@@ -316,8 +316,8 @@ registerShot('H', { kind: '3d',
     s.tico = pessoa(TICO_PALIDO); s.tico.position.set(-2.4, 0, 9.15); s.stage.add(s.tico);
     s.falso = pessoa({ ...TICO_PALIDO, pele: '#9a9a96', sombra: '#6a6a66' }); s.falso.position.set(-4.62, 0, 13.0); s.falso.rotation.y = Math.PI; s.falso.rosto('sorriso'); s.stage.add(s.falso);
     const lf = new THREE.PointLight(new THREE.Color('#8aa6c0'), 0.9, 2.6, 1.5); lf.position.set(-4.5, 1.9, 12.9); s.stage.add(lf);
-    const t = { cor: W('corri', L.l11), cad: W('cadeado', L.l11), est: W('estoque', L.l11), ouv: W('ouvi', L.l11), tic: W('tico', L.l12), lado: W('lado', L.l12) };
-    t.abre = L.l12[1] - 0.2; t.fim = info.shot.end; s.t = t;
+    const t = { cor: W('corri', L.l11), cad: W('cadeado', L.l11), est: W('estoque', L.l11), ouv: W('ouvi', L.l11), tic: W('tico', L.l12), tava: W('tava', L.l12), lado: W('lado', L.l12) };
+    t.abre = L.l12[1] + 0.05; t.fim = info.shot.end; s.t = t;
     const P0 = CX, P1 = [0.6, OLHO, 2.55], P2 = [-1.8, OLHO, 2.0], P3 = [-1.8, OLHO, 7.6], P4 = [-3.3, OLHO, 8.25];
     const BOARD = [-3.3, 1.42, 9.97], PORTA = [-4.55, 1.35, 10.1], TIC = [-2.4, 1.66, 9.15];
     const r0 = t.cor - 0.1, r1 = t.cad + 0.5;
@@ -334,8 +334,8 @@ registerShot('H', { kind: '3d',
       [t.ouv - 0.1, { p: P4, m: BOARD, f: 56 }],
       [t.ouv + 0.6, { p: P4, m: [-4.2, 1.3, 10.3], f: 50 }],
       [L.t08[1], { p: [-3.4, OLHO, 8.4], m: [-4.2, 1.3, 10.3], f: 34 }],
-      [t.tic + 0.1, { p: [-3.4, OLHO, 8.4], m: [-4.2, 1.3, 10.3], f: 34 }],
-      [t.lado - 0.1, { p: [-3.35, OLHO, 8.3], m: TIC, f: 46 }],
+      [t.tic + 0.3, { p: [-3.4, OLHO, 8.4], m: [-4.2, 1.3, 10.3], f: 34 }],
+      [t.tava + 0.3, { p: [-3.35, OLHO, 8.3], m: TIC, f: 46 }],
       [t.abre, { p: [-3.35, OLHO, 8.3], m: TIC, f: 40 }],
       [t.abre + 0.75, { p: [-3.9, OLHO, 8.35], m: [-4.6, 1.5, 11.5], f: 48 }],
       [t.fim, { p: [-3.95, OLHO, 8.4], m: [-4.62, 1.62, 13.0], f: 32 }],
