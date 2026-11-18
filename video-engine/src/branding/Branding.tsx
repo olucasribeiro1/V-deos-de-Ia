@@ -2,8 +2,7 @@ import React from 'react';
 import {AbsoluteFill, random} from 'remotion';
 import {PuppetSvg} from '../characters/Puppet';
 import {DAVI_OUTFIT} from '../characters/Davi';
-import {Globe} from '../environments/Globe';
-import {CAPTION_FONT, HUD_FONT} from '../lib/fonts';
+import {CAPTION_FONT} from '../lib/fonts';
 
 /** Electric-blue jump tear (static version of fx/Rastro for stills). */
 const Tear: React.FC<{x: number; top: number; h: number; w: number; seed: string}> = ({x, top, h, w, seed}) => {
@@ -120,50 +119,31 @@ export const ChannelAvatar: React.FC = () => (
   </AbsoluteFill>
 );
 
-/** 2560x1440 YouTube banner. Safe area for all devices: centre 1546x423 (x 507–2053, y 508–931). */
+/** 2560x1440 YouTube banner — generic (no story elements): Davi on the calçadão at sunset.
+ * Safe area for all devices: centre 1546x423 (x 507–2053, y 508–931). */
 export const ChannelBanner: React.FC = () => {
   const W = 2560;
   const H = 1440;
-  const k = 0.5; // puppet scale
   return (
     <AbsoluteFill style={{background: '#1b1f4a'}}>
       <svg width={W} height={H} style={{position: 'absolute'}}>
         <Defs />
         <rect width={W} height={H} fill="url(#sky)" />
-        <circle cx={1280} cy={880} r={150} fill="#fff1c9" opacity={0.95} />
-        <circle cx={1280} cy={880} r={300} fill="#ffe2a8" opacity={0.25} />
-        {/* hills */}
+        <circle cx={1580} cy={880} r={150} fill="#fff1c9" opacity={0.95} />
+        <circle cx={1580} cy={880} r={320} fill="#ffe2a8" opacity={0.22} />
         <path d="M0 860 Q 250 640 480 820 Q 620 700 760 860 Z" fill="#6a4a6e" opacity={0.75} />
-        <path d="M1800 860 Q 1960 560 2140 760 Q 2260 650 2400 820 L2560 860 Z" fill="#6a4a6e" opacity={0.75} />
-        {/* sea */}
+        <path d="M1900 860 Q 2060 560 2240 760 Q 2360 650 2480 820 L2560 860 Z" fill="#6a4a6e" opacity={0.75} />
         <rect x={0} y={860} width={W} height={120} fill="#3d6d93" />
         {Array.from({length: 18}).map((_, i) => (
-          <rect key={i} x={1120 + random(`g${i}`) * 320} y={870 + i * 6} width={40 + random(`gw${i}`) * 120} height={3} fill="#ffe8b8" opacity={0.6} />
+          <rect key={i} x={1420 + random(`g${i}`) * 320} y={870 + i * 6} width={40 + random(`gw${i}`) * 120} height={3} fill="#ffe8b8" opacity={0.6} />
         ))}
         <rect x={0} y={980} width={W} height={40} fill="#e8c99a" />
         <Waves x0={0} x1={W} y0={1020} y1={H} rows={14} amp={16} period={260} />
         <Dust w={W} h={H} n={90} seed="bn" />
-        {/* jump tear where Davi was a moment ago */}
-        <Tear x={820} top={520} h={430} w={56} seed="bnt" />
-        {/* globe glow */}
-        <circle cx={1880} cy={720} r={240} fill="#6cc8ff" opacity={0.12} />
       </svg>
-      <Globe cx={1880} cy={720} radius={190} rotation={-20} tilt={-12} clouds t={2} night={0.45} grid={0.3}
-        pins={[{lat: -22.9, lon: -43.2, label: 'RIO', color: '#ff4d4d'}]} />
-      {/* ghost Davi (where he was) + Davi */}
-      <PuppetSvg outfit={DAVI_OUTFIT} height={430 * 1.0} ghost={{opacity: 0.55, color: '#9fdcff', dash: 14}}
-        style={{left: 820 - 350 * 0.43, top: 960 - 1100 * 0.43}} />
-      <PuppetSvg outfit={DAVI_OUTFIT} height={430} pose={{facing: 0.2, shR: 160, elR: -30, headTilt: -3}}
-        expr={{halfSmile: 0.9, smile: 0.3, browAsym: 0.5}}
-        style={{left: 620 - 350 * 0.43, top: 960 - 1100 * 0.43}} />
-      <div style={{position: 'absolute', left: 830, top: 545, width: 900, textAlign: 'center'}}>
-        <div style={{...titleStyle(220), whiteSpace: 'nowrap'}}>O SALTO</div>
-        <div style={{...titleStyle(56), fontWeight: 500, marginTop: 10, letterSpacing: 1, whiteSpace: 'nowrap'}}>E se tu pudesse se teletransportar?</div>
-        <div style={{marginTop: 22, display: 'inline-block', fontFamily: HUD_FONT, fontWeight: 700, fontSize: 30, letterSpacing: 4, color: '#bfe9ff',
-          padding: '8px 22px', border: '2px solid rgba(191,233,255,0.7)', borderRadius: 6, background: 'rgba(10,20,50,0.35)'}}>
-          NOVO EPISÓDIO TODA SEMANA
-        </div>
-      </div>
+      <PuppetSvg outfit={DAVI_OUTFIT} height={430} pose={{facing: 0.15, shR: 160, elR: -30, headTilt: -3}}
+        expr={{smile: 0.6, halfSmile: 0.4, browRaise: 0.3}}
+        style={{left: 1080 - 350 * 0.43, top: 990 - 1100 * 0.43}} />
       <AbsoluteFill style={{boxShadow: 'inset 0 0 260px rgba(0,0,0,0.45)'}} />
     </AbsoluteFill>
   );
