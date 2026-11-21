@@ -99,4 +99,6 @@ Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**,
 - **Som:** ambiente de noite com grilos, zumbido de geladeira e fluorescente, chiado de TV, estrondo distante, batida no vidro, porta rangendo, coração e riser.
 - **Formato:** primeiro o episódio em Short vertical (9:16); depois a versão horizontal (16:9) com a mesma estética, só abrindo o enquadramento para mostrar mais do ambiente natural (nada de barras ou fundo borrado). Cenas 3D feitas para funcionar nos dois formatos.
 - **Estrutura de retenção (todo episódio):** começa já na ação (trecho do clímax, 4–8 s, com o áudio já gravado) → rebobina/volta no tempo ("3 HORAS ANTES") → história em ordem → termina com gancho para o próximo episódio ("EP. 2 →"). O cold open reaproveita falas já gravadas, sem reescrever a narração.
+- **Duração:** cada episódio vertical tem de 1min30 a 2min, nunca mais. Se a narração aprovada passar disso, dividir em duas partes (cada uma com cold open e gancho), sem cortar nem acelerar a fala.
+- **Reaproveitar sempre:** cenários, personagens, animações, efeitos e trechos já feitos são reutilizados (módulos em `series/turno/`), sem perder qualidade. Só cria do zero o que for novo na história.
 - **Na compilação horizontal:** cada episódio mantém o seu gancho final; os cold opens repetidos podem ser encurtados para não cansar quem assiste em sequência.
