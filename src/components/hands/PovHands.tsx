@@ -27,11 +27,11 @@ const Finger: React.FC<{len: number; w: number; curl: number; skin: THREE.Materi
   return (
     <group rotation={[deg(curl * 70), 0, 0]}>
       <mesh position={[0, a / 2, 0]} material={skin}>
-        <boxGeometry args={[w, a, w * 0.92]} />
+        <capsuleGeometry args={[w * 0.52, a * 0.9, 3, 8]} />
       </mesh>
       <group position={[0, a, 0]} rotation={[deg(curl * 80), 0, 0]}>
         <mesh position={[0, b / 2, 0]} material={skin}>
-          <boxGeometry args={[w * 0.9, b, w * 0.85]} />
+          <capsuleGeometry args={[w * 0.48, b * 0.75, 3, 8]} />
         </mesh>
       </group>
     </group>
@@ -49,8 +49,8 @@ const Limb: React.FC<{from: THREE.Vector3; to: THREE.Vector3; r0: number; r1: nu
   const q = new THREE.Quaternion().setFromUnitVectors(UP, dir.normalize());
   const mid = v2.copy(from).add(to).multiplyScalar(0.5);
   return (
-    <mesh position={[mid.x, mid.y, mid.z]} quaternion={q} material={m}>
-      <cylinderGeometry args={[r1, r0, len, 7, 1]} />
+    <mesh position={[mid.x, mid.y, mid.z]} quaternion={q} scale={[1, len, 1]} material={m}>
+      <cylinderGeometry args={[r1, r0, 1, 14, 1]} />
     </mesh>
   );
 };
@@ -76,23 +76,20 @@ const Hand: React.FC<{pose: HandPose; side: 1 | -1; look: HandsLook; t: number; 
       <group position={p} quaternion={q} scale={[side, 1, 1]}>
         {/* punho da manga */}
         <mesh position={[0, -0.05, 0]} material={cuff}>
-          <cylinderGeometry args={[0.05, 0.051, 0.03, 7]} />
+          <cylinderGeometry args={[0.05, 0.051, 0.03, 14]} />
         </mesh>
         {/* pulso */}
         <mesh position={[0, -0.012, 0]} material={skin}>
-          <cylinderGeometry args={[0.03, 0.033, 0.04, 6]} />
+          <cylinderGeometry args={[0.03, 0.033, 0.04, 12]} />
         </mesh>
         {look.watch && side < 0 && (
           <mesh position={[0, -0.022, 0]} material={mat(PAL.black, {rough: 0.5})}>
-            <cylinderGeometry args={[0.035, 0.035, 0.018, 8]} />
+            <cylinderGeometry args={[0.035, 0.035, 0.018, 14]} />
           </mesh>
         )}
         {/* palma */}
-        <mesh position={[0, 0.045, 0]} material={skin}>
-          <boxGeometry args={[0.083, 0.09, 0.027]} />
-        </mesh>
-        <mesh position={[0.0, 0.03, 0.009]} rotation={[0, 0, 0]} material={mat(look.skin, {rough: 0.7})}>
-          <boxGeometry args={[0.07, 0.05, 0.016]} />
+        <mesh position={[0, 0.048, 0]} scale={[1, 1.05, 0.42]} material={skin}>
+          <sphereGeometry args={[0.05, 16, 12]} />
         </mesh>
         {FINGERS.map((f, i) => (
           <group key={i} position={[f.x, 0.09, 0]}>
@@ -102,11 +99,11 @@ const Hand: React.FC<{pose: HandPose; side: 1 | -1; look: HandsLook; t: number; 
         {/* polegar */}
         <group position={[0.04, 0.02, 0.008]} rotation={[deg(10 + pose.thumb * 35), deg(-20 - pose.thumb * 30), deg(-38 + pose.thumb * 25)]}>
           <mesh position={[0, 0.022, 0]} material={skin}>
-            <boxGeometry args={[0.024, 0.044, 0.022]} />
+            <capsuleGeometry args={[0.012, 0.03, 3, 8]} />
           </mesh>
           <group position={[0, 0.044, 0]} rotation={[deg(pose.thumb * 30), 0, 0]}>
             <mesh position={[0, 0.016, 0]} material={skin}>
-              <boxGeometry args={[0.021, 0.032, 0.02]} />
+              <capsuleGeometry args={[0.0105, 0.022, 3, 8]} />
             </mesh>
           </group>
         </group>
@@ -116,6 +113,7 @@ const Hand: React.FC<{pose: HandPose; side: 1 | -1; look: HandsLook; t: number; 
   );
 };
 
+/** Mãos POV: contorno fino (estão a centímetros da câmera). */
 export const PovHands: React.FC<{
   left: HandPose;
   right: HandPose;
@@ -124,7 +122,7 @@ export const PovHands: React.FC<{
   rightProp?: React.ReactNode;
   leftProp?: React.ReactNode;
 }> = ({left, right, t, look = PROTAGONIST_HANDS, rightProp, leftProp}) => (
-  <group>
+  <group userData={{outlineWidth: 0.0028}}>
     <Hand pose={right} side={1} look={look} t={t}>
       {rightProp}
     </Hand>

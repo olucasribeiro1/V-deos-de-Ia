@@ -14,6 +14,7 @@ export type PovKey = {
   pitch: number; // graus, + = para cima
   h?: number; // altura dos olhos (m). Protagonista 1,75 m → olhos ~1,64
   tension?: number; // 0 calmo … 1 pânico (tremor, respiração)
+  fov?: number; // graus (vertical). Padrão 62; olho mágico ~95
 };
 
 export type Shake = {t: number; dur: number; amp: number; freq?: number};
@@ -23,23 +24,27 @@ export type PovTrack = {
   pos: Float32Array; // x,y,z por frame
   rot: Float32Array; // pitch, yaw, roll por frame (rad, ordem YXZ)
   speed: Float32Array;
+  fov: Float32Array;
   steps: {frame: number; side: 0 | 1; intensity: number}[];
 };
 
 export const EYE_HEIGHT = 1.64;
 const STRIDE = 0.72; // metros por passo
 
-export function buildPovTrack(keys: Key<PovKey>[], fps: number, frames: number, shakes: Shake[] = []): PovTrack {
+export function buildPovTrack(keys: Key<PovKey>[] | ((t: number) => PovKey), fps: number, frames: number, shakes: Shake[] = []): PovTrack {
+  const at = typeof keys === 'function' ? keys : (t: number) => sample(keys, t);
   const pos = new Float32Array(frames * 3);
   const rot = new Float32Array(frames * 3);
   const speed = new Float32Array(frames);
+  const fov = new Float32Array(frames);
   const steps: PovTrack['steps'] = [];
   let phase = 0;
-  let prev = sample(keys, 0);
+  let prev = at(0);
   let smoothSpeed = 0;
   for (let f = 0; f < frames; f++) {
     const t = f / fps;
-    const k = sample(keys, t);
+    const k = at(t);
+    fov[f] = k.fov ?? 62;
     const d = Math.hypot(k.x - prev.x, k.z - prev.z);
     const v = d * fps;
     smoothSpeed = lerp(smoothSpeed, v, 0.25);
@@ -83,5 +88,5 @@ export function buildPovTrack(keys: Key<PovKey>[], fps: number, frames: number, 
     rot[f * 3 + 1] = deg(k.yaw + fbm1(t * 0.4, 2) * jitter * 1.2 + shakeY);
     rot[f * 3 + 2] = deg(Math.sin(ph) * (walkAmt * 0.6 + runAmt * 1.4) + fbm1(t * 0.3, 5) * 0.3);
   }
-  return {frames, pos, rot, speed, steps};
+  return {frames, pos, rot, speed, fov, steps};
 }

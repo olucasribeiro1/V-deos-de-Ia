@@ -1,24 +1,39 @@
 import * as THREE from 'three';
 
 /**
- * Biblioteca de materiais COMPARTILHADOS (1 instância por cor/uso → menos trocas de estado na GPU).
- * Estética Cinematic Stylized Low Poly: flatShading, roughness alta, cores dessaturadas.
- * Paleta oficial em docs/visual-bible.md.
+ * Biblioteca de materiais COMPARTILHADOS — estilo CARTOON TOON (cel shading em 3 faixas).
+ * Um material por cor/uso (menos trocas de estado na GPU). O contorno preto é aplicado
+ * automaticamente pelo componente <Outlines/> (casca invertida), não por pós-processamento.
  */
 const cache = new Map<string, THREE.Material>();
 
-export function mat(color: string, opts: {rough?: number; metal?: number; flat?: boolean; emissive?: string; ei?: number} = {}) {
-  const key = `${color}|${opts.rough ?? 0.85}|${opts.metal ?? 0}|${opts.flat ?? true}|${opts.emissive ?? ''}|${opts.ei ?? 0}`;
+let gradient: THREE.DataTexture | null = null;
+/** Rampa de 3 tons: sombra, meio-tom, luz (NearestFilter = bordas nítidas de desenho animado). */
+export function toonGradient() {
+  if (!gradient) {
+    const data = new Uint8Array([90, 90, 90, 255, 175, 175, 175, 255, 255, 255, 255, 255]);
+    gradient = new THREE.DataTexture(data, 3, 1, THREE.RGBAFormat);
+    gradient.minFilter = THREE.NearestFilter;
+    gradient.magFilter = THREE.NearestFilter;
+    gradient.generateMipmaps = false;
+    gradient.needsUpdate = true;
+  }
+  return gradient;
+}
+
+export type MatOpts = {rough?: number; metal?: number; flat?: boolean; emissive?: string; ei?: number; outline?: boolean};
+
+export function mat(color: string, opts: MatOpts = {}) {
+  const key = `${color}|${opts.emissive ?? ''}|${opts.ei ?? 0}|${opts.outline ?? true}`;
   let m = cache.get(key);
   if (!m) {
-    m = new THREE.MeshStandardMaterial({
+    m = new THREE.MeshToonMaterial({
       color,
-      roughness: opts.rough ?? 0.85,
-      metalness: opts.metal ?? 0,
-      flatShading: opts.flat ?? true,
+      gradientMap: toonGradient(),
       emissive: opts.emissive ? new THREE.Color(opts.emissive) : undefined,
       emissiveIntensity: opts.ei ?? 0,
     });
+    m.userData.outline = opts.outline ?? true;
     cache.set(key, m);
   }
   return m;
@@ -29,46 +44,47 @@ export function basic(color: string, opacity = 1) {
   let m = cache.get(key);
   if (!m) {
     m = new THREE.MeshBasicMaterial({color, transparent: opacity < 1, opacity, depthWrite: opacity >= 1, fog: true});
+    m.userData.outline = false;
     cache.set(key, m);
   }
   return m;
 }
 
-/** Paleta do estúdio (série "hora a hora"). */
+/** Paleta do estúdio (série "hora a hora") — cores limpas, levemente saturadas, estilo cartoon. */
 export const PAL = {
   // ambiente
-  wallWarm: '#b9ad9a',
-  wallCool: '#8f958f',
-  wallBath: '#a9b3b1',
-  floorWood: '#6b4f3a',
-  floorWoodDark: '#553e2e',
-  tile: '#8a8f8c',
-  tileDark: '#5d625f',
-  ceiling: '#d2cbbd',
-  trim: '#e2dccf',
-  doorWood: '#7a5a40',
-  doorPaint: '#c9c2b4',
-  metal: '#7d8286',
-  metalDark: '#3c4044',
-  fabricGreen: '#4f5b47',
-  fabricGray: '#5b5f63',
-  fabricBlue: '#3d4b5c',
-  wood: '#8a6a4c',
-  woodLight: '#a8875f',
-  black: '#1c1d1f',
-  white: '#e8e4da',
-  plant: '#4c6b3c',
+  wallWarm: '#d9d2c4',
+  wallCool: '#c3cbc8',
+  wallBath: '#bcd0d2',
+  floorWood: '#8a6446',
+  floorWoodDark: '#6e4f38',
+  tile: '#a9b2b0',
+  tileDark: '#7c8583',
+  ceiling: '#ece6da',
+  trim: '#f1ece2',
+  doorWood: '#8f6646',
+  doorPaint: '#e6e0d2',
+  metal: '#9aa2a8',
+  metalDark: '#4a5056',
+  fabricGreen: '#4f7a5f',
+  fabricGray: '#6f767e',
+  fabricBlue: '#2f6a9a',
+  wood: '#a77a52',
+  woodLight: '#c89b6a',
+  black: '#24262a',
+  white: '#f4f1ea',
+  plant: '#4f9a54',
   // personagens
-  skinFair: '#e9bfa6',
-  skinFairShadow: '#d9a68b',
-  capRed: '#b3261e',
-  jacketOlive: '#4b5340',
-  shirtGray: '#3b3f44',
-  jeans: '#2f3d52',
-  boots: '#4a3626',
-  hairBrown: '#3a2a1e',
+  skinFair: '#f6cfb4',
+  skinFairShadow: '#e3a98a',
+  capRed: '#d42a22',
+  jacketOlive: '#5c6b47',
+  shirtGray: '#4a5058',
+  jeans: '#3c5a86',
+  boots: '#5a3e2a',
+  hairBrown: '#4a3222',
   // perigo
-  danger: '#a3161a',
-  blood: '#5e0f12',
-  zombieSkin: '#9aa58e',
+  danger: '#c81e22',
+  blood: '#8e1418',
+  zombieSkin: '#a7b89a',
 };

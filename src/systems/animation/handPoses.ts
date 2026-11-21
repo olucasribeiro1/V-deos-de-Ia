@@ -9,7 +9,7 @@ export const HP = {
   hidden: {p: [0.26, -0.62, -0.2], r: [-40, 0, 10], curl: 0.35, thumb: 0.3},
   relaxedLow: {p: [0.24, -0.46, -0.32], r: [-55, 0, 12], curl: 0.45, thumb: 0.3},
   // segurando celular diante dos olhos (tela para a câmera)
-  phoneLook: {p: [0.075, -0.2, -0.36], r: [-18, -8, 4], curl: 0.42, thumb: 0.55},
+  phoneLook: {p: [0.065, -0.2, -0.37], r: [-14, -8, 4], curl: 0.22, thumb: 0.25},
   // celular no ouvido: mão sobe para fora do quadro à direita
   phoneEar: {p: [0.3, 0.02, -0.05], r: [10, -70, 20], curl: 0.5, thumb: 0.5},
   // alcançar/pegar à frente (palma para baixo)

@@ -135,7 +135,7 @@ export const Phone: React.FC<{screen: PhoneScreen; glow?: number}> = ({screen, g
         <planeGeometry args={[0.067, 0.142]} />
       </mesh>
       {/* luz sempre montada: trocar a contagem de luzes recompila shaders (custo alto por frame) */}
-      <pointLight position={[0, 0, 0.08]} color="#9cc4e4" intensity={screen.kind === 'off' ? 0 : 0.12 * glow} distance={0.6} decay={2} />
+      <pointLight position={[0, 0, 0.08]} color="#9cc4e4" intensity={screen.kind === 'off' ? 0 : 0.025 * glow} distance={0.25} decay={2} />
     </group>
   );
 };

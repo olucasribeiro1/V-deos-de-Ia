@@ -1,0 +1,227 @@
+import React, {useLayoutEffect, useMemo, useRef} from 'react';
+import * as THREE from 'three';
+import {rng} from '../../systems/animation/math';
+import {mat, PAL} from '../../library/materials';
+
+/**
+ * CIDADE vista da janela (cenário reutilizável, barato):
+ * prédios por INSTANCING (1 draw call), fumaça por instancing animado, rua com veículos.
+ * `chaos` 0..1 controla colapso: luzes apagando, fumaça, incêndios, sirenes visuais.
+ */
+const STREET_Y = -21; // 7º andar
+
+function windowTexture(seed: number) {
+  const c = document.createElement('canvas');
+  c.width = 128;
+  c.height = 256;
+  const g = c.getContext('2d')!;
+  g.fillStyle = '#000';
+  g.fillRect(0, 0, 128, 256);
+  const r = rng(seed);
+  for (let y = 0; y < 16; y++)
+    for (let x = 0; x < 8; x++) {
+      const lit = r();
+      g.fillStyle = lit > 0.72 ? (lit > 0.93 ? '#ffd9a0' : '#e8b878') : '#000';
+      g.fillRect(x * 16 + 4, y * 16 + 4, 8, 9);
+    }
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.magFilter = THREE.NearestFilter;
+  return t;
+}
+
+function wallTexture() {
+  const c = document.createElement('canvas');
+  c.width = 128;
+  c.height = 256;
+  const g = c.getContext('2d')!;
+  g.fillStyle = '#8a8f93';
+  g.fillRect(0, 0, 128, 256);
+  for (let y = 0; y < 16; y++)
+    for (let x = 0; x < 8; x++) {
+      g.fillStyle = '#2b3036';
+      g.fillRect(x * 16 + 4, y * 16 + 4, 8, 9);
+    }
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+}
+
+function skyTexture(top: string, mid: string, horizon: string) {
+  const c = document.createElement('canvas');
+  c.width = 4;
+  c.height = 256;
+  const g = c.getContext('2d')!;
+  const gr = g.createLinearGradient(0, 0, 0, 256);
+  gr.addColorStop(0, top);
+  gr.addColorStop(0.42, mid);
+  gr.addColorStop(0.52, horizon);
+  gr.addColorStop(1, '#1a1c1e');
+  g.fillStyle = gr;
+  g.fillRect(0, 0, 4, 256);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+}
+
+export const Sky: React.FC<{top?: string; mid?: string; horizon?: string}> = ({top = '#1f2a36', mid = '#5a5a60', horizon = '#c08458'}) => {
+  const tex = useMemo(() => skyTexture(top, mid, horizon), [top, mid, horizon]);
+  return (
+    <mesh>
+      <sphereGeometry args={[300, 16, 12]} />
+      <meshBasicMaterial map={tex} side={THREE.BackSide} fog={false} depthWrite={false} />
+    </mesh>
+  );
+};
+
+const Buildings: React.FC<{seed?: number; lights: number}> = ({seed = 11, lights}) => {
+  const ref = useRef<THREE.InstancedMesh>(null);
+  const {count, matrices, material} = useMemo(() => {
+    const r = rng(seed);
+    const list: THREE.Matrix4[] = [];
+    const dummy = new THREE.Object3D();
+    // fileiras ao norte (vista principal da janela) + laterais
+    for (let row = 0; row < 5; row++) {
+      const z = -32 - row * 26;
+      for (let x = -90; x < 90; ) {
+        const w = 8 + r() * 12;
+        const d = 8 + r() * 10;
+        const h = 12 + r() * (row === 0 ? 30 : 55) + row * 6;
+        if (!(row === 0 && x > -14 && x < 6 && r() < 0.5)) {
+          dummy.position.set(x + w / 2, STREET_Y + h / 2, z - d / 2 - r() * 4);
+          dummy.scale.set(w, h, d);
+          dummy.rotation.set(0, (r() - 0.5) * 0.08, 0);
+          dummy.updateMatrix();
+          list.push(dummy.matrix.clone());
+        }
+        x += w + 2 + r() * 5;
+      }
+    }
+    const m = new THREE.MeshStandardMaterial({
+      map: wallTexture(),
+      emissiveMap: windowTexture(seed),
+      emissive: new THREE.Color('#ffffff'),
+      roughness: 0.95,
+      flatShading: true,
+    });
+    return {count: list.length, matrices: list, material: m};
+  }, [seed]);
+  material.emissiveIntensity = lights;
+  useLayoutEffect(() => {
+    const im = ref.current!;
+    matrices.forEach((m, i) => im.setMatrixAt(i, m));
+    im.instanceMatrix.needsUpdate = true;
+    im.computeBoundingSphere();
+  }, [matrices]);
+  return <instancedMesh ref={ref} args={[undefined, material, count]} frustumCulled={false}><boxGeometry /></instancedMesh>;
+};
+
+const smokeDummy = new THREE.Object3D();
+export const Smoke: React.FC<{origin: [number, number, number]; t: number; amount: number; puffs?: number; color?: string; seed?: number}> = ({
+  origin,
+  t,
+  amount,
+  puffs = 26,
+  color = '#2c2d2f',
+  seed = 1,
+}) => {
+  const ref = useRef<THREE.InstancedMesh>(null);
+  const m = useMemo(() => new THREE.MeshStandardMaterial({color, roughness: 1, flatShading: true, transparent: true, opacity: 0.85}), [color]);
+  const offs = useMemo(() => {
+    const r = rng(seed);
+    return Array.from({length: puffs}, () => [r(), r(), r()]);
+  }, [puffs, seed]);
+  useLayoutEffect(() => {
+    const im = ref.current!;
+    for (let i = 0; i < puffs; i++) {
+      const [a, b, c] = offs[i];
+      const life = (t * 0.045 + a) % 1; // 0..1 ciclo de vida
+      const y = life * 55;
+      const s = (1.5 + life * 9 + b * 2) * amount;
+      smokeDummy.position.set(origin[0] + (b - 0.5) * 3 + life * 14, origin[1] + y, origin[2] + (c - 0.5) * 3 - life * 4);
+      smokeDummy.scale.setScalar(Math.max(0.001, s));
+      smokeDummy.rotation.set(a * 6 + t * 0.05, b * 6, c * 6);
+      smokeDummy.updateMatrix();
+      im.setMatrixAt(i, smokeDummy.matrix);
+    }
+    im.instanceMatrix.needsUpdate = true;
+  });
+  return <instancedMesh ref={ref} args={[undefined, m, puffs]} frustumCulled={false}><icosahedronGeometry args={[1, 0]} /></instancedMesh>;
+};
+
+const Car: React.FC<{p: [number, number, number]; rotY?: number; color: string; wreck?: boolean}> = ({p, rotY = 0, color, wreck}) => (
+  <group position={p} rotation={[wreck ? 0.15 : 0, rotY, wreck ? 0.25 : 0]}>
+    <mesh position={[0, 0.55, 0]} material={mat(color, {rough: 0.5})}>
+      <boxGeometry args={[1.8, 0.7, 4.2]} />
+    </mesh>
+    <mesh position={[0, 1.1, -0.2]} material={mat('#1e2328', {rough: 0.3})}>
+      <boxGeometry args={[1.6, 0.5, 2.2]} />
+    </mesh>
+  </group>
+);
+
+/** Ambulância com giroflex emissivo (sem luz dinâmica real → barato). */
+export const Ambulance: React.FC<{p: [number, number, number]; rotY?: number; t: number}> = ({p, rotY = 0, t}) => {
+  const blink = Math.floor(t * 6) % 2;
+  return (
+    <group position={p} rotation={[0, rotY, 0]}>
+      <mesh position={[0, 1.3, 0.4]} material={mat('#e8e6e0', {rough: 0.6})}>
+        <boxGeometry args={[2.1, 2.2, 3.6]} />
+      </mesh>
+      <mesh position={[0, 0.9, -1.9]} material={mat('#e8e6e0', {rough: 0.6})}>
+        <boxGeometry args={[2.0, 1.4, 1.4]} />
+      </mesh>
+      <mesh position={[0, 1.4, 0.4]} material={mat(PAL.danger)}>
+        <boxGeometry args={[2.12, 0.25, 3.62]} />
+      </mesh>
+      <mesh position={[-0.5, 2.45, -1.0]} material={mat('#ff2020', {emissive: '#ff1010', ei: blink ? 6 : 0.3})}>
+        <boxGeometry args={[0.5, 0.15, 0.25]} />
+      </mesh>
+      <mesh position={[0.5, 2.45, -1.0]} material={mat('#2050ff', {emissive: '#2040ff', ei: blink ? 0.3 : 6})}>
+        <boxGeometry args={[0.5, 0.15, 0.25]} />
+      </mesh>
+    </group>
+  );
+};
+
+export const City: React.FC<{t: number; chaos?: number; children?: React.ReactNode}> = ({t, chaos = 0, children}) => {
+  const lights = 1.1 - chaos * 0.6;
+  return (
+    <group>
+      <Sky />
+      <Buildings lights={lights} />
+      {/* rua abaixo do prédio */}
+      <mesh position={[0, STREET_Y, -20]} rotation={[-Math.PI / 2, 0, 0]} material={mat('#2c2f33', {rough: 1})}>
+        <planeGeometry args={[220, 14]} />
+      </mesh>
+      <mesh position={[0, STREET_Y + 0.08, -12]} rotation={[-Math.PI / 2, 0, 0]} material={mat('#6e6f6c', {rough: 1})}>
+        <planeGeometry args={[220, 3]} />
+      </mesh>
+      <mesh position={[0, STREET_Y + 0.08, -28]} rotation={[-Math.PI / 2, 0, 0]} material={mat('#6e6f6c', {rough: 1})}>
+        <planeGeometry args={[220, 3]} />
+      </mesh>
+      <mesh position={[0, STREET_Y - 0.5, -60]} rotation={[-Math.PI / 2, 0, 0]} material={mat('#232528', {rough: 1})}>
+        <planeGeometry args={[400, 200]} />
+      </mesh>
+      {/* nosso prédio (fachada abaixo da janela) */}
+      <mesh position={[-1, STREET_Y / 2 - 0.2, -8.3]} material={mat('#7d7468', {rough: 1})}>
+        <boxGeometry args={[14, -STREET_Y - 0.4, 0.4]} />
+      </mesh>
+      <Car p={[-16, STREET_Y, -17]} rotY={Math.PI / 2} color="#5a6470" />
+      <Car p={[8, STREET_Y, -23]} rotY={-Math.PI / 2} color="#7a2a24" />
+      {chaos > 0.3 && <Car p={[-4, STREET_Y + 0.2, -21]} rotY={0.9} color="#c8c4b8" wreck />}
+      {chaos > 0.2 && <Ambulance p={[-1 + Math.max(0, 12 - t * 1.2), STREET_Y, -18]} rotY={-Math.PI / 2} t={t} />}
+      {/* incêndios e fumaça */}
+      {chaos > 0.1 && (
+        <>
+          <Smoke origin={[-22, STREET_Y + 30, -60]} t={t} amount={Math.min(1, chaos * 1.4)} seed={2} />
+          <mesh position={[-22, STREET_Y + 28, -58]} material={mat('#ff7a2a', {emissive: '#ff5a10', ei: 2.5 + Math.sin(t * 9) * 0.8})}>
+            <boxGeometry args={[6, 3, 1]} />
+          </mesh>
+        </>
+      )}
+      {chaos > 0.45 && <Smoke origin={[30, STREET_Y + 20, -90]} t={t + 40} amount={chaos} seed={5} color="#3a3633" />}
+      {children}
+    </group>
+  );
+};
