@@ -17,8 +17,10 @@ export function anel(rings, sides = 8, caps = true) {
   const n = sides + 1;
   for (let j = 0; j < rings.length - 1; j++) for (let i = 0; i < sides; i++) { const a = j * n + i, b = a + 1, c = a + n, d = c + 1; idx.push(a, b, d, a, d, c); }
   if (caps) for (const [j, up] of [[0, false], [rings.length - 1, true]]) {
-    const r = rings[j], ci = pos.length / 3; pos.push(r.dx ?? 0, r.y, r.dz ?? 0); uv.push(0.5, up ? 1 : 0);
-    for (let i = 0; i < sides; i++) { const a = j * n + i; if (up) idx.push(ci, a, a + 1); else idx.push(ci, a + 1, a); }
+    // tampa com vértices próprios e UV fixa (amostra as costas: sem gola/estampa esticada)
+    const r = rings[j], ci = pos.length / 3, cv = up ? 0.97 : 0.03; pos.push(r.dx ?? 0, r.y, r.dz ?? 0); uv.push(0.02, cv);
+    for (let i = 0; i <= sides; i++) { const k = j * n + i; pos.push(pos[k * 3], pos[k * 3 + 1], pos[k * 3 + 2]); uv.push(0.02, cv); }
+    for (let i = 0; i < sides; i++) { const a = ci + 1 + i; if (up) idx.push(ci, a, a + 1); else idx.push(ci, a + 1, a); }
   }
   const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2)); g.setIndex(idx); g.computeVertexNormals(); return g;
 }
@@ -33,7 +35,7 @@ const M = (geo, m, x = 0, y = 0, z = 0) => { const me = new THREE.Mesh(geo, m); 
 // ---------- texturas pintadas ----------
 const sombraU = (g, w, h, a = 0.45) => { for (let x = 0; x < w; x++) { const u = x / w, c = Math.cos((u - 0.5) * 2 * Math.PI); const s = (1 - (0.5 + 0.5 * c)) * a; if (s > 0.01) { g.fillStyle = `rgba(10,12,20,${s.toFixed(3)})`; g.fillRect(x, 0, 1, h); } } };
 // camisa polo do uniforme (Tico / Lucas)
-function texPolo(o) {
+function texPolo(o, manga = false) {
   return tex(128, 128, (g, w, h) => {
     const R = rnd(o.seed ?? 5);
     g.fillStyle = o.camisa; g.fillRect(0, 0, w, h);
@@ -42,6 +44,7 @@ function texPolo(o) {
     for (const x of [30, 96]) { g.fillStyle = 'rgba(0,0,0,.18)'; for (let k = 0; k < 6; k++) g.fillRect(x - 6 + k * 2, 8 + k * 6, 3, 10); }
     mancha(g, 54, 46, 16, 'rgba(255,255,255,A)', 0.12); mancha(g, 76, 46, 16, 'rgba(255,255,255,A)', 0.1);
     sombraU(g, w, h, 0.5);
+    if (manga) { g.fillStyle = o.camisaDet; g.fillRect(0, h - 5, w, 3); return; }   // manga: só a listra na barra
     // gola e listra
     g.fillStyle = o.camisaDet; g.fillRect(0, 0, w, 5); g.fillStyle = o.camisa; g.fillRect(52, 0, 24, 3); g.fillStyle = 'rgba(0,0,0,.35)'; g.fillRect(0, 5, w, 1);
     g.fillStyle = o.gola ?? '#3e566f'; g.beginPath(); g.moveTo(50, 0); g.lineTo(64, 14); g.lineTo(78, 0); g.fill();
@@ -56,13 +59,14 @@ function texPolo(o) {
   });
 }
 // camisa xadrez de flanela (Alberto / mímico): suor nas axilas e no peito
-function texFlanela(o) {
+function texFlanela(o, manga = false) {
   return tex(128, 128, (g, w, h) => {
     g.fillStyle = o.camisa; g.fillRect(0, 0, w, h);
     for (let x = 0; x < w; x += 16) { g.fillStyle = o.xadrez; g.fillRect(x, 0, 6, h); g.fillStyle = o.xadrez2; g.fillRect(x + 11, 0, 1, h); }
     for (let y = 0; y < h; y += 16) { g.fillStyle = 'rgba(15,25,18,.55)'; g.fillRect(0, y, w, 6); g.fillStyle = o.xadrez2; g.fillRect(0, y + 11, w, 1); }
     const R = rnd(9); for (let i = 0; i < 18; i++) { g.fillStyle = 'rgba(0,0,0,.22)'; g.fillRect(R() * w | 0, 60 + R() * 60 | 0, 12, 1); }
     sombraU(g, w, h, 0.5);
+    if (manga) return;
     // gola aberta com camiseta por baixo
     g.fillStyle = '#d8d2c2'; g.beginPath(); g.moveTo(52, 0); g.lineTo(64, 20); g.lineTo(76, 0); g.fill(); g.fillStyle = o.pele; g.beginPath(); g.moveTo(56, 0); g.lineTo(64, 12); g.lineTo(72, 0); g.fill();
     g.fillStyle = 'rgba(0,0,0,.4)'; g.fillRect(63, 20, 2, 108); g.fillStyle = '#c8c0a8'; for (let y = 28; y < 120; y += 18) g.fillRect(66, y, 2, 2);
@@ -163,6 +167,7 @@ export function pessoa(o) {
   const mCam = mat(V ? o.camisa : '#ffffff', { map: V ? null : (o.polo ? texPolo(o) : texFlanela(o)) });
   const mCal = mat(V ? o.calca : '#ffffff', { map: V ? null : texCalca(o) });
   const mCin = mat(V ? o.calca : '#ffffff', { map: V ? null : texCinto(o) });
+  const mMan = mat(V ? o.camisa : '#ffffff', { map: V ? null : (o.polo ? texPolo(o, true) : texFlanela(o, true)) });
   const mSap = mat(o.sapato), mPele = mat(o.pele), mSola = mat(V ? '#0a0a0c' : '#3a3632');
   // ---- pernas: coxa e canela torneadas, joelho, sapato com bico ----
   const pernas = [];
@@ -185,21 +190,21 @@ export function pessoa(o) {
     { y: -0.04, rx: 0.15 * L, rz: 0.1 + B, dz: B * 0.5 },
     { y: 0.1, rx: (0.155 + B * 0.5) * L, rz: 0.108 + B * 1.6, dz: B },
     { y: 0.25, rx: 0.178 * L, rz: 0.118 + B * 0.8, dz: 0.012 + B * 0.4, sq: 0.15 },
-    { y: 0.36, rx: 0.192 * L, rz: 0.112, dz: 0.008, sq: 0.3 },
-    { y: 0.43, rx: 0.17 * L, rz: 0.092, sq: 0.4 },
+    { y: 0.36, rx: 0.188 * L, rz: 0.112, dz: 0.008, sq: 0.08 },
+    { y: 0.43, rx: 0.16 * L, rz: 0.09, sq: 0.05 },
     { y: 0.475, rx: 0.068, rz: 0.06 }], 8), mCam));
   // ---- braços: deltoide, braço (manga), antebraço, mão com polegar ----
   const bracos = {};
   for (const [lado, s] of [['E', -1], ['D', 1]]) {
     const om = new THREE.Group(); om.position.set(s * (0.185 * L + 0.02), 0.4, 0); tronco.add(om);
-    const del = new THREE.Mesh(new THREE.SphereGeometry(0.07, 7, 4), mCam); del.scale.set(1, 0.85, 0.95); om.add(del);
+    const del = new THREE.Mesh(new THREE.SphereGeometry(0.07, 7, 4), V ? mCam : mat(o.polo ? o.camisa : o.xadrez)); del.scale.set(1, 0.85, 0.95); om.add(del);
     const longa = !o.polo;
-    om.add(M(anel([{ y: 0.02, rx: 0.064, rz: 0.066 }, { y: -0.15, rx: 0.06, rz: 0.06 }, ...(longa ? [{ y: -0.29, rx: 0.052, rz: 0.054 }] : [{ y: -0.16, rx: 0.058, rz: 0.058 }])], 7), mCam));
+    om.add(M(anel([{ y: -0.035, rx: 0.062, rz: 0.064 }, { y: -0.15, rx: 0.06, rz: 0.06 }, ...(longa ? [{ y: -0.29, rx: 0.052, rz: 0.054 }] : [{ y: -0.16, rx: 0.058, rz: 0.058 }])], 7), mMan));
     if (!longa) om.add(M(anel([{ y: -0.12, rx: 0.046, rz: 0.048 }, { y: -0.3, rx: 0.042, rz: 0.044 }], 6), mPele));
     const cot = new THREE.Group(); cot.position.y = -0.29; om.add(cot);
     const curativo = o.curativo && lado === 'D';
-    if (longa) cot.add(M(anel([{ y: 0.03, rx: 0.056, rz: 0.058 }, { y: -0.04, rx: 0.056, rz: 0.058 }], 7), mCam));   // manga dobrada
-    cot.add(M(anel([{ y: 0, rx: 0.045, rz: 0.047 }, { y: -0.1, rx: 0.044, rz: 0.042 }, { y: -0.25, rx: 0.033, rz: 0.03 }], 7), V ? mCam : mPele));
+    if (longa) cot.add(M(anel([{ y: 0.03, rx: 0.056, rz: 0.058 }, { y: -0.04, rx: 0.056, rz: 0.058 }], 7), mMan));   // manga dobrada
+    cot.add(M(anel([{ y: 0, rx: 0.045, rz: 0.047 }, { y: -0.1, rx: 0.044, rz: 0.042 }, { y: -0.25, rx: 0.033, rz: 0.03 }], 7), V ? mMan : mPele));
     if (curativo) { const mb = mat('#ffffff', { map: texBandagem() }); cot.add(M(anel([{ y: -0.04, rx: 0.054, rz: 0.052 }, { y: -0.12, rx: 0.052, rz: 0.05 }, { y: -0.2, rx: 0.044, rz: 0.042 }], 7), mb)); cot.add(M(tbox(0.03, 0.07, 0.015, 0.5, 1), mb, s * 0.03, -0.1, 0.05)); }
     const mao = new THREE.Group(); mao.position.y = -0.25; cot.add(mao);
     const mM = V ? mat('#0c0c0e') : mPele;
@@ -273,7 +278,7 @@ export function pessoa(o) {
 // objetos na mão direita: pacote de bolacha, copo de café, cadeado. Escala com o FOV (mesma leitura em close).
 function texBolacha() { return tex(64, 32, (g, w, h) => { g.fillStyle = '#e8c040'; g.fillRect(0, 0, w, h); g.fillStyle = '#2a5ac0'; g.fillRect(0, 0, w, 8); g.fillStyle = '#ffffff'; g.font = 'bold 7px monospace'; g.textBaseline = 'top'; g.fillText('MAIZENA', 4, 0); for (let i = 0; i < 3; i++) { g.fillStyle = '#b8782c'; g.beginPath(); g.arc(14 + i * 16, 20, 7, 0, 7); g.fill(); g.fillStyle = '#9a5e20'; g.fillRect(12 + i * 16, 18, 1, 1); g.fillRect(16 + i * 16, 22, 1, 1); } g.fillStyle = 'rgba(255,255,255,.35)'; g.fillRect(0, 9, w, 1); g.fillStyle = 'rgba(0,0,0,.25)'; g.fillRect(0, h - 2, w, 2); }); }
 export function maos() {
-  const g = new THREE.Group(), pele = mat('#d9a888'), manga = mat('#ffffff', { map: texPolo({ ...TICO, seed: 11 }) }), unha = mat('#e8c8b0');
+  const g = new THREE.Group(), pele = mat('#d9a888'), manga = mat('#ffffff', { map: texPolo({ ...TICO, seed: 11 }, true) }), unha = mat('#e8c8b0');
   const mk = (s) => {
     const b = new THREE.Group();
     const arm = new THREE.Group(); arm.rotation.x = -Math.PI / 2; b.add(arm);   // ao longo de -z (pra frente)
@@ -297,7 +302,7 @@ export function maos() {
   // pose: kD/kE = 0 (fora do quadro) .. 1 (em quadro); fecha = dedos fechando (0..1); palma = mão aberta virada pra frente (encostar no vidro)
   const TAN0 = Math.tan(33 * Math.PI / 180);
   g.pose = (o = {}, cam = null) => {
-    const kD = o.D ?? 0, kE = o.E ?? 0, f = cam ? TAN0 / Math.tan(cam.fov * Math.PI / 360) : 1;
+    const kD = o.D ?? 0, kE = o.E ?? 0, f = cam ? TAN0 / Math.tan((cam.userData.fv ?? cam.fov) * Math.PI / 360) : 1;
     const set = (b, k, x, y, z, rx, ry, rz, fecha, palma) => {
       b.position.set(x * f, lerp(-0.62, y, k) * f, z * f); b.rotation.set(rx + (palma ? 1.25 : 0), ry, rz); b.visible = k > 0.01;
       b.scale.setScalar(1);

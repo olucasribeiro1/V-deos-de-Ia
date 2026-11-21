@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 from numeros import achar_numeros
 amb = lambda n, g=-30: {"name": n, "gain": g}
 DIS = {"type": "fade", "dur": 0.5}; ZOOM = {"type": "zoom", "dur": 0.35}; CUT = {"type": "cut"}
-NATIVOS = ("hit", "pop", "ding", "stinger", "glitch", "heartbeat", "whistle", "whoosh", "riser", "impact", "freeze", "shimmer", "footstep", "kick", "carpass", "rain", "thunder", "wind", "flash", "buzz", "powerup", "counter", "tick", "clock", "slowmo", "swish", "blip", "cheer", "applause", "murmur", "phonebuzz", "phonering", "roomtone", "city", "hum", "crickets", "fluorescent", "conveniencia", "flicker", "cafeteira", "tv_static", "glass_knock", "door_creak", "distant_crash", "door_chime", "metal_drag", "truck_leave", "dread")
+NATIVOS = ("hit", "pop", "ding", "stinger", "glitch", "heartbeat", "whistle", "whoosh", "riser", "impact", "freeze", "shimmer", "footstep", "kick", "carpass", "rain", "thunder", "wind", "flash", "buzz", "powerup", "counter", "tick", "clock", "slowmo", "swish", "blip", "cheer", "applause", "murmur", "phonebuzz", "phonering", "roomtone", "city", "hum", "crickets", "fluorescent", "conveniencia", "flicker", "cafeteira", "tv_static", "glass_knock", "door_creak", "distant_crash", "door_chime", "metal_drag", "truck_leave", "dread", "madrugada", "boots_tile", "register_beep", "switch_click", "glass_scratch", "drag_steps", "radio_static", "synth_pad", "vhs_rewind")
 
 def monta(arquivo, S, titulo, hud=(), musica=(), sem_nums=(), sem_hud=(), sem_leg=()):
     P = os.path.dirname(os.path.dirname(os.path.abspath(arquivo)))

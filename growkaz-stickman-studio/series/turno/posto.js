@@ -246,7 +246,7 @@ export function posto(st, o = {}) {
   const mont = lam('#34383e');
   for (const x of [-6, -4.6, -2.3, -0.55, 0.55, 2, 4, 6]) loja.add(cbox(0.1, 3, 0.13, mont, x, 1.5, 0, 0.02));
   loja.add(box(12, 0.5, 0.16, lam('#2a7a6c'), 0, 2.75, 0)); loja.add(box(12, 0.1, 0.15, mont, 0, 0.05, 0)); loja.add(box(12, 0.06, 0.14, mont, 0, 1.05, 0.005));
-  const vidro = luz('#ffffff', { map: tVidro(), transparent: true, opacity: 0.55, depthWrite: false, side: THREE.DoubleSide });
+  const vidro = luz('#7a8a96', { map: tVidro(), transparent: true, opacity: 0.16, depthWrite: false, side: THREE.DoubleSide });   // bem sutil: no tom linear qualquer véu claro vira névoa
   for (const [x, w] of [[-5.3, 1.4], [-3.45, 2.3], [-1.425, 1.75], [1.275, 1.45], [3, 2], [5, 2]]) loja.add(pl(w - 0.1, 2.5, vidro, x, 1.25, 0));
   // porta de vidro (dobradiça em x=-0.55; abre pra fora, -z)
   const porta = new THREE.Group(); porta.position.set(-0.55, 0, 0); loja.add(porta);
@@ -261,7 +261,7 @@ export function posto(st, o = {}) {
   const mLum = luz('#eaffcf'), mLumOff = luz('#3a4440');
   for (const x of [-3, 0, 3]) for (const z of [2, 5, 8]) { loja.add(cbox(1.42, 0.07, 0.42, lam('#8a8c88'), x, 2.955, z, 0.02)); const l = box(1.3, 0.03, 0.3, mLum, x, 2.915, z); loja.add(l); M.lumis.push(l); }
   M.luzes = [];
-  for (const [x, z] of [[-3, 2.5], [2.5, 2.5], [-2.5, 7.5], [2.5, 7.5]]) { const p = new THREE.PointLight(new THREE.Color(FLUOR), 7, 11, 1.2); p.position.set(x, 2.7, z); loja.add(p); M.luzes.push(p); }
+  for (const [x, z] of [[-3, 2.5], [2.5, 2.5], [-2.5, 7.5], [2.5, 7.5]]) { const p = new THREE.PointLight(new THREE.Color(FLUOR), 6, 11, 1.2); p.position.set(x, 2.7, z); loja.add(p); M.luzes.push(p); }
   M.mLum = mLum; M.mLumOff = mLumOff;
   // gôndolas: blocos com faces de produtos pintadas
   for (const [gi, gx] of [[0, -3.2], [1, -0.4]]) {
@@ -293,7 +293,7 @@ export function posto(st, o = {}) {
   // placa CAIXA pendurada
   loja.add(pl(0.9, 0.3, luz('#ffffff', { map: placa(60, 20, '#e2c040', (g, w, h) => { g.fillStyle = '#1a2a28'; g.font = 'bold 13px monospace'; g.fillText('CAIXA', w / 2, h / 2 + 1); }), side: THREE.DoubleSide }), 3.4, 2.55, 2.2)); for (const dx of [-0.35, 0.35]) loja.add(box(0.01, 0.3, 0.01, lam('#555'), 3.4 + dx, 2.85, 2.2));
   // caixa registradora: base, gaveta, teclado inclinado, visor do cliente
-  const reg = new THREE.Group(); reg.position.set(2.8, 1.06, 2.25); loja.add(reg);
+  const reg = new THREE.Group(); reg.position.set(2.05, 1.06, 2.3); loja.add(reg);
   reg.add(cbox(0.44, 0.12, 0.4, lam('#2a2c30'), 0, 0.06, 0, 0.02));
   const tec = new THREE.Mesh(tbox(0.36, 0.1, 0.24, 1, 0.5), [lam('#3a3c40'), lam('#3a3c40'), lam('#ffffff', { map: tex(24, 16, (g) => { g.fillStyle = '#2a2c30'; g.fillRect(0, 0, 24, 16); for (let y = 1; y < 16; y += 4) for (let x = 1; x < 24; x += 4) { g.fillStyle = y < 4 && x > 16 ? '#c8a040' : '#c8c8c0'; g.fillRect(x, y, 3, 3); } }) }), lam('#222'), lam('#3a3c40'), lam('#3a3c40')]); tec.position.set(0, 0.17, 0.05); reg.add(tec);
   reg.add(cbox(0.3, 0.14, 0.05, lam('#2a2c30'), 0, 0.33, -0.12, 0.02)); const vis = pl(0.24, 0.08, luz('#7aff9a', { map: tex(24, 8, (g) => { g.fillStyle = '#0a2a14'; g.fillRect(0, 0, 24, 8); g.fillStyle = '#7aff9a'; g.fillRect(2, 2, 2, 4); g.fillRect(6, 2, 2, 4); g.fillRect(12, 2, 2, 4); g.fillRect(16, 2, 2, 4); g.fillRect(9, 5, 1, 1); }), decal: 1 }), 0, 0.33, -0.149); vis.rotation.y = Math.PI; reg.add(vis);
@@ -386,6 +386,7 @@ export function posto(st, o = {}) {
   for (let i = 0, n = 0; i < 400 && n < 75; i++) { const x = -13.3 - R() * 26, z = 3 - R() * 24; if (Math.hypot(x - POSTE[0], z - POSTE[1]) < 6.4 || z < -16.2) continue; arv(x, z, 1.1 + R() * 1.1); n++; }
   for (let i = 0, n = 0; i < 300 && n < 40; i++) { const x = -12.5 - R() * 18, z = 2 - R() * 20; if (Math.hypot(x - POSTE[0], z - POSTE[1]) < 5.9 || z < -16.2) continue; moita(x, z, 0.8 + R() * 0.6); n++; }
   for (let i = 0; i < 40; i++) moita(-60 + i * 3 + R(), -28 - R() * 3, 0.9 + R() * 0.5);
+  for (let i = 0; i < 22; i++) { const x = 17 + R() * 30, z = 6 - R() * 21; arv(x, z, 0.9 + R() * 1.0); if (i % 2) moita(x + 2, z + 1, 0.8); }
   // céu: azul-petróleo profundo, casando com a neblina
   const ceu = new THREE.Mesh(new THREE.SphereGeometry(220, 12, 8), new THREE.MeshBasicMaterial({ side: THREE.BackSide, fog: false, map: tex(4, 64, (g) => { const gr = g.createLinearGradient(0, 0, 0, 64); gr.addColorStop(0, '#02050a'); gr.addColorStop(0.3, '#061220'); gr.addColorStop(0.48, '#0c1a28'); gr.addColorStop(0.52, '#0c1a28'); gr.addColorStop(1, '#05090e'); g.fillStyle = gr; g.fillRect(0, 0, 4, 64); }) }));
   ceu.material.map.magFilter = THREE.LinearFilter; ceu.material.map.minFilter = THREE.LinearFilter; ceu.material.map.generateMipmaps = false; S.add(ceu);
@@ -399,7 +400,7 @@ function M_(geo, m, x = 0, y = 0, z = 0) { const me = new THREE.Mesh(geo, m); me
 export function luzesLoja(M, T, o = {}) {
   const pisca = o.pisca ?? 0, base = o.k ?? 1;
   M.lumis.forEach((l, i) => { const on = i === 7 && pisca > 0 ? (noise(T * 14, 3) > -0.2 + 0.6 * (1 - pisca)) : true; l.material = on && base > 0.3 ? M.mLum : M.mLumOff; });
-  M.luzes.forEach((p, i) => { p.intensity = 7 * base * (i === 3 && pisca > 0 ? (0.4 + 0.6 * (noise(T * 14, 3) > 0 ? 1 : 0)) : 1); });
+  M.luzes.forEach((p, i) => { p.intensity = 6 * base * (i === 3 && pisca > 0 ? (0.4 + 0.6 * (noise(T * 14, 3) > 0 ? 1 : 0)) : 1); });
 }
 // gota da cafeteira
 export function pinga(M, T) { const ph = (T * 1.4) % 1; M.gota.position.y = 0.33 - ph * 0.12; M.gota.visible = ph < 0.8; }

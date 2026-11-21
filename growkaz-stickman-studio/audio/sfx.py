@@ -417,6 +417,92 @@ def dread(dur=6.0, seed=52, **_):
     return normalize(reverb(stereo(x, 0, 0.6), 2.5, 0.3, seed), -3)
 
 
+
+# ---------- Turno da Madrugada v2: foley e ambiente pedidos pelo usuário ----------
+@sfx("ambiente da loja de madrugada: reator de fluorescente agudo + geladeira comercial grave abafada + vento leve nas frestas (loopable)", 8.0)
+def madrugada(dur=8.0, seed=60, **_):
+    n = secs(dur); t = t_axis(n)
+    fl = sum(sine(120 * h, n) * a for h, a in [(1, 0.22), (2, 0.14), (3, 0.12), (4, 0.06), (6, 0.05)]) + hp(noise(n, seed), 7000) * 0.025
+    fl = fl * (0.92 + 0.08 * np.sin(2 * np.pi * 0.31 * t))
+    fr = lp(sine(55, n) * 0.6 + osc("saw", 55, n) * 0.2 + sine(110, n) * 0.2, 220) * (0.8 + 0.2 * np.sin(2 * np.pi * 0.11 * t))
+    wnd = bp(noise(n, seed + 3, "pink"), 300, 1400) * (0.35 + 0.65 * np.clip(lp(noise(n, seed + 4), 0.6) * 25, 0, 1)) * 0.25
+    x = lp(fl, 3200) * 0.5 + fr * 0.9 + wnd
+    return normalize(stereo(x, 0, 0.7, seed), -12)
+
+
+@sfx("passo de bota no piso cerâmico (estalo seco + corpo grave)", 0.35)
+def boots_tile(dur=0.35, seed=61, **_):
+    n = secs(dur); x = _thump(n, 180, 70, 0.05, 0.6, seed) * 0.7
+    k = secs(0.006); x[:k] += hp(noise(k, seed + 1), 2500) * 0.9
+    x += bp(noise(n, seed + 2), 1800, 5000) * expdec(n, 0.012) * 0.5
+    return normalize(reverb(stereo(x), 0.5, 0.18, seed), -3)
+
+
+@sfx("bipe da caixa registradora (2 bipes curtos)", 0.5)
+def register_beep(dur=0.5, seed=62, **_):
+    n = secs(dur); x = np.zeros(n, np.float32)
+    for k in (0.0, 0.16):
+        s = secs(k); m = min(secs(0.09), n - s); x[s:s + m] += osc("square", 2350, m) * env_adsr(m, 0.002, 0.02, 0.8, 0.02) * 0.4
+    return normalize(reverb(stereo(lp(x, 6000)), 0.4, 0.12, seed), -6)
+
+
+@sfx("estalo de interruptor de luz", 0.25)
+def switch_click(dur=0.25, seed=63, **_):
+    n = secs(dur); x = np.zeros(n, np.float32)
+    for k, a in ((0.0, 1.0), (0.018, 0.6)):
+        s = secs(k); m = secs(0.03); x[s:s + m] += bp(noise(m, seed + int(k * 1000)), 1500, 7000) * expdec(m, 0.004) * a
+    return normalize(reverb(stereo(x), 0.4, 0.15, seed), -4)
+
+
+@sfx("unhas arranhando o vidro devagar (agudo, áspero)", 2.4)
+def glass_scratch(dur=2.4, seed=64, **_):
+    n = secs(dur); u = np.linspace(0, 1, n)
+    f = 2600 + 700 * np.sin(2 * np.pi * 0.6 * u) + 300 * lp(noise(n, seed), 6) * 20
+    stick = np.clip(0.5 + 0.5 * np.sign(np.sin(2 * np.pi * np.cumsum(38 + 25 * u) / SR)) * 0.8 + lp(noise(n, seed + 1), 40) * 6, 0, 1)
+    x = (osc("saw", f, n) * 0.25 + bp(noise(n, seed + 2), 2000, 7000) * 0.6) * stick * np.sin(np.pi * u) ** 0.6
+    return normalize(reverb(stereo(bp(x, 900, 9000), 0, 0.3), 0.8, 0.2, seed), -4)
+
+
+@sfx("passos lentos e arrastados no asfalto molhado (lá fora)", 4.0)
+def drag_steps(dur=4.0, seed=65, **_):
+    n = secs(dur); x = np.zeros(n, np.float32); r = rng(seed); t = 0.15
+    while t < dur - 0.6:
+        s = secs(t); m = min(secs(0.7), n - s); tt = np.linspace(0, 1, m)
+        x[s:s + m] += lp(noise(m, seed + s), 900) * np.exp(-tt * 3) * np.sin(np.pi * tt) * 0.8           # arrasto
+        k = min(secs(0.06), n - s); x[s:s + k] += lp(_thump(k, 120, 50, 0.03, 0.4, seed), 600)[:k] * 0.8 # pisada
+        w = min(secs(0.25), n - s); x[s:s + w] += bp(noise(w, seed + 9 + s), 1500, 5000) * expdec(w, 0.05) * 0.25   # água
+        t += 0.95 + r.random() * 0.4
+    return normalize(reverb(stereo(lp(x, 3000), 0, 0.5), 1.8, 0.35, seed), -5)
+
+
+@sfx("chiado de rádio (estática com sintonia flutuando)", 3.0)
+def radio_static(dur=3.0, seed=66, **_):
+    n = secs(dur); t = t_axis(n)
+    x = bp(noise(n, seed), 400, 4000) * (0.6 + 0.4 * np.sin(2 * np.pi * 3.1 * t)) + osc("sine", 900 + 400 * np.sin(2 * np.pi * 0.7 * t), n) * 0.06
+    x *= (lp(noise(n, seed + 1), 8) * 10 > -0.6).astype(np.float32) * 0.8 + 0.2
+    return normalize(fade(stereo(x, 0, 0.3), 0.05, 0.2), -8)
+
+
+@sfx("pad grave e lento de sintetizador (perigo chegando, sem melodia)", 8.0)
+def synth_pad(dur=8.0, seed=67, **_):
+    n = secs(dur); u = np.linspace(0, 1, n)
+    x = sum(osc("saw", f * (1 + 0.003 * k), n) * 0.25 for k, f in enumerate([55.0, 55.4, 65.4, 82.4]))
+    x = sweep_filter(x, 180, 520, q=0.7, kind="lp", curve=1.0) * np.sin(np.pi * u) ** 1.2
+    return normalize(reverb(stereo(x, 0, 0.8, seed), 3.0, 0.45, seed), -4)
+
+
+@sfx("rebobinar fita VHS: motor acelerando + chiado agudo + clique do cabeçote", 2.2)
+def vhs_rewind(dur=2.2, seed=68, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); x = np.zeros(n, np.float32)
+    k = secs(0.04); x[:k] += bp(noise(k, seed), 800, 5000) * expdec(k, 0.008)
+    run = n - secs(0.7); uu = np.linspace(0, 1, run)
+    f = 300 + 2600 * uu ** 0.7
+    x[k:k + run - k] += (osc("saw", f[:run - k], run - k) * 0.12 + bp(noise(run - k, seed + 1), 2500, 9000) * 0.5 * (0.6 + 0.4 * np.sin(2 * np.pi * 23 * uu[:run - k]))) * np.minimum(1, uu[:run - k] * 6)
+    s = run; m = secs(0.05); x[s:s + m] += bp(noise(m, seed + 2), 600, 4000) * expdec(m, 0.01) * 1.2   # clique (stop)
+    s2 = run + secs(0.25); m2 = n - s2; x[s2:] += lp(noise(m2, seed + 3), 3000) * 0.15 * np.linspace(1, 0, m2)
+    return normalize(stereo(x, 0, 0.3), -4)
+
+
 def make(name, **kw):
     if name not in LIB: raise KeyError(f"unknown sfx '{name}'. Available: {', '.join(LIB)}")
     k = {"dur": LIB[name]["dur"], **{a: b for a, b in kw.items() if b is not None}}

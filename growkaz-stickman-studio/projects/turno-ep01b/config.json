@@ -1,0 +1,29 @@
+{
+ "title": "Turno da Madrugada - Ep1 - Parte 2",
+ "aspect": "9:16",
+ "resolution": "720p",
+ "fps": 24,
+ "style": "urbano",
+ "voiceover": "input/voiceover.wav",
+ "script": null,
+ "duration": 90.274,
+ "captions": true,
+ "bars": null,
+ "fadeIn": 0.4,
+ "fadeOut": 0.6,
+ "music": {
+  "enabled": true,
+  "gainDb": -27
+ },
+ "sfx": {
+  "enabled": true,
+  "gainDb": -6
+ },
+ "loudness": -14,
+ "captionStyle": {
+  "minusculas": true,
+  "destaque": "#e8d27a",
+  "corContorno": "#05060a",
+  "contorno": 0.2
+ }
+}

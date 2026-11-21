@@ -67,18 +67,19 @@ export function cbox(w, h, d, m, x = 0, y = 0, z = 0, r = 0.03) {
 }
 
 const POS = {
-  uniforms: { tDiffuse: { value: null }, res: { value: new THREE.Vector2(RES[0], RES[1]) }, tempo: { value: 0 }, niveis: { value: 30 }, dither: { value: 0.7 }, grao: { value: 0.045 }, vinheta: { value: 0.5 }, fade: { value: 0 }, expo: { value: 1.25 }, sat: { value: 0.78 }, tint: { value: new THREE.Vector3(0.97, 1.0, 0.9) }, flash: { value: new THREE.Vector3(0, 0, 0) }, aberr: { value: 0.65 }, scan: { value: 0.2 }, vhs: { value: 0.35 }, gama: { value: 1.0 } },
+  uniforms: { tDiffuse: { value: null }, res: { value: new THREE.Vector2(RES[0], RES[1]) }, tempo: { value: 0 }, niveis: { value: 30 }, dither: { value: 0.7 }, grao: { value: 0.045 }, vinheta: { value: 0.5 }, fade: { value: 0 }, expo: { value: 1.25 }, sat: { value: 0.78 }, tint: { value: new THREE.Vector3(0.97, 1.0, 0.9) }, flash: { value: new THREE.Vector3(0, 0, 0) }, aberr: { value: 0.65 }, scan: { value: 0.2 }, vhs: { value: 0.35 }, gama: { value: 1.0 }, trk: { value: 0 } },
   vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }',
-  fragmentShader: `uniform sampler2D tDiffuse; uniform vec2 res; uniform float tempo, niveis, dither, grao, vinheta, fade, expo, sat, aberr, scan, vhs, gama; uniform vec3 tint, flash; varying vec2 vUv;
+  fragmentShader: `uniform sampler2D tDiffuse; uniform vec2 res; uniform float tempo, niveis, dither, grao, vinheta, fade, expo, sat, aberr, scan, vhs, gama, trk; uniform vec3 tint, flash; varying vec2 vUv;
   float b2(vec2 a){ a = floor(a); return fract(a.x * 0.5 + a.y * a.y * 0.75); }
   float bayer(vec2 a){ return b2(0.5 * a) * 0.25 + b2(a); }
   float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
-  vec3 tom(vec3 c){ c = max(c * expo, 0.0); c = c / (1.0 + 0.18 * c); return pow(c, vec3(1.0 / (2.2 * gama))); }
+  vec3 tom(vec3 c){ c = max(c * expo, 0.0); c = c / (1.0 + 0.32 * c); return pow(c, vec3(1.0 / (2.2 * gama))); }
   void main(){
     float row = floor(vUv.y * res.y), fr = floor(tempo * 24.0);
     // VHS: ondulação lenta por linha + uma faixa de "tracking" que desce devagar
-    float band = smoothstep(0.035, 0.0, abs(fract(vUv.y * 0.85 + tempo * 0.045) - 0.5));
+    float band = smoothstep(0.035 + 0.12 * trk, 0.0, abs(fract(vUv.y * 0.85 + tempo * (0.045 + 2.5 * trk)) - 0.5));
     float wob = vhs * (0.45 * sin(row * 0.09 + tempo * 2.3) + 0.35 * sin(row * 0.021 - tempo * 0.9) + 1.6 * band * (h(vec2(row, fr)) - 0.3));
+    wob += trk * 14.0 * (h(vec2(floor(row / 3.0), fr)) - 0.5) * step(0.6, h(vec2(floor(row / 9.0), fr + 3.0)));
     vec2 uv0 = vUv + vec2(wob / res.x, 0.0);
     vec2 px = floor(uv0 * res); vec2 uv = (px + 0.5) / res;
     float ab = (aberr + 0.8 * band) / res.x;
@@ -102,8 +103,10 @@ export function palcoPS1(T, o = {}) {
   const scene = new THREE.Scene(); scene.background = C(o.fundo ?? '#0a1724');
   scene.fog = new THREE.Fog(C(o.neblina ?? '#0c1a28'), 1, 1000);
   FOG.start.value = o.fogStart ?? 12; FOG.dens.value = o.fogDens ?? 0.065;
-  const camera = new THREE.PerspectiveCamera(o.fov ?? 66, E.W / E.H, 0.1, 320); scene.add(camera);
-  const [w, h] = RES;
+  // vertical: 360x640. Horizontal (render --wide): o canvas 3D ocupa o quadro todo e a câmera vê mais dos lados (640x360)
+  if (E.wide) R.setSize(E.outW, E.outH, false);
+  const [w, h] = E.wide ? [640, 360] : RES;
+  const camera = new THREE.PerspectiveCamera(o.fov ?? 66, E.wide ? E.outW / E.outH : E.W / E.H, 0.1, 320); scene.add(camera);
   SNAP.value.set(w / 2, h / 2);
   const rt = new THREE.WebGLRenderTarget(w, h, { type: THREE.HalfFloatType, minFilter: THREE.NearestFilter, magFilter: THREE.NearestFilter, depthBuffer: true, generateMipmaps: false });
   rt.depthTexture = new THREE.DepthTexture(w, h); rt.depthTexture.type = THREE.FloatType;   // profundidade 32F: nada de z-fighting
@@ -144,7 +147,9 @@ export function olhar(cam, T, R, o = {}) {
   if (tr > 0) { yaw += tr * 0.02 * noise(T * 11, 3); pitch += tr * 0.02 * noise(T * 12, 7); x += tr * 0.02 * noise(T * 9, 1); }
   cam.position.set(x, y, z);
   cam.rotation.order = 'YXZ'; cam.rotation.set(pitch, -yaw, roll);
-  if (Math.abs(cam.fov - v.f) > 1e-3) { cam.fov = v.f; cam.updateProjectionMatrix(); }
+  // no horizontal a altura visível é 1390/1920 do quadro vertical: mesmo enquadramento vertical, mais cenário nos lados
+  const fv = E.wide ? 2 * Math.atan(Math.tan(v.f * Math.PI / 360) * 1390 / 1920) * 180 / Math.PI : v.f; cam.userData.fv = v.f;
+  if (Math.abs(cam.fov - fv) > 1e-3) { cam.fov = fv; cam.updateProjectionMatrix(); }
   cam.updateMatrixWorld();
   return { vel, anda, yaw, pitch, fase };
 }

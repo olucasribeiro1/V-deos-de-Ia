@@ -1,19 +1,19 @@
 {
- "title": "Turno da Madrugada - Ep1 - O Ultimo Cafe",
+ "title": "Turno da Madrugada - Ep1 - Parte 1",
  "aspect": "9:16",
  "resolution": "720p",
  "fps": 24,
  "style": "urbano",
  "voiceover": "input/voiceover.wav",
  "script": null,
- "duration": 152.874,
+ "duration": 90.05,
  "captions": true,
  "bars": null,
  "fadeIn": 0.4,
  "fadeOut": 0.6,
  "music": {
   "enabled": true,
-  "gainDb": -19
+  "gainDb": -27
  },
  "sfx": {
   "enabled": true,
