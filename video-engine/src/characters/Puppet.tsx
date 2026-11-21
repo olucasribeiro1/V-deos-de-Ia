@@ -1,6 +1,6 @@
 import React from 'react';
 import {useUid} from '../lib/useUid';
-import {DressShoe, Head, Limb, MittenHand, Pt, Sneaker} from './parts';
+import {BareFoot, DressShoe, Head, HeelShoe, Limb, MittenHand, Pt, Sneaker} from './parts';
 import type {Expression, Lighting, Outfit, Pose} from './types';
 import {SUNSET_LIGHT} from './types';
 
@@ -19,6 +19,8 @@ export type PuppetProps = {
   ghost?: {opacity: number; color: string; dash?: number};
   /** something held in front of the chest, drawn between torso and arms (local units) */
   heldProp?: React.ReactNode;
+  /** things hanging from a wrist (e.g. heels carried in the hand); drawn at the wrist, unrotated, local units, in front of the hand */
+  handProps?: {L?: React.ReactNode; R?: React.ReactNode};
 };
 
 const HIP_Y = -480;
@@ -48,7 +50,7 @@ export const DEFAULT_POSE: Required<Pose> = {
   bob: 0,
 };
 
-export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, light = SUNSET_LIGHT, upperOnly, ghost, heldProp}) => {
+export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, light = SUNSET_LIGHT, upperOnly, ghost, heldProp, handProps}) => {
   const p = {...DEFAULT_POSE, ...pose};
   const tid = useUid('torso');
   const tshade = useUid('tshade');
@@ -78,8 +80,20 @@ export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, lig
   const torsoPath = `M -70,${NECK_Y - 4} Q -132,${NECK_Y} -142,${NECK_Y + 46} L -124,${hem - 18} Q -124,${hem} -104,${hem} L 104,${hem} Q 124,${hem} 124,${hem - 18} L 142,${NECK_Y + 46} Q 132,${NECK_Y} 70,${NECK_Y - 4} Z`;
 
   const handTone = outfit.gloves ? {base: '#17171b', shade: '#050507', light: '#4a4c55'} : outfit.skin;
-  const armW = isSuit ? 64 : 66;
-  const legW = 70;
+  const isDress = outfit.torso === 'dress';
+  const armW = outfit.armW ?? (isSuit ? 64 : 66);
+  const legW = outfit.legW ?? 70;
+  const armTone = isDress ? outfit.skin : top;
+  // dress: skirt hem follows the legs a little (walk / stance)
+  const hemY = -196;
+  const skew = ((p.hipL + p.hipR) / 2) * 3.2;
+  const spread = Math.max(0, p.hipR - p.hipL - 6) * 2.2;
+  const hemL = -166 - spread + skew;
+  const hemR = 166 + spread + skew;
+  const N = NECK_Y;
+  const skirtPath = `M -86,${HIP_Y - 64} Q -118,${HIP_Y - 10} -124,${HIP_Y + 34} Q ${-140 + skew * 0.3},${HIP_Y + 170} ${hemL},${hemY} Q ${(hemL + hemR) / 2 - 40},${hemY + 22} ${(hemL + hemR) / 2},${hemY + 10} Q ${(hemL + hemR) / 2 + 40},${hemY + 22} ${hemR},${hemY} Q ${140 + skew * 0.3},${HIP_Y + 170} 124,${HIP_Y + 34} Q 118,${HIP_Y - 10} 86,${HIP_Y - 64} Z`;
+  const bodicePath = `M -112,${N + 70} Q -60,${N + 26} 0,${N + 82} Q 60,${N + 26} 112,${N + 70} L 116,${N + 122} Q 108,${HIP_Y - 120} 86,${HIP_Y - 60} L -86,${HIP_Y - 60} Q -108,${HIP_Y - 120} -116,${N + 122} Z`;
+  const shouldersPath = `M -58,${N - 4} Q -112,${N} -120,${N + 40} L -116,${N + 110} L 116,${N + 110} L 120,${N + 40} Q 112,${N} 58,${N - 4} Z`;
 
   if (ghost) {
     const st = {stroke: ghost.color, strokeWidth: 7, fill: 'none', strokeDasharray: ghost.dash ? `${ghost.dash} ${ghost.dash * 0.7}` : undefined, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const};
@@ -121,10 +135,22 @@ export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, lig
       {!upperOnly && (
         <g>
           {/* pelvis */}
-          <path d={`M -116,${HIP_Y - 10} L 116,${HIP_Y - 10} L 112,${HIP_Y + 60} Q 0,${HIP_Y + 80} -112,${HIP_Y + 60} Z`} fill={outfit.legs.base} />
+          {!isDress && <path d={`M -116,${HIP_Y - 10} L 116,${HIP_Y - 10} L 112,${HIP_Y + 60} Q 0,${HIP_Y + 80} -112,${HIP_Y + 60} Z`} fill={outfit.legs.base} />}
           <Limb pts={[hipL, kneeL, step(kneeL, p.hipL + p.knL, SHIN - 34)]} w={legW} tone={outfit.legs} light={light} />
           <Limb pts={[hipR, kneeR, step(kneeR, p.hipR + p.knR, SHIN - 34)]} w={legW} tone={outfit.legs} light={light} />
-          {outfit.shoes === 'sneaker' ? (
+          {outfit.shoes === 'heels' || outfit.shoes === 'barefoot' ? (
+            outfit.shoes === 'heels' ? (
+              <>
+                <HeelShoe at={ankL} side={-1} tone={outfit.shoeColor} skin={outfit.skin} />
+                <HeelShoe at={ankR} side={1} tone={outfit.shoeColor} skin={outfit.skin} />
+              </>
+            ) : (
+              <>
+                <BareFoot at={ankL} side={-1} skin={outfit.skin} />
+                <BareFoot at={ankR} side={1} skin={outfit.skin} />
+              </>
+            )
+          ) : outfit.shoes === 'sneaker' ? (
             <>
               <Sneaker at={[ankL[0], ankL[1] - 6]} side={-1} tone={outfit.shoeColor} light={light} />
               <Sneaker at={[ankR[0], ankR[1] - 6]} side={1} tone={outfit.shoeColor} light={light} />
@@ -138,13 +164,51 @@ export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, lig
         </g>
       )}
 
+      {isDress && (
+        <g transform={`rotate(${p.lean * 0.35} 0 ${HIP_Y})`}>
+          <path d={skirtPath} fill={`url(#${tid})`} />
+          <path d={skirtPath} fill={`url(#${tshade})`} />
+          {[-0.55, -0.15, 0.25, 0.6].map((k) => (
+            <path
+              key={k}
+              d={`M ${k * 120},${HIP_Y - 40} Q ${k * 150 + skew * 0.2},${HIP_Y + 120} ${k * 175 + skew * 0.6 + (k > 0 ? spread : -spread) * 0.6},${hemY + 6}`}
+              stroke={top.shade}
+              strokeWidth={9}
+              fill="none"
+              strokeLinecap="round"
+              opacity={0.45}
+            />
+          ))}
+          <path d={`M ${hemL + 8},${hemY - 4} Q ${(hemL + hemR) / 2},${hemY + 18} ${hemR - 8},${hemY - 4}`} stroke={top.light} strokeWidth={5} fill="none" opacity={0.5} />
+        </g>
+      )}
       <g transform={`rotate(${p.lean} 0 ${HIP_Y})`}>
         {/* neck */}
-        <rect x={-34} y={NECK_Y - 70} width={68} height={90} rx={20} fill={outfit.skin.shade} />
+        <rect x={isDress ? -28 : -34} y={NECK_Y - 70} width={isDress ? 56 : 68} height={90} rx={20} fill={outfit.skin.shade} />
         {/* torso */}
-        <path d={torsoPath} fill={`url(#${tid})`} />
-        <path d={torsoPath} fill={`url(#${tshade})`} />
-        {outfit.torso === 'hoodie' ? (
+        {isDress ? (
+          <g>
+            <path d={shouldersPath} fill={outfit.skin.base} />
+            <path d={`M -40,${N + 30} Q 0,${N + 52} 40,${N + 30}`} stroke={outfit.skin.shade} strokeWidth={5} fill="none" opacity={0.5} />
+            <path d={bodicePath} fill={`url(#${tid})`} />
+            <path d={bodicePath} fill={`url(#${tshade})`} />
+            <path d={`M -112,${N + 70} Q -60,${N + 26} 0,${N + 82} Q 60,${N + 26} 112,${N + 70}`} stroke={top.light} strokeWidth={6} fill="none" opacity={0.7} />
+            {/* straps */}
+            <path d={`M -84,${N + 54} L -70,${N - 2}`} stroke={top.base} strokeWidth={12} strokeLinecap="round" />
+            <path d={`M 84,${N + 54} L 70,${N - 2}`} stroke={top.base} strokeWidth={12} strokeLinecap="round" />
+            {/* gold belt */}
+            <rect x={-92} y={HIP_Y - 72} width={184} height={16} rx={7} fill="#c9962e" />
+            <rect x={-92} y={HIP_Y - 72} width={184} height={5} rx={2} fill="#f3d27a" opacity={0.8} />
+            <rect x={-14} y={HIP_Y - 76} width={28} height={24} rx={6} fill="#e9bf55" stroke="#9c6f1c" strokeWidth={3} />
+            <path d={`M -30,${N + 140} Q 0,${N + 170} 30,${N + 140}`} stroke={top.shade} strokeWidth={6} fill="none" opacity={0.5} />
+          </g>
+        ) : (
+          <>
+            <path d={torsoPath} fill={`url(#${tid})`} />
+            <path d={torsoPath} fill={`url(#${tshade})`} />
+          </>
+        )}
+        {isDress ? null : outfit.torso === 'hoodie' ? (
           <g>
             <rect x={-124} y={hem - 34} width={248} height={34} rx={14} fill={top.shade} opacity={0.55} />
             <path d={`M -78,${HIP_Y - 120} L 78,${HIP_Y - 120} L 92,${HIP_Y - 30} L -92,${HIP_Y - 30} Z`} fill={top.shade} opacity={0.28} />
@@ -159,9 +223,27 @@ export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, lig
         ) : (
           <g>
             <path d={`M -44,${NECK_Y - 2} L 44,${NECK_Y - 2} L 0,${NECK_Y + 150} Z`} fill="#eef0f3" />
-            <path d={`M -12,${NECK_Y + 8} L 12,${NECK_Y + 8} L 16,${NECK_Y + 150} L 0,${NECK_Y + 172} L -16,${NECK_Y + 150} Z`} fill="#15161b" />
-            <path d={`M -48,${NECK_Y - 4} L -6,${NECK_Y + 170} L -52,${NECK_Y + 70} L -76,${NECK_Y + 40} Z`} fill={top.shade} />
-            <path d={`M 48,${NECK_Y - 4} L 6,${NECK_Y + 170} L 52,${NECK_Y + 70} L 76,${NECK_Y + 40} Z`} fill={top.shade} />
+            {outfit.neckwear === 'bow' ? (
+              <g>
+                {[60, 98, 136].map((dy) => (
+                  <circle key={dy} cx={0} cy={NECK_Y + dy} r={5.5} fill="#1a1b20" />
+                ))}
+              </g>
+            ) : (
+              <path d={`M -12,${NECK_Y + 8} L 12,${NECK_Y + 8} L 16,${NECK_Y + 150} L 0,${NECK_Y + 172} L -16,${NECK_Y + 150} Z`} fill="#15161b" />
+            )}
+            <path d={`M -48,${NECK_Y - 4} L -6,${NECK_Y + 170} L -52,${NECK_Y + 70} L -76,${NECK_Y + 40} Z`} fill={outfit.neckwear === 'bow' ? '#2b2c34' : top.shade} />
+            <path d={`M 48,${NECK_Y - 4} L 6,${NECK_Y + 170} L 52,${NECK_Y + 70} L 76,${NECK_Y + 40} Z`} fill={outfit.neckwear === 'bow' ? '#2b2c34' : top.shade} />
+            {outfit.neckwear === 'bow' && (
+              <g>
+                <path d={`M -40,${NECK_Y + 10} L -14,${NECK_Y + 120}`} stroke="#6a6d78" strokeWidth={5} opacity={0.55} strokeLinecap="round" />
+                <path d={`M 40,${NECK_Y + 10} L 14,${NECK_Y + 120}`} stroke="#6a6d78" strokeWidth={5} opacity={0.35} strokeLinecap="round" />
+                <path d={`M -4,${NECK_Y + 16} L -46,${NECK_Y - 2} Q -52,${NECK_Y + 18} -46,${NECK_Y + 38} Z`} fill="#0c0c0f" />
+                <path d={`M 4,${NECK_Y + 16} L 46,${NECK_Y - 2} Q 52,${NECK_Y + 18} 46,${NECK_Y + 38} Z`} fill="#0c0c0f" />
+                <rect x={-11} y={NECK_Y + 6} width={22} height={22} rx={6} fill="#1d1e24" />
+                <path d={`M -40,${NECK_Y + 6} L -20,${NECK_Y + 14}`} stroke="#5a5d68" strokeWidth={3} opacity={0.7} strokeLinecap="round" />
+              </g>
+            )}
             <path d={`M 0,${NECK_Y + 172} L 0,${hem}`} stroke={top.shade} strokeWidth={4} />
             <circle cx={9} cy={HIP_Y - 70} r={7} fill="#111" />
             <circle cx={9} cy={HIP_Y - 20} r={7} fill="#111" />
@@ -171,9 +253,9 @@ export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, lig
 
         {heldProp}
         {/* arms */}
-        <Limb pts={[shL, elbL, wrL]} w={armW} tone={top} light={light} />
-        <Limb pts={[shR, elbR, wrR]} w={armW} tone={top} light={light} />
-        {outfit.torso === 'hoodie' ? (
+        <Limb pts={[shL, elbL, wrL]} w={armW} tone={armTone} light={light} />
+        <Limb pts={[shR, elbR, wrR]} w={armW} tone={armTone} light={light} />
+        {isDress ? null : outfit.torso === 'hoodie' ? (
           <>
             <Limb pts={[cuffL, wrL]} w={armW * 0.92} tone={{...top, base: top.shade}} light={light} />
             <Limb pts={[cuffR, wrR]} w={armW * 0.92} tone={{...top, base: top.shade}} light={light} />
@@ -186,6 +268,8 @@ export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, lig
         )}
         <MittenHand at={wrL} angle={p.shL + p.elL} tone={handTone} light={light} thumbSide={1} />
         <MittenHand at={wrR} angle={p.shR + p.elR} tone={handTone} light={light} thumbSide={-1} />
+        {handProps?.L && <g transform={`translate(${wrL[0]},${wrL[1]})`}>{handProps.L}</g>}
+        {handProps?.R && <g transform={`translate(${wrR[0]},${wrR[1]})`}>{handProps.R}</g>}
 
         {/* head */}
         <g transform={`rotate(${p.headTilt} 0 ${NECK_Y}) translate(0,${HEAD_Y})`}>

@@ -40,21 +40,34 @@ export type Pose = {
 };
 
 export type HeadStyle = {
-  hair: 'quiff' | 'buzz' | 'bald';
+  hair: 'quiff' | 'buzz' | 'bald' | 'curlyBun';
   hairColor: string;
   beard?: boolean;
   sunglasses?: boolean;
+  /** small earrings colour (e.g. gold) — optional, off by default */
+  earrings?: string;
+  /** eyelash flicks at the outer eye corners */
+  lashes?: boolean;
+  /** lip colour (replaces the default dark mouth line) */
+  lipstick?: string;
+  /** eyebrow stroke width (default 15) */
+  browWidth?: number;
 };
 
 export type Outfit = {
   skin: Tone;
-  torso: 'hoodie' | 'suit';
+  torso: 'hoodie' | 'suit' | 'dress';
   top: Tone;
   legs: Tone;
-  shoes: 'sneaker' | 'dress';
+  shoes: 'sneaker' | 'dress' | 'heels' | 'barefoot';
   shoeColor: Tone;
   gloves: boolean;
   head: HeadStyle;
+  /** suit neckwear: default long tie; 'bow' = tuxedo bow tie with satin lapels */
+  neckwear?: 'tie' | 'bow';
+  /** limb thickness overrides (defaults: arms 64/66, legs 70) */
+  armW?: number;
+  legW?: number;
 };
 
 export type Lighting = {

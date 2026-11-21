@@ -1,0 +1,385 @@
+[
+ {
+  "id": "habit",
+  "start": 41.529,
+  "end": 42.829,
+  "desc": "Davi em frente à parede de sinalização de banheiros (pictogramas), sorriso de canto, toca o nariz — 'tinha um costume'",
+  "sfx": [
+   {
+    "t": 41.691,
+    "what": "whoosh in"
+   }
+  ]
+ },
+ {
+  "id": "stall",
+  "start": 42.829,
+  "end": 44.129,
+  "desc": "Fileira de cabines; brilho azul do rastro vaza por baixo da porta da cabine 2 em 'banheiro'; indicador fica vermelho",
+  "sfx": [
+   {
+    "t": 43.398,
+    "what": "zap elétrico abafado + brilho"
+   }
+  ]
+ },
+ {
+  "id": "plaza",
+  "start": 44.129,
+  "end": 45.476,
+  "desc": "Chegada em praça aberta: rastro + onda de choque, pombos e papéis voam, chapéu de pedestre sai voando",
+  "sfx": [
+   {
+    "t": 44.431,
+    "what": "BOOM de ar / estalo"
+   },
+   {
+    "t": 44.722,
+    "what": "revoada de pombos + papéis"
+   }
+  ]
+ },
+ {
+  "id": "diagram",
+  "start": 45.476,
+  "end": 46.73,
+  "desc": "Diagrama: silhueta-fantasma do Davi empurrando moléculas de ar para fora, setas radiais; HUD 'AR 70 L'",
+  "sfx": [
+   {
+    "t": 45.476,
+    "what": "whoosh sintético"
+   },
+   {
+    "t": 45.883,
+    "what": "tick do HUD"
+   }
+  ]
+ },
+ {
+  "id": "install",
+  "start": 46.73,
+  "end": 47.682,
+  "desc": "Dentro da cabine: Davi se materializa, luz azul enche o cubículo, papel higiênico desenrola com o ar",
+  "sfx": [
+   {
+    "t": 46.73,
+    "what": "zap + sopro"
+   }
+  ]
+ },
+ {
+  "id": "slam",
+  "start": 47.682,
+  "end": 48.948,
+  "desc": "Exterior: porta da cabine bate com força (BLAM!), tremida; HUD 'AR 70 L → 1 PORTA'",
+  "sfx": [
+   {
+    "t": 47.682,
+    "what": "porta de cabine batendo forte"
+   },
+   {
+    "t": 48.042,
+    "what": "eco curto"
+   }
+  ]
+ },
+ {
+  "id": "gallery",
+  "start": 48.948,
+  "end": 49.9,
+  "desc": "Celular na mão de luva preta rolando galeria de fotos do Davi, contador FOTO # sobe até 208",
+  "sfx": [
+   {
+    "t": 48.948,
+    "what": "scroll/tick rápido"
+   }
+  ]
+ },
+ {
+  "id": "morph",
+  "start": 49.9,
+  "end": 51.223,
+  "desc": "Foto #208 cresce e vira a cena real: terraço em Mônaco ao anoitecer; HUD 'FOTO #208'",
+  "sfx": [
+   {
+    "t": 49.9,
+    "what": "swoosh de zoom"
+   },
+   {
+    "t": 50.643,
+    "what": "ambiente de festa entra"
+   }
+  ]
+ },
+ {
+  "id": "terrace",
+  "start": 51.223,
+  "end": 52.233,
+  "desc": "Plano geral do terraço: mar, iates iluminados, cordões de luz, toalhas brancas; HUD 'MÔNACO 43,7° N'",
+  "sfx": [
+   {
+    "t": 51.223,
+    "what": "ambiente gala, taças, música lounge"
+   }
+  ]
+ },
+ {
+  "id": "arrive",
+  "start": 52.233,
+  "end": 53.498,
+  "desc": "Porta do WC do terraço abre com brilho azul, Davi sai de moletom entre convidados de gala",
+  "sfx": [
+   {
+    "t": 52.407,
+    "what": "porta abre + zap leve"
+   }
+  ]
+ },
+ {
+  "id": "stare",
+  "start": 53.498,
+  "end": 54.485,
+  "desc": "Panorâmica pelos convidados de gala virando a cabeça para ele, sobrancelhas levantadas",
+  "sfx": [
+   {
+    "t": 53.498,
+    "what": "música abafa / disco arranhado leve"
+   }
+  ]
+ },
+ {
+  "id": "liaReveal",
+  "start": 54.485,
+  "end": 55.437,
+  "desc": "Revelação da Lia no bar: vestido esmeralda, coque cacheado, saltos na mão; push-in com brilho",
+  "sfx": [
+   {
+    "t": 55.019,
+    "what": "brilho/chime suave"
+   }
+  ]
+ },
+ {
+  "id": "liaLaugh",
+  "start": 55.437,
+  "end": 56.424,
+  "desc": "Lia ri apontando para o moletom",
+  "sfx": [
+   {
+    "t": 55.635,
+    "what": "risada feminina"
+   }
+  ]
+ },
+ {
+  "id": "daviLaugh",
+  "start": 56.424,
+  "end": 57.446,
+  "desc": "Davi ri apontando para os saltos",
+  "sfx": [
+   {
+    "t": 56.61,
+    "what": "risada masculina"
+   }
+  ]
+ },
+ {
+  "id": "heels",
+  "start": 57.446,
+  "end": 58.92,
+  "desc": "Close nos saltos dourados balançando na mão dela, tilt até o rosto dando de ombros",
+  "sfx": [
+   {
+    "t": 57.69,
+    "what": "tilintar dos saltos"
+   }
+  ]
+ },
+ {
+  "id": "closing",
+  "start": 58.92,
+  "end": 60.325,
+  "desc": "Os dois no balcão; garçom empilha cadeiras, luzes se apagam uma a uma; relógio HUD acelera até 02:00",
+  "sfx": [
+   {
+    "t": 58.92,
+    "what": "cadeiras empilhando"
+   },
+   {
+    "t": 59.454,
+    "what": "clique de luzes apagando"
+   }
+  ]
+ },
+ {
+  "id": "liaAsk",
+  "start": 60.325,
+  "end": 61.289,
+  "desc": "Close da Lia perguntando, luz quente",
+  "sfx": [
+   {
+    "t": 60.325,
+    "what": "ambiente calmo"
+   }
+  ]
+ },
+ {
+  "id": "ots",
+  "start": 61.289,
+  "end": 62.496,
+  "desc": "Por cima do ombro dela: Davi pensando",
+  "sfx": []
+ },
+ {
+  "id": "depende",
+  "start": 62.496,
+  "end": 63.727,
+  "desc": "Close do Davi sorrindo de canto, fotos de lugares flutuando no bokeh",
+  "sfx": [
+   {
+    "t": 62.496,
+    "what": "shimmer suave"
+   }
+  ]
+ },
+ {
+  "id": "three",
+  "start": 63.727,
+  "end": 65.004,
+  "desc": "Três portas de banheiro (Mônaco, Lisboa, Buenos Aires) abrem em sequência; Davi sai de cada uma; HUD '3 ENCONTROS'",
+  "sfx": [
+   {
+    "t": 63.727,
+    "what": "3 portas: clac-clac-clac"
+   }
+  ]
+ },
+ {
+  "id": "cities",
+  "start": 65.004,
+  "end": 66.629,
+  "desc": "Painéis rápidos: Mônaco, Lisboa (bonde amarelo, azulejos), Buenos Aires (casas coloridas); Davi saindo da porta do banheiro, Lia na mesa; carimbo de cidade em cada palavra",
+  "sfx": [
+   {
+    "t": 65.004,
+    "what": "carimbo"
+   },
+   {
+    "t": 65.41,
+    "what": "carimbo + sino de bonde"
+   },
+   {
+    "t": 65.863,
+    "what": "carimbo"
+   }
+  ]
+ },
+ {
+  "id": "miles",
+  "start": 66.629,
+  "end": 68.162,
+  "desc": "Lia sorrindo com balão de pensamento de avião; HUD 'MILHAS' disparando",
+  "sfx": [
+   {
+    "t": 66.629,
+    "what": "avião passando"
+   },
+   {
+    "t": 67.512,
+    "what": "contador ding"
+   }
+  ]
+ },
+ {
+  "id": "fourth",
+  "start": 68.162,
+  "end": 69.242,
+  "desc": "'ENCONTRO #4' — Lia na mesa à noite, acenando",
+  "sfx": [
+   {
+    "t": 68.162,
+    "what": "carimbo grave"
+   }
+  ]
+ },
+ {
+  "id": "again",
+  "start": 69.242,
+  "end": 70.124,
+  "desc": "Plano geral do terraço à noite; HUD 'MÔNACO · DE NOVO'; Davi vai até a porta do WC",
+  "sfx": [
+   {
+    "t": 69.242,
+    "what": "ambiente gala"
+   }
+  ]
+ },
+ {
+  "id": "enter",
+  "start": 70.124,
+  "end": 71.053,
+  "desc": "Davi entra no banheiro de mármore; porta abre",
+  "sfx": [
+   {
+    "t": 70.31,
+    "what": "porta pesada abre, eco de banheiro"
+   }
+  ]
+ },
+ {
+  "id": "sink",
+  "start": 71.053,
+  "end": 72.016,
+  "desc": "Banheiro de mármore: homem de smoking de costas na pia, torneira aberta",
+  "sfx": [
+   {
+    "t": 71.053,
+    "what": "água da torneira"
+   }
+  ]
+ },
+ {
+  "id": "glove",
+  "start": 72.016,
+  "end": 73.444,
+  "desc": "Close das mãos sob a torneira: espuma sai, revela luva de couro preta em 'luva'",
+  "sfx": [
+   {
+    "t": 72.016,
+    "what": "água + atrito"
+   },
+   {
+    "t": 72.852,
+    "what": "stinger grave"
+   }
+  ]
+ },
+ {
+  "id": "mirror",
+  "start": 73.444,
+  "end": 74.35,
+  "desc": "Espelho: Rocha de smoking e óculos escuros ergue a cabeça; Davi congelado no reflexo atrás",
+  "sfx": [
+   {
+    "t": 73.444,
+    "what": "stinger + reverb"
+   }
+  ]
+ },
+ {
+  "id": "rocha",
+  "start": 74.35,
+  "end": 75.941,
+  "desc": "Close do Rocha no espelho sorrindo, secando a luva; em 'Davi' vira o rosto",
+  "sfx": [
+   {
+    "t": 74.35,
+    "what": "som de toalha"
+   },
+   {
+    "t": 75.314,
+    "what": "hit grave"
+   }
+  ]
+ }
+]

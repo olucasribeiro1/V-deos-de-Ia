@@ -6,7 +6,12 @@ const SUIT = {base: '#4a4e57', shade: '#2c2f36', light: '#6c717c'};
 const TROUSERS = {base: '#3b3e46', shade: '#24262c', light: '#5a5e68'};
 const SHOES = {base: '#16161a', shade: '#050506', light: '#5d5f66'};
 
-export type AgentVariant = 'rocha' | 'agentA' | 'agentB';
+export type AgentVariant = 'rocha' | 'agentA' | 'agentB' | 'rochaGala' | 'agentGala';
+
+const TUX = {base: '#17181d', shade: '#08080b', light: '#3b3d46'};
+const TUX_TROUSERS = {base: '#121317', shade: '#060608', light: '#32343c'};
+const BLACK_SUIT = {base: '#1f2127', shade: '#0e0f13', light: '#43464f'};
+const PATENT = {base: '#0c0c0f', shade: '#000', light: '#8a8d96'};
 
 export const AGENT_OUTFITS: Record<AgentVariant, Outfit> = {
   /** Rocha: bald, short beard, charcoal suit, sunglasses, black gloves */
@@ -40,11 +45,35 @@ export const AGENT_OUTFITS: Record<AgentVariant, Outfit> = {
     gloves: true,
     head: {hair: 'bald', hairColor: '#1d1410', sunglasses: true},
   },
+  /** Rocha de gala: black tuxedo, satin lapels, bow tie — still gloves + sunglasses */
+  rochaGala: {
+    skin: {base: '#d79f78', shade: '#a8704f', light: '#efc19c'},
+    torso: 'suit',
+    top: TUX,
+    legs: TUX_TROUSERS,
+    shoes: 'dress',
+    shoeColor: PATENT,
+    gloves: true,
+    head: {hair: 'bald', hairColor: '#3a2a22', beard: true, sunglasses: true},
+    neckwear: 'bow',
+  },
+  /** gala-night agent: plain black suit + black tie */
+  agentGala: {
+    skin: {base: '#c48d66', shade: '#93603f', light: '#deae86'},
+    torso: 'suit',
+    top: BLACK_SUIT,
+    legs: TUX_TROUSERS,
+    shoes: 'dress',
+    shoeColor: PATENT,
+    gloves: true,
+    head: {hair: 'buzz', hairColor: '#8b8a8c', sunglasses: true},
+  },
 };
 
 type P = Omit<PuppetProps, 'outfit'> & {variant?: AgentVariant};
 export const Agent: React.FC<P> = ({variant = 'agentA', ...props}) => <Puppet outfit={AGENT_OUTFITS[variant]} {...props} />;
 export const Rocha: React.FC<Omit<P, 'variant'>> = (props) => <Agent variant="rocha" {...props} />;
+export const RochaGala: React.FC<Omit<P, 'variant'>> = (props) => <Agent variant="rochaGala" {...props} />;
 export const PlacedAgent: React.FC<P & {x: number; y: number; height: number; blur?: number; flip?: boolean; children?: React.ReactNode}> = ({variant = 'agentA', ...props}) => (
   <PlacedPuppet outfit={AGENT_OUTFITS[variant]} {...props} />
 );

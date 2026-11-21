@@ -95,6 +95,49 @@ export const DressShoe: React.FC<{at: Pt; side: -1 | 1; tone: Tone}> = ({at, sid
   </g>
 );
 
+/** Strappy pump with stiletto heel (feminine outfits). `at` = ankle. */
+export const HeelShoe: React.FC<{at: Pt; side: -1 | 1; tone: Tone; skin: Tone}> = ({at, side, tone, skin}) => (
+  <g transform={`translate(${at[0] + side * 4},${at[1] - 4}) scale(1.05)`}>
+    <path d="M -22,-26 Q 4,-24 30,-4 L 36,6 L -18,-4 Z" fill={skin.base} />
+    <path d="M -28,-22 Q -32,-4 -20,0 L 30,12 Q 44,13 42,2 Q 36,-8 22,-6 Q 2,-8 -14,-16 Z" fill={tone.base} />
+    <path d="M -16,-12 Q 4,-2 30,4" stroke={tone.light} strokeWidth={3.5} fill="none" strokeLinecap="round" opacity={0.85} />
+    <path d="M -24,-2 L -22,20 L -16,20 L -16,0 Z" fill={tone.shade} />
+    <path d="M -20,-24 Q -8,-34 6,-24" stroke={tone.base} strokeWidth={5} fill="none" strokeLinecap="round" />
+  </g>
+);
+
+/** Bare foot (heels carried in the hand). `at` = ankle. */
+export const BareFoot: React.FC<{at: Pt; side: -1 | 1; skin: Tone}> = ({at, side, skin}) => (
+  <g transform={`translate(${at[0] + side * 4},${at[1] + 4})`}>
+    <path d="M -22,-30 Q -30,8 -12,12 L 34,12 Q 46,10 42,-2 Q 32,-12 8,-14 Q -4,-18 -6,-30 Z" fill={skin.base} />
+    <path d="M -10,6 L 34,8" stroke={skin.shade} strokeWidth={5} strokeLinecap="round" opacity={0.6} />
+    {[22, 30, 37].map((x) => (
+      <circle key={x} cx={x} cy={2} r={3.2} fill={skin.shade} opacity={0.45} />
+    ))}
+  </g>
+);
+
+/** A pair of gold heels dangling from two fingers (wrist-local units, hanging down). `swing` in degrees. */
+export const HeelsInHand: React.FC<{tone: Tone; swing?: number; scale?: number}> = ({tone, swing = 0, scale = 1.7}) => {
+  const one = (dx: number, r: number, k: number) => (
+    <g transform={`translate(${dx},40) rotate(${swing + r}) scale(${k})`}>
+      {/* strap hooked on the fingers */}
+      <path d="M 0,0 Q -8,22 -4,40" stroke={tone.shade} strokeWidth={5} fill="none" strokeLinecap="round" />
+      <g transform="translate(-6,40) rotate(80)">
+        <path d="M -30,-20 Q -34,-2 -22,2 L 32,14 Q 46,15 44,4 Q 38,-6 24,-4 Q 4,-6 -14,-14 Z" fill={tone.base} />
+        <path d="M -18,-10 Q 4,0 32,6" stroke={tone.light} strokeWidth={4} fill="none" strokeLinecap="round" opacity={0.9} />
+        <path d="M -26,0 L -26,26 L -19,26 L -18,2 Z" fill={tone.shade} />
+      </g>
+    </g>
+  );
+  return (
+    <g transform={`scale(${scale})`}>
+      {one(-6, 6, 0.95)}
+      {one(8, -8, 1)}
+    </g>
+  );
+};
+
 /**
  * Big round head (r = 122) centred on (0,0). Face features shift with `facing`.
  */
@@ -131,7 +174,10 @@ export const Head: React.FC<{
     const open01 = 1 - blink;
     if (open01 < 0.15) {
       return (
-        <path key={side} d={`M${ex - 13},${eyeY} Q${ex},${eyeY + 7} ${ex + 13},${eyeY}`} stroke="#1c1311" strokeWidth={5} fill="none" strokeLinecap="round" />
+        <g key={side}>
+          <path d={`M${ex - 13},${eyeY} Q${ex},${eyeY + 7} ${ex + 13},${eyeY}`} stroke="#1c1311" strokeWidth={5} fill="none" strokeLinecap="round" />
+          {style.lashes && <path d={`M${ex + side * 12},${eyeY + 1} L${ex + side * 20},${eyeY + 7}`} stroke="#1c1311" strokeWidth={4} strokeLinecap="round" />}
+        </g>
       );
     }
     return (
@@ -147,6 +193,12 @@ export const Head: React.FC<{
           fill="#1c1311"
         />
         <circle cx={ex + 4 - wide * 1 + lookX * wide * 0.8} cy={eyeY - 6 - wide * 2} r={3.4} fill="#fff" opacity={0.95} />
+        {style.lashes && (
+          <g stroke="#1c1311" strokeWidth={4} strokeLinecap="round">
+            <path d={`M${ex + side * (9 + wide * 6)},${eyeY - (11 + wide * 10) * open01} L${ex + side * (19 + wide * 6)},${eyeY - (19 + wide * 12) * open01}`} />
+            <path d={`M${ex + side * (11 + wide * 8)},${eyeY - (4 + wide * 6) * open01} L${ex + side * (21 + wide * 8)},${eyeY - (8 + wide * 7) * open01}`} />
+          </g>
+        )}
       </g>
     );
   };
@@ -162,7 +214,7 @@ export const Head: React.FC<{
         key={side}
         d={`M${inner[0]},${inner[1]} Q${mid[0]},${mid[1]} ${outer[0]},${outer[1]}`}
         stroke={style.hair === 'bald' && !style.beard ? '#3a2a22' : hair}
-        strokeWidth={15}
+        strokeWidth={style.browWidth ?? 15}
         strokeLinecap="round"
         fill="none"
       />
@@ -183,12 +235,20 @@ export const Head: React.FC<{
         <path
           d={`M${fx - mw},${my + lc} Q${fx},${my + ctrl - 4} ${fx + mw},${my + rc} Q${fx + mw * 0.8},${my + depth} ${fx},${my + depth + 2} Q${fx - mw * 0.8},${my + depth} ${fx - mw},${my + lc} Z`}
           fill="#4a1c1a"
+          stroke={style.lipstick}
+          strokeWidth={style.lipstick ? 6 : 0}
+          strokeLinejoin="round"
         />
         <ellipse cx={fx + 2} cy={my + depth * 0.75} rx={mw * 0.55} ry={depth * 0.22} fill="#c45a52" />
       </g>
     );
   } else {
-    mouth = (
+    mouth = style.lipstick ? (
+      <g>
+        <path d={`M${fx - mw},${my + lc} Q${fx},${my + ctrl + 12} ${fx + mw},${my + rc} Q${fx},${my + ctrl - 2} ${fx - mw},${my + lc} Z`} fill={style.lipstick} />
+        <path d={`M${fx - mw},${my + lc} Q${fx},${my + ctrl} ${fx + mw},${my + rc}`} stroke="#4a1a1e" strokeWidth={5} fill="none" strokeLinecap="round" />
+      </g>
+    ) : (
       <path d={`M${fx - mw},${my + lc} Q${fx},${my + ctrl} ${fx + mw},${my + rc}`} stroke="#3b1d17" strokeWidth={6} fill="none" strokeLinecap="round" />
     );
   }
@@ -221,6 +281,33 @@ export const Head: React.FC<{
           <circle r={R} />
         </clipPath>
       </defs>
+      {style.hair === 'curlyBun' && (
+        <g>
+          {[
+            [0, -R - 58, 46],
+            [-38, -R - 40, 34],
+            [38, -R - 42, 34],
+            [-22, -R - 88, 32],
+            [24, -R - 90, 32],
+            [0, -R - 104, 26],
+            [-52, -R - 70, 24],
+            [52, -R - 72, 24],
+          ].map(([x, y, r], i) => (
+            <g key={i}>
+              <circle cx={x + fx * 0.2} cy={y} r={r} fill={hair} />
+              <path d={`M${x + fx * 0.2 - r * 0.5},${y - r * 0.1} a${r * 0.45},${r * 0.45} 0 1 1 ${r * 0.6},${r * 0.4}`} stroke="#5b3a28" strokeWidth={5} fill="none" strokeLinecap="round" opacity={0.75} />
+            </g>
+          ))}
+          <path
+            d={`M${light.side * 60},-${R + 110} Q${light.side * 92},-${R + 80} ${light.side * 80},-${R + 40}`}
+            stroke={light.rim}
+            strokeWidth={6}
+            fill="none"
+            opacity={light.rimStrength * 0.6}
+            strokeLinecap="round"
+          />
+        </g>
+      )}
       {/* ears */}
       {[-1, 1].map((s) => (
         <g key={s}>
@@ -269,6 +356,45 @@ export const Head: React.FC<{
           opacity={0.95}
         />
       )}
+      {style.hair === 'curlyBun' && (
+        <g>
+          <path
+            d={`M${-R - 2},-4 C${-R - 6},-112 -50,-${R + 12} 0,-${R + 12} C 50,-${R + 12} ${R + 6},-112 ${R + 2},-4 C ${R - 12},-50 ${R - 34},-70 ${fx + 60},-70 C ${fx + 30},-78 ${fx + 6},-66 ${fx - 4},-84 C ${fx - 20},-66 ${fx - 50},-76 ${fx - 70},-68 C ${-R + 34},-66 ${-R + 12},-48 ${-R - 2},-4 Z`}
+            fill={hair}
+          />
+          {Array.from({length: 11}).map((_, i) => {
+            const a = Math.PI * (1.08 + (i / 10) * 0.84);
+            return <circle key={i} cx={Math.cos(a) * (R + 2)} cy={Math.sin(a) * (R + 2)} r={20} fill={hair} />;
+          })}
+          {[-1, 1].map((sd) => (
+            <path
+              key={sd}
+              d={`M${sd * (R - 18)},-46 q${sd * 16},10 ${sd * 4},22 q${-sd * 14},10 ${sd * 2},22 q${sd * 16},10 ${sd * 2},22 q${-sd * 12},10 ${sd * 4},20`}
+              stroke={hair}
+              strokeWidth={10}
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          ))}
+          <path d={`M -70,-${R - 4} C -50,-${R + 8} -20,-${R + 10} 6,-${R + 6}`} stroke="#5b3a28" strokeWidth={6} fill="none" strokeLinecap="round" opacity={0.8} />
+          <path
+            d={`M${light.side * (R + 4)},-20 C${light.side * (R + 6)},-80 ${light.side * 70},-${R + 18} ${light.side * 20},-${R + 22}`}
+            stroke={light.rim}
+            strokeWidth={6}
+            fill="none"
+            opacity={light.rimStrength * 0.5}
+            strokeLinecap="round"
+          />
+        </g>
+      )}
+      {style.earrings &&
+        [-1, 1].map((s) => (
+          <g key={'er' + s}>
+            <circle cx={s * (R + 2) - fx * 0.3} cy={42} r={8} fill={style.earrings} stroke="#8a6214" strokeWidth={2} />
+            <circle cx={s * (R + 2) - fx * 0.3 - 2} cy={40} r={2.5} fill="#fff6d0" />
+          </g>
+        ))}
       {style.hair === 'bald' && <ellipse cx={-light.side * -40} cy={-80} rx={36} ry={18} fill="#fff" opacity={0.28} transform={`rotate(${light.side * 20} ${light.side * 40} -80)`} />}
       <g transform={`translate(0,${0})`}>
         {brow(-1)}
