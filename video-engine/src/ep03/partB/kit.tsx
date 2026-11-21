@@ -351,3 +351,49 @@ export const Label: React.FC<{x: number; y: number; tx: number; ty: number; text
 
 /** Ease helper re-export. */
 export {clamp, easeOut, kf, lerp};
+
+/**
+ * Big close-up hand (screen px). Local frame: the finger points along +x with its tip at (0,0).
+ * variant 'point' = index finger out, 'palm' = flat open hand seen from above (tip = middle fingertip).
+ */
+export const BigHand: React.FC<{x: number; y: number; angle: number; s?: number; variant?: 'point' | 'palm'; skin?: typeof DAVI_OUTFIT.skin; sleeve?: typeof DAVI_OUTFIT.top; glow?: number}> = ({
+  x,
+  y,
+  angle,
+  s = 1,
+  variant = 'point',
+  skin = DAVI_OUTFIT.skin,
+  sleeve = DAVI_OUTFIT.top,
+  glow = 0,
+}) => (
+  <svg style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}} width={1} height={1}>
+    <g transform={`translate(${x},${y}) rotate(${angle}) scale(${s})`} style={glow ? {filter: `drop-shadow(0 0 ${18 * glow}px #ffd23a)`} : undefined}>
+      {/* sleeve */}
+      <path d="M-260,-95 L-1500,-150 L-1500,150 L-260,95 Z" fill={sleeve.base} />
+      <path d="M-260,40 L-1500,90 L-1500,150 L-260,95 Z" fill={sleeve.shade} />
+      <rect x={-300} y={-104} width={80} height={208} rx={30} fill={sleeve.shade} />
+      {variant === 'point' ? (
+        <>
+          <ellipse cx={-160} cy={8} rx={100} ry={82} fill={skin.base} stroke={skin.shade} strokeWidth={5} />
+          {[-34, 0, 34].map((dy) => (
+            <path key={dy} d={`M-100,${dy + 30} q30,6 34,22 q-4,16 -34,16`} fill={skin.base} stroke={skin.shade} strokeWidth={4} />
+          ))}
+          <rect x={-130} y={-56} width={134} height={46} rx={23} fill={skin.base} stroke={skin.shade} strokeWidth={5} />
+          <ellipse cx={-18} cy={-38} rx={14} ry={10} fill={skin.light} opacity={0.9} />
+          <path d="M-190,-60 Q-150,-90 -110,-70" stroke={skin.shade} strokeWidth={30} strokeLinecap="round" fill="none" />
+          <path d="M-190,-60 Q-150,-90 -110,-70" stroke={skin.base} strokeWidth={22} strokeLinecap="round" fill="none" />
+          <ellipse cx={-190} cy={-20} rx={40} ry={20} fill={skin.light} opacity={0.5} />
+        </>
+      ) : (
+        <>
+          <ellipse cx={-170} cy={0} rx={115} ry={105} fill={skin.base} stroke={skin.shade} strokeWidth={5} />
+          {[-66, -22, 22, 62].map((dy, i) => (
+            <rect key={dy} x={-120} y={dy - 20} width={i === 1 ? 124 : i === 3 ? 92 : 112} height={40} rx={20} fill={skin.base} stroke={skin.shade} strokeWidth={4} />
+          ))}
+          <rect x={-230} y={-140} width={110} height={44} rx={22} fill={skin.base} stroke={skin.shade} strokeWidth={4} transform="rotate(-30 -175 -118)" />
+          <ellipse cx={-180} cy={-10} rx={60} ry={40} fill={skin.light} opacity={0.4} />
+        </>
+      )}
+    </g>
+  </svg>
+);

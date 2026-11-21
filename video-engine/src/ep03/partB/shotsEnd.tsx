@@ -3,14 +3,13 @@ import {AbsoluteFill, random, useCurrentFrame} from 'remotion';
 import {CAPTION_FONT, HUD_FONT} from '../../lib/fonts';
 import {PlacedBruno, PlacedStudent} from '../characters';
 import {Rig, ShotP, abs, ev} from './rig';
-import {ArenaBack, Sand} from './arena';
+import {Arena} from './arena';
 import {
   ARENA_LIGHT,
   Chip,
   Confetti,
   CutFlash,
   DAVI_OUTFIT,
-  Finger,
   Finish,
   GOLD_LIGHT,
   Pup,
@@ -29,6 +28,26 @@ import {
 } from './kit';
 
 const FAN_SEED = 12;
+
+/** Foreshortened fist with the index finger pointing straight at the viewer. */
+const PointAtYou: React.FC<{x: number; y: number; s: number}> = ({x, y, s}) => {
+  const sk = DAVI_OUTFIT.skin;
+  return (
+    <Svg>
+      <g transform={`translate(${x},${y}) scale(${s})`}>
+        <path d="M60,60 L420,700 L800,500 L200,-20 Z" fill={DAVI_OUTFIT.top.base} />
+        <ellipse cx={110} cy={40} rx={120} ry={95} fill={DAVI_OUTFIT.top.shade} />
+        <ellipse cx={30} cy={10} rx={130} ry={115} fill={sk.base} stroke={sk.shade} strokeWidth={6} />
+        {[-60, -10, 40].map((dx) => (
+          <path key={dx} d={`M${dx - 30},70 q25,30 50,0`} stroke={sk.shade} strokeWidth={6} fill="none" />
+        ))}
+        <circle cx={-40} cy={-40} r={70} fill={sk.base} stroke={sk.shade} strokeWidth={6} />
+        <circle cx={-40} cy={-40} r={44} fill={sk.light} opacity={0.5} />
+        <ellipse cx={-50} cy={-55} rx={26} ry={20} fill="#f3d7c2" stroke={sk.shade} strokeWidth={3} />
+      </g>
+    </Svg>
+  );
+};
 
 /** Clip children to everything above screen y (things "sunk" in the sand). */
 const Above: React.FC<{y: number; children: React.ReactNode}> = ({y, children}) => (
@@ -55,8 +74,7 @@ export const SChoque: React.FC<ShotP> = (p) => {
   const shock = {eyesWide: lerp(0.6, 1, sh), mouthOpen: lerp(0.4, 0.9, sh), browRaise: 1, lookX: 0.9, lookY: -1, smile: -0.1};
   return (
     <Rig dur={p.dur} zoom={[1.0, 1.12]} pan={[0, 0, -40, 50]} rot={[-1, 1.5]} origin={[860, 200]} pow={1.6} whip="u" shakes={[{at: num, amp: 10, dur: 10}]}>
-      <ArenaBack t={t} horizon={1180} shock={sh} cheer={0} rows={7} />
-      <Sand horizon={1180} t={t} liquid={0.5} />
+      <Arena t={t} excite={0} liquid={0.6} viewY={-60} />
       {/* Bruno still stuck, tiny, looking up too */}
       <Above y={1290}>
         <PlacedBruno x={300} y={1440} height={420} pose={{shL: -150, elL: -20, shR: 150, elR: 20}} expr={{eyesWide: 1, mouthOpen: 0.7, halfSmile: 0, lookX: 1, lookY: -1, browAsym: 0}} light={ARENA_LIGHT} />
@@ -93,8 +111,7 @@ export const SUm: React.FC<ShotP> = (p) => {
   const j = trem(fr, shaking ? kf(fr, [ef, col], [3, 9]) : 0, 'um');
   return (
     <Rig dur={p.dur} zoom={[1.15, 1.0]} pan={[0, 30, 0, 0]} rot={[2, -1]} pow={2.4} punches={[{at: col, amt: 0.08}]} shakes={[{at: col, amp: 14}]}>
-      <ArenaBack t={t} horizon={1120} cheer={1} rows={7} screen="#1" screenSub="DAVI" screenY={620} />
-      <Sand horizon={1120} t={t} liquid={0.35} />
+      <Arena t={t} excite={1} liquid={0.4} />
       <AbsoluteFill style={{transform: `translate(${j.x}px,${j.y}px) rotate(${j.r}deg)`, transformOrigin: '540px 1500px'}}>
         <Pup
           outfit={DAVI_OUTFIT}
@@ -129,8 +146,7 @@ export const STrofeu: React.FC<ShotP> = (p) => {
   const tj = trem(fr, 9, 'tr');
   return (
     <Rig dur={p.dur} zoom={[1.02, 1.14]} pan={[30, 0, -20, -30]} rot={[-1.5, 1]} whip="r" origin={[540, 900]}>
-      <ArenaBack t={t} horizon={1180} cheer={1 - lapse} empty={lapse * 0.9} dusk={lapse} rows={7} />
-      <Sand horizon={1180} t={t} liquid={0.3} />
+      <Arena t={t} excite={1 - lapse} empty={lapse} dusk={lapse} liquid={0.3} />
       <Trem frame={fr} amp={amp} seed="dv" ox={540} oy={1500}>
         <Pup
           outfit={DAVI_OUTFIT}
@@ -138,9 +154,9 @@ export const STrofeu: React.FC<ShotP> = (p) => {
           y={2330}
           height={1650}
           light={lapse > 0.5 ? ARENA_LIGHT : GOLD_LIGHT}
-          pose={{shL: 18, elL: 118, shR: -18, elR: -118}}
+          pose={{shL: 16, elL: 62, shR: -16, elR: -62}}
           expr={{smile: lerp(0.8, 0.45, lapse), mouthOpen: 0.25 + 0.15 * Math.abs(Math.sin(fr * 2.1)), eyesWide: lerp(0.2, 0.7, lapse), browTilt: lerp(0, 0.8, lapse), browRaise: 0.4}}
-          heldProp={<TrophyG x={tj.x * 3} y={-470 + tj.y * 3} rot={tj.r * 8} s={0.62} glow={0.8} />}
+          heldProp={<TrophyG x={tj.x * 3} y={-455 + tj.y * 3} rot={tj.r * 8} s={0.78} glow={0.8} />}
         />
       </Trem>
       <VibeTicks x={540} y={1190} w={300} h={330} frame={fr} k={1} sw={9} />
@@ -184,8 +200,7 @@ export const SCaderno: React.FC<ShotP> = (p) => {
   const dj = trem(fr, 6, 'cd');
   return (
     <Rig dur={p.dur} zoom={[1.12, 1.04]} pan={[-20, 0, 20, 0]} rot={[1, -1]} whip="l" origin={[540, 1100]}>
-      <ArenaBack t={t} horizon={1150} empty={0.9} dusk={1} rows={7} cheer={0} />
-      <Sand horizon={1150} t={t} liquid={0.3} />
+      <Arena t={t} excite={0} empty={1} dusk={1} liquid={0.3} />
       {/* fan, right, holding the notebook out to the left */}
       <PlacedStudent
         seed={FAN_SEED}
@@ -196,9 +211,8 @@ export const SCaderno: React.FC<ShotP> = (p) => {
         pose={{shL: lerp(-8, -62, reach), elL: lerp(6, -40, reach), shR: lerp(8, -48, reach), elR: lerp(-6, -52, reach), facing: -0.5, lean: -3}}
         expr={{smile: 0.85, mouthOpen: 0.35, eyesWide: 0.7, browRaise: 0.8, lookX: -0.8}}
       />
-      {/* notebook held out between them */}
       <Svg>
-        <g transform={`translate(${lerp(640, 520, reach)},${1110}) rotate(-8)`}>
+        <g transform={`translate(${lerp(980, 880, reach)},1200) rotate(-10)`}>
           <Notebook w={300} h={200} />
         </g>
       </Svg>
@@ -257,21 +271,25 @@ export const STerremoto: React.FC<ShotP> = (p) => {
             <line key={i} x1={80} x2={1000} y1={430 + i * 54} y2={430 + i * 54} stroke="#9ec3e6" strokeWidth={3} />
           ))}
           <line x1={170} x2={170} y1={376} y2={1604} stroke="#e98a8a" strokeWidth={4} />
-          <text x={200} y={590} fontFamily="Caveat, cursive" fontWeight={700} fontSize={64} fill="#6b4a9a" transform="rotate(-3 200 590)">
-            Autógrafo pro Davi ♥
+          <text x={200} y={590} fontFamily={HUD_FONT} fontWeight={700} fontSize={64} fill="#6b4a9a" transform="rotate(-3 200 590)">
+            AUTÓGRAFO DO DAVI:
           </text>
           <path d={d} stroke="#1d2a7a" strokeWidth={7} fill="none" strokeLinejoin="round" />
         </Svg>
       </AbsoluteFill>
-      {/* Davi's hand + pen at the tip */}
+      {/* Davi's hand + pen at the tip (arm from bottom-right) */}
       <Svg>
-        <g transform={`translate(${last[0] + pj.x},${last[1] + pj.y}) rotate(${-28 + pj.r * 6})`}>
-          <rect x={-12} y={-250} width={24} height={240} rx={8} fill="#ffd23a" stroke="#141414" strokeWidth={4} />
-          <path d="M-12,-12 L0,0 L12,-12 Z" fill="#141414" />
-          <ellipse cx={30} cy={-170} rx={70} ry={58} fill={DAVI_OUTFIT.skin.base} stroke={DAVI_OUTFIT.skin.shade} strokeWidth={4} />
-          <ellipse cx={-6} cy={-150} rx={22} ry={16} fill={DAVI_OUTFIT.skin.light} opacity={0.6} />
-          <path d={`M-10,-240 L120,-260 L190,-800 L-60,-800 Z`} fill={DAVI_OUTFIT.top.base} />
-          <rect x={-40} y={-262} width={170} height={46} rx={18} fill={DAVI_OUTFIT.top.shade} />
+        <g transform={`translate(${last[0] + pj.x},${last[1] + pj.y}) rotate(${pj.r * 6})`}>
+          <path d="M60,-120 L900,700 L1300,300 L160,-200 Z" fill={DAVI_OUTFIT.top.base} />
+          <path d="M60,-120 L900,700 L980,620 L110,-150 Z" fill={DAVI_OUTFIT.top.shade} opacity={0.6} />
+          <rect x={40} y={-230} width={150} height={60} rx={24} fill={DAVI_OUTFIT.top.shade} transform="rotate(42 115 -200)" />
+          <g transform="rotate(-35)">
+            <rect x={-12} y={-230} width={24} height={220} rx={8} fill="#ffd23a" stroke="#141414" strokeWidth={4} />
+            <path d="M-12,-12 L0,0 L12,-12 Z" fill="#141414" />
+          </g>
+          <ellipse cx={70} cy={-110} rx={78} ry={64} fill={DAVI_OUTFIT.skin.base} stroke={DAVI_OUTFIT.skin.shade} strokeWidth={4} />
+          <ellipse cx={30} cy={-80} rx={30} ry={20} fill={DAVI_OUTFIT.skin.base} stroke={DAVI_OUTFIT.skin.shade} strokeWidth={4} />
+          <ellipse cx={50} cy={-130} rx={26} ry={16} fill={DAVI_OUTFIT.skin.light} opacity={0.6} />
         </g>
       </Svg>
       <SoundWord x={760} y={1250} text="RABISC!" k={fr - ter} size={96} rot={8} color="#fff" />
@@ -285,8 +303,7 @@ export const STerremoto: React.FC<ShotP> = (p) => {
 
 const CloseBg: React.FC<{t: number; dusk?: number}> = ({t, dusk = 0.6}) => (
   <AbsoluteFill style={{filter: 'blur(12px)'}}>
-    <ArenaBack t={t} horizon={1500} cheer={0.2} empty={0.6} dusk={dusk} rows={9} scale={1.4} />
-    <Sand horizon={1500} t={t} />
+    <Arena t={t} excite={0} empty={1} dusk={dusk} zoom={1.5} zy={1300} />
   </AbsoluteFill>
 );
 
@@ -307,12 +324,12 @@ export const SETu: React.FC<ShotP> = (p) => {
           height={2250}
           upperOnly
           light={ARENA_LIGHT}
-          pose={{shR: lerp(10, 40, pt), elR: lerp(-8, 105, pt), shL: -10, elL: 8}}
+          pose={{shR: 10, elR: -8, shL: -10, elL: 8}}
           expr={{smile: 0.7, mouthOpen: 0.3 + 0.2 * Math.abs(Math.sin(fr * 0.7)), browRaise: 0.6, eyesWide: 0.15}}
-          handProps={{R: pt > 0.3 ? <Finger angle={lerp(10, 40, pt) + lerp(-8, 105, pt)} /> : undefined}}
         />
       </Trem>
       <VibeTicks x={540} y={900} w={660} h={520} frame={fr} k={0.8} />
+      {pt > 0 && <PointAtYou x={lerp(1100, 760, pt)} y={lerp(1900, 1230, pt)} s={lerp(0.8, 1.25, pt)} />}
       <Finish vignette={0.45} grain={0.07} />
     </Rig>
   );

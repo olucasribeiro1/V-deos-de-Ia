@@ -326,8 +326,8 @@ export const SBoard: React.FC<ShotP> = (p) => {
               }}
             >
               <div style={{fontSize: 64, width: 190, color: i === 0 ? ACADEMY.gold : '#fff'}}>{pos}</div>
-              <div style={{fontSize: 60, flex: 1}}>{name}</div>
-              <div style={{fontFamily: HUD_FONT, fontSize: 30, letterSpacing: 2, opacity: 0.85, textAlign: 'right', maxWidth: 330}}>{pw}</div>
+              <div style={{fontSize: 56, width: 250}}>{name}</div>
+              <div style={{fontFamily: HUD_FONT, fontSize: 30, letterSpacing: 1, opacity: 0.85, textAlign: 'right', flex: 1, whiteSpace: 'nowrap'}}>{pw}</div>
             </div>
           );
         })}
@@ -429,11 +429,11 @@ export const SSticker: React.FC<ShotP> = (p) => {
         <DaviBack fr={fr} />
       </Svg>
       <div style={{position: 'absolute', left: 0, top: 0, width: W, height: H, transform: `translate(${v.x}px,${v.y}px)`}}>
-        <Stamp x={540} y={1380} text="MODO VIBRA" sub="📳 📳 📳" color="#e5484d" k={fr - SL} size={104} rot={-6} bg="#fff8e6" />
+        <Stamp x={540} y={1180} text="MODO VIBRA" sub="📳 📳 📳" color="#e5484d" k={fr - SL} size={104} rot={-6} bg="#fff8e6" />
       </div>
       {/* the slapping hand */}
       <Svg>
-        <g transform={`translate(${handX},1420) rotate(-8)`}>
+        <g transform={`translate(${handX},1220) rotate(-8)`}>
           <rect x={0} y={-60} width={700} height={120} rx={60} fill={studentOutfit(31).top.base} />
           <rect x={-10} y={-60} width={50} height={120} fill="#eef0f3" />
           <ellipse cx={-60} cy={0} rx={110} ry={80} fill={studentOutfit(31).skin.base} />
@@ -462,7 +462,7 @@ export const SMassage: React.FC<ShotP> = (p) => {
         <rect x={140} y={1320} width={70} height={260} fill="#7a6a52" />
         <rect x={870} y={1320} width={70} height={260} fill="#7a6a52" />
         {/* sign */}
-        <g transform="translate(860,1450) rotate(6)">
+        <g transform="translate(850,1090) rotate(6)">
           <rect x={-150} y={-70} width={300} height={140} rx={12} fill="#fff8e6" stroke="#1a1420" strokeWidth={6} />
           <text x={0} y={-10} textAnchor="middle" fontFamily={CAPTION_FONT} fontWeight={700} fontSize={44} fill="#1a1420">
             MASSAGEM
@@ -558,14 +558,14 @@ export const SOlive: React.FC<ShotP> = (p) => {
       </Jit>
       <Svg>
         <g transform={`translate(${jv.x},${jv.y})`}>
-          <Jar x={560} y={1330} lidY={lidY} lidRot={lidRot} t={t} />
+          <Jar x={560} y={1200} lidY={lidY} lidRot={lidRot} t={t} />
         </g>
-        {age < 0 && <VibeLines cx={560} cy={1180} w={260} h={300} k={0.9} frame={fr} />}
+        {age < 0 && <VibeLines cx={560} cy={1050} w={260} h={300} k={0.9} frame={fr} />}
         {age >= 0 &&
           Array.from({length: 7}).map((_, i) => {
             const vx = (random(`ol${i}`) - 0.5) * 26;
             const vy = -20 - random(`olv${i}`) * 16;
-            return <ellipse key={i} cx={560 + vx * age} cy={1020 + vy * age + 1.4 * age * age} rx={26} ry={20} fill="#6e8c2a" stroke="#4a6418" strokeWidth={3} />;
+            return <ellipse key={i} cx={560 + vx * age} cy={890 + vy * age + 1.4 * age * age} rx={26} ry={20} fill="#6e8c2a" stroke="#4a6418" strokeWidth={3} />;
           })}
       </Svg>
       {age >= 0 && <SfxWord x={560} y={700} text="POP!" k={age} color="#ffd23a" size={150} rot={-6} />}

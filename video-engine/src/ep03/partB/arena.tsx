@@ -1,5 +1,6 @@
 import React from 'react';
-import {random} from 'remotion';
+import {AbsoluteFill, random} from 'remotion';
+import {ArenaInterior} from '../sets/Academy';
 import {clamp, lerp} from '../../lib/anim';
 import {CAPTION_FONT, HUD_FONT} from '../../lib/fonts';
 import {ACADEMY, EmblemMark} from '../characters';
@@ -190,3 +191,86 @@ export const SandSplash: React.FC<{x: number; y: number; age: number; n?: number
     </Svg>
   );
 };
+
+/* ================================================================== shared arena (Agent A's set) + sand fx */
+
+/** Sand effects as an SVG group (world coords): wet/liquid gloss, ripples from (rx, ry). */
+export const SandFx: React.FC<{sandY: number; t: number; ripple?: number; rx?: number; ry?: number; liquid?: number}> = ({sandY, t, ripple = -1, rx = 540, ry = 1500, liquid = 0}) => (
+  <g>
+    {liquid > 0 && <rect x={-300} y={sandY} width={1680} height={2400} fill="#8a6c3e" opacity={liquid * 0.55} />}
+    {liquid > 0 &&
+      Array.from({length: 8}).map((_, i) => {
+        const y = sandY + 60 + i * 110 + Math.sin(t * 3 + i) * 12;
+        return <ellipse key={'g' + i} cx={540 + Math.sin(t * 1.5 + i * 2) * 220} cy={y} rx={240 + i * 70} ry={10 + i * 4} fill="#fff" opacity={0.16 * liquid} />;
+      })}
+    {liquid > 0 &&
+      Array.from({length: 5}).map((_, i) => {
+        const y = sandY + 140 + i * 170;
+        const d = Array.from({length: 25})
+          .map((__, k) => `${k ? 'L' : 'M'}${-100 + k * 55},${(y + Math.sin(k * 0.8 + t * 6 + i) * 14 * liquid).toFixed(1)}`)
+          .join(' ');
+        return <path key={'w' + i} d={d} stroke="#5e4522" strokeWidth={6} fill="none" opacity={0.35 * liquid} />;
+      })}
+    {ripple >= 0 &&
+      Array.from({length: 6}).map((_, i) => {
+        const a = ripple - i * 5;
+        if (a < 0) return null;
+        const R = a * 34;
+        const o = clamp(1 - R / 1500);
+        return (
+          <g key={'r' + i} opacity={o}>
+            <ellipse cx={rx} cy={ry} rx={R} ry={R * 0.32} fill="none" stroke="#6a4c22" strokeWidth={16} opacity={0.4} />
+            <ellipse cx={rx} cy={ry - 6} rx={R} ry={R * 0.32} fill="none" stroke="#fff3d6" strokeWidth={6} />
+          </g>
+        );
+      })}
+  </g>
+);
+
+/**
+ * The arena (Agent A's ArenaInterior) with part-B extras: zoom/blur (close shots), liquid sand + ripples,
+ * `empty` (stands emptied, 3-hours-later gag) and `dusk` tint.
+ */
+export const Arena: React.FC<{
+  t: number;
+  sandY?: number;
+  px?: number;
+  viewY?: number;
+  excite?: number;
+  zoom?: number;
+  zx?: number;
+  zy?: number;
+  blur?: number;
+  liquid?: number;
+  ripple?: number;
+  rx?: number;
+  ry?: number;
+  empty?: number;
+  dusk?: number;
+  screen?: React.ReactNode;
+}> = ({t, sandY = 1240, px = 0, viewY = 0, excite = 0.3, zoom = 1, zx = 540, zy = 960, blur = 0, liquid = 0, ripple = -1, rx, ry, empty = 0, dusk = 0, screen}) => (
+  <AbsoluteFill style={{transform: `scale(${zoom})`, transformOrigin: `${zx}px ${zy}px`, filter: blur ? `blur(${blur}px)` : undefined}}>
+    <ArenaInterior t={t} sandY={sandY} px={px} viewY={viewY} excite={excite} screen={screen} tunnelGlow={0.3}>
+      <SandFx sandY={sandY} t={t} liquid={liquid} ripple={ripple} rx={rx} ry={ry} />
+      {empty > 0 && (
+        <g opacity={empty}>
+          {Array.from({length: 7}).map((_, ri) => {
+            const k = ri / 6;
+            const y = 240 + 820 * k;
+            const s = 0.55 + 0.6 * k;
+            return (
+              <g key={ri}>
+                <rect x={-100} y={y - 90 * s} width={490} height={130 * s} fill={ri % 2 ? '#3b3f4f' : '#454a5c'} />
+                <rect x={690} y={y - 90 * s} width={500} height={130 * s} fill={ri % 2 ? '#3b3f4f' : '#454a5c'} />
+                <rect x={-100} y={y + 30 * s} width={490} height={8} fill="#2a2d38" />
+                <rect x={690} y={y + 30 * s} width={500} height={8} fill="#2a2d38" />
+              </g>
+            );
+          })}
+        </g>
+      )}
+    </ArenaInterior>
+    {dusk > 0 && <AbsoluteFill style={{background: '#2a1040', opacity: dusk * 0.4, mixBlendMode: 'multiply'}} />}
+    {dusk > 0 && <AbsoluteFill style={{background: 'linear-gradient(#ff8a3a00, #ff8a3a55)', opacity: dusk}} />}
+  </AbsoluteFill>
+);
