@@ -98,5 +98,115 @@
     "file": "drone_tension.mp3",
     "dur": 22.047,
     "hash": "86e2083800"
+  },
+  "water_fill": {
+    "file": "water_fill.mp3",
+    "dur": 4.049,
+    "hash": "57f40201ac"
+  },
+  "cans_clink": {
+    "file": "cans_clink.mp3",
+    "dur": 2.9,
+    "hash": "b08778ffd7"
+  },
+  "furniture_drag": {
+    "file": "furniture_drag.mp3",
+    "dur": 3.971,
+    "hash": "013c9f1c0e"
+  },
+  "keys_jingle": {
+    "file": "keys_jingle.mp3",
+    "dur": 1.228,
+    "hash": "fec4852767"
+  },
+  "cabinet_open": {
+    "file": "cabinet_open.mp3",
+    "dur": 0.967,
+    "hash": "a2e6e408c7"
+  },
+  "door_open": {
+    "file": "door_open.mp3",
+    "dur": 1.985,
+    "hash": "da32c579a1"
+  },
+  "chain_lock": {
+    "file": "chain_lock.mp3",
+    "dur": 1.176,
+    "hash": "45e1f7464a"
+  },
+  "door_close": {
+    "file": "door_close.mp3",
+    "dur": 1.228,
+    "hash": "241a6ee8bf"
+  },
+  "blinds_close": {
+    "file": "blinds_close.mp3",
+    "dur": 1.515,
+    "hash": "f53ba8c2d5"
+  },
+  "car_crash": {
+    "file": "car_crash.mp3",
+    "dur": 3.03,
+    "hash": "cbfd29b5db"
+  },
+  "emergency_alert": {
+    "file": "emergency_alert.mp3",
+    "dur": 4.049,
+    "hash": "61251caaf5"
+  },
+  "tv_static": {
+    "file": "tv_static.mp3",
+    "dur": 3.03,
+    "hash": "b2a5e5795f"
+  },
+  "glass_break_far": {
+    "file": "glass_break_far.mp3",
+    "dur": 2.038,
+    "hash": "bfdab30e24"
+  },
+  "cough_door": {
+    "file": "cough_door.mp3",
+    "dur": 3.5,
+    "hash": "a516466a79"
+  },
+  "car_alarm": {
+    "file": "car_alarm.mp3",
+    "dur": 8.046,
+    "hash": "e8c4d9c7df"
+  },
+  "groan_transform": {
+    "file": "groan_transform.mp3",
+    "dur": 5.042,
+    "hash": "907f5a3ac5"
+  },
+  "scream_phone": {
+    "file": "scream_phone.mp3",
+    "dur": 4.049,
+    "hash": "edfadef690"
+  },
+  "body_fall": {
+    "file": "body_fall.mp3",
+    "dur": 1.515,
+    "hash": "360c11058b"
+  },
+  "sofa_sit": {
+    "file": "sofa_sit.mp3",
+    "dur": 1.489,
+    "hash": "8c6db0a103"
+  },
+  "music_end": {
+    "file": "music_end.mp3",
+    "dur": 6.034,
+    "hash": "7e1161a83d"
+  },
+  "music_calm": {
+    "file": "music_calm.mp3",
+    "dur": 22.047,
+    "hash": "79dcc9d40c"
+  },
+  "music_action": {
+    "file": "music_action.mp3",
+    "dur": 22.047,
+    "hash": "e6cc51799b"
   }
 }

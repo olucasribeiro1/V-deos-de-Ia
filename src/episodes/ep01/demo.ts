@@ -93,7 +93,7 @@ export const demo: Episode = {
             {
               a: 'actor',
               at: 0,
-              track: {spec: {id: 'civil_a', height: 1.68, build: 0.95, skin: '#c99a7a', hair: '#1a1410', hairStyle: 'long', top: '#7a3b3b', topStyle: 'shirt', bottom: '#2f3540', shoes: '#ddd'}, variation: 0.2, y: -21, path: [[0, -16, -23.5], [7, 8, -22.8]], clips: [[0, 'run']]},
+              track: {spec: {id: 'civil_a', height: 1.68, build: 0.95, skin: '#c99a7a', hair: '#1a1410', hairStyle: 'long', top: '#7a3b3b', topStyle: 'shirt', bottom: '#2f3540', shoes: '#ddd'}, variation: 0.2, y: -8.4, path: [[0, -13, -24.6], [7, 9, -24.3]], clips: [[0, 'run']]},
             },
             {
               a: 'actor',
@@ -101,8 +101,8 @@ export const demo: Episode = {
               track: {
                 spec: {id: 'inf_agr', height: 1.83, build: 1.18, skin: '#9aa58e', hair: '#111', hairStyle: 'buzz', top: '#2c2f33', topStyle: 'hoodie', bottom: '#2a2a2a', shoes: '#111', infected: {decay: 0.4, blood: 0.9, eyes: '#e05a3a'}},
                 variation: 0.7,
-                y: -21,
-                path: [[0, -18, -23.2], [6.5, 6, -23.0]],
+                y: -8.4,
+                path: [[0, -15.5, -24.4], [6.5, 7, -24.2]],
                 clips: [[0, 'lunge']],
               },
             },
@@ -116,7 +116,8 @@ export const demo: Episode = {
           min: 5.0,
           do: [
             {a: 'sfx', id: 'door_knock', at: 0.6, vol: 1},
-            {a: 'startle', at: 0.75, target: 'hallway', amp: 1},
+            {a: 'startle', at: 0.75, target: 'archway', amp: 1},
+            {a: 'walk', at: 1.7, to: 'livingCenter', pace: 'slow', look: 'archway'},
             {a: 'danger', at: 0.8, v: 0.35, dur: 0.6},
             {a: 'sfx', id: 'heartbeat', at: 1.2, vol: 0.6},
             {a: 'sfx', id: 'door_knock', at: 2.6, vol: 1},

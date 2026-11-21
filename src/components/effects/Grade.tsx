@@ -5,12 +5,13 @@ import {AbsoluteFill, useCurrentFrame} from 'remotion';
  * "Pós-processamento" econômico em camada 2D (custo ~0 no render, sem passes WebGL extras):
  * vinheta, gradação fria/dessaturada, granulação determinística discreta, flash de perigo.
  */
-export const Grade: React.FC<{vignette?: number; grain?: number; danger?: number; tint?: string; fade?: number}> = ({
+export const Grade: React.FC<{vignette?: number; grain?: number; danger?: number; tint?: string; fade?: number; lens?: number}> = ({
   vignette = 0.55,
   grain = 0.045,
   danger = 0,
   tint = 'rgba(40,60,70,0.10)',
   fade = 0,
+  lens = 0,
 }) => {
   const f = useCurrentFrame();
   return (
@@ -32,6 +33,15 @@ export const Grade: React.FC<{vignette?: number; grain?: number; danger?: number
             <rect width="100%" height="100%" filter={`url(#g${f % 8})`} />
           </svg>
         </AbsoluteFill>
+      )}
+      {lens > 0 && (
+        /* olho mágico: círculo nítido no centro, borda escura curva e leve aberração */
+        <AbsoluteFill
+          style={{
+            opacity: lens,
+            background: 'radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 30%, rgba(10,14,20,0.55) 36%, rgba(0,0,0,0.97) 41%, #000 100%)',
+          }}
+        />
       )}
       {fade > 0 && <AbsoluteFill style={{background: '#000', opacity: fade}} />}
     </>

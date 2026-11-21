@@ -33,6 +33,8 @@ const PropMesh: React.FC<{name: string; screen: any}> = ({name, screen}) => {
       return <group position={[0, 0.02, 0.05]} rotation={[0, 0, 0]}><F.WaterBottle position={[0, -0.12, 0]} /></group>;
     case 'can':
       return <group position={[0, 0.03, 0.05]}><F.Can position={[0, -0.05, 0]} /></group>;
+    case 'keys':
+      return <group position={[0, 0.07, 0.03]} rotation={[0.3, 0, 0.4]}><F.Keys position={[0, 0, 0]} /></group>;
     default:
       return null;
   }
@@ -62,7 +64,7 @@ export const SceneView: React.FC<{scene: CompiledScene; sfxLib: SfxManifest; aud
     <AbsoluteFill style={{background: '#000'}}>
       {!bench.no3d && <ThreeCanvas width={VIDEO.width} height={VIDEO.height} shadows={!bench.noShadows} gl={{antialias: !bench.noAA, powerPreference: 'high-performance'}}>
         <Lighting preset={scene.scene.light} lamps={env.lightsOn ?? 1} />
-        {!bench.noApt && <Apartment state={env} />}
+        {!bench.noApt && <Apartment state={env} t={t} />}
         {!bench.noCity && <City t={t + 20} chaos={chaos} bench={bench} />}
         {scene.actors.map((a, i) => (
           <Actor key={i} track={a} t={t} />
@@ -78,7 +80,7 @@ export const SceneView: React.FC<{scene: CompiledScene; sfxLib: SfxManifest; aud
         </PovRig>
         {!bench.noOutlines && <Outlines />}
       </ThreeCanvas>}
-      <Grade danger={scene.danger(t)} fade={fade} grain={bench.noGrain ? 0 : undefined} />
+      <Grade danger={scene.danger(t)} fade={fade} lens={scene.lens(t)} grain={bench.noGrain ? 0 : undefined} />
       {title && (
         <AbsoluteFill style={{justifyContent: 'center', alignItems: 'center'}}>
           <div

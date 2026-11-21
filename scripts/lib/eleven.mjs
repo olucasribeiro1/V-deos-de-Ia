@@ -62,3 +62,27 @@ export async function pool(items, n, fn) {
   );
   return out;
 }
+
+/** Transcreve um MP3 (ElevenLabs Scribe) para verificar pronúncia. */
+export async function transcribe(file, lang = 'por') {
+  const fd = new FormData();
+  fd.append('model_id', 'scribe_v1');
+  fd.append('language_code', lang);
+  fd.append('file', new Blob([fs.readFileSync(file)]), 'a.mp3');
+  const res = await fetch(BASE + '/v1/speech-to-text', {method: 'POST', headers: {'xi-api-key': KEY}, body: fd});
+  if (!res.ok) throw new Error(`STT ${res.status}: ${(await res.text()).slice(0, 200)}`);
+  return (await res.json()).text ?? '';
+}
+
+const norm = (t) => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean);
+/** Similaridade por palavras (1 - distância de edição / tamanho). 1 = idêntico. Lista palavras divergentes. */
+export function wordScore(expected, heard) {
+  const a = norm(expected), b = norm(heard);
+  const d = Array.from({length: a.length + 1}, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 1; j <= b.length; j++) d[0][j] = j;
+  for (let i = 1; i <= a.length; i++)
+    for (let j = 1; j <= b.length; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  const extra = b.filter((w) => !a.includes(w));
+  const missing = a.filter((w) => !b.includes(w));
+  return {score: 1 - d[a.length][b.length] / Math.max(1, a.length), extra, missing};
+}

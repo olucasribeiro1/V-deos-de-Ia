@@ -66,6 +66,7 @@ export type CompiledScene = {
   env: (t: number) => ApartmentState;
   fade: (t: number) => number;
   danger: (t: number) => number;
+  lens: (t: number) => number;
   titles: {t: number; dur: number; text: string}[];
   actors: ActorTrack[];
   lines: {id: string; v: string; text: string; file?: string; t: number; dur: number; estimated: boolean}[];
@@ -131,6 +132,7 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
   const fov = new Channel<number>(62);
   const fade = new Channel<number>(0);
   const danger = new Channel<number>(0);
+  const lens = new Channel<number>(0);
   const handR = new Channel<HandPose>(HP[sc.hands?.r ?? 'hidden']);
   const handL = new Channel<HandPose>(HP[sc.hands?.l ?? 'hidden']);
   const propR = [{t: 0, v: sc.hands?.rProp ?? ('none' as PropName)}];
@@ -338,7 +340,7 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
         return a0;
       case 'actor': {
         const shift = (x: number) => x + a0;
-        actors.push({...act.track, path: act.track.path.map(([tt, x, z]) => [shift(tt), x, z]), clips: act.track.clips.map(([tt, n, k]) => [shift(tt), n, k])});
+        actors.push({...act.track, until: act.track.until === undefined ? undefined : act.track.until + a0, path: act.track.path.map(([tt, x, z]) => [shift(tt), x, z]), clips: act.track.clips.map(([tt, n, k]) => [shift(tt), n, k])});
         return a0;
       }
       case 'fade': {
@@ -352,6 +354,12 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
         danger.cut(a0);
         danger.to(a0 + dur, act.v);
         return a0;
+      }
+      case 'lens': {
+        const dur = act.dur ?? 0.35;
+        lens.cut(a0);
+        lens.to(a0 + dur, act.v);
+        return a0 + dur;
       }
       case 'title':
         titles.push({t: a0, dur: act.dur ?? 3, text: act.text});
@@ -403,6 +411,7 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
     env: envAt,
     fade: (tt) => fade.at(tt),
     danger: (tt) => danger.at(tt),
+    lens: (tt) => lens.at(tt),
     titles,
     actors,
     lines,

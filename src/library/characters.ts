@@ -44,6 +44,9 @@ export const RAFAEL: CharacterSpec = {
   glasses: true,
 };
 
+/** Vizinho do 304 antes da transformação — mesmas roupas de INFECTED.porta (continuidade). */
+export const NEIGHBOR_304: CharacterSpec = {id: 'vizinho_304', height: 1.77, build: 1.05, skin: '#e0b090', hair: '#2a2420', hairStyle: 'short', top: '#8a3a32', topStyle: 'shirt', bottom: '#2f3d52', shoes: '#3a2a1a', infected: undefined};
+
 export const CIVILIANS: CharacterSpec[] = [
   {id: 'civil_a', height: 1.68, build: 0.95, skin: '#c99a7a', hair: '#1a1410', hairStyle: 'long', top: '#7a3b3b', topStyle: 'shirt', bottom: '#2f3540', shoes: '#ddd'},
   {id: 'civil_b', height: 1.78, build: 1.1, skin: '#8d5f45', hair: '#111', hairStyle: 'buzz', top: '#3a4a5a', topStyle: 'hoodie', bottom: '#4a4a44', shoes: '#222'},

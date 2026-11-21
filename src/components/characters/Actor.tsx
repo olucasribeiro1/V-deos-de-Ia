@@ -15,6 +15,7 @@ export type ActorTrack = {
   clips: [number, ClipName, number?][];
   face?: number; // yaw (graus) quando parado
   y?: number;
+  until?: number; // some após este tempo (troca de personagem, ex.: transformação)
 };
 
 function pathAt(path: [number, number, number][], t: number) {
@@ -32,6 +33,8 @@ function pathAt(path: [number, number, number][], t: number) {
 }
 
 export const Actor: React.FC<{track: ActorTrack; t: number}> = ({track, t}) => {
+  if (track.until !== undefined && t > track.until) return null;
+  if (t < track.path[0][0] - 0.01) return null;
   const {x, z, dx, dz} = pathAt(track.path, t);
   const moving = Math.hypot(dx, dz) > 1e-3;
   const yaw = moving ? (Math.atan2(dx, dz) * 180) / Math.PI : track.face ?? 0;

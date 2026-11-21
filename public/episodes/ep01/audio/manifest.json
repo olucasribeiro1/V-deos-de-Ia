@@ -1,21 +1,24 @@
 {
   "demo_b00": {
     "file": "demo_b00.mp3",
-    "dur": 5.329,
-    "hash": "c8752f5c69df",
-    "voice": "narrador"
+    "dur": 5.198,
+    "hash": "b754e25864c9",
+    "voice": "narrador",
+    "pronuncia": 1
   },
   "demo_b01": {
     "file": "demo_b01.mp3",
-    "dur": 8.62,
-    "hash": "97d3a1d4715b",
-    "voice": "narrador"
+    "dur": 8.385,
+    "hash": "9c0f3aa7c149",
+    "voice": "narrador",
+    "pronuncia": 1
   },
   "demo_b02": {
     "file": "demo_b02.mp3",
-    "dur": 2.586,
-    "hash": "00f665d7cf2b",
-    "voice": "narrador"
+    "dur": 2.926,
+    "hash": "3fb4a45801c4",
+    "voice": "narrador",
+    "pronuncia": 1
   },
   "demo_b05": {
     "file": "demo_b05.mp3",
@@ -25,20 +28,23 @@
   },
   "demo_b06": {
     "file": "demo_b06.mp3",
-    "dur": 3.161,
-    "hash": "a667dc252f84",
-    "voice": "narrador"
+    "dur": 3.187,
+    "hash": "2a3f77f47ce7",
+    "voice": "narrador",
+    "pronuncia": 1
   },
   "demo_b04": {
     "file": "demo_b04.mp3",
-    "dur": 4.776,
-    "hash": "1d9530b4353c",
-    "voice": "rafael"
+    "dur": 4.92,
+    "hash": "b4668a266ffc",
+    "voice": "rafael",
+    "pronuncia": 1
   },
   "demo_b03": {
     "file": "demo_b03.mp3",
-    "dur": 7.92,
-    "hash": "1e90ee349609",
-    "voice": "rafael"
+    "dur": 6.864,
+    "hash": "9836abeca2f4",
+    "voice": "rafael",
+    "pronuncia": 1
   }
 }

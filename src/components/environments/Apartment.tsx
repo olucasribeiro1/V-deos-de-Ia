@@ -4,6 +4,7 @@ import * as F from '../../library/furniture';
 import {Slab, Wall} from './Walls';
 import {Door, Window} from './Door';
 import {StaticBatch} from '../effects/StaticBatch';
+import {TvScreen, type TvKind} from '../props/TvScreen';
 
 /**
  * CENÁRIO REUTILIZÁVEL: apartamento do Rafael (7º andar).
@@ -29,9 +30,11 @@ export type ApartmentState = {
   supplies?: number; // 0..1 quantidade de suprimentos organizados na mesa
   barricade?: number; // 0..1 móvel empurrado contra a porta
   blinds?: number;
+  tv?: TvKind;
+  keysOnMat?: boolean; // chave reserva sob o capacho (corredor)
 };
 
-export const Apartment: React.FC<{state?: ApartmentState}> = React.memo(({state = {}}) => {
+export const Apartment: React.FC<{state?: ApartmentState; t?: number}> = React.memo(({state = {}, t = 0}) => {
   const {
     entranceOpen = 0,
     entranceShake = 0,
@@ -45,18 +48,25 @@ export const Apartment: React.FC<{state?: ApartmentState}> = React.memo(({state 
     supplies = 0,
     barricade = 0,
     blinds = 0.25,
+    tv = 'off',
+    keysOnMat = false,
   } = state;
   return (
     <group>
       <ApartmentStatic />
       {/* ---- partes dinâmicas (fora do batch) ---- */}
-      <Door position={[2.75, 0, 0]} rotY={180} open={-entranceOpen} shake={entranceShake} color="#6f5440" peephole locks={entranceLocks} chain={chain} />
+      <Door position={[2.75, 0, 0]} rotY={180} open={-entranceOpen} shake={entranceShake * Math.sin(t * 31) * Math.max(0, Math.sin(t * 4.2))} color="#6f5440" peephole locks={entranceLocks} chain={chain} />
       <Door position={[-1.95, 0, -3]} rotY={180} open={-bedroomDoorOpen} />
       <Door position={[-3.75, 0, -3]} rotY={0} open={-bathroomDoorOpen} />
+      <Door position={[4.5, 0, 2.3]} rotY={180} color="#5e6a72" />
+      <F.CeilingLamp position={[2.9, 0, 1.15]} on={lightsOn} />
       <Window position={[-3.4, 1.6, -8]} width={2.8} height={1.5} blinds={blinds} />
       <Window position={[2.7, 1.55, -8]} width={1.0} height={1.3} />
       <Window position={[-0.8, 1.5, 0]} rotY={180} width={1.2} height={1.2} blinds={0.6} />
-      <F.TvStand position={[-0.4, 0, -7.7]} tvOn={tvOn} />
+      <F.TvStand position={[-0.4, 0, -7.7]} tvOn={tv === 'off' ? tvOn : 0} />
+      <group position={[-0.4, 0.88, -7.715]}>
+        <TvScreen kind={tv} t={t} />
+      </group>
       <F.FloorLamp position={[1.15, 0, -3.4]} on={lightsOn} />
       <F.CeilingLamp position={[-0.2, 0, -5.4]} on={lightsOn} />
       <F.CeilingLamp position={[-4.2, 0, -5.4]} on={lightsOn} />
@@ -69,15 +79,21 @@ export const Apartment: React.FC<{state?: ApartmentState}> = React.memo(({state 
           <F.Can key={i} position={[-4.05 + (i % 6) * 0.16, 0.76, -4.85 + Math.floor(i / 6) * 0.2]} color={i % 2 ? '#9b2e24' : '#6a7a3a'} />
         ),
       )}
-      {/* barricada: guarda-roupa empurrado contra a porta */}
-      {barricade > 0 && <F.Wardrobe position={[2.75 + (1 - barricade) * 0.9, 0, -0.45]} rotY={180} />}
+      {/* cômoda do corredor → barricada: desliza da parede leste até a frente da porta (barricade 0..1) */}
+      <F.Dresser
+        position={[3.62 + (2.75 - 3.62) * barricade, 0, -1.5 + (-0.42 + 1.5) * barricade]}
+        rotY={-90 + 270 * barricade}
+      />
+      {/* capacho do corredor + chave reserva */}
+      <F.Rug position={[2.75, 0, 0.55]} w={0.9} d={0.55} color="#5a4a3a" />
+      {keysOnMat && <F.Keys position={[2.9, 0.012, 0.5]} rotY={30} />}
       {/* bolsa do protagonista */}
       {bagAt === 'entrance' && <F.DuffelBag position={[3.3, 0, -0.9]} rotY={20} />}
       {bagAt === 'sofa' && <F.DuffelBag position={[0.75, 0.45, -3.65]} rotY={-5} />}
       {bagAt === 'bedroom' && <F.DuffelBag position={[-0.6, 0, -2.5]} rotY={40} />}
     </group>
   );
-}, (a, b) => JSON.stringify(a.state) === JSON.stringify(b.state));
+}, (a, b) => JSON.stringify(a.state) === JSON.stringify(b.state) && (a.state?.tv ?? 'off') === 'off' && (b.state?.tv ?? 'off') === 'off');
 
 /** Tudo que nunca se move: fundido em poucos draw calls (StaticBatch). Memo → nunca re-renderiza. */
 const ApartmentStatic = React.memo(() => {
@@ -102,6 +118,14 @@ const ApartmentStatic = React.memo(() => {
       <Wall a={[1.5, -8]} b={[1.5, 0]} material={wallH} openings={[{from: 0.8, to: 4.2, bottom: 0, top: 2.3}]} />
       <Wall a={[-6, -3]} b={[1.5, -3]} material={wallL} openings={[{from: 1.8, to: 2.7, bottom: 0, top: 2.1}, {from: 3.6, to: 4.5, bottom: 0, top: 2.1}]} />
       <Wall a={[-2.5, -3]} b={[-2.5, 0]} material={wallB} />
+      {/* ---- corredor do prédio (fora do apartamento) ---- */}
+      <Slab x={[0.5, 6.5]} z={[0, 2.3]} material={mat('#8f9493')} />
+      <Slab x={[0.5, 6.5]} z={[0, 2.3]} y={H} material={ceil} ceiling />
+      <Wall a={[0.5, 2.3]} b={[6.5, 2.3]} material={mat('#b8c2bf')} openings={[{from: 3.55, to: 4.45, bottom: 0, top: 2.1}]} />
+      <Wall a={[0.5, 0]} b={[0.5, 2.3]} material={mat('#b8c2bf')} />
+      <Wall a={[6.5, 0]} b={[6.5, 2.3]} material={mat('#b8c2bf')} />
+      <F.ElevatorDoor position={[1.6, 0, 2.24]} rotY={180} />
+      <F.PictureFrame position={[5.4, 1.5, 2.235]} rotY={180} w={0.45} h={0.3} color="#c81e22" />
       {/* sala */}
       <F.Rug position={[0.0, 0, -5.1]} />
       <F.Sofa position={[0.0, 0, -3.55]} rotY={180} />

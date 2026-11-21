@@ -283,3 +283,42 @@ export const PictureFrame: React.FC<P & {w?: number; h?: number}> = ({w = 0.5, h
     <Box p={[0, 0, 0.016]} s={[w - 0.06, h - 0.06, 0.005]} c={color} shadow={false} />
   </G>
 );
+
+/** Cômoda do corredor — vira barricada (empurrada contra a porta). */
+export const Dresser: React.FC<P> = (p) => (
+  <G {...p}>
+    <Box p={[0, 0.45, 0]} s={[0.9, 0.9, 0.45]} c="#7a5a3e" />
+    {[0.2, 0.5, 0.78].map((y) => (
+      <group key={y}>
+        <Box p={[0, y, 0.226]} s={[0.84, 0.24, 0.01]} c="#8c6a4a" shadow={false} />
+        <Box p={[0, y, 0.236]} s={[0.16, 0.025, 0.02]} c={PAL.metal} shadow={false} />
+      </group>
+    ))}
+    <Box p={[-0.25, 0.97, 0]} s={[0.2, 0.14, 0.14]} c="#5a7a8a" />
+  </G>
+);
+
+/** Molho de chaves (prop de mão). */
+export const Keys: React.FC<P> = (p) => (
+  <G {...p}>
+    <mesh rotation={[Math.PI / 2, 0, 0]} material={mat(PAL.metal)}>
+      <torusGeometry args={[0.018, 0.0035, 6, 14]} />
+    </mesh>
+    {[-0.4, 0.3].map((r, i) => (
+      <group key={i} rotation={[0, 0, r]}>
+        <Box p={[0, -0.04, 0]} s={[0.012, 0.05, 0.003]} c={i ? '#c9a640' : PAL.metal} shadow={false} />
+        <Box p={[0, -0.012, 0]} s={[0.024, 0.02, 0.004]} c={i ? '#c9a640' : PAL.metal} shadow={false} />
+      </group>
+    ))}
+  </G>
+);
+
+/** Porta de elevador (corredor do prédio). */
+export const ElevatorDoor: React.FC<P> = (p) => (
+  <G {...p}>
+    <Box p={[0, 1.05, 0]} s={[1.2, 2.1, 0.1]} c="#8f979e" r={0.3} />
+    <Box p={[0, 1.05, 0.055]} s={[0.012, 2.0, 0.01]} c="#4a5056" shadow={false} />
+    <Box p={[0.75, 1.2, 0.04]} s={[0.1, 0.18, 0.03]} c="#3a3f44" shadow={false} />
+    <Box p={[0, 2.3, 0.04]} s={[0.5, 0.14, 0.02]} c="#1c1d1f" shadow={false} />
+  </G>
+);

@@ -10,7 +10,7 @@ import type {PhoneScreen} from '../../components/props/Phone';
 import type {ActorTrack} from '../../components/characters/Actor';
 import type {LightPreset} from '../../components/lighting/Lighting';
 
-export type VoiceId = 'narrador' | 'rafael' | 'vizinho';
+export type VoiceId = 'narrador' | 'rafael' | 'vizinho' | 'reporter';
 
 /** Alvo de olhar: nome do cenário, ponto 3D, ângulo absoluto ou relativo ao olhar atual ({rel:true}). */
 export type Target = LookName | {yaw?: number; pitch?: number; rel?: boolean} | [number, number, number];
@@ -33,12 +33,14 @@ export type Action = {at?: number} & (
   | {a: 'actor'; track: ActorTrack}
   | {a: 'fade'; v: number; dur?: number}
   | {a: 'danger'; v: number; dur?: number}
+  | {a: 'lens'; v: number; dur?: number} // olho mágico: 1 = máscara circular olho-de-peixe
   | {a: 'title'; text: string; dur?: number}
 );
 
 export type PropName = 'none' | 'phone' | 'bottle' | 'can' | 'keys' | 'flashlight' | 'knife';
 
-export type Line = {v: VoiceId; text: string; phone?: boolean; at?: number};
+/** fx: phone = banda telefônica · tv = alto-falante de TV na sala · door = abafado atrás da porta. */
+export type Line = {v: VoiceId; text: string; phone?: boolean; fx?: 'phone' | 'tv' | 'door'; at?: number};
 
 export type Beat = {
   line?: Line;

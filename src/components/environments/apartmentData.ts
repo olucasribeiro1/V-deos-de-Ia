@@ -4,12 +4,18 @@
  * LOOKS = alvos de olhar [x,y,z].
  */
 export const SPOTS = {
+  corridor: {x: 2.75, z: 1.25}, // corredor do prédio (fora do apartamento)
+  corridorFar: {x: 5.2, z: 1.1},
   entrance: {x: 2.75, z: -0.75},
+  peepView: {x: 2.75, z: 0.075}, // olho no olho mágico (câmera rente à porta, com lente)
   peephole: {x: 2.75, z: -0.32},
   hallMid: {x: 2.75, z: -3.0},
   hallEnd: {x: 2.75, z: -5.6},
   livingCenter: {x: -1.4, z: -5.8},
   sofa: {x: 0.0, z: -4.3},
+  sofaSeat: {x: 0.0, z: -3.74}, // sentado (use height ~1.12)
+  sink: {x: -4.95, z: -6.9},
+  hallDresser: {x: 2.85, z: -1.5}, // atrás da cômoda do corredor (para empurrar)
   window: {x: -3.3, z: -7.58},
   hallWindow: {x: 2.7, z: -7.4},
   kitchen: {x: -4.9, z: -5.9},
@@ -22,6 +28,13 @@ export const SPOTS = {
 export type SpotName = keyof typeof SPOTS;
 
 export const NAV: [SpotName, SpotName][] = [
+  ['corridorFar', 'corridor'],
+  ['corridor', 'entrance'], // atravessa a porta: só com a porta aberta
+  ['peephole', 'peepView'],
+  ['sofa', 'sofaSeat'],
+  ['kitchen', 'sink'],
+  ['entrance', 'hallDresser'],
+  ['hallDresser', 'hallMid'],
   ['entrance', 'hallMid'],
   ['entrance', 'peephole'],
   ['hallMid', 'hallEnd'],
@@ -41,17 +54,22 @@ export const NAV: [SpotName, SpotName][] = [
 
 export const LOOKS = {
   door: [2.75, 1.45, 0],
+  corridorView: [2.75, 1.3, 2.4],
+  corridorEnd: [6, 1.4, 1.1],
+  dresser: [3.6, 0.6, -1.5],
+  sink: [-5.7, 0.95, -6.9],
+  table: [-3.6, 0.8, -4.7],
+  archway: [1.6, 1.45, -5.0],
   peepholeView: [2.75, 1.5, 3],
   doorLock: [2.95, 1.05, 0],
   window: [-3.4, 1.5, -8.5],
-  city: [-6, -2, -45],
-  street: [-3, -20.5, -24],
+  city: [-6, 6, -45],
+  street: [-3, -8.2, -21],
   smoke: [-22, 5, -60],
   sofa: [0.0, 0.5, -3.5],
   tv: [-0.4, 0.9, -7.7],
   kitchen: [-5.7, 1.0, -6.0],
   fridge: [-5.6, 1.2, -3.65],
-  table: [-3.6, 0.8, -4.7],
   hallway: [2.75, 1.5, -8],
   livingRoom: [-1.5, 1.2, -5.5],
   bedroom: [-0.4, 0.8, -1.0],

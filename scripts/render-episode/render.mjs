@@ -17,7 +17,7 @@ const preview = args.includes('--preview');
 const force = args.includes('--force');
 const only = args.includes('--scenes') ? args[args.indexOf('--scenes') + 1].split(',') : null;
 const conc = args.includes('--concurrency') ? Number(args[args.indexOf('--concurrency') + 1]) : Math.max(1, Math.min(4, os.cpus().length));
-const settings = {scale: preview ? 0.5 : 1, crf: preview ? 28 : 20, jpeg: preview ? 70 : 88};
+const settings = {scale: preview ? 0.5 : 1, crf: preview ? 28 : 20, jpeg: preview ? 70 : 88, pix: 'yuv420p'};
 
 const T0 = Date.now();
 const {ep, compiled, narr, sfx} = await loadEpisode(id);
@@ -83,7 +83,7 @@ for (const sc of compiled.scenes) {
       'npx',
       [
         'remotion', 'render', bundleDir, `${id}--${sc.id}`, file + '.part.mp4',
-        `--concurrency=${conc}`, `--scale=${settings.scale}`, `--crf=${settings.crf}`, `--jpeg-quality=${settings.jpeg}`,
+        `--concurrency=${conc}`, `--scale=${settings.scale}`, `--pixel-format=${settings.pix}`, '--color-space=bt709', `--crf=${settings.crf}`, `--jpeg-quality=${settings.jpeg}`,
         '--gl=angle', '--codec=h264', '--audio-codec=aac', '--audio-bitrate=192k', '--log=info', // info = linhas de progresso → heartbeat
         '--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell',
       ].filter((x) => !x.startsWith('--browser-executable') || fs.existsSync(x.split('=')[1])),

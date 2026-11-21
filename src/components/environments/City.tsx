@@ -9,7 +9,7 @@ import {mat, PAL} from '../../library/materials';
  * prédios por INSTANCING (1 draw call), fumaça por instancing animado, rua com veículos.
  * `chaos` 0..1 controla colapso: luzes apagando, fumaça, incêndios, sirenes visuais.
  */
-const STREET_Y = -21; // 7º andar
+export const STREET_Y = -8.4; // 3º andar: ação na rua legível da janela
 
 /** Fachada PRÉ-ILUMINADA: parede + janelas acesas na mesma textura (MeshBasicMaterial = custo mínimo). */
 function facadeTexture(seed: number, lit: number) {
@@ -165,9 +165,9 @@ export const Smoke: React.FC<{origin: [number, number, number]; t: number; amoun
     const im = ref.current!;
     for (let i = 0; i < puffs; i++) {
       const [a, b, c] = offs[i];
-      const life = (t * 0.045 + a) % 1; // 0..1 ciclo de vida
-      const y = life * 55;
-      const s = (1.5 + life * 9 + b * 2) * amount;
+      const life = (t * 0.06 + a) % 1; // 0..1 ciclo de vida
+      const y = life * 45;
+      const s = (0.6 + life * 7 + b * 1.5) * amount;
       smokeDummy.position.set(origin[0] + (b - 0.5) * 3 + life * 14, origin[1] + y, origin[2] + (c - 0.5) * 3 - life * 4);
       smokeDummy.scale.setScalar(Math.max(0.001, s));
       smokeDummy.rotation.set(a * 6 + t * 0.05, b * 6, c * 6);
@@ -178,6 +178,20 @@ export const Smoke: React.FC<{origin: [number, number, number]; t: number; amoun
   });
   return <instancedMesh ref={ref} args={[undefined, m, puffs]} frustumCulled={false} renderOrder={12}><icosahedronGeometry args={[1, 0]} /></instancedMesh>;
 };
+
+/** Chamas low poly (cones emissivos tremulando) — sem luz dinâmica. */
+const Fire: React.FC<{p: [number, number, number]; t: number}> = ({p, t}) => (
+  <group position={p} renderOrder={11}>
+    {[0, 1, 2, 3, 4].map((i) => {
+      const h = 1.1 + Math.sin(t * 9 + i * 1.7) * 0.35 + (i % 2) * 0.4;
+      return (
+        <mesh key={i} position={[Math.cos(i * 1.3) * 0.7, h / 2, Math.sin(i * 1.3) * 0.5]} scale={[1, h, 1]} material={mat(i % 2 ? '#ffb030' : '#ff5a1a', {emissive: i % 2 ? '#ffa020' : '#ff4010', ei: 2.2, outline: false})}>
+          <coneGeometry args={[0.35, 1, 6]} />
+        </mesh>
+      );
+    })}
+  </group>
+);
 
 const Car: React.FC<{p: [number, number, number]; rotY?: number; color: string; wreck?: boolean}> = ({p, rotY = 0, color, wreck}) => (
   <group position={p} rotation={[wreck ? 0.15 : 0, rotY, wreck ? 0.25 : 0]}>
@@ -235,23 +249,22 @@ export const City: React.FC<{t: number; chaos?: number; children?: React.ReactNo
         <planeGeometry args={[400, 200]} />
       </mesh>
       {/* nosso prédio (fachada abaixo da janela) */}
-      <mesh position={[-1, STREET_Y / 2 - 0.2, -8.3]} material={mat('#7d7468', {rough: 1})}>
+      <mesh position={[-1, STREET_Y / 2 - 0.2, -8.3]} material={mat('#9a8f80')}>
         <boxGeometry args={[14, -STREET_Y - 0.4, 0.4]} />
       </mesh>
       <Car p={[-16, STREET_Y, -17]} rotY={Math.PI / 2} color="#5a6470" />
       <Car p={[8, STREET_Y, -23]} rotY={-Math.PI / 2} color="#7a2a24" />
-      {chaos > 0.3 && <Car p={[-4, STREET_Y + 0.2, -21]} rotY={0.9} color="#c8c4b8" wreck />}
-      {chaos > 0.2 && <Ambulance p={[-1 + Math.max(0, 40 - t * 1.2), STREET_Y, -19]} rotY={-Math.PI / 2} t={t} />}
-      {/* incêndios e fumaça */}
+      {chaos > 0.1 && <Car p={[-4, STREET_Y + 0.1, -21]} rotY={0.9} color="#3a3634" wreck />}
+      {chaos > 0.2 && <Ambulance p={[4 + Math.max(0, 40 - t * 1.2), STREET_Y, -17.2]} rotY={-Math.PI / 2} t={t} />}
+      {/* incêndios e fumaça: carro em chamas na rua + colunas distantes nascendo atrás dos prédios */}
       {chaos > 0.1 && !bench.noSmoke && (
         <>
-          <Smoke origin={[-22, STREET_Y + 30, -60]} t={t} amount={Math.min(1, chaos * 1.4)} seed={2} />
-          <mesh position={[-22, STREET_Y + 28, -58]} material={mat('#ff7a2a', {emissive: '#ff5a10', ei: 2.5 + Math.sin(t * 9) * 0.8})}>
-            <boxGeometry args={[6, 3, 1]} />
-          </mesh>
+          <Fire p={[-4, STREET_Y + 0.6, -21]} t={t} />
+          <Smoke origin={[-4, STREET_Y + 1.5, -21]} t={t} amount={Math.min(0.55, chaos)} seed={2} />
+          <Smoke origin={[-35, STREET_Y, -95]} t={t + 13} amount={Math.min(1.2, chaos * 1.8)} seed={4} color="#3b3a3a" />
         </>
       )}
-      {chaos > 0.45 && !bench.noSmoke && <Smoke origin={[30, STREET_Y + 20, -90]} t={t + 40} amount={chaos} seed={5} color="#3a3633" />}
+      {chaos > 0.45 && !bench.noSmoke && <Smoke origin={[40, STREET_Y, -120]} t={t + 40} amount={chaos * 1.5} seed={5} color="#45403c" />}
       {children}
     </group>
   );
