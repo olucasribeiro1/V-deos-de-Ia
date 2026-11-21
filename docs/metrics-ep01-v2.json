@@ -1,0 +1,87 @@
+{
+  "episode": "ep01",
+  "preview": false,
+  "concurrency": 4,
+  "cpus": 4,
+  "ramGB": 15.7,
+  "scenes": [
+    {
+      "id": "s00",
+      "frames": 276,
+      "seconds": 11.5,
+      "renderSeconds": 66.096,
+      "renderFps": 4.18,
+      "ratio": 5.75
+    },
+    {
+      "id": "s01",
+      "frames": 744,
+      "seconds": 31,
+      "renderSeconds": 198.708,
+      "renderFps": 3.74,
+      "ratio": 6.41
+    },
+    {
+      "id": "s02",
+      "frames": 2090,
+      "seconds": 87.08333333333333,
+      "renderSeconds": 505.47,
+      "renderFps": 4.13,
+      "ratio": 5.8
+    },
+    {
+      "id": "s03",
+      "frames": 1592,
+      "seconds": 66.33333333333333,
+      "renderSeconds": 358.915,
+      "renderFps": 4.44,
+      "ratio": 5.41
+    },
+    {
+      "id": "s04",
+      "frames": 1221,
+      "seconds": 50.875,
+      "renderSeconds": 260.239,
+      "renderFps": 4.69,
+      "ratio": 5.12
+    },
+    {
+      "id": "s05",
+      "frames": 2152,
+      "seconds": 89.66666666666667,
+      "renderSeconds": 481.98,
+      "renderFps": 4.46,
+      "ratio": 5.38
+    },
+    {
+      "id": "s06",
+      "frames": 1524,
+      "seconds": 63.5,
+      "renderSeconds": 260.875,
+      "renderFps": 5.84,
+      "ratio": 4.11
+    },
+    {
+      "id": "s07",
+      "frames": 1189,
+      "seconds": 49.541666666666664,
+      "renderSeconds": 263.493,
+      "renderFps": 4.51,
+      "ratio": 5.32
+    },
+    {
+      "id": "s08",
+      "frames": 1086,
+      "seconds": 45.25,
+      "renderSeconds": 261.316,
+      "renderFps": 4.16,
+      "ratio": 5.77
+    }
+  ],
+  "final": "/home/user/V-deos-de-Ia/out/ep01/ep01.mp4",
+  "totalSeconds": 2676.3,
+  "videoSeconds": 494.75,
+  "peakRamGB": 2.49,
+  "renderRatio": 5.37,
+  "estimate11minMinutes": 59.1
+}

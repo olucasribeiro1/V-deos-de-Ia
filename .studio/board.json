@@ -149,10 +149,11 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "EM EXECUÇÃO",
+      "status": "CONCLUÍDO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.268Z",
-      "updated": "2026-11-21T13:04:55.272Z"
+      "updated": "2026-11-21T14:10:30.823Z",
+      "evidence": "verify-mp4 OK 494.9s; 73/73 falas sincronizadas; 0 silêncios; -18.3 LUFS; audit:float 27/27"
     },
     {
       "id": "T12",
