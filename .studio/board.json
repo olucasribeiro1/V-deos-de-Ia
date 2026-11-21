@@ -71,10 +71,11 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "PENDENTE",
+      "status": "CONCLUÍDO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.118Z",
-      "updated": "2026-11-21T10:50:35.118Z"
+      "updated": "2026-11-21T13:00:38.463Z",
+      "evidence": "speed.mjs por cena (1,15–1,5), sem créditos"
     },
     {
       "id": "T6",
@@ -83,10 +84,10 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "PENDENTE",
+      "status": "EM EXECUÇÃO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.144Z",
-      "updated": "2026-11-21T10:50:35.144Z"
+      "updated": "2026-11-21T13:00:38.487Z"
     },
     {
       "id": "T7",
@@ -95,10 +96,10 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "PENDENTE",
+      "status": "EM EXECUÇÃO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.168Z",
-      "updated": "2026-11-21T10:50:35.168Z"
+      "updated": "2026-11-21T13:00:38.513Z"
     },
     {
       "id": "T8",
@@ -107,10 +108,10 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "PENDENTE",
+      "status": "EM EXECUÇÃO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.193Z",
-      "updated": "2026-11-21T10:50:35.194Z"
+      "updated": "2026-11-21T13:00:38.537Z"
     },
     {
       "id": "T9",
@@ -119,10 +120,10 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "PENDENTE",
+      "status": "EM EXECUÇÃO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.217Z",
-      "updated": "2026-11-21T10:50:35.217Z"
+      "updated": "2026-11-21T13:00:38.571Z"
     },
     {
       "id": "T10",
@@ -131,10 +132,10 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "PENDENTE",
+      "status": "EM EXECUÇÃO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.242Z",
-      "updated": "2026-11-21T10:50:35.242Z"
+      "updated": "2026-11-21T13:00:38.598Z"
     },
     {
       "id": "T11",

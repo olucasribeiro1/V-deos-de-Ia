@@ -259,7 +259,7 @@ export const episode: Episode = {
           ],
         },
         {
-          line: {v: 'protagonista', text: '[worried] Tô... [tense] Rafa, que barulho é esse?', at: 0.9},
+          line: {v: 'protagonista', text: '[worried] Tô sim... [tense] Rafa, que barulho é esse?', at: 0.9},
           do: [{a: 'sfx', at: 0, id: 'scream_phone', vol: 0.25}, {a: 'walk', at: 0.3, to: 'sofa', pace: 'slow', arrive: 'livingRoom'}],
         },
         {
@@ -342,6 +342,10 @@ export const episode: Episode = {
             {a: 'actor', at: 0, track: {spec: INF_AGR, variation: 0.7, y: STREET, face: 180, path: [[0.6, 11, -19.6], [3.6, -1.85, -19.42]], clips: [[0.6, 'lunge'], [3.6, 'feed']]}},
             {a: 'actor', at: 5.0, track: {spec: {id: 'inf_lento', height: 1.7, build: 1.15, skin: '#a7b89a', hair: '#555', hairStyle: 'bald', top: '#5b5f63', topStyle: 'shirt', bottom: '#3d3a33', shoes: '#2a2a2a', infected: {decay: 0.6, blood: 0.4, eyes: '#c9c27a'}}, variation: 0.4, y: STREET, face: 0, path: [[0, -16, -21], [9, -2.3, -20.62]], clips: [[0, 'shamble'], [9, 'feed']]}},
             {a: 'sfx', at: 3.1, id: 'scream_far', vol: 0.6},
+            // foco do olhar (zoom curto, motivado): o horror do ataque fica legível de longe
+            {a: 'look', at: 2.4, target: [-2.1, -8.0, -19.9], dur: 0.9},
+            {a: 'fov', at: 3.0, v: 30, dur: 0.7},
+            {a: 'shake', at: 3.2, amp: 0.5, dur: 0.6},
             {a: 'tension', at: 3.3, v: 0.8},
             {a: 'danger', at: 3.4, v: 0.25, dur: 0.8},
           ],
@@ -350,6 +354,7 @@ export const episode: Episode = {
           line: {v: 'protagonista', text: '[reading fast, breathless] Alerta extremo. Permaneça em casa. Evite contato com feridos. [nervous laugh] Agora vocês avisam.', at: 1.6},
           do: [
             {a: 'danger', at: 0, v: 0, dur: 1.5},
+            {a: 'fov', at: 0, v: 62, dur: 0.5},
             {a: 'sfx', at: 0, id: 'emergency_alert', vol: 0.7},
             {a: 'phone', at: 0, screen: {kind: 'alert', time: '18:19', title: 'ALERTA EXTREMO — Defesa Civil', body: 'Permaneça em casa. Tranque portas e janelas. Evite contato com pessoas feridas.'}},
             {a: 'prop', at: 0.2, r: 'phone'},
@@ -744,7 +749,7 @@ export const episode: Episode = {
       state: {bagAt: 'bedroom', lightsOn: 0.15, blinds: 1, supplies: 1, entranceLocks: 2, chain: true, barricade: 1},
       beats: [
         {
-          line: {v: 'protagonista', text: '[relieved, breathless] Rafa...', at: 2.2},
+          line: {v: 'protagonista', text: '[relieved, breathless] Rafa! É você?', at: 2.2},
           do: [
             {a: 'timer', at: 0, remaining: 4920},
             {a: 'title', at: 0, text: '@18:52', dur: 3},
@@ -771,7 +776,7 @@ export const episode: Episode = {
           do: [{a: 'sfx', at: 0.5, id: 'scream_phone', vol: 0.4}],
         },
         {
-          line: {v: 'protagonista', text: '[whispers, devastated] Rafa...?', at: 1.3},
+          line: {v: 'protagonista', text: '[whispers, devastated] Rafa...? Rafa, fala comigo...', at: 1.3},
           pad: 0.8,
           do: [
             {a: 'sfx', at: 0, id: 'call_drop', vol: 0.75},

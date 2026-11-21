@@ -26,3 +26,10 @@
 [2026-11-21T10:50:35.242Z] add T10 (animation-director) Câmera menos robótica (deriva natural, olhares)
 [2026-11-21T10:50:35.269Z] add T11 (render-engineer) Re-render ep01 v2 + auditoria
 [2026-11-21T10:50:35.293Z] add T12 (diretor) Registrar métricas de retenção na skill
+[2026-11-21T13:00:38.431Z] set T5 EM EXECUÇÃO
+[2026-11-21T13:00:38.464Z] set T5 CONCLUÍDO
+[2026-11-21T13:00:38.488Z] set T6 EM EXECUÇÃO
+[2026-11-21T13:00:38.514Z] set T7 EM EXECUÇÃO
+[2026-11-21T13:00:38.538Z] set T8 EM EXECUÇÃO
+[2026-11-21T13:00:38.572Z] set T9 EM EXECUÇÃO
+[2026-11-21T13:00:38.599Z] set T10 EM EXECUÇÃO
