@@ -1,9 +1,9 @@
-# 🎵 Quem Fez? Foi Deus! — A Criação em 7 Dias (versão 3)
+# 🎵 Quem Fez? Foi Deus! — A Criação em 7 Dias (versão 3.1 — animada)
 
 **Tema:** A criação do mundo (Gênesis 1 e 2:1-7)
 **Objetivo educativo:** contar de 1 a 7 nos dedinhos, conhecer elementos da natureza e bichos brasileiros, e aprender que o mesmo Deus que fez tudo conhece a criança pelo nome.
 **Duração-alvo:** 3min15 a 3min40 · **Formato:** horizontal 16:9
-**Ritmo:** pop infantil alegre, ~112 BPM, 4/4, Ré maior (sobe para Mi maior no refrão final)
+**Ritmo:** pop infantil alegre, ~124 BPM, animada, 4/4, Ré maior (sobe para Mi maior no refrão final)
 **Voz escolhida:** voz 0 (voz feminina original do ElevenLabs Music)
 **Elenco (proposta):** Lulu (menina), Théo (menino), Algodão (ovelhinha mascote)
 
@@ -12,7 +12,7 @@
 > **Regra desta versão:** todas as linhas rimam em pares (AABB) e cada frase descreve algo que realmente acontece na história.
 
 ### [INTRO — 0:00] *(glockenspiel + ukulele, falado com sorriso)*
-Psiu... quem fez o mundo, você sabe me contar?
+Ei, criançada! Quem fez o mundo, você sabe me contar?
 Levanta os dedinhos, que agora vamos começar!
 
 ### [VERSO 1 — Dias 1 e 2]
@@ -29,7 +29,7 @@ E a cada coisa que fazia, Deus olhava devagar,
 Quem fez o sol? **Foi Deus!** *(Foi Deus!)*
 Quem fez o mar? **Foi Deus!** *(Foi Deus!)*
 Quem fez a flor, o passarinho e eu?
-Foi Deus, foi Deus, foi Deus!
+Foi Deus! *(Foi Deus!)* Foi Deus! *(Foi Deus!)*
 Ele falou, e tudo apareceu,
 Do fundo do mar até o céu!
 
@@ -49,17 +49,17 @@ E a cada coisa que fazia, Deus olhava devagar,
 Quem fez o sol? **Foi Deus!** *(Foi Deus!)*
 Quem fez o mar? **Foi Deus!** *(Foi Deus!)*
 Quem fez a flor, o passarinho e eu?
-Foi Deus, foi Deus, foi Deus!
+Foi Deus! *(Foi Deus!)* Foi Deus! *(Foi Deus!)*
 Ele falou, e tudo apareceu,
 Do fundo do mar até o céu!
 
 ### [VERSO 3 — Dias 5 e 6]
-**Cinco dedinhos:** no mar, a baleia e o peixinho a nadar *(glub, glub!)*,
+**Cinco dedinhos:** lá no mar, a baleia e o peixinho a nadar *(glub, glub!)*,
 E no céu, o bem-te-vi saiu voando a cantar.
 **Seis dedinhos:** o leão, a girafa e a capivara,
 O macaquinho, a ovelhinha, o tatu e a arara.
 E do pó da terra, com carinho, Deus formou a gente então,
-Soprou vida — *fuuu!* — e *tum-tum*, bateu o coração!
+Soprou vida bem fortinho, e *tum-tum*, bateu o coração!
 
 ### [PRÉ-REFRÃO ESPECIAL]
 Deus olhou pra tudo, tudo, lá do céu até o chão,
@@ -69,13 +69,13 @@ E disse: **"Ficou muito bom!"** — que linda criação!
 Quem fez o sol? **Foi Deus!** *(Foi Deus!)*
 Quem fez o mar? **Foi Deus!** *(Foi Deus!)*
 Quem fez a flor, o passarinho e eu?
-Foi Deus, foi Deus, foi Deus!
+Foi Deus! *(Foi Deus!)* Foi Deus! *(Foi Deus!)*
 Ele falou, e tudo apareceu,
 Do fundo do mar até o céu!
 
-### [PONTE — Dia 7] *(desacelera, caixinha de música, tom de ninar)*
+### [PONTE — Dia 7] *(break divertido: bateria sai, estalos de dedo e ukulele, sussurro brincalhão de 'fingir que dorme')*
 **Sete dedinhos...** bem baixinho... Deus descansou,
-Olhou o mundo bem pertinho... e abençoou.
+Olhou tudo que criou e abençoou.
 Em paz eu deito e durmo, e o escuro não me assusta, não,
 Porque Deus cuida de mim e segura a minha mão.
 
@@ -89,14 +89,14 @@ Acorda, acorda! Vamos contar tudo outra vez:
 Quem fez o sol? **Foi Deus!** *(Foi Deus!)*
 Quem fez o mar? **Foi Deus!** *(Foi Deus!)*
 Quem fez a flor, o passarinho e eu?
-Foi Deus, foi Deus, foi Deus!
+Foi Deus! *(Foi Deus!)* Foi Deus! *(Foi Deus!)*
 Ele falou, e tudo apareceu,
 Do fundo do mar até o céu!
 
 Quem fez o sol? **Foi Deus!** *(Foi Deus!)*
 Quem fez o mar? **Foi Deus!** *(Foi Deus!)*
 Quem fez a flor, o passarinho e eu?
-Foi Deus, foi Deus, foi Deus!
+Foi Deus! *(Foi Deus!)* Foi Deus! *(Foi Deus!)*
 Ele falou, e tudo apareceu,
 Do fundo do mar até o céu!
 

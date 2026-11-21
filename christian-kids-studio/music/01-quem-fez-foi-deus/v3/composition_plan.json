@@ -1,0 +1,275 @@
+{
+ "model_id": "music_v1",
+ "composition_plan": {
+  "positive_global_styles": [
+   "upbeat bouncy Brazilian Portuguese Christian children's pop",
+   "high energy, joyful, exciting, danceable, makes kids jump and sing along",
+   "124 BPM, 4/4, E major, bright and punchy",
+   "native Brazilian Portuguese young-adult female lead vocal, energetic, playful, big smile in the voice, very human and expressive, perfect clear diction of every word",
+   "strummed ukulele, glockenspiel, bright piano, bouncy bass, punchy light drum kit, hand claps, tambourine, finger snaps, cheerful brass stabs",
+   "cute soft female backing vocals and kids choir echoing the hooks",
+   "clean, loud, polished professional mix, lead vocal upfront",
+   "every lyric line must be sung completely, in order, clearly articulated"
+  ],
+  "negative_global_styles": [
+   "slow tempo",
+   "lullaby",
+   "sleepy",
+   "ballad",
+   "melancholic",
+   "sad",
+   "European Portuguese accent",
+   "robotic vocal",
+   "male lead vocal",
+   "heavy metal",
+   "autotune",
+   "mumbling",
+   "skipped lyrics"
+  ],
+  "sections": [
+   {
+    "section_name": "Intro",
+    "positive_local_styles": [
+     "energetic hook intro with glockenspiel riff and claps",
+     "excited spoken shout with a big smile"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 7000,
+    "lines": [
+     "Ei, criançada! Quem fez o mundo, você sabe me contar?",
+     "Levanta os dedinhos, que agora vamos começar!"
+    ]
+   },
+   {
+    "section_name": "Verse 1",
+    "positive_local_styles": [
+     "bouncy energetic verse",
+     "playful excited storytelling",
+     "punch on each number"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 16000,
+    "lines": [
+     "No começo era só escuro, nem estrela, nem luar,",
+     "Deus falou: \"Haja luz!\" e a luz veio brilhar!",
+     "Um dedinho: dia um, o dia e a noite separou,",
+     "Dois dedinhos: lá no alto, o céu azul Ele formou!"
+    ]
+   },
+   {
+    "section_name": "Pre-Chorus 1",
+    "positive_local_styles": [
+     "rising build-up",
+     "snare roll into the chorus"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 9000,
+    "lines": [
+     "E a cada coisa que fazia, Deus olhava devagar,",
+     "\"Isso é bom!\", Ele dizia, e voltava a criar!"
+    ]
+   },
+   {
+    "section_name": "Chorus 1",
+    "positive_local_styles": [
+     "explosive high-energy chorus",
+     "cute soft female backing vocals and kids choir echo 'Foi Deus!' in the parentheses",
+     "call and response",
+     "claps on every beat",
+     "super catchy"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 17000,
+    "lines": [
+     "Quem fez o sol? Foi Deus! (Foi Deus!)",
+     "Quem fez o mar? Foi Deus! (Foi Deus!)",
+     "Quem fez a flor, o passarinho e eu?",
+     "Foi Deus! (Foi Deus!) Foi Deus! (Foi Deus!)",
+     "Ele falou, e tudo apareceu,",
+     "Do fundo do mar até o céu!"
+    ]
+   },
+   {
+    "section_name": "Verse 2",
+    "positive_local_styles": [
+     "new verse with different lyrics from the chorus",
+     "bouncy energetic storytelling",
+     "punch on each number"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 26000,
+    "lines": [
+     "Três dedinhos: juntou as águas, e a terra seca apareceu,",
+     "Brotou capim, nasceu semente, e a primeira árvore cresceu!",
+     "Quatro dedinhos: pôs o sol no céu pra clarear o dia,",
+     "E a lua com as estrelas, pra noite ter companhia!",
+     "Cada estrela tem um nome, Deus conhece uma por uma,",
+     "Conta todas lá no céu e não esquece de nenhuma!"
+    ]
+   },
+   {
+    "section_name": "Pre-Chorus 2",
+    "positive_local_styles": [
+     "rising build-up",
+     "snare roll into the chorus"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 9000,
+    "lines": [
+     "E a cada coisa que fazia, Deus olhava devagar,",
+     "\"Isso é bom!\", Ele dizia, e voltava a criar!"
+    ]
+   },
+   {
+    "section_name": "Chorus 2",
+    "positive_local_styles": [
+     "explosive high-energy chorus",
+     "cute soft female backing vocals and kids choir echo 'Foi Deus!' in the parentheses",
+     "call and response",
+     "claps on every beat",
+     "super catchy"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 17000,
+    "lines": [
+     "Quem fez o sol? Foi Deus! (Foi Deus!)",
+     "Quem fez o mar? Foi Deus! (Foi Deus!)",
+     "Quem fez a flor, o passarinho e eu?",
+     "Foi Deus! (Foi Deus!) Foi Deus! (Foi Deus!)",
+     "Ele falou, e tudo apareceu,",
+     "Do fundo do mar até o céu!"
+    ]
+   },
+   {
+    "section_name": "Verse 3",
+    "positive_local_styles": [
+     "new verse with different lyrics from the chorus",
+     "bouncy energetic storytelling",
+     "punch on each number",
+     "clear articulation of every animal name"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 28000,
+    "lines": [
+     "Cinco dedinhos: lá no mar, a baleia e o peixinho a nadar!",
+     "E no céu, o bem-te-vi saiu voando a cantar!",
+     "Seis dedinhos: o leão, a girafa e a capivara,",
+     "O macaquinho, a ovelhinha, o tatu e a arara!",
+     "E do pó da terra, com carinho, Deus formou a gente então,",
+     "Soprou vida bem fortinho, e tum-tum, bateu o coração!"
+    ]
+   },
+   {
+    "section_name": "Pre-Chorus 3",
+    "positive_local_styles": [
+     "rising build-up",
+     "joyful",
+     "snare roll"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 10000,
+    "lines": [
+     "Deus olhou pra tudo, tudo, lá do céu até o chão,",
+     "E disse: \"Ficou muito bom!\" Que linda criação!"
+    ]
+   },
+   {
+    "section_name": "Chorus 3",
+    "positive_local_styles": [
+     "explosive high-energy chorus",
+     "cute soft female backing vocals and kids choir echo 'Foi Deus!' in the parentheses",
+     "call and response",
+     "claps on every beat",
+     "super catchy"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 17000,
+    "lines": [
+     "Quem fez o sol? Foi Deus! (Foi Deus!)",
+     "Quem fez o mar? Foi Deus! (Foi Deus!)",
+     "Quem fez a flor, o passarinho e eu?",
+     "Foi Deus! (Foi Deus!) Foi Deus! (Foi Deus!)",
+     "Ele falou, e tudo apareceu,",
+     "Do fundo do mar até o céu!"
+    ]
+   },
+   {
+    "section_name": "Break",
+    "positive_local_styles": [
+     "playful breakdown, drums drop out but keeps the bouncy rhythm with snaps and ukulele",
+     "fun teasing whisper, like a game of pretending to sleep"
+    ],
+    "negative_local_styles": [
+     "lullaby",
+     "slow tempo",
+     "sad"
+    ],
+    "duration_ms": 16000,
+    "lines": [
+     "Sete dedinhos, bem baixinho... Deus descansou,",
+     "Olhou tudo que criou e abençoou.",
+     "Em paz eu deito e durmo, e o escuro não me assusta, não,",
+     "Porque Deus cuida de mim e segura a minha mão!"
+    ]
+   },
+   {
+    "section_name": "Counting Recap",
+    "positive_local_styles": [
+     "explosive drop back in",
+     "fast fun counting from one to seven, not the chorus",
+     "shouted playful counting with kids choir",
+     "claps"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 16000,
+    "lines": [
+     "Acorda, acorda! Vamos contar tudo outra vez!",
+     "Um! A luz! Dois! O céu! Três! A semente que Deus fez!",
+     "Quatro! As estrelas! Cinco! O bem-te-vi a voar!",
+     "Seis! Eu e você! Sete! Com Deus descansar!"
+    ]
+   },
+   {
+    "section_name": "Final Chorus",
+    "positive_local_styles": [
+     "explosive high-energy chorus",
+     "cute soft female backing vocals and kids choir echo 'Foi Deus!' in the parentheses",
+     "call and response",
+     "claps on every beat",
+     "super catchy",
+     "key change up a whole step",
+     "biggest most euphoric moment"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 34000,
+    "lines": [
+     "Quem fez o sol? Foi Deus! (Foi Deus!)",
+     "Quem fez o mar? Foi Deus! (Foi Deus!)",
+     "Quem fez a flor, o passarinho e eu?",
+     "Foi Deus! (Foi Deus!) Foi Deus! (Foi Deus!)",
+     "Ele falou, e tudo apareceu,",
+     "Do fundo do mar até o céu!",
+     "Quem fez o sol? Foi Deus! (Foi Deus!)",
+     "Quem fez o mar? Foi Deus! (Foi Deus!)",
+     "Quem fez a flor, o passarinho e eu?",
+     "Foi Deus! (Foi Deus!) Foi Deus! (Foi Deus!)",
+     "Ele falou, e tudo apareceu,",
+     "Do fundo do mar até o céu!"
+    ]
+   },
+   {
+    "section_name": "Outro",
+    "positive_local_styles": [
+     "upbeat ending with glockenspiel and a final hit",
+     "happy spoken line with a smile"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 9000,
+    "lines": [
+     "Se Deus sabe o nome de cada estrela lá do céu,",
+     "Sabe o seu também! Quem fez você? Foi Deus!"
+    ]
+   }
+  ]
+ }
+}
