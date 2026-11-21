@@ -187,13 +187,19 @@ def face(head, c, mouth, eyes="open", z=1.62, r=0.58, iris=(0.25, 0.14, 0.07)):
         ex, ez = sx * 0.2 * r / 0.58, z + 0.07 * r / 0.58
         ey = -r * 0.86
         if eyes == "open":
-            sphere((ex, ey, ez), (0.13 * r / .58, 0.07, 0.165 * r / .58), M_white, parent=head)
-            sphere((ex, ey - 0.045, ez - 0.01), (0.095 * r / .58, 0.04, 0.12 * r / .58), M_iris, parent=head)
+            sphere((ex, ey, ez), (0.145 * r / .58, 0.07, 0.18 * r / .58), M_white, parent=head)
+            sphere((ex, ey - 0.045, ez - 0.01), (0.11 * r / .58, 0.04, 0.135 * r / .58), M_iris, parent=head)
             sphere((ex, ey - 0.075, ez - 0.01), (0.055 * r / .58, 0.03, 0.07 * r / .58), M_pupil, parent=head)
             sphere((ex + 0.035, ey - 0.11, ez + 0.05), 0.028 * r / .58, M_hi, seg=16, parent=head)
             sphere((ex - 0.03, ey - 0.11, ez - 0.05), 0.014 * r / .58, M_hi, seg=12, parent=head)
         else:
             arc((ex, ey - 0.03, ez - 0.02), 0.09 * r / .58, 0.016, M_lash, parent=head)
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.1 * r / .58, minor_radius=0.014, major_segments=32, minor_segments=8,
+                                         location=(ex, ey - 0.02, ez + 0.13 * r / .58), rotation=(math.radians(90), 0, 0))
+        br = bpy.context.object
+        bm_ = bmesh.new(); bm_.from_mesh(br.data)
+        bmesh.ops.delete(bm_, geom=[v for v in bm_.verts if v.co.y < 0.03], context="VERTS"); bm_.to_mesh(br.data); bm_.free()
+        br.data.materials.append(M_lash); smooth(br); setp(br, head)
     M_cheek = mat("cheek", (1.0, 0.45, 0.5), 0.6, 0.0)
     for sx in (-1, 1):
         sphere((sx * 0.33 * r / .58, -r * 0.8, z - 0.15 * r / .58), (0.085, 0.03, 0.055), M_cheek, parent=head)
@@ -201,7 +207,7 @@ def face(head, c, mouth, eyes="open", z=1.62, r=0.58, iris=(0.25, 0.14, 0.07)):
     M_t = mat("tongue", (1.0, 0.45, 0.5), 0.5, 0.3)
     mz = z - 0.2 * r / .58
     if mouth == "open":
-        sphere((0, -r * 0.92, mz - 0.02), (0.1 * r / .58, 0.045, 0.085 * r / .58), M_m, parent=head)
+        sphere((0, -r * 0.92, mz - 0.03), (0.12 * r / .58, 0.045, 0.1 * r / .58), M_m, parent=head)
         sphere((0, -r * 0.95, mz - 0.06), (0.06 * r / .58, 0.03, 0.035 * r / .58), M_t, parent=head)
     else:
         arc((0, -r * 0.93, mz + 0.03), 0.085 * r / .58, 0.02, M_m, parent=head)
@@ -240,7 +246,7 @@ def kid(kind, pose, mouth):
         hairc = mat("hairL", (0.45, 0.2, 0.06), 0.45, 0.3)
         shoe = mat("shoeL", (0.95, 0.3, 0.45), 0.4, 0.5)
         # vestido
-        cyl((0, 0, 0.62), 0.46, 0.62, top, r2=0.2, parent=root)
+        cyl((0, 0, 0.6), 0.5, 0.6, top, r2=0.26, parent=root)
         sphere((0, 0, 0.98), (0.27, 0.22, 0.2), top, parent=root)
         sphere((0, -0.1, 0.92), (0.2, 0.12, 0.05), mat("white", (1, 1, 1), 0.5), parent=root)  # golinha
     else:
@@ -248,11 +254,11 @@ def kid(kind, pose, mouth):
         shorts = mat("shorts", (1.0, 0.72, 0.1), 0.6, 0.1)
         hairc = mat("hairT", (0.1, 0.06, 0.04), 0.5, 0.3)
         shoe = mat("shoeT", (0.95, 0.3, 0.2), 0.4, 0.5)
-        sphere((0, 0, 0.86), (0.33, 0.27, 0.36), top, parent=root)
+        sphere((0, 0, 0.84), (0.38, 0.32, 0.4), top, parent=root)
         cyl((0, 0, 0.5), 0.29, 0.22, shorts, parent=root)
-        star_mesh((0, -0.27, 0.88), 0.11, mat("yellow", (1, 0.85, 0.15), 0.4, 0.4), depth=0.03, parent=root)
+        star_mesh((0, -0.335, 0.86), 0.11, mat("yellow", (1, 0.85, 0.15), 0.4, 0.4), depth=0.03, parent=root)
     for sx in (-1, 1):
-        cyl((sx * 0.13, 0, 0.28), 0.075, 0.34, skin, parent=root)
+        cyl((sx * 0.13, 0, 0.26), 0.09, 0.3, skin, parent=root)
         sphere((sx * 0.14, -0.06, 0.08), (0.12, 0.17, 0.08), shoe, parent=root)
     head = empty((0, 0, 1.62)); setp(head, root)
     sphere((0, 0, 1.62), 0.58, skin, parent=head)
@@ -261,8 +267,7 @@ def kid(kind, pose, mouth):
     sphere((0, -0.6, 1.52), (0.05, 0.04, 0.04), skin, parent=head)  # nariz
     if kind == "lulu":
         sphere((0, 0.14, 1.72), (0.63, 0.6, 0.6), hairc, parent=head)
-        for i, x in enumerate((-0.32, -0.12, 0.1, 0.3)):
-            sphere((x, -0.4, 2.02 - abs(x) * 0.25), (0.17, 0.12, 0.1), hairc, parent=head)
+        sphere((0, -0.3, 1.98), (0.48, 0.3, 0.18), hairc, parent=head)
         bow = mat("bow", (1.0, 0.25, 0.5), 0.35, 0.6)
         for sx in (-1, 1):
             sphere((sx * 0.66, 0.08, 1.72), 0.2, hairc, parent=head)
@@ -271,12 +276,9 @@ def kid(kind, pose, mouth):
             sphere((sx * 0.5, -0.02, 1.95), (0.07, 0.05, 0.06), bow, parent=head)
     else:
         sphere((0, 0.12, 1.74), (0.62, 0.6, 0.58), hairc, parent=head)
-        random.seed(3)
-        for i in range(14):
-            a = i / 14 * math.pi * 2
-            sphere((math.cos(a) * 0.42, 0.05 + math.sin(a) * 0.3, 2.08 + random.uniform(-0.04, 0.04)), 0.17, hairc, parent=head)
-        for x in (-0.3, -0.1, 0.12, 0.32):
-            sphere((x, -0.42, 2.0 - abs(x) * 0.2), (0.15, 0.11, 0.1), hairc, parent=head)
+        sphere((0, -0.05, 2.0), (0.5, 0.42, 0.22), hairc, parent=head)
+        sphere((0.02, -0.25, 2.2), (0.09, 0.07, 0.12), hairc, parent=head)
+        sphere((0.1, -0.28, 2.27), (0.07, 0.06, 0.08), hairc, parent=head)
     eyes = "closed" if pose == "pray" else "open"
     face(head, None, mouth, eyes=eyes, iris=(0.3, 0.17, 0.07) if kind == "lulu" else (0.12, 0.3, 0.12))
     (lx, lz), (rx, rz) = POSES[pose]
@@ -678,6 +680,6 @@ if __name__ == "__main__":
         reset(); _mats.clear()
         fn()
         if name.startswith("bg_"):
-            bpy.context.scene.cycles.samples = 16 if PREVIEW else 64
+            bpy.context.scene.cycles.samples = 16 if PREVIEW else 32
         render(name)
         print("  %.1fs" % (time.time() - t), flush=True)
