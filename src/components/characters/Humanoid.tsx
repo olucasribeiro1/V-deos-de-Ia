@@ -152,9 +152,15 @@ export const Humanoid: React.FC<{spec: CharacterSpec; pose: Pose; position?: [nu
           </mesh>
           <group position={[0, 0.25, 0]} rotation={R(pose.chest)}>
             {spec.topStyle === 'jacket' && (
-              <mesh position={[0, -0.02, 0.112 * b]} scale={[0.75, 1, 0.35]} material={accent}>
-                <capsuleGeometry args={[0.045, 0.2, 4, 8]} />
-              </mesh>
+              /* jaqueta FECHADA: zíper fino em tom levemente mais escuro + gola (sem contorno, para não parecer furo) */
+              <>
+                <mesh position={[0, -0.05, 0.106 * b]} material={mat('#4a5639', {outline: false})}>
+                  <boxGeometry args={[0.012, 0.3, 0.02]} />
+                </mesh>
+                <mesh position={[0, 0.125, 0.01]} rotation={[deg(-80), 0, 0]} material={top}>
+                  <torusGeometry args={[0.07, 0.022, 6, 14]} />
+                </mesh>
+              </>
             )}
             {spec.topStyle === 'hoodie' && (
               <mesh position={[0, 0.13, -0.08]} rotation={[deg(-20), 0, 0]} material={top}>
