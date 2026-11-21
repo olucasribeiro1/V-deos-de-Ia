@@ -84,8 +84,18 @@ export function buildPovTrack(keys: Key<PovKey>[] | ((t: number) => PovKey), fps
     pos[f * 3] = k.x + cy * sway;
     pos[f * 3 + 1] = (k.h ?? EYE_HEIGHT) + bob + breath;
     pos[f * 3 + 2] = k.z - sy * sway;
-    rot[f * 3] = deg(k.pitch + fbm1(t * 0.5, 1) * jitter + Math.sin(ph * 2) * bobAmp * 12 + shakeP);
-    rot[f * 3 + 1] = deg(k.yaw + fbm1(t * 0.4, 2) * jitter * 1.2 + shakeY);
+    // DERIVA DE ATENÇÃO (anti-robô): parado, a cabeça "passeia" alguns graus de forma orgânica;
+    // com tensão, a deriva fica mais rápida e nervosa. Andando, diminui (o olhar segue o caminho).
+    const idle = 1 - walkAmt;
+    const driftAmp = idle * (2.2 + tension * 2.5);
+    const driftYaw = fbm1(t * (0.16 + tension * 0.25), 21) * driftAmp * 1.6;
+    const driftPitch = fbm1(t * (0.13 + tension * 0.2), 23) * driftAmp * 0.7;
+    // troca de apoio entre as pernas (parado): leve balanço lateral lento
+    const weight = idle * Math.sin(t * 0.37 + fbm1(t * 0.05, 31)) * 0.012;
+    pos[f * 3] += cy * weight;
+    pos[f * 3 + 2] -= sy * weight;
+    rot[f * 3] = deg(k.pitch + driftPitch + fbm1(t * 0.5, 1) * jitter + Math.sin(ph * 2) * bobAmp * 12 + shakeP);
+    rot[f * 3 + 1] = deg(k.yaw + driftYaw + fbm1(t * 0.4, 2) * jitter * 1.2 + shakeY);
     rot[f * 3 + 2] = deg(Math.sin(ph) * (walkAmt * 0.6 + runAmt * 1.4) + fbm1(t * 0.3, 5) * 0.3);
   }
   return {frames, pos, rot, speed, fov, steps};

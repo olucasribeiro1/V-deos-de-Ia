@@ -21,7 +21,7 @@ import type {PhoneScreen} from '../../components/props/Phone';
 import type {ActorTrack} from '../../components/characters/Actor';
 
 const lin = (x: number) => x;
-const PACE = {slow: 0.75, walk: 1.25, brisk: 1.7, run: 3.6};
+const PACE = {slow: 1.0, walk: 1.45, brisk: 2.0, run: 3.6}; // ritmo mais vivo (feedback: "travado/chato")
 const CHARS_PER_SEC = 14; // estimativa só quando o áudio ainda não existe
 
 class Channel<T> {
@@ -68,6 +68,8 @@ export type CompiledScene = {
   danger: (t: number) => number;
   lens: (t: number) => number;
   titles: {t: number; dur: number; text: string}[];
+  tips: {t: number; dur: number; title: string; text: string; src: string}[];
+  timer?: {t: number; remaining: number; brokenAt?: number};
   actors: ActorTrack[];
   lines: {id: string; v: string; text: string; file?: string; t: number; dur: number; estimated: boolean}[];
   sfx: {t: number; id: string; vol: number; loop?: number}[];
@@ -143,6 +145,8 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
   for (const [k, v] of Object.entries(sc.state ?? {})) if (typeof v === 'number') envNum.set(k, new Channel<number>(v));
   const shakes: Shake[] = [];
   const titles: CompiledScene['titles'] = [];
+  const tips: CompiledScene['tips'] = [];
+  let timer: CompiledScene['timer'];
   const actors: ActorTrack[] = [];
   const lines: CompiledScene['lines'] = [];
   const sfx: CompiledScene['sfx'] = [];
@@ -154,7 +158,7 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
     const beatStart = t;
     let beatEnd = beatStart + (beat.min ?? 0);
     if (beat.line) {
-      const id = lineId(sc.id, bi);
+      const id = beat.line.ref ?? lineId(sc.id, bi);
       const m = narr[id];
       const dur = m ? m.dur : beat.line.text.length / CHARS_PER_SEC + 0.4;
       if (!m) issues.push({level: 'aviso', msg: `fala ${id} sem áudio gerado (duração estimada ${dur.toFixed(1)}s)`});
@@ -181,7 +185,7 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
         const segLens = pts.slice(1).map((p, i) => Math.hypot(p.x - pts[i].x, p.z - pts[i].z));
         const total = segLens.reduce((x, y) => x + y, 0);
         if (total < 0.01) return a0;
-        const accel = 0.45; // s para acelerar/frear
+        const accel = 0.35; // s para acelerar/frear
         const dur = total / speed + accel;
         const h = pos.cut(a0).h;
         const v0 = view.cut(a0);
@@ -367,6 +371,13 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
         lens.to(a0 + dur, act.v);
         return a0 + dur;
       }
+      case 'timer':
+        if (act.remaining !== undefined) timer = {t: a0, remaining: act.remaining};
+        if (act.broken && timer) timer.brokenAt = a0;
+        return a0;
+      case 'tip':
+        tips.push({t: a0, dur: act.dur ?? 6, title: act.title, text: act.text, src: act.src});
+        return a0;
       case 'title':
         titles.push({t: a0, dur: act.dur ?? 3, text: act.text});
         return a0 + (act.dur ?? 3);
@@ -419,6 +430,8 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
     danger: (tt) => danger.at(tt),
     lens: (tt) => lens.at(tt),
     titles,
+    tips,
+    timer,
     actors,
     lines,
     sfx,

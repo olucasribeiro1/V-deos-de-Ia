@@ -30,7 +30,7 @@ const manifest = readJson(manPath, {});
 const jobs = [];
 for (const sc of ep.scenes) {
   sc.beats.forEach((b, i) => {
-    if (!b.line) return;
+    if (!b.line || b.line.ref) return; // ref = reaproveita áudio existente (sem créditos)
     const id = `${sc.id}_b${String(i).padStart(2, '0')}`;
     const v = ep.voices[b.line.v];
     const prev = sc.beats.slice(0, i).reverse().find((x) => x.line && x.line.v === b.line.v)?.line.text;
@@ -84,6 +84,7 @@ await pool(todo, 3, async (j) => {
   fs.unlinkSync(raw);
   const dur = duration(path.join(outDir, out));
   manifest[j.id] = {file: out, dur: Math.round(dur * 1000) / 1000, hash: j.hash, voice: j.line.v, pronuncia: Math.round(j.check.score * 100) / 100};
+  // se o episódio usa narração acelerada, rode depois: npm run voice:speed -- <ep> <fator> (só processa a fala nova)
   fs.writeFileSync(manPath, JSON.stringify(manifest, null, 2)); // salva a cada fala (falha não perde o que já foi pago)
   console.log(`  ${j.check.score >= 0.92 ? '✓' : '✗ REVISAR'} ${j.id} ${dur.toFixed(2)}s pronúncia ${(j.check.score * 100).toFixed(0)}%  ${j.line.text.slice(0, 50)}`);
 });

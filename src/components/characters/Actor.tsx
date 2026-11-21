@@ -16,6 +16,7 @@ export type ActorTrack = {
   face?: number; // yaw (graus) quando parado
   y?: number;
   until?: number; // some após este tempo (troca de personagem, ex.: transformação)
+  bloodAt?: number; // começa uma poça de sangue crescente sob o ator neste tempo
 };
 
 function pathAt(path: [number, number, number][], t: number) {
@@ -52,5 +53,16 @@ export const Actor: React.FC<{track: ActorTrack; t: number}> = ({track, t}) => {
     const prevPose = clip(pname, t, v, pk ?? clamp((ct - pt) / Math.max(0.3, ct - pt)));
     pose = blendPose(prevPose, pose, smooth(local / 0.35));
   }
-  return <Humanoid spec={track.spec} pose={pose} position={[x, track.y ?? 0, z]} yaw={yaw} />;
+  const pool = track.bloodAt !== undefined && t > track.bloodAt ? Math.min(1, (t - track.bloodAt) / 5) : 0;
+  return (
+    <>
+      <Humanoid spec={track.spec} pose={pose} position={[x, track.y ?? 0, z]} yaw={yaw} />
+      {pool > 0 && (
+        <mesh position={[x + Math.sin((yaw * Math.PI) / 180) * 0.5, (track.y ?? 0) + 0.015, z + Math.cos((yaw * Math.PI) / 180) * 0.5]} rotation={[-Math.PI / 2, 0, 0]} scale={[pool * 1.1, pool * 0.8, 1]}>
+          <circleGeometry args={[0.9, 14]} />
+          <meshBasicMaterial color="#5e0f12" transparent opacity={0.9} depthWrite={false} />
+        </mesh>
+      )}
+    </>
+  );
 };

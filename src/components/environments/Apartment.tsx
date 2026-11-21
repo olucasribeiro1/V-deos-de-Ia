@@ -31,6 +31,11 @@ export type ApartmentState = {
   barricade?: number; // 0..1 móvel empurrado contra a porta
   blinds?: number;
   tv?: TvKind;
+  knifeTaken?: boolean;
+  crash?: number; // batida na rua 0..1 (undefined = já aconteceu se caos ≥ 0.3)
+  faucet?: number; // 0..1 água saindo
+  fill?: number; // 0..1 garrafa sob a torneira
+  filled?: number; // garrafas cheias na bancada
   keysOnMat?: boolean; // chave reserva sob o capacho (corredor)
 };
 
@@ -50,6 +55,10 @@ export const Apartment: React.FC<{state?: ApartmentState; t?: number}> = React.m
     blinds = 0.25,
     tv = 'off',
     keysOnMat = false,
+    knifeTaken = false,
+    faucet = 0,
+    fill = 0,
+    filled = 0,
   } = state;
   return (
     <group>
@@ -61,6 +70,8 @@ export const Apartment: React.FC<{state?: ApartmentState; t?: number}> = React.m
       <Door position={[4.5, 0, 2.3]} rotY={180} color="#5e6a72" />
       <F.CeilingLamp position={[2.9, 0, 1.15]} on={lightsOn} />
       <F.BrothersPhoto position={[-0.5, 1.55, -3.08]} rotY={180} />
+      <F.KnifeBlock position={[-5.58, 0.915, -4.75]} rotY={90} taken={knifeTaken} />
+      <F.SinkWater faucet={faucet} fill={fill} filled={filled} />
       <Window position={[-3.4, 1.6, -8]} width={2.8} height={1.5} blinds={blinds} />
       <Window position={[2.7, 1.55, -8]} width={1.0} height={1.3} />
       <Window position={[-0.8, 1.5, 0]} rotY={180} width={1.2} height={1.2} blinds={0.6} />

@@ -39,7 +39,9 @@ export type ClipName =
   | 'hitReact'
   | 'talkPhone'
   | 'crouch'
-  | 'lookAround';
+  | 'lookAround'
+  | 'feed'
+  | 'dead';
 
 const S = Math.sin;
 const TAU = Math.PI * 2;
@@ -232,6 +234,43 @@ export function clip(name: ClipName, t: number, v = 0.5, k = 0): Pose {
         lFore: [-50, 0, 0],
         rFore: [-50, 0, 0],
       };
+    case 'feed': {
+      // infectado ajoelhado sobre a vítima: tronco curvado, cabeça mordendo em puxões, mãos agarrando
+      const bite = Math.max(0, Math.sin(ph * (2.4 + v * 0.8) * TAU * 0.5));
+      const tug = Math.sin(ph * 3.1 + v * 3) * 0.5 + 0.5;
+      return {
+        hipsY: -0.5,
+        hips: [8, 0, 0],
+        spine: [48 + bite * 10, fbm1(ph * 0.8, 4) * 10, fbm1(ph * 0.6, 7) * 6],
+        chest: [18 + bite * 6, 0, 0],
+        neck: [10, 0, 0],
+        head: [25 + bite * 22, fbm1(ph * 2.2, 9) * 18, fbm1(ph * 1.7, 2) * 12],
+        lArm: [-75 + tug * 20, 0, -18],
+        lFore: [-50 - tug * 25, 0, 0],
+        rArm: [-70 - tug * 18, 0, 20],
+        rFore: [-45 + tug * 20, 0, 0],
+        lLeg: [-95, 0, 12],
+        lShin: [135, 0, 0],
+        rLeg: [-70, 0, -10],
+        rShin: [120, 0, 0],
+      };
+    }
+    case 'dead': {
+      // vítima caída (deitada de costas), espasmos ocasionais
+      const sp = Math.max(0, Math.sin(ph * 5.3)) ** 8;
+      return {
+        hipsY: -0.82,
+        hips: [-85, 0, 0],
+        spine: [-3, 0, 0],
+        head: [12 + sp * 10, 30, 0],
+        lArm: [-160, 0, -45 - sp * 15],
+        rArm: [-150, 0, 50],
+        lLeg: [75, 0, 12],
+        rLeg: [82, 0, -8],
+        lShin: [8 + sp * 20, 0, 0],
+        rShin: [14, 0, 0],
+      };
+    }
     case 'lookAround': {
       const base = clip('idleTense', t, v);
       return {...base, head: [fbm1(ph * 0.5, 5) * 8, S(ph * 0.9) * 55, 0], chest: [0, S(ph * 0.9) * 15, 0]};

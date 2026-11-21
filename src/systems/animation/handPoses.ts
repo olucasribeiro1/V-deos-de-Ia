@@ -17,6 +17,12 @@ export const HP = {
   grab: {p: [0.1, -0.22, -0.46], r: [-90, 180, 0], curl: 0.85, thumb: 0.7},
   // empurrar porta/móvel (palma para frente)
   push: {p: [0.17, -0.12, -0.42], r: [-5, 180, 0], curl: 0.1, thumb: 0.15},
+  // MOSTRAR objeto à câmera (chaves, lata): mão sobe perto do rosto, objeto bem visível
+  showObject: {p: [0.06, -0.15, -0.34], r: [-28, -12, 8], curl: 0.72, thumb: 0.6},
+  // faca erguida diante do rosto, lâmina para cima
+  showKnife: {p: [0.1, -0.16, -0.36], r: [-8, -8, 12], curl: 0.92, thumb: 0.75},
+  // segurando garrafa sob a torneira (pia à frente)
+  holdBottle: {p: [0.02, -0.3, -0.48], r: [-10, 0, 0], curl: 0.75, thumb: 0.6},
   // empurrar móvel baixo (cômoda): mãos apoiadas no tampo, braços estendidos para baixo/frente
   pushLow: {p: [0.19, -0.3, -0.5], r: [-40, 180, 0], curl: 0.15, thumb: 0.2},
   // segurar maçaneta/fechadura

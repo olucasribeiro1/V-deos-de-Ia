@@ -15,6 +15,7 @@ import {Actor} from '../components/characters/Actor';
 import {Outlines} from '../components/effects/Outlines';
 import {Grade} from '../components/effects/Grade';
 import {Subtitles} from '../components/ui/Subtitles';
+import {Countdown, TipCard} from '../components/ui/Overlays';
 import type {SfxManifest} from '../systems/timeline/script';
 import * as F from '../library/furniture';
 import {hash} from '../systems/animation/math';
@@ -68,7 +69,7 @@ export const SceneView: React.FC<{scene: CompiledScene; sfxLib: SfxManifest; aud
       {!bench.no3d && <ThreeCanvas width={VIDEO.width} height={VIDEO.height} shadows={!bench.noShadows} gl={{antialias: !bench.noAA, powerPreference: 'high-performance'}}>
         <Lighting preset={scene.scene.light} lamps={env.lightsOn ?? 1} />
         {!bench.noApt && <Apartment state={env} t={t} />}
-        {!bench.noCity && <City t={t + 20} chaos={chaos} bench={bench} />}
+        {!bench.noCity && <City t={t + 20} chaos={chaos} bench={bench} crash={env.crash} />}
         {!bench.noActors && scene.actors.map((a, i) => (
           <Actor key={i} track={a} t={t} />
         ))}
@@ -121,6 +122,10 @@ export const SceneView: React.FC<{scene: CompiledScene; sfxLib: SfxManifest; aud
           {stamp.text.slice(1)}
         </div>
       )}
+      {scene.timer && <Countdown remaining={scene.timer.remaining} t={t} showAt={scene.timer.t} brokenAt={scene.timer.brokenAt} />}
+      {scene.tips.filter((x) => t >= x.t && t < x.t + x.dur).map((x) => (
+        <TipCard key={x.t} title={x.title} text={x.text} src={x.src} t={t - x.t} dur={x.dur} />
+      ))}
       <Subtitles lines={scene.lines} t={t} />
       {/* ---- áudio ---- */}
       {scene.lines.map((l) =>

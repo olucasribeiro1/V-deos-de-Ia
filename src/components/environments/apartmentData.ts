@@ -14,7 +14,8 @@ export const SPOTS = {
   livingCenter: {x: -1.4, z: -5.8},
   sofa: {x: 0.0, z: -4.3},
   sofaSeat: {x: 0.0, z: -3.74}, // sentado (use height ~1.12)
-  sink: {x: -4.7, z: -6.9},
+  sink: {x: -4.75, z: -6.95},
+  knifeSpot: {x: -4.85, z: -4.75},
   hallDresser: {x: 2.85, z: -1.5}, // atrás da cômoda do corredor (para empurrar)
   barricade: {x: 2.75, z: -1.08}, // atrás da cômoda já encostada na porta (mãos alcançam o móvel)
   window: {x: -3.3, z: -7.58},
@@ -36,6 +37,8 @@ export const NAV: [SpotName, SpotName][] = [
   ['sofa', 'sofaSeat'],
   ['sofa', 'photoSpot'],
   ['kitchen', 'sink'],
+  ['kitchen', 'knifeSpot'],
+  ['knifeSpot', 'fridge'],
   ['entrance', 'hallDresser'],
   ['hallDresser', 'hallMid'],
   ['hallDresser', 'barricade'],
@@ -65,7 +68,9 @@ export const LOOKS = {
   dresser: [3.6, 0.6, -1.5],
   photo: [-0.5, 1.55, -3.1],
   bathtub: [-5.5, 0.6, -2.5],
-  sink: [-5.6, 0.85, -6.9],
+  sink: [-5.65, 0.95, -6.95],
+  knifeBlock: [-5.58, 1.05, -4.75],
+  counterWater: [-5.55, 1.0, -6.6],
   table: [-3.6, 0.8, -4.7],
   archway: [1.6, 1.45, -5.0],
   peepholeView: [2.75, 1.5, 3],

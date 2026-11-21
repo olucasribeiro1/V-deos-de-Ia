@@ -36,12 +36,15 @@ export type Action = {at?: number; then?: boolean} & (
   | {a: 'danger'; v: number; dur?: number}
   | {a: 'lens'; v: number; dur?: number} // olho mágico: 1 = máscara circular olho-de-peixe
   | {a: 'title'; text: string; dur?: number}
+  | {a: 'timer'; remaining?: number; broken?: boolean} // contagem regressiva: inicia (remaining s) ou quebra
+  | {a: 'tip'; title: string; text: string; src: string; dur?: number} // card educativo (fonte verificada)
 );
 
 export type PropName = 'none' | 'phone' | 'bottle' | 'can' | 'keys' | 'flashlight' | 'knife';
 
 /** fx: phone = banda telefônica · tv = alto-falante de TV na sala · door = abafado atrás da porta. */
-export type Line = {v: VoiceId; text: string; phone?: boolean; fx?: 'phone' | 'tv' | 'door'; at?: number};
+/** ref: reutiliza o áudio de outra fala (ex.: cold open) — não gera narração nova. */
+export type Line = {v: VoiceId; text: string; phone?: boolean; fx?: 'phone' | 'tv' | 'door'; at?: number; ref?: string};
 
 export type Beat = {
   line?: Line;
@@ -62,6 +65,8 @@ export type Scene = {
   state?: Partial<ApartmentState>;
   hands?: {r?: HandPoseName; l?: HandPoseName; rProp?: PropName; lProp?: PropName};
   phone?: PhoneScreen;
+  /** velocidade da fala nesta cena (1.15–1.5): calma mais lenta, tensão mais rápida */
+  tempo?: number;
   beats: Beat[];
 };
 

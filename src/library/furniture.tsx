@@ -390,3 +390,51 @@ export const BrothersPhoto: React.FC<P> = (p) => (
     </mesh>
   </G>
 );
+
+/** Cepo de facas (cozinha). `taken` = faca grande retirada. */
+export const KnifeBlock: React.FC<P & {taken?: boolean}> = ({taken, ...p}) => (
+  <G {...p}>
+    <mesh position={[0, 0.1, 0]} rotation={[deg(-15), 0, 0]} material={mat('#6a4a32')} castShadow>
+      <boxGeometry args={[0.12, 0.2, 0.14]} />
+    </mesh>
+    {[-0.035, 0, 0.035].map((x, i) =>
+      i === 1 && taken ? null : (
+        <mesh key={i} position={[x, 0.24, -0.02]} rotation={[deg(-15), 0, 0]} material={mat('#1c1d1f')}>
+          <boxGeometry args={[0.022, 0.09, 0.02]} />
+        </mesh>
+      ),
+    )}
+  </G>
+);
+
+/** Água: jato da torneira + garrafa enchendo na pia + garrafas cheias alinhadas na bancada. */
+export const SinkWater: React.FC<{faucet: number; fill: number; filled: number}> = ({faucet, fill, filled}) => (
+  <group>
+    {/* bica da torneira (horizontal) */}
+    <mesh position={[-5.79, 1.14, -7.0]} rotation={[0, 0, Math.PI / 2]} material={mat(PAL.metal)}>
+      <cylinderGeometry args={[0.012, 0.012, 0.2, 8]} />
+    </mesh>
+    {faucet > 0 && (
+      <mesh position={[-5.7, 1.04 - (1 - faucet) * 0.05, -7.0]} scale={[1, faucet, 1]}>
+        <cylinderGeometry args={[0.008, 0.012, 0.2, 8]} />
+        <meshBasicMaterial color="#9fd4f2" transparent opacity={0.75} />
+      </mesh>
+    )}
+    {/* garrafa sob a torneira, enchendo */}
+    {fill > 0 && (
+      <group position={[-5.7, 0.92, -7.0]}>
+        <mesh position={[0, 0.13, 0]}>
+          <cylinderGeometry args={[0.045, 0.045, 0.26, 10]} />
+          <meshBasicMaterial color="#cfe6f2" transparent opacity={0.35} depthWrite={false} />
+        </mesh>
+        <mesh position={[0, (0.25 * fill) / 2, 0]} scale={[1, Math.max(0.01, fill), 1]}>
+          <cylinderGeometry args={[0.042, 0.042, 0.25, 10]} />
+          <meshBasicMaterial color="#5aa8d8" />
+        </mesh>
+      </group>
+    )}
+    {Array.from({length: Math.round(filled)}).map((_, i) => (
+      <WaterBottle key={i} position={[-5.55, 0.92, -6.62 + i * 0.11]} />
+    ))}
+  </group>
+);

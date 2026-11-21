@@ -18,3 +18,11 @@
 [2026-11-21T10:27:21.551Z] gate E APROVADO stills + métricas
 [2026-11-21T10:27:21.581Z] gate F APROVADO render segmentado 8/8 cenas
 [2026-11-21T10:27:21.612Z] gate G APROVADO auditoria técnica e de sincronia
+[2026-11-21T10:50:35.118Z] add T5 (audio-engineer) Narração 1.5x via atempo (sem créditos)
+[2026-11-21T10:50:35.145Z] add T6 (story-director) Gancho cold open + contagem regressiva + cards FEMA
+[2026-11-21T10:50:35.169Z] add T7 (3d-environment-artist) Cidade: trânsito animado, batida, postes, árvores, faixas
+[2026-11-21T10:50:35.194Z] add T8 (animation-director) Infectado comendo vítima (clip feed + sangue)
+[2026-11-21T10:50:35.220Z] add T9 (animation-director) Ações visíveis: água, comida, faca, chaves
+[2026-11-21T10:50:35.242Z] add T10 (animation-director) Câmera menos robótica (deriva natural, olhares)
+[2026-11-21T10:50:35.269Z] add T11 (render-engineer) Re-render ep01 v2 + auditoria
+[2026-11-21T10:50:35.293Z] add T12 (diretor) Registrar métricas de retenção na skill

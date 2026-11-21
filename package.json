@@ -11,7 +11,8 @@
     "sfx": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 node scripts/generate-voice/sfx.mjs",
     "validate": "NODE_NO_WARNINGS=1 node --import ./scripts/lib/ts-register.mjs scripts/validate-assets/validate.mjs",
     "render": "NODE_NO_WARNINGS=1 node --import ./scripts/lib/ts-register.mjs scripts/render-episode/render.mjs",
-    "still": "remotion still src/remotion/index.ts"
+    "still": "remotion still src/remotion/index.ts",
+    "voice:speed": "node scripts/generate-voice/speed.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "9.8.2",

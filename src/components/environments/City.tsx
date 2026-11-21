@@ -2,6 +2,7 @@ import React, {useLayoutEffect, useMemo, useRef} from 'react';
 import * as THREE from 'three';
 import {clamp, rng} from '../../systems/animation/math';
 import {basic} from '../../library/materials';
+import {StaticBatch} from '../effects/StaticBatch';
 import {mat, PAL} from '../../library/materials';
 
 /**
@@ -229,41 +230,178 @@ export const Ambulance: React.FC<{p: [number, number, number]; rotY?: number; t:
 };
 
 /** Todo o conteúdo da cidade é desenhado depois do interior (ordem de desenho = economia de pixels). */
-export const City: React.FC<{t: number; chaos?: number; children?: React.ReactNode; bench?: any}> = ({t, chaos = 0, children, bench = {}}) => {
+/** Carro low poly com rodas e faróis (substitui caixas soltas). Frente = +Z local. */
+const CarBody: React.FC<{color: string; lights?: number; crashed?: number}> = ({color, lights = 0, crashed = 0}) => (
+  <group>
+    <mesh position={[0, 0.55, 0]} material={mat(color)}>
+      <boxGeometry args={[1.8, 0.62, 4.2]} />
+    </mesh>
+    <mesh position={[0, 1.08, -0.25]} scale={[1, 1, 1 - crashed * 0.25]} material={mat('#26303a')}>
+      <boxGeometry args={[1.6, 0.48, 2.1]} />
+    </mesh>
+    {[-0.82, 0.82].map((x) =>
+      [-1.35, 1.35].map((z) => (
+        <mesh key={`${x}${z}`} position={[x, 0.32, z]} rotation={[0, 0, Math.PI / 2]} material={mat('#141414')}>
+          <cylinderGeometry args={[0.32, 0.32, 0.22, 10]} />
+        </mesh>
+      )),
+    )}
+    {[-0.6, 0.6].map((x) => (
+      <mesh key={x} position={[x, 0.62, 2.11]} material={mat('#fff6d8', {emissive: '#fff2c0', ei: lights * 2.5, outline: false})}>
+        <boxGeometry args={[0.32, 0.14, 0.02]} />
+      </mesh>
+    ))}
+    {[-0.6, 0.6].map((x) => (
+      <mesh key={`b${x}`} position={[x, 0.62, -2.11]} material={mat('#c81e22', {emissive: '#ff2020', ei: lights * 1.5, outline: false})}>
+        <boxGeometry args={[0.32, 0.12, 0.02]} />
+      </mesh>
+    ))}
+  </group>
+);
+
+const lerpN = (a: number, b: number, k: number) => a + (b - a) * Math.min(1, Math.max(0, k));
+const WEST = -17.5; // faixa sentido oeste (-x)
+const EAST = -22.0; // faixa sentido leste (+x)
+const CAR_COLORS = ['#c8c4b8', '#3d5a80', '#8a2c24', '#2f3a33', '#e0b84a', '#5a6470'];
+
+/** Trânsito: fluindo na calma; engarrafado (parado longe do centro da ação) no caos. */
+const Traffic: React.FC<{t: number; chaos: number}> = ({t, chaos}) => {
+  const jam = chaos >= 0.45;
+  const cars: React.ReactNode[] = [];
+  for (let i = 0; i < 3; i++) {
+    const wrap = (x: number) => ((((x + 75) % 150) + 150) % 150) - 75;
+    const wx = jam ? 15 + i * 5.6 : wrap(60 - i * 47 - t * (11 + i * 2));
+    const ex = jam ? -15 - i * 5.6 : wrap(-60 + i * 51 + t * (12 + i * 1.5));
+    cars.push(
+      <group key={`w${i}`} position={[wx, STREET_Y, WEST]} rotation={[0, -Math.PI / 2, 0]}>
+        <CarBody color={CAR_COLORS[i]} lights={0.8} />
+      </group>,
+      <group key={`e${i}`} position={[ex, STREET_Y, EAST]} rotation={[0, Math.PI / 2, 0]}>
+        <CarBody color={CAR_COLORS[i + 3]} lights={0.8} />
+      </group>,
+    );
+  }
+  return <>{cars}</>;
+};
+
+/** Batida animada: carro desgovernado (leste) atravessa e acerta um carro estacionado no meio-fio. crash 0..1. */
+const Crash: React.FC<{crash: number; t: number; bench: any}> = ({crash, t, bench}) => {
+  if (crash <= 0) return null;
+  const k = Math.min(1, crash);
+  const swerve = Math.max(0, (k - 0.65) / 0.35);
+  const x = lerpN(-48, -0.6, k);
+  const z = lerpN(EAST, -24.3, swerve * swerve);
+  const yaw = Math.PI / 2 + 0.55 * swerve + (k >= 1 ? 0.25 : 0);
+  const hit = k >= 1 ? 1 : 0;
+  return (
+    <group>
+      <group position={[x, STREET_Y, z]} rotation={[0, yaw, hit * 0.06]}>
+        <CarBody color="#3a3634" lights={1 - hit} crashed={hit} />
+      </group>
+      {/* carro estacionado atingido (meio-fio sul) */}
+      <group position={[1.4 + hit * 0.55, STREET_Y, -25.7]} rotation={[0, Math.PI / 2 - hit * 0.3, 0]}>
+        <CarBody color="#3d5a80" crashed={hit * 0.5} />
+      </group>
+      {hit > 0 && !bench.noSmoke && (
+        <>
+          <Fire p={[-0.2, STREET_Y + 0.9, -24.2]} t={t} />
+          <Smoke origin={[-0.2, STREET_Y + 1.6, -24.2]} t={t} amount={0.5} seed={2} />
+        </>
+      )}
+    </group>
+  );
+};
+
+/** Mobiliário urbano: faixas, faixa de pedestres, postes, árvores, meio-fio (instanciado onde repete). */
+const StreetDressing: React.FC<{night: number}> = React.memo(({night}) => {
+  const items: React.ReactNode[] = [];
+  for (let x = -60; x <= 60; x += 6) {
+    items.push(
+      <mesh key={`d${x}`} position={[x, STREET_Y + 0.02, (WEST + EAST) / 2]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#e8e4d0')}>
+        <planeGeometry args={[2.4, 0.16]} />
+      </mesh>,
+    );
+  }
+  for (let z = -26; z <= -14; z += 1.1) {
+    items.push(
+      <mesh key={`c${z}`} position={[11, STREET_Y + 0.02, z]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#e8e4d0')}>
+        <planeGeometry args={[2.6, 0.55]} />
+      </mesh>,
+    );
+  }
+  for (let x = -56; x <= 56; x += 14) {
+    for (const z of [-13.4, -26.6]) {
+      const side = z > -20 ? -1 : 1;
+      items.push(
+        <group key={`l${x}${z}`} position={[x, STREET_Y, z]}>
+          <mesh position={[0, 2.4, 0]} material={mat('#3a3f44')}>
+            <cylinderGeometry args={[0.07, 0.09, 4.8, 6]} />
+          </mesh>
+          <mesh position={[0, 4.75, side * 0.6]} material={mat('#3a3f44')}>
+            <boxGeometry args={[0.1, 0.1, 1.2]} />
+          </mesh>
+          <mesh position={[0, 4.65, side * 1.15]} material={mat('#fff1c8', {emissive: '#ffd98a', ei: 1.5 * night, outline: false})}>
+            <boxGeometry args={[0.35, 0.12, 0.25]} />
+          </mesh>
+        </group>,
+      );
+      items.push(
+        <group key={`t${x}${z}`} position={[x + 7, STREET_Y, z + (z > -20 ? 1.5 : -1.5)]}>
+          <mesh position={[0, 0.9, 0]} material={mat('#5a3e2a')}>
+            <cylinderGeometry args={[0.12, 0.16, 1.8, 6]} />
+          </mesh>
+          <mesh position={[0, 2.5, 0]} material={mat('#3f7a44')}>
+            <icosahedronGeometry args={[1.25, 0]} />
+          </mesh>
+        </group>,
+      );
+    }
+  }
+  // meio-fio
+  for (const z of [-13.45, -26.55]) {
+    items.push(
+      <mesh key={`m${z}`} position={[0, STREET_Y + 0.1, z]} material={mat('#9a9890')}>
+        <boxGeometry args={[220, 0.2, 0.25]} />
+      </mesh>,
+    );
+  }
+  return <StaticBatch>{items}</StaticBatch>;
+});
+
+export const City: React.FC<{t: number; chaos?: number; children?: React.ReactNode; bench?: any; crash?: number}> = ({t, chaos = 0, children, bench = {}, crash}) => {
   const lights = 1.1 - chaos * 0.6;
+  const crashK = crash ?? (chaos >= 0.3 ? 1 : 0);
   return (
     <group renderOrder={10}>
       {!bench.noSky && <Sky />}
       {!bench.noBuildings && <Buildings lights={lights} />}
       {/* rua abaixo do prédio */}
-      <mesh position={[0, STREET_Y, -20]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#33373c')}>
+      <mesh position={[0, STREET_Y, -20]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#3a3e43')}>
         <planeGeometry args={[220, 14]} />
       </mesh>
-      <mesh position={[0, STREET_Y + 0.08, -12]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#6e6f6c')}>
+      <mesh position={[0, STREET_Y + 0.08, -12]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#8a8a84')}>
         <planeGeometry args={[220, 3]} />
       </mesh>
-      <mesh position={[0, STREET_Y + 0.08, -28]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#6e6f6c')}>
+      <mesh position={[0, STREET_Y + 0.08, -28]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#8a8a84')}>
         <planeGeometry args={[220, 3]} />
       </mesh>
-      <mesh position={[0, STREET_Y - 0.5, -60]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#26292c')}>
+      <mesh position={[0, STREET_Y - 0.5, -60]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#2c2f33')}>
         <planeGeometry args={[400, 200]} />
       </mesh>
       {/* nosso prédio (fachada abaixo da janela) */}
       <mesh position={[-1, STREET_Y / 2 - 0.2, -8.3]} material={mat('#9a8f80')}>
         <boxGeometry args={[14, -STREET_Y - 0.4, 0.4]} />
       </mesh>
-      <Car p={[-16, STREET_Y, -17]} rotY={Math.PI / 2} color="#5a6470" />
-      <Car p={[8, STREET_Y, -23]} rotY={-Math.PI / 2} color="#7a2a24" />
-      {chaos > 0.1 && <Car p={[-4, STREET_Y + 0.1, -21]} rotY={0.9} color="#3a3634" wreck />}
-      {chaos > 0.2 && <Ambulance p={[4 + Math.max(0, 40 - t * 1.2), STREET_Y, -17.2]} rotY={-Math.PI / 2} t={t} />}
-      {/* incêndios e fumaça: carro em chamas na rua + colunas distantes nascendo atrás dos prédios */}
-      {chaos > 0.1 && !bench.noSmoke && (
-        <>
-          <Fire p={[-4, STREET_Y + 0.6, -21]} t={t} />
-          <Smoke origin={[-4, STREET_Y + 1.5, -21]} t={t} amount={Math.min(0.55, chaos)} seed={2} />
-          <Smoke origin={[-35, STREET_Y, -95]} t={t + 13} amount={Math.min(1.2, chaos * 1.8)} seed={4} color="#7a7774" />
-        </>
-      )}
+      <StreetDressing night={1} />
+      <Traffic t={t} chaos={chaos} />
+      {/* estacionados (meio-fio norte) */}
+      <group position={[-12, STREET_Y, -14.7]} rotation={[0, -Math.PI / 2, 0]}>
+        <CarBody color="#7a7f86" />
+      </group>
+      <Crash crash={crashK} t={t} bench={bench} />
+      {chaos > 0.2 && <Ambulance p={[4 + Math.max(0, 40 - t * 1.2), STREET_Y, -14.9]} rotY={-Math.PI / 2} t={t} />}
+      {/* colunas de fumaça distantes nascendo atrás dos prédios */}
+      {chaos > 0.1 && !bench.noSmoke && <Smoke origin={[-35, STREET_Y, -95]} t={t + 13} amount={Math.min(1.2, chaos * 1.8)} seed={4} color="#7a7774" />}
       {chaos > 0.45 && !bench.noSmoke && <Smoke origin={[40, STREET_Y, -120]} t={t + 40} amount={chaos * 1.5} seed={5} color="#85807a" />}
       {children}
     </group>
