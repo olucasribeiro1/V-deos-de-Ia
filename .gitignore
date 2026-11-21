@@ -1,0 +1,5 @@
+node_modules/
+out/
+.render-cache/
+*.log
+.studio/logs/

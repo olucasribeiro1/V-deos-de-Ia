@@ -1,0 +1,33 @@
+{
+  "name": "hora-a-hora-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Estúdio de animação 3D POV (Cinematic Stylized Low Poly) — Remotion + React Three Fiber",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/remotion/index.ts",
+    "typecheck": "tsc --noEmit",
+    "voice": "node scripts/generate-voice/generate.mjs",
+    "sfx": "node scripts/generate-voice/sfx.mjs",
+    "validate": "node scripts/validate-assets/validate.mjs",
+    "render": "node scripts/render-episode/render.mjs",
+    "still": "remotion still src/remotion/index.ts"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@remotion/cli": "4.0.545",
+    "@remotion/renderer": "4.0.545",
+    "@remotion/three": "4.0.545",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "remotion": "4.0.545",
+    "three": "0.187.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "0.187.0",
+    "typescript": "5.9.3"
+  }
+}
