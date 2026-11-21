@@ -13,8 +13,22 @@ def fill(c, aa=True): return skia.Paint(AntiAlias=aa, Color=c, Style=skia.Paint.
 def stroke(c, w, cap=skia.Paint.kRound_Cap):
     return skia.Paint(AntiAlias=True, Color=c, Style=skia.Paint.kStroke_Style, StrokeWidth=w, StrokeCap=cap, StrokeJoin=skia.Paint.kRound_Join)
 
-def shape(cv, path, col, lw):
-    cv.drawPath(path, fill(col))
+def _mix(c, f):
+    r, g, b, a = skia.ColorGetR(c), skia.ColorGetG(c), skia.ColorGetB(c), skia.ColorGetA(c)
+    if f > 0: r, g, b = r + (255 - r) * f, g + (255 - g) * f, b + (255 - b) * f
+    else: r, g, b = r * (1 + f), g * (1 + f), b * (1 + f)
+    return skia.Color(int(r), int(g), int(b), a)
+
+SHADE = True
+def shape(cv, path, col, lw, shade=None):
+    """preenchimento com degrade de luz (topo mais claro, base mais escura) + contorno"""
+    b = path.getBounds()
+    if (SHADE if shade is None else shade) and b.height() > 6 and skia.ColorGetA(col) == 255:
+        p = skia.Paint(AntiAlias=True, Shader=skia.GradientShader.MakeLinear(
+            [skia.Point(b.left(), b.top()), skia.Point(b.left() + b.width() * 0.25, b.bottom())], [_mix(col, 0.28), col, _mix(col, -0.12)], [0.0, 0.55, 1.0]))
+        cv.drawPath(path, p)
+    else:
+        cv.drawPath(path, fill(col))
     if lw > 0: cv.drawPath(path, stroke(LINE, lw))
 
 def oval(cv, cx, cy, rx, ry, col, lw=0):
@@ -34,7 +48,7 @@ def limb(cv, x0, y0, ang, length, w, col, lw, hand_col=None, hand_r=None):
     return x1, y1
 
 # ------------------------------------------------------------------ rosto
-def face(cv, s, eye_col, blink=False, mouth=0.0, look=0.0, happy=True):
+def face(cv, s, eye_col, blink=False, mouth=0.0, look=0.0, happy=True, lashes=False):
     lw = s * 0.012
     for sx in (-1, 1):
         ex, ey = sx * s * 0.088 + look * s * 0.01, -s * 0.005
@@ -46,6 +60,8 @@ def face(cv, s, eye_col, blink=False, mouth=0.0, look=0.0, happy=True):
             oval(cv, ex, ey + s * 0.012, s * 0.026, s * 0.028, eye_col)
             oval(cv, ex + s * 0.012, ey - s * 0.02, s * 0.013, s * 0.015, C(255, 255, 255))
             oval(cv, ex - s * 0.012, ey + s * 0.018, s * 0.006, s * 0.006, C(255, 255, 255))
+            if lashes:
+                cv.drawLine(ex + sx * s * 0.03, ey - s * 0.035, ex + sx * s * 0.048, ey - s * 0.05, stroke(LINE, lw * 0.9))
         # sobrancelha
         p = skia.Path(); p.moveTo(ex - s * 0.03, ey - s * 0.075); p.quadTo(ex, ey - s * 0.09, ex + s * 0.03, ey - s * 0.075)
         cv.drawPath(p, stroke(LINE, lw * 0.9))
@@ -123,6 +139,8 @@ def kid(cv, who, x, y, s, armL=10, armR=10, mouth=0.0, blink=False, tilt=0.0, sq
         p.quadTo(hr * 0.7, -hr * 0.5, hr * 0.3, -hr * 0.55); p.quadTo(0, -hr * 0.45, -hr * 0.3, -hr * 0.58)
         p.quadTo(-hr * 0.75, -hr * 0.5, -hr * 0.97, -hr * 0.05)
     p.close(); shape(cv, p, k["hair"], lw)
+    hl = skia.Path(); hl.moveTo(-hr * 0.55, -hr * 0.72); hl.quadTo(-hr * 0.2, -hr * 0.95, hr * 0.25, -hr * 0.88)
+    cv.drawPath(hl, stroke(C(255, 255, 255, 90), hr * 0.07))
     if who == "lulu":
         for sx in (-1, 1):  # lacinhos
             bx, by = sx * hr * 0.95, -hr * 0.62
@@ -132,7 +150,7 @@ def kid(cv, who, x, y, s, armL=10, armR=10, mouth=0.0, blink=False, tilt=0.0, sq
         p = skia.Path(); p.moveTo(-hr * 0.05, -hr * 0.9); p.quadTo(hr * 0.15, -hr * 1.35, hr * 0.3, -hr * 1.05)
         p.quadTo(hr * 0.12, -hr * 1.05, hr * 0.1, -hr * 0.88); p.close(); shape(cv, p, k["hair"], lw)
     cv.scale(hr / (s * 0.25), hr / (s * 0.25))
-    face(cv, s, k["eye"], blink=blink, mouth=mouth, look=look)
+    face(cv, s, k["eye"], blink=blink, mouth=mouth, look=look, lashes=(who == "lulu"))
     cv.restore()
     arms(True)
     cv.restore()
@@ -165,6 +183,8 @@ def sun(cv, x, y, r, t):
         shape(cv, p, C(255, 170, 40), r * 0.04)
         cv.restore()
     cv.restore()
+    g = skia.Paint(AntiAlias=True, Shader=skia.GradientShader.MakeRadial(skia.Point(x, y), r * 2.4, [C(255, 240, 150, 150), C(255, 240, 150, 0)]))
+    cv.drawCircle(x, y, r * 2.4, g)
     oval(cv, x, y, r, r, C(255, 215, 60), r * 0.05)
     cute_face(cv, x, y, r)
 
@@ -380,3 +400,36 @@ def text(cv, txt, x, y, size, col=C(255, 255, 255), outline=C(230, 60, 120), cen
     cv.drawTextBlob(blob, xx, y, stroke(outline, ow if ow else size * 0.16))
     cv.drawTextBlob(blob, xx, y, fill(col))
     return w
+
+
+def butterfly(cv, x, y, s, t, col=C(255, 140, 200)):
+    f = abs(math.sin(t * 10))
+    for sx in (-1, 1):
+        oval(cv, x + sx * s * 0.5 * (0.3 + 0.7 * f), y - s * 0.2, s * 0.45 * (0.3 + 0.7 * f), s * 0.4, col, s * 0.06)
+        oval(cv, x + sx * s * 0.35 * (0.3 + 0.7 * f), y + s * 0.25, s * 0.3 * (0.3 + 0.7 * f), s * 0.28, _mix(col, 0.3), s * 0.06)
+    rrect(cv, x - s * 0.08, y - s * 0.45, x + s * 0.08, y + s * 0.45, s * 0.08, C(80, 60, 70))
+
+def note(cv, x, y, s, col=C(255, 90, 160)):
+    oval(cv, x, y, s * 0.3, s * 0.22, col, s * 0.05)
+    cv.drawLine(x + s * 0.27, y, x + s * 0.27, y - s, stroke(col, s * 0.1))
+    p = skia.Path(); p.moveTo(x + s * 0.27, y - s); p.quadTo(x + s * 0.7, y - s * 0.8, x + s * 0.55, y - s * 0.45); cv.drawPath(p, stroke(col, s * 0.1))
+
+def vignette(cv, w, h):
+    p = skia.Paint(Shader=skia.GradientShader.MakeRadial(skia.Point(w / 2, h / 2), w * 0.75, [C(0, 0, 0, 0), C(0, 0, 0, 0), C(20, 10, 40, 70)], [0, 0.7, 1]))
+    cv.drawRect(skia.Rect(0, 0, w, h), p)
+
+def tag(cv, x, y, txt, size):
+    f = skia.Font(TF, size); wdt = f.measureText(txt)
+    rrect(cv, x - wdt / 2 - size * 0.4, y - size * 0.85, x + wdt / 2 + size * 0.4, y + size * 0.25, size * 0.5, C(255, 255, 255, 235), size * 0.06)
+    cv.drawTextBlob(skia.TextBlob(txt, f), x - wdt / 2, y, fill(C(120, 60, 160)))
+
+def light_burst(cv, w, h, t, a):
+    cv.save(); cv.translate(w / 2, h * 0.4); cv.rotate(t * 15)
+    for i in range(16):
+        cv.save(); cv.rotate(i * 22.5)
+        p = skia.Path(); p.moveTo(0, 0); p.lineTo(-w * 0.06, -w); p.lineTo(w * 0.06, -w); p.close()
+        cv.drawPath(p, fill(C(255, 250, 200, 90 * a)))
+        cv.restore()
+    cv.restore()
+    g = skia.Paint(Shader=skia.GradientShader.MakeRadial(skia.Point(w / 2, h * 0.4), h * 0.6, [C(255, 255, 240, 255 * a), C(255, 250, 200, 0)]))
+    cv.drawRect(skia.Rect(0, 0, w, h), g)
