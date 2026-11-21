@@ -1,56 +1,43 @@
-# EP02: "QI Infinito" (roteiro v4, para aprovação)
+# EP02: "QI Infinito" (roteiro v5, versão curta e com comédia)
 
-**Voz:** Will (grave, dinâmico), a voz oficial do canal a partir de agora.
-**Duração estimada:** ~1:55 · 356 palavras · vertical 9:16 · Davi protagonista.
+**Formato:** vídeo **único** (história fechada, sem temporada) · **79 s (1:19)** · 252 palavras · vertical 9:16.
+**Narração:** Will, **mais rápida e animada** (stability 0.30, style 0.60, speed 1.2 + 11% de aceleração). O áudio já foi gerado: `narracao.mp3`. **Esse é o áudio que vai no vídeo, não será gerado de novo.**
 
-**O que mudou:**
-- O Davi **nasceu assim**, e o vídeo abre **no meio de uma perseguição**.
-- O poder é **entrar na mente das pessoas pelo QI**: ele lê microexpressões, pupila e pulso, e prevê o que a pessoa vai fazer.
-- Tem uma **referência ao Professor Xavier (X-Men)**, como o *stand* de JoJo no vídeo de referência.
-- Mostra como ele usou o poder (mãe, truco, cassino) e como usa hoje (fugindo do governo).
-
-## Regras (plantadas e pagas)
-1. **Ele lê a mente pelo rosto** (microexpressões). *Paga no clímax:* o chefe com botox não tem expressão, e a leitura dá 0%.
-2. **Ler gente esquenta o cérebro.** Uma pessoa = 37,5 °C; multidão = 40 °C+. *Paga no clímax:* ele se joga numa multidão de 300 pessoas e chega a 41 °C pra fugir.
-3. **Gancho final:** uma menina sem botox também dá leitura 0%. Ela é como ele?
+**O que mudou da v4:**
+- Caiu de 1:58 pra **1:19**.
+- Ganhou **comédia**: o "Spoiler: ele vai ganhar", o Xavier "amador" que "precisa de capacete", o Papai Noel 94% mentira, o banimento do churrasco, o careca que "tropeçou", o chefe de botox que não consegue fazer cara de bravo, e o gato.
+- **Final fechado:** "QI infinito te salva de tudo. Menos do teu gato."
+- Mantive a parte explicativa (microexpressões, botox, cérebro esquentando) e as duas regras que se pagam no fim (o botox dá leitura 0%; a multidão faz o cérebro chegar a 41 °C).
 
 ## Métricas fixas na tela
-- **Temperatura do cérebro** (canto superior, o vídeo inteiro): abre em 38,5, chega a 41,2 no clímax e termina subindo de novo.
-- **% de leitura** em cada pessoa que ele olha ("MEDO 91%", "MENTIRA 94%"). O **0%** vira o momento mais forte do vídeo.
+- **Temperatura do cérebro** no canto, o vídeo inteiro.
+- **% de leitura** em cada pessoa. O "0%" do chefe é o momento mais forte, e o "ERRO ???" no gato é a piada final.
 
-## Narração + imagem
+## Narração (com o tempo real do áudio) + imagem
 
-| # | Narração | Imagem / câmera | HUD |
-|---|---|---|---|
-| 1 | O Davi nasceu com QI infinito. Agora, quatro agentes do governo tão correndo atrás dele numa estação de metrô. | **Abre na perseguição:** estação de metrô, Davi correndo entre catracas; 4 ternos atrás; câmera baixa e rápida | Medidor do cérebro 38,5 °C; "AGENTES 4" |
-| 2 | Ele não tem força. Não tem arma. Ele tem isso: ele sabe o que tu vai fazer antes de tu saber. | Close no olho do Davi; linhas de previsão saem dos agentes (setas pontilhadas mostrando pra onde cada um vai) | "PREVISÃO" em cada agente |
-| 3 | Não é telepatia. É conta. Teu rosto tem quarenta e três músculos. Quando tu pensa, eles se mexem por um vigésimo de segundo. | Rosto de um agente em raio-X; 43 músculos acendem; câmera lenta | "43 MÚSCULOS", "1/20 s" |
-| 4 | Chama microexpressão. Existe de verdade. O Davi vê todas. | Microexpressão congelada: canto da boca treme 1 frame; Davi "marca" com um círculo | "MICROEXPRESSÃO (real)" |
-| 5 | Pupila dilatando. Pulso no pescoço. Pra ele, tua cara é um livro aberto. | Três detalhes em cortes rápidos: pupila abrindo / veia pulsando no pescoço / rosto virando "página de livro" | "PUPILA +18%", "♥ 112 bpm" |
-| 6 | Tipo o Professor Xavier, dos X-Men. Só que sem cadeira, sem capacete. Só matemática. | **Referência:** silhueta de um professor careca numa cadeira, com um capacete de fios (homenagem, sem copiar o personagem) → corta pro Davi sem nada na cabeça, só equações flutuando | "SEM CAPACETE" |
-| 7 | Com cinco anos, ele sabia quando a mãe mentia. Com dez, ganhava todo truco da família. Com dezoito, foi banido de três cassinos no Paraguai. | Três cortes: Davi criança e a mãe ("MENTIRA 94%") / mesa de truco, Davi com 4 manilhas / segurança do cassino levando o Davi pra fora | "5 · 10 · 18 ANOS" |
-| 8 | Só que ler gente esquenta. Uma pessoa, o cérebro vai pra trinta e sete e meio. Uma multidão inteira, passa de quarenta. Guarda essa regra. | Medidor em destaque: 1 rosto → 37,5 °C; várias caras aparecendo → 40 °C, vermelho | "1 PESSOA 37,5° · MULTIDÃO 40°+" |
-| 9 | Aí o governo descobriu. Queriam ele numa sala, lendo preso o dia inteiro. Ele disse não. E começou a correr. | Sala de interrogatório com vidro espelhado; Davi recusando; ele sai e começa a correr | — |
-| 10 | Volta pro metrô. O da esquerda vai pular a catraca. O de azul tá com medo. O careca hesita meio segundo antes de correr. | **Volta pro metrô** (mesmo plano da abertura); três agentes com rótulos | "PULA CATRACA 96%" · "MEDO 91%" · "HESITA 0,5 s" |
-| 11 | O Davi desvia de um por um. Noventa e oito por cento de acerto. | Davi desviando de cada um em câmera lenta + velocidade normal (estilo bullet-time) | "ACERTO 98%" |
-| 12 | Até que chega o chefe. E o rosto dele não mexe. Botox. Paralisa o músculo. Sem músculo, sem microexpressão. | O chefe entra; close no rosto liso, sem movimento; raio-X mostra os músculos "apagados" | "BOTOX" |
-| 13 | Leitura: zero por cento. Pela primeira vez, o Davi não sabe o que alguém vai fazer. | A leitura do Davi dá erro: tela de HUD com glitch | **"LEITURA 0%"** piscando |
-| 14 | Então ele faz a única coisa que o chefe não espera: se joga na multidão do horário de pico. Trezentas pessoas. | Plataforma lotada, horário de pico; Davi mergulha no meio | "PESSOAS 300" |
-| 15 | Lembra da regra? Trezentas caras ao mesmo tempo. Trinta e nove graus. Quarenta. Quarenta e um. | 300 rostos com rótulos aparecendo ao mesmo tempo; a tela avermelha e treme | Medidor 39 → 40 → 41 °C |
-| 16 | Mas ele vê tudo: quem vai parar, quem vai virar, onde o buraco vai abrir. E passa pelo meio, um segundo antes de a porta do trem fechar. | Visão do Davi: setas de cada pessoa, um "buraco" verde se abre; ele passa; a porta do trem fecha atrás dele | Medidor 41,2 alarme |
-| 17 | Na plataforma, o chefe tentou sorrir. Não conseguiu. | Plataforma: o chefe tenta sorrir e o rosto não mexe (piada visual) | — |
-| 18 | No vagão, o Davi respira. Trinta e oito graus. Lendo todo mundo, por hábito. | Dentro do vagão: Davi ofegante; rótulos aparecendo nos passageiros, um por um | Medidor cai pra 38 °C |
-| 19 | Até que uma menina olha pra ele. Leitura: zero por cento. E ela não tem botox. | Uma menina no fundo do vagão olha direto pra câmera; o rótulo dela não aparece | **"LEITURA 0%"**; "BOTOX: NÃO" |
-| 20 | Segue aí pra ver quem é a única pessoa que o Davi não consegue ler. | Close no Davi, intrigado; a menina dá um meio sorriso; corte seco pro preto | Medidor sobe de novo |
+| # | Início | Narração | Imagem / câmera | HUD |
+|---|---|---|---|---|
+| 1 | 0.0s | O Davi nasceu com QI infinito. Agora tá fugindo de quatro agentes do governo num metrô. Spoiler: ele vai ganhar. | **Abre na perseguição:** metrô, Davi correndo e pulando catraca; 4 ternos atrás. No "Spoiler", congela a imagem e aparece um carimbo "VAI GANHAR ✓" | Medidor do cérebro 38 °C · "AGENTES 4" |
+| 2 | 6.0s | Porque ele sabe o que tu vai fazer antes de tu saber. | Close no olho do Davi; setas de previsão saem dos agentes | "PREVISÃO" |
+| 3 | 8.6s | Não é telepatia, é conta. Teu rosto tem quarenta e três músculos. Pensou, mexeu, por um vigésimo de segundo. Microexpressão. Existe de verdade. | Rosto em raio-X com os 43 músculos acendendo; um tremor de 1 frame destacado com círculo | "43 MÚSCULOS" · "1/20 s" · "MICROEXPRESSÃO (real)" |
+| 4 | 16.6s | O Davi vê todas. Professor Xavier, dos X-Men? Amador. Precisa de capacete. | Silhueta genérica de professor careca com um capacete de fios gigante (homenagem); o Davi passa do lado sem nada na cabeça e dá de ombros | "AMADOR" (carimbo cômico) |
+| 5 | 22.0s | Com cinco anos, sabia quando a mãe mentia. Papai Noel existe? Noventa e quatro por cento mentira. | Flashback: Davi criança e a mãe com gorro de Papai Noel; a cara da mãe ganha rótulo | "MENTIRA 94%" |
+| 6 | 27.6s | Com dez, ganhava todo truco da família. Nunca mais chamaram ele pro churrasco. | Mesa de truco, Davi criança com 4 manilhas; os tios jogando as cartas na mesa; churrasco com placa "PROIBIDO DAVI" | — |
+| 7 | 31.4s | Com dezoito, banido de três cassinos no Paraguai. | Seguranças de cassino carregando o Davi pelos braços (pés balançando no ar) | "BANIDO ×3" |
+| 8 | 34.1s | O problema: ler gente esquenta o cérebro. Uma pessoa, trinta e sete e meio. Uma multidão, passa de quarenta. Guarda isso. | O medidor cresce na tela: 1 rosto = 37,5; um monte de rostos = 40+, vermelho | "1 PESSOA 37,5° · MULTIDÃO 40°+" |
+| 9 | 41.2s | O governo quis ele lendo suspeito numa salinha. Ele recusou. Daí a correria. | Salinha de interrogatório com 1 lâmpada; Davi faz "não" com o dedo e sai correndo (corte seco pro metrô) | — |
+| 10 | 45.2s | O da esquerda vai pular a catraca. O de azul tá com medo. O careca vai tropeçar. Tropeçou. | Três agentes com rótulos; o careca tropeça EXATAMENTE quando a narração diz "Tropeçou" | "PULA CATRACA 96%" · "MEDO 91%" · "TROPEÇA 99%" |
+| 11 | 49.7s | Aí chega o chefe. O rosto dele não mexe. Botox. Músculo paralisado, zero microexpressão. Leitura: zero por cento. | O chefe entra em câmera lenta; rosto liso, sem movimento; o HUD do Davi dá erro (glitch) | **"LEITURA 0%"** |
+| 12 | 55.7s | Então o Davi se joga na multidão. Trezentas caras de uma vez. Trinta e nove graus. Quarenta. Quarenta e um. | Davi mergulha na multidão; 300 rótulos aparecem de uma vez; a tela avermelha e treme | Medidor 39 → 40 → 41 °C |
+| 13 | 61.5s | Mas ele vê o buraco abrindo, passa pelo meio, e entra no trem um segundo antes da porta fechar. | Visão do Davi: setas de cada pessoa, um buraco verde se abre; ele passa e a porta do trem fecha atrás dele | "PORTA 1,0 s" |
+| 14 | 66.3s | Na plataforma, o chefe tentou fazer cara de bravo. Não conseguiu. | Plataforma: close no chefe tentando fazer cara de bravo; nada mexe; uma veia tenta e desiste (piada) | — |
+| 15 | 69.9s | Moral da história: QI infinito te salva de tudo. Menos do teu gato. Esse, nem o Davi consegue ler. | Casa do Davi: ele de toalha na cabeça (esfriando); o gato encara ele; o HUD tenta ler o gato e dá "ERRO ???"; o gato derruba um copo | "GATO: ???" |
+| 16 | 75.6s | Segue aí pra mais ciência absurda, só que de verdade. | Davi e o gato lado a lado olhando pra câmera; logo/CTA; corte | — |
 
-## Sobre a referência ao Professor Xavier
-- A narração cita o personagem pelo nome, como comparação ("Tipo o Professor Xavier, dos X-Men").
-- Na imagem, a homenagem é só uma **silhueta genérica** (homem careca numa cadeira com um capacete de fios), sem reproduzir o desenho do personagem.
-
-## Checagem dos números
-- **Músculos do rosto:** ~43, número usado na literatura de expressão facial.
-- **Microexpressões:** duram de 1/25 a 1/5 de segundo (pesquisa de Paul Ekman). A maioria das pessoas não percebe sem treino.
-- **Pupila e pulso:** a pupila dilata com esforço mental e com decisões, e o pulso aparece na carótida. São sinais reais usados em pesquisa.
-- **Botox:** paralisa os músculos onde é aplicado e reduz a expressão facial (efeito documentado).
-- **Cassinos:** podem banir quem ganha "demais" (ex.: contadores de cartas). É prática real.
-- **Cérebro e calor:** ~20 W num cérebro normal. Acima de ~40 °C começa a falhar (a regra vem do roteiro anterior e foi mantida).
+## Checagem
+- **Microexpressões:** duram de 1/25 a 1/5 s (Ekman). São reais.
+- **Músculos do rosto:** ~43.
+- **Botox:** paralisa os músculos onde é aplicado e reduz a expressão.
+- **Cassinos:** podem banir quem ganha demais.
+- **Cérebro e calor:** licença criativa baseada no fato real de que o cérebro gasta ~20 W e falha acima de ~40 °C.
+- **Xavier:** citado só na narração. Na imagem aparece uma silhueta genérica de homenagem.
