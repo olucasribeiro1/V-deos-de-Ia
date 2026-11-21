@@ -11,6 +11,8 @@ import {PartC as E2C} from './ep02/partC/PartC';
 import * as T2 from './ep02/timeline';
 import {Ep02Qi, Ep02QiPreview} from './ep02qi/Ep02Qi';
 import * as TQ from './ep02qi/timeline';
+import {Ep03, Ep03Preview} from './ep03/Ep03';
+import * as T3 from './ep03/timeline';
 import {ChannelAvatar, ChannelBanner} from './branding/Branding';
 import {PartA} from './ep01/partA/PartA';
 import {PartB} from './ep01/partB/PartB';
@@ -37,5 +39,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Ep02Qi" component={Ep02Qi} durationInFrames={TQ.EP_DURATION} fps={FPS} width={W} height={H} />
     <Composition id="Ep02QiPartA" component={Ep02QiPreview} defaultProps={{part: 'A' as const}} durationInFrames={TQ.f(TQ.PARTS.A.end) - TQ.f(TQ.PARTS.A.start)} fps={FPS} width={W} height={H} />
     <Composition id="Ep02QiPartB" component={Ep02QiPreview} defaultProps={{part: 'B' as const}} durationInFrames={TQ.f(TQ.PARTS.B.end) - TQ.f(TQ.PARTS.B.start)} fps={FPS} width={W} height={H} />
+    <Composition id="Ep03" component={Ep03} durationInFrames={T3.EP_DURATION} fps={FPS} width={W} height={H} />
+    <Composition id="Ep03PartA" component={Ep03Preview} defaultProps={{part: 'A' as const}} durationInFrames={T3.f(T3.PARTS.A.end) - T3.f(T3.PARTS.A.start)} fps={FPS} width={W} height={H} />
+    <Composition id="Ep03PartB" component={Ep03Preview} defaultProps={{part: 'B' as const}} durationInFrames={T3.f(T3.PARTS.B.end) - T3.f(T3.PARTS.B.start)} fps={FPS} width={W} height={H} />
   </>
 );
