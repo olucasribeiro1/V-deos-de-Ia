@@ -40,6 +40,7 @@ export const Outlines: React.FC<{thickness?: number}> = ({thickness = 0.012}) =>
   useLayoutEffect(() => {
     // a espessura é herdada: um grupo com userData.outlineWidth (ex.: mãos POV, personagens) a redefine
     const visit = (o: THREE.Object3D, w: number) => {
+      if (o.userData.batchSource) return; // fonte do StaticBatch (invisível): contorno já fundido
       const width = (o.userData.outlineWidth as number | undefined) ?? w;
       const m = o as THREE.Mesh;
       // geometria trocada (args mudaram): refaz a casca

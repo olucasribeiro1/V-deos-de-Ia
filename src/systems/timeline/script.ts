@@ -12,7 +12,8 @@ import type {LightPreset} from '../../components/lighting/Lighting';
 
 export type VoiceId = 'narrador' | 'rafael' | 'vizinho';
 
-export type Target = LookName | {yaw: number; pitch?: number} | [number, number, number];
+/** Alvo de olhar: nome do cenário, ponto 3D, ângulo absoluto ou relativo ao olhar atual ({rel:true}). */
+export type Target = LookName | {yaw?: number; pitch?: number; rel?: boolean} | [number, number, number];
 
 export type Action = {at?: number} & (
   | {a: 'walk'; to: SpotName; pace?: 'slow' | 'walk' | 'brisk' | 'run'; look?: Target; arrive?: Target}

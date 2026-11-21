@@ -1,6 +1,7 @@
 import React, {useLayoutEffect, useMemo, useRef} from 'react';
 import * as THREE from 'three';
-import {rng} from '../../systems/animation/math';
+import {clamp, rng} from '../../systems/animation/math';
+import {basic} from '../../library/materials';
 import {mat, PAL} from '../../library/materials';
 
 /**
@@ -9,6 +10,30 @@ import {mat, PAL} from '../../library/materials';
  * `chaos` 0..1 controla colapso: luzes apagando, fumaça, incêndios, sirenes visuais.
  */
 const STREET_Y = -21; // 7º andar
+
+/** Fachada PRÉ-ILUMINADA: parede + janelas acesas na mesma textura (MeshBasicMaterial = custo mínimo). */
+function facadeTexture(seed: number, lit: number) {
+  const c = document.createElement('canvas');
+  c.width = 128;
+  c.height = 256;
+  const g = c.getContext('2d')!;
+  const grd = g.createLinearGradient(0, 0, 0, 256);
+  grd.addColorStop(0, '#7d858d');
+  grd.addColorStop(1, '#4e555c');
+  g.fillStyle = grd;
+  g.fillRect(0, 0, 128, 256);
+  const r = rng(seed);
+  for (let y = 0; y < 16; y++)
+    for (let x = 0; x < 8; x++) {
+      const v = r();
+      g.fillStyle = v > 1 - 0.3 * lit ? (v > 0.95 ? '#ffe2b0' : '#f0c27e') : '#262b31';
+      g.fillRect(x * 16 + 4, y * 16 + 4, 8, 9);
+    }
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.magFilter = THREE.NearestFilter;
+  return t;
+}
 
 function windowTexture(seed: number) {
   const c = document.createElement('canvas');
@@ -67,7 +92,7 @@ function skyTexture(top: string, mid: string, horizon: string) {
 export const Sky: React.FC<{top?: string; mid?: string; horizon?: string}> = ({top = '#1f2a36', mid = '#5a5a60', horizon = '#c08458'}) => {
   const tex = useMemo(() => skyTexture(top, mid, horizon), [top, mid, horizon]);
   return (
-    <mesh>
+    <mesh renderOrder={20}>
       <sphereGeometry args={[300, 16, 12]} />
       <meshBasicMaterial map={tex} side={THREE.BackSide} fog={false} depthWrite={false} />
     </mesh>
@@ -86,7 +111,7 @@ const Buildings: React.FC<{seed?: number; lights: number}> = ({seed = 11, lights
       for (let x = -90; x < 90; ) {
         const w = 8 + r() * 12;
         const d = 8 + r() * 10;
-        const h = 12 + r() * (row === 0 ? 30 : 55) + row * 6;
+        const h = 10 + r() * (row === 0 ? 16 : 34) + row * 9;
         if (!(row === 0 && x > -14 && x < 6 && r() < 0.5)) {
           dummy.position.set(x + w / 2, STREET_Y + h / 2, z - d / 2 - r() * 4);
           dummy.scale.set(w, h, d);
@@ -97,23 +122,28 @@ const Buildings: React.FC<{seed?: number; lights: number}> = ({seed = 11, lights
         x += w + 2 + r() * 5;
       }
     }
-    const m = new THREE.MeshStandardMaterial({
-      map: wallTexture(),
-      emissiveMap: windowTexture(seed),
-      emissive: new THREE.Color('#ffffff'),
-      roughness: 0.95,
-      flatShading: true,
-    });
+    const m = new THREE.MeshBasicMaterial({map: facadeTexture(seed, 1), fog: true});
     return {count: list.length, matrices: list, material: m};
   }, [seed]);
-  material.emissiveIntensity = lights;
+  // apagão progressivo: troca de textura só quando o nível muda (quantizado)
+  const lit = Math.round(clamp(lights) * 4) / 4;
+  const litTex = useMemo(() => facadeTexture(seed, lit), [seed, lit]);
+  if (material.map !== litTex) material.map = litTex;
   useLayoutEffect(() => {
     const im = ref.current!;
-    matrices.forEach((m, i) => im.setMatrixAt(i, m));
+    const col = new THREE.Color();
+    const r = rng(seed + 99);
+    matrices.forEach((m, i) => {
+      im.setMatrixAt(i, m);
+      const k = 0.62 + r() * 0.38; // variação de tom por prédio (sombreamento "pintado")
+      im.setColorAt(i, col.setRGB(k, k * (0.97 + r() * 0.05), k * (0.98 + r() * 0.06)));
+    });
     im.instanceMatrix.needsUpdate = true;
+    if (im.instanceColor) im.instanceColor.needsUpdate = true;
     im.computeBoundingSphere();
   }, [matrices]);
-  return <instancedMesh ref={ref} args={[undefined, material, count]} frustumCulled={false}><boxGeometry /></instancedMesh>;
+  // renderOrder alto: desenha DEPOIS do apartamento → pixels escondidos atrás das paredes são descartados (early-z)
+  return <instancedMesh ref={ref} args={[undefined, material, count]} frustumCulled={false} renderOrder={10}><boxGeometry /></instancedMesh>;
 };
 
 const smokeDummy = new THREE.Object3D();
@@ -146,7 +176,7 @@ export const Smoke: React.FC<{origin: [number, number, number]; t: number; amoun
     }
     im.instanceMatrix.needsUpdate = true;
   });
-  return <instancedMesh ref={ref} args={[undefined, m, puffs]} frustumCulled={false}><icosahedronGeometry args={[1, 0]} /></instancedMesh>;
+  return <instancedMesh ref={ref} args={[undefined, m, puffs]} frustumCulled={false} renderOrder={12}><icosahedronGeometry args={[1, 0]} /></instancedMesh>;
 };
 
 const Car: React.FC<{p: [number, number, number]; rotY?: number; color: string; wreck?: boolean}> = ({p, rotY = 0, color, wreck}) => (
@@ -184,23 +214,24 @@ export const Ambulance: React.FC<{p: [number, number, number]; rotY?: number; t:
   );
 };
 
-export const City: React.FC<{t: number; chaos?: number; children?: React.ReactNode}> = ({t, chaos = 0, children}) => {
+/** Todo o conteúdo da cidade é desenhado depois do interior (ordem de desenho = economia de pixels). */
+export const City: React.FC<{t: number; chaos?: number; children?: React.ReactNode; bench?: any}> = ({t, chaos = 0, children, bench = {}}) => {
   const lights = 1.1 - chaos * 0.6;
   return (
-    <group>
-      <Sky />
-      <Buildings lights={lights} />
+    <group renderOrder={10}>
+      {!bench.noSky && <Sky />}
+      {!bench.noBuildings && <Buildings lights={lights} />}
       {/* rua abaixo do prédio */}
-      <mesh position={[0, STREET_Y, -20]} rotation={[-Math.PI / 2, 0, 0]} material={mat('#2c2f33', {rough: 1})}>
+      <mesh position={[0, STREET_Y, -20]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#33373c')}>
         <planeGeometry args={[220, 14]} />
       </mesh>
-      <mesh position={[0, STREET_Y + 0.08, -12]} rotation={[-Math.PI / 2, 0, 0]} material={mat('#6e6f6c', {rough: 1})}>
+      <mesh position={[0, STREET_Y + 0.08, -12]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#6e6f6c')}>
         <planeGeometry args={[220, 3]} />
       </mesh>
-      <mesh position={[0, STREET_Y + 0.08, -28]} rotation={[-Math.PI / 2, 0, 0]} material={mat('#6e6f6c', {rough: 1})}>
+      <mesh position={[0, STREET_Y + 0.08, -28]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#6e6f6c')}>
         <planeGeometry args={[220, 3]} />
       </mesh>
-      <mesh position={[0, STREET_Y - 0.5, -60]} rotation={[-Math.PI / 2, 0, 0]} material={mat('#232528', {rough: 1})}>
+      <mesh position={[0, STREET_Y - 0.5, -60]} rotation={[-Math.PI / 2, 0, 0]} material={basic('#26292c')}>
         <planeGeometry args={[400, 200]} />
       </mesh>
       {/* nosso prédio (fachada abaixo da janela) */}
@@ -210,9 +241,9 @@ export const City: React.FC<{t: number; chaos?: number; children?: React.ReactNo
       <Car p={[-16, STREET_Y, -17]} rotY={Math.PI / 2} color="#5a6470" />
       <Car p={[8, STREET_Y, -23]} rotY={-Math.PI / 2} color="#7a2a24" />
       {chaos > 0.3 && <Car p={[-4, STREET_Y + 0.2, -21]} rotY={0.9} color="#c8c4b8" wreck />}
-      {chaos > 0.2 && <Ambulance p={[-1 + Math.max(0, 12 - t * 1.2), STREET_Y, -18]} rotY={-Math.PI / 2} t={t} />}
+      {chaos > 0.2 && <Ambulance p={[-1 + Math.max(0, 40 - t * 1.2), STREET_Y, -19]} rotY={-Math.PI / 2} t={t} />}
       {/* incêndios e fumaça */}
-      {chaos > 0.1 && (
+      {chaos > 0.1 && !bench.noSmoke && (
         <>
           <Smoke origin={[-22, STREET_Y + 30, -60]} t={t} amount={Math.min(1, chaos * 1.4)} seed={2} />
           <mesh position={[-22, STREET_Y + 28, -58]} material={mat('#ff7a2a', {emissive: '#ff5a10', ei: 2.5 + Math.sin(t * 9) * 0.8})}>
@@ -220,7 +251,7 @@ export const City: React.FC<{t: number; chaos?: number; children?: React.ReactNo
           </mesh>
         </>
       )}
-      {chaos > 0.45 && <Smoke origin={[30, STREET_Y + 20, -90]} t={t + 40} amount={chaos} seed={5} color="#3a3633" />}
+      {chaos > 0.45 && !bench.noSmoke && <Smoke origin={[30, STREET_Y + 20, -90]} t={t + 40} amount={chaos} seed={5} color="#3a3633" />}
       {children}
     </group>
   );

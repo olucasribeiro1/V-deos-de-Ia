@@ -1,5 +1,5 @@
 import {clamp, deg, fbm1, lerp, noise1} from '../animation/math';
-import {Key, sample} from '../timeline/keys';
+import {type Key, sample} from '../timeline/keys';
 
 /**
  * Sistema de câmera POV reutilizável.

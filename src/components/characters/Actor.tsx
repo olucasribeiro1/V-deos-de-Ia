@@ -1,6 +1,6 @@
 import React from 'react';
-import {Humanoid, CharacterSpec} from './Humanoid';
-import {blendPose, clip, ClipName} from '../../systems/animation/clips';
+import {Humanoid, type CharacterSpec} from './Humanoid';
+import {blendPose, clip, type ClipName} from '../../systems/animation/clips';
 import {clamp, lerp, smooth} from '../../systems/animation/math';
 
 /**

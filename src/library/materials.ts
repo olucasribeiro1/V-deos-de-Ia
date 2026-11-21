@@ -75,7 +75,7 @@ export const PAL = {
   white: '#f4f1ea',
   plant: '#4f9a54',
   // personagens
-  skinFair: '#f6cfb4',
+  skinFair: '#efbd9d',
   skinFairShadow: '#e3a98a',
   capRed: '#d42a22',
   jacketOlive: '#5c6b47',

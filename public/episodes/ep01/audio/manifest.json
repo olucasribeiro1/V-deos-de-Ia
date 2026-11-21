@@ -1,0 +1,44 @@
+{
+  "demo_b00": {
+    "file": "demo_b00.mp3",
+    "dur": 5.329,
+    "hash": "c8752f5c69df",
+    "voice": "narrador"
+  },
+  "demo_b01": {
+    "file": "demo_b01.mp3",
+    "dur": 8.62,
+    "hash": "97d3a1d4715b",
+    "voice": "narrador"
+  },
+  "demo_b02": {
+    "file": "demo_b02.mp3",
+    "dur": 2.586,
+    "hash": "00f665d7cf2b",
+    "voice": "narrador"
+  },
+  "demo_b05": {
+    "file": "demo_b05.mp3",
+    "dur": 1.907,
+    "hash": "5ffaa5defc01",
+    "voice": "narrador"
+  },
+  "demo_b06": {
+    "file": "demo_b06.mp3",
+    "dur": 3.161,
+    "hash": "a667dc252f84",
+    "voice": "narrador"
+  },
+  "demo_b04": {
+    "file": "demo_b04.mp3",
+    "dur": 4.776,
+    "hash": "1d9530b4353c",
+    "voice": "rafael"
+  },
+  "demo_b03": {
+    "file": "demo_b03.mp3",
+    "dur": 7.92,
+    "hash": "1e90ee349609",
+    "voice": "rafael"
+  }
+}

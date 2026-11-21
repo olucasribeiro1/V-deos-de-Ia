@@ -1,0 +1,102 @@
+{
+  "room_tone": {
+    "file": "room_tone.mp3",
+    "dur": 20.036,
+    "hash": "36c54ef5f4"
+  },
+  "sirens_close": {
+    "file": "sirens_close.mp3",
+    "dur": 9.796,
+    "hash": "31bc9bbff1"
+  },
+  "city_distant": {
+    "file": "city_distant.mp3",
+    "dur": 20.036,
+    "hash": "59850011cf"
+  },
+  "footstep_1": {
+    "file": "footstep_1.mp3",
+    "dur": 0.627,
+    "hash": "c920094216"
+  },
+  "rain_window": {
+    "file": "rain_window.mp3",
+    "dur": 20.036,
+    "hash": "c1c4abddad"
+  },
+  "footstep_2": {
+    "file": "footstep_2.mp3",
+    "dur": 0.601,
+    "hash": "808eeafa99"
+  },
+  "footstep_3": {
+    "file": "footstep_3.mp3",
+    "dur": 0.575,
+    "hash": "5619d9dccf"
+  },
+  "heartbeat": {
+    "file": "heartbeat.mp3",
+    "dur": 5.042,
+    "hash": "332018a199"
+  },
+  "breath_scared": {
+    "file": "breath_scared.mp3",
+    "dur": 5.016,
+    "hash": "9ed33c188d"
+  },
+  "zombie_growl": {
+    "file": "zombie_growl.mp3",
+    "dur": 4.049,
+    "hash": "ddc58c72e3"
+  },
+  "scream_far": {
+    "file": "scream_far.mp3",
+    "dur": 2.508,
+    "hash": "99eff6baf3"
+  },
+  "call_accept": {
+    "file": "call_accept.mp3",
+    "dur": 0.261,
+    "hash": "66ed41016a"
+  },
+  "call_drop": {
+    "file": "call_drop.mp3",
+    "dur": 1.097,
+    "hash": "c9002b8113"
+  },
+  "bag_drop": {
+    "file": "bag_drop.mp3",
+    "dur": 1.045,
+    "hash": "d906bcda84"
+  },
+  "door_knock": {
+    "file": "door_knock.mp3",
+    "dur": 2.456,
+    "hash": "a5dd6861a7"
+  },
+  "phone_vibrate": {
+    "file": "phone_vibrate.mp3",
+    "dur": 4.023,
+    "hash": "b399171ea5"
+  },
+  "door_bang": {
+    "file": "door_bang.mp3",
+    "dur": 5.042,
+    "hash": "ec45b1284d"
+  },
+  "lock_turn": {
+    "file": "lock_turn.mp3",
+    "dur": 1.045,
+    "hash": "7dbaafd8d0"
+  },
+  "explosion_far": {
+    "file": "explosion_far.mp3",
+    "dur": 4.049,
+    "hash": "09074820c7"
+  },
+  "drone_tension": {
+    "file": "drone_tension.mp3",
+    "dur": 22.047,
+    "hash": "86e2083800"
+  }
+}

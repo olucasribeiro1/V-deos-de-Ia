@@ -10,7 +10,7 @@ import {PovRig} from '../../components/camera/PovRig';
 import {PovHands} from '../../components/hands/PovHands';
 import {Phone} from '../../components/props/Phone';
 import {buildPovTrack} from '../../systems/camera/pov';
-import {HP, HandPoseName} from '../../systems/animation/handPoses';
+import {HP, type HandPoseName} from '../../systems/animation/handPoses';
 import {Grade} from '../../components/effects/Grade';
 
 /** Still de verificação: cada frame mostra uma pose de mão diferente em um ponto do apartamento. */
