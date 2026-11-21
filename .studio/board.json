@@ -84,10 +84,11 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "EM EXECUÇÃO",
+      "status": "CONCLUÍDO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.144Z",
-      "updated": "2026-11-21T13:00:38.487Z"
+      "updated": "2026-11-21T13:04:55.118Z",
+      "evidence": "inspeção v2: 25 frames aprovados"
     },
     {
       "id": "T7",
@@ -96,10 +97,11 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "EM EXECUÇÃO",
+      "status": "CONCLUÍDO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.168Z",
-      "updated": "2026-11-21T13:00:38.513Z"
+      "updated": "2026-11-21T13:04:55.144Z",
+      "evidence": "inspeção v2: 25 frames aprovados"
     },
     {
       "id": "T8",
@@ -108,10 +110,11 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "EM EXECUÇÃO",
+      "status": "CONCLUÍDO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.193Z",
-      "updated": "2026-11-21T13:00:38.537Z"
+      "updated": "2026-11-21T13:04:55.170Z",
+      "evidence": "inspeção v2: 25 frames aprovados"
     },
     {
       "id": "T9",
@@ -120,10 +123,11 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "EM EXECUÇÃO",
+      "status": "CONCLUÍDO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.217Z",
-      "updated": "2026-11-21T13:00:38.571Z"
+      "updated": "2026-11-21T13:04:55.196Z",
+      "evidence": "inspeção v2: 25 frames aprovados"
     },
     {
       "id": "T10",
@@ -132,10 +136,11 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "EM EXECUÇÃO",
+      "status": "CONCLUÍDO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.242Z",
-      "updated": "2026-11-21T13:00:38.598Z"
+      "updated": "2026-11-21T13:04:55.219Z",
+      "evidence": "inspeção v2: 25 frames aprovados"
     },
     {
       "id": "T11",
@@ -144,10 +149,10 @@
       "files": [],
       "deps": [],
       "done": "",
-      "status": "PENDENTE",
+      "status": "EM EXECUÇÃO",
       "attempts": 0,
       "created": "2026-11-21T10:50:35.268Z",
-      "updated": "2026-11-21T10:50:35.268Z"
+      "updated": "2026-11-21T13:04:55.272Z"
     },
     {
       "id": "T12",
@@ -160,6 +165,19 @@
       "attempts": 0,
       "created": "2026-11-21T10:50:35.293Z",
       "updated": "2026-11-21T10:50:35.293Z"
+    },
+    {
+      "id": "T11b",
+      "owner": "render-engineer",
+      "goal": "render v2",
+      "files": [],
+      "deps": [],
+      "done": "",
+      "heartbeat": "out/ep01/heartbeat",
+      "status": "PENDENTE",
+      "attempts": 0,
+      "created": "2026-11-21T13:04:55.244Z",
+      "updated": "2026-11-21T13:04:55.244Z"
     }
   ],
   "gates": {
