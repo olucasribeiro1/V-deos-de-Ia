@@ -14,3 +14,7 @@
 [2026-11-21T09:33:20.016Z] gate B APROVADO assets inspecionados
 [2026-11-21T09:33:20.055Z] gate C APROVADO câmera/mãos/colisões ok
 [2026-11-21T09:33:20.085Z] gate D APROVADO áudio ok
+[2026-11-21T10:27:21.522Z] set T4 CONCLUÍDO
+[2026-11-21T10:27:21.551Z] gate E APROVADO stills + métricas
+[2026-11-21T10:27:21.581Z] gate F APROVADO render segmentado 8/8 cenas
+[2026-11-21T10:27:21.612Z] gate G APROVADO auditoria técnica e de sincronia

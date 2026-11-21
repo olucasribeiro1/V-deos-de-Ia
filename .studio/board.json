@@ -58,10 +58,11 @@
       ],
       "done": "verify-mp4 OK",
       "heartbeat": "out/ep01/heartbeat",
-      "status": "EM EXECUÇÃO",
+      "status": "CONCLUÍDO",
       "attempts": 0,
       "created": "2026-11-21T09:33:19.700Z",
-      "updated": "2026-11-21T09:33:19.930Z"
+      "updated": "2026-11-21T10:27:21.522Z",
+      "evidence": "verify-mp4: h264 1280x720 yuv420p 24fps, AAC, 603.6s; 71/71 falas presentes; emendas limpas; -17.4 LUFS"
     }
   ],
   "gates": {
@@ -84,6 +85,21 @@
       "pass": true,
       "reason": "áudio ok",
       "at": "2026-11-21T09:33:20.085Z"
+    },
+    "E": {
+      "pass": true,
+      "reason": "stills + métricas",
+      "at": "2026-11-21T10:27:21.551Z"
+    },
+    "F": {
+      "pass": true,
+      "reason": "render segmentado 8/8 cenas",
+      "at": "2026-11-21T10:27:21.580Z"
+    },
+    "G": {
+      "pass": true,
+      "reason": "auditoria técnica e de sincronia",
+      "at": "2026-11-21T10:27:21.611Z"
     }
   }
 }

@@ -15,6 +15,8 @@ Máquina de referência: nuvem, 4 vCPU, 15,7 GB RAM, **sem GPU** (WebGL por soft
 | Demo 45 s final | 241 s de render = **4,46 fps = 5,4× tempo real**; pico de RAM **2,6 GB** |
 | Projeção episódio 11 min | ≈ 59 min de render (cenas internas são mais leves que olhar a cidade) |
 
+| **Episódio 01 completo (10 min 04 s, 8 cenas)** | **3.188 s = 53 min** de render total = **5,25× tempo real**; 4,05–5,82 fps por cena; pico RAM **2,49 GB**; MP4 de 126 MB |
+
 ## Áudio (ElevenLabs)
 - Narração do episódio (71 falas, 4,8 mil caracteres, com transcrição de verificação): **76 s** (3 em paralelo).
 - Biblioteca de 45 SFX: ~2 min na primeira vez; depois cache.
