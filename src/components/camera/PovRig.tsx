@@ -26,7 +26,7 @@ export const PovRig: React.FC<{track: PovTrack; frame: number; children?: React.
     camera.updateProjectionMatrix();
   }
   return (
-    <group position={[px, py, pz]} rotation={[euler.x, euler.y, euler.z, 'YXZ']}>
+    <group position={[px, py, pz]} rotation={[euler.x, euler.y, euler.z, 'YXZ']} userData={{headRig: true}}>
       {children}
     </group>
   );

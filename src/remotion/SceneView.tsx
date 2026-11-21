@@ -13,6 +13,7 @@ import {City} from '../components/environments/City';
 import {Lighting} from '../components/lighting/Lighting';
 import {Actor} from '../components/characters/Actor';
 import {Outlines} from '../components/effects/Outlines';
+import {AuditProbe} from '../components/effects/AuditProbe';
 import {Grade} from '../components/effects/Grade';
 import {Subtitles} from '../components/ui/Subtitles';
 import {Countdown, TipCard} from '../components/ui/Overlays';
@@ -83,6 +84,7 @@ export const SceneView: React.FC<{scene: CompiledScene; sfxLib: SfxManifest; aud
           />}
         </PovRig>
         {!bench.noOutlines && <Outlines />}
+        {bench.audit && <AuditProbe />}
       </ThreeCanvas>}
       <Grade danger={scene.danger(t)} fade={fade} lens={scene.lens(t)} grain={bench.noGrain ? 0 : undefined} />
       {title && (

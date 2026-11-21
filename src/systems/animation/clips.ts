@@ -158,7 +158,7 @@ export function clip(name: ClipName, t: number, v = 0.5, k = 0): Pose {
       const c2 = (ph * rate + 0.45 + v * 0.1) % 1;
       const hitR = c2 < 0.2 ? easeOut(c2 / 0.2) : clamp(1 - (c2 - 0.2) / 0.3);
       return {
-        hipsY: -0.03,
+        hipsY: 0.04, // medido pela auditoria: -0.03 afundava os pés 7 cm
         spine: [18 + (hitL + hitR) * 6, (hitL - hitR) * 10, 0],
         chest: [6, 0, 0],
         head: [lerp(-5, 12, Math.max(hitL, hitR)) + fbm1(ph * 2, 4) * 8, fbm1(ph, 6) * 15, 0],
@@ -176,16 +176,16 @@ export function clip(name: ClipName, t: number, v = 0.5, k = 0): Pose {
       // k = progresso 0..1 da queda
       const f = easeOut(clamp(k));
       return {
-        hipsY: -0.8 * f,
-        hips: [lerp(0, -80, f), 0, 0],
+        hipsY: -0.7 * f,
+        hips: [lerp(0, -88, f), 0, 0],
         spine: [lerp(10, -5, f), 0, 0],
         head: [lerp(0, 20, f), 0, 0],
         lArm: [lerp(-40, -170, f), 0, -30],
         rArm: [lerp(-60, -160, f), 0, 30],
-        lLeg: [lerp(-20, 70, f), 0, 10],
-        rLeg: [lerp(10, 80, f), 0, -10],
-        lShin: [lerp(30, 10, f), 0, 0],
-        rShin: [lerp(20, 5, f), 0, 0],
+        lLeg: [lerp(-20, -4, f), 0, lerp(4, 12, f)],
+        rLeg: [lerp(10, -10, f), 0, lerp(-4, -8, f)],
+        lShin: [lerp(30, 6, f), 0, 0],
+        rShin: [lerp(20, 12, f), 0, 0],
       };
     }
     case 'getUp': {
@@ -222,13 +222,13 @@ export function clip(name: ClipName, t: number, v = 0.5, k = 0): Pose {
     }
     case 'crouch':
       return {
-        hipsY: -0.38,
-        spine: [30, 0, 0],
+        hipsY: -0.47,
+        spine: [32, 0, 0],
         head: [-25, fbm1(ph * 0.3, 2) * 20, 0],
-        lLeg: [-75, 0, 8],
-        rLeg: [-60, 0, -8],
-        lShin: [120, 0, 0],
-        rShin: [110, 0, 0],
+        lLeg: [-95, 0, 8],
+        rLeg: [-85, 0, -8],
+        lShin: [150, 0, 0],
+        rShin: [145, 0, 0],
         lArm: [-30, 0, -10],
         rArm: [-40, 0, 10],
         lFore: [-50, 0, 0],
@@ -239,7 +239,7 @@ export function clip(name: ClipName, t: number, v = 0.5, k = 0): Pose {
       const bite = Math.max(0, Math.sin(ph * (2.4 + v * 0.8) * TAU * 0.5));
       const tug = Math.sin(ph * 3.1 + v * 3) * 0.5 + 0.5;
       return {
-        hipsY: -0.5,
+        hipsY: -0.27,
         hips: [8, 0, 0],
         spine: [48 + bite * 10, fbm1(ph * 0.8, 4) * 10, fbm1(ph * 0.6, 7) * 6],
         chest: [18 + bite * 6, 0, 0],
@@ -249,26 +249,28 @@ export function clip(name: ClipName, t: number, v = 0.5, k = 0): Pose {
         lFore: [-50 - tug * 25, 0, 0],
         rArm: [-70 - tug * 18, 0, 20],
         rFore: [-45 + tug * 20, 0, 0],
-        lLeg: [-95, 0, 12],
-        lShin: [135, 0, 0],
-        rLeg: [-70, 0, -10],
-        rShin: [120, 0, 0],
+        lLeg: [-8, 0, 10], // coxa quase vertical → joelho no chão
+        lShin: [92, 0, 0], // canela deitada para trás
+        rLeg: [-82, 0, -10], // coxa à frente na horizontal
+        rShin: [84, 0, 0], // canela vertical → pé no chão
       };
     }
     case 'dead': {
       // vítima caída (deitada de costas), espasmos ocasionais
       const sp = Math.max(0, Math.sin(ph * 5.3)) ** 8;
       return {
-        hipsY: -0.82,
-        hips: [-85, 0, 0],
-        spine: [-3, 0, 0],
-        head: [12 + sp * 10, 30, 0],
-        lArm: [-160, 0, -45 - sp * 15],
-        rArm: [-150, 0, 50],
-        lLeg: [75, 0, 12],
-        rLeg: [82, 0, -8],
-        lShin: [8 + sp * 20, 0, 0],
-        rShin: [14, 0, 0],
+        hipsY: -0.7,
+        hips: [-88, 0, 0],
+        spine: [2, 0, 0],
+        head: [-6 + sp * 10, 30, 0],
+        lArm: [-150, 0, -50 - sp * 15],
+        rArm: [-140, 0, 55],
+        lFore: [-10, 0, 0],
+        rFore: [-20, 0, 0],
+        lLeg: [-4, 0, 12],
+        rLeg: [-10, 0, -8],
+        lShin: [6 + sp * 18, 0, 0],
+        rShin: [12, 0, 0],
       };
     }
     case 'lookAround': {

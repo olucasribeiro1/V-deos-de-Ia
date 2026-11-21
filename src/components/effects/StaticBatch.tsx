@@ -68,6 +68,7 @@ export const StaticBatch: React.FC<{children: React.ReactNode; outline?: number}
       mesh.castShadow = e.cast;
       mesh.receiveShadow = e.receive;
       mesh.userData.noOutline = true; // contorno já está fundido em `hulls`
+      mesh.userData.merged = true;
       dst.add(mesh);
     }
     if (hulls.length) {
@@ -76,6 +77,7 @@ export const StaticBatch: React.FC<{children: React.ReactNode; outline?: number}
         const hm = new THREE.Mesh(hg, ink);
         hm.userData.isHull = true;
         hm.userData.noOutline = true;
+        hm.userData.merged = true;
         dst.add(hm);
       }
     }

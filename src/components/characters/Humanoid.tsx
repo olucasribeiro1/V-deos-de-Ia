@@ -138,7 +138,7 @@ export const Humanoid: React.FC<{spec: CharacterSpec; pose: Pose; position?: [nu
   const hipsY = 0.93 + (pose.hipsY ?? 0);
   const HEAD = 0.19;
   return (
-    <group position={position} rotation={[0, deg(yaw), 0]} scale={[k, k, k]} userData={{outlineWidth: 0.009}}>
+    <group position={position} rotation={[0, deg(yaw), 0]} scale={[k, k, k]} userData={{outlineWidth: 0.009, actor: spec.id}}>
       <group position={[0, hipsY, 0]} rotation={R(pose.hips)}>
         <mesh scale={[1.25 * b, 0.8, 0.95 * b]} material={bottom} castShadow>
           <sphereGeometry args={[0.13, 14, 10]} />
