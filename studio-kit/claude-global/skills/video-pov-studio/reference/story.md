@@ -2,7 +2,14 @@
 
 ## Formato do roteiro cinematográfico (antes do roteiro de ações)
 Por cena: título, duração estimada, ambiente/iluminação, narração, diálogos, ações do protagonista, reações corporais, câmera, animação, áudio, transição.
-Episódio de 10–12 min ≈ **1.250–1.500 palavras** de fala (~2,2 palavras/s com pausas). Ajuste pela duração REAL do áudio (o compilador mede).
+Episódio de 10–12 min: com fala natural (eleven_v3, ~11 caracteres/s com pausas) o ep01 teve **~5 mil caracteres / ~900 palavras** para 10 min — muitas ações sem fala. Estime com `npm run validate` e confira pela duração REAL do áudio.
+
+## ESTILO DE FALA (decisão do usuário — obrigatório)
+- **Sem narrador de audiolivro.** O protagonista fala por si: 1ª pessoa, presente, coloquial brasileiro, reagindo no momento ("Beleza... é aqui.", "Calma. Calma!", "Que isso?!").
+- Personagens conversam entre si (telefone, através da porta, TV ao fundo). O protagonista responde, pergunta, interrompe.
+- Frases curtas; emoção com marcações do eleven_v3 em INGLÊS: [sighs], [whispers], [laughs softly], [nervous laugh], [gasps], [panting], [exhales], [pause], [coughs], [sobs], [voice breaks].
+- Lê em voz alta o que está na tela (mensagem, alerta) só quando for natural; não descreva o que a imagem já mostra.
+- Palavrão leve no máximo ("Meu Deus!") — monetização.
 
 ## Retenção
 - **0–10 s**: acontecimento intrigante ou frase-gancho ("Faltavam duas horas para o mundo acabar…").

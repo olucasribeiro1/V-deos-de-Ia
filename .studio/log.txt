@@ -1,0 +1,16 @@
+[2026-11-21T09:33:19.524Z] init hora-a-hora · ep01
+[2026-11-21T09:33:19.563Z] add T1 (story-director) Roteiro + roteiro de ações ep01 (8 cenas)
+[2026-11-21T09:33:19.618Z] add T2 (audio-engineer) Narração (71 falas) + SFX
+[2026-11-21T09:33:19.652Z] add T3 (visual-producer) Assets novos + inspeção visual (46 frames)
+[2026-11-21T09:33:19.702Z] add T4 (render-engineer) Render final ep01 720p
+[2026-11-21T09:33:19.750Z] set T1 EM EXECUÇÃO
+[2026-11-21T09:33:19.783Z] set T1 CONCLUÍDO
+[2026-11-21T09:33:19.819Z] set T2 EM EXECUÇÃO
+[2026-11-21T09:33:19.859Z] set T2 CONCLUÍDO
+[2026-11-21T09:33:19.883Z] set T3 EM EXECUÇÃO
+[2026-11-21T09:33:19.907Z] set T3 CONCLUÍDO
+[2026-11-21T09:33:19.930Z] set T4 EM EXECUÇÃO
+[2026-11-21T09:33:19.966Z] gate A APROVADO roteiro validado
+[2026-11-21T09:33:20.016Z] gate B APROVADO assets inspecionados
+[2026-11-21T09:33:20.055Z] gate C APROVADO câmera/mãos/colisões ok
+[2026-11-21T09:33:20.085Z] gate D APROVADO áudio ok

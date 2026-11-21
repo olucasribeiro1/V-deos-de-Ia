@@ -28,4 +28,6 @@
 - Nenhum objeto entra em parede/outro objeto (folga ≥ 1 cm). Ao posicionar móvel, calcule a caixa: centro ± metade da largura/profundidade e confira paredes (espessura 12 cm → face interna a 6 cm do eixo).
 - Câmera só anda pelo grafo de navegação do cenário (`NAV` em apartmentData.ts), que desvia dos móveis; mínimo 30 cm de paredes.
 - Mãos: o objeto segurado fica à frente da palma; dedos atrás do objeto (celular), nunca atravessando a tela.
-- Erros já encontrados e corrigidos: estante dentro da parede, rack sobre a estante, porta do quarto atrás do sofá, dedos na frente da tela do celular.
+- Personagem batendo em porta: fique a ≥ 95 cm (braço + inclinação alcançam ~60 cm). Depois da barricada, nenhuma ação pode levar a câmera ao olho mágico (atravessaria o móvel).
+- Teste de isolamento: `--props '{"bench":{"noActors":true}}'` / `noHands` / `noApt` / `noCity` mostram o que está atravessando o quê.
+- Erros já encontrados e corrigidos: infectado atravessando a porta fechada, barricada fora do quadro, dedos do infectado na porta, fumaça preta flutuando, estante dentro da parede, rack sobre a estante, porta do quarto atrás do sofá, dedos na frente da tela do celular.

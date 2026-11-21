@@ -43,7 +43,10 @@ Episódio → cenas → beats. Beat = `line` (fala opcional) + `do` (ações com
 `scan {from,to,dur}` (varredura militar) · `height {h}` (agachar) · `tension {v}` · `hands {r,l: pose}` · `prop {r,l: phone|bottle|can|none}` ·
 `phone {screen}` · `set {state}` (portas, luzes, bolsa, suprimentos, barricada) · `sfx {id, vol, loop}` · `fov {v}` (olho mágico ~95) · `shake` ·
 `actor {track}` (personagem com caminho e clips) · `fade` · `danger` (vinheta vermelha) · `title`.
+`lens {v}` (máscara de olho mágico; use com `fov 100` e o spot `peepView`) · `then: true` em qualquer ação = só começa quando o andar/agachar atual termina.
+Atores: `actor {track}` com mesmo `spec.id` SUBSTITUI o anterior (troca humano→infectado sem duplicata); `until` remove o ator.
 Alvos de olhar: nomes do cenário (`LOOKS`), ponto `[x,y,z]` ou `{rel:true, yaw, pitch}`.
+Spots úteis do apartamento: corridor, peepView (olho mágico), sofaSeat (sentado h=1.12), sink, bathroom, photoSpot, hallDresser (empurrar a cômoda), barricade (atrás da cômoda encostada na porta).
 Regras de naturalidade: nunca deixe a câmera parada > 4 s sem micro-ação (olhar, respiração já é automática); mãos aparecem ao pegar/abrir/segurar; susto antes de revelar ameaça; passos e balanço são automáticos (sincronizados).
 
 ## Performance (ver benchmarks.md)

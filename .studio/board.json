@@ -1,0 +1,89 @@
+{
+  "project": "hora-a-hora · ep01",
+  "created": "2026-11-21T09:33:19.523Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "owner": "story-director",
+      "goal": "Roteiro + roteiro de ações ep01 (8 cenas)",
+      "files": [],
+      "deps": [],
+      "done": "validate sem erros, 10-12 min",
+      "status": "CONCLUÍDO",
+      "attempts": 0,
+      "created": "2026-11-21T09:33:19.562Z",
+      "updated": "2026-11-21T09:33:19.782Z",
+      "evidence": "npm run validate: 10.06 min, 0 erros"
+    },
+    {
+      "id": "T2",
+      "owner": "audio-engineer",
+      "goal": "Narração (71 falas) + SFX",
+      "files": [],
+      "deps": [
+        "T1"
+      ],
+      "done": "pronúncia >= 92% ou revisada",
+      "status": "CONCLUÍDO",
+      "attempts": 0,
+      "created": "2026-11-21T09:33:19.617Z",
+      "updated": "2026-11-21T09:33:19.858Z",
+      "evidence": "71 falas; 1 erro real corrigido (s05_b02); 4 falsos positivos de STT documentados"
+    },
+    {
+      "id": "T3",
+      "owner": "visual-producer",
+      "goal": "Assets novos + inspeção visual (46 frames)",
+      "files": [],
+      "deps": [
+        "T1"
+      ],
+      "done": "",
+      "status": "CONCLUÍDO",
+      "attempts": 0,
+      "created": "2026-11-21T09:33:19.651Z",
+      "updated": "2026-11-21T09:33:19.906Z",
+      "evidence": "46 frames inspecionados; 9 correções aplicadas"
+    },
+    {
+      "id": "T4",
+      "owner": "render-engineer",
+      "goal": "Render final ep01 720p",
+      "files": [
+        "out/ep01"
+      ],
+      "deps": [
+        "T2",
+        "T3"
+      ],
+      "done": "verify-mp4 OK",
+      "heartbeat": "out/ep01/heartbeat",
+      "status": "EM EXECUÇÃO",
+      "attempts": 0,
+      "created": "2026-11-21T09:33:19.700Z",
+      "updated": "2026-11-21T09:33:19.930Z"
+    }
+  ],
+  "gates": {
+    "A": {
+      "pass": true,
+      "reason": "roteiro validado",
+      "at": "2026-11-21T09:33:19.965Z"
+    },
+    "B": {
+      "pass": true,
+      "reason": "assets inspecionados",
+      "at": "2026-11-21T09:33:20.013Z"
+    },
+    "C": {
+      "pass": true,
+      "reason": "câmera/mãos/colisões ok",
+      "at": "2026-11-21T09:33:20.054Z"
+    },
+    "D": {
+      "pass": true,
+      "reason": "áudio ok",
+      "at": "2026-11-21T09:33:20.085Z"
+    }
+  }
+}
