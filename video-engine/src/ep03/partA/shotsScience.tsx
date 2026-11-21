@@ -504,6 +504,8 @@ export const SHz: React.FC<ShotP> = (p) => {
   const HZ = ev(p, 'L6', 8);
   const lock = fr >= HZ;
   return (
+    <>
+
     <Rig dur={p.dur} zoom={[1.04, 1.12]} whip="r" origin={[600, 1000]} punches={[{at: HZ, amt: 0.05}]}>
       <Stage t={t} hue="#26406e" />
       <Svg>
@@ -512,9 +514,10 @@ export const SHz: React.FC<ShotP> = (p) => {
         <FingerIn x={360} y={720} fr={fr} k={fr / 10} />
         <VibeLines cx={380} cy={720} w={60} h={140} k={0.9} frame={fr} n={2} width={7} />
       </Svg>
-      <Tuner hz={500} x={60} y={1590} from={Q - 6} lockAt={HZ} fromHz={220} scale={1.2} />
       <Finish vignette={0.6} grain={0.1} />
     </Rig>
+      <Tuner hz={500} x={60} y={1590} from={Q - 6} lockAt={HZ} fromHz={220} scale={1.2} />
+    </>
   );
 };
 
@@ -524,6 +527,8 @@ export const SWobble: React.FC<ShotP> = (p) => {
   const t = abs(p, fr);
   const wob = kf(fr, [0, p.dur], [0.35, 1.0], (x) => x * x);
   return (
+    <>
+
     <Rig dur={p.dur} zoom={[1.1, 1.28]} pow={1.3} origin={[540, 900]} shakes={[{at: p.dur - 10, dur: 12, amp: 6}]}>
       <Stage t={t} hue="#2a4a5e" />
       <Svg>
@@ -531,10 +536,11 @@ export const SWobble: React.FC<ShotP> = (p) => {
         <RingWaves x={540} y={720} t={t * 0.4} rate={4} maxR={420} color="#3be08a" k={0.8} />
       </Svg>
       <EnergyLines x={540} y={760} r0={380} r1={700} k={wob} frame={fr} seed="gw" count={14} />
-      <Tuner hz={500} x={60} y={1590} from={-20} lockAt={-19} scale={1.2} />
       <Chip x={800} y={1700} text="CÂMERA LENTA" k={kf(fr, [2, 7], [0, 1])} color="#ffffff" size={34} />
       <Finish vignette={0.6} grain={0.12} />
     </Rig>
+      <Tuner hz={500} x={60} y={1590} from={-20} lockAt={-19} scale={1.2} />
+    </>
   );
 };
 
@@ -543,6 +549,8 @@ export const SShatter: React.FC<ShotP> = (p) => {
   const fr = useCurrentFrame();
   const t = abs(p, fr);
   return (
+    <>
+
     <Rig dur={p.dur} zoom={[1.2, 1.1]} shakes={[{at: 0, dur: 14, amp: 34}]} origin={[540, 900]}>
       <Stage t={t} hue="#3a5a7e" />
       <Svg>
@@ -556,10 +564,11 @@ export const SShatter: React.FC<ShotP> = (p) => {
       </Svg>
       <Shockwave cx={540} cy={900} age={fr} rings={3} speed={46} maxR={900} color="200,240,255" />
       <SfxWord x={540} y={1300} text="CRASH!" k={fr} color="#8fd8ff" size={150} rot={-8} />
-      <Tuner hz={500} x={60} y={1590} from={-20} lockAt={-19} to={8} scale={1.2} />
       <CutFlash frames={5} />
       <Finish vignette={0.55} grain={0.12} />
     </Rig>
+      <Tuner hz={500} x={60} y={1590} from={-20} lockAt={-19} to={8} scale={1.2} />
+    </>
   );
 };
 

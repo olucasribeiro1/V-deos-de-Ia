@@ -299,7 +299,7 @@ export const SBoard: React.FC<ShotP> = (p) => {
   return (
     <Rig dur={p.dur} zoom={[1.0, 1.06]} punches={[{at: 15, amt: 0.14}]} shakes={[{at: 15, dur: 10, amp: 12}]}>
       <AbsoluteFill style={{background: 'linear-gradient(#1a2240, #0b1024)'}} />
-      <AbsoluteFill style={{left: 70, right: 70, top: 0, bottom: 0, background: '#0f1630', borderLeft: `12px solid ${ACADEMY.gold}`, borderRight: `12px solid ${ACADEMY.gold}`, filter: speed > 0.1 ? `blur(${speed * 8}px)` : undefined}}>
+      <div style={{position: 'absolute', overflow: 'hidden', left: 70, right: 70, top: 0, bottom: 0, background: '#0f1630', borderLeft: `12px solid ${ACADEMY.gold}`, borderRight: `12px solid ${ACADEMY.gold}`, filter: speed > 0.1 ? `blur(${speed * 8}px)` : undefined}}>
         {BOARD.map(([pos, name, pw], i) => {
           const last = i === BOARD.length - 1;
           const y = y0 + i * ROW;
@@ -331,7 +331,7 @@ export const SBoard: React.FC<ShotP> = (p) => {
             </div>
           );
         })}
-      </AbsoluteFill>
+      </div>
       <AbsoluteFill style={{background: 'linear-gradient(#0b1024 0%, rgba(11,16,36,0) 12%, rgba(11,16,36,0) 88%, #0b1024 100%)'}} />
       <Finish vignette={0.5} grain={0.1} />
     </Rig>
