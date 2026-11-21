@@ -97,4 +97,6 @@ Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**,
 - **Câmera:** primeira pessoa (os olhos do Lucas), lenta, respirando, virando para quem fala ou para o som. Quase sem cortes, dissolve suave ≤ 0,6 s; zoom só quando a tensão pede; corte seco só no susto final.
 - **Narração:** mais lenta, português claro e correto, sem erro, com suspense e pausas. O vídeo é feito antes da voz (timeline estimada); a narração só é gerada depois que o usuário aprovar o vídeo.
 - **Som:** ambiente de noite com grilos, zumbido de geladeira e fluorescente, chiado de TV, estrondo distante, batida no vidro, porta rangendo, coração e riser.
-- **Formato:** episódios de ~2 min na vertical; depois juntar na horizontal para o YouTube.
+- **Formato:** primeiro o episódio em Short vertical (9:16); depois a versão horizontal (16:9) com a mesma estética, só abrindo o enquadramento para mostrar mais do ambiente natural (nada de barras ou fundo borrado). Cenas 3D feitas para funcionar nos dois formatos.
+- **Estrutura de retenção (todo episódio):** começa já na ação (trecho do clímax, 4–8 s, com o áudio já gravado) → rebobina/volta no tempo ("3 HORAS ANTES") → história em ordem → termina com gancho para o próximo episódio ("EP. 2 →"). O cold open reaproveita falas já gravadas, sem reescrever a narração.
+- **Na compilação horizontal:** cada episódio mantém o seu gancho final; os cold opens repetidos podem ser encurtados para não cansar quem assiste em sequência.
