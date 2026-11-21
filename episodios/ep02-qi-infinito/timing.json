@@ -1,0 +1,1967 @@
+{
+ "fps": 30,
+ "tempo": 1.05,
+ "duration": 118.95,
+ "lines": [
+  {
+   "id": "L1",
+   "text": "O Davi nasceu com QI infinito. Agora, quatro agentes do governo tão correndo atrás dele numa estação de metrô.",
+   "start": 0.0,
+   "end": 6.325,
+   "words": [
+    {
+     "w": "O",
+     "start": 0.0,
+     "end": 0.155
+    },
+    {
+     "w": "Davi",
+     "start": 0.221,
+     "end": 0.431
+    },
+    {
+     "w": "nasceu",
+     "start": 0.475,
+     "end": 0.808
+    },
+    {
+     "w": "com",
+     "start": 0.851,
+     "end": 0.973
+    },
+    {
+     "w": "QI",
+     "start": 1.029,
+     "end": 1.25
+    },
+    {
+     "w": "infinito.",
+     "start": 1.349,
+     "end": 2.09
+    },
+    {
+     "w": "Agora,",
+     "start": 2.322,
+     "end": 2.709
+    },
+    {
+     "w": "quatro",
+     "start": 2.753,
+     "end": 3.063
+    },
+    {
+     "w": "agentes",
+     "start": 3.085,
+     "end": 3.394
+    },
+    {
+     "w": "do",
+     "start": 3.428,
+     "end": 3.483
+    },
+    {
+     "w": "governo",
+     "start": 3.528,
+     "end": 3.903
+    },
+    {
+     "w": "tão",
+     "start": 4.003,
+     "end": 4.212
+    },
+    {
+     "w": "correndo",
+     "start": 4.268,
+     "end": 4.689
+    },
+    {
+     "w": "atrás",
+     "start": 4.721,
+     "end": 4.943
+    },
+    {
+     "w": "dele",
+     "start": 4.998,
+     "end": 5.23
+    },
+    {
+     "w": "numa",
+     "start": 5.274,
+     "end": 5.451
+    },
+    {
+     "w": "estação",
+     "start": 5.473,
+     "end": 5.794
+    },
+    {
+     "w": "de",
+     "start": 5.827,
+     "end": 5.871
+    },
+    {
+     "w": "metrô.",
+     "start": 5.915,
+     "end": 6.325
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "text": "Ele não tem força. Não tem arma. Ele tem isso: ele sabe o que tu vai fazer antes de tu saber.",
+   "start": 6.646,
+   "end": 11.997,
+   "words": [
+    {
+     "w": "Ele",
+     "start": 6.646,
+     "end": 6.8
+    },
+    {
+     "w": "não",
+     "start": 6.845,
+     "end": 6.922
+    },
+    {
+     "w": "tem",
+     "start": 6.955,
+     "end": 7.066
+    },
+    {
+     "w": "força.",
+     "start": 7.121,
+     "end": 7.563
+    },
+    {
+     "w": "Não",
+     "start": 7.663,
+     "end": 7.795
+    },
+    {
+     "w": "tem",
+     "start": 7.839,
+     "end": 7.972
+    },
+    {
+     "w": "arma.",
+     "start": 8.038,
+     "end": 8.392
+    },
+    {
+     "w": "Ele",
+     "start": 8.525,
+     "end": 8.724
+    },
+    {
+     "w": "tem",
+     "start": 8.769,
+     "end": 8.901
+    },
+    {
+     "w": "isso:",
+     "start": 8.968,
+     "end": 9.31
+    },
+    {
+     "w": "ele",
+     "start": 9.454,
+     "end": 9.609
+    },
+    {
+     "w": "sabe",
+     "start": 9.653,
+     "end": 9.908
+    },
+    {
+     "w": "o",
+     "start": 9.94,
+     "end": 9.963
+    },
+    {
+     "w": "que",
+     "start": 10.018,
+     "end": 10.139
+    },
+    {
+     "w": "tu",
+     "start": 10.184,
+     "end": 10.25
+    },
+    {
+     "w": "vai",
+     "start": 10.294,
+     "end": 10.393
+    },
+    {
+     "w": "fazer",
+     "start": 10.427,
+     "end": 10.87
+    },
+    {
+     "w": "antes",
+     "start": 10.947,
+     "end": 11.29
+    },
+    {
+     "w": "de",
+     "start": 11.333,
+     "end": 11.4
+    },
+    {
+     "w": "tu",
+     "start": 11.444,
+     "end": 11.522
+    },
+    {
+     "w": "saber.",
+     "start": 11.566,
+     "end": 11.997
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "text": "Não é telepatia. É conta. Teu rosto tem quarenta e três músculos. Quando tu pensa, eles se mexem por um vigésimo de segundo.",
+   "start": 12.23,
+   "end": 19.261,
+   "words": [
+    {
+     "w": "Não",
+     "start": 12.23,
+     "end": 12.506
+    },
+    {
+     "w": "é",
+     "start": 12.605,
+     "end": 12.65
+    },
+    {
+     "w": "telepatia.",
+     "start": 12.693,
+     "end": 13.49
+    },
+    {
+     "w": "É",
+     "start": 13.622,
+     "end": 13.689
+    },
+    {
+     "w": "conta.",
+     "start": 13.788,
+     "end": 14.252
+    },
+    {
+     "w": "Teu",
+     "start": 14.396,
+     "end": 14.54
+    },
+    {
+     "w": "rosto",
+     "start": 14.584,
+     "end": 14.805
+    },
+    {
+     "w": "tem",
+     "start": 14.85,
+     "end": 14.949
+    },
+    {
+     "w": "quarenta",
+     "start": 14.993,
+     "end": 15.313
+    },
+    {
+     "w": "e",
+     "start": 15.336,
+     "end": 15.358
+    },
+    {
+     "w": "três",
+     "start": 15.391,
+     "end": 15.59
+    },
+    {
+     "w": "músculos.",
+     "start": 15.646,
+     "end": 16.198
+    },
+    {
+     "w": "Quando",
+     "start": 16.342,
+     "end": 16.552
+    },
+    {
+     "w": "tu",
+     "start": 16.596,
+     "end": 16.673
+    },
+    {
+     "w": "pensa,",
+     "start": 16.718,
+     "end": 17.094
+    },
+    {
+     "w": "eles",
+     "start": 17.138,
+     "end": 17.304
+    },
+    {
+     "w": "se",
+     "start": 17.326,
+     "end": 17.392
+    },
+    {
+     "w": "mexem",
+     "start": 17.436,
+     "end": 17.747
+    },
+    {
+     "w": "por",
+     "start": 17.802,
+     "end": 17.912
+    },
+    {
+     "w": "um",
+     "start": 17.956,
+     "end": 18.001
+    },
+    {
+     "w": "vigésimo",
+     "start": 18.045,
+     "end": 18.62
+    },
+    {
+     "w": "de",
+     "start": 18.664,
+     "end": 18.719
+    },
+    {
+     "w": "segundo.",
+     "start": 18.764,
+     "end": 19.261
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "text": "Chama microexpressão. Existe de verdade. O Davi vê todas.",
+   "start": 19.405,
+   "end": 23.23,
+   "words": [
+    {
+     "w": "Chama",
+     "start": 19.405,
+     "end": 19.847
+    },
+    {
+     "w": "microexpressão.",
+     "start": 19.913,
+     "end": 20.765
+    },
+    {
+     "w": "Existe",
+     "start": 20.909,
+     "end": 21.307
+    },
+    {
+     "w": "de",
+     "start": 21.35,
+     "end": 21.406
+    },
+    {
+     "w": "verdade.",
+     "start": 21.45,
+     "end": 22.091
+    },
+    {
+     "w": "O",
+     "start": 22.235,
+     "end": 22.28
+    },
+    {
+     "w": "Davi",
+     "start": 22.346,
+     "end": 22.534
+    },
+    {
+     "w": "vê",
+     "start": 22.578,
+     "end": 22.667
+    },
+    {
+     "w": "todas.",
+     "start": 22.71,
+     "end": 23.23
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "text": "Pupila dilatando. Pulso no pescoço. Pra ele, tua cara é um livro aberto.",
+   "start": 23.341,
+   "end": 27.454,
+   "words": [
+    {
+     "w": "Pupila",
+     "start": 23.341,
+     "end": 23.662
+    },
+    {
+     "w": "dilatando.",
+     "start": 23.706,
+     "end": 24.292
+    },
+    {
+     "w": "Pulso",
+     "start": 24.336,
+     "end": 24.602
+    },
+    {
+     "w": "no",
+     "start": 24.635,
+     "end": 24.69
+    },
+    {
+     "w": "pescoço.",
+     "start": 24.723,
+     "end": 25.331
+    },
+    {
+     "w": "Pra",
+     "start": 25.509,
+     "end": 25.685
+    },
+    {
+     "w": "ele,",
+     "start": 25.73,
+     "end": 25.972
+    },
+    {
+     "w": "tua",
+     "start": 26.017,
+     "end": 26.171
+    },
+    {
+     "w": "cara",
+     "start": 26.227,
+     "end": 26.47
+    },
+    {
+     "w": "é",
+     "start": 26.492,
+     "end": 26.526
+    },
+    {
+     "w": "um",
+     "start": 26.591,
+     "end": 26.648
+    },
+    {
+     "w": "livro",
+     "start": 26.703,
+     "end": 26.901
+    },
+    {
+     "w": "aberto.",
+     "start": 26.923,
+     "end": 27.454
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "text": "Tipo o Professor Xavier, dos X-Men. Só que sem cadeira, sem capacete. Só matemática.",
+   "start": 27.598,
+   "end": 33.038,
+   "words": [
+    {
+     "w": "Tipo",
+     "start": 27.598,
+     "end": 27.841
+    },
+    {
+     "w": "o",
+     "start": 27.863,
+     "end": 27.886
+    },
+    {
+     "w": "Professor",
+     "start": 27.918,
+     "end": 28.294
+    },
+    {
+     "w": "Xavier,",
+     "start": 28.328,
+     "end": 28.825
+    },
+    {
+     "w": "dos",
+     "start": 28.925,
+     "end": 29.069
+    },
+    {
+     "w": "X-Men.",
+     "start": 29.134,
+     "end": 29.654
+    },
+    {
+     "w": "Só",
+     "start": 30.086,
+     "end": 30.23
+    },
+    {
+     "w": "que",
+     "start": 30.273,
+     "end": 30.351
+    },
+    {
+     "w": "sem",
+     "start": 30.395,
+     "end": 30.506
+    },
+    {
+     "w": "cadeira,",
+     "start": 30.55,
+     "end": 30.992
+    },
+    {
+     "w": "sem",
+     "start": 31.036,
+     "end": 31.17
+    },
+    {
+     "w": "capacete.",
+     "start": 31.213,
+     "end": 31.932
+    },
+    {
+     "w": "Só",
+     "start": 32.165,
+     "end": 32.286
+    },
+    {
+     "w": "matemática.",
+     "start": 32.33,
+     "end": 33.038
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "text": "Com cinco anos, ele sabia quando a mãe mentia. Com dez, ganhava todo truco da família. Com dezoito, foi banido de três cassinos no Paraguai.",
+   "start": 33.182,
+   "end": 41.188,
+   "words": [
+    {
+     "w": "Com",
+     "start": 33.182,
+     "end": 33.326
+    },
+    {
+     "w": "cinco",
+     "start": 33.37,
+     "end": 33.657
+    },
+    {
+     "w": "anos,",
+     "start": 33.69,
+     "end": 34.077
+    },
+    {
+     "w": "ele",
+     "start": 34.188,
+     "end": 34.343
+    },
+    {
+     "w": "sabia",
+     "start": 34.376,
+     "end": 34.663
+    },
+    {
+     "w": "quando",
+     "start": 34.708,
+     "end": 34.895
+    },
+    {
+     "w": "a",
+     "start": 34.929,
+     "end": 34.95
+    },
+    {
+     "w": "mãe",
+     "start": 34.995,
+     "end": 35.128
+    },
+    {
+     "w": "mentia.",
+     "start": 35.15,
+     "end": 35.67
+    },
+    {
+     "w": "Com",
+     "start": 35.747,
+     "end": 35.902
+    },
+    {
+     "w": "dez,",
+     "start": 35.968,
+     "end": 36.389
+    },
+    {
+     "w": "ganhava",
+     "start": 36.488,
+     "end": 36.797
+    },
+    {
+     "w": "todo",
+     "start": 36.864,
+     "end": 37.096
+    },
+    {
+     "w": "truco",
+     "start": 37.14,
+     "end": 37.339
+    },
+    {
+     "w": "da",
+     "start": 37.372,
+     "end": 37.439
+    },
+    {
+     "w": "família.",
+     "start": 37.483,
+     "end": 38.025
+    },
+    {
+     "w": "Com",
+     "start": 38.301,
+     "end": 38.433
+    },
+    {
+     "w": "dezoito,",
+     "start": 38.478,
+     "end": 39.042
+    },
+    {
+     "w": "foi",
+     "start": 39.141,
+     "end": 39.263
+    },
+    {
+     "w": "banido",
+     "start": 39.308,
+     "end": 39.584
+    },
+    {
+     "w": "de",
+     "start": 39.628,
+     "end": 39.683
+    },
+    {
+     "w": "três",
+     "start": 39.783,
+     "end": 40.004
+    },
+    {
+     "w": "cassinos",
+     "start": 40.048,
+     "end": 40.49
+    },
+    {
+     "w": "no",
+     "start": 40.534,
+     "end": 40.59
+    },
+    {
+     "w": "Paraguai.",
+     "start": 40.634,
+     "end": 41.188
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "text": "Só que ler gente esquenta. Uma pessoa, o cérebro vai pra trinta e sete e meio. Uma multidão inteira, passa de quarenta. Guarda essa regra.",
+   "start": 41.564,
+   "end": 49.756,
+   "words": [
+    {
+     "w": "Só",
+     "start": 41.564,
+     "end": 41.773
+    },
+    {
+     "w": "que",
+     "start": 41.829,
+     "end": 42.083
+    },
+    {
+     "w": "ler",
+     "start": 42.315,
+     "end": 42.526
+    },
+    {
+     "w": "gente",
+     "start": 42.57,
+     "end": 42.846
+    },
+    {
+     "w": "esquenta.",
+     "start": 42.868,
+     "end": 43.454
+    },
+    {
+     "w": "Uma",
+     "start": 43.73,
+     "end": 43.852
+    },
+    {
+     "w": "pessoa,",
+     "start": 43.896,
+     "end": 44.505
+    },
+    {
+     "w": "o",
+     "start": 44.649,
+     "end": 44.726
+    },
+    {
+     "w": "cérebro",
+     "start": 44.759,
+     "end": 45.157
+    },
+    {
+     "w": "vai",
+     "start": 45.201,
+     "end": 45.345
+    },
+    {
+     "w": "pra",
+     "start": 45.378,
+     "end": 45.489
+    },
+    {
+     "w": "trinta",
+     "start": 45.522,
+     "end": 45.765
+    },
+    {
+     "w": "e",
+     "start": 45.788,
+     "end": 45.81
+    },
+    {
+     "w": "sete",
+     "start": 45.843,
+     "end": 46.064
+    },
+    {
+     "w": "e",
+     "start": 46.086,
+     "end": 46.108
+    },
+    {
+     "w": "meio.",
+     "start": 46.163,
+     "end": 46.55
+    },
+    {
+     "w": "Uma",
+     "start": 46.694,
+     "end": 46.793
+    },
+    {
+     "w": "multidão",
+     "start": 46.827,
+     "end": 47.136
+    },
+    {
+     "w": "inteira,",
+     "start": 47.17,
+     "end": 47.578
+    },
+    {
+     "w": "passa",
+     "start": 47.656,
+     "end": 47.921
+    },
+    {
+     "w": "de",
+     "start": 47.954,
+     "end": 48.01
+    },
+    {
+     "w": "quarenta.",
+     "start": 48.043,
+     "end": 48.595
+    },
+    {
+     "w": "Guarda",
+     "start": 48.772,
+     "end": 49.093
+    },
+    {
+     "w": "essa",
+     "start": 49.115,
+     "end": 49.259
+    },
+    {
+     "w": "regra.",
+     "start": 49.303,
+     "end": 49.756
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "text": "Aí o governo descobriu. Queriam ele numa sala, lendo preso o dia inteiro. Ele disse não. E começou a correr.",
+   "start": 50.033,
+   "end": 56.015,
+   "words": [
+    {
+     "w": "Aí",
+     "start": 50.033,
+     "end": 50.21
+    },
+    {
+     "w": "o",
+     "start": 50.254,
+     "end": 50.288
+    },
+    {
+     "w": "governo",
+     "start": 50.331,
+     "end": 50.641
+    },
+    {
+     "w": "descobriu.",
+     "start": 50.686,
+     "end": 51.238
+    },
+    {
+     "w": "Queriam",
+     "start": 51.449,
+     "end": 51.77
+    },
+    {
+     "w": "ele",
+     "start": 51.847,
+     "end": 51.968
+    },
+    {
+     "w": "numa",
+     "start": 52.001,
+     "end": 52.167
+    },
+    {
+     "w": "sala,",
+     "start": 52.223,
+     "end": 52.576
+    },
+    {
+     "w": "lendo",
+     "start": 52.643,
+     "end": 52.864
+    },
+    {
+     "w": "preso",
+     "start": 52.908,
+     "end": 53.195
+    },
+    {
+     "w": "o",
+     "start": 53.217,
+     "end": 53.24
+    },
+    {
+     "w": "dia",
+     "start": 53.284,
+     "end": 53.406
+    },
+    {
+     "w": "inteiro.",
+     "start": 53.428,
+     "end": 53.881
+    },
+    {
+     "w": "Ele",
+     "start": 54.091,
+     "end": 54.312
+    },
+    {
+     "w": "disse",
+     "start": 54.356,
+     "end": 54.6
+    },
+    {
+     "w": "não.",
+     "start": 54.655,
+     "end": 54.987
+    },
+    {
+     "w": "E",
+     "start": 55.087,
+     "end": 55.152
+    },
+    {
+     "w": "começou",
+     "start": 55.197,
+     "end": 55.473
+    },
+    {
+     "w": "a",
+     "start": 55.517,
+     "end": 55.54
+    },
+    {
+     "w": "correr.",
+     "start": 55.573,
+     "end": 56.015
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "text": "Volta pro metrô. O da esquerda vai pular a catraca. O de azul tá com medo. O careca hesita meio segundo antes de correr.",
+   "start": 56.248,
+   "end": 63.103,
+   "words": [
+    {
+     "w": "Volta",
+     "start": 56.248,
+     "end": 56.612
+    },
+    {
+     "w": "pro",
+     "start": 56.646,
+     "end": 56.734
+    },
+    {
+     "w": "metrô.",
+     "start": 56.767,
+     "end": 57.287
+    },
+    {
+     "w": "O",
+     "start": 57.387,
+     "end": 57.442
+    },
+    {
+     "w": "da",
+     "start": 57.497,
+     "end": 57.563
+    },
+    {
+     "w": "esquerda",
+     "start": 57.596,
+     "end": 57.939
+    },
+    {
+     "w": "vai",
+     "start": 57.984,
+     "end": 58.094
+    },
+    {
+     "w": "pular",
+     "start": 58.138,
+     "end": 58.359
+    },
+    {
+     "w": "a",
+     "start": 58.381,
+     "end": 58.404
+    },
+    {
+     "w": "catraca.",
+     "start": 58.426,
+     "end": 59.045
+    },
+    {
+     "w": "O",
+     "start": 59.177,
+     "end": 59.244
+    },
+    {
+     "w": "de",
+     "start": 59.31,
+     "end": 59.366
+    },
+    {
+     "w": "azul",
+     "start": 59.41,
+     "end": 59.63
+    },
+    {
+     "w": "tá",
+     "start": 59.675,
+     "end": 59.752
+    },
+    {
+     "w": "com",
+     "start": 59.797,
+     "end": 59.908
+    },
+    {
+     "w": "medo.",
+     "start": 59.951,
+     "end": 60.46
+    },
+    {
+     "w": "O",
+     "start": 60.67,
+     "end": 60.726
+    },
+    {
+     "w": "careca",
+     "start": 60.77,
+     "end": 61.046
+    },
+    {
+     "w": "hesita",
+     "start": 61.069,
+     "end": 61.422
+    },
+    {
+     "w": "meio",
+     "start": 61.477,
+     "end": 61.676
+    },
+    {
+     "w": "segundo",
+     "start": 61.721,
+     "end": 62.185
+    },
+    {
+     "w": "antes",
+     "start": 62.24,
+     "end": 62.494
+    },
+    {
+     "w": "de",
+     "start": 62.517,
+     "end": 62.572
+    },
+    {
+     "w": "correr.",
+     "start": 62.616,
+     "end": 63.103
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "text": "O Davi desvia de um por um. Noventa e oito por cento de acerto.",
+   "start": 63.247,
+   "end": 66.862,
+   "words": [
+    {
+     "w": "O",
+     "start": 63.247,
+     "end": 63.302
+    },
+    {
+     "w": "Davi",
+     "start": 63.379,
+     "end": 63.59
+    },
+    {
+     "w": "desvia",
+     "start": 63.645,
+     "end": 63.998
+    },
+    {
+     "w": "de",
+     "start": 64.053,
+     "end": 64.131
+    },
+    {
+     "w": "um",
+     "start": 64.23,
+     "end": 64.341
+    },
+    {
+     "w": "por",
+     "start": 64.408,
+     "end": 64.562
+    },
+    {
+     "w": "um.",
+     "start": 64.629,
+     "end": 64.894
+    },
+    {
+     "w": "Noventa",
+     "start": 65.104,
+     "end": 65.48
+    },
+    {
+     "w": "e",
+     "start": 65.502,
+     "end": 65.535
+    },
+    {
+     "w": "oito",
+     "start": 65.557,
+     "end": 65.723
+    },
+    {
+     "w": "por",
+     "start": 65.756,
+     "end": 65.867
+    },
+    {
+     "w": "cento",
+     "start": 65.911,
+     "end": 66.154
+    },
+    {
+     "w": "de",
+     "start": 66.199,
+     "end": 66.254
+    },
+    {
+     "w": "acerto.",
+     "start": 66.288,
+     "end": 66.862
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "text": "Até que chega o chefe. E o rosto dele não mexe. Botox. Paralisa o músculo. Sem músculo, sem microexpressão.",
+   "start": 67.072,
+   "end": 74.547,
+   "words": [
+    {
+     "w": "Até",
+     "start": 67.072,
+     "end": 67.382
+    },
+    {
+     "w": "que",
+     "start": 67.426,
+     "end": 67.514
+    },
+    {
+     "w": "chega",
+     "start": 67.548,
+     "end": 67.769
+    },
+    {
+     "w": "o",
+     "start": 67.802,
+     "end": 67.835
+    },
+    {
+     "w": "chefe.",
+     "start": 67.879,
+     "end": 68.366
+    },
+    {
+     "w": "E",
+     "start": 68.51,
+     "end": 68.575
+    },
+    {
+     "w": "o",
+     "start": 68.642,
+     "end": 68.686
+    },
+    {
+     "w": "rosto",
+     "start": 68.73,
+     "end": 68.973
+    },
+    {
+     "w": "dele",
+     "start": 69.018,
+     "end": 69.239
+    },
+    {
+     "w": "não",
+     "start": 69.371,
+     "end": 69.67
+    },
+    {
+     "w": "mexe.",
+     "start": 69.736,
+     "end": 70.256
+    },
+    {
+     "w": "Botox.",
+     "start": 70.4,
+     "end": 71.086
+    },
+    {
+     "w": "Paralisa",
+     "start": 71.362,
+     "end": 71.782
+    },
+    {
+     "w": "o",
+     "start": 71.805,
+     "end": 71.827
+    },
+    {
+     "w": "músculo.",
+     "start": 71.882,
+     "end": 72.324
+    },
+    {
+     "w": "Sem",
+     "start": 72.468,
+     "end": 72.678
+    },
+    {
+     "w": "músculo,",
+     "start": 72.744,
+     "end": 73.197
+    },
+    {
+     "w": "sem",
+     "start": 73.341,
+     "end": 73.562
+    },
+    {
+     "w": "microexpressão.",
+     "start": 73.662,
+     "end": 74.547
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "text": "Leitura: zero por cento. Pela primeira vez, o Davi não sabe o que alguém vai fazer.",
+   "start": 74.724,
+   "end": 79.577,
+   "words": [
+    {
+     "w": "Leitura:",
+     "start": 74.724,
+     "end": 75.32
+    },
+    {
+     "w": "zero",
+     "start": 75.464,
+     "end": 75.84
+    },
+    {
+     "w": "por",
+     "start": 75.885,
+     "end": 76.017
+    },
+    {
+     "w": "cento.",
+     "start": 76.061,
+     "end": 76.592
+    },
+    {
+     "w": "Pela",
+     "start": 76.769,
+     "end": 76.935
+    },
+    {
+     "w": "primeira",
+     "start": 76.979,
+     "end": 77.267
+    },
+    {
+     "w": "vez,",
+     "start": 77.31,
+     "end": 77.709
+    },
+    {
+     "w": "o",
+     "start": 77.852,
+     "end": 77.897
+    },
+    {
+     "w": "Davi",
+     "start": 77.941,
+     "end": 78.118
+    },
+    {
+     "w": "não",
+     "start": 78.162,
+     "end": 78.272
+    },
+    {
+     "w": "sabe",
+     "start": 78.317,
+     "end": 78.593
+    },
+    {
+     "w": "o",
+     "start": 78.627,
+     "end": 78.649
+    },
+    {
+     "w": "que",
+     "start": 78.693,
+     "end": 78.759
+    },
+    {
+     "w": "alguém",
+     "start": 78.781,
+     "end": 78.958
+    },
+    {
+     "w": "vai",
+     "start": 79.003,
+     "end": 79.08
+    },
+    {
+     "w": "fazer.",
+     "start": 79.124,
+     "end": 79.577
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "text": "Então ele faz a única coisa que o chefe não espera: se joga na multidão do horário de pico. Trezentas pessoas.",
+   "start": 79.854,
+   "end": 85.924,
+   "words": [
+    {
+     "w": "Então",
+     "start": 79.854,
+     "end": 80.097
+    },
+    {
+     "w": "ele",
+     "start": 80.13,
+     "end": 80.208
+    },
+    {
+     "w": "faz",
+     "start": 80.252,
+     "end": 80.418
+    },
+    {
+     "w": "a",
+     "start": 80.473,
+     "end": 80.495
+    },
+    {
+     "w": "única",
+     "start": 80.55,
+     "end": 80.793
+    },
+    {
+     "w": "coisa",
+     "start": 80.838,
+     "end": 81.103
+    },
+    {
+     "w": "que",
+     "start": 81.148,
+     "end": 81.214
+    },
+    {
+     "w": "o",
+     "start": 81.258,
+     "end": 81.291
+    },
+    {
+     "w": "chefe",
+     "start": 81.325,
+     "end": 81.59
+    },
+    {
+     "w": "não",
+     "start": 81.623,
+     "end": 81.722
+    },
+    {
+     "w": "espera:",
+     "start": 81.767,
+     "end": 82.23
+    },
+    {
+     "w": "se",
+     "start": 82.408,
+     "end": 82.518
+    },
+    {
+     "w": "joga",
+     "start": 82.618,
+     "end": 82.872
+    },
+    {
+     "w": "na",
+     "start": 82.906,
+     "end": 82.971
+    },
+    {
+     "w": "multidão",
+     "start": 83.016,
+     "end": 83.503
+    },
+    {
+     "w": "do",
+     "start": 83.535,
+     "end": 83.591
+    },
+    {
+     "w": "horário",
+     "start": 83.624,
+     "end": 83.878
+    },
+    {
+     "w": "de",
+     "start": 83.923,
+     "end": 84.0
+    },
+    {
+     "w": "pico.",
+     "start": 84.045,
+     "end": 84.475
+    },
+    {
+     "w": "Trezentas",
+     "start": 84.752,
+     "end": 85.228
+    },
+    {
+     "w": "pessoas.",
+     "start": 85.271,
+     "end": 85.924
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "text": "Lembra da regra? Trezentas caras ao mesmo tempo. Trinta e nove graus. Quarenta. Quarenta e um.",
+   "start": 86.057,
+   "end": 91.729,
+   "words": [
+    {
+     "w": "Lembra",
+     "start": 86.057,
+     "end": 86.3
+    },
+    {
+     "w": "da",
+     "start": 86.333,
+     "end": 86.399
+    },
+    {
+     "w": "regra?",
+     "start": 86.444,
+     "end": 86.842
+    },
+    {
+     "w": "Trezentas",
+     "start": 86.986,
+     "end": 87.428
+    },
+    {
+     "w": "caras",
+     "start": 87.494,
+     "end": 87.77
+    },
+    {
+     "w": "ao",
+     "start": 87.815,
+     "end": 87.859
+    },
+    {
+     "w": "mesmo",
+     "start": 87.903,
+     "end": 88.147
+    },
+    {
+     "w": "tempo.",
+     "start": 88.19,
+     "end": 88.633
+    },
+    {
+     "w": "Trinta",
+     "start": 88.865,
+     "end": 89.12
+    },
+    {
+     "w": "e",
+     "start": 89.152,
+     "end": 89.175
+    },
+    {
+     "w": "nove",
+     "start": 89.208,
+     "end": 89.407
+    },
+    {
+     "w": "graus.",
+     "start": 89.44,
+     "end": 89.949
+    },
+    {
+     "w": "Quarenta.",
+     "start": 90.226,
+     "end": 90.845
+    },
+    {
+     "w": "Quarenta",
+     "start": 90.989,
+     "end": 91.364
+    },
+    {
+     "w": "e",
+     "start": 91.397,
+     "end": 91.43
+    },
+    {
+     "w": "um.",
+     "start": 91.486,
+     "end": 91.729
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "text": "Mas ele vê tudo: quem vai parar, quem vai virar, onde o buraco vai abrir. E passa pelo meio, um segundo antes de a porta do trem fechar.",
+   "start": 92.006,
+   "end": 99.58,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 92.006,
+     "end": 92.15
+    },
+    {
+     "w": "ele",
+     "start": 92.193,
+     "end": 92.315
+    },
+    {
+     "w": "vê",
+     "start": 92.359,
+     "end": 92.459
+    },
+    {
+     "w": "tudo:",
+     "start": 92.503,
+     "end": 92.923
+    },
+    {
+     "w": "quem",
+     "start": 93.1,
+     "end": 93.232
+    },
+    {
+     "w": "vai",
+     "start": 93.277,
+     "end": 93.376
+    },
+    {
+     "w": "parar,",
+     "start": 93.41,
+     "end": 93.852
+    },
+    {
+     "w": "quem",
+     "start": 93.996,
+     "end": 94.129
+    },
+    {
+     "w": "vai",
+     "start": 94.172,
+     "end": 94.261
+    },
+    {
+     "w": "virar,",
+     "start": 94.283,
+     "end": 94.704
+    },
+    {
+     "w": "onde",
+     "start": 94.814,
+     "end": 95.057
+    },
+    {
+     "w": "o",
+     "start": 95.079,
+     "end": 95.102
+    },
+    {
+     "w": "buraco",
+     "start": 95.146,
+     "end": 95.477
+    },
+    {
+     "w": "vai",
+     "start": 95.51,
+     "end": 95.632
+    },
+    {
+     "w": "abrir.",
+     "start": 95.676,
+     "end": 96.041
+    },
+    {
+     "w": "E",
+     "start": 96.218,
+     "end": 96.295
+    },
+    {
+     "w": "passa",
+     "start": 96.362,
+     "end": 96.583
+    },
+    {
+     "w": "pelo",
+     "start": 96.616,
+     "end": 96.771
+    },
+    {
+     "w": "meio,",
+     "start": 96.815,
+     "end": 97.235
+    },
+    {
+     "w": "um",
+     "start": 97.379,
+     "end": 97.523
+    },
+    {
+     "w": "segundo",
+     "start": 97.59,
+     "end": 98.076
+    },
+    {
+     "w": "antes",
+     "start": 98.131,
+     "end": 98.396
+    },
+    {
+     "w": "de",
+     "start": 98.441,
+     "end": 98.485
+    },
+    {
+     "w": "a",
+     "start": 98.518,
+     "end": 98.54
+    },
+    {
+     "w": "porta",
+     "start": 98.585,
+     "end": 98.794
+    },
+    {
+     "w": "do",
+     "start": 98.839,
+     "end": 98.894
+    },
+    {
+     "w": "trem",
+     "start": 98.938,
+     "end": 99.071
+    },
+    {
+     "w": "fechar.",
+     "start": 99.115,
+     "end": 99.58
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "text": "Na plataforma, o chefe tentou sorrir. Não conseguiu.",
+   "start": 99.9,
+   "end": 103.361,
+   "words": [
+    {
+     "w": "Na",
+     "start": 99.9,
+     "end": 100.0
+    },
+    {
+     "w": "plataforma,",
+     "start": 100.044,
+     "end": 100.785
+    },
+    {
+     "w": "o",
+     "start": 100.862,
+     "end": 100.962
+    },
+    {
+     "w": "chefe",
+     "start": 101.006,
+     "end": 101.327
+    },
+    {
+     "w": "tentou",
+     "start": 101.36,
+     "end": 101.636
+    },
+    {
+     "w": "sorrir.",
+     "start": 101.68,
+     "end": 102.101
+    },
+    {
+     "w": "Não",
+     "start": 102.377,
+     "end": 102.631
+    },
+    {
+     "w": "conseguiu.",
+     "start": 102.675,
+     "end": 103.361
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "text": "No vagão, o Davi respira. Trinta e oito graus. Lendo todo mundo, por hábito.",
+   "start": 103.505,
+   "end": 108.58,
+   "words": [
+    {
+     "w": "No",
+     "start": 103.505,
+     "end": 103.605
+    },
+    {
+     "w": "vagão,",
+     "start": 103.649,
+     "end": 104.147
+    },
+    {
+     "w": "o",
+     "start": 104.246,
+     "end": 104.29
+    },
+    {
+     "w": "Davi",
+     "start": 104.345,
+     "end": 104.589
+    },
+    {
+     "w": "respira.",
+     "start": 104.632,
+     "end": 105.274
+    },
+    {
+     "w": "Trinta",
+     "start": 105.407,
+     "end": 105.75
+    },
+    {
+     "w": "e",
+     "start": 105.771,
+     "end": 105.805
+    },
+    {
+     "w": "oito",
+     "start": 105.827,
+     "end": 106.004
+    },
+    {
+     "w": "graus.",
+     "start": 106.048,
+     "end": 106.524
+    },
+    {
+     "w": "Lendo",
+     "start": 106.844,
+     "end": 107.176
+    },
+    {
+     "w": "todo",
+     "start": 107.275,
+     "end": 107.618
+    },
+    {
+     "w": "mundo,",
+     "start": 107.662,
+     "end": 107.95
+    },
+    {
+     "w": "por",
+     "start": 107.972,
+     "end": 108.093
+    },
+    {
+     "w": "hábito.",
+     "start": 108.138,
+     "end": 108.58
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "text": "Até que uma menina olha pra ele. Leitura: zero por cento. E ela não tem botox.",
+   "start": 108.724,
+   "end": 114.164,
+   "words": [
+    {
+     "w": "Até",
+     "start": 108.724,
+     "end": 108.99
+    },
+    {
+     "w": "que",
+     "start": 109.033,
+     "end": 109.11
+    },
+    {
+     "w": "uma",
+     "start": 109.144,
+     "end": 109.254
+    },
+    {
+     "w": "menina",
+     "start": 109.299,
+     "end": 109.587
+    },
+    {
+     "w": "olha",
+     "start": 109.664,
+     "end": 109.841
+    },
+    {
+     "w": "pra",
+     "start": 109.873,
+     "end": 110.017
+    },
+    {
+     "w": "ele.",
+     "start": 110.062,
+     "end": 110.371
+    },
+    {
+     "w": "Leitura:",
+     "start": 110.748,
+     "end": 111.267
+    },
+    {
+     "w": "zero",
+     "start": 111.41,
+     "end": 111.72
+    },
+    {
+     "w": "por",
+     "start": 111.765,
+     "end": 111.887
+    },
+    {
+     "w": "cento.",
+     "start": 111.93,
+     "end": 112.372
+    },
+    {
+     "w": "E",
+     "start": 112.506,
+     "end": 112.605
+    },
+    {
+     "w": "ela",
+     "start": 112.705,
+     "end": 112.948
+    },
+    {
+     "w": "não",
+     "start": 113.058,
+     "end": 113.312
+    },
+    {
+     "w": "tem",
+     "start": 113.368,
+     "end": 113.511
+    },
+    {
+     "w": "botox.",
+     "start": 113.556,
+     "end": 114.164
+    }
+   ]
+  },
+  {
+   "id": "L20",
+   "text": "Segue aí pra ver quem é a única pessoa que o Davi não consegue ler.",
+   "start": 114.485,
+   "end": 117.647,
+   "words": [
+    {
+     "w": "Segue",
+     "start": 114.485,
+     "end": 114.739
+    },
+    {
+     "w": "aí",
+     "start": 114.761,
+     "end": 114.883
+    },
+    {
+     "w": "pra",
+     "start": 114.938,
+     "end": 115.06
+    },
+    {
+     "w": "ver",
+     "start": 115.104,
+     "end": 115.248
+    },
+    {
+     "w": "quem",
+     "start": 115.291,
+     "end": 115.425
+    },
+    {
+     "w": "é",
+     "start": 115.49,
+     "end": 115.524
+    },
+    {
+     "w": "a",
+     "start": 115.569,
+     "end": 115.59
+    },
+    {
+     "w": "única",
+     "start": 115.646,
+     "end": 115.878
+    },
+    {
+     "w": "pessoa",
+     "start": 115.911,
+     "end": 116.265
+    },
+    {
+     "w": "que",
+     "start": 116.31,
+     "end": 116.375
+    },
+    {
+     "w": "o",
+     "start": 116.397,
+     "end": 116.43
+    },
+    {
+     "w": "Davi",
+     "start": 116.464,
+     "end": 116.651
+    },
+    {
+     "w": "não",
+     "start": 116.696,
+     "end": 116.785
+    },
+    {
+     "w": "consegue",
+     "start": 116.818,
+     "end": 117.171
+    },
+    {
+     "w": "ler.",
+     "start": 117.216,
+     "end": 117.647
+    }
+   ]
+  }
+ ]
+}

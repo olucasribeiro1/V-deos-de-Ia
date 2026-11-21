@@ -1,7 +1,8 @@
 # Série "O Salto" — regras do projeto
 
 - Vídeos animados verticais (1080×1920, 30 fps), estilo aprovado no EP01 (flat 2.5D, legenda em caixa alta palavra a palavra, HUD com números, física real).
-- **Sempre mandar o roteiro para o usuário aprovar ANTES de produzir o vídeo** (narração, agentes, render só depois do OK).
+- **Sempre mandar o roteiro para o usuário aprovar ANTES de produzir o vídeo.** Depois do roteiro, gerar a narração completa e mandar o áudio pro usuário ouvir.
+- **A narração aprovada é a definitiva:** quando o usuário pedir o vídeo, usar exatamente o `narracao.mp3` (e `timing.json`) já gerado — NÃO regerar a narração.
 - O canal é uma antologia: cada episódio pode ser uma história independente (ex.: EP01 teletransporte, EP02 QI infinito), sempre com o Davi como protagonista.
 - **Davi é o personagem fixo** (moletom mostarda, jeans, tênis laranja). Não mudar o design (`video-engine/src/characters/Davi.tsx`).
 - Duração máxima: **2 minutos**. O ritmo segue a narração; cortes rápidos (0,9–1,6 s) com câmera sempre em movimento.
