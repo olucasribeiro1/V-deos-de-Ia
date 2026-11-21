@@ -1,0 +1,13 @@
+import React from 'react';
+import {AbsoluteFill} from 'remotion';
+import type {ShotP} from './kit';
+export const SCasino: React.FC<ShotP> = () => <AbsoluteFill style={{background: '#333'}} />;
+export const SCarry: React.FC<ShotP> = () => <AbsoluteFill style={{background: '#333'}} />;
+export const SBanned: React.FC<ShotP> = () => <AbsoluteFill style={{background: '#333'}} />;
+export const SProblem: React.FC<ShotP> = () => <AbsoluteFill style={{background: '#333'}} />;
+export const SBrain: React.FC<ShotP> = () => <AbsoluteFill style={{background: '#333'}} />;
+export const SOne: React.FC<ShotP> = () => <AbsoluteFill style={{background: '#333'}} />;
+export const STemp: React.FC<ShotP> = () => <AbsoluteFill style={{background: '#333'}} />;
+export const SCrowd: React.FC<ShotP> = () => <AbsoluteFill style={{background: '#333'}} />;
+export const SHot: React.FC<ShotP> = () => <AbsoluteFill style={{background: '#333'}} />;
+export const SWink: React.FC<ShotP> = () => <AbsoluteFill style={{background: '#333'}} />;

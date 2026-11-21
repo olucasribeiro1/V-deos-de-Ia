@@ -1,0 +1,545 @@
+[
+ {
+  "id": "room",
+  "start": 41.221,
+  "end": 42.141,
+  "desc": "Salinha de interrogatório: 1 lâmpada balançando, janela-espelho; o chefe empurra a pasta SUSPEITO pro Davi",
+  "sfx": [
+   {
+    "t": 41.221,
+    "what": "whoosh in + zumbido de lâmpada"
+   },
+   {
+    "t": 41.521,
+    "what": "rangido do fio da lâmpada"
+   }
+  ]
+ },
+ {
+  "id": "salinha",
+  "start": 42.141,
+  "end": 43.25,
+  "desc": "Chefe aponta a pasta; a sala 'encolhe' (paredes fecham) e o HUD marca SALINHA 2×3 m",
+  "sfx": [
+   {
+    "t": 42.141,
+    "what": "papel deslizando na mesa"
+   },
+   {
+    "t": 42.691,
+    "what": "boing cômico das paredes"
+   }
+  ]
+ },
+ {
+  "id": "no",
+  "start": 43.25,
+  "end": 44.066,
+  "desc": "Close do Davi: dedo balançando 'não' com sorriso de canto",
+  "sfx": [
+   {
+    "t": 43.25,
+    "what": "tsc-tsc (estalo de língua)"
+   },
+   {
+    "t": 43.43,
+    "what": "whoosh do dedo x3"
+   }
+  ]
+ },
+ {
+  "id": "fuga",
+  "start": 44.066,
+  "end": 45.154,
+  "desc": "Davi dispara pela porta da SALA 3, papéis voam, chicote de câmera -> corte seco pro metrô",
+  "sfx": [
+   {
+    "t": 44.066,
+    "what": "porta batendo"
+   },
+   {
+    "t": 44.216,
+    "what": "whoosh corrida"
+   },
+   {
+    "t": 44.916,
+    "what": "whip pan"
+   }
+  ]
+ },
+ {
+  "id": "catraca",
+  "start": 45.154,
+  "end": 46.545,
+  "desc": "Catracas do metrô: agente da esquerda ganha rótulo PULA CATRACA 96% e pula a catraca no 'catraca'",
+  "sfx": [
+   {
+    "t": 45.354,
+    "what": "bip de leitura do HUD"
+   },
+   {
+    "t": 46.014,
+    "what": "pulo + clang da catraca"
+   },
+   {
+    "t": 46.154,
+    "what": "murmúrio de multidão (fundo)"
+   }
+  ]
+ },
+ {
+  "id": "medo",
+  "start": 46.545,
+  "end": 47.706,
+  "desc": "Agente de azul suando e tremendo, rótulo MEDO 91%",
+  "sfx": [
+   {
+    "t": 46.725,
+    "what": "bip de leitura"
+   },
+   {
+    "t": 46.945,
+    "what": "gota de suor / glup"
+   }
+  ]
+ },
+ {
+  "id": "careca",
+  "start": 47.706,
+  "end": 48.857,
+  "desc": "Careca correndo pra câmera, rótulo TROPEÇA 99%, cadarço desamarrado em destaque",
+  "sfx": [
+   {
+    "t": 47.806,
+    "what": "bip de leitura"
+   },
+   {
+    "t": 48.306,
+    "what": "passos pesados"
+   },
+   {
+    "t": 48.756,
+    "what": "pé enroscando"
+   }
+  ]
+ },
+ {
+  "id": "plaft",
+  "start": 48.857,
+  "end": 49.714,
+  "desc": "No 'Tropeçou': careca cai de cara no chão (faceplant de desenho), PLAFT, estrelinhas",
+  "sfx": [
+   {
+    "t": 48.937,
+    "what": "baque surdo THUD + PLAFT"
+   },
+   {
+    "t": 49.157,
+    "what": "estrelinhas tilintando"
+   }
+  ]
+ },
+ {
+  "id": "chefe",
+  "start": 49.714,
+  "end": 50.645,
+  "desc": "O chefe entra em câmera lenta, contraluz, multidão desfocada",
+  "sfx": [
+   {
+    "t": 49.714,
+    "what": "whoosh grave em slow motion"
+   },
+   {
+    "t": 49.814,
+    "what": "passos graves ecoando"
+   }
+  ]
+ },
+ {
+  "id": "rosto",
+  "start": 50.645,
+  "end": 51.691,
+  "desc": "Close do rosto do chefe: totalmente parado; mira do Davi procura movimento: MOVIMENTO 0",
+  "sfx": [
+   {
+    "t": 50.745,
+    "what": "scanner varrendo"
+   },
+   {
+    "t": 51.345,
+    "what": "bip negativo"
+   }
+  ]
+ },
+ {
+  "id": "raiox",
+  "start": 51.691,
+  "end": 53.197,
+  "desc": "Raio-X do rosto: músculos cinzas 'desligados', carimbo BOTOX, MÚSCULO PARALISADO",
+  "sfx": [
+   {
+    "t": 51.691,
+    "what": "carimbo BOTOX"
+   },
+   {
+    "t": 52.341,
+    "what": "desligar elétrico (power down)"
+   }
+  ]
+ },
+ {
+  "id": "flat",
+  "start": 53.197,
+  "end": 54.159,
+  "desc": "Monitor de microexpressão: linha reta, MICROEXPRESSÃO 0",
+  "sfx": [
+   {
+    "t": 53.197,
+    "what": "bip contínuo de monitor (flatline)"
+   }
+  ]
+ },
+ {
+  "id": "leitura",
+  "start": 54.159,
+  "end": 55.686,
+  "desc": "POV do Davi: HUD dá glitch e trava em LEITURA 0% (erro vermelho) no 'zero por cento'",
+  "sfx": [
+   {
+    "t": 54.459,
+    "what": "glitch digital"
+   },
+   {
+    "t": 54.699,
+    "what": "erro / buzz vermelho"
+   }
+  ]
+ },
+ {
+  "id": "mergulho",
+  "start": 55.686,
+  "end": 57.193,
+  "desc": "Davi se joga de cabeça na multidão da hora do rush",
+  "sfx": [
+   {
+    "t": 55.786,
+    "what": "whoosh pulo"
+   },
+   {
+    "t": 56.536,
+    "what": "mergulho na multidão + murmúrio sobe"
+   }
+  ]
+ },
+ {
+  "id": "trezentas",
+  "start": 57.193,
+  "end": 58.699,
+  "desc": "Vista de cima: mar de cabeças, ~300 rótulos de leitura pipocam de uma vez",
+  "sfx": [
+   {
+    "t": 57.193,
+    "what": "rajada de 300 bips"
+   },
+   {
+    "t": 57.593,
+    "what": "murmúrio de multidão forte"
+   }
+  ]
+ },
+ {
+  "id": "trinta",
+  "start": 58.699,
+  "end": 59.777,
+  "desc": "Close do Davi espremido, suor, vapor, tela começa a avermelhar: 39°",
+  "sfx": [
+   {
+    "t": 58.699,
+    "what": "alarme de calor 1 (bip lento)"
+   },
+   {
+    "t": 58.999,
+    "what": "chiado de vapor"
+   }
+  ]
+ },
+ {
+  "id": "quarenta",
+  "start": 59.777,
+  "end": 60.446,
+  "desc": "Olho do Davi com rótulos refletidos, vermelho mais forte, tremor: 40°",
+  "sfx": [
+   {
+    "t": 59.777,
+    "what": "alarme de calor 2 (mais rápido)"
+   }
+  ]
+ },
+ {
+  "id": "quarentaeum",
+  "start": 60.446,
+  "end": 61.481,
+  "desc": "Tela vermelha tremendo, sirene, rótulos piscando: 41°",
+  "sfx": [
+   {
+    "t": 60.446,
+    "what": "alarme de calor 3 (sirene)"
+   },
+   {
+    "t": 60.946,
+    "what": "chiado de superaquecimento"
+   }
+  ]
+ },
+ {
+  "id": "buraco",
+  "start": 61.481,
+  "end": 62.695,
+  "desc": "Visão do Davi de cima: setas em cada pessoa, um buraco verde se abre",
+  "sfx": [
+   {
+    "t": 61.481,
+    "what": "som de insight / sino"
+   },
+   {
+    "t": 62.081,
+    "what": "whoosh do buraco abrindo"
+   }
+  ]
+ },
+ {
+  "id": "passa",
+  "start": 62.695,
+  "end": 63.751,
+  "desc": "Davi de lado deslizando entre as pessoas com linhas de energia amarelas",
+  "sfx": [
+   {
+    "t": 62.695,
+    "what": "whoosh rápido"
+   },
+   {
+    "t": 63.195,
+    "what": "whoosh 2"
+   }
+  ]
+ },
+ {
+  "id": "trem",
+  "start": 63.751,
+  "end": 65.027,
+  "desc": "Portas do trem abertas, Davi corre pra dentro; timer PORTA 1,0 s começa no 'um segundo'",
+  "sfx": [
+   {
+    "t": 63.751,
+    "what": "bip-bip de porta fechando"
+   },
+   {
+    "t": 64.351,
+    "what": "timer tic"
+   }
+  ]
+ },
+ {
+  "id": "porta",
+  "start": 65.027,
+  "end": 66.293,
+  "desc": "A porta fecha bem atrás do Davi no 'fechar'; PORTA 0,0 s; mão do chefe bate no vidro",
+  "sfx": [
+   {
+    "t": 65.527,
+    "what": "porta do trem fechando (pshhh-clunk)"
+   },
+   {
+    "t": 65.777,
+    "what": "tapa no vidro"
+   }
+  ]
+ },
+ {
+  "id": "plataforma",
+  "start": 66.293,
+  "end": 67.182,
+  "desc": "Trem saindo, chefe sozinho na plataforma, Davi dá tchauzinho da janela",
+  "sfx": [
+   {
+    "t": 66.293,
+    "what": "trem partindo"
+   },
+   {
+    "t": 66.593,
+    "what": "vento do trem"
+   }
+  ]
+ },
+ {
+  "id": "bravo",
+  "start": 67.182,
+  "end": 68.343,
+  "desc": "Close do chefe tentando fazer cara de brava: cabeça treme, rosto não muda; RAIVA 0%",
+  "sfx": [
+   {
+    "t": 67.282,
+    "what": "esforço (hnnng) / rangido"
+   },
+   {
+    "t": 67.782,
+    "what": "tremor"
+   }
+  ]
+ },
+ {
+  "id": "veia",
+  "start": 68.343,
+  "end": 69.932,
+  "desc": "Close na testa: uma veia sobe, pulsa... e desiste e murcha no 'Não conseguiu'",
+  "sfx": [
+   {
+    "t": 68.443,
+    "what": "veia subindo (boing)"
+   },
+   {
+    "t": 69.043,
+    "what": "murchando (fiuuu triste)"
+   },
+   {
+    "t": 69.393,
+    "what": "trombone triste wah-wah"
+   }
+  ]
+ },
+ {
+  "id": "casa",
+  "start": 69.932,
+  "end": 70.958,
+  "desc": "Casa do Davi: ele no sofá com toalha na cabeça esfriando, medidor caindo",
+  "sfx": [
+   {
+    "t": 69.932,
+    "what": "corte pra silêncio + ventilador"
+   },
+   {
+    "t": 70.332,
+    "what": "suspiro de alívio"
+   }
+  ]
+ },
+ {
+  "id": "tudo",
+  "start": 70.958,
+  "end": 71.858,
+  "desc": "Davi relaxado, pé pra cima, sorriso convencido",
+  "sfx": [
+   {
+    "t": 71.058,
+    "what": "gole de água"
+   }
+  ]
+ },
+ {
+  "id": "check",
+  "start": 71.858,
+  "end": 72.736,
+  "desc": "Checklist relâmpago: AGENTES ✓ CHEFE ✓ MULTIDÃO ✓",
+  "sfx": [
+   {
+    "t": 71.858,
+    "what": "check"
+   },
+   {
+    "t": 72.058,
+    "what": "check"
+   },
+   {
+    "t": 72.258,
+    "what": "check"
+   }
+  ]
+ },
+ {
+  "id": "gato",
+  "start": 72.736,
+  "end": 73.803,
+  "desc": "Revelação: o gato na mesinha encara o Davi; Davi olha de canto",
+  "sfx": [
+   {
+    "t": 72.986,
+    "what": "miau curto"
+   },
+   {
+    "t": 73.236,
+    "what": "sting cômico"
+   }
+  ]
+ },
+ {
+  "id": "erro",
+  "start": 73.803,
+  "end": 74.755,
+  "desc": "HUD tenta ler o gato: GATO: ERRO ??? com glitch, medidor dá pico",
+  "sfx": [
+   {
+    "t": 73.853,
+    "what": "glitch / erro"
+   },
+   {
+    "t": 74.203,
+    "what": "bip de erro"
+   }
+  ]
+ },
+ {
+  "id": "copo",
+  "start": 74.755,
+  "end": 75.623,
+  "desc": "O gato, encarando o Davi, empurra o copo da mesa com a pata; copo cai e quebra",
+  "sfx": [
+   {
+    "t": 74.905,
+    "what": "copo arrastando"
+   },
+   {
+    "t": 75.205,
+    "what": "queda (whoosh curto)"
+   },
+   {
+    "t": 75.415,
+    "what": "vidro quebrando"
+   }
+  ]
+ },
+ {
+  "id": "final",
+  "start": 75.623,
+  "end": 77.129,
+  "desc": "Davi e o gato lado a lado olhando pra câmera; Davi suspira",
+  "sfx": [
+   {
+    "t": 76.573,
+    "what": "suspiro do Davi"
+   }
+  ]
+ },
+ {
+  "id": "piscada",
+  "start": 77.129,
+  "end": 78.2,
+  "desc": "Mais perto: o gato pisca devagar; corte seco pro preto em 78,2 s",
+  "sfx": [
+   {
+    "t": 77.479,
+    "what": "piscada (plim suave)"
+   },
+   {
+    "t": 78.199,
+    "what": "corte seco / silêncio"
+   }
+  ]
+ },
+ {
+  "id": "black",
+  "start": 78.2,
+  "end": 79.29,
+  "desc": "Preto (cauda da narração)",
+  "sfx": []
+ }
+]
