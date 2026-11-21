@@ -7,6 +7,9 @@
 - **Davi é o personagem fixo** (moletom mostarda, jeans, tênis laranja). Não mudar o design (`video-engine/src/characters/Davi.tsx`).
 - Duração máxima: **2 minutos**. O ritmo segue a narração; cortes rápidos (0,9–1,6 s) com câmera sempre em movimento.
 - Narração: ElevenLabs, **voz oficial do canal a partir do EP02: Will – Dynamic, Deep and Captivating (`0YziWIrqiRTHCxeg1lyc`)**, `eleven_multilingual_v2`, stability 0.35, similarity 0.8, style 0.45, speed 1.1–1.15 (escolhida pelo usuário). O EP01 usou Paulo Rovéglia (`cYJOoH13XCtPQ5VT5HAE`). Conferir com speech-to-text e regerar se houver gaguejo.
+- **Tom da narração para as PRÓXIMAS produções (pedido do usuário):** mais animado e um pouco mais rápido, mais feliz/leve, mas sem exagero. Narrar no estilo "ele tem o poder de X, e isso faz Y" — explicativo, direto, com humor leve. Sugestão de partida: stability 0.30, style 0.55, speed 1.2, e escrever o texto já curto pra não precisar acelerar o áudio depois. Economizar créditos: não regerar narrações já aprovadas; testar tom com amostras curtas (~10 s).
+- Duração alvo atual: **até 1:20**, vídeo único (história fechada), com traço de comédia.
+- Referências de estilo: o canal Kaiser (@rmhkaiser — o vídeo de referência original é dele) e os Shorts enviados pelo usuário (ver `docs/05-referencias-kaiser.md`).
 - Toda história tem gancho no início ("E se tu…?") e gancho no fim ("Segue aí pra ver…"), e paga as regras plantadas (velocidade da Terra, estalo, a lata).
 - **Para TODO vídeo finalizado:** transcrever a narração final e gerar `episodios/epXX/descricao.md` com título (+ alternativas), descrição pronta para colar (gancho, resumo, curiosidade física, CTA, hashtags) e a transcrição completa.
 - Estrutura: `episodios/epXX/` (roteiro, narracao.txt/mp3, timing.json, descricao.md), `video-engine/src/epXX/` (partes A/B/C), `assets/sfx/epXX/` (efeitos + script de mixagem).
