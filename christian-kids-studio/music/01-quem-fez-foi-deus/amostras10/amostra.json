@@ -1,0 +1,64 @@
+{
+ "model_id": "music_v1",
+ "composition_plan": {
+  "positive_global_styles": [
+   "warm Brazilian children's music in the style of modern MPB kids songs, lively baião-pop groove, cheerful, sweet and catchy, energetic",
+   "112 BPM, bouncy, D major",
+   "warm, full-bodied Brazilian female lead singer, mezzo-soprano, slightly lower and richer than a typical kids' singer, characterful and charismatic with Brazilian swing and personality, sweet and smiling, very human, legato melodic singing with natural breaths, clear articulation, never shouting",
+   "the warm lower lead voice stands out clearly in front; soft female backing harmonies underneath, and a small kids choir only answers the words in parentheses",
+   "full, thick, energetic arrangement: accordion riffs, zabumba and triangle groove, punchy pop kick and snare with claps, ukulele and nylon guitar strums, warm driving bass, flute and glockenspiel melodies, pizzicato strings, light brass stabs, tambourine",
+   "warm, full, wide professional children's album production, voice and band balanced"
+  ],
+  "negative_global_styles": [
+   "slow",
+   "sleepy",
+   "lullaby",
+   "spoken word",
+   "narration",
+   "robotic",
+   "EDM",
+   "thin arrangement",
+   "shouting",
+   "European Portuguese accent",
+   "male lead vocal",
+   "autotune",
+   "thin voice",
+   "shrill",
+   "piercing",
+   "overly bright vocal",
+   "childish voice",
+   "robotic"
+  ],
+  "sections": [
+   {
+    "section_name": "Intro",
+    "positive_local_styles": [
+     "2 seconds of catchy accordion and flute hook with the full band before the voice enters, then the lead singer happily sings the pickup lines",
+     "kids choir cheers in the parentheses"
+    ],
+    "negative_local_styles": [
+     "spoken narration"
+    ],
+    "duration_ms": 10000,
+    "lines": [
+     "Ei, criançada! (Ei!) Quem fez o mundo, você sabe me contar?",
+     "Levanta os dedinhos, que agora vamos começar!"
+    ]
+   },
+   {
+    "section_name": "Verse 1",
+    "positive_local_styles": [
+     "sung storytelling verse by the lead singer over the band, curious and sweet, then a bright lift on 'luz'"
+    ],
+    "negative_local_styles": [
+     "spoken narration"
+    ],
+    "duration_ms": 11000,
+    "lines": [
+     "No começo era só escuro, nem estrela, nem luar,",
+     "Deus falou: Aja luz! E a luz veio brilhar!"
+    ]
+   }
+  ]
+ }
+}
