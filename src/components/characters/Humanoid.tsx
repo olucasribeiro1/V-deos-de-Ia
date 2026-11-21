@@ -192,11 +192,14 @@ export const Humanoid: React.FC<{spec: CharacterSpec; pose: Pose; position?: [nu
                 ))}
             {arm(1)}
             {arm(-1)}
-            <group position={[0, 0.2, 0]} rotation={R(pose.neck)}>
-              <mesh position={[0, 0.03, 0]} material={skin}>
-                <cylinderGeometry args={[0.045, 0.05, 0.06, 10]} />
+            {/* PESCOÇO: nasce DENTRO do tronco (sem vão) e é longo o bastante para encaixar na cabeça */}
+            <group position={[0, 0.12, 0]} rotation={R(pose.neck)}>
+              <mesh position={[0, 0.065, 0]} material={skin}>
+                <cylinderGeometry args={[0.047, 0.055, 0.13, 10]} />
               </mesh>
-              <group position={[0, 0.035 + HEAD, 0.0]} rotation={R(pose.head)}>
+              {/* CABEÇA: o pivô de rotação fica no TOPO DO PESCOÇO (antes girava pelo centro e descolava) */}
+              <group position={[0, 0.11, 0]} rotation={R(pose.head)}>
+              <group position={[0, HEAD * 0.92, 0]}>
                 {/* cabeça grande */}
                 <mesh scale={[1, 1.06, 0.98]} material={skin} castShadow>
                   <sphereGeometry args={[HEAD, 20, 16]} />
@@ -300,6 +303,7 @@ export const Humanoid: React.FC<{spec: CharacterSpec; pose: Pose; position?: [nu
                     </mesh>
                   </group>
                 )}
+              </group>
               </group>
             </group>
           </group>

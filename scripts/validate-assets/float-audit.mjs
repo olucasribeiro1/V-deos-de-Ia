@@ -25,8 +25,9 @@ for (const s of compiled.scenes) {
     const d = JSON.parse(m[1].replace(/\\"/g, '"'));
     const feet = d.personagens.filter((p) => Math.abs(parseFloat(p.split('pés=')[1])) > 0.06);
     const objs = d.flutuando.filter((x) => Math.min(...x.split(' ')[2].split('x').map(Number)) >= 0.02);
-    if (feet.length || objs.length) bad++;
-    console.log(`  ${feet.length || objs.length ? '✗' : '✓'} ${s.id} f${f}: personagens ${d.personagens.length ? d.personagens.join(', ') : '—'}${objs.length ? ' | objetos soltos: ' + objs.join('; ') : ''}`);
+    const loose = d.soltas ?? [];
+    if (feet.length || objs.length || loose.length) bad++;
+    console.log(`  ${feet.length || objs.length || loose.length ? '✗' : '✓'} ${s.id} f${f}: personagens ${d.personagens.length ? d.personagens.join(', ') : '—'}${objs.length ? ' | objetos soltos: ' + objs.join('; ') : ''}${loose.length ? ' | PEÇAS SOLTAS: ' + loose.join('; ') : ''}`);
   }
 }
 console.log(bad ? `✗ ${bad} amostra(s) com problema` : '✓ nada flutuando ou afundado');

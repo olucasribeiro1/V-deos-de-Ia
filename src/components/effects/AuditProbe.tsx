@@ -53,13 +53,57 @@ export const AuditProbe: React.FC<{ground?: number[]}> = ({ground = [0, -8.4]}) 
       }
       if (!ok) floating.push(`(${b.min.x.toFixed(2)},${b.min.y.toFixed(2)},${b.min.z.toFixed(2)}) ${tag}`);
     }
+    // PEÇAS SOLTAS: em cada corpo (personagens e mãos POV), toda peça precisa encostar em outra peça
+    const rigs: {name: string; root: THREE.Object3D}[] = [...actors.map((a) => ({name: String(a.userData.actor), root: a}))];
+    scene.traverse((o) => {
+      if (o.userData.headRig) rigs.push({name: 'mãos-POV', root: o});
+    });
+    const loose: string[] = [];
+    for (const {name, root} of rigs) {
+      const parts: THREE.Box3[] = [];
+      root.traverse((o) => {
+        const m = o as THREE.Mesh;
+        if (!m.isMesh || m.userData.isHull || !m.visible) return;
+        const g = m.geometry;
+        if (!g.boundingBox) g.computeBoundingBox();
+        parts.push(g.boundingBox!.clone().applyMatrix4(m.matrixWorld).expandByScalar(0.004));
+      });
+      if (parts.length < 2) continue;
+      // componentes conexos por interseção de caixas
+      const seen = new Array(parts.length).fill(false);
+      const comps: number[][] = [];
+      for (let i = 0; i < parts.length; i++) {
+        if (seen[i]) continue;
+        const stack = [i];
+        const comp: number[] = [];
+        seen[i] = true;
+        while (stack.length) {
+          const k = stack.pop()!;
+          comp.push(k);
+          for (let j = 0; j < parts.length; j++) if (!seen[j] && parts[k].intersectsBox(parts[j])) {
+            seen[j] = true;
+            stack.push(j);
+          }
+        }
+        comps.push(comp);
+      }
+      const allowed = name === 'mãos-POV' ? 2 : 1; // dois braços independentes na câmera POV
+      if (comps.length > allowed) {
+        comps.sort((a, b) => b.length - a.length);
+        for (const c of comps.slice(allowed)) {
+          const b = parts[c[0]];
+          const s = b.getSize(new THREE.Vector3());
+          loose.push(`${name}: ${c.length} peça(s) solta(s) em (${b.min.x.toFixed(2)},${b.min.y.toFixed(2)},${b.min.z.toFixed(2)}) ${s.x.toFixed(2)}x${s.y.toFixed(2)}x${s.z.toFixed(2)}`);
+        }
+      }
+    }
     const feet = actors.map((a) => {
       const b = new THREE.Box3().setFromObject(a);
       const g = ground.reduce((p, c) => (Math.abs(c - b.min.y) < Math.abs(p - b.min.y) ? c : p));
       return `${a.userData.actor} pés=${(b.min.y - g).toFixed(3)}m`;
     });
     // saída via erro proposital: o Remotion sempre imprime erros de render por completo
-    throw new Error('AUDIT ' + JSON.stringify({flutuando: floating, personagens: feet}));
+    throw new Error('AUDIT ' + JSON.stringify({flutuando: floating, personagens: feet, soltas: loose}));
   });
   return null;
 };
