@@ -27,7 +27,7 @@ export const demo: Episode = {
       hands: {r: 'hidden', l: 'hidden'},
       beats: [
         {
-          line: {v: 'narrador', text: 'Faltavam duas horas para o mundo acabar. E eu ainda não sabia.', at: 0.3},
+          line: {v: 'protagonista', text: 'Faltavam duas horas para o mundo acabar. E eu ainda não sabia.', at: 0.3},
           pad: 0.4,
           do: [
             {a: 'sfx', id: 'bag_drop', at: 0.2, vol: 0.8},
@@ -37,7 +37,7 @@ export const demo: Episode = {
           ],
         },
         {
-          line: {v: 'narrador', text: 'O apartamento do Rafael. Meu irmão. Médico. O único que atendeu quando eu perdi tudo.', at: 0.1},
+          line: {v: 'protagonista', text: 'O apartamento do Rafael. Meu irmão. Médico. O único que atendeu quando eu perdi tudo.', at: 0.1},
           pad: 0.3,
           do: [
             {a: 'walk', at: 0.0, to: 'livingCenter', pace: 'walk', arrive: 'sofa'},
@@ -45,7 +45,7 @@ export const demo: Episode = {
           ],
         },
         {
-          line: {v: 'narrador', text: 'Ele nunca ligava durante o plantão.', at: 1.2},
+          line: {v: 'protagonista', text: 'Ele nunca ligava durante o plantão.', at: 1.2},
           pad: 0.1,
           do: [
             {a: 'sfx', id: 'phone_vibrate', at: 0, vol: 0.9},
@@ -84,7 +84,7 @@ export const demo: Episode = {
           ],
         },
         {
-          line: {v: 'narrador', text: 'Lá embaixo, a cidade começava a gritar.', at: 1.2},
+          line: {v: 'protagonista', text: 'Lá embaixo, a cidade começava a gritar.', at: 1.2},
           pad: 0.4,
           do: [
             {a: 'hands', at: 0.2, r: 'hidden', dur: 0.8},

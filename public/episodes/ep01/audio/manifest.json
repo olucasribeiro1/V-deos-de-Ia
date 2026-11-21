@@ -46,5 +46,502 @@
     "hash": "9836abeca2f4",
     "voice": "rafael",
     "pronuncia": 1
+  },
+  "s01_b03": {
+    "file": "s01_b03.mp3",
+    "dur": 6.687,
+    "hash": "72214be09bd5",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s01_b02": {
+    "file": "s01_b02.mp3",
+    "dur": 8.594,
+    "hash": "02ac6b30518a",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s01_b04": {
+    "file": "s01_b04.mp3",
+    "dur": 3.396,
+    "hash": "dbf124cfd0dc",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s02_b00": {
+    "file": "s02_b00.mp3",
+    "dur": 6.269,
+    "hash": "058107994b2f",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s01_b00": {
+    "file": "s01_b00.mp3",
+    "dur": 9.247,
+    "hash": "16e6d192116f",
+    "voice": "protagonista",
+    "pronuncia": 0.82
+  },
+  "s02_b01": {
+    "file": "s02_b01.mp3",
+    "dur": 8.281,
+    "hash": "332128f1f51f",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s02_b03": {
+    "file": "s02_b03.mp3",
+    "dur": 9.247,
+    "hash": "20a9fdc01332",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s02_b04": {
+    "file": "s02_b04.mp3",
+    "dur": 11.807,
+    "hash": "fc51761ae371",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s02_b02": {
+    "file": "s02_b02.mp3",
+    "dur": 8.359,
+    "hash": "7b05e40aa7de",
+    "voice": "protagonista",
+    "pronuncia": 0.88
+  },
+  "s02_b05": {
+    "file": "s02_b05.mp3",
+    "dur": 10.031,
+    "hash": "6b386333e855",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s02_b06": {
+    "file": "s02_b06.mp3",
+    "dur": 6.766,
+    "hash": "b8ea133bdac4",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s03_b00": {
+    "file": "s03_b00.mp3",
+    "dur": 2.847,
+    "hash": "eae27e5c6d88",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s02_b08": {
+    "file": "s02_b08.mp3",
+    "dur": 7.706,
+    "hash": "295f17a6adde",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s02_b07": {
+    "file": "s02_b07.mp3",
+    "dur": 10.248,
+    "hash": "4f219be6f658",
+    "voice": "reporter",
+    "pronuncia": 1
+  },
+  "s03_b01": {
+    "file": "s03_b01.mp3",
+    "dur": 2.769,
+    "hash": "b96adb4c559a",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s03_b04": {
+    "file": "s03_b04.mp3",
+    "dur": 9.384,
+    "hash": "50040a7c1bba",
+    "voice": "rafael",
+    "pronuncia": 1
+  },
+  "s03_b03": {
+    "file": "s03_b03.mp3",
+    "dur": 2.429,
+    "hash": "ff8c8e2e47e4",
+    "voice": "protagonista",
+    "pronuncia": 0.83
+  },
+  "s03_b02": {
+    "file": "s03_b02.mp3",
+    "dur": 8.52,
+    "hash": "d458f411394e",
+    "voice": "rafael",
+    "pronuncia": 1
+  },
+  "s03_b05": {
+    "file": "s03_b05.mp3",
+    "dur": 3.553,
+    "hash": "b43995b28281",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s03_b06": {
+    "file": "s03_b06.mp3",
+    "dur": 3.709,
+    "hash": "06b7e2c2004e",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s03_b07": {
+    "file": "s03_b07.mp3",
+    "dur": 8.424,
+    "hash": "dee69696d2dc",
+    "voice": "rafael",
+    "pronuncia": 1
+  },
+  "s03_b08": {
+    "file": "s03_b08.mp3",
+    "dur": 9.792,
+    "hash": "e363a9b47c32",
+    "voice": "rafael",
+    "pronuncia": 1
+  },
+  "s03_b10": {
+    "file": "s03_b10.mp3",
+    "dur": 2.116,
+    "hash": "9694c87f0801",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s03_b09": {
+    "file": "s03_b09.mp3",
+    "dur": 10.44,
+    "hash": "925893a95877",
+    "voice": "rafael",
+    "pronuncia": 1
+  },
+  "s03_b11": {
+    "file": "s03_b11.mp3",
+    "dur": 2.691,
+    "hash": "4d184c7a15c5",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s04_b00": {
+    "file": "s04_b00.mp3",
+    "dur": 4.127,
+    "hash": "3d97af4cdc49",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s04_b01": {
+    "file": "s04_b01.mp3",
+    "dur": 2.429,
+    "hash": "aaec2d662d3a",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s04_b02": {
+    "file": "s04_b02.mp3",
+    "dur": 7.549,
+    "hash": "342e7a8aae67",
+    "voice": "protagonista",
+    "pronuncia": 0.93
+  },
+  "s04_b04": {
+    "file": "s04_b04.mp3",
+    "dur": 4.519,
+    "hash": "8ad14a63d6ae",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s04_b03": {
+    "file": "s04_b03.mp3",
+    "dur": 8.202,
+    "hash": "77a1658601ea",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s04_b05": {
+    "file": "s04_b05.mp3",
+    "dur": 11.389,
+    "hash": "98544271633a",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s04_b06": {
+    "file": "s04_b06.mp3",
+    "dur": 12.356,
+    "hash": "c71bf41c0f14",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s04_b07": {
+    "file": "s04_b07.mp3",
+    "dur": 9.482,
+    "hash": "d7a81f533896",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b00": {
+    "file": "s05_b00.mp3",
+    "dur": 13.322,
+    "hash": "c57da597e6a9",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b01": {
+    "file": "s05_b01.mp3",
+    "dur": 9.874,
+    "hash": "a26b6a8a7c2f",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b03": {
+    "file": "s05_b03.mp3",
+    "dur": 8.516,
+    "hash": "68897af7ed54",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b04": {
+    "file": "s05_b04.mp3",
+    "dur": 4.911,
+    "hash": "7edc78b3251d",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b02": {
+    "file": "s05_b02.mp3",
+    "dur": 9.874,
+    "hash": "64907323ecee",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b05": {
+    "file": "s05_b05.mp3",
+    "dur": 7.471,
+    "hash": "c2d1a9f05595",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b06": {
+    "file": "s05_b06.mp3",
+    "dur": 6.269,
+    "hash": "a9fa47558092",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b07": {
+    "file": "s05_b07.mp3",
+    "dur": 9.404,
+    "hash": "7a6a10cdd4da",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b08": {
+    "file": "s05_b08.mp3",
+    "dur": 8.202,
+    "hash": "b2b99ef7a51d",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b09": {
+    "file": "s05_b09.mp3",
+    "dur": 11.154,
+    "hash": "d86269a0d2b0",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b10": {
+    "file": "s05_b10.mp3",
+    "dur": 7.549,
+    "hash": "47c542323c9b",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s05_b11": {
+    "file": "s05_b11.mp3",
+    "dur": 6.687,
+    "hash": "47a58dff65bf",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s06_b00": {
+    "file": "s06_b00.mp3",
+    "dur": 1.881,
+    "hash": "d7bc3b59e9a7",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s06_b03": {
+    "file": "s06_b03.mp3",
+    "dur": 3.971,
+    "hash": "828f43c5d729",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s06_b01": {
+    "file": "s06_b01.mp3",
+    "dur": 5.304,
+    "hash": "f0de82c6d5c6",
+    "voice": "vizinho",
+    "pronuncia": 1
+  },
+  "s06_b02": {
+    "file": "s06_b02.mp3",
+    "dur": 5.376,
+    "hash": "c9bf5b153c85",
+    "voice": "vizinho",
+    "pronuncia": 1
+  },
+  "s06_b04": {
+    "file": "s06_b04.mp3",
+    "dur": 2.847,
+    "hash": "2b83f986f6ae",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s06_b05": {
+    "file": "s06_b05.mp3",
+    "dur": 6.648,
+    "hash": "bdae03e15a57",
+    "voice": "vizinho",
+    "pronuncia": 1
+  },
+  "s06_b06": {
+    "file": "s06_b06.mp3",
+    "dur": 6.766,
+    "hash": "6b4ab9a89201",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s06_b07": {
+    "file": "s06_b07.mp3",
+    "dur": 5.136,
+    "hash": "6458283659bc",
+    "voice": "vizinho",
+    "pronuncia": 1
+  },
+  "s06_b08": {
+    "file": "s06_b08.mp3",
+    "dur": 2.429,
+    "hash": "a460fba150af",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s06_b10": {
+    "file": "s06_b10.mp3",
+    "dur": 2.508,
+    "hash": "57fd6c29e5f4",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s07_b01": {
+    "file": "s07_b01.mp3",
+    "dur": 1.567,
+    "hash": "286eb789db11",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s06_b09": {
+    "file": "s06_b09.mp3",
+    "dur": 7.536,
+    "hash": "ad04034f0e85",
+    "voice": "vizinho",
+    "pronuncia": 1
+  },
+  "s07_b00": {
+    "file": "s07_b00.mp3",
+    "dur": 8.046,
+    "hash": "a0e08d6c920e",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s07_b03": {
+    "file": "s07_b03.mp3",
+    "dur": 2.038,
+    "hash": "ce3f018c8d5f",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s07_b02": {
+    "file": "s07_b02.mp3",
+    "dur": 3.396,
+    "hash": "bf773591f6f4",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s07_b04": {
+    "file": "s07_b04.mp3",
+    "dur": 3.396,
+    "hash": "b8df696aea00",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s07_b06": {
+    "file": "s07_b06.mp3",
+    "dur": 3.971,
+    "hash": "89ea519a5cd4",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s07_b05": {
+    "file": "s07_b05.mp3",
+    "dur": 9.874,
+    "hash": "bf4b7f6a70b8",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s07_b08": {
+    "file": "s07_b08.mp3",
+    "dur": 4.284,
+    "hash": "874bb8b8e755",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s08_b00": {
+    "file": "s08_b00.mp3",
+    "dur": 0.601,
+    "hash": "55c4e5e1a763",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s08_b02": {
+    "file": "s08_b02.mp3",
+    "dur": 4.362,
+    "hash": "b523c652b63c",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s08_b01": {
+    "file": "s08_b01.mp3",
+    "dur": 9.144,
+    "hash": "49090b1c3e28",
+    "voice": "rafael",
+    "pronuncia": 1
+  },
+  "s08_b04": {
+    "file": "s08_b04.mp3",
+    "dur": 2.273,
+    "hash": "949af5f268e1",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s08_b03": {
+    "file": "s08_b03.mp3",
+    "dur": 5.064,
+    "hash": "e32257e98644",
+    "voice": "rafael",
+    "pronuncia": 0.93
+  },
+  "s08_b06": {
+    "file": "s08_b06.mp3",
+    "dur": 3.161,
+    "hash": "267cc1f6bccd",
+    "voice": "protagonista",
+    "pronuncia": 1
+  },
+  "s08_b05": {
+    "file": "s08_b05.mp3",
+    "dur": 10.684,
+    "hash": "d011dfd943e5",
+    "voice": "protagonista",
+    "pronuncia": 0.92
   }
 }

@@ -8,7 +8,8 @@ export type PhoneScreen =
   | {kind: 'incoming'; name: string; pulse: number}
   | {kind: 'call'; name: string; seconds: number}
   | {kind: 'ended'; name: string; seconds: number}
-  | {kind: 'alert'; title: string; body: string; time: string};
+  | {kind: 'alert'; title: string; body: string; time: string}
+  | {kind: 'dialing'; name: string; failed?: boolean};
 
 const texCache = new Map<string, THREE.CanvasTexture>();
 
@@ -93,6 +94,18 @@ function screenTexture(s: PhoneScreen) {
       g.fillStyle = '#e06666';
       g.fillText('sem sinal', 128, 430);
     }
+  }
+  if (s.kind === 'dialing') {
+    g.font = font(15);
+    g.fillStyle = s.failed ? '#e06666' : '#9fb1bd';
+    g.fillText(s.failed ? 'falha na chamada · sem sinal' : 'chamando...', 128, 120);
+    g.fillStyle = '#e8eef2';
+    g.font = font(34, 600);
+    g.fillText(s.name, 128, 165);
+    g.fillStyle = '#c0392b';
+    g.beginPath();
+    g.arc(128, 430, 28, 0, Math.PI * 2);
+    g.fill();
   }
   if (s.kind === 'alert') {
     g.font = font(54, 300);

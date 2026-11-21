@@ -17,6 +17,8 @@ export const HP = {
   grab: {p: [0.1, -0.22, -0.46], r: [-90, 180, 0], curl: 0.85, thumb: 0.7},
   // empurrar porta/móvel (palma para frente)
   push: {p: [0.17, -0.12, -0.42], r: [-5, 180, 0], curl: 0.1, thumb: 0.15},
+  // empurrar móvel baixo (cômoda): mãos apoiadas no tampo, braços estendidos para baixo/frente
+  pushLow: {p: [0.19, -0.3, -0.5], r: [-40, 180, 0], curl: 0.15, thumb: 0.2},
   // segurar maçaneta/fechadura
   knob: {p: [0.12, -0.25, -0.45], r: [-80, 180, -80], curl: 0.75, thumb: 0.6},
   // lanterna/objeto empunhado

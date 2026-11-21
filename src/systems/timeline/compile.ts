@@ -147,6 +147,7 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
   const lines: CompiledScene['lines'] = [];
   const sfx: CompiledScene['sfx'] = [];
   let spot: SpotName = sc.start.spot;
+  let moveEnd = 0; // fim do último deslocamento (walk/height)
 
   let t = 0;
   sc.beats.forEach((beat, bi) => {
@@ -163,7 +164,8 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
     }
     const actions = [...(beat.do ?? [])].sort((a, b) => (a.at ?? 0) - (b.at ?? 0));
     for (const act of actions) {
-      const a0 = beatStart + (act.at ?? 0);
+      let a0 = beatStart + (act.at ?? 0);
+      if (act.then) a0 = Math.max(a0, moveEnd);
       const end = applyAction(act, a0);
       beatEnd = Math.max(beatEnd, end);
     }
@@ -240,6 +242,7 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
           addLook(view, view.end(), cur, viewFor(act.arrive, {x: last.x, z: last.z, h}, cur.yaw), 0.8);
         }
         spot = act.to;
+        moveEnd = endT;
         return endT;
       }
       case 'look': {
@@ -284,6 +287,7 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
         const dur = act.dur ?? 0.8;
         const p = pos.cut(a0);
         pos.to(a0 + dur, {...p, h: act.h});
+        moveEnd = a0 + dur;
         return a0 + dur;
       }
       case 'tension': {
@@ -339,6 +343,8 @@ export function compileScene(ep: Episode, sc: Scene, narr: NarrationManifest, sf
         shakes.push({t: a0, dur: act.dur ?? 0.5, amp: act.amp, freq: act.freq});
         return a0;
       case 'actor': {
+        // mesmo personagem (spec.id) entrando de novo = substitui o anterior (sem duplicatas sobrepostas)
+        for (const prev of actors) if (prev.spec.id === act.track.spec.id && (prev.until === undefined || prev.until > a0)) prev.until = a0;
         const shift = (x: number) => x + a0;
         actors.push({...act.track, until: act.track.until === undefined ? undefined : act.track.until + a0, path: act.track.path.map(([tt, x, z]) => [shift(tt), x, z]), clips: act.track.clips.map(([tt, n, k]) => [shift(tt), n, k])});
         return a0;

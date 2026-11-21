@@ -74,7 +74,18 @@ export async function transcribe(file, lang = 'por') {
   return (await res.json()).text ?? '';
 }
 
-const norm = (t) => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean);
+const UN = ['zero','um','dois','tres','quatro','cinco','seis','sete','oito','nove','dez','onze','doze','treze','quatorze','quinze','dezesseis','dezessete','dezoito','dezenove'];
+const DEZ = ['','','vinte','trinta','quarenta','cinquenta','sessenta','setenta','oitenta','noventa'];
+const CEN = ['','cento','duzentos','trezentos','quatrocentos','quinhentos','seiscentos','setecentos','oitocentos','novecentos'];
+function extenso(n) {
+  if (n < 20) return UN[n];
+  if (n < 100) return DEZ[Math.floor(n / 10)] + (n % 10 ? ' e ' + UN[n % 10] : '');
+  if (n === 100) return 'cem';
+  if (n < 1000) return CEN[Math.floor(n / 100)] + (n % 100 ? ' e ' + extenso(n % 100) : '');
+  return String(n);
+}
+// STT escreve números com dígitos e marca sons entre colchetes: normaliza ambos antes de comparar
+const norm = (t) => t.replace(/\[[^\]]+\]/g, ' ').replace(/(\d{1,2}):(\d{2})/g, (_, h, m) => ` ${h} e ${+m ? m : ''} `).replace(/(\d{1,2})h\b/g, '$1').replace(/\d+/g, (d) => ' ' + extenso(+d) + ' ').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean);
 /** Similaridade por palavras (1 - distância de edição / tamanho). 1 = idêntico. Lista palavras divergentes. */
 export function wordScore(expected, heard) {
   const a = norm(expected), b = norm(heard);

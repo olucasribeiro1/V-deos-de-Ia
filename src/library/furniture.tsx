@@ -1,4 +1,5 @@
 import React from 'react';
+import * as THREE from 'three';
 import {deg, rng} from '../systems/animation/math';
 import {mat, PAL} from './materials';
 
@@ -122,7 +123,7 @@ export const KitchenRun: React.FC<P & {length: number}> = ({length, ...p}) => {
   return (
     <G {...p}>
       <Box p={[0, 0.43, 0]} s={[length, 0.86, 0.6]} c="#c8c2b4" />
-      <Box p={[0, 0.89, 0.01]} s={[length + 0.02, 0.05, 0.64]} c="#4a4d50" r={0.35} />
+      <Box p={[0, 0.89, 0.01]} s={[length + 0.02, 0.05, 0.64]} c="#8a8f93" r={0.35} />
       {Array.from({length: n}).map((_, i) => (
         <group key={i}>
           <Box p={[-length / 2 + 0.3 + i * 0.6, 0.42, 0.302]} s={[0.56, 0.74, 0.01]} c="#d6d0c2" shadow={false} />
@@ -320,5 +321,72 @@ export const ElevatorDoor: React.FC<P> = (p) => (
     <Box p={[0, 1.05, 0.055]} s={[0.012, 2.0, 0.01]} c="#4a5056" shadow={false} />
     <Box p={[0.75, 1.2, 0.04]} s={[0.1, 0.18, 0.03]} c="#3a3f44" shadow={false} />
     <Box p={[0, 2.3, 0.04]} s={[0.5, 0.14, 0.02]} c="#1c1d1f" shadow={false} />
+  </G>
+);
+
+/** Faca de cozinha (prop de mão). Lâmina para +Y (sai da mão fechada). */
+export const Knife: React.FC<P> = (p) => (
+  <G {...p}>
+    <Box p={[0, 0, 0]} s={[0.022, 0.1, 0.02]} c="#2a2420" shadow={false} />
+    <Box p={[0, 0.115, 0]} s={[0.026, 0.13, 0.004]} c="#c9d0d4" r={0.2} shadow={false} />
+  </G>
+);
+
+const photoCache: {t?: THREE.CanvasTexture} = {};
+/** Foto dos irmãos (formatura do Rafael; protagonista fardado) desenhada em canvas, estilo cartoon. */
+function brothersPhoto() {
+  if (photoCache.t) return photoCache.t;
+  const c = document.createElement('canvas');
+  c.width = 256;
+  c.height = 192;
+  const g = c.getContext('2d')!;
+  const sky = g.createLinearGradient(0, 0, 0, 192);
+  sky.addColorStop(0, '#8fc0e6');
+  sky.addColorStop(1, '#d8ecf6');
+  g.fillStyle = sky;
+  g.fillRect(0, 0, 256, 192);
+  g.fillStyle = '#6aa85a';
+  g.fillRect(0, 150, 256, 42);
+  const person = (x: number, body: string, hat: string | null, skin: string) => {
+    g.fillStyle = body;
+    g.beginPath();
+    g.roundRect(x - 26, 92, 52, 70, 16);
+    g.fill();
+    g.fillStyle = skin;
+    g.beginPath();
+    g.arc(x, 70, 26, 0, Math.PI * 2);
+    g.fill();
+    g.fillStyle = '#111';
+    g.beginPath();
+    g.arc(x - 9, 68, 3.5, 0, Math.PI * 2);
+    g.arc(x + 9, 68, 3.5, 0, Math.PI * 2);
+    g.fill();
+    g.strokeStyle = '#5a2a24';
+    g.lineWidth = 2;
+    g.beginPath();
+    g.arc(x, 76, 8, 0.15 * Math.PI, 0.85 * Math.PI);
+    g.stroke();
+    if (hat) {
+      g.fillStyle = hat;
+      g.fillRect(x - 28, 40, 56, 10);
+      g.fillRect(x - 18, 30, 36, 12);
+    }
+  };
+  person(92, '#1f2f4a', '#1f2f4a', '#efbd9d'); // protagonista de farda (fuzileiro)
+  person(164, '#111', '#111', '#e2b49a'); // Rafael com beca de formatura
+  g.fillStyle = '#ffd24a';
+  g.fillRect(186, 120, 30, 8);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  photoCache.t = t;
+  return t;
+}
+export const BrothersPhoto: React.FC<P> = (p) => (
+  <G {...p}>
+    <Box p={[0, 0, 0]} s={[0.36, 0.28, 0.03]} c={PAL.black} shadow={false} />
+    <mesh position={[0, 0, 0.0165]}>
+      <planeGeometry args={[0.32, 0.24]} />
+      <meshBasicMaterial map={brothersPhoto()} toneMapped={false} />
+    </mesh>
   </G>
 );

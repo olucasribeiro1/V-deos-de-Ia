@@ -5,7 +5,7 @@ import {AbsoluteFill} from 'remotion';
  * Legendas estilo vídeo viral: fonte pesada, cor viva, contorno escuro grosso, 2 linhas no máximo.
  * Cada fala é dividida em blocos curtos que acompanham o tempo do áudio (proporcional ao nº de caracteres).
  */
-const COLORS: Record<string, string> = {narrador: '#ffd24a', rafael: '#7fe0d4', vizinho: '#ff8a8a', reporter: '#d6d6ff'};
+const COLORS: Record<string, string> = {protagonista: '#ffd24a', rafael: '#7fe0d4', vizinho: '#ff8a8a', reporter: '#d6d6ff'};
 
 function chunks(text: string, max = 46) {
   const words = text.split(/\s+/);
@@ -28,7 +28,7 @@ function chunks(text: string, max = 46) {
 export const Subtitles: React.FC<{lines: {id: string; v: string; text: string; t: number; dur: number}[]; t: number}> = ({lines, t}) => {
   const l = lines.find((x) => t >= x.t && t < x.t + x.dur + 0.15);
   if (!l) return null;
-  const parts = chunks(l.text);
+  const parts = chunks(l.text.replace(/\[[^\]]+\]\s*/g, '').trim());
   const total = parts.reduce((a, p) => a + p.length, 0);
   let acc = 0;
   let current = parts[parts.length - 1];

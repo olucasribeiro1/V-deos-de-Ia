@@ -60,6 +60,7 @@ export const Apartment: React.FC<{state?: ApartmentState; t?: number}> = React.m
       <Door position={[-3.75, 0, -3]} rotY={0} open={-bathroomDoorOpen} />
       <Door position={[4.5, 0, 2.3]} rotY={180} color="#5e6a72" />
       <F.CeilingLamp position={[2.9, 0, 1.15]} on={lightsOn} />
+      <F.BrothersPhoto position={[-0.5, 1.55, -3.08]} rotY={180} />
       <Window position={[-3.4, 1.6, -8]} width={2.8} height={1.5} blinds={blinds} />
       <Window position={[2.7, 1.55, -8]} width={1.0} height={1.3} />
       <Window position={[-0.8, 1.5, 0]} rotY={180} width={1.2} height={1.2} blinds={0.6} />
@@ -93,7 +94,7 @@ export const Apartment: React.FC<{state?: ApartmentState; t?: number}> = React.m
       {bagAt === 'bedroom' && <F.DuffelBag position={[-0.6, 0, -2.5]} rotY={40} />}
     </group>
   );
-}, (a, b) => JSON.stringify(a.state) === JSON.stringify(b.state) && (a.state?.tv ?? 'off') === 'off' && (b.state?.tv ?? 'off') === 'off');
+}, (a, b) => JSON.stringify(a.state) === JSON.stringify(b.state) && (a.state?.tv ?? 'off') === 'off' && (b.state?.tv ?? 'off') === 'off' && !a.state?.entranceShake && !b.state?.entranceShake);
 
 /** Tudo que nunca se move: fundido em poucos draw calls (StaticBatch). Memo → nunca re-renderiza. */
 const ApartmentStatic = React.memo(() => {
@@ -132,7 +133,6 @@ const ApartmentStatic = React.memo(() => {
       <F.CoffeeTable position={[0.0, 0, -4.9]} />
       <F.Bookshelf position={[0.96, 0, -7.75]} />
       <F.Plant position={[-1.6, 0, -7.6]} />
-      <F.PictureFrame position={[-0.5, 1.6, -3.085]} rotY={180} />
       <F.PictureFrame position={[0.9, 1.7, -3.085]} rotY={180} w={0.35} h={0.45} color="#7b6a55" />
       {/* cozinha / jantar */}
       <F.KitchenRun position={[-5.68, 0, -6.1]} rotY={90} length={3.4} />

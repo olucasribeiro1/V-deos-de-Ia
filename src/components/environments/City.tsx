@@ -152,11 +152,11 @@ export const Smoke: React.FC<{origin: [number, number, number]; t: number; amoun
   t,
   amount,
   puffs = 26,
-  color = '#2c2d2f',
+  color = '#6e6f73',
   seed = 1,
 }) => {
   const ref = useRef<THREE.InstancedMesh>(null);
-  const m = useMemo(() => new THREE.MeshStandardMaterial({color, roughness: 1, flatShading: true, transparent: true, opacity: 0.85}), [color]);
+  const m = useMemo(() => new THREE.MeshBasicMaterial({color, transparent: true, opacity: 0.55, depthWrite: false, fog: true}), [color]);
   const offs = useMemo(() => {
     const r = rng(seed);
     return Array.from({length: puffs}, () => [r(), r(), r()]);
@@ -261,10 +261,10 @@ export const City: React.FC<{t: number; chaos?: number; children?: React.ReactNo
         <>
           <Fire p={[-4, STREET_Y + 0.6, -21]} t={t} />
           <Smoke origin={[-4, STREET_Y + 1.5, -21]} t={t} amount={Math.min(0.55, chaos)} seed={2} />
-          <Smoke origin={[-35, STREET_Y, -95]} t={t + 13} amount={Math.min(1.2, chaos * 1.8)} seed={4} color="#3b3a3a" />
+          <Smoke origin={[-35, STREET_Y, -95]} t={t + 13} amount={Math.min(1.2, chaos * 1.8)} seed={4} color="#7a7774" />
         </>
       )}
-      {chaos > 0.45 && !bench.noSmoke && <Smoke origin={[40, STREET_Y, -120]} t={t + 40} amount={chaos * 1.5} seed={5} color="#45403c" />}
+      {chaos > 0.45 && !bench.noSmoke && <Smoke origin={[40, STREET_Y, -120]} t={t + 40} amount={chaos * 1.5} seed={5} color="#85807a" />}
       {children}
     </group>
   );

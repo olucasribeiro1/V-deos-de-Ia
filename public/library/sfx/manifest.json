@@ -208,5 +208,20 @@
     "file": "music_action.mp3",
     "dur": 22.047,
     "hash": "e6cc51799b"
+  },
+  "knife_pick": {
+    "file": "knife_pick.mp3",
+    "dur": 1.045,
+    "hash": "789c4b7ce5"
+  },
+  "zipper_bag": {
+    "file": "zipper_bag.mp3",
+    "dur": 2.9,
+    "hash": "e196c4ae1a"
+  },
+  "helicopter_pass": {
+    "file": "helicopter_pass.mp3",
+    "dur": 7.027,
+    "hash": "c7dd861df8"
   }
 }

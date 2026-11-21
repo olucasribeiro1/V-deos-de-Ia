@@ -53,19 +53,19 @@ await pool(todo, 3, async (j) => {
       text: j.line.text,
       model_id: j.voice.model ?? 'eleven_multilingual_v2',
       language_code: 'pt',
-      previous_text: j.prev,
-      next_text: j.next,
+      ...((j.voice.model ?? '').includes('v3') ? {} : {previous_text: j.prev, next_text: j.next}),
       voice_settings: {stability: stab, similarity_boost: j.voice.similarity ?? 0.8, style: j.voice.style ?? 0.2, use_speaker_boost: true, speed: j.voice.speed ?? 1},
     });
   // VERIFICAÇÃO DE PRONÚNCIA: transcreve e compara com o roteiro; se divergir, 1 nova tentativa mais estável
   let stab = j.voice.stability ?? 0.5;
   fs.writeFileSync(raw, await synth(stab));
-  let check = wordScore(j.line.text, await transcribe(raw));
+  const spoken = j.line.text.replace(/\[[^\]]+\]\s*/g, ''); // marcações [sighs] não são faladas
+  let check = wordScore(spoken, await transcribe(raw));
   if (check.score < 0.92) {
     console.log(`  ! ${j.id} pronúncia divergente (${(check.score * 100).toFixed(0)}%: +[${check.extra}] -[${check.missing}]) → nova tentativa mais estável`);
     const alt = raw.replace('.raw.', '.alt.');
-    fs.writeFileSync(alt, await synth(Math.min(0.85, stab + 0.2)));
-    const c2 = wordScore(j.line.text, await transcribe(alt));
+    fs.writeFileSync(alt, await synth((j.voice.model ?? '').includes('v3') ? 1 : Math.min(0.85, stab + 0.2)));
+    const c2 = wordScore(spoken, await transcribe(alt));
     if (c2.score > check.score) {
       fs.renameSync(alt, raw);
       check = c2;

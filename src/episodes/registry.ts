@@ -5,12 +5,16 @@
 import {compileEpisode, type CompiledEpisode} from '../systems/timeline/compile';
 import type {NarrationManifest, SfxManifest} from '../systems/timeline/script';
 import {demo} from './ep01/demo.ts';
+import {episode as ep01} from './ep01/episode.ts';
 import ep01Narr from '../../public/episodes/ep01/audio/manifest.json';
 import sfxManifest from '../../public/library/sfx/manifest.json';
 
 export const SFX = sfxManifest as SfxManifest;
 
-const DEFS = [{episode: demo, narr: ep01Narr as NarrationManifest, audioBase: 'episodes/ep01/audio'}];
+const DEFS = [
+  {episode: demo, narr: ep01Narr as NarrationManifest, audioBase: 'episodes/ep01/audio'},
+  {episode: ep01, narr: ep01Narr as NarrationManifest, audioBase: 'episodes/ep01/audio'},
+];
 
 export const COMPILED: Record<string, CompiledEpisode & {audioBase: string}> = Object.fromEntries(
   DEFS.map((d) => [d.episode.id, {...compileEpisode(d.episode, d.narr, SFX), audioBase: d.audioBase}]),

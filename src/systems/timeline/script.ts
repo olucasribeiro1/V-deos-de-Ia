@@ -10,12 +10,13 @@ import type {PhoneScreen} from '../../components/props/Phone';
 import type {ActorTrack} from '../../components/characters/Actor';
 import type {LightPreset} from '../../components/lighting/Lighting';
 
-export type VoiceId = 'narrador' | 'rafael' | 'vizinho' | 'reporter';
+export type VoiceId = 'protagonista' | 'rafael' | 'vizinho' | 'reporter';
 
 /** Alvo de olhar: nome do cenário, ponto 3D, ângulo absoluto ou relativo ao olhar atual ({rel:true}). */
 export type Target = LookName | {yaw?: number; pitch?: number; rel?: boolean} | [number, number, number];
 
-export type Action = {at?: number} & (
+/** then: true = só começa quando o movimento atual (andar/agachar) terminar. */
+export type Action = {at?: number; then?: boolean} & (
   | {a: 'walk'; to: SpotName; pace?: 'slow' | 'walk' | 'brisk' | 'run'; look?: Target; arrive?: Target}
   | {a: 'look'; at_?: never; target: Target; dur?: number}
   | {a: 'glance'; target: Target; hold?: number; dur?: number}

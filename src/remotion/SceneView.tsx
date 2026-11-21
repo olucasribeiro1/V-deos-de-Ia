@@ -33,6 +33,8 @@ const PropMesh: React.FC<{name: string; screen: any}> = ({name, screen}) => {
       return <group position={[0, 0.02, 0.05]} rotation={[0, 0, 0]}><F.WaterBottle position={[0, -0.12, 0]} /></group>;
     case 'can':
       return <group position={[0, 0.03, 0.05]}><F.Can position={[0, -0.05, 0]} /></group>;
+    case 'knife':
+      return <group position={[0, 0.06, 0.03]} rotation={[0.2, 0, 0]}><F.Knife position={[0, 0, 0]} /></group>;
     case 'keys':
       return <group position={[0, 0.07, 0.03]} rotation={[0.3, 0, 0.4]}><F.Keys position={[0, 0, 0]} /></group>;
     default:
@@ -59,14 +61,15 @@ export const SceneView: React.FC<{scene: CompiledScene; sfxLib: SfxManifest; aud
     [track, sfxLib],
   );
   const fade = scene.fade(t);
-  const title = scene.titles.find((x) => t >= x.t && t < x.t + x.dur);
+  const title = scene.titles.find((x) => t >= x.t && t < x.t + x.dur && !x.text.startsWith('@'));
+  const stamp = scene.titles.find((x) => t >= x.t && t < x.t + x.dur && x.text.startsWith('@'));
   return (
     <AbsoluteFill style={{background: '#000'}}>
       {!bench.no3d && <ThreeCanvas width={VIDEO.width} height={VIDEO.height} shadows={!bench.noShadows} gl={{antialias: !bench.noAA, powerPreference: 'high-performance'}}>
         <Lighting preset={scene.scene.light} lamps={env.lightsOn ?? 1} />
         {!bench.noApt && <Apartment state={env} t={t} />}
         {!bench.noCity && <City t={t + 20} chaos={chaos} bench={bench} />}
-        {scene.actors.map((a, i) => (
+        {!bench.noActors && scene.actors.map((a, i) => (
           <Actor key={i} track={a} t={t} />
         ))}
         <PovRig track={track} frame={frame}>
@@ -97,6 +100,26 @@ export const SceneView: React.FC<{scene: CompiledScene; sfxLib: SfxManifest; aud
             {title.text}
           </div>
         </AbsoluteFill>
+      )}
+      {stamp && (
+        /* carimbo de horário da série ("hora a hora") — canto superior esquerdo */
+        <div
+          style={{
+            position: 'absolute',
+            left: 48,
+            top: 40,
+            fontFamily: '"DejaVu Sans Mono", monospace',
+            fontWeight: 700,
+            fontSize: 30,
+            color: '#f4f1ea',
+            background: 'rgba(10,10,12,0.55)',
+            padding: '6px 14px',
+            borderLeft: '6px solid #d42a22',
+            opacity: interpolate(t - stamp.t, [0, 0.4, stamp.dur - 0.5, stamp.dur], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+          }}
+        >
+          {stamp.text.slice(1)}
+        </div>
       )}
       <Subtitles lines={scene.lines} t={t} />
       {/* ---- áudio ---- */}

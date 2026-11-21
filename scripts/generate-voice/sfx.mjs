@@ -50,6 +50,9 @@ export const LIBRARY = {
   body_fall: {prompt: 'body collapsing on a hallway floor, heavy thud, muffled behind door', dur: 1.5},
   scream_phone: {prompt: 'people screaming and chaos in a hospital heard through a phone call, distorted', dur: 4},
   sofa_sit: {prompt: 'sitting down heavily on a fabric sofa, cushion creak and sigh', dur: 1.5},
+  helicopter_pass: {prompt: 'helicopter flying low over city buildings, rotor thumping, passing by, heard from inside an apartment', dur: 7},
+  knife_pick: {prompt: 'pulling a kitchen knife out of a wooden knife block, metallic slide', dur: 1},
+  zipper_bag: {prompt: 'opening and packing a duffel bag, zipper, items going in, rustling', dur: 3},
   // --- música (pistas curtas em loop; silêncio também é recurso) ---
   drone_tension: {prompt: 'dark cinematic tension drone, low strings and sub bass pulse, slow, horror suspense underscore, no melody', dur: 22, loop: true},
   music_calm: {prompt: 'soft melancholic ambient piano and pads, sparse, lonely, cinematic, no drums', dur: 22, loop: true},
