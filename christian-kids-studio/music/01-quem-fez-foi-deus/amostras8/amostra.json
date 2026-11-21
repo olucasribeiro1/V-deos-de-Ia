@@ -1,0 +1,50 @@
+{
+ "model_id": "music_v1",
+ "composition_plan": {
+  "positive_global_styles": [
+   "warm Brazilian children's music in the style of modern MPB kids songs, lively baião-pop groove, cheerful, sweet and catchy, energetic",
+   "110 BPM, bouncy, D major",
+   "sweet, cute and cheerful native Brazilian Portuguese young-adult female lead singer, very human and natural, smiling, clear articulation, never shouting; close-mic intimate pop vocal like a warm kids' TV host who sings, audible smile on the vowels, small natural breaths between lines, tiny pitch and timing variations, light vibrato only on long held notes",
+   "two warm female backing singers with soft airy harmonies under the lead, and a small kids choir of real children, slightly uneven and joyful, answering every line in parentheses loud and clear, cheerful not screaming",
+   "full, thick, energetic arrangement: accordion riffs, zabumba and triangle groove, punchy pop kick and snare with claps, ukulele and nylon guitar strums, warm driving bass, flute and glockenspiel melodies, pizzicato strings, light brass stabs, tambourine",
+   "warm, full, wide professional children's album production, voice and band balanced"
+  ],
+  "negative_global_styles": [
+   "slow",
+   "sleepy",
+   "lullaby",
+   "spoken word",
+   "narration",
+   "robotic",
+   "EDM",
+   "thin arrangement",
+   "shouting",
+   "European Portuguese accent",
+   "male lead vocal",
+   "autotune",
+   "rave",
+   "heavy electronic",
+   "monotone",
+   "flat delivery",
+   "baby voice",
+   "over-enunciated",
+   "mumbled words",
+   "sound effects sung by the vocalist"
+  ],
+  "sections": [
+   {
+    "section_name": "Chorus",
+    "positive_local_styles": [
+     "full joyful energy, bouncy and catchy, lead asks the questions, kids choir answers loud and happy"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 10000,
+    "lines": [
+     "Quem fez o sol? Foi Deus! (Foi Deus!)",
+     "Quem fez o mar? Foi Deus! (Foi Deus!)",
+     "Quem fez a flor, o passarinho e eu? (E EU!)"
+    ]
+   }
+  ]
+ }
+}

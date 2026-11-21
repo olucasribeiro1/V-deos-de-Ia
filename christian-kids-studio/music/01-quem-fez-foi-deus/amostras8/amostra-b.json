@@ -1,0 +1,45 @@
+{
+ "model_id": "music_v1",
+ "composition_plan": {
+  "positive_global_styles": [
+   "warm Brazilian children's music in the style of modern MPB kids songs, lively baião-pop groove, cheerful, sweet and catchy, energetic",
+   "108 BPM, bouncy, D major",
+   "sweet, cute and cheerful native Brazilian Portuguese young-adult female lead singer, very human and natural, smiling, clear articulation, never shouting",
+   "warm female backing vocals harmonizing, and a small kids choir that answers in the parentheses loud and clear",
+   "full, thick, energetic arrangement: accordion riffs, zabumba and triangle groove, punchy pop kick and snare with claps, ukulele and nylon guitar strums, warm driving bass, flute and glockenspiel melodies, pizzicato strings, light brass stabs, tambourine",
+   "warm, full, wide professional children's album production, voice and band balanced"
+  ],
+  "negative_global_styles": [
+   "slow",
+   "sleepy",
+   "lullaby",
+   "spoken word",
+   "narration",
+   "robotic",
+   "EDM",
+   "thin arrangement",
+   "shouting",
+   "European Portuguese accent",
+   "male lead vocal",
+   "autotune",
+   "rave",
+   "heavy electronic"
+  ],
+  "sections": [
+   {
+    "section_name": "Chorus",
+    "positive_local_styles": [
+     "catchy energetic chorus",
+     "kids choir shouts back a clear 'E EU!' right after the lead sings 'e eu?'"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 10000,
+    "lines": [
+     "Quem fez o sol? Foi Deus! (Foi Deus!)",
+     "Quem fez o mar? Foi Deus! (Foi Deus!)",
+     "Quem fez a flor, o passarinho e eu? (E EU!)"
+    ]
+   }
+  ]
+ }
+}
