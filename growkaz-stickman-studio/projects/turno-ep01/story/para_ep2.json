@@ -1,0 +1,361 @@
+{
+ "nota": "Falas do Ep. 1 original que NÃO entram no Ep. 1 final: abrem o Ep. 2. Tempos no voiceover original (input/orig/voiceover.wav).",
+ "fonte_audio": "projects/turno-ep01/input/orig/voiceover.wav",
+ "falas": [
+  {
+   "id": "l10",
+   "spk": "LUCAS",
+   "text": "[sussurrando] Palavra por palavra. A mesma pausa. O mesmo acredita.",
+   "start": 124.549,
+   "end": 129.695,
+   "file": "projects/turno-ep01/input/clips/l10_871464dc3f.mp3",
+   "palavras": [
+    {
+     "word": "Palavra",
+     "start": 124.629,
+     "end": 125.189,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "por",
+     "start": 125.269,
+     "end": 125.349,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "palavra.",
+     "start": 125.429,
+     "end": 126.309,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "A",
+     "start": 126.549,
+     "end": 126.629,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "mesma",
+     "start": 126.789,
+     "end": 127.109,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "pausa.",
+     "start": 127.269,
+     "end": 127.989,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "O",
+     "start": 128.229,
+     "end": 128.309,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "mesmo",
+     "start": 128.389,
+     "end": 128.709,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "acredita.",
+     "start": 128.789,
+     "end": 129.669,
+     "spk": "LUCAS"
+    }
+   ]
+  },
+  {
+   "id": "t07",
+   "spk": "TICO",
+   "text": "[assustado] Ele... ele não tava no caminhão que bateu?",
+   "start": 129.995,
+   "end": 132.678,
+   "file": "projects/turno-ep01/input/clips/t07_646b5e9f84_t1.08.wav",
+   "palavras": [
+    {
+     "word": "Ele...",
+     "start": 130.143,
+     "end": 130.736,
+     "spk": "TICO"
+    },
+    {
+     "word": "ele",
+     "start": 130.81,
+     "end": 130.958,
+     "spk": "TICO"
+    },
+    {
+     "word": "não",
+     "start": 130.995,
+     "end": 131.18,
+     "spk": "TICO"
+    },
+    {
+     "word": "tava",
+     "start": 131.217,
+     "end": 131.403,
+     "spk": "TICO"
+    },
+    {
+     "word": "no",
+     "start": 131.477,
+     "end": 131.551,
+     "spk": "TICO"
+    },
+    {
+     "word": "caminhão",
+     "start": 131.625,
+     "end": 131.847,
+     "spk": "TICO"
+    },
+    {
+     "word": "que",
+     "start": 131.921,
+     "end": 131.995,
+     "spk": "TICO"
+    },
+    {
+     "word": "bateu?",
+     "start": 132.143,
+     "end": 132.678,
+     "spk": "TICO"
+    }
+   ]
+  },
+  {
+   "id": "l11",
+   "spk": "LUCAS",
+   "text": "[tenso, rápido] Eu corri pro fundo pegar o cadeado. E lá do estoque, no escuro, eu ouvi:",
+   "start": 133.278,
+   "end": 137.798,
+   "file": "projects/turno-ep01/input/clips/l11_8fed8c0274.mp3",
+   "palavras": [
+    {
+     "word": "Eu",
+     "start": 133.425,
+     "end": 133.438,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "corri",
+     "start": 133.518,
+     "end": 133.678,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "pro",
+     "start": 133.798,
+     "end": 133.918,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "fundo",
+     "start": 133.958,
+     "end": 134.158,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "pegar",
+     "start": 134.238,
+     "end": 134.438,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "o",
+     "start": 134.478,
+     "end": 134.518,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "cadeado.",
+     "start": 134.558,
+     "end": 135.198,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "E",
+     "start": 135.358,
+     "end": 135.438,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "lá",
+     "start": 135.518,
+     "end": 135.598,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "do",
+     "start": 135.638,
+     "end": 135.678,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "estoque,",
+     "start": 135.758,
+     "end": 136.198,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "no",
+     "start": 136.238,
+     "end": 136.318,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "escuro,",
+     "start": 136.438,
+     "end": 136.878,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "eu",
+     "start": 136.958,
+     "end": 137.038,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "ouvi:",
+     "start": 137.118,
+     "end": 137.758,
+     "spk": "LUCAS"
+    }
+   ]
+  },
+  {
+   "id": "t08",
+   "spk": "TICO",
+   "text": "[de boca cheia, brincalhão] Coxinha que passa da meia-noite é perda, Lucas. Eu tô salvando a empresa.",
+   "start": 138.398,
+   "end": 141.136,
+   "file": "projects/turno-ep01/input/clips/t08_00621c0e2d_t1.08.wav",
+   "palavras": [
+    {
+     "word": "Coxinha",
+     "start": 138.468,
+     "end": 138.842,
+     "spk": "TICO"
+    },
+    {
+     "word": "que",
+     "start": 138.916,
+     "end": 138.99,
+     "spk": "TICO"
+    },
+    {
+     "word": "passa",
+     "start": 139.064,
+     "end": 139.286,
+     "spk": "TICO"
+    },
+    {
+     "word": "da",
+     "start": 139.323,
+     "end": 139.361,
+     "spk": "TICO"
+    },
+    {
+     "word": "meia-noite",
+     "start": 139.435,
+     "end": 139.879,
+     "spk": "TICO"
+    },
+    {
+     "word": "é",
+     "start": 139.99,
+     "end": 140.101,
+     "spk": "TICO"
+    },
+    {
+     "word": "perda,",
+     "start": 140.249,
+     "end": 140.509,
+     "spk": "TICO"
+    },
+    {
+     "word": "Lucas.",
+     "start": 140.546,
+     "end": 141.089,
+     "spk": "TICO"
+    },
+    {
+     "word": "a",
+     "start": 141.83,
+     "end": 141.136,
+     "spk": "TICO"
+    },
+    {
+     "word": "empresa.",
+     "start": 141.879,
+     "end": 141.136,
+     "spk": "TICO"
+    }
+   ]
+  },
+  {
+   "id": "l12",
+   "spk": "LUCAS",
+   "text": "[sussurrando] Só que o Tico... tava do meu lado.",
+   "start": 141.936,
+   "end": 144.705,
+   "file": "projects/turno-ep01/input/clips/l12_097526c997.mp3",
+   "palavras": [
+    {
+     "word": "Só",
+     "start": 142.256,
+     "end": 142.336,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "que",
+     "start": 142.416,
+     "end": 142.496,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "o",
+     "start": 142.536,
+     "end": 142.576,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "Tico...",
+     "start": 142.656,
+     "end": 143.536,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "tava",
+     "start": 143.576,
+     "end": 143.776,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "do",
+     "start": 143.816,
+     "end": 143.856,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "meu",
+     "start": 143.936,
+     "end": 144.096,
+     "spk": "LUCAS"
+    },
+    {
+     "word": "lado.",
+     "start": 144.136,
+     "end": 144.705,
+     "spk": "LUCAS"
+    }
+   ]
+  }
+ ],
+ "trecho_continuo": [
+  124.549,
+  144.705
+ ],
+ "cenas_prontas": "series/turno/ep01_cenas.js: shot 'H' (cadeado, voz no estoque, Tico do lado, porta abre) e o final de 'G' (l10/t07)."
+}

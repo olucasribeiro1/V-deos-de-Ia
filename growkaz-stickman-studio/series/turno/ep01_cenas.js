@@ -407,7 +407,7 @@ registerShot('X', { kind: '3d',
 });
 
 // ====================== RW — rebobinar VHS: a cena volta rápido de trás pra frente, tracking, e o cartão de tempo ======================
-const RW_REV = 1.35;
+const RW_REV = 1.05;
 registerShot('RW', { kind: '3d',
   init(T, info) { WALL = info.Wall || WALL; const d = DEF[info.src]; const st = d.init(T, infoSrc(info, info.b)); return { st, d, stage: st.stage }; },
   draw(s, lt, info) {
@@ -477,11 +477,12 @@ registerShot('T', { draw(g, t, info) {
   scan(g);
 }});
 
-// ====================== FIM (parte 1) — corte seco -> título -> gancho "PARTE 2 →" no look de fita ======================
+// ====================== FIM — corte seco -> título -> gancho "EP. 2 →" + segue a página (fala cta por cima), no look de fita ======================
 registerShot('FIM', { draw(g, t, info) {
   cobre(g);
-  if (t < 1.7) { g.fillStyle = '#000'; g.fillRect(0, 0, E.W, E.H); if (t >= 0.3) titulo(g, t - 0.3, 'EP. 1 — PARTE 1'); }
-  else { UI.seguir(g, t - 1.7, { linha1: 'CONTINUA...', proximo: info.proximo || 'PARTE 2 →' }); vhsOSD(g, t, { play: true }); fitaVHS(g, t); }
+  const c0 = info.card ?? 1.0;
+  if (t < c0) { g.fillStyle = '#000'; g.fillRect(0, 0, E.W, E.H); if (t >= 0.2) titulo(g, (t - 0.2) * 1.3, 'EP. 1 — O ÚLTIMO CAFÉ'); }
+  else { UI.seguir(g, t - c0, { linha1: 'CONTINUA...', proximo: info.proximo || 'EP. 2 →' }); vhsOSD(g, t, { play: true }); fitaVHS(g, t); }
   scan(g);
 }});
 

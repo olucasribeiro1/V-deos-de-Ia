@@ -1,218 +1,344 @@
 [
  {
   "i": 0,
-  "start": 0.241,
-  "end": 1.481,
-  "text": "Aí passou um carro."
- },
- {
-  "i": 1,
-  "start": 1.681,
-  "end": 2.681,
-  "text": "Na contramão."
- },
- {
-  "i": 2,
-  "start": 2.881,
-  "end": 3.801,
-  "text": "Sem farol."
- },
- {
-  "i": 3,
-  "start": 4.081,
-  "end": 6.274,
-  "text": "Arrastando alguma coisa no para-choque."
- },
- {
-  "i": 4,
-  "start": 10.12,
-  "end": 11.84,
-  "text": "Mais uma noite de serviço."
- },
- {
-  "i": 5,
-  "start": 12.12,
-  "end": 15.72,
-  "text": "Três da manhã, cafeteira pingando, geladeira zumbindo."
- },
- {
-  "i": 6,
-  "start": 16.28,
-  "end": 17.72,
-  "text": "Eu repondo bolacha..."
- },
- {
-  "i": 7,
-  "start": 17.76,
-  "end": 19.8,
-  "text": "e o Tico fazendo o que ele faz de melhor."
- },
- {
-  "i": 8,
-  "start": 20.29,
-  "end": 22.912,
-  "text": "Coxinha que passa da meia-noite é perda, Lucas."
- },
- {
-  "i": 9,
-  "start": 22.936,
-  "end": 24.369,
-  "text": "Eu tô salvando a empresa."
- },
- {
-  "i": 10,
-  "start": 25.109,
-  "end": 28.709,
-  "text": "Só que naquela noite a BR tava quieta demais."
- },
- {
-  "i": 11,
-  "start": 28.789,
-  "end": 31.269,
-  "text": "Duas horas sem passar um caminhão."
- },
- {
-  "i": 12,
-  "start": 32.039,
-  "end": 34.706,
-  "text": "Pô, até os caminhoneiros tiraram folga."
- },
- {
-  "i": 13,
-  "start": 34.854,
-  "end": 36.411,
-  "text": "Só nós dois de otário aqui."
- },
- {
-  "i": 14,
-  "start": 37.091,
-  "end": 38.331,
-  "text": "Aí passou um carro."
- },
- {
-  "i": 15,
-  "start": 38.531,
-  "end": 39.531,
-  "text": "Na contramão."
- },
- {
-  "i": 16,
-  "start": 39.731,
-  "end": 40.651,
-  "text": "Sem farol."
- },
- {
-  "i": 17,
-  "start": 40.931,
-  "end": 43.124,
-  "text": "Arrastando alguma coisa no para-choque."
- },
- {
-  "i": 18,
-  "start": 44.165,
-  "end": 45.572,
-  "text": "Isso aí era um..."
- },
- {
-  "i": 19,
-  "start": 45.609,
-  "end": 46.461,
-  "text": "saco de lixo."
- },
- {
-  "i": 20,
-  "start": 46.906,
-  "end": 47.357,
-  "text": "Né?"
- },
- {
-  "i": 21,
-  "start": 48.077,
-  "end": 49.117,
-  "text": "Não era."
- },
- {
-  "i": 22,
-  "start": 49.867,
-  "end": 51.924,
-  "text": "Alerta do Ministério da Saúde."
- },
- {
-  "i": 23,
-  "start": 52.289,
-  "end": 56.689,
-  "text": "Surtos de agressividade e febre alta na região metropolitana."
- },
- {
-  "i": 24,
-  "start": 57.054,
-  "end": 58.757,
-  "text": "Evitem contato físico."
- },
- {
-  "i": 25,
-  "start": 58.956,
-  "end": 61.146,
-  "text": "Permaneçam em locais fechados."
- },
- {
-  "i": 26,
-  "start": 61.904,
-  "end": 63.089,
-  "text": "Mais uma gripe."
- },
- {
-  "i": 27,
-  "start": 63.311,
-  "end": 65.769,
-  "text": "Na última eu fiquei rico vendendo álcool em gel."
- },
- {
-  "i": 28,
-  "start": 66.449,
-  "end": 68.209,
-  "text": "Aí o Seu Alberto entrou."
- },
- {
-  "i": 29,
-  "start": 68.449,
-  "end": 70.249,
-  "text": "Toda semana ele para aqui."
- },
- {
-  "i": 30,
-  "start": 70.529,
-  "end": 71.929,
-  "text": "Mas ele tava branco."
- },
- {
-  "i": 31,
-  "start": 72.129,
-  "end": 72.889,
-  "text": "Suando."
- },
- {
-  "i": 32,
-  "start": 73.089,
-  "end": 75.851,
-  "text": "Com um pano amarrado no braço, encharcado."
- },
- {
-  "i": 33,
-  "start": 77.751,
-  "end": 78.871,
+  "start": 2.056,
+  "end": 3.176,
   "text": "Me vê um café, filho."
  },
  {
-  "i": 34,
-  "start": 79.351,
-  "end": 81.831,
+  "i": 1,
+  "start": 6.82,
+  "end": 8.54,
+  "text": "Mais uma noite de serviço."
+ },
+ {
+  "i": 2,
+  "start": 8.82,
+  "end": 12.42,
+  "text": "Três da manhã, cafeteira pingando, geladeira zumbindo."
+ },
+ {
+  "i": 3,
+  "start": 12.98,
+  "end": 14.42,
+  "text": "Eu repondo bolacha..."
+ },
+ {
+  "i": 4,
+  "start": 14.46,
+  "end": 16.5,
+  "text": "e o Tico fazendo o que ele faz de melhor."
+ },
+ {
+  "i": 5,
+  "start": 16.99,
+  "end": 19.612,
+  "text": "Coxinha que passa da meia-noite é perda, Lucas."
+ },
+ {
+  "i": 6,
+  "start": 19.636,
+  "end": 21.069,
+  "text": "Eu tô salvando a empresa."
+ },
+ {
+  "i": 7,
+  "start": 21.809,
+  "end": 25.409,
+  "text": "Só que naquela noite a BR tava quieta demais."
+ },
+ {
+  "i": 8,
+  "start": 25.489,
+  "end": 27.969,
+  "text": "Duas horas sem passar um caminhão."
+ },
+ {
+  "i": 9,
+  "start": 28.739,
+  "end": 31.406,
+  "text": "Pô, até os caminhoneiros tiraram folga."
+ },
+ {
+  "i": 10,
+  "start": 31.554,
+  "end": 33.111,
+  "text": "Só nós dois de otário aqui."
+ },
+ {
+  "i": 11,
+  "start": 33.791,
+  "end": 35.031,
+  "text": "Aí passou um carro."
+ },
+ {
+  "i": 12,
+  "start": 35.231,
+  "end": 36.231,
+  "text": "Na contramão."
+ },
+ {
+  "i": 13,
+  "start": 36.431,
+  "end": 37.351,
+  "text": "Sem farol."
+ },
+ {
+  "i": 14,
+  "start": 37.631,
+  "end": 39.824,
+  "text": "Arrastando alguma coisa no para-choque."
+ },
+ {
+  "i": 15,
+  "start": 40.865,
+  "end": 42.272,
+  "text": "Isso aí era um..."
+ },
+ {
+  "i": 16,
+  "start": 42.309,
+  "end": 43.161,
+  "text": "saco de lixo."
+ },
+ {
+  "i": 17,
+  "start": 43.606,
+  "end": 44.057,
+  "text": "Né?"
+ },
+ {
+  "i": 18,
+  "start": 44.777,
+  "end": 45.817,
+  "text": "Não era."
+ },
+ {
+  "i": 19,
+  "start": 46.567,
+  "end": 48.624,
+  "text": "Alerta do Ministério da Saúde."
+ },
+ {
+  "i": 20,
+  "start": 48.989,
+  "end": 53.389,
+  "text": "Surtos de agressividade e febre alta na região metropolitana."
+ },
+ {
+  "i": 21,
+  "start": 53.754,
+  "end": 55.457,
+  "text": "Evitem contato físico."
+ },
+ {
+  "i": 22,
+  "start": 55.656,
+  "end": 57.846,
+  "text": "Permaneçam em locais fechados."
+ },
+ {
+  "i": 23,
+  "start": 58.604,
+  "end": 59.789,
+  "text": "Mais uma gripe."
+ },
+ {
+  "i": 24,
+  "start": 60.011,
+  "end": 62.469,
+  "text": "Na última eu fiquei rico vendendo álcool em gel."
+ },
+ {
+  "i": 25,
+  "start": 63.149,
+  "end": 64.909,
+  "text": "Aí o Seu Alberto entrou."
+ },
+ {
+  "i": 26,
+  "start": 65.149,
+  "end": 66.949,
+  "text": "Toda semana ele para aqui."
+ },
+ {
+  "i": 27,
+  "start": 67.229,
+  "end": 68.629,
+  "text": "Mas ele tava branco."
+ },
+ {
+  "i": 28,
+  "start": 68.829,
+  "end": 69.589,
+  "text": "Suando."
+ },
+ {
+  "i": 29,
+  "start": 69.789,
+  "end": 72.551,
+  "text": "Com um pano amarrado no braço, encharcado."
+ },
+ {
+  "i": 30,
+  "start": 74.451,
+  "end": 75.571,
+  "text": "Me vê um café, filho."
+ },
+ {
+  "i": 31,
+  "start": 76.051,
+  "end": 78.531,
   "text": "Um louco tentou abrir a porta do caminhão no pedágio."
  },
  {
-  "i": 35,
-  "start": 82.151,
-  "end": 83.544,
+  "i": 32,
+  "start": 78.851,
+  "end": 80.244,
   "text": "Me mordeu, acredita?"
+ },
+ {
+  "i": 33,
+  "start": 80.704,
+  "end": 83.626,
+  "text": "Seu Alberto, o senhor precisa de hospital."
+ },
+ {
+  "i": 34,
+  "start": 84.346,
+  "end": 86.266,
+  "text": "Hospital é na cidade, filho."
+ },
+ {
+  "i": 35,
+  "start": 86.586,
+  "end": 87.866,
+  "text": "E a cidade..."
+ },
+ {
+  "i": 36,
+  "start": 87.906,
+  "end": 89.094,
+  "text": "tá pior que eu."
+ },
+ {
+  "i": 37,
+  "start": 89.774,
+  "end": 91.854,
+  "text": "Ele pagou o café e foi embora."
+ },
+ {
+  "i": 38,
+  "start": 92.494,
+  "end": 93.9,
+  "text": "Dois minutos depois..."
+ },
+ {
+  "i": 39,
+  "start": 96.389,
+  "end": 97.129,
+  "text": "Mano..."
+ },
+ {
+  "i": 40,
+  "start": 97.203,
+  "end": 98.24,
+  "text": "isso foi ele."
+ },
+ {
+  "i": 41,
+  "start": 99.103,
+  "end": 101.823,
+  "text": "Quando a fumaça baixou, eu vi."
+ },
+ {
+  "i": 42,
+  "start": 101.903,
+  "end": 105.103,
+  "text": "Na beira do mato, bem onde a luz do posto acaba..."
+ },
+ {
+  "i": 43,
+  "start": 105.143,
+  "end": 106.543,
+  "text": "tinha gente parada."
+ },
+ {
+  "i": 44,
+  "start": 106.623,
+  "end": 107.983,
+  "text": "Olhando pra gente."
+ },
+ {
+  "i": 45,
+  "start": 108.023,
+  "end": 109.549,
+  "text": "Nenhum passava da luz."
+ },
+ {
+  "i": 46,
+  "start": 110.371,
+  "end": 111.26,
+  "text": "Lucas..."
+ },
+ {
+  "i": 47,
+  "start": 111.297,
+  "end": 113.557,
+  "text": "a lâmpada daquele poste tá queimando."
+ },
+ {
+  "i": 48,
+  "start": 114.444,
+  "end": 117.004,
+  "text": "Uma hora depois, bateram no vidro."
+ },
+ {
+  "i": 49,
+  "start": 117.244,
+  "end": 118.404,
+  "text": "Era o Seu Alberto."
+ },
+ {
+  "i": 50,
+  "start": 118.604,
+  "end": 119.364,
+  "text": "Inteiro."
+ },
+ {
+  "i": 51,
+  "start": 119.564,
+  "end": 120.484,
+  "text": "Sem sangue."
+ },
+ {
+  "i": 52,
+  "start": 120.684,
+  "end": 121.756,
+  "text": "Sem curativo."
+ },
+ {
+  "i": 53,
+  "start": 123.856,
+  "end": 124.976,
+  "text": "Me vê um café, filho."
+ },
+ {
+  "i": 54,
+  "start": 125.456,
+  "end": 127.936,
+  "text": "Um louco tentou abrir a porta do caminhão no pedágio."
+ },
+ {
+  "i": 55,
+  "start": 128.256,
+  "end": 129.649,
+  "text": "Me mordeu, acredita?"
+ },
+ {
+  "i": 56,
+  "start": 132.295,
+  "end": 134.775,
+  "text": "Segue a página pro episódio dois."
  }
 ]

@@ -1,212 +1,212 @@
 {
- "duration": 90.05,
+ "duration": 135.35,
  "lines": [
-  {
-   "id": "xl03",
-   "spk": "LUCAS",
-   "text": "[tenso, baixo] Aí passou um carro. Na contramão. Sem farol. Arrastando alguma coisa no para-choque.",
-   "start": 0.161,
-   "end": 6.274,
-   "file": "projects/turno-ep01/input/clips/l03_0038e23830.mp3"
-  },
   {
    "id": "l01",
    "spk": "LUCAS",
    "text": "[cansado, calmo] Mais uma noite de serviço. Três da manhã, cafeteira pingando, geladeira zumbindo. Eu repondo bolacha... e o Tico fazendo o que ele faz de melhor.",
-   "start": 9.4,
-   "end": 19.92,
+   "start": 6.1,
+   "end": 16.62,
    "file": "projects/turno-ep01/input/clips/l01_e2b361636f.mp3"
   },
   {
    "id": "t01",
    "spk": "TICO",
    "text": "[de boca cheia, brincalhão] Coxinha que passa da meia-noite é perda, Lucas. Eu tô salvando a empresa.",
-   "start": 20.22,
-   "end": 24.369,
+   "start": 16.92,
+   "end": 21.069,
    "file": "projects/turno-ep01/input/clips/t01_00621c0e2d_t1.08.wav"
   },
   {
    "id": "l02",
    "spk": "LUCAS",
    "text": "[calmo, desconfiado] Só que naquela noite a BR tava quieta demais. Duas horas sem passar um caminhão.",
-   "start": 24.869,
-   "end": 31.295,
+   "start": 21.569,
+   "end": 27.995,
    "file": "projects/turno-ep01/input/clips/l02_6038f767fb.mp3"
   },
   {
    "id": "t02",
    "spk": "TICO",
    "text": "[rindo] Pô, até os caminhoneiros tiraram folga. Só nós dois de otário aqui.",
-   "start": 31.595,
-   "end": 36.411,
+   "start": 28.295,
+   "end": 33.111,
    "file": "projects/turno-ep01/input/clips/t02_e1f2d124f4_t1.08.wav"
   },
   {
    "id": "l03",
    "spk": "LUCAS",
    "text": "[tenso, baixo] Aí passou um carro. Na contramão. Sem farol. Arrastando alguma coisa no para-choque.",
-   "start": 37.011,
-   "end": 43.124,
+   "start": 33.711,
+   "end": 39.824,
    "file": "projects/turno-ep01/input/clips/l03_0038e23830.mp3"
   },
   {
    "id": "t03",
    "spk": "TICO",
    "text": "[rindo nervoso] Isso aí era um... saco de lixo. Né?",
-   "start": 43.424,
-   "end": 47.357,
+   "start": 40.124,
+   "end": 44.057,
    "file": "projects/turno-ep01/input/clips/t03_15f83ac3f8_t1.08.wav"
   },
   {
    "id": "l04",
    "spk": "LUCAS",
    "text": "[seco] Não era.",
-   "start": 47.757,
-   "end": 49.167,
+   "start": 44.457,
+   "end": 45.867,
    "file": "projects/turno-ep01/input/clips/l04_cac5c2e086.mp3"
   },
   {
    "id": "tv1",
    "spk": "TV",
    "text": "Alerta do Ministério da Saúde. Surtos de agressividade e febre alta na região metropolitana. Evitem contato físico. Permaneçam em locais fechados.",
-   "start": 49.867,
-   "end": 61.16,
+   "start": 46.567,
+   "end": 57.86,
    "file": "projects/turno-ep01/input/clips/tv1_8ac73d07cd_radio_t1.05.wav"
   },
   {
    "id": "t04",
    "spk": "TICO",
    "text": "[debochado] Mais uma gripe. Na última eu fiquei rico vendendo álcool em gel.",
-   "start": 61.46,
-   "end": 65.769,
+   "start": 58.16,
+   "end": 62.469,
    "file": "projects/turno-ep01/input/clips/t04_b18115179f_t1.08.wav"
   },
   {
    "id": "l05",
    "spk": "LUCAS",
    "text": "[preocupado] Aí o Seu Alberto entrou. Toda semana ele para aqui. Mas ele tava branco. Suando. Com um pano amarrado no braço, encharcado.",
-   "start": 66.369,
-   "end": 75.851,
+   "start": 63.069,
+   "end": 72.551,
    "file": "projects/turno-ep01/input/clips/l05_e301bd62df.mp3"
   },
   {
    "id": "a01",
    "spk": "ALBERTO",
    "text": "[ofegante, cansado] Me vê um café, filho. Um louco tentou abrir a porta do caminhão no pedágio. Me mordeu, acredita?",
-   "start": 76.151,
-   "end": 83.544,
+   "start": 72.851,
+   "end": 80.244,
    "file": "projects/turno-ep01/input/clips/a01_2b41498d1a.mp3"
   },
   {
    "id": "l06",
    "spk": "LUCAS",
    "text": "[preocupado] Seu Alberto, o senhor precisa de hospital.",
-   "start": 83.844,
-   "end": 86.926,
+   "start": 80.544,
+   "end": 83.626,
    "file": "projects/turno-ep01/input/clips/l06_5f5433ac33.mp3"
   },
   {
    "id": "a02",
    "spk": "ALBERTO",
    "text": "[sombrio] Hospital é na cidade, filho. E a cidade... tá pior que eu.",
-   "start": 87.326,
-   "end": 92.394,
+   "start": 84.026,
+   "end": 89.094,
    "file": "projects/turno-ep01/input/clips/a02_a4d3292feb.mp3"
   },
   {
    "id": "l07",
    "spk": "LUCAS",
    "text": "[calmo, tenso] Ele pagou o café e foi embora. Dois minutos depois...",
-   "start": 92.994,
-   "end": 97.2,
+   "start": 89.694,
+   "end": 93.9,
    "file": "projects/turno-ep01/input/clips/l07_194b599019.mp3"
   },
   {
    "id": "t05",
    "spk": "TICO",
    "text": "[baixinho, sem graça] Mano... isso foi ele.",
-   "start": 98.8,
-   "end": 101.543,
+   "start": 95.5,
+   "end": 98.243,
    "file": "projects/turno-ep01/input/clips/t05_783dd135d3_t1.08.wav"
   },
   {
    "id": "l08",
    "spk": "LUCAS",
    "text": "[sussurrando] Quando a fumaça baixou, eu vi. Na beira do mato, bem onde a luz do posto acaba... tinha gente parada. Olhando pra gente. Nenhum passava da luz.",
-   "start": 102.243,
-   "end": 112.849,
+   "start": 98.943,
+   "end": 109.549,
    "file": "projects/turno-ep01/input/clips/l08_6343189543.mp3"
   },
   {
    "id": "t06",
    "spk": "TICO",
    "text": "[sussurrando] Lucas... a lâmpada daquele poste tá queimando.",
-   "start": 113.449,
-   "end": 116.864,
+   "start": 110.149,
+   "end": 113.564,
    "file": "projects/turno-ep01/input/clips/t06_3476940a5b_t1.08.wav"
   },
   {
    "id": "l09",
    "spk": "LUCAS",
    "text": "[tenso] Uma hora depois, bateram no vidro. Era o Seu Alberto. Inteiro. Sem sangue. Sem curativo.",
-   "start": 117.664,
-   "end": 125.056,
+   "start": 114.364,
+   "end": 121.756,
    "file": "projects/turno-ep01/input/clips/l09_5a6e5ed2d0.mp3"
   },
   {
    "id": "a03",
    "spk": "ALBERTO",
    "text": "[ofegante, cansado] Me vê um café, filho. Um louco tentou abrir a porta do caminhão no pedágio. Me mordeu, acredita?",
-   "start": 125.556,
-   "end": 132.949,
+   "start": 122.256,
+   "end": 129.649,
+   "file": "projects/turno-ep01/input/clips/a03_2b41498d1a.mp3"
+  },
+  {
+   "id": "xa03",
+   "spk": "ALBERTO",
+   "text": "[ofegante, cansado] Me vê um café, filho.",
+   "start": 0.8,
+   "end": 3.45,
    "file": "projects/turno-ep01/input/clips/a03_2b41498d1a.mp3"
   },
   {
    "id": "l10",
    "spk": "LUCAS",
    "text": "[sussurrando] Palavra por palavra. A mesma pausa. O mesmo acredita.",
-   "start": 133.449,
-   "end": 138.595,
+   "start": 130.149,
+   "end": 135.295,
    "file": "projects/turno-ep01/input/clips/l10_871464dc3f.mp3"
   },
   {
    "id": "t07",
    "spk": "TICO",
    "text": "[assustado] Ele... ele não tava no caminhão que bateu?",
-   "start": 138.895,
-   "end": 141.578,
+   "start": 135.595,
+   "end": 138.278,
    "file": "projects/turno-ep01/input/clips/t07_646b5e9f84_t1.08.wav"
   },
   {
    "id": "l11",
    "spk": "LUCAS",
    "text": "[tenso, rápido] Eu corri pro fundo pegar o cadeado. E lá do estoque, no escuro, eu ouvi:",
-   "start": 142.178,
-   "end": 146.698,
+   "start": 138.878,
+   "end": 143.398,
    "file": "projects/turno-ep01/input/clips/l11_8fed8c0274.mp3"
   },
   {
    "id": "t08",
    "spk": "TICO",
    "text": "[de boca cheia, brincalhão] Coxinha que passa da meia-noite é perda, Lucas. Eu tô salvando a empresa.",
-   "start": 147.298,
-   "end": 150.036,
+   "start": 143.998,
+   "end": 146.736,
    "file": "projects/turno-ep01/input/clips/t08_00621c0e2d_t1.08.wav"
   },
   {
    "id": "l12",
    "spk": "LUCAS",
    "text": "[sussurrando] Só que o Tico... tava do meu lado.",
-   "start": 150.836,
-   "end": 153.605,
+   "start": 147.536,
+   "end": 150.305,
    "file": "projects/turno-ep01/input/clips/l12_097526c997.mp3"
   },
   {
    "id": "cta",
    "spk": "LUCAS",
    "text": "[calmo] Segue a página pro episódio dois.",
-   "start": 157.005,
-   "end": 159.774,
+   "start": 132.055,
+   "end": 134.824,
    "file": "projects/turno-ep01/input/clips/cta_e216a0fe11.mp3"
   }
  ]
