@@ -1,80 +1,124 @@
-// TURNO DA MADRUGADA — palco 3D "PS1 / terror indie retrô":
-// cena renderizada em baixa resolução (1/3) num render target NEAREST, vértices "tremendo" (snap na grade de pixels),
-// sombreamento chapado (flat), neblina quase preta e um pós-processo próprio: quantização de cor + dithering ordenado
-// (Bayer 4x4) + grão + vinheta, ampliado sem suavização para o quadro final.
+// TURNO DA MADRUGADA — palco 3D "terror retrô PS1/PS2" (v2, direção de arte do usuário):
+// cena renderizada em 360x640 num render target NEAREST (profundidade float, sem z-fighting), vértices com snap leve
+// só nos objetos (piso/paredes/teto não "nadam"), sombreamento chapado, neblina exponencial que só começa a ~12 m
+// (lá fora), e um pós-processo próprio: dessaturação + tinta, quantização com dithering leve, aberração cromática,
+// tremida VHS por linha, scanlines CRT, vinheta e grão — ampliado sem suavização para o quadro final.
 import * as THREE from 'three';
 import { E, clamp, lerp, ease, key, noise } from '/engine/core.js';
 
-const SNAP = { value: new THREE.Vector2(120, 214) };
-// vértices presos na grade de pixels da tela baixa (o "tremido" clássico do PS1)
-export function snap(m) {
+export const RES = [360, 640];
+const SNAP = { value: new THREE.Vector2(RES[0] / 2, RES[1] / 2) };
+// neblina compartilhada: começa em uFogStart metros, cresce exponencialmente (densidade uFogDens)
+export const FOG = { start: { value: 12 }, dens: { value: 0.07 } };
+const FOG_FRAG = `#ifdef USE_FOG
+  float fogD = max(vFogDepth - uFogStart, 0.0);
+  float fogFactor = 1.0 - exp(-uFogDens * uFogDens * fogD * fogD);
+  gl_FragColor.rgb = mix(gl_FragColor.rgb, fogColor, clamp(fogFactor, 0.0, 1.0));
+#endif`;
+// patch: snap opcional de vértice (o "tremido" PS1) + neblina exponencial com início
+function patch(m, doSnap) {
   m.onBeforeCompile = (sh) => {
-    sh.uniforms.uSnap = SNAP;
-    sh.vertexShader = 'uniform vec2 uSnap;\n' + sh.vertexShader.replace('#include <project_vertex>', '#include <project_vertex>\n if (gl_Position.w > 0.0) { vec2 sp = floor((gl_Position.xy / gl_Position.w) * uSnap + 0.5) / uSnap; gl_Position.xy = sp * gl_Position.w; }');
+    sh.uniforms.uSnap = SNAP; sh.uniforms.uFogStart = FOG.start; sh.uniforms.uFogDens = FOG.dens;
+    if (doSnap) sh.vertexShader = 'uniform vec2 uSnap;\n' + sh.vertexShader.replace('#include <project_vertex>', '#include <project_vertex>\n if (gl_Position.w > 0.3) { vec2 sp = floor((gl_Position.xy / gl_Position.w) * uSnap + 0.5) / uSnap; gl_Position.xy = sp * gl_Position.w; }');
+    sh.fragmentShader = 'uniform float uFogStart; uniform float uFogDens;\n' + sh.fragmentShader.replace('#include <fog_fragment>', FOG_FRAG);
   };
-  m.customProgramCacheKey = () => 'ps1snap';
+  m.customProgramCacheKey = () => doSnap ? 'ps1snapfog' : 'ps1fog';
   return m;
 }
+export const snap = (m) => patch(m, true);
 const C = (c) => new THREE.Color(c);
-// material chapado com luz (Lambert + flat shading)
-export const lam = (c, o = {}) => snap(new THREE.MeshLambertMaterial({ color: C(c), flatShading: o.flat ?? true, map: o.map || null, emissive: C(o.emissive || '#000000'), emissiveIntensity: o.ei ?? 1, emissiveMap: o.emissiveMap || null, side: o.side ?? THREE.FrontSide, transparent: !!o.transparent, opacity: o.opacity ?? 1, depthWrite: o.depthWrite ?? true, fog: o.fog ?? true }));
+// material chapado com luz (Lambert + flat shading). o.fixo = sem snap (arquitetura grande)
+export const lam = (c, o = {}) => {
+  const m = new THREE.MeshLambertMaterial({ color: C(c), flatShading: o.flat ?? true, map: o.map || null, emissive: C(o.emissive || '#000000'), emissiveIntensity: o.ei ?? 1, emissiveMap: o.emissiveMap || null, side: o.side ?? THREE.FrontSide, transparent: !!o.transparent, opacity: o.opacity ?? 1, depthWrite: o.depthWrite ?? true, fog: o.fog ?? true, vertexColors: !!o.vc, alphaTest: o.alphaTest ?? 0 });
+  if (o.decal) { m.polygonOffset = true; m.polygonOffsetFactor = -2; m.polygonOffsetUnits = -4 * o.decal; }
+  return patch(m, !o.fixo);
+};
 // material que "brilha" (lâmpada, tela, vidro iluminado): não recebe luz
-export const luz = (c, o = {}) => snap(new THREE.MeshBasicMaterial({ color: C(c), map: o.map || null, fog: o.fog ?? true, transparent: !!o.transparent, opacity: o.opacity ?? 1, side: o.side ?? THREE.FrontSide, blending: o.add ? THREE.AdditiveBlending : THREE.NormalBlending, depthWrite: o.depthWrite ?? !o.add }));
-// textura de canvas pixelada (NEAREST)
+export const luz = (c, o = {}) => {
+  const m = new THREE.MeshBasicMaterial({ color: C(c), map: o.map || null, fog: o.fog ?? true, transparent: !!o.transparent, opacity: o.opacity ?? 1, side: o.side ?? THREE.FrontSide, blending: o.add ? THREE.AdditiveBlending : THREE.NormalBlending, depthWrite: o.depthWrite ?? !o.add, alphaTest: o.alphaTest ?? 0 });
+  if (o.decal) { m.polygonOffset = true; m.polygonOffsetFactor = -2; m.polygonOffsetUnits = -4 * o.decal; }
+  return patch(m, !o.fixo);
+};
+// textura de canvas pixelada (NEAREST na ampliação; mipmaps lineares entre níveis = piso sem cintilar ao longe)
 export function tex(w, h, draw, rep = null) {
   const c = document.createElement('canvas'); c.width = w; c.height = h; const g = c.getContext('2d'); g.imageSmoothingEnabled = false; draw(g, w, h);
-  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.magFilter = THREE.NearestFilter; t.minFilter = THREE.NearestMipmapNearestFilter; t.generateMipmaps = true;
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.magFilter = THREE.NearestFilter; t.minFilter = THREE.NearestMipmapLinearFilter; t.generateMipmaps = true;
   if (rep) { t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(...rep); }
   t.canvas = c; t.g = g; return t;
 }
+// ruído determinístico para pintar texturas
+export function rnd(seed) { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); }
+// mancha suave (sujeira, umidade) num canvas
+export function mancha(g, x, y, r, cor, a = 0.3) { const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, cor.replace('A', a)); gr.addColorStop(1, cor.replace('A', 0)); g.fillStyle = gr; g.fillRect(x - r, y - r, r * 2, r * 2); }
+
 // malhas
 export function box(w, h, d, m, x = 0, y = 0, z = 0) { const me = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m); me.position.set(x, y, z); return me; }
 export function cil(rt, rb, h, m, x = 0, y = 0, z = 0, seg = 6) { const me = new THREE.Mesh(new THREE.CylinderGeometry(rt, rb, h, seg), m); me.position.set(x, y, z); return me; }
-export function pl(w, h, m, x = 0, y = 0, z = 0) { const me = new THREE.Mesh(new THREE.PlaneGeometry(w, h), m); me.position.set(x, y, z); return me; }
+export function pl(w, h, m, x = 0, y = 0, z = 0, sw = 1, sh = 1) { const me = new THREE.Mesh(new THREE.PlaneGeometry(w, h, sw, sh), m); me.position.set(x, y, z); return me; }
+// caixa chanfrada (1 segmento de bisel): "low poly modelado", não cubo
+export function cbox(w, h, d, m, x = 0, y = 0, z = 0, r = 0.03) {
+  r = Math.min(r, w / 2 - 1e-3, h / 2 - 1e-3, d / 2 - 1e-3);
+  const s = new THREE.Shape(); const a = w / 2 - r, b = h / 2 - r;
+  s.moveTo(-a, -h / 2); s.lineTo(a, -h / 2); s.lineTo(w / 2, -b); s.lineTo(w / 2, b); s.lineTo(a, h / 2); s.lineTo(-a, h / 2); s.lineTo(-w / 2, b); s.lineTo(-w / 2, -b); s.closePath();
+  const geo = new THREE.ExtrudeGeometry(s, { depth: d - 2 * r, bevelEnabled: true, bevelThickness: r, bevelSize: 0, bevelSegments: 1, curveSegments: 1 });
+  geo.translate(0, 0, -(d - 2 * r) / 2); geo.computeVertexNormals();
+  { const p = geo.attributes.position, u = geo.attributes.uv; for (let i = 0; i < p.count; i++) u.setXY(i, p.getX(i) / w + 0.5, p.getY(i) / h + 0.5); }   // UV planar 0..1 (frente/trás)
+  const me = new THREE.Mesh(geo, m); me.position.set(x, y, z); return me;
+}
 
 const POS = {
-  uniforms: { tDiffuse: { value: null }, res: { value: new THREE.Vector2(240, 427) }, tempo: { value: 0 }, niveis: { value: 22 }, dither: { value: 1 }, grao: { value: 0.05 }, vinheta: { value: 0.55 }, fade: { value: 0 }, expo: { value: 1.25 }, sat: { value: 1.0 }, tint: { value: new THREE.Vector3(1, 1, 1) }, flash: { value: new THREE.Vector3(0, 0, 0) }, aberr: { value: 0.0 } },
+  uniforms: { tDiffuse: { value: null }, res: { value: new THREE.Vector2(RES[0], RES[1]) }, tempo: { value: 0 }, niveis: { value: 30 }, dither: { value: 0.7 }, grao: { value: 0.045 }, vinheta: { value: 0.5 }, fade: { value: 0 }, expo: { value: 1.25 }, sat: { value: 0.78 }, tint: { value: new THREE.Vector3(0.97, 1.0, 0.9) }, flash: { value: new THREE.Vector3(0, 0, 0) }, aberr: { value: 0.65 }, scan: { value: 0.2 }, vhs: { value: 0.35 }, gama: { value: 1.0 } },
   vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }',
-  fragmentShader: `uniform sampler2D tDiffuse; uniform vec2 res; uniform float tempo, niveis, dither, grao, vinheta, fade, expo, sat, aberr; uniform vec3 tint, flash; varying vec2 vUv;
+  fragmentShader: `uniform sampler2D tDiffuse; uniform vec2 res; uniform float tempo, niveis, dither, grao, vinheta, fade, expo, sat, aberr, scan, vhs, gama; uniform vec3 tint, flash; varying vec2 vUv;
   float b2(vec2 a){ a = floor(a); return fract(a.x * 0.5 + a.y * a.y * 0.75); }
   float bayer(vec2 a){ return b2(0.5 * a) * 0.25 + b2(a); }
   float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+  vec3 tom(vec3 c){ c = max(c * expo, 0.0); c = c / (1.0 + 0.18 * c); return pow(c, vec3(1.0 / (2.2 * gama))); }
   void main(){
-    vec2 px = floor(vUv * res); vec2 uv = (px + 0.5) / res;
-    vec3 c = texture2D(tDiffuse, uv).rgb;
-    if (aberr > 0.0) { c.r = texture2D(tDiffuse, uv + vec2(aberr, 0.0)).r; c.b = texture2D(tDiffuse, uv - vec2(aberr, 0.0)).b; }
-    c = max(c * expo, 0.0);
-    c = c / (1.0 + 0.18 * c);                       // ombro suave nas luzes
-    c = pow(c, vec3(1.0 / 2.2));                    // linear -> tela
+    float row = floor(vUv.y * res.y), fr = floor(tempo * 24.0);
+    // VHS: ondulação lenta por linha + uma faixa de "tracking" que desce devagar
+    float band = smoothstep(0.035, 0.0, abs(fract(vUv.y * 0.85 + tempo * 0.045) - 0.5));
+    float wob = vhs * (0.45 * sin(row * 0.09 + tempo * 2.3) + 0.35 * sin(row * 0.021 - tempo * 0.9) + 1.6 * band * (h(vec2(row, fr)) - 0.3));
+    vec2 uv0 = vUv + vec2(wob / res.x, 0.0);
+    vec2 px = floor(uv0 * res); vec2 uv = (px + 0.5) / res;
+    float ab = (aberr + 0.8 * band) / res.x;
+    vec3 c = vec3(texture2D(tDiffuse, uv + vec2(ab, 0.0)).r, texture2D(tDiffuse, uv).g, texture2D(tDiffuse, uv - vec2(ab, 0.0)).b);
+    c = tom(c);
     float l = dot(c, vec3(0.299, 0.587, 0.114)); c = mix(vec3(l), c, sat); c *= tint;
-    vec2 q = vUv - 0.5; q.y *= 1.15; c *= 1.0 - vinheta * smoothstep(0.18, 0.62, length(q));
-    c += (h(px + floor(tempo * 24.0) * vec2(17.0, 31.0)) - 0.5) * grao;
+    vec2 q = vUv - 0.5; q.y *= 1.1; c *= 1.0 - vinheta * smoothstep(0.2, 0.68, length(q));
+    c += (h(px + fr * vec2(17.0, 31.0)) - 0.5) * grao + band * 0.03;
     c += flash;
     float d = bayer(px) - 0.5;
     c = floor(c * niveis + 0.5 + d * dither) / niveis;
+    // scanlines CRT: a 2ª metade de cada linha baixa escurece (linhas de 2 px na saída 720x1280)
+    c *= 1.0 - scan * step(0.5, fract(vUv.y * res.y));
     c *= 1.0 - fade;
     gl_FragColor = vec4(clamp(c, 0.0, 1.0), 1.0);
   }` };
 
-// palcoPS1(T, { div: 3, fov, neblina, fogNear, fogFar, fundo })
+// palcoPS1(T, { fov, neblina, fogStart, fogDens, fundo })
 export function palcoPS1(T, o = {}) {
   const R = T.getRenderer();
-  const scene = new THREE.Scene(); scene.background = C(o.fundo ?? '#020305');
-  scene.fog = new THREE.Fog(C(o.neblina ?? '#03060a'), o.fogNear ?? 8, o.fogFar ?? 70);
-  const camera = new THREE.PerspectiveCamera(o.fov ?? 66, E.W / E.H, 0.04, 400); scene.add(camera);
-  const div = o.div ?? 3, w = Math.round(E.W * E.PX / div), h = Math.round(E.H * E.PX / div);
+  const scene = new THREE.Scene(); scene.background = C(o.fundo ?? '#0a1724');
+  scene.fog = new THREE.Fog(C(o.neblina ?? '#0c1a28'), 1, 1000);
+  FOG.start.value = o.fogStart ?? 12; FOG.dens.value = o.fogDens ?? 0.065;
+  const camera = new THREE.PerspectiveCamera(o.fov ?? 66, E.W / E.H, 0.1, 320); scene.add(camera);
+  const [w, h] = RES;
   SNAP.value.set(w / 2, h / 2);
   const rt = new THREE.WebGLRenderTarget(w, h, { type: THREE.HalfFloatType, minFilter: THREE.NearestFilter, magFilter: THREE.NearestFilter, depthBuffer: true, generateMipmaps: false });
+  rt.depthTexture = new THREE.DepthTexture(w, h); rt.depthTexture.type = THREE.FloatType;   // profundidade 32F: nada de z-fighting
   const pm = new THREE.ShaderMaterial({ uniforms: THREE.UniformsUtils.clone(POS.uniforms), vertexShader: POS.vertexShader, fragmentShader: POS.fragmentShader, depthTest: false, depthWrite: false });
   pm.uniforms.tDiffuse.value = rt.texture; pm.uniforms.res.value.set(w, h);
   const ps = new THREE.Scene(), pc = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1); const quad = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), pm); quad.frustumCulled = false; ps.add(quad);
   const U = pm.uniforms;
+  const fogCfg = [FOG.start.value, FOG.dens.value];
   const api = {
     scene, camera, rt, U, w, h,
     add: (...ob) => { ob.forEach(x => scene.add(x)); return ob[0]; },
-    render() { SNAP.value.set(w / 2, h / 2); const sm = R.shadowMap.enabled; R.shadowMap.enabled = false; R.setRenderTarget(rt); R.setClearColor(scene.background, 1); R.clear(); R.render(scene, camera); R.setRenderTarget(null); R.render(ps, pc); R.shadowMap.enabled = sm; },
-    dispose() { scene.traverse(x => { x.geometry?.dispose(); [].concat(x.material || []).forEach(m => { m.map?.dispose(); m.dispose(); }); }); rt.dispose(); pm.dispose(); },
+    render() { SNAP.value.set(w / 2, h / 2); FOG.start.value = fogCfg[0]; FOG.dens.value = fogCfg[1]; const sm = R.shadowMap.enabled, tm = R.toneMapping; R.shadowMap.enabled = false; R.toneMapping = THREE.NoToneMapping; R.setRenderTarget(rt); R.setClearColor(scene.background, 1); R.clear(); R.render(scene, camera); R.setRenderTarget(null); R.render(ps, pc); R.shadowMap.enabled = sm; R.toneMapping = tm; },
+    dispose() { scene.traverse(x => { x.geometry?.dispose(); [].concat(x.material || []).forEach(m => { m.map?.dispose(); m.dispose(); }); }); rt.depthTexture?.dispose(); rt.dispose(); pm.dispose(); },
     post(p = {}) { for (const k in p) { if (!U[k]) continue; if (U[k].value?.isVector3) U[k].value.set(...p[k]); else U[k].value = p[k]; } },
+    neblina(start, dens) { fogCfg[0] = start; fogCfg[1] = dens; },
   };
   return api;
 }
@@ -101,14 +145,24 @@ export function olhar(cam, T, R, o = {}) {
   cam.position.set(x, y, z);
   cam.rotation.order = 'YXZ'; cam.rotation.set(pitch, -yaw, roll);
   if (Math.abs(cam.fov - v.f) > 1e-3) { cam.fov = v.f; cam.updateProjectionMatrix(); }
-  return { vel, anda, yaw, pitch };
+  cam.updateMatrixWorld();
+  return { vel, anda, yaw, pitch, fase };
 }
 // projeta um ponto do mundo para coordenadas do quadro 1080x1920
 export function tela(cam, p) { const v = new THREE.Vector3(...p).project(cam); return [(v.x + 1) / 2 * E.W, (1 - v.y) / 2 * E.H, v.z]; }
-// "fala": abertura da boca a partir das palavras do personagem
-export function boca(T, spk) {
-  const w = E.words.find(w => T >= w.start - 0.02 && T <= w.end + 0.02 && (w.spk || '') === spk);
-  if (!w) return 0; return clamp(0.3 + 0.7 * Math.abs(Math.sin(T * 15.5)) * (0.6 + 0.4 * Math.sin(T * 4.7)));
+
+// ---------- fala: dirigida pelos tempos das falas (info.L.<id> = [início, fim]) ----------
+// devolve a abertura da boca 0..1 se T cai dentro de uma das falas `ids`; dentro da fala, fecha nas pausas entre palavras
+export function fala(T, L, ids) {
+  for (const id of ids) {
+    const r = L[id]; if (!r || T < r[0] - 0.05 || T > r[1] + 0.05) continue;
+    const ws = E.words.filter(w => w.start >= r[0] - 0.05 && w.end <= r[1] + 0.3);
+    let dentro = ws.length === 0;
+    for (const w of ws) if (T >= w.start - 0.03 && T <= w.end + 0.05) { dentro = true; break; }
+    const sil = 0.5 + 0.5 * Math.sin(T * 17.0 + 1.3 * Math.sin(T * 5.1));          // sílabas ~ 8/s
+    const env = 0.65 + 0.35 * Math.sin(T * 3.3 + 0.7);
+    return { ativo: true, k: dentro ? clamp(0.15 + 0.85 * sil * env) : 0.05 * sil, id };
+  }
+  return { ativo: false, k: 0 };
 }
-export const falando = (T, spk) => E.words.some(w => T >= w.start - 0.1 && T <= w.end + 0.25 && (w.spk || '') === spk);
 export { THREE };
