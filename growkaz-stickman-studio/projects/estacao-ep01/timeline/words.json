@@ -1,0 +1,923 @@
+{
+ "source": "elevenlabs:eleven_v4",
+ "words": [
+  {
+   "word": "O",
+   "start": 2.36,
+   "end": 2.52,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "que",
+   "start": 2.6,
+   "end": 2.68,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "é",
+   "start": 2.76,
+   "end": 2.84,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "isso?",
+   "start": 3.0,
+   "end": 3.8,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Nossa...",
+   "start": 5.926,
+   "end": 6.886,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "eu",
+   "start": 6.926,
+   "end": 6.966,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "tô",
+   "start": 7.046,
+   "end": 7.206,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "muito",
+   "start": 7.286,
+   "end": 7.526,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "apertada.",
+   "start": 7.566,
+   "end": 8.366,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Três",
+   "start": 8.566,
+   "end": 8.806,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "quarteirões",
+   "start": 8.886,
+   "end": 9.366,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "até",
+   "start": 9.446,
+   "end": 9.579,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "em",
+   "start": 9.633,
+   "end": 9.686,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "casa.",
+   "start": 9.819,
+   "end": 10.246,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Não",
+   "start": 10.406,
+   "end": 10.566,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "vou",
+   "start": 10.646,
+   "end": 10.726,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "aguentar.",
+   "start": 10.806,
+   "end": 11.686,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Metrô.",
+   "start": 13.116,
+   "end": 14.076,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Graças",
+   "start": 14.636,
+   "end": 15.116,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "a",
+   "start": 15.196,
+   "end": 15.276,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Deus.",
+   "start": 15.356,
+   "end": 16.076,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Todo",
+   "start": 16.316,
+   "end": 16.556,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "metrô",
+   "start": 16.676,
+   "end": 16.956,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "tem",
+   "start": 17.036,
+   "end": 17.116,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "banheiro...",
+   "start": 17.236,
+   "end": 18.076,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "né?",
+   "start": 18.196,
+   "end": 18.626,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Ai,",
+   "start": 24.786,
+   "end": 25.106,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "que",
+   "start": 25.186,
+   "end": 25.346,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "nojo...",
+   "start": 25.586,
+   "end": 26.346,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Papel",
+   "start": 26.546,
+   "end": 27.026,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "em",
+   "start": 27.106,
+   "end": 27.266,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "volta",
+   "start": 27.346,
+   "end": 27.586,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "do",
+   "start": 27.706,
+   "end": 27.826,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "vaso.",
+   "start": 27.986,
+   "end": 28.626,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Ninguém",
+   "start": 28.706,
+   "end": 29.186,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "morre",
+   "start": 29.266,
+   "end": 29.506,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "disso.",
+   "start": 29.666,
+   "end": 30.216,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Minha",
+   "start": 34.796,
+   "end": 34.956,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "vó",
+   "start": 35.036,
+   "end": 35.276,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "dizia",
+   "start": 35.316,
+   "end": 35.836,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "que",
+   "start": 35.996,
+   "end": 36.076,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "espelho",
+   "start": 36.236,
+   "end": 36.556,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "velho",
+   "start": 36.716,
+   "end": 37.116,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "guarda",
+   "start": 37.276,
+   "end": 37.476,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "o",
+   "start": 37.516,
+   "end": 37.596,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "último",
+   "start": 37.676,
+   "end": 38.156,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "rosto",
+   "start": 38.236,
+   "end": 38.636,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "que",
+   "start": 38.716,
+   "end": 38.796,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "viu...",
+   "start": 38.876,
+   "end": 39.476,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "e",
+   "start": 39.756,
+   "end": 39.916,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "que,",
+   "start": 39.996,
+   "end": 40.476,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "de",
+   "start": 40.516,
+   "end": 40.556,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "vez",
+   "start": 40.636,
+   "end": 40.796,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "em",
+   "start": 40.876,
+   "end": 41.036,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "quando,",
+   "start": 41.076,
+   "end": 41.836,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "devolve",
+   "start": 41.996,
+   "end": 42.396,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "o",
+   "start": 42.423,
+   "end": 42.449,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "rosto",
+   "start": 42.476,
+   "end": 42.716,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "errado.",
+   "start": 42.796,
+   "end": 43.586,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Quando",
+   "start": 45.066,
+   "end": 45.306,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "a",
+   "start": 45.386,
+   "end": 45.426,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "luz",
+   "start": 45.466,
+   "end": 45.706,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "voltou...",
+   "start": 45.906,
+   "end": 46.986,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "eu",
+   "start": 47.066,
+   "end": 47.226,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "jurei",
+   "start": 47.306,
+   "end": 47.786,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "que",
+   "start": 47.866,
+   "end": 47.946,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "o",
+   "start": 47.973,
+   "end": 47.999,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "meu",
+   "start": 48.026,
+   "end": 48.146,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "reflexo",
+   "start": 48.186,
+   "end": 48.706,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "demorou",
+   "start": 48.746,
+   "end": 49.146,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "meio",
+   "start": 49.306,
+   "end": 49.626,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "segundo",
+   "start": 49.706,
+   "end": 50.186,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "pra",
+   "start": 50.266,
+   "end": 50.426,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "piscar.",
+   "start": 50.466,
+   "end": 51.226,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "O",
+   "start": 52.656,
+   "end": 52.816,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "que",
+   "start": 52.896,
+   "end": 52.976,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "é",
+   "start": 53.056,
+   "end": 53.136,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "isso?",
+   "start": 53.296,
+   "end": 54.096,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Cadê",
+   "start": 57.721,
+   "end": 58.041,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "todo",
+   "start": 58.121,
+   "end": 58.361,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "mundo?",
+   "start": 58.441,
+   "end": 59.201,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Dez",
+   "start": 59.481,
+   "end": 59.641,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "minutos",
+   "start": 59.721,
+   "end": 60.041,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "atrás",
+   "start": 60.121,
+   "end": 60.601,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "essa",
+   "start": 60.681,
+   "end": 60.921,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "rua",
+   "start": 61.001,
+   "end": 61.161,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "era",
+   "start": 61.241,
+   "end": 61.321,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "um",
+   "start": 61.361,
+   "end": 61.401,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "formigueiro.",
+   "start": 61.521,
+   "end": 62.601,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Ninguém",
+   "start": 65.513,
+   "end": 65.731,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "falava",
+   "start": 65.811,
+   "end": 66.211,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "nada.",
+   "start": 66.371,
+   "end": 67.051,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Eles",
+   "start": 67.331,
+   "end": 67.571,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "só",
+   "start": 67.651,
+   "end": 67.731,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "viravam",
+   "start": 67.811,
+   "end": 68.211,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "a",
+   "start": 68.291,
+   "end": 68.371,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "cabeça.",
+   "start": 68.478,
+   "end": 69.251,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Devagar.",
+   "start": 69.491,
+   "end": 70.451,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Me",
+   "start": 70.691,
+   "end": 70.771,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "seguindo.",
+   "start": 70.851,
+   "end": 71.801,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Moça...",
+   "start": 73.721,
+   "end": 74.841,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "você",
+   "start": 74.881,
+   "end": 75.241,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "é",
+   "start": 75.281,
+   "end": 75.321,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "daqui?",
+   "start": 75.401,
+   "end": 76.281,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "Claro",
+   "start": 76.934,
+   "end": 77.254,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "que",
+   "start": 77.334,
+   "end": 77.414,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "sou.",
+   "start": 77.574,
+   "end": 78.134,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Velha",
+   "start": 78.924,
+   "end": 79.124,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "doida.",
+   "start": 79.364,
+   "end": 80.324,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Então",
+   "start": 82.374,
+   "end": 82.694,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "por",
+   "start": 82.774,
+   "end": 83.014,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "que",
+   "start": 83.094,
+   "end": 83.174,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "tá",
+   "start": 83.254,
+   "end": 83.414,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "com",
+   "start": 83.494,
+   "end": 83.574,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "cheiro",
+   "start": 83.734,
+   "end": 83.974,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "de",
+   "start": 84.054,
+   "end": 84.134,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "lá?",
+   "start": 84.214,
+   "end": 84.854,
+   "spk": "SENHORA"
+  },
+  {
+   "word": "Cheguei,",
+   "start": 88.598,
+   "end": 89.278,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "vida!",
+   "start": 89.318,
+   "end": 90.038,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Nossa,",
+   "start": 90.278,
+   "end": 90.958,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "hoje",
+   "start": 91.078,
+   "end": 91.398,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "foi",
+   "start": 91.438,
+   "end": 91.558,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "estranho...",
+   "start": 91.718,
+   "end": 92.758,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Silêncio.",
+   "start": 94.839,
+   "end": 95.919,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Nem",
+   "start": 96.199,
+   "end": 96.359,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "a",
+   "start": 96.399,
+   "end": 96.439,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "geladeira",
+   "start": 96.519,
+   "end": 97.159,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "fazia",
+   "start": 97.239,
+   "end": 97.479,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "barulho.",
+   "start": 97.559,
+   "end": 98.269,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Aquela",
+   "start": 100.849,
+   "end": 101.249,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "não",
+   "start": 101.329,
+   "end": 101.489,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "era",
+   "start": 101.569,
+   "end": 101.809,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "eu.",
+   "start": 101.889,
+   "end": 102.449,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "E",
+   "start": 102.769,
+   "end": 102.849,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "o",
+   "start": 102.889,
+   "end": 102.929,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Diego...",
+   "start": 103.009,
+   "end": 103.969,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "tava",
+   "start": 104.009,
+   "end": 104.129,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "olhando",
+   "start": 104.209,
+   "end": 104.529,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "pra",
+   "start": 104.609,
+   "end": 104.689,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "câmera",
+   "start": 104.769,
+   "end": 105.089,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "igual",
+   "start": 105.169,
+   "end": 105.489,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "àquelas",
+   "start": 105.529,
+   "end": 105.809,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "pessoas",
+   "start": 105.889,
+   "end": 106.209,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "da",
+   "start": 106.289,
+   "end": 106.369,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "rua.",
+   "start": 106.449,
+   "end": 107.169,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "Cheguei,",
+   "start": 108.999,
+   "end": 109.679,
+   "spk": "SOSIA"
+  },
+  {
+   "word": "vida!",
+   "start": 109.719,
+   "end": 110.519,
+   "spk": "SOSIA"
+  },
+  {
+   "word": "Segue",
+   "start": 112.831,
+   "end": 113.151,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "a",
+   "start": 113.231,
+   "end": 113.311,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "página...",
+   "start": 113.351,
+   "end": 114.271,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "pro",
+   "start": 114.351,
+   "end": 114.431,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "episódio",
+   "start": 114.511,
+   "end": 114.991,
+   "spk": "LIVIA"
+  },
+  {
+   "word": "dois.",
+   "start": 115.151,
+   "end": 115.951,
+   "spk": "LIVIA"
+  }
+ ]
+}

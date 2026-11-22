@@ -43,7 +43,7 @@ As mãos dela forram o vaso com papel. Som de papel rasgando. A porta da cabine 
 ## 4. O ESPELHO (0:45–1:02) · a virada
 Ela abre a porta da cabine, lava as mãos e se olha no espelho enferrujado. A lâmpada dá umas picadas.
 
-**LÍVIA (pensando, serena, reflexiva):** Engraçado... a gente passa a vida correndo pra chegar em casa. E nunca para pra pensar... se a casa ainda tá esperando a gente.
+**LÍVIA (pensando, misteriosa):** Minha vó dizia que espelho velho guarda o último rosto que viu... e que, de vez em quando, devolve o rosto errado.
 
 A luz apaga por meio segundo e volta.
 
@@ -100,8 +100,8 @@ Corte seco pro preto. Cartão VHS: **"CONTINUA... · EP. 2 →"** e a chamada pr
 ---
 
 ## Vozes
-- **Lívia:** voz feminina brasileira, suave e pensativa. Escolher entre 4 amostras: Livia, Gabby, Dara ou Carla.
-- **Senhora:** voz de idosa grave e arrastada, com um leve efeito (tom mais baixo e um eco curto).
+- **Lívia:** voz feminina brasileira, suave e pensativa. Voz escolhida: Carla (ElevenLabs). Pensamentos com eco leve, falas em voz alta sem efeito.
+- **Senhora:** voz de idosa rouca (Lucinda), grave e arrastada, com um leve efeito (tom mais baixo e um eco curto).
 - **"Cheguei, vida" da sósia:** a mesma voz da Lívia, gerada com tom alegre demais e um efeito sutil. Não gasta voz extra.
 - **Custo estimado:** ~1.300 caracteres no ElevenLabs. Já foram gastos ~600 nas amostras.
 

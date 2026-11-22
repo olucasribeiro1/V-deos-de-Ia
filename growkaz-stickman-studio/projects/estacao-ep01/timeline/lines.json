@@ -1,0 +1,149 @@
+{
+ "duration": 117.487,
+ "lines": [
+  {
+   "id": "x00",
+   "spk": "LIVIA",
+   "text": "[sussurrando, com medo] O que é isso?",
+   "start": 2.2,
+   "end": 3.846,
+   "file": "projects/estacao-ep01/input/clips/x00_1fbf0b3a04.mp3"
+  },
+  {
+   "id": "l01",
+   "spk": "LIVIA",
+   "text": "[apressada, aflita] Nossa... eu tô muito apertada. Três quarteirões até em casa. Não vou aguentar.",
+   "start": 5.846,
+   "end": 11.756,
+   "file": "projects/estacao-ep01/input/clips/l01_1859df2a4e_pensamento.wav"
+  },
+  {
+   "id": "l02",
+   "spk": "LIVIA",
+   "text": "[aliviada] Metrô. Graças a Deus. Todo metrô tem banheiro... né?",
+   "start": 12.956,
+   "end": 18.626,
+   "file": "projects/estacao-ep01/input/clips/l02_d3c78b557a_pensamento.wav"
+  },
+  {
+   "id": "l03",
+   "spk": "LIVIA",
+   "text": "[enojada] Ai, que nojo... Papel em volta do vaso. Ninguém morre disso.",
+   "start": 24.626,
+   "end": 30.216,
+   "file": "projects/estacao-ep01/input/clips/l03_c9e62985e7_pensamento.wav"
+  },
+  {
+   "id": "l04",
+   "spk": "LIVIA",
+   "text": "[pensativa, misteriosa] Minha vó dizia que espelho velho guarda o último rosto que viu... e que, de vez em quando, devolve o rosto errado.",
+   "start": 34.716,
+   "end": 43.586,
+   "file": "projects/estacao-ep01/input/clips/l04_29be2fdf88_pensamento.wav"
+  },
+  {
+   "id": "l05",
+   "spk": "LIVIA",
+   "text": "[desconfiada] Quando a luz voltou... eu jurei que o meu reflexo demorou meio segundo pra piscar.",
+   "start": 44.986,
+   "end": 51.296,
+   "file": "projects/estacao-ep01/input/clips/l05_3fe8882fb6_pensamento.wav"
+  },
+  {
+   "id": "l06",
+   "spk": "LIVIA",
+   "text": "[sussurrando, com medo] O que é isso?",
+   "start": 52.496,
+   "end": 54.141,
+   "file": "projects/estacao-ep01/input/clips/l06_1fbf0b3a04.mp3"
+  },
+  {
+   "id": "l07",
+   "spk": "LIVIA",
+   "text": "[confusa, baixinho] Cadê todo mundo? Dez minutos atrás essa rua era um formigueiro.",
+   "start": 57.641,
+   "end": 62.671,
+   "file": "projects/estacao-ep01/input/clips/l07_6c0d3950fe_pensamento.wav"
+  },
+  {
+   "id": "l08",
+   "spk": "LIVIA",
+   "text": "[tensa, sussurrando] Ninguém falava nada. Eles só viravam a cabeça. Devagar. Me seguindo.",
+   "start": 65.171,
+   "end": 71.801,
+   "file": "projects/estacao-ep01/input/clips/l08_6d7a3baa83_pensamento.wav"
+  },
+  {
+   "id": "s01",
+   "spk": "SENHORA",
+   "text": "[voz arrastada, sinistra] Moça... você é daqui?",
+   "start": 73.401,
+   "end": 76.374,
+   "file": "projects/estacao-ep01/input/clips/s01_00517a41ec_estranha.wav"
+  },
+  {
+   "id": "l09",
+   "spk": "LIVIA",
+   "text": "[firme, irritada] Claro que sou.",
+   "start": 76.774,
+   "end": 78.184,
+   "file": "projects/estacao-ep01/input/clips/l09_68e5d5473f.mp3"
+  },
+  {
+   "id": "l10",
+   "spk": "LIVIA",
+   "text": "[debochada] Velha doida.",
+   "start": 78.484,
+   "end": 80.394,
+   "file": "projects/estacao-ep01/input/clips/l10_253a35669e_pensamento.wav"
+  },
+  {
+   "id": "s02",
+   "spk": "SENHORA",
+   "text": "[sorrindo, sinistra] Então por que tá com cheiro de lá?",
+   "start": 81.094,
+   "end": 84.858,
+   "file": "projects/estacao-ep01/input/clips/s02_127979a576_estranha.wav"
+  },
+  {
+   "id": "l11",
+   "spk": "LIVIA",
+   "text": "[aliviada, em voz alta] Cheguei, vida! Nossa, hoje foi estranho...",
+   "start": 88.358,
+   "end": 92.799,
+   "file": "projects/estacao-ep01/input/clips/l11_00f351b8d4.mp3"
+  },
+  {
+   "id": "l12",
+   "spk": "LIVIA",
+   "text": "[baixinho, inquieta] Silêncio. Nem a geladeira fazia barulho.",
+   "start": 94.599,
+   "end": 98.269,
+   "file": "projects/estacao-ep01/input/clips/l12_3bf89ff714_pensamento.wav"
+  },
+  {
+   "id": "l13",
+   "spk": "LIVIA",
+   "text": "[voz falhando, com medo] Aquela não era eu. E o Diego... tava olhando pra câmera igual àquelas pessoas da rua.",
+   "start": 100.769,
+   "end": 107.239,
+   "file": "projects/estacao-ep01/input/clips/l13_1858dd7045_pensamento.wav"
+  },
+  {
+   "id": "d01",
+   "spk": "SOSIA",
+   "text": "[alegre demais] Cheguei, vida!",
+   "start": 108.839,
+   "end": 110.591,
+   "file": "projects/estacao-ep01/input/clips/d01_61c746ba20_sosia.wav"
+  },
+  {
+   "id": "cta",
+   "spk": "LIVIA",
+   "text": "[sussurrando] Segue a página... pro episódio dois.",
+   "start": 112.591,
+   "end": 115.987,
+   "file": "projects/estacao-ep01/input/clips/cta_b04cc1d717.mp3"
+  }
+ ]
+}

@@ -40,6 +40,13 @@ def words_from_alignment(al):
     return out
 
 
+FX = {
+    "pensamento": "aecho=0.8:0.6:40|70:0.25|0.15,lowpass=f=7000,volume=1.1",              # voz dentro da cabeça
+    "estranha": "asetrate=44100*0.86,aresample=44100,atempo=1/0.86,aecho=0.8:0.7:90:0.3,lowpass=f=5000",  # mais grave e errada
+    "sosia": "asetrate=44100*1.04,aresample=44100,atempo=1/1.04,chorus=0.6:0.9:45:0.4:0.3:2,aecho=0.8:0.5:30:0.2",  # quase igual, mas não
+}
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--project", required=True); ap.add_argument("--verify", action="store_true"); a = ap.parse_args()
     P = a.project; R = load_json(os.path.join(P, "story", "roteiro.json")); clips = os.path.join(P, "input", "clips"); os.makedirs(clips, exist_ok=True)
@@ -59,6 +66,10 @@ def main():
         if ln.get("fx") == "radio":
             fxf = mp3[:-4] + "_radio.wav"
             if not os.path.exists(fxf): subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", mp3, "-f", "lavfi", "-i", "anoisesrc=color=white:amplitude=0.18", "-filter_complex", "[0:a]highpass=f=600,lowpass=f=2400,acrusher=bits=7:mode=log:mix=0.6,tremolo=f=11:d=0.55,volume=1.6[v];[1:a]highpass=f=1200,lowpass=f=5000[n];[v][n]amix=inputs=2:duration=first:normalize=0", fxf], check=True)
+            mp3 = fxf
+        elif ln.get("fx") in FX:                                                             # efeitos que mantêm a duração (timestamps continuam valendo)
+            fxf = mp3[:-4] + f"_{ln['fx']}.wav"
+            if not os.path.exists(fxf): subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", mp3, "-af", FX[ln["fx"]], fxf], check=True)
             mp3 = fxf
         if abs(tempo - 1) > 1e-3:
             tf = mp3.rsplit(".", 1)[0] + f"_t{tempo:.2f}.wav"

@@ -1,0 +1,30 @@
+{
+ "model": "eleven_v4",
+ "_nota": "A Estação Ep1. Lívia = Carla (pensamentos com fx pensamento; falas em voz alta sem fx). x00 = cópia exata de l06 (cold open).",
+ "tail": 1.5,
+ "voices": {
+  "LIVIA": {"id": "ZP7ctTmcovXNUmOj695o", "tempo": 1.0, "settings": {"stability": 0.45, "similarity_boost": 0.8, "speed": 0.97}},
+  "SENHORA": {"id": "fs3nd19KF2GO2hLTzkBm", "tempo": 1.0, "settings": {"stability": 0.4, "similarity_boost": 0.8, "speed": 0.85}},
+  "SOSIA": {"id": "ZP7ctTmcovXNUmOj695o", "tempo": 1.0, "settings": {"stability": 0.3, "similarity_boost": 0.8, "speed": 1.0}}
+ },
+ "lines": [
+  {"id": "x00", "spk": "LIVIA", "gap": 2.2, "text": "[sussurrando, com medo] O que é isso?"},
+  {"id": "l01", "spk": "LIVIA", "gap": 2.0, "fx": "pensamento", "text": "[apressada, aflita] Nossa... eu tô muito apertada. Três quarteirões até em casa. Não vou aguentar."},
+  {"id": "l02", "spk": "LIVIA", "gap": 1.2, "fx": "pensamento", "text": "[aliviada] Metrô. Graças a Deus. Todo metrô tem banheiro... né?"},
+  {"id": "l03", "spk": "LIVIA", "gap": 6.0, "fx": "pensamento", "text": "[enojada] Ai, que nojo... Papel em volta do vaso. Ninguém morre disso."},
+  {"id": "l04", "spk": "LIVIA", "gap": 4.5, "fx": "pensamento", "text": "[pensativa, misteriosa] Minha vó dizia que espelho velho guarda o último rosto que viu... e que, de vez em quando, devolve o rosto errado."},
+  {"id": "l05", "spk": "LIVIA", "gap": 1.4, "fx": "pensamento", "text": "[desconfiada] Quando a luz voltou... eu jurei que o meu reflexo demorou meio segundo pra piscar."},
+  {"id": "l06", "spk": "LIVIA", "gap": 1.2, "text": "[sussurrando, com medo] O que é isso?"},
+  {"id": "l07", "spk": "LIVIA", "gap": 3.5, "fx": "pensamento", "text": "[confusa, baixinho] Cadê todo mundo? Dez minutos atrás essa rua era um formigueiro."},
+  {"id": "l08", "spk": "LIVIA", "gap": 2.5, "fx": "pensamento", "text": "[tensa, sussurrando] Ninguém falava nada. Eles só viravam a cabeça. Devagar. Me seguindo."},
+  {"id": "s01", "spk": "SENHORA", "gap": 1.6, "fx": "estranha", "text": "[voz arrastada, sinistra] Moça... você é daqui?"},
+  {"id": "l09", "spk": "LIVIA", "gap": 0.4, "text": "[firme, irritada] Claro que sou."},
+  {"id": "l10", "spk": "LIVIA", "gap": 0.3, "fx": "pensamento", "text": "[debochada] Velha doida."},
+  {"id": "s02", "spk": "SENHORA", "gap": 0.7, "fx": "estranha", "text": "[sorrindo, sinistra] Então por que tá com cheiro de lá?"},
+  {"id": "l11", "spk": "LIVIA", "gap": 3.5, "text": "[aliviada, em voz alta] Cheguei, vida! Nossa, hoje foi estranho..."},
+  {"id": "l12", "spk": "LIVIA", "gap": 1.8, "fx": "pensamento", "text": "[baixinho, inquieta] Silêncio. Nem a geladeira fazia barulho."},
+  {"id": "l13", "spk": "LIVIA", "gap": 2.5, "fx": "pensamento", "text": "[voz falhando, com medo] Aquela não era eu. E o Diego... tava olhando pra câmera igual àquelas pessoas da rua."},
+  {"id": "d01", "spk": "SOSIA", "gap": 1.6, "fx": "sosia", "text": "[alegre demais] Cheguei, vida!"},
+  {"id": "cta", "spk": "LIVIA", "gap": 2.0, "text": "[sussurrando] Segue a página... pro episódio dois."}
+ ]
+}
