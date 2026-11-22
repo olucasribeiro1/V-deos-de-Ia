@@ -143,7 +143,7 @@ function moto() {
 export function rua(st, o = {}) {
   const S = st.scene, outro = !!o.outro, R = rnd(outro ? 31 : 31), M = { carros: [], pedestres: [], postes: [], outro };
   // luz geral
-  M.hemi = new THREE.HemisphereLight(new THREE.Color(outro ? '#3a4a44' : '#4a4060'), new THREE.Color(outro ? '#0a0e0c' : '#1a120c'), outro ? 0.55 : 0.75); S.add(M.hemi);
+  M.hemi = new THREE.HemisphereLight(new THREE.Color(outro ? '#3a4a44' : '#4a4060'), new THREE.Color(outro ? '#0a0e0c' : '#1a120c'), outro ? 0.85 : 0.75); S.add(M.hemi);
   // céu noturno: brilho de cidade (laranja) ou chumbo esverdeado
   { const c = outro ? ['#020403', '#0a100e', '#18221e'] : ['#04060e', '#141428', '#3a2a28']; const ceu = new THREE.Mesh(new THREE.SphereGeometry(200, 12, 8), new THREE.MeshBasicMaterial({ side: THREE.BackSide, fog: false, map: tex(4, 64, (g) => { const gr = g.createLinearGradient(0, 0, 0, 64); gr.addColorStop(0, c[0]); gr.addColorStop(0.35, c[1]); gr.addColorStop(0.5, c[2]); gr.addColorStop(1, c[0]); g.fillStyle = gr; g.fillRect(0, 0, 4, 64); }) })); S.add(ceu); }
   // chão
@@ -246,7 +246,7 @@ export function rua(st, o = {}) {
     const gg = new THREE.BufferGeometry(); gg.setAttribute('position', new THREE.BufferAttribute(pos, 3)); M.poeira = new THREE.Points(gg, new THREE.PointsMaterial({ color: new THREE.Color('#9aa894'), size: 0.035, transparent: true, opacity: 0.75 })); S.add(M.poeira);
   }
   // luz de recorte que acompanha a Lívia (deixa ela e os parados legíveis)
-  M.recorte = new THREE.PointLight(new THREE.Color(outro ? '#8ab0a4' : '#ffd8b0'), outro ? 5 : 4, 6, 1.3); S.add(M.recorte);
+  M.recorte = new THREE.PointLight(new THREE.Color(outro ? '#a8c8bc' : '#ffd8b0'), outro ? 9 : 5, 7, 1.2); S.add(M.recorte);
   return M;
 }
 

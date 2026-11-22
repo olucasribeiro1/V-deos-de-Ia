@@ -30,8 +30,9 @@ reg('A', { kind: '3d',
       [5.75, { p: (T) => { const p = q(T); return [p.x + 3.4, 1.5, p.z + 1.7]; }, m: (T) => { const p = q(T); return [p.x, 1.25, p.z]; }, f: 42 }],
       [8.4, { p: (T) => { const p = q(T); return [p.x + 1.3, 1.6, p.z + 0.75]; }, m: H, f: 34 }],
       [11.4, { p: (T) => { const p = q(T); return [p.x + 1.1, 1.58, p.z + 0.6]; }, m: H, f: 30 }],
-      [12.5, { p: (T) => { const p = q(T); return [p.x - 1.3, 1.78, p.z - 0.75]; }, m: [10.9, 2.5, 3.6], f: 40 }],
-      [13.9, { p: (T) => { const p = q(T); return [p.x - 1.2, 1.76, p.z - 0.7]; }, m: [10.9, 2.4, 3.6], f: 38 }],
+      [12.05, { p: (T) => { const p = q(T); return [p.x + 0.1, 1.8, p.z + 1.5]; }, m: (T) => { const p = q(T); return [p.x + 0.3, 1.45, p.z]; }, f: 42 }],
+      [12.6, { p: (T) => { const p = q(T); return [p.x - 1.3, 1.95, p.z - 0.6]; }, m: [10.9, 2.5, 3.6], f: 40 }],
+      [13.9, { p: (T) => { const p = q(T); return [p.x - 1.2, 1.95, p.z - 0.6]; }, m: [10.9, 2.4, 3.6], f: 38 }],
       [14.6, { p: (T) => { const p = q(T); return [p.x + 1.15, 1.58, p.z + 0.85]; }, m: H, f: 32 }],
       [16.6, { p: (T) => { const p = q(T); return [p.x + 0.8, 1.6, p.z + 1.0]; }, m: H, f: 32 }],
       [17.4, { p: [10.0, 2.4, 1.0], m: (T) => { const p = q(T); return [p.x, p.y + 1.2, p.z]; }, f: 46 }],
@@ -166,7 +167,7 @@ reg('C', { kind: '3d',
       [24.9, { p: [-0.5, 1.62, 1.3], m: (T) => { const p = q(T); return [p.x, 1.5, p.z]; }, f: 46 }],
       [25.4, { p: (T) => { const p = q(T); return orbita(p, 1.0, 0.25, 1.6); }, m: (T) => { const p = q(T); return [p.x, 1.52, p.z]; }, f: 34 }],
       [26.4, { p: (T) => { const p = q(T); return orbita(p, 1.0, 0.3, 1.6); }, m: (T) => { const p = q(T); return [p.x, 1.48, p.z]; }, f: 36 }],
-      [27.2, { p: [-0.4, 1.7, 2.9], m: [1.0, 1.2, 1.95], f: 46 }],
+      [27.2, { p: [-0.6, 1.6, 0.85], m: [0.9, 1.2, 1.95], f: 46 }],
       [27.7, { p: [1.62, 1.72, 1.4], m: [1.75, 0.45, 1.98], f: 48 }],
       [29.2, { p: [1.62, 1.72, 1.4], m: [1.72, 0.48, 1.98], f: 44 }],
       [29.5, { p: [2.05, 1.5, 2.35], m: [1.22, 1.48, 1.93], f: 36 }],
@@ -174,6 +175,7 @@ reg('C', { kind: '3d',
       [30.4, { p: [-0.9, 1.55, 3.6], m: [0.8, 1.1, 1.9], f: 44 }],
       [31.8, { p: [-1.0, 1.55, 3.7], m: [0.8, 1.1, 1.9], f: 42 }],
     ];
+    const fill = new THREE.PointLight(new THREE.Color('#e0f0d8'), 1.3, 3, 1.4); fill.position.set(0, 0.3, 0); st.camera.add(fill);
     return { stage: st, B, L, R, rs, tj, t, K };
   },
   draw(s, lt, info) {
@@ -211,7 +213,7 @@ reg('D', { kind: '3d',
     const K = [
       [31.3, { p: [-1.7, 1.75, 3.9], m: [0.7, 1.1, 1.9], f: 50 }],
       [32.7, { p: [-1.6, 1.72, 3.7], m: [0.7, 1.1, 1.9], f: 48 }],
-      [33.6, { p: [0.45, 1.7, 1.95], m: [-0.4, 1.35, 0.4], f: 48 }],
+      [33.6, { p: [-1.3, 1.65, 2.7], m: [-0.4, 1.3, 0.6], f: 46 }],
       [34.6, { p: [0.4, 1.7, 1.7], m: REF, f: 36 }],
       [38.5, { p: [0.12, 1.66, 1.42], m: REF, f: 26 }],
       [43.0, { p: [-0.05, 1.64, 1.28], m: [REF[0], 1.52, REF[2]], f: 17 }],
@@ -286,28 +288,29 @@ reg('E', { kind: '3d',
     const H = (TT) => { const p = q(TT); return [p.x, p.y + OLHO, p.z]; };
     const SEN = [-2.0, 1.44, 1.0], LIV = [-1.0, OLHO, 1.0];
     const K = [
-      [55.9, { p: [10.6, 1.9, 2.0], m: (T) => { const p = q(T); return [p.x, p.y + 1.3, p.z]; }, f: 44 }],
-      [57.3, { p: [12.7, 1.95, 2.6], m: [3, 1.5, -2.2], f: 52 }],
+      [55.9, { p: [10.9, 1.7, 2.0], m: [14.6, -0.7, 2.0], f: 46 }],
+      [56.95, { p: [10.9, 1.7, 2.1], m: [13.4, 0.3, 2.0], f: 46 }],
+      [57.7, { p: [12.7, 1.95, 2.6], m: [3, 1.5, -2.2], f: 52 }],
       [59.3, { p: [12.6, 1.95, 2.55], m: [3, 1.4, -2.6], f: 48 }],
       [59.9, { p: (T) => orbita(q(T), 1.05, 0.2, 1.6), m: H, f: 32 }],
       [60.7, { p: (T) => orbita(q(T), 1.1, 0.25, 1.6), m: H, f: 32 }],
-      [61.6, { p: (T) => { const p = q(T); return [p.x - 2.6, 1.35, p.z - 1.0]; }, m: H, f: 40 }],
-      [62.6, { p: (T) => { const p = q(T); return [p.x + 1.4, 1.85, p.z + 0.4]; }, m: [9.4, 3.4, -0.15], f: 40 }],
-      [64.3, { p: (T) => { const p = q(T); return [p.x + 1.3, 1.85, p.z + 0.4]; }, m: [9.4, 3.4, -0.15], f: 20 }],
+      [61.6, { p: (T) => { const p = q(T); return [p.x - 2.4, 1.5, p.z - 0.9]; }, m: (T) => { const p = q(T); return [p.x, 1.2, p.z]; }, f: 44 }],
+      [62.6, { p: (T) => { const p = q(T); return [p.x + 2.3, 1.75, p.z + 1.3]; }, m: [9.4, 3.2, -0.15], f: 44 }],
+      [64.3, { p: (T) => { const p = q(T); return [p.x + 2.3, 1.75, p.z + 1.3]; }, m: [9.4, 3.3, -0.15], f: 34 }],
       [65.2, { p: [1.6, 1.55, -1.7], m: (T) => { const p = q(T); return [p.x, 1.35, p.z]; }, f: 44 }],
       [67.6, { p: [1.8, 1.5, -1.6], m: (T) => { const p = q(T); return [p.x, 1.35, p.z]; }, f: 42 }],
       [68.2, { p: [0.75, 1.42, 2.35], m: [0.6, 1.34, 3.5], f: 34 }],
       [70.0, { p: [0.8, 1.42, 2.4], m: [0.6, 1.34, 3.5], f: 30 }],
       [70.6, { p: (T) => { const p = q(T); return orbita(p, -1.3, 0.35, 1.72); }, m: (T) => { const p = q(T); return [p.x - 2.5, 1.35, p.z - 0.2]; }, f: 44 }],
-      [72.4, { p: [0.15, 1.7, 1.35], m: SEN, f: 40 }],
-      [73.4, { p: [-1.05, 1.5, 0.95], m: SEN, f: 30 }],
-      [76.4, { p: [-1.12, 1.48, 0.97], m: SEN, f: 22 }],
-      [76.7, { p: [-2.0, 1.55, 1.05], m: LIV, f: 30 }],
-      [80.4, { p: [-1.95, 1.55, 1.05], m: LIV, f: 26 }],
-      [80.9, { p: [-1.05, 1.5, 0.98], m: SEN, f: 28 }],
-      [84.9, { p: [-1.25, 1.47, 1.0], m: SEN, f: 15 }],
-      [85.2, { p: [-2.0, 1.55, 1.05], m: LIV, f: 30 }],
-      [86.6, { p: [-1.2, 1.65, 0.2], m: [-3.5, 1.4, 2.2], f: 44 }],
+      [72.4, { p: [0.5, 1.72, -0.15], m: SEN, f: 40 }],
+      [73.4, { p: [-0.75, 1.6, 1.32], m: SEN, f: 30 }],
+      [76.4, { p: [-0.8, 1.58, 1.3], m: SEN, f: 23 }],
+      [76.7, { p: [-2.25, 1.55, 0.7], m: LIV, f: 30 }],
+      [80.4, { p: [-2.2, 1.55, 0.72], m: LIV, f: 26 }],
+      [80.9, { p: [-0.75, 1.6, 1.32], m: SEN, f: 28 }],
+      [84.9, { p: [-0.85, 1.55, 1.25], m: SEN, f: 15 }],
+      [85.3, { p: [0.6, 1.65, 0.4], m: [-2.0, 1.3, 1.6], f: 42 }],
+      [86.6, { p: [0.4, 1.65, 0.6], m: [-3.4, 1.3, 2.2], f: 42 }],
     ];
     return { stage: st, M, L, tj, parados, sen, ssb, tsen, t, K, q };
   },
@@ -336,6 +339,91 @@ reg('E', { kind: '3d',
       vive(sen, T, Lx, ['s01', 's02'], [[70, 'fixa'], [Lx.s02[0] - 0.3, 'sorrisoMorto']], { semPisca: true, boca: 0.55, semCabeca: true }); sen.braco('D', 0.1, 0.05, 0.2); }
     ruaVive(s.M, T, [L.position.x, 0, L.position.z]);
     cam3(st.camera, T, s.K, { tremor: T > 81 && T < 85 ? 0.25 : 0 });
-    post(st, T, { expo: 1.38, tint: [0.86, 1.02, 0.94], sat: 0.6, vinheta: 0.55 });
+    post(st, T, { expo: 1.75, tint: [0.86, 1.02, 0.94], sat: 0.62, vinheta: 0.5 });
+  },
+});
+
+// ====================== G — o sobradinho na Mooca: portão, chave, porta ======================
+import { fachada, sala } from '/series/estacao/casa.js';
+reg('G', { kind: '3d',
+  init(T, info) {
+    const st = palco(T, { neblina: '#0e1018', fogStart: 12, fogDens: 0.05 }); const M = fachada(st); const L = livia(st);
+    const a = passo(info, 0); const tj = trajeto([[0.15, -1.7], [0.15, -0.4], [0.2, 1.4], [0.15, 2.45]], a[0] - 0.4, a[1], a[2]);
+    const K = [
+      [86.0, { p: [1.3, 1.75, -3.4], m: [0.1, 1.35, 1.5], f: 44 }],
+      [87.3, { p: [0.9, 1.75, -0.6], m: [0.1, 1.3, 3.0], f: 42 }],
+      [88.4, { p: [0.75, 1.7, 0.4], m: [0.05, 1.25, 3.0], f: 38 }],
+    ];
+    return { stage: st, M, L, tj, K };
+  },
+  draw(s, lt, info) {
+    const T = info.globalT, st = s.stage, L = s.L, Lx = info.L;
+    anda(L, s.tj, T, { ryFim: 0 }); pe(L);
+    s.M.portao.rotation.y = -1.3 * ease.inOut(prog(T, 86.3, 86.9));
+    if (T > 87.35 && T < 88.2) L.alcanca('D', [0.4, 1.0, 2.9], { punho: [-0.3, 0, 0.4], dedos: 0.7 });
+    s.M.porta.rotation.y = -1.1 * ease.inOut(prog(T, 87.95, 88.6));
+    vive(L, T, Lx, [], [[86, 'desconfia'], [87.4, 'alivio']]); L.respira(T, 2);
+    s.M.recorte.position.set(L.position.x + 1, 2.2, L.position.z - 1.2);
+    cam3(st.camera, T, s.K);
+    post(st, T, { expo: 1.5, tint: [1.02, 0.98, 0.94], sat: 0.8, vinheta: 0.5 });
+  },
+});
+
+// ====================== H — dentro de casa: "Cheguei, vida!", silêncio, o porta-retrato, a chave na porta (l11–d01) ======================
+reg('H', { kind: '3d',
+  init(T, info) {
+    const st = palco(T, { neblina: '#0a0a10', fogStart: 30, fogDens: 0.01 }); const M = sala(st, T); const L = livia(st), Lx = info.L;
+    const [a, b, c] = [passo(info, 0), passo(info, 1), passo(info, 2)];
+    const tj = [trajeto([[0.1, -0.5], [0.25, 1.3]], a[0], a[1], a[2]), trajeto([[0.25, 1.3], [0.15, 2.8]], b[0], b[1], b[2]), trajeto([[0.15, 2.8], [1.0, 3.35], [1.38, 3.72]], c[0], c[1], c[2])];
+    const t = { nossa: W('nossa', Lx.l11), sil: W('silêncio', Lx.l12), gel: W('geladeira', Lx.l12), aquela: W('aquela', Lx.l13), diego: W('diego', Lx.l13), cam: W('câmera', Lx.l13), pessoas: W('pessoas', Lx.l13) };
+    const q = (TT) => (TT < tj[1].t0 ? tj[0] : TT < tj[2].t0 ? tj[1] : tj[2]).at(TT);
+    const H = (TT) => { const p = q(TT); return [p.x, OLHO, p.z]; };
+    const FOTO = M.fotoPos, DUP = [0.1, 1.5, -0.45];
+    const K = [
+      [88.2, { p: [0.55, 1.55, 3.1], m: [0.15, 1.35, 0.2], f: 44 }],
+      [89.6, { p: [0.6, 1.55, 2.9], m: H, f: 36 }],
+      [92.6, { p: [0.55, 1.56, 2.6], m: H, f: 30 }],
+      [93.3, { p: [-0.6, 1.5, 1.4], m: [0.6, 2.05, 5.0], f: 34 }],
+      [94.2, { p: [-0.6, 1.5, 1.4], m: [2.5, 1.0, 2.5], f: 36 }],
+      [95.0, { p: (T) => orbita(q(T), -1.4, 0.6, 1.9), m: (T) => { const p = q(T); return [p.x - 0.3, 1.35, p.z + 2.5]; }, f: 44 }],
+      [96.8, { p: (T) => orbita(q(T), -1.35, 0.6, 1.9), m: [-1.2, 1.2, 5.0], f: 40 }],
+      [98.3, { p: (T) => orbita(q(T), -1.3, 0.6, 1.88), m: [-1.2, 1.2, 5.0], f: 38 }],
+      [98.9, { p: [2.2, 1.5, 4.5], m: H, f: 42 }],
+      [100.6, { p: [2.15, 1.5, 4.45], m: H, f: 36 }],
+      [101.1, { p: [1.47, 1.42, 4.28], m: FOTO, f: 30 }],
+      [103.3, { p: [1.48, 1.4, 4.36], m: [FOTO[0] - 0.055, FOTO[1] + 0.05, FOTO[2]], f: 18 }],
+      [104.6, { p: [1.5, 1.4, 4.36], m: [FOTO[0] + 0.06, FOTO[1] + 0.06, FOTO[2]], f: 15 }],
+      [105.4, { p: [1.5, 1.4, 4.36], m: [FOTO[0] + 0.06, FOTO[1] + 0.06, FOTO[2]], f: 14 }],
+      [105.9, { p: [1.75, 1.56, 4.45], m: [1.36, 1.5, 3.72], f: 32 }],
+      [107.2, { p: [1.75, 1.56, 4.45], m: [1.36, 1.5, 3.72], f: 30 }],
+      [107.9, { p: [1.95, 1.6, 4.65], m: [0.9, 1.4, 2.4], f: 40 }],
+      [109.0, { p: [2.35, 1.62, 4.4], m: [0.2, 1.45, 0.2], f: 34 }],
+      [110.7, { p: [2.4, 1.62, 4.3], m: DUP, f: 22 }],
+    ];
+    return { stage: st, M, L, tj, t, K };
+  },
+  draw(s, lt, info) {
+    const T = info.globalT, st = s.stage, L = s.L, M = s.M, Lx = info.L, t = s.t;
+    const k = T < s.tj[1].t0 ? 0 : T < s.tj[2].t0 ? 1 : 2;
+    anda(L, s.tj[k], T, { ryFim: k === 2 ? 0 : undefined }); pe(L);
+    // a chave: maçaneta gira, porta abre e "ela" aparece no vão
+    const abre = ease.inOut(prog(T, 108.35, 109.3)), fecha = 1 - ease.inOut(prog(T, 89.3, 89.6));
+    M.porta.rotation.y = T < 90 ? -1.5 * fecha * (T > 88.2 ? 1 : 0) : -1.25 * abre;
+    M.macaneta.rotation.z = T > 107.45 && T < 108.4 ? -0.6 * Math.sin(Math.PI * prog(T, 107.45, 108.4)) : 0;
+    M.fora.visible = M.porta.rotation.y < -0.05; M.sosia.visible = T > 108.5; M.luzSosia.intensity = 2.6 * ease.inOut(prog(T, 108.5, 109.2));
+    if (M.sosia.visible) { const d = M.sosia; d.parado(); d.braco('D', 0.2, 0.15, 0.4); d.braco('E', 0.9, 0.1, 1.2, 0.7); d.olhaPara([L.position.x, OLHO, L.position.z], 1, 0.1); d.position.z = lerp(-0.6, -0.2, ease.out(prog(T, 108.6, 109.6)));
+      vive(d, T, Lx, ['d01'], [[108, { ...{ by: 0.3, eo: 1.5, ms: 1, dente: 1, mw: 1.2 } }]], { semPisca: true, boca: 0.6 }); }
+    // ela: alívio -> inquieta -> a foto -> pânico, vira a cabeça pra porta
+    if (T > 107.6) L.olhaPara([0.1, 1.5, 0], 1.3, 0.35 * ease.inOut(prog(T, 107.6, 108.4)));
+    else if (k === 2 || T > 99.8) L.olhaPara([1.5, 1.27, 4.73], 1.0, 0.1);
+    else if (T > 96.7 && T < 98.6) L.olhaPara([-1.2, 1.2, 5.0], 1.0, 0.2);
+    else if (T > 92.9 && T < 94.6) L.olhaPara([0.6, 2.05, 5.0], 1.0, 0.2); else L.cab.rotation.set(0, 0, 0);
+    const ex = [[88, 'alivio'], [t.nossa, { ...{ by: 0.25, bi: 0.3, eo: 0.8, ms: 0.2 } }], [92.9, 'pensativa'], [t.sil, 'desconfia'], [t.gel, { ...{ by: 0.5, bi: 0.7, eo: 1.1, ms: -0.2 } }], [99.0, 'desconfia'],
+      [t.aquela - 0.4, 'medo'], [t.diego, { ...{ by: 0.9, bi: 1, eo: 1.25, ms: -0.5, mo: 0.12 } }], [107.6, 'susto'], [108.5, 'panico']];
+    vive(L, T, Lx, ['l11'], ex, { boca: 0.8 }); L.respira(T, T > 100 ? 3 : 1.2);
+    M.ponteiroG.rotation.z = -Math.floor(T) * 0.1047;
+    M.recorte.position.set(L.position.x + Math.sin(L.rotation.y) * 0.8 - 0.3, 1.9, L.position.z + Math.cos(L.rotation.y) * 0.8);
+    cam3(st.camera, T, s.K, { tremor: T > 107.5 ? 0.35 : 0, mao: T > 101 && T < 105.5 ? 0.3 : 1 });
+    post(st, T, { expo: 1.6, tint: [1.04, 0.97, 0.9], sat: 0.85, vinheta: 0.55 });
   },
 });
