@@ -334,7 +334,7 @@ export const S16: React.FC<ShotP> = (P) => {
   return (
     <AbsoluteFill>
       <Cam {...c}>
-        <CityTop fr={fr} houses={kf(fr, [wf('L9', 20), P.b], [0, 0.6])} />
+        <CityTop fr={fr} houses={kf(fr, [wf('L9', 17), wf('L9', 19) + 15], [0, 0.6])} />
       </Cam>
       <Tag x={jx} y={jy} text="JOANES" k={ap(fr, wf('L9', 17))} size={36} color="#ffffff" solid />
       <Tag x={ix} y={iy} text="IPITANGA" k={ap(fr, wf('L9', 19))} size={36} color="#ffffff" solid />
