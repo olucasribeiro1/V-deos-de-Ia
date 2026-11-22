@@ -23,18 +23,18 @@ const CauseBoard: React.FC<ShotP & {n: number; lineId: string; word: number; int
   const boardK = p.intro ? fadeIn(fr, 0, 12) : 1;
   const point = kf(fr, [hit - 6, hit + 6], [0, 1], smooth);
   return (
-    <Cam2D d={p.dur} zoom={[1.0, 1.05]} pan={p.n % 2 ? [-20, 0, 10, 0] : [20, 0, -10, 0]} origin={[540, 900]} ease={sine}>
+    <Cam2D d={p.dur} zoom={[1.0, 1.035]} pan={p.n % 2 ? [-8, 0, 8, 0] : [8, 0, -8, 0]} origin={[540, 940]} ease={sine}>
       <Studio t={t + p.n * 4} />
       <Presenter
         absOffset={ABS0 + p.from}
-        x={290}
+        x={300}
         y={2080}
         height={1320}
         upperOnly
         pose={{shR: lerp(10, 80, point), elR: lerp(0, -25, point), shL: -8, elL: 0, facing: 0.25, headTilt: 2}}
         expr={{smile: 0.4, lookX: lerp(0, 0.5, point)}}
       />
-      <Board x={560} y={560} w={480} h={760} title="CAUSAS" step={on > 0.5 || !p.intro ? `${p.n}/4` : undefined} k={boardK}>
+      <Board x={548} y={570} w={474} h={750} title="CAUSAS" step={on > 0.5 || !p.intro ? `${p.n}/4` : undefined} k={boardK}>
         {CAUSES.map((c, i) => {
           const done = i + 1 < p.n;
           const cur = i + 1 === p.n;
@@ -238,23 +238,23 @@ export const STap6: React.FC<ShotP> = (p) => {
   const fr = useCurrentFrame();
   const t = fr / 30;
   return (
-    <Cam2D d={p.dur} zoom={[1.1, 1.0]} origin={[540, 1000]} ease={sine}>
+    <Cam2D d={p.dur} zoom={[1.06, 1.0]} origin={[540, 1000]} ease={sine}>
       <AbsoluteFill style={{background: 'linear-gradient(#fbe9cf, #f3d9b4)'}}>
         <Svg>
-          <rect x={0} y={1180} width={1080} height={800} fill="#d9b98c" />
-          <rect x={0} y={1180} width={1080} height={20} fill="#b8966a" />
+          <rect x={0} y={1330} width={1080} height={700} fill="#d9b98c" />
+          <rect x={0} y={1330} width={1080} height={20} fill="#b8966a" />
           {/* wall tap */}
           <rect x={120} y={640} width={60} height={60} rx={10} fill="#8d9aa5" />
           <path d="M150,700 L150,760 Q150,800 190,800 L260,800 L260,840 L180,840 Q110,840 110,770 L110,700 Z" fill="#b9c4cc" />
           <circle cx={150} cy={630} r={34} fill="#4fa8d8" />
           {[0, 1, 2].map((i) => {
             const ph = ((t * 2 + i / 3) % 1 + 1) % 1;
-            return <rect key={i} x={248} y={846 + ph * 220} width={14} height={30} rx={7} fill={AQUA} opacity={1 - ph * 0.5} />;
+            return <rect key={i} x={248} y={846 + ph * 130} width={14} height={30} rx={7} fill={AQUA} opacity={1 - ph * 0.5} />;
           })}
           {Array.from({length: 10}).map((_, i) => {
             const arrived = i < 6;
-            const x = 300 + (i % 5) * 160;
-            const y = i < 5 ? 1120 : 1440;
+            const x = 255 + (i % 5) * 150;
+            const y = i < 5 ? 1060 : 1260;
             const k = fadeIn(fr, 2 + i * 3, 10 + i * 3);
             return arrived ? (
               <g key={i} opacity={k}>
@@ -267,7 +267,7 @@ export const STap6: React.FC<ShotP> = (p) => {
             );
           })}
         </Svg>
-        <BigText x={540} y={700} text="6 / 10" k={fadeIn(fr, 6, 16)} size={170} color={BLUE} sub="CHEGAM NA TORNEIRA" />
+        <BigText x={600} y={680} text="6 / 10" k={fadeIn(fr, 6, 16)} size={170} color={BLUE} sub="CHEGAM NA TORNEIRA" />
       </AbsoluteFill>
     </Cam2D>
   );

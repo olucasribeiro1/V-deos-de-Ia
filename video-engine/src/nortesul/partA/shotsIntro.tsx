@@ -114,7 +114,7 @@ export const SSalvador: React.FC<ShotP> = (p) => {
   const pin = kf(fr, [ev(p, 'L2', 32) - 8, ev(p, 'L2', 32) + 4], [0, 1], easeOut);
   return (
     <AbsoluteFill>
-      <GlobeShot t={t} rot={rot} tilt={tilt} zoom={z} cy={960} brazil={0.55} pin={pin} drift={-fr * 1.5} />
+      <GlobeShot t={t} rot={rot} tilt={tilt} zoom={z} cy={960} brazil={0.3} pin={pin} drift={-fr * 1.5} />
       <Chip x={540} y={1700} text="SALVADOR · BAHIA" k={fadeIn(fr, ev(p, 'L2', 32), ev(p, 'L2', 32) + 8)} color={YEL} fg="#141414" size={44} />
     </AbsoluteFill>
   );
@@ -169,7 +169,7 @@ const BottleGrid: React.FC<{fr: number; reveal: number; dim: number; fresh: numb
       const s = lerp(0.4, 1, easeOut(k));
       const col = isFresh ? lerp(0, 1, fresh) > 0.5 ? '#7fdcff' : SALT : SALT;
       return (
-        <g key={i} transform={`translate(${x},${y}) scale(${s}) translate(${-x},${-y})`} opacity={isFresh || half ? 1 : lerp(1, 0.35, dim)}>
+        <g key={i} transform={`translate(${x},${y}) scale(${s}) translate(${-x},${-y})`} opacity={isFresh || half ? 1 : lerp(1, 0.55, dim)}>
           <Bottle x={x} y={y} s={70} color={col} glow={isFresh ? fresh * (0.8 + 0.2 * Math.sin(t * 5)) : 0} />
           {half && fresh > 0.5 && (
             <g>

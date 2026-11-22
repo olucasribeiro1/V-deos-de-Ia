@@ -24,7 +24,7 @@ export const SFaucet: React.FC<ShotP> = (p) => {
   const splash = fr - (nada + 12);
   const hiss = kf(fr, [14, 20, 34], [0, 1, 0], smooth);
   return (
-    <Cam2D d={p.dur} zoom={[1.0, 1.1]} origin={[640, 1000]} ease={sine}>
+    <Cam2D d={p.dur} zoom={[1.28, 1.4]} origin={[600, 900]} ease={sine}>
       <AbsoluteFill style={{background: 'linear-gradient(#cfe6ee, #b6d4de)'}}>
         <Svg>
           {/* wall tiles */}
@@ -55,22 +55,23 @@ export const SFaucet: React.FC<ShotP> = (p) => {
               <stop offset="1" stopColor="#6c7884" />
             </linearGradient>
           </defs>
+          {/* sleeve + palm (behind the lever) */}
+          <path d={`M${end.x + 40},${end.y - 60} L1180,${end.y + 230} L1180,${end.y + 470} L${end.x + 40},${end.y + 50} Z`} fill="#e0a92a" />
+          <path d={`M${end.x + 40},${end.y + 30} L1180,${end.y + 420} L1180,${end.y + 470} L${end.x + 40},${end.y + 50} Z`} fill="#a8731a" />
+          <rect x={end.x + 40} y={end.y - 66} width={60} height={122} rx={22} fill="#c69a2a" />
+          <ellipse cx={end.x + 6} cy={end.y - 14} rx={62} ry={52} fill="#a86a43" />
           {/* lever */}
           <g>
             <line x1={piv.x} y1={piv.y} x2={end.x} y2={end.y} stroke="#8d9aa5" strokeWidth={40} strokeLinecap="round" />
             <line x1={piv.x} y1={piv.y - 8} x2={end.x} y2={end.y - 8} stroke="#eef3f6" strokeWidth={10} strokeLinecap="round" opacity={0.8} />
             <circle cx={piv.x} cy={piv.y} r={34} fill="#c3ccd3" stroke="#7c8893" strokeWidth={6} />
           </g>
-          {/* Davi's hand + mustard sleeve on the lever */}
-          <g>
-            <path d={`M${end.x + 70},${end.y + 40} L1160,${end.y + 330} L1160,${end.y + 560} L${end.x + 30},${end.y + 150} Z`} fill="#e0a92a" />
-            <path d={`M${end.x + 30},${end.y + 150} L1160,${end.y + 560} L1160,${end.y + 600} L${end.x + 20},${end.y + 175} Z`} fill="#a8731a" />
-            <rect x={end.x + 6} y={end.y + 30} width={130} height={110} rx={30} transform={`rotate(24 ${end.x + 70} ${end.y + 85})`} fill="#c69a2a" />
-            <ellipse cx={end.x + 10} cy={end.y + 12} rx={78} ry={58} fill="#a86a43" />
+          {/* fingers wrapped over the lever */}
+          <g transform={`rotate(${ang} ${end.x} ${end.y})`}>
             {[0, 1, 2, 3].map((i) => (
-              <ellipse key={i} cx={end.x - 52 + i * 26} cy={end.y - 30 + Math.abs(i - 1.5) * 4} rx={16} ry={26} fill="#b97a52" stroke="#7a4529" strokeWidth={3} />
+              <rect key={i} x={end.x - 52 + i * 27} y={end.y - 14} width={25} height={46} rx={12} fill="#b97a52" stroke="#7a4529" strokeWidth={3} />
             ))}
-            <ellipse cx={end.x + 62} cy={end.y - 26} rx={18} ry={34} transform={`rotate(-30 ${end.x + 62} ${end.y - 26})`} fill="#c98b5f" />
+            <ellipse cx={end.x - 58} cy={end.y - 26} rx={16} ry={30} transform={`rotate(-50 ${end.x - 58} ${end.y - 26})`} fill="#c98b5f" stroke="#7a4529" strokeWidth={3} />
           </g>
           {/* air puffs */}
           {hiss > 0 &&
@@ -229,9 +230,12 @@ export const SReservoir: React.FC<ShotP> = (p) => {
   const fr = useCurrentFrame();
   const t = fr / 30;
   return (
-    <Cam2D d={p.dur} zoom={[1.0, 1.12]} pan={[0, 40, 0, -20]} origin={[540, 1150]} ease={sine}>
+    <Cam2D d={p.dur} zoom={[1.0, 1.12]} pan={[0, 20, 0, -10]} origin={[540, 1000]} ease={sine}>
       <AbsoluteFill style={{background: 'linear-gradient(#9fd0f0 0%, #d9ecf4 40%, #f3e6c8 60%)'}}>
         <Svg>
+          <rect x={-100} y={1000} width={1300} height={1000} fill="#c8a37a" />
+          <Cracks x={-60} y={1300} w={1200} h={700} seed="resb" color="#9a7550" width={5} cell={140} />
+          <g transform="translate(0,-250)">
           <circle cx={860} cy={560} r={80} fill="#fff7d6" />
           {/* hills */}
           <path d="M-100,1000 Q150,760 420,930 Q640,800 860,900 Q1020,820 1200,960 L1200,1200 L-100,1200 Z" fill="#7fae6a" />
@@ -252,8 +256,9 @@ export const SReservoir: React.FC<ShotP> = (p) => {
           ))}
           {/* old high-water line */}
           <path d="M-40,1180 Q540,1110 1120,1180" stroke="#ffffff" strokeWidth={4} strokeDasharray="18 14" fill="none" opacity={0.7} />
+          </g>
         </Svg>
-        <Chip x={260} y={1080} text="NÍVEL NORMAL" k={fadeIn(fr, 10, 18)} color="rgba(255,255,255,0.9)" fg={BLUE} size={30} />
+        <Chip x={260} y={850} text="NÍVEL NORMAL" k={fadeIn(fr, 10, 18)} color="rgba(255,255,255,0.9)" fg={BLUE} size={30} />
         <HudTag x={540} y={600} label="SISTEMA CANTAREIRA · SP" value="2015" k={fadeIn(fr, 4, 14)} align="center" size={110} />
       </AbsoluteFill>
     </Cam2D>
