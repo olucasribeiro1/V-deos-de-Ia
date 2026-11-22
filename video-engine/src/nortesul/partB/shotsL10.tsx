@@ -13,7 +13,7 @@ export const S18: React.FC<ShotP> = (P) => {
     <AbsoluteFill>
       <div style={{position: 'absolute', inset: 0, transform: `scale(${lerp(1.08, 1.0, sm(p))})`, transformOrigin: '50% 60%'}}>
         <SalvadorBG t={fr} rain={0} pan={-220 + p * 40} />
-        <Presenter absOffset={B0} x={500} y={2050} height={1550} upperOnly pose={{shR: lerp(10, -150, finger), elR: lerp(-10, 20, finger), facing: 0.1}} expr={{smile: 0.15, browRaise: 0.35}} />
+        <Presenter absOffset={B0} x={500} y={2050} height={1550} upperOnly pose={{shR: lerp(8, 150, finger), elR: lerp(-8, 15, finger), facing: 0.1}} expr={{smile: 0.15, browRaise: 0.35}} />
       </div>
       <Vignette op={0.3} />
     </AbsoluteFill>
@@ -27,7 +27,7 @@ const WX = 380; // well x
 const WBOT = 1010; // well screen bottom
 /** fresh/salt interface depth at x; adv = inland advance (px), cone = upconing under the well */
 const iface = (x: number, adv: number, cone: number) => {
-  const base = x >= SHORE + adv ? 700 + (x - SHORE - adv) * -0.0 : 700 + (SHORE + adv - x) * 0.9;
+  const base = 700 + Math.max(0, SHORE + adv - x) * 0.9;
   const y = Math.min(1320, Math.max(700, base)) - cone * Math.exp(-(((x - WX) / 90) ** 2));
   return y;
 };
@@ -71,8 +71,9 @@ const Section: React.FC<{fr: number; pump: number; adv: number; upcone: number; 
       {/* sand texture over the aquifer */}
       <rect x={-500} y={GROUND} width={2200} height={760} fill="url(#sand)" />
       {/* sea floor line */}
-      <path d={`M${SHORE - 20},${GROUND + 10} Q${SHORE + 30},${GROUND + 6} ${SHORE + 80},${GROUND + 70} L1700,${GROUND + 160}`} stroke="#c9a46a" strokeWidth={6} fill="none" />
-      <path d={`M${SHORE + 80},${GROUND + 70} L1700,${GROUND + 160} L1700,${GROUND + 10} Z`} fill="#1f6fa8" />
+      <path d={`M${SHORE + 80},${GROUND + 70} L1700,${GROUND + 330} L1700,${GROUND + 10} L${SHORE - 20},${GROUND + 10} Q${SHORE + 30},${GROUND + 6} ${SHORE + 80},${GROUND + 70} Z`} fill="#1f6fa8" />
+      <path d={`M${SHORE - 20},${GROUND + 10} Q${SHORE + 30},${GROUND + 6} ${SHORE + 80},${GROUND + 70} L1700,${GROUND + 330}`} stroke="#c9a46a" strokeWidth={6} fill="none" />
+      <path d={`M${SHORE - 400},${GROUND + 10} q30,-8 60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0`} transform={`translate(${400 + (fr % 60) - 60},0)`} stroke="#bfe6ff" strokeWidth={4} fill="none" />
       {/* bedrock */}
       <rect x={-500} y={1400} width={2200} height={1000} fill="#6f6a66" />
       <path d="M-500,1400 L1700,1400" stroke="#4e4a47" strokeWidth={6} />
@@ -132,7 +133,7 @@ const SecShot: React.FC<SecP & {labels: 'surface' | 'pump' | 'intrusion' | 'stam
       {labels !== 'surface' && (
         <>
           <Note x={fx} y={fy} text="ÁGUA DOCE" k={ap(fr, P.a + 2)} size={30} color="#0b3a5e" align="left" />
-          <Note x={sx} y={sy} text="ÁGUA SALGADA (MAR)" k={ap(fr, P.a + 6)} size={30} color="#ffffff" />
+           <Note x={Math.min(sx, 820)} y={sy} text="ÁGUA SALGADA (MAR)" k={ap(fr, P.a + 6)} size={30} color="#ffffff" />
         </>
       )}
       {labels === 'intrusion' && <Note x={ax} y={ay} text="AQUÍFERO" k={ap(fr, wf('L10', 19))} size={30} color="#ffffff" align="left" />}

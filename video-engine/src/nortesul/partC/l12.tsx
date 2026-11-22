@@ -263,7 +263,7 @@ export const Dashboard: React.FC<{dur: number; cam: CamSpec; t0: number; t1: num
           ))}
         </svg>
       </Cam>
-        {alertAt !== undefined && <Chip at={alertAt} x={540} y={1650} text="⚠ GATILHO NO AMARELO: AGIR AGORA" size={42} color={C.yellow} />}
+        {alertAt !== undefined && okAt === undefined && <Chip at={alertAt} x={540} y={1650} text="⚠ GATILHO NO AMARELO: AGIR AGORA" size={42} color={C.yellow} />}
       {okAt !== undefined && <Chip at={okAt} x={540} y={1650} text="✓ CRISE EVITADA ANTES DO FUNDO" size={42} color={C.green} />}
     </AbsoluteFill>
   );

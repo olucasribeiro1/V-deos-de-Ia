@@ -1,0 +1,417 @@
+[
+ {
+  "start": 103.31,
+  "end": 105.2,
+  "desc": "Davi (apresentador) fala com a câmera; quadro 'COMO EVITAR 1/3 · REDUZIR PERDAS' entra no 'Primeiro'",
+  "sfx": [
+   {
+    "t": 103.31,
+    "what": "cama suave de água corrente (loop baixo)"
+   },
+   {
+    "t": 104.71,
+    "what": "whoosh suave + blip de UI (quadro entra)"
+   }
+  ]
+ },
+ {
+  "start": 105.2,
+  "end": 106.5,
+  "desc": "Push no quadro: itens SETORES COM MEDIÇÃO / PRESSÃO MENOR À NOITE / SENSOR ACÚSTICO",
+  "sfx": [
+   {
+    "t": 105.33,
+    "what": "blip UI"
+   },
+   {
+    "t": 105.6,
+    "what": "blip UI"
+   },
+   {
+    "t": 105.87,
+    "what": "blip UI"
+   }
+  ]
+ },
+ {
+  "start": 106.5,
+  "end": 108.91,
+  "desc": "Mapa da rede: 4 setores coloridos (DMC), tronco com fluxo, medidores pop na entrada de cada setor; zoom no painel ENTRADA · SETOR 4 (m³/h)",
+  "sfx": [
+   {
+    "t": 106.5,
+    "what": "água fluindo em cano"
+   },
+   {
+    "t": 107.07,
+    "what": "4 blips ascendentes (setores acendem)"
+   },
+   {
+    "t": 108.0,
+    "what": "ticks de medidor / tic-tac mecânico"
+   }
+  ]
+ },
+ {
+  "start": 108.91,
+  "end": 111.0,
+  "desc": "Gráfico pressão × hora: faixa MADRUGADA, linha COM VRP cai à noite vs SEM CONTROLE; ícone de válvula redutora gira",
+  "sfx": [
+   {
+    "t": 108.97,
+    "what": "traço de gráfico (sweep suave)"
+   },
+   {
+    "t": 109.4,
+    "what": "rangido/torção de válvula + chiado de pressão aliviando"
+   }
+  ]
+ },
+ {
+  "start": 111.0,
+  "end": 113.57,
+  "desc": "Cano vazando com manômetro: pressão 42→20 mca, gotas encolhem, VAZAMENTO 100%→27%; chip PRESSÃO ↓ = VAZAMENTO ↓",
+  "sfx": [
+   {
+    "t": 111.0,
+    "what": "gotejamento/jato de vazamento"
+   },
+   {
+    "t": 111.32,
+    "what": "chiado de pressão diminuindo"
+   },
+   {
+    "t": 112.0,
+    "what": "blip positivo"
+   }
+  ]
+ },
+ {
+  "start": 113.57,
+  "end": 114.9,
+  "desc": "Corte da rua: técnico (capacete, fones) com geofone no asfalto; ondas sonoras saindo do vazamento no cano enterrado; chip DETECÇÃO ACÚSTICA",
+  "sfx": [
+   {
+    "t": 113.57,
+    "what": "ambiente de rua leve + sonar"
+   },
+   {
+    "t": 113.8,
+    "what": "bip acústico (ping)"
+   }
+  ]
+ },
+ {
+  "start": 114.9,
+  "end": 116.28,
+  "desc": "Close subterrâneo + painel de forma de onda; pino vermelho 'VAZAMENTO LOCALIZADO'",
+  "sfx": [
+   {
+    "t": 114.9,
+    "what": "bips de sonar acelerando"
+   },
+   {
+    "t": 115.31,
+    "what": "ping de confirmação"
+   }
+  ]
+ },
+ {
+  "start": 116.28,
+  "end": 117.96,
+  "desc": "Davi + quadro 'COMO EVITAR 2/3 · DIVERSIFICAR FONTES' com 4 itens",
+  "sfx": [
+   {
+    "t": 116.28,
+    "what": "whoosh suave"
+   },
+   {
+    "t": 116.7,
+    "what": "blips UI x4"
+   }
+  ]
+ },
+ {
+  "start": 117.96,
+  "end": 120.27,
+  "desc": "Três sistemas (A, B, C) ligados por adutoras; C (baixo) enche e equaliza; chip INTERLIGAÇÃO",
+  "sfx": [
+   {
+    "t": 118.67,
+    "what": "água correndo em adutora"
+   },
+   {
+    "t": 119.2,
+    "what": "enchimento de tanque"
+   }
+  ]
+ },
+ {
+  "start": 120.27,
+  "end": 122.33,
+  "desc": "Estação de reúso → cano roxo → indústria; chip ÁGUA DE REÚSO NA INDÚSTRIA",
+  "sfx": [
+   {
+    "t": 120.9,
+    "what": "fluxo em cano + leve zumbido industrial"
+   }
+  ]
+ },
+ {
+  "start": 122.33,
+  "end": 124.2,
+  "desc": "Nascente protegida: árvores da mata ciliar brotam, cerca aparece; chip NASCENTE PROTEGIDA",
+  "sfx": [
+   {
+    "t": 122.33,
+    "what": "riacho/fio d'água + pássaros suaves"
+   },
+   {
+    "t": 122.5,
+    "what": "pops leves (árvores)"
+   }
+  ]
+ },
+ {
+  "start": 124.2,
+  "end": 126.0,
+  "desc": "Mapa do litoral NE: pino em FORTALEZA (CE)",
+  "sfx": [
+   {
+    "t": 124.26,
+    "what": "pin drop + onda de sonar"
+   }
+  ]
+ },
+ {
+  "start": 126.0,
+  "end": 129.17,
+  "desc": "Usina de dessalinização (osmose reversa): mar → membranas (sal barrado) → água doce; chip FORTALEZA · PREVISÃO 2028",
+  "sfx": [
+   {
+    "t": 126.0,
+    "what": "ondas do mar + bomba"
+   },
+   {
+    "t": 126.3,
+    "what": "blip UI"
+   }
+  ]
+ },
+ {
+  "start": 129.17,
+  "end": 130.71,
+  "desc": "Davi + quadro 'COMO EVITAR 3/3 · PLANO DE CONTINGÊNCIA' · ALERTA ANTECIPADO",
+  "sfx": [
+   {
+    "t": 129.17,
+    "what": "whoosh suave"
+   },
+   {
+    "t": 130.71,
+    "what": "blip UI"
+   }
+  ]
+ },
+ {
+  "start": 130.71,
+  "end": 133.07,
+  "desc": "Painel MONITORAMENTO: 3 barragens com faixas verde/amarelo/vermelho, níveis descendo",
+  "sfx": [
+   {
+    "t": 130.71,
+    "what": "beeps de monitor (lentos)"
+   }
+  ]
+ },
+ {
+  "start": 133.07,
+  "end": 135.05,
+  "desc": "Zoom na barragem B entrando no amarelo; gatilho pisca; chip GATILHO NO AMARELO: AGIR AGORA",
+  "sfx": [
+   {
+    "t": 134.08,
+    "what": "alerta suave (dois tons) — não alarmante"
+   }
+  ]
+ },
+ {
+  "start": 135.05,
+  "end": 137.72,
+  "desc": "Níveis estabilizam e voltam a subir antes do vermelho; chip ✓ CRISE EVITADA ANTES DO FUNDO",
+  "sfx": [
+   {
+    "t": 136.3,
+    "what": "chime positivo curto"
+   }
+  ]
+ },
+ {
+  "start": 137.72,
+  "end": 139.57,
+  "desc": "Davi + quadro 'NA EMPRESA · 1º PASSO: MEDIR' · HIDRÔMETROS",
+  "sfx": [
+   {
+    "t": 137.72,
+    "what": "whoosh suave"
+   },
+   {
+    "t": 139.6,
+    "what": "blip UI"
+   }
+  ]
+ },
+ {
+  "start": 139.57,
+  "end": 141.5,
+  "desc": "Galpão em corte: hidrômetro por setor (Produção, Refeitório, Banheiros) com leituras correndo",
+  "sfx": [
+   {
+    "t": 139.7,
+    "what": "ticks de hidrômetro x3"
+   },
+   {
+    "t": 140.0,
+    "what": "contador digital"
+   }
+  ]
+ },
+ {
+  "start": 141.5,
+  "end": 143.05,
+  "desc": "Gráfico de consumo por setor; Banheiros acima da meta '⚠ +35%'; chip MEDIU → ACHOU → CORRIGIU",
+  "sfx": [
+   {
+    "t": 141.5,
+    "what": "barras subindo (sweep)"
+   },
+   {
+    "t": 142.1,
+    "what": "blip de alerta leve"
+   }
+  ]
+ },
+ {
+  "start": 143.05,
+  "end": 145.18,
+  "desc": "Galpão externo: cotas amarelas + tag 1.000 m² no telhado; começa a chover",
+  "sfx": [
+   {
+    "t": 143.85,
+    "what": "traço de régua/blip"
+   },
+   {
+    "t": 144.4,
+    "what": "chuva no telhado metálico (entra)"
+   }
+  ]
+ },
+ {
+  "start": 145.18,
+  "end": 146.91,
+  "desc": "Close calha → cisterna enchendo; chip 1 mm × 1 m² = 1 L",
+  "sfx": [
+   {
+    "t": 145.18,
+    "what": "chuva + água descendo na calha"
+   },
+   {
+    "t": 145.4,
+    "what": "blip UI"
+   }
+  ]
+ },
+ {
+  "start": 146.91,
+  "end": 148.71,
+  "desc": "Cisterna cheia; contador '+1.000.000 L/ANO'",
+  "sfx": [
+   {
+    "t": 146.98,
+    "what": "contador rolando + chime curto no fim"
+   }
+  ]
+ },
+ {
+  "start": 148.71,
+  "end": 150.21,
+  "desc": "Banheiro: chuveiro aberto, timer 15 MIN",
+  "sfx": [
+   {
+    "t": 148.71,
+    "what": "chuveiro (loop)"
+   }
+  ]
+ },
+ {
+  "start": 150.21,
+  "end": 152.08,
+  "desc": "Zoom no timer: 15 → 5 MIN, anel fica verde",
+  "sfx": [
+   {
+    "t": 150.3,
+    "what": "tic-tac rápido + ding"
+   }
+  ]
+ },
+ {
+  "start": 152.08,
+  "end": 154.31,
+  "desc": "Timer 5 MIN; painel LITROS ECONOMIZADOS 0→90 L; chip −90 L POR BANHO",
+  "sfx": [
+   {
+    "t": 152.3,
+    "what": "contador"
+   },
+   {
+    "t": 152.81,
+    "what": "chime positivo leve"
+   }
+  ]
+ },
+ {
+  "start": 154.31,
+  "end": 156.15,
+  "desc": "Davi na pia fecha a torneira (água para)",
+  "sfx": [
+   {
+    "t": 154.31,
+    "what": "torneira aberta"
+   },
+   {
+    "t": 154.9,
+    "what": "rangido de registro + água parando + última gota"
+   }
+  ]
+ },
+ {
+  "start": 156.15,
+  "end": 158.58,
+  "desc": "Close do Davi falando com a câmera, push lento",
+  "sfx": [
+   {
+    "t": 156.15,
+    "what": "cama musical leve (reutilizar trilha)"
+   }
+  ]
+ },
+ {
+  "start": 158.58,
+  "end": 164.36,
+  "desc": "Card final: gota cai e faz ondas, 'NorteSul' + 'cada gota conta'; Davi acena em 'E aí'; segura até 164,36",
+  "sfx": [
+   {
+    "t": 158.6,
+    "what": "gota caindo (plink) + ondas"
+   },
+   {
+    "t": 158.74,
+    "what": "chime positivo suave (assinatura)"
+   },
+   {
+    "t": 161.17,
+    "what": "whoosh leve do aceno"
+   }
+  ]
+ }
+]

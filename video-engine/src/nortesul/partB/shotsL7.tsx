@@ -95,7 +95,7 @@ export const S1: React.FC<ShotP> = (P) => {
     <AbsoluteFill>
       <div style={{position: 'absolute', inset: 0, transform: `scale(${s})`, transformOrigin: '50% 60%'}}>
         <SalvadorBG t={fr} rain={1} pan={-p * 40} />
-        <Presenter absOffset={B0} x={540} y={2050} height={1550} upperOnly pose={{shR: lerp(10, -120, hand), elR: lerp(-10, 40, hand)}} expr={{lookY: -0.2 * hand}} />
+        <Presenter absOffset={B0} x={540} y={2050} height={1550} upperOnly pose={{shR: lerp(8, 115, hand), elR: lerp(-8, -45, hand)}} expr={{lookY: -0.2 * hand}} />
       </div>
       <Rain t={fr} n={170} />
       <Vignette op={0.35} />
@@ -135,7 +135,7 @@ export const S2: React.FC<ShotP> = (P) => {
             return <path key={i} d={`M${x},920 l26,20 l-26,20`} stroke="#ffd23a" strokeWidth={7} fill="none" opacity={q} strokeLinecap="round" />;
           })}
         </Svg>
-        <Presenter absOffset={B0} x={330} y={1820} height={1050} pose={{shR: -95, elR: 10, facing: 0.3}} />
+        <Presenter absOffset={B0} x={330} y={1820} height={1050} pose={{shR: 95, elR: -5, facing: 0.3}} />
       </div>
       <Rain t={fr} n={150} op={0.45} />
       <Vignette op={0.35} />
@@ -189,6 +189,7 @@ const MapArt: React.FC<{fr: number; s: number; river: number; adut: number; semi
       <path d={poly(BAHIA)} fill="none" stroke="#ffffff" strokeWidth={sw(4)} strokeLinejoin="round" />
       {/* Baía de Todos os Santos */}
       <ellipse cx={mp(-38.7, -12.82)[0]} cy={mp(-38.7, -12.82)[1]} rx={13} ry={17} fill="#2a6d97" />
+      <ellipse cx={mp(-38.68, -12.98)[0]} cy={mp(-38.68, -12.98)[1]} rx={7} ry={14} fill="#2a6d97" />
       {/* river */}
       <path d={line(RIVER)} fill="none" stroke="#2f8fe0" strokeWidth={sw(7)} strokeLinecap="round" strokeLinejoin="round" pathLength={1} strokeDasharray={`${river} 1`} />
       <path d={line(RIVER2)} fill="none" stroke="#2f8fe0" strokeWidth={sw(5)} strokeLinecap="round" />
@@ -244,14 +245,14 @@ const MapScene: React.FC<MapShot> = (P) => {
           </g>
         )}
       </Svg>
-      <Note x={sx + (mode === 'all' ? -16 : 24)} y={sy + (mode === 'all' ? 26 : 40)} text="SALVADOR" k={mode === 'all' ? pinK : 1} align={mode === 'all' ? 'right' : 'left'} size={mode === 'all' ? 26 : 34} />
+      <Note x={sx + (mode === 'dam' ? 24 : -16)} y={sy + (mode === 'dam' ? 40 : 26)} text="SALVADOR" k={mode === 'all' ? pinK : 1} align={mode === 'dam' ? 'left' : 'right'} size={mode === 'dam' ? 34 : 26} />
       {mode === 'dam' && <Note x={dx - 36} y={dy - 60} text="PEDRA DO CAVALO" k={ap(fr, wf('L7', 22))} align="right" size={36} color="#ffd23a" />}
       {mode === 'dam' && <Note x={(dx + sx) / 2 + 40} y={(dy + sy) / 2 - 40} text="ADUTORA" k={ap(fr, wf('L7', 23) + 8)} align="left" size={28} />}
       {mode === 'river' && (() => {
         const [rx, ry] = toS(mp(-40.2, -12.62));
-        return <Note x={rx} y={ry + 50} text="RIO PARAGUAÇU" k={ap(fr, wf('L7', 27))} size={36} color="#8fd0ff" />;
+        return <Note x={rx} y={ry + 50} text="RIO PARAGUAÇU" k={ap(fr, wf('L7', 27))} size={38} color="#0b4f8a" />;
       })()}
-      {mode === 'river' && <Note x={dx + 20} y={dy - 46} text="PEDRA DO CAVALO" k={1} align="left" size={26} color="#ffd23a" />}
+      {mode === 'river' && <Note x={dx - 30} y={dy - 46} text="PEDRA DO CAVALO" k={1} align="right" size={28} color="#7a4e12" />}
       {mode === 'semi' && (() => {
         const [ax, ay] = toS(mp(-41.8, -11.4));
         const [bx, by] = toS(mp(-41.6, -12.75));
@@ -280,7 +281,7 @@ const MapScene: React.FC<MapShot> = (P) => {
 const FULL_C: [number, number] = [560, 1010];
 export const S3: React.FC<ShotP> = (P) => <MapScene {...P} mode="all" A={[FULL_C[0], FULL_C[1], 0.82]} Z={[620, 1010, 0.98]} />;
 export const S4: React.FC<ShotP> = (P) => <MapScene {...P} mode="dam" A={[890, 995, 4.6]} Z={[886, 996, 5.6]} />;
-export const S5: React.FC<ShotP> = (P) => <MapScene {...P} mode="river" A={[830, 985, 3.0]} Z={[700, 985, 2.6]} />;
+export const S5: React.FC<ShotP> = (P) => <MapScene {...P} mode="river" A={[800, 985, 2.8]} Z={[720, 990, 2.5]} />;
 export const S6: React.FC<ShotP> = (P) => <MapScene {...P} mode="semi" A={[620, 1020, 1.55]} Z={[560, 1010, 1.3]} />;
 
 /* =================================================================== Dam cross-section with level ruler */
@@ -351,11 +352,11 @@ const DamSection: React.FC<{fr: number; pct: number; dateK: number; chipK: numbe
       <text x={260} y={y - 22} textAnchor="middle" fontFamily="Oswald" fontWeight={700} fontSize={64} fill="#0b1a2e">
         {Math.round(pct)}%
       </text>
-      <text x={360} y={YD + 52} textAnchor="middle" fontFamily="Roboto Condensed" fontWeight={700} fontSize={28} fill="#0b1a2e" opacity={0.75}>
+      <text x={470} y={YD + 52} textAnchor="middle" fontFamily="Roboto Condensed" fontWeight={700} fontSize={28} fill="#0b1a2e" opacity={0.75}>
         VOLUME MORTO
       </text>
       {/* date tag */}
-      <g opacity={dateK} transform={`translate(860,${YF - 20})`}>
+      <g opacity={dateK} transform={`translate(200,${YF - 60})`}>
         <rect x={-110} y={-36} width={220} height={64} rx={14} fill="#0b1a2e" />
         <text x={0} y={10} textAnchor="middle" fontFamily="Roboto Condensed" fontWeight={700} fontSize={34} fill="#ffd23a" letterSpacing={2}>
           JAN/2026
@@ -375,7 +376,7 @@ export const S7: React.FC<ShotP> = (P) => {
       <Cam {...c}>
         <DamSection fr={fr} pct={damPct(fr)} dateK={ap(fr, wf('L7', 38))} chipK={0} />
       </Cam>
-      <Note x={540} y={560} text="BARRAGEM PEDRA DO CAVALO · CORTE" k={ap(fr, P.a + 2)} size={28} color="#0b1a2e" />
+      <Tag x={540} y={1660} text="BARRAGEM PEDRA DO CAVALO · CORTE" k={ap(fr, P.a + 2)} size={34} color="#ffffff" />
       <Vignette op={0.25} />
     </AbsoluteFill>
   );
@@ -386,7 +387,7 @@ export const S8: React.FC<ShotP> = (P) => {
   return (
     <AbsoluteFill style={{background: '#e8eef2'}}>
       <Cam {...c}>
-        <DamSection fr={fr} pct={damPct(fr)} dateK={1} chipK={ap(fr, wf('L7', 46))} />
+        <DamSection fr={fr} pct={damPct(fr)} dateK={0} chipK={ap(fr, wf('L7', 46))} />
       </Cam>
       <Tag x={540} y={1650} text="VOLUME ÚTIL ~30% (JAN/2026)" k={ap(fr, wf('L7', 50) - 2)} size={44} color="#ff4d4d" />
       <Vignette op={0.25} />

@@ -67,7 +67,6 @@ export const S9: React.FC<ShotP> = (P) => {
           })}
         </Svg>
       </Cam>
-      <Note x={540} y={545} text="REDE DE DISTRIBUIÇÃO · RAIO-X" k={ap(fr, P.a + 2)} size={28} color="#9fd4ff" />
       <Tag x={540} y={1650} text="VAZAMENTOS NO CAMINHO" k={ap(fr, wf('L8', 3) + 6)} size={38} color="#ff6b6b" />
       <Vignette op={0.5} />
     </AbsoluteFill>
@@ -131,7 +130,7 @@ export const S11: React.FC<ShotP> = (P) => {
       <Blueprint top="#2a0a12" bottom="#0a0308" op={0.05} />
       <div style={{position: 'absolute', inset: 0, transform: `scale(${s})`}}>
         <Note x={540} y={590} text="SALVADOR" k={k} size={40} color="#ffffff" />
-        <Big x={540} y={780} text="PERDAS 54%" k={k} size={190} color="#ff4d4d" glow />
+        <Big x={540} y={780} text="PERDAS 54%" k={k} size={150} color="#ff4d4d" glow />
         <Svg>
           <rect x={110} y={960} width={860} height={70} rx={12} fill="#1b2836" />
           <rect x={110} y={960} width={860 * 0.46} height={70} rx={12} fill="#3aa0f0" />
@@ -161,17 +160,17 @@ export const S12: React.FC<ShotP> = (P) => {
       <Blueprint top="#0e2f4d" bottom="#06182a" op={0.08} ox={-fr * 0.6} />
       <div style={{position: 'absolute', inset: 0, transform: `translateX(${lerp(20, -20, sm(p))}px)`}}>
         <Svg>
-          <g transform="translate(300,860)">
-            <circle r={190} fill="#3aa0f0" />
-            <circle r={95} fill="none" stroke="#ff4d4d" strokeWidth={190} pathLength={100} strokeDasharray={`${pie} 100`} transform="rotate(-90)" />
-            <circle r={190} fill="none" stroke="#fff" strokeWidth={6} />
+          <g transform="translate(250,720)">
+            <circle r={170} fill="#3aa0f0" />
+            <circle r={85} fill="none" stroke="#ff4d4d" strokeWidth={170} pathLength={100} strokeDasharray={`${pie} 100`} transform="rotate(-90)" />
+            <circle r={170} fill="none" stroke="#fff" strokeWidth={6} />
             <text y={20} textAnchor="middle" fontFamily="Oswald" fontWeight={700} fontSize={84} fill="#fff" style={{textShadow: '0 3px 6px #000'}}>
               {Math.round(pie)}%
             </text>
           </g>
         </Svg>
-        <Note x={300} y={1110} text="MAIS DA METADE" k={ap(fr, wf('L8', 19))} size={40} color="#ff6b6b" />
-        <Presenter absOffset={B0} x={800} y={2000} height={1450} upperOnly pose={{shL: 70, elL: -30, facing: -0.25}} expr={{smile: 0, browTilt: 0.35}} />
+        <Note x={250} y={940} text="MAIS DA METADE" k={ap(fr, wf('L8', 19))} size={40} color="#ff6b6b" />
+        <Presenter absOffset={B0} x={830} y={2000} height={1450} upperOnly pose={{shL: -62, elL: 8, facing: -0.25}} expr={{smile: 0, browTilt: 0.35}} />
       </div>
       <Vignette op={0.4} />
     </AbsoluteFill>
@@ -347,7 +346,7 @@ export const S16: React.FC<ShotP> = (P) => {
 /* =================================================================== S17 shore: irregular houses + sewage */
 export const S17: React.FC<ShotP> = (P) => {
   const {fr} = P;
-  const c = camAt(prog(P), [520, 930, 1.0], [580, 950, 1.1]);
+  const c = camAt(prog(P), [330, 860, 1.25], [380, 880, 1.32]);
   const houses = kf(fr, [wf('L9', 21) - 4, wf('L9', 23) + 6], [0, 1]);
   const sew = kf(fr, [wf('L9', 24) - 6, P.b], [0, 1]);
   return (
