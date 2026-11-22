@@ -1,0 +1,542 @@
+[
+ {
+  "i": 1,
+  "start": 2.14,
+  "end": 6.28,
+  "section": "Intro",
+  "lyric": "Ei, criançada! Quem fez o mundo, você sabe me contar?",
+  "scene": "Campo florido de dia",
+  "action": "Lulu e Théo acenam para a câmera; ovelhinha pula",
+  "camera": "Plano aberto aproximando"
+ },
+ {
+  "i": 2,
+  "start": 6.7,
+  "end": 9.5,
+  "section": "Intro",
+  "lyric": "Levanta os dedinhos, que agora vamos começar!",
+  "scene": "Campo florido",
+  "action": "Levantam o dedinho e pulam no ritmo",
+  "camera": "Plano médio"
+ },
+ {
+  "i": 3,
+  "start": 11.24,
+  "end": 15.2,
+  "section": "Verse 1",
+  "lyric": "No começo era só escuro, nem estrela, nem luar,",
+  "scene": "Campo à noite total, sem estrelas",
+  "action": "Crianças olham em volta, curiosas (sobrancelhas altas)",
+  "camera": "Câmera circula devagar"
+ },
+ {
+  "i": 4,
+  "start": 15.52,
+  "end": 19.46,
+  "section": "Verse 1",
+  "lyric": "Deus falou: Haja luz! E a luz veio brilhar!",
+  "scene": "Bola de luz surge no céu; dia volta",
+  "action": "Surpresa (boca em O) e comemoração (braços para cima)",
+  "camera": "Contra-plongée para o céu"
+ },
+ {
+  "i": 5,
+  "start": 19.86,
+  "end": 23.76,
+  "section": "Verse 1",
+  "lyric": "Um dedinho, dia um, o dia e a noite separou,",
+  "scene": "Dia com sol → noite com lua e estrelas",
+  "action": "Mostram 1 dedinho; selo 'Dia 1'",
+  "camera": "Plano aberto"
+ },
+ {
+  "i": 6,
+  "start": 24.1,
+  "end": 28.24,
+  "section": "Verse 1",
+  "lyric": "Dois dedinhos, lá no alto, o céu azul Ele formou!",
+  "scene": "Céu com nuvens surgindo",
+  "action": "Apontam para cima; selo 'Dia 2'",
+  "camera": "Câmera sobe para o céu"
+ },
+ {
+  "i": 7,
+  "start": 30.24,
+  "end": 34.82,
+  "section": "Pre-Chorus 1",
+  "lyric": "E a cada coisa que fazia, Deus olhava devagar,",
+  "scene": "Campo florido com brilhos",
+  "action": "Olham tudo com carinho, batem palmas devagar",
+  "camera": "Plano médio"
+ },
+ {
+  "i": 8,
+  "start": 34.86,
+  "end": 38.98,
+  "section": "Pre-Chorus 1",
+  "lyric": "Isso é bom, Ele dizia, e voltava a criar!",
+  "scene": "Campo florido com brilhos",
+  "action": "Batem palmas; texto 'Isso é bom!'",
+  "camera": "Plano médio"
+ },
+ {
+  "i": 9,
+  "start": 40.94,
+  "end": 43.26,
+  "section": "Chorus 1",
+  "lyric": "Quem fez o sol? Foi Deus! (Foi Deus!)",
+  "scene": "Campo + sol",
+  "action": "Apontam para o sol",
+  "camera": "Close no sol → crianças"
+ },
+ {
+  "i": 10,
+  "start": 43.12,
+  "end": 45.74,
+  "section": "Chorus 1",
+  "lyric": "Quem fez o mar? Foi Deus! (Foi Deus!)",
+  "scene": "Mar ao lado do campo, baleia pula",
+  "action": "Braços abertos",
+  "camera": "Plano aberto"
+ },
+ {
+  "i": 11,
+  "start": 45.78,
+  "end": 49.34,
+  "section": "Chorus 1",
+  "lyric": "Quem fez a flor, o passarinho e eu? (E eu!)",
+  "scene": "Flor cresce, bem-te-vi voa",
+  "action": "No 'e eu' apontam para si (coro 'E eu!')",
+  "camera": "Close nas crianças"
+ },
+ {
+  "i": 12,
+  "start": 49.39,
+  "end": 51.72,
+  "section": "Chorus 1",
+  "lyric": "Foi Deus! (Foi Deus!) Foi Deus! (Foi Deus!)",
+  "scene": "Campo + arco-íris (refrão)",
+  "action": "Dançam, coro responde 'Foi Deus!'",
+  "camera": "Cortes a cada 2-4 s"
+ },
+ {
+  "i": 13,
+  "start": 51.76,
+  "end": 54.34,
+  "section": "Chorus 1",
+  "lyric": "Ele falou, e tudo apareceu,",
+  "scene": "Arco-íris aparece",
+  "action": "Comemoram",
+  "camera": "Plano aberto subindo"
+ },
+ {
+  "i": 14,
+  "start": 54.66,
+  "end": 57.32,
+  "section": "Chorus 1",
+  "lyric": "do fundo do mar até o céu!",
+  "scene": "Campo + arco-íris (refrão)",
+  "action": "Dançam, coro responde 'Foi Deus!'",
+  "camera": "Cortes a cada 2-4 s"
+ },
+ {
+  "i": 15,
+  "start": 58.38,
+  "end": 62.34,
+  "section": "Verse 2",
+  "lyric": "Três dedinhos, juntou as águas, e a terra seca apareceu,",
+  "scene": "Mar; a terra sobe",
+  "action": "Olham maravilhadas; selo 'Dia 3'",
+  "camera": "Plano aberto"
+ },
+ {
+  "i": 16,
+  "start": 62.4,
+  "end": 66.64,
+  "section": "Verse 2",
+  "lyric": "Brotou capim, nasceu semente, e a primeira árvore cresceu!",
+  "scene": "Capim, sementes e árvore crescendo",
+  "action": "Apontam para a árvore",
+  "camera": "Plano médio"
+ },
+ {
+  "i": 17,
+  "start": 66.68,
+  "end": 71.16,
+  "section": "Verse 2",
+  "lyric": "Quatro dedinhos, pôs o sol no céu pra clarear o dia,",
+  "scene": "Sol nascendo",
+  "action": "Apontam para cima; selo 'Dia 4'",
+  "camera": "Contra-plongée"
+ },
+ {
+  "i": 18,
+  "start": 71.5,
+  "end": 75.48,
+  "section": "Verse 2",
+  "lyric": "E a lua com as estrelas, pra noite ter companhia!",
+  "scene": "Noite com lua e estrelas",
+  "action": "Acenam para a lua",
+  "camera": "Plano aberto"
+ },
+ {
+  "i": 19,
+  "start": 75.58,
+  "end": 79.66,
+  "section": "Verse 2",
+  "lyric": "Cada estrela tem um nome, Deus conhece uma por uma,",
+  "scene": "Estrelinhas com nomes",
+  "action": "Contam as estrelas nos dedos",
+  "camera": "Câmera percorre o céu"
+ },
+ {
+  "i": 20,
+  "start": 79.84,
+  "end": 84.08,
+  "section": "Verse 2",
+  "lyric": "Conta todas lá no céu e não esquece de nenhuma!",
+  "scene": "Estrelinhas com nomes",
+  "action": "Contam as estrelas nos dedos",
+  "camera": "Câmera percorre o céu"
+ },
+ {
+  "i": 21,
+  "start": 84.09,
+  "end": 88.16,
+  "section": "Pre-Chorus 2",
+  "lyric": "E a cada coisa que fazia, Deus olhava devagar,",
+  "scene": "Campo florido com brilhos",
+  "action": "Olham tudo com carinho, batem palmas devagar",
+  "camera": "Plano médio"
+ },
+ {
+  "i": 22,
+  "start": 88.38,
+  "end": 92.54,
+  "section": "Pre-Chorus 2",
+  "lyric": "Isso é bom, Ele dizia, e voltava a criar!",
+  "scene": "Campo florido com brilhos",
+  "action": "Batem palmas; texto 'Isso é bom!'",
+  "camera": "Plano médio"
+ },
+ {
+  "i": 23,
+  "start": 94.56,
+  "end": 96.86,
+  "section": "Chorus 2",
+  "lyric": "Quem fez o sol? Foi Deus! (Foi Deus!)",
+  "scene": "Campo + sol",
+  "action": "Apontam para o sol",
+  "camera": "Close no sol → crianças"
+ },
+ {
+  "i": 24,
+  "start": 96.72,
+  "end": 98.82,
+  "section": "Chorus 2",
+  "lyric": "Quem fez o mar? Foi Deus! (Foi Deus!)",
+  "scene": "Mar ao lado do campo, baleia pula",
+  "action": "Braços abertos",
+  "camera": "Plano aberto"
+ },
+ {
+  "i": 25,
+  "start": 98.86,
+  "end": 103.3,
+  "section": "Chorus 2",
+  "lyric": "Quem fez a flor, o passarinho e eu? (E eu!)",
+  "scene": "Flor cresce, bem-te-vi voa",
+  "action": "No 'e eu' apontam para si (coro 'E eu!')",
+  "camera": "Close nas crianças"
+ },
+ {
+  "i": 26,
+  "start": 103.42,
+  "end": 105.26,
+  "section": "Chorus 2",
+  "lyric": "Foi Deus! (Foi Deus!) Foi Deus! (Foi Deus!)",
+  "scene": "Campo + arco-íris (refrão)",
+  "action": "Dançam, coro responde 'Foi Deus!'",
+  "camera": "Cortes a cada 2-4 s"
+ },
+ {
+  "i": 27,
+  "start": 105.36,
+  "end": 108.12,
+  "section": "Chorus 2",
+  "lyric": "Ele falou, e tudo apareceu,",
+  "scene": "Arco-íris aparece",
+  "action": "Comemoram",
+  "camera": "Plano aberto subindo"
+ },
+ {
+  "i": 28,
+  "start": 108.22,
+  "end": 111.14,
+  "section": "Chorus 2",
+  "lyric": "do fundo do mar até o céu!",
+  "scene": "Campo + arco-íris (refrão)",
+  "action": "Dançam, coro responde 'Foi Deus!'",
+  "camera": "Cortes a cada 2-4 s"
+ },
+ {
+  "i": 29,
+  "start": 113.84,
+  "end": 118.16,
+  "section": "Verse 3",
+  "lyric": "Cinco dedinhos, lá no mar, a baleia e o peixinho a nadar,",
+  "scene": "Fundo do mar com baleia e peixinhos",
+  "action": "(crianças fora de cena); selo 'Dia 5'",
+  "camera": "Câmera subaquática seguindo a baleia"
+ },
+ {
+  "i": 30,
+  "start": 118.46,
+  "end": 122.38,
+  "section": "Verse 3",
+  "lyric": "E no céu, o bem-te-vi saiu voando a cantar!",
+  "scene": "Céu com bem-te-vi cantando",
+  "action": "Crianças olham o pássaro",
+  "camera": "Câmera segue o pássaro"
+ },
+ {
+  "i": 31,
+  "start": 122.72,
+  "end": 126.8,
+  "section": "Verse 3",
+  "lyric": "Seis dedinhos, o leão, a girafa e a capivara,",
+  "scene": "Savana",
+  "action": "Cada bicho entra quando é nomeado; selo 'Dia 6'",
+  "camera": "Corte para cada bicho"
+ },
+ {
+  "i": 32,
+  "start": 126.86,
+  "end": 130.88,
+  "section": "Verse 3",
+  "lyric": "O macaquinho, a ovelhinha, o tatu e a arara!",
+  "scene": "Savana",
+  "action": "Macaco, ovelha, tatu e arara entram",
+  "camera": "Corte para cada bicho"
+ },
+ {
+  "i": 33,
+  "start": 130.92,
+  "end": 135.26,
+  "section": "Verse 3",
+  "lyric": "E do pó da terra, com carinho, Deus formou a gente então,",
+  "scene": "Brilhos formam as crianças",
+  "action": "Crianças aparecem",
+  "camera": "Plano médio"
+ },
+ {
+  "i": 34,
+  "start": 135.58,
+  "end": 139.96,
+  "section": "Verse 3",
+  "lyric": "Soprou vida bem fortinho, e bateu o coração!",
+  "scene": "Vento + coração pulsando",
+  "action": "Mão no peito",
+  "camera": "Close"
+ },
+ {
+  "i": 35,
+  "start": 140.9,
+  "end": 144.94,
+  "section": "Pre-Chorus 3",
+  "lyric": "Deus olhou pra tudo, tudo, lá do céu até o chão,",
+  "scene": "Vento + coração pulsando",
+  "action": "Mão no peito",
+  "camera": "Close"
+ },
+ {
+  "i": 36,
+  "start": 145.0,
+  "end": 149.42,
+  "section": "Pre-Chorus 3",
+  "lyric": "E disse: Ficou muito bom! Que linda criação!",
+  "scene": "Arco-íris com todos os bichos",
+  "action": "Comemoram; texto 'Muito bom!'",
+  "camera": "Plano aberto"
+ },
+ {
+  "i": 37,
+  "start": 151.88,
+  "end": 154.05,
+  "section": "Chorus 3",
+  "lyric": "Quem fez o sol? Foi Deus! (Foi Deus!)",
+  "scene": "Campo + sol",
+  "action": "Apontam para o sol",
+  "camera": "Close no sol → crianças"
+ },
+ {
+  "i": 38,
+  "start": 153.98,
+  "end": 155.9,
+  "section": "Chorus 3",
+  "lyric": "Quem fez o mar? Foi Deus! (Foi Deus!)",
+  "scene": "Mar ao lado do campo, baleia pula",
+  "action": "Braços abertos",
+  "camera": "Plano aberto"
+ },
+ {
+  "i": 39,
+  "start": 156.68,
+  "end": 160.5,
+  "section": "Chorus 3",
+  "lyric": "Quem fez a flor, o passarinho e eu? (E eu!)",
+  "scene": "Flor cresce, bem-te-vi voa",
+  "action": "No 'e eu' apontam para si (coro 'E eu!')",
+  "camera": "Close nas crianças"
+ },
+ {
+  "i": 40,
+  "start": 160.43,
+  "end": 161.11,
+  "section": "Chorus 3",
+  "lyric": "Foi Deus! (Foi Deus!) Foi Deus! (Foi Deus!)",
+  "scene": "Campo + arco-íris (refrão)",
+  "action": "Dançam, coro responde 'Foi Deus!'",
+  "camera": "Cortes a cada 2-4 s"
+ },
+ {
+  "i": 41,
+  "start": 161.04,
+  "end": 164.16,
+  "section": "Chorus 3",
+  "lyric": "Ele falou, e tudo apareceu,",
+  "scene": "Arco-íris aparece",
+  "action": "Comemoram",
+  "camera": "Plano aberto subindo"
+ },
+ {
+  "i": 42,
+  "start": 164.22,
+  "end": 168.44,
+  "section": "Chorus 3",
+  "lyric": "do fundo do mar até o céu!",
+  "scene": "Campo + arco-íris (refrão)",
+  "action": "Dançam, coro responde 'Foi Deus!'",
+  "camera": "Cortes a cada 2-4 s"
+ },
+ {
+  "i": 43,
+  "start": 168.48,
+  "end": 173.0,
+  "section": "Bridge",
+  "lyric": "Sete dedinhos, bem baixinho, Deus descansou,",
+  "scene": "Noite tranquila",
+  "action": "Mãos juntas, olhos fechados (oração); selo 'Dia 7'",
+  "camera": "Plano médio lento"
+ },
+ {
+  "i": 44,
+  "start": 173.2,
+  "end": 176.76,
+  "section": "Bridge",
+  "lyric": "Olhou tudo que criou, e abençoou.",
+  "scene": "Noite tranquila",
+  "action": "Mãos juntas, olhos fechados (oração); selo 'Dia 7'",
+  "camera": "Plano médio lento"
+ },
+ {
+  "i": 45,
+  "start": 177.08,
+  "end": 181.38,
+  "section": "Bridge",
+  "lyric": "Em paz eu deito e durmo, e o escuro não me assusta, não,",
+  "scene": "Campo à noite total, sem estrelas",
+  "action": "Crianças olham em volta, curiosas (sobrancelhas altas)",
+  "camera": "Câmera circula devagar"
+ },
+ {
+  "i": 46,
+  "start": 181.64,
+  "end": 186.42,
+  "section": "Bridge",
+  "lyric": "Porque Deus cuida de mim e segura a minha mão!",
+  "scene": "Noite com lua",
+  "action": "Dão as mãos; coração",
+  "camera": "Close nas mãos"
+ },
+ {
+  "i": 47,
+  "start": 188.28,
+  "end": 190.72,
+  "section": "Final Chorus",
+  "lyric": "Quem fez o sol? Foi Deus! (Foi Deus!)",
+  "scene": "Campo + sol",
+  "action": "Apontam para o sol",
+  "camera": "Close no sol → crianças"
+ },
+ {
+  "i": 48,
+  "start": 190.7,
+  "end": 195.22,
+  "section": "Final Chorus",
+  "lyric": "Quem fez o mar? Foi Deus! (Foi Deus!)",
+  "scene": "Mar ao lado do campo, baleia pula",
+  "action": "Braços abertos",
+  "camera": "Plano aberto"
+ },
+ {
+  "i": 49,
+  "start": 195.26,
+  "end": 199.13,
+  "section": "Final Chorus",
+  "lyric": "Quem fez a flor, o passarinho e eu? (E eu!)",
+  "scene": "Flor cresce, bem-te-vi voa",
+  "action": "No 'e eu' apontam para si (coro 'E eu!')",
+  "camera": "Close nas crianças"
+ },
+ {
+  "i": 50,
+  "start": 199.06,
+  "end": 199.76,
+  "section": "Final Chorus",
+  "lyric": "Foi Deus! (Foi Deus!) Foi Deus! (Foi Deus!)",
+  "scene": "Campo + arco-íris (refrão)",
+  "action": "Dançam, coro responde 'Foi Deus!'",
+  "camera": "Cortes a cada 2-4 s"
+ },
+ {
+  "i": 51,
+  "start": 199.76,
+  "end": 202.72,
+  "section": "Final Chorus",
+  "lyric": "Ele falou, e tudo apareceu,",
+  "scene": "Arco-íris aparece",
+  "action": "Comemoram",
+  "camera": "Plano aberto subindo"
+ },
+ {
+  "i": 52,
+  "start": 202.78,
+  "end": 205.68,
+  "section": "Final Chorus",
+  "lyric": "do fundo do mar até o céu!",
+  "scene": "Campo + arco-íris (refrão)",
+  "action": "Dançam, coro responde 'Foi Deus!'",
+  "camera": "Cortes a cada 2-4 s"
+ },
+ {
+  "i": 53,
+  "start": 206.26,
+  "end": 208.73,
+  "section": "Outro",
+  "lyric": "Se Deus sabe o nome de cada estrela lá do céu,",
+  "scene": "Estrelinhas com nomes",
+  "action": "Contam as estrelas nos dedos",
+  "camera": "Câmera percorre o céu"
+ },
+ {
+  "i": 54,
+  "start": 208.64,
+  "end": 212.72,
+  "section": "Outro",
+  "lyric": "Sabe o seu também! Quem fez você? Foi Deus! (Foi Deus!)",
+  "scene": "Céu estrelado",
+  "action": "Texto final 'Deus fez você!'",
+  "camera": "Plano aberto final"
+ }
+]
