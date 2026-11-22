@@ -291,7 +291,7 @@ export function posto(st, o = {}) {
   loja.add(cbox(3.34, 0.06, 0.82, lam('#cfcbbd'), 3.4, 1.03, 2.2, 0.02));
   loja.add(cbox(0.7, 1.0, 0.7, lam('#2a7a6c'), 1.45, 0.5, 2.55, 0.03)); loja.add(cbox(0.74, 0.06, 0.74, lam('#cfcbbd'), 1.45, 1.03, 2.55, 0.02));
   // placa CAIXA pendurada
-  loja.add(pl(0.9, 0.3, luz('#ffffff', { map: placa(60, 20, '#e2c040', (g, w, h) => { g.fillStyle = '#1a2a28'; g.font = 'bold 13px monospace'; g.fillText('CAIXA', w / 2, h / 2 + 1); }), side: THREE.DoubleSide }), 3.4, 2.55, 2.2)); for (const dx of [-0.35, 0.35]) loja.add(box(0.01, 0.3, 0.01, lam('#555'), 3.4 + dx, 2.85, 2.2));
+  { const mCx = luz('#ffffff', { map: placa(60, 20, '#e2c040', (g, w, h) => { g.fillStyle = '#1a2a28'; g.font = 'bold 13px monospace'; g.fillText('CAIXA', w / 2, h / 2 + 1); }) }); loja.add(pl(0.9, 0.3, mCx, 3.4, 2.55, 2.21)); const tras = pl(0.9, 0.3, mCx, 3.4, 2.55, 2.19); tras.rotation.y += Math.PI; loja.add(tras); } for (const dx of [-0.35, 0.35]) loja.add(box(0.01, 0.3, 0.01, lam('#555'), 3.4 + dx, 2.85, 2.2));
   // caixa registradora: base, gaveta, teclado inclinado, visor do cliente
   const reg = new THREE.Group(); reg.position.set(2.05, 1.06, 2.3); loja.add(reg);
   reg.add(cbox(0.44, 0.12, 0.4, lam('#2a2c30'), 0, 0.06, 0, 0.02));
