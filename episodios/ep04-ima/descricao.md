@@ -11,6 +11,8 @@ Ele controla metal… mas só coisa leve 🧲
 
 O Davi tem o poder de controlar metal. Mas só coisa leve: clipe, chave, moeda. Um carro? Nem arranha. 🧲
 
+📩 Esse poder foi pedido por um seguidor!
+
 E tem efeito colateral: chegou perto, cartão de banco apaga. Já perdeu 11. 💳
 
 A regra do poder: campo magnético perde força rápido. Dobrou a distância, o campo cai 8 vezes. E nem todo metal obedece: ferro, níquel e cobalto grudam. Alumínio, cobre e ouro, não.
@@ -23,14 +25,17 @@ Quando um assaltante entrou na lanchonete com um taco de alumínio, o Davi usou 
 • Diamagnetismo: o sapo levitando em 16 T (Nijmegen, 1997).
 • Lei de Lenz: um campo que liga e desliga rápido cria corrente no alumínio e empurra o metal.
 
-E tu? O que tu ia puxar primeiro com esse poder? Comenta aí! 👇
-Siga e acompanhe nas redes sociais: @Odavi_contos
+💬 Comenta um poder aleatório pro Davi: o mais curtido vira o próximo vídeo!
+📊 Quer vídeo longo, com história completa? Escreve LONGO nos comentários.
+▶ Segue o Davi no YouTube (link na bio) e no @Odavi_contos
 
 #ima #magnetismo #animação #ciência #curiosidades #fisica #superpoder #shorts #comedia
 
 ## Transcrição completa (narração)
 
 O Davi tem o poder de controlar metal. Mas só coisa leve. Clipe, chave, moeda. Um carro? Nem arranha.
+
+Esse poder foi pedido por um seguidor.
 
 E tem efeito colateral: chegou perto, cartão de banco apaga. Já perdeu onze.
 
@@ -56,4 +61,4 @@ A polícia chegou, e o cara ainda tava pedalando.
 
 Fim feliz? Quase. Na hora de pagar o lanche, o cartão não passou. Apagou. Era o décimo segundo.
 
-E tu? O que tu ia puxar primeiro com esse poder? Comenta aí.
+Agora é contigo: comenta um poder aleatório pro Davi. O mais curtido vira o próximo vídeo. Quer vídeo longo, com história completa? Escreve LONGO. E segue o Davi no YouTube, link na bio.
