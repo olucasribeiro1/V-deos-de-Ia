@@ -17,7 +17,7 @@ Imagem: a Lívia no banheiro sujo, de frente para o espelho enferrujado. A lâmp
 A imagem chia, a fita rebobina e aparece **"10 MINUTOS ANTES"**.
 (O áudio é o mesmo da cena 4, reaproveitado sem gastar voz extra.)
 
-## 1. A RUA (0:03–0:20) · centro de São Paulo, dia claro, cores quentes
+## 1. A RUA (0:03–0:20) · centro de São Paulo, NOITE movimentada (postes de luz amarela, letreiros acesos, faróis), cores quentes
 Calçadão no estilo do centro: prédios antigos pichados, fios de poste emaranhados, banca de jornal, ambulante, motoboy cortando, ônibus, buzinas, gente apressada.
 Som: buzina, motor de ônibus, ambulante gritando "olha a água, olha a água geladinha", passos.
 
@@ -55,7 +55,7 @@ A lâmpada pisca de novo. Ela vira o rosto, mas o reflexo continua olhando pra f
 
 *(Detalhe bizarro: o reflexo pisca atrasado de verdade. Quem prestar atenção vê.)*
 
-## 5. A OUTRA SÃO PAULO (1:02–1:22) · mesmo lugar, luz doente
+## 5. A OUTRA SÃO PAULO (1:02–1:22) · mesma rua, também à NOITE, mas errada (postes mortos ou cinza-esverdeados, letreiros apagados)
 Ela sobe a escada e sai na MESMA rua, mas agora:
 - céu cinza-esverdeado e luz fria, sem sol;
 - nenhuma buzina e nenhum carro andando; os carros estão parados no meio da rua, de porta aberta;
