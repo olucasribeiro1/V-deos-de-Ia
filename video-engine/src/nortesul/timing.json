@@ -1,0 +1,2180 @@
+{
+ "fps": 30,
+ "tempo": 1.0,
+ "duration": 164.36,
+ "lines": [
+  {
+   "id": "L1",
+   "text": "Abre a torneira, e nada. Em 2015, quase nove milhões de pessoas em São Paulo chegaram perto disso. O maior reservatório da cidade caiu pra cerca de cinco por cento.",
+   "start": 0.0,
+   "end": 12.051,
+   "words": [
+    {
+     "w": "Abre",
+     "start": 0.0,
+     "end": 0.279
+    },
+    {
+     "w": "a",
+     "start": 0.302,
+     "end": 0.325
+    },
+    {
+     "w": "torneira,",
+     "start": 0.372,
+     "end": 1.033
+    },
+    {
+     "w": "e",
+     "start": 1.068,
+     "end": 1.184
+    },
+    {
+     "w": "nada.",
+     "start": 1.324,
+     "end": 1.927
+    },
+    {
+     "w": "Em",
+     "start": 2.125,
+     "end": 2.252
+    },
+    {
+     "w": "2015,",
+     "start": 2.31,
+     "end": 3.216
+    },
+    {
+     "w": "quase",
+     "start": 3.379,
+     "end": 3.692
+    },
+    {
+     "w": "nove",
+     "start": 3.808,
+     "end": 4.168
+    },
+    {
+     "w": "milhões",
+     "start": 4.214,
+     "end": 4.598
+    },
+    {
+     "w": "de",
+     "start": 4.632,
+     "end": 4.69
+    },
+    {
+     "w": "pessoas",
+     "start": 4.748,
+     "end": 5.19
+    },
+    {
+     "w": "em",
+     "start": 5.236,
+     "end": 5.294
+    },
+    {
+     "w": "São",
+     "start": 5.341,
+     "end": 5.503
+    },
+    {
+     "w": "Paulo",
+     "start": 5.561,
+     "end": 5.944
+    },
+    {
+     "w": "chegaram",
+     "start": 6.107,
+     "end": 6.641
+    },
+    {
+     "w": "perto",
+     "start": 6.699,
+     "end": 6.954
+    },
+    {
+     "w": "disso.",
+     "start": 7.012,
+     "end": 7.512
+    },
+    {
+     "w": "O",
+     "start": 7.709,
+     "end": 7.755
+    },
+    {
+     "w": "maior",
+     "start": 7.837,
+     "end": 8.162
+    },
+    {
+     "w": "reservatório",
+     "start": 8.22,
+     "end": 8.928
+    },
+    {
+     "w": "da",
+     "start": 8.963,
+     "end": 9.044
+    },
+    {
+     "w": "cidade",
+     "start": 9.079,
+     "end": 9.636
+    },
+    {
+     "w": "caiu",
+     "start": 9.834,
+     "end": 10.182
+    },
+    {
+     "w": "pra",
+     "start": 10.228,
+     "end": 10.344
+    },
+    {
+     "w": "cerca",
+     "start": 10.391,
+     "end": 10.67
+    },
+    {
+     "w": "de",
+     "start": 10.728,
+     "end": 10.832
+    },
+    {
+     "w": "cinco",
+     "start": 10.925,
+     "end": 11.32
+    },
+    {
+     "w": "por",
+     "start": 11.378,
+     "end": 11.505
+    },
+    {
+     "w": "cento.",
+     "start": 11.564,
+     "end": 12.051
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "text": "Oi, eu sou o Davi. Hoje a gente vai entender por que falta água num país que tem doze por cento da água doce do mundo. E se isso pode acontecer em Salvador.",
+   "start": 12.469,
+   "end": 22.292,
+   "words": [
+    {
+     "w": "Oi,",
+     "start": 12.469,
+     "end": 12.922
+    },
+    {
+     "w": "eu",
+     "start": 12.957,
+     "end": 13.119
+    },
+    {
+     "w": "sou",
+     "start": 13.201,
+     "end": 13.41
+    },
+    {
+     "w": "o",
+     "start": 13.433,
+     "end": 13.456
+    },
+    {
+     "w": "Davi.",
+     "start": 13.502,
+     "end": 14.211
+    },
+    {
+     "w": "Hoje",
+     "start": 14.443,
+     "end": 14.675
+    },
+    {
+     "w": "a",
+     "start": 14.698,
+     "end": 14.721
+    },
+    {
+     "w": "gente",
+     "start": 14.745,
+     "end": 14.93
+    },
+    {
+     "w": "vai",
+     "start": 14.965,
+     "end": 15.081
+    },
+    {
+     "w": "entender",
+     "start": 15.105,
+     "end": 15.534
+    },
+    {
+     "w": "por",
+     "start": 15.604,
+     "end": 15.755
+    },
+    {
+     "w": "que",
+     "start": 15.813,
+     "end": 15.917
+    },
+    {
+     "w": "falta",
+     "start": 15.987,
+     "end": 16.3
+    },
+    {
+     "w": "água",
+     "start": 16.382,
+     "end": 16.614
+    },
+    {
+     "w": "num",
+     "start": 16.649,
+     "end": 16.765
+    },
+    {
+     "w": "país",
+     "start": 16.812,
+     "end": 17.137
+    },
+    {
+     "w": "que",
+     "start": 17.183,
+     "end": 17.253
+    },
+    {
+     "w": "tem",
+     "start": 17.311,
+     "end": 17.45
+    },
+    {
+     "w": "doze",
+     "start": 17.566,
+     "end": 17.938
+    },
+    {
+     "w": "por",
+     "start": 17.984,
+     "end": 18.112
+    },
+    {
+     "w": "cento",
+     "start": 18.17,
+     "end": 18.483
+    },
+    {
+     "w": "da",
+     "start": 18.53,
+     "end": 18.6
+    },
+    {
+     "w": "água",
+     "start": 18.646,
+     "end": 18.855
+    },
+    {
+     "w": "doce",
+     "start": 18.925,
+     "end": 19.168
+    },
+    {
+     "w": "do",
+     "start": 19.215,
+     "end": 19.285
+    },
+    {
+     "w": "mundo.",
+     "start": 19.343,
+     "end": 19.819
+    },
+    {
+     "w": "E",
+     "start": 20.132,
+     "end": 20.213
+    },
+    {
+     "w": "se",
+     "start": 20.329,
+     "end": 20.422
+    },
+    {
+     "w": "isso",
+     "start": 20.469,
+     "end": 20.678
+    },
+    {
+     "w": "pode",
+     "start": 20.736,
+     "end": 20.922
+    },
+    {
+     "w": "acontecer",
+     "start": 20.945,
+     "end": 21.49
+    },
+    {
+     "w": "em",
+     "start": 21.525,
+     "end": 21.572
+    },
+    {
+     "w": "Salvador.",
+     "start": 21.618,
+     "end": 22.292
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "text": "Quase toda a água do planeta é salgada. Só dois e meio por cento é doce.",
+   "start": 22.559,
+   "end": 27.516,
+   "words": [
+    {
+     "w": "Quase",
+     "start": 22.559,
+     "end": 22.884
+    },
+    {
+     "w": "toda",
+     "start": 23.0,
+     "end": 23.383
+    },
+    {
+     "w": "a",
+     "start": 23.418,
+     "end": 23.441
+    },
+    {
+     "w": "água",
+     "start": 23.557,
+     "end": 23.801
+    },
+    {
+     "w": "do",
+     "start": 23.836,
+     "end": 23.905
+    },
+    {
+     "w": "planeta",
+     "start": 23.94,
+     "end": 24.358
+    },
+    {
+     "w": "é",
+     "start": 24.381,
+     "end": 24.405
+    },
+    {
+     "w": "salgada.",
+     "start": 24.463,
+     "end": 25.113
+    },
+    {
+     "w": "Só",
+     "start": 25.31,
+     "end": 25.519
+    },
+    {
+     "w": "dois",
+     "start": 25.635,
+     "end": 25.995
+    },
+    {
+     "w": "e",
+     "start": 26.053,
+     "end": 26.076
+    },
+    {
+     "w": "meio",
+     "start": 26.158,
+     "end": 26.401
+    },
+    {
+     "w": "por",
+     "start": 26.448,
+     "end": 26.564
+    },
+    {
+     "w": "cento",
+     "start": 26.622,
+     "end": 26.901
+    },
+    {
+     "w": "é",
+     "start": 26.947,
+     "end": 26.97
+    },
+    {
+     "w": "doce.",
+     "start": 27.028,
+     "end": 27.516
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "text": "As causas. Primeiro, o desperdício: quase quarenta por cento da água tratada se perde em vazamento antes de chegar na torneira.",
+   "start": 27.934,
+   "end": 36.526,
+   "words": [
+    {
+     "w": "As",
+     "start": 27.934,
+     "end": 28.097
+    },
+    {
+     "w": "causas.",
+     "start": 28.166,
+     "end": 28.816
+    },
+    {
+     "w": "Primeiro,",
+     "start": 29.13,
+     "end": 29.71
+    },
+    {
+     "w": "o",
+     "start": 29.745,
+     "end": 29.803
+    },
+    {
+     "w": "desperdício:",
+     "start": 29.861,
+     "end": 30.813
+    },
+    {
+     "w": "quase",
+     "start": 31.127,
+     "end": 31.382
+    },
+    {
+     "w": "quarenta",
+     "start": 31.429,
+     "end": 31.916
+    },
+    {
+     "w": "por",
+     "start": 31.963,
+     "end": 32.09
+    },
+    {
+     "w": "cento",
+     "start": 32.148,
+     "end": 32.439
+    },
+    {
+     "w": "da",
+     "start": 32.497,
+     "end": 32.555
+    },
+    {
+     "w": "água",
+     "start": 32.601,
+     "end": 32.787
+    },
+    {
+     "w": "tratada",
+     "start": 32.822,
+     "end": 33.426
+    },
+    {
+     "w": "se",
+     "start": 33.588,
+     "end": 33.751
+    },
+    {
+     "w": "perde",
+     "start": 33.82,
+     "end": 34.145
+    },
+    {
+     "w": "em",
+     "start": 34.169,
+     "end": 34.215
+    },
+    {
+     "w": "vazamento",
+     "start": 34.285,
+     "end": 34.923
+    },
+    {
+     "w": "antes",
+     "start": 34.97,
+     "end": 35.272
+    },
+    {
+     "w": "de",
+     "start": 35.306,
+     "end": 35.365
+    },
+    {
+     "w": "chegar",
+     "start": 35.411,
+     "end": 35.69
+    },
+    {
+     "w": "na",
+     "start": 35.736,
+     "end": 35.806
+    },
+    {
+     "w": "torneira.",
+     "start": 35.852,
+     "end": 36.526
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "text": "Segundo, o desmatamento. As árvores da Amazônia soltam vapor que vira chuva no Sudeste. São os rios voadores. Menos floresta, menos chuva.",
+   "start": 37.013,
+   "end": 47.601,
+   "words": [
+    {
+     "w": "Segundo,",
+     "start": 37.013,
+     "end": 37.826
+    },
+    {
+     "w": "o",
+     "start": 37.942,
+     "end": 38.012
+    },
+    {
+     "w": "desmatamento.",
+     "start": 38.07,
+     "end": 39.01
+    },
+    {
+     "w": "As",
+     "start": 39.242,
+     "end": 39.405
+    },
+    {
+     "w": "árvores",
+     "start": 39.498,
+     "end": 39.881
+    },
+    {
+     "w": "da",
+     "start": 39.916,
+     "end": 39.985
+    },
+    {
+     "w": "Amazônia",
+     "start": 40.02,
+     "end": 40.612
+    },
+    {
+     "w": "soltam",
+     "start": 40.81,
+     "end": 41.17
+    },
+    {
+     "w": "vapor",
+     "start": 41.228,
+     "end": 41.611
+    },
+    {
+     "w": "que",
+     "start": 41.669,
+     "end": 41.738
+    },
+    {
+     "w": "vira",
+     "start": 41.796,
+     "end": 42.005
+    },
+    {
+     "w": "chuva",
+     "start": 42.063,
+     "end": 42.4
+    },
+    {
+     "w": "no",
+     "start": 42.435,
+     "end": 42.505
+    },
+    {
+     "w": "Sudeste.",
+     "start": 42.551,
+     "end": 43.283
+    },
+    {
+     "w": "São",
+     "start": 43.596,
+     "end": 43.886
+    },
+    {
+     "w": "os",
+     "start": 43.909,
+     "end": 44.037
+    },
+    {
+     "w": "rios",
+     "start": 44.118,
+     "end": 44.327
+    },
+    {
+     "w": "voadores.",
+     "start": 44.409,
+     "end": 45.21
+    },
+    {
+     "w": "Menos",
+     "start": 45.442,
+     "end": 45.744
+    },
+    {
+     "w": "floresta,",
+     "start": 45.79,
+     "end": 46.51
+    },
+    {
+     "w": "menos",
+     "start": 46.58,
+     "end": 46.951
+    },
+    {
+     "w": "chuva.",
+     "start": 46.986,
+     "end": 47.601
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "text": "Terceiro, a poluição: quase metade do esgoto do país não é tratado. E, por fim, secas mais longas.",
+   "start": 47.915,
+   "end": 54.927,
+   "words": [
+    {
+     "w": "Terceiro,",
+     "start": 47.915,
+     "end": 48.6
+    },
+    {
+     "w": "a",
+     "start": 48.67,
+     "end": 48.739
+    },
+    {
+     "w": "poluição:",
+     "start": 48.797,
+     "end": 49.622
+    },
+    {
+     "w": "quase",
+     "start": 49.784,
+     "end": 50.039
+    },
+    {
+     "w": "metade",
+     "start": 50.086,
+     "end": 50.481
+    },
+    {
+     "w": "do",
+     "start": 50.527,
+     "end": 50.597
+    },
+    {
+     "w": "esgoto",
+     "start": 50.632,
+     "end": 51.003
+    },
+    {
+     "w": "do",
+     "start": 51.05,
+     "end": 51.119
+    },
+    {
+     "w": "país",
+     "start": 51.166,
+     "end": 51.526
+    },
+    {
+     "w": "não",
+     "start": 51.595,
+     "end": 51.735
+    },
+    {
+     "w": "é",
+     "start": 51.781,
+     "end": 51.804
+    },
+    {
+     "w": "tratado.",
+     "start": 51.851,
+     "end": 52.501
+    },
+    {
+     "w": "E,",
+     "start": 52.698,
+     "end": 52.803
+    },
+    {
+     "w": "por",
+     "start": 52.826,
+     "end": 52.965
+    },
+    {
+     "w": "fim,",
+     "start": 53.023,
+     "end": 53.418
+    },
+    {
+     "w": "secas",
+     "start": 53.615,
+     "end": 54.033
+    },
+    {
+     "w": "mais",
+     "start": 54.091,
+     "end": 54.254
+    },
+    {
+     "w": "longas.",
+     "start": 54.335,
+     "end": 54.927
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "text": "E Salvador? Chove bastante aqui. O problema é de onde vem a água. Cerca de sessenta por cento vem da barragem de Pedra do Cavalo, no rio Paraguaçu, que atravessa o semiárido, onde a seca é recorrente. Em janeiro deste ano, ela tava com cerca de trinta por cento do volume útil.",
+   "start": 55.508,
+   "end": 73.701,
+   "words": [
+    {
+     "w": "E",
+     "start": 55.508,
+     "end": 55.601
+    },
+    {
+     "w": "Salvador?",
+     "start": 55.694,
+     "end": 56.46
+    },
+    {
+     "w": "Chove",
+     "start": 56.727,
+     "end": 57.075
+    },
+    {
+     "w": "bastante",
+     "start": 57.122,
+     "end": 57.679
+    },
+    {
+     "w": "aqui.",
+     "start": 57.714,
+     "end": 58.178
+    },
+    {
+     "w": "O",
+     "start": 58.492,
+     "end": 58.561
+    },
+    {
+     "w": "problema",
+     "start": 58.631,
+     "end": 59.13
+    },
+    {
+     "w": "é",
+     "start": 59.188,
+     "end": 59.211
+    },
+    {
+     "w": "de",
+     "start": 59.281,
+     "end": 59.339
+    },
+    {
+     "w": "onde",
+     "start": 59.386,
+     "end": 59.595
+    },
+    {
+     "w": "vem",
+     "start": 59.653,
+     "end": 59.827
+    },
+    {
+     "w": "a",
+     "start": 59.885,
+     "end": 59.908
+    },
+    {
+     "w": "água.",
+     "start": 59.978,
+     "end": 60.454
+    },
+    {
+     "w": "Cerca",
+     "start": 60.686,
+     "end": 61.057
+    },
+    {
+     "w": "de",
+     "start": 61.104,
+     "end": 61.173
+    },
+    {
+     "w": "sessenta",
+     "start": 61.22,
+     "end": 61.615
+    },
+    {
+     "w": "por",
+     "start": 61.661,
+     "end": 61.777
+    },
+    {
+     "w": "cento",
+     "start": 61.824,
+     "end": 62.149
+    },
+    {
+     "w": "vem",
+     "start": 62.195,
+     "end": 62.323
+    },
+    {
+     "w": "da",
+     "start": 62.369,
+     "end": 62.427
+    },
+    {
+     "w": "barragem",
+     "start": 62.485,
+     "end": 62.903
+    },
+    {
+     "w": "de",
+     "start": 62.95,
+     "end": 63.008
+    },
+    {
+     "w": "Pedra",
+     "start": 63.089,
+     "end": 63.379
+    },
+    {
+     "w": "do",
+     "start": 63.414,
+     "end": 63.484
+    },
+    {
+     "w": "Cavalo,",
+     "start": 63.519,
+     "end": 64.146
+    },
+    {
+     "w": "no",
+     "start": 64.262,
+     "end": 64.401
+    },
+    {
+     "w": "rio",
+     "start": 64.459,
+     "end": 64.622
+    },
+    {
+     "w": "Paraguaçu,",
+     "start": 64.668,
+     "end": 65.376
+    },
+    {
+     "w": "que",
+     "start": 65.516,
+     "end": 65.597
+    },
+    {
+     "w": "atravessa",
+     "start": 65.632,
+     "end": 66.096
+    },
+    {
+     "w": "o",
+     "start": 66.12,
+     "end": 66.143
+    },
+    {
+     "w": "semiárido,",
+     "start": 66.189,
+     "end": 66.99
+    },
+    {
+     "w": "onde",
+     "start": 67.107,
+     "end": 67.35
+    },
+    {
+     "w": "a",
+     "start": 67.385,
+     "end": 67.408
+    },
+    {
+     "w": "seca",
+     "start": 67.49,
+     "end": 67.85
+    },
+    {
+     "w": "é",
+     "start": 67.873,
+     "end": 67.896
+    },
+    {
+     "w": "recorrente.",
+     "start": 67.942,
+     "end": 68.72
+    },
+    {
+     "w": "Em",
+     "start": 69.034,
+     "end": 69.15
+    },
+    {
+     "w": "janeiro",
+     "start": 69.208,
+     "end": 69.545
+    },
+    {
+     "w": "deste",
+     "start": 69.591,
+     "end": 69.858
+    },
+    {
+     "w": "ano,",
+     "start": 69.893,
+     "end": 70.334
+    },
+    {
+     "w": "ela",
+     "start": 70.473,
+     "end": 70.659
+    },
+    {
+     "w": "tava",
+     "start": 70.717,
+     "end": 70.926
+    },
+    {
+     "w": "com",
+     "start": 70.973,
+     "end": 71.112
+    },
+    {
+     "w": "cerca",
+     "start": 71.17,
+     "end": 71.507
+    },
+    {
+     "w": "de",
+     "start": 71.553,
+     "end": 71.634
+    },
+    {
+     "w": "trinta",
+     "start": 71.751,
+     "end": 72.145
+    },
+    {
+     "w": "por",
+     "start": 72.192,
+     "end": 72.331
+    },
+    {
+     "w": "cento",
+     "start": 72.389,
+     "end": 72.703
+    },
+    {
+     "w": "do",
+     "start": 72.749,
+     "end": 72.807
+    },
+    {
+     "w": "volume",
+     "start": 72.853,
+     "end": 73.19
+    },
+    {
+     "w": "útil.",
+     "start": 73.248,
+     "end": 73.701
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "text": "E aqui o vazamento é ainda maior: Salvador perde cinquenta e quatro por cento da água tratada no caminho. Mais da metade.",
+   "start": 73.933,
+   "end": 82.42,
+   "words": [
+    {
+     "w": "E",
+     "start": 73.933,
+     "end": 74.049
+    },
+    {
+     "w": "aqui",
+     "start": 74.119,
+     "end": 74.456
+    },
+    {
+     "w": "o",
+     "start": 74.688,
+     "end": 74.769
+    },
+    {
+     "w": "vazamento",
+     "start": 74.816,
+     "end": 75.373
+    },
+    {
+     "w": "é",
+     "start": 75.431,
+     "end": 75.454
+    },
+    {
+     "w": "ainda",
+     "start": 75.489,
+     "end": 75.802
+    },
+    {
+     "w": "maior:",
+     "start": 75.849,
+     "end": 76.383
+    },
+    {
+     "w": "Salvador",
+     "start": 76.615,
+     "end": 77.242
+    },
+    {
+     "w": "perde",
+     "start": 77.312,
+     "end": 77.625
+    },
+    {
+     "w": "cinquenta",
+     "start": 77.672,
+     "end": 78.287
+    },
+    {
+     "w": "e",
+     "start": 78.31,
+     "end": 78.333
+    },
+    {
+     "w": "quatro",
+     "start": 78.403,
+     "end": 78.74
+    },
+    {
+     "w": "por",
+     "start": 78.763,
+     "end": 78.914
+    },
+    {
+     "w": "cento",
+     "start": 78.96,
+     "end": 79.297
+    },
+    {
+     "w": "da",
+     "start": 79.355,
+     "end": 79.448
+    },
+    {
+     "w": "água",
+     "start": 79.506,
+     "end": 79.715
+    },
+    {
+     "w": "tratada",
+     "start": 79.75,
+     "end": 80.203
+    },
+    {
+     "w": "no",
+     "start": 80.237,
+     "end": 80.295
+    },
+    {
+     "w": "caminho.",
+     "start": 80.33,
+     "end": 80.852
+    },
+    {
+     "w": "Mais",
+     "start": 81.119,
+     "end": 81.502
+    },
+    {
+     "w": "da",
+     "start": 81.56,
+     "end": 81.642
+    },
+    {
+     "w": "metade.",
+     "start": 81.688,
+     "end": 82.42
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "text": "Em reservatório raso e quente, a evaporação leva muita água. E as represas dentro da cidade, como Joanes e Ipitanga, sofrem com ocupação irregular e esgoto.",
+   "start": 82.582,
+   "end": 93.403,
+   "words": [
+    {
+     "w": "Em",
+     "start": 82.582,
+     "end": 82.733
+    },
+    {
+     "w": "reservatório",
+     "start": 82.791,
+     "end": 83.476
+    },
+    {
+     "w": "raso",
+     "start": 83.523,
+     "end": 83.836
+    },
+    {
+     "w": "e",
+     "start": 83.871,
+     "end": 83.906
+    },
+    {
+     "w": "quente,",
+     "start": 83.964,
+     "end": 84.521
+    },
+    {
+     "w": "a",
+     "start": 84.684,
+     "end": 84.73
+    },
+    {
+     "w": "evaporação",
+     "start": 84.753,
+     "end": 85.496
+    },
+    {
+     "w": "leva",
+     "start": 85.566,
+     "end": 85.868
+    },
+    {
+     "w": "muita",
+     "start": 85.949,
+     "end": 86.425
+    },
+    {
+     "w": "água.",
+     "start": 86.495,
+     "end": 86.936
+    },
+    {
+     "w": "E",
+     "start": 87.133,
+     "end": 87.226
+    },
+    {
+     "w": "as",
+     "start": 87.284,
+     "end": 87.377
+    },
+    {
+     "w": "represas",
+     "start": 87.435,
+     "end": 87.969
+    },
+    {
+     "w": "dentro",
+     "start": 88.016,
+     "end": 88.259
+    },
+    {
+     "w": "da",
+     "start": 88.306,
+     "end": 88.376
+    },
+    {
+     "w": "cidade,",
+     "start": 88.41,
+     "end": 89.049
+    },
+    {
+     "w": "como",
+     "start": 89.165,
+     "end": 89.409
+    },
+    {
+     "w": "Joanes",
+     "start": 89.455,
+     "end": 89.885
+    },
+    {
+     "w": "e",
+     "start": 89.943,
+     "end": 89.966
+    },
+    {
+     "w": "Ipitanga,",
+     "start": 90.001,
+     "end": 90.698
+    },
+    {
+     "w": "sofrem",
+     "start": 90.837,
+     "end": 91.232
+    },
+    {
+     "w": "com",
+     "start": 91.29,
+     "end": 91.394
+    },
+    {
+     "w": "ocupação",
+     "start": 91.429,
+     "end": 91.928
+    },
+    {
+     "w": "irregular",
+     "start": 91.975,
+     "end": 92.567
+    },
+    {
+     "w": "e",
+     "start": 92.648,
+     "end": 92.671
+    },
+    {
+     "w": "esgoto.",
+     "start": 92.706,
+     "end": 93.403
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "text": "Tem mais um risco: cidade costeira que tira água demais de poço pode puxar o mar pra dentro do aquífero. Isso se chama intrusão salina.",
+   "start": 93.716,
+   "end": 103.143,
+   "words": [
+    {
+     "w": "Tem",
+     "start": 93.716,
+     "end": 93.948
+    },
+    {
+     "w": "mais",
+     "start": 94.041,
+     "end": 94.331
+    },
+    {
+     "w": "um",
+     "start": 94.448,
+     "end": 94.517
+    },
+    {
+     "w": "risco:",
+     "start": 94.575,
+     "end": 95.156
+    },
+    {
+     "w": "cidade",
+     "start": 95.353,
+     "end": 95.713
+    },
+    {
+     "w": "costeira",
+     "start": 95.771,
+     "end": 96.259
+    },
+    {
+     "w": "que",
+     "start": 96.317,
+     "end": 96.398
+    },
+    {
+     "w": "tira",
+     "start": 96.444,
+     "end": 96.676
+    },
+    {
+     "w": "água",
+     "start": 96.723,
+     "end": 96.967
+    },
+    {
+     "w": "demais",
+     "start": 97.013,
+     "end": 97.512
+    },
+    {
+     "w": "de",
+     "start": 97.535,
+     "end": 97.605
+    },
+    {
+     "w": "poço",
+     "start": 97.698,
+     "end": 98.151
+    },
+    {
+     "w": "pode",
+     "start": 98.313,
+     "end": 98.569
+    },
+    {
+     "w": "puxar",
+     "start": 98.627,
+     "end": 98.929
+    },
+    {
+     "w": "o",
+     "start": 98.975,
+     "end": 98.998
+    },
+    {
+     "w": "mar",
+     "start": 99.045,
+     "end": 99.254
+    },
+    {
+     "w": "pra",
+     "start": 99.323,
+     "end": 99.474
+    },
+    {
+     "w": "dentro",
+     "start": 99.59,
+     "end": 99.927
+    },
+    {
+     "w": "do",
+     "start": 99.962,
+     "end": 100.02
+    },
+    {
+     "w": "aquífero.",
+     "start": 100.066,
+     "end": 100.728
+    },
+    {
+     "w": "Isso",
+     "start": 100.995,
+     "end": 101.262
+    },
+    {
+     "w": "se",
+     "start": 101.32,
+     "end": 101.402
+    },
+    {
+     "w": "chama",
+     "start": 101.448,
+     "end": 101.843
+    },
+    {
+     "w": "intrusão",
+     "start": 101.924,
+     "end": 102.539
+    },
+    {
+     "w": "salina.",
+     "start": 102.574,
+     "end": 103.143
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "text": "Dá pra evitar. Primeiro, reduzir perdas: dividir a rede em setores com medição, baixar a pressão à noite, porque menos pressão é menos vazamento, e caçar vazamento com sensor acústico.",
+   "start": 103.306,
+   "end": 115.972,
+   "words": [
+    {
+     "w": "Dá",
+     "start": 103.306,
+     "end": 103.468
+    },
+    {
+     "w": "pra",
+     "start": 103.538,
+     "end": 103.654
+    },
+    {
+     "w": "evitar.",
+     "start": 103.677,
+     "end": 104.292
+    },
+    {
+     "w": "Primeiro,",
+     "start": 104.71,
+     "end": 105.244
+    },
+    {
+     "w": "reduzir",
+     "start": 105.268,
+     "end": 105.686
+    },
+    {
+     "w": "perdas:",
+     "start": 105.755,
+     "end": 106.336
+    },
+    {
+     "w": "dividir",
+     "start": 106.498,
+     "end": 106.939
+    },
+    {
+     "w": "a",
+     "start": 106.986,
+     "end": 107.009
+    },
+    {
+     "w": "rede",
+     "start": 107.067,
+     "end": 107.357
+    },
+    {
+     "w": "em",
+     "start": 107.381,
+     "end": 107.439
+    },
+    {
+     "w": "setores",
+     "start": 107.497,
+     "end": 107.926
+    },
+    {
+     "w": "com",
+     "start": 107.973,
+     "end": 108.066
+    },
+    {
+     "w": "medição,",
+     "start": 108.1,
+     "end": 108.797
+    },
+    {
+     "w": "baixar",
+     "start": 108.913,
+     "end": 109.285
+    },
+    {
+     "w": "a",
+     "start": 109.331,
+     "end": 109.354
+    },
+    {
+     "w": "pressão",
+     "start": 109.401,
+     "end": 109.854
+    },
+    {
+     "w": "à",
+     "start": 109.912,
+     "end": 109.935
+    },
+    {
+     "w": "noite,",
+     "start": 110.016,
+     "end": 110.585
+    },
+    {
+     "w": "porque",
+     "start": 110.701,
+     "end": 110.945
+    },
+    {
+     "w": "menos",
+     "start": 111.015,
+     "end": 111.258
+    },
+    {
+     "w": "pressão",
+     "start": 111.316,
+     "end": 111.839
+    },
+    {
+     "w": "é",
+     "start": 112.001,
+     "end": 112.094
+    },
+    {
+     "w": "menos",
+     "start": 112.21,
+     "end": 112.57
+    },
+    {
+     "w": "vazamento,",
+     "start": 112.628,
+     "end": 113.406
+    },
+    {
+     "w": "e",
+     "start": 113.568,
+     "end": 113.661
+    },
+    {
+     "w": "caçar",
+     "start": 113.708,
+     "end": 114.056
+    },
+    {
+     "w": "vazamento",
+     "start": 114.114,
+     "end": 114.683
+    },
+    {
+     "w": "com",
+     "start": 114.741,
+     "end": 114.869
+    },
+    {
+     "w": "sensor",
+     "start": 114.915,
+     "end": 115.264
+    },
+    {
+     "w": "acústico.",
+     "start": 115.31,
+     "end": 115.972
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "text": "Segundo, diversificar fontes: interligar sistemas, usar água de reúso na indústria e proteger as nascentes. Fortaleza, por exemplo, já começou a construir uma usina de dessalinização.",
+   "start": 116.285,
+   "end": 128.94,
+   "words": [
+    {
+     "w": "Segundo,",
+     "start": 116.285,
+     "end": 116.993
+    },
+    {
+     "w": "diversificar",
+     "start": 117.156,
+     "end": 117.887
+    },
+    {
+     "w": "fontes:",
+     "start": 117.957,
+     "end": 118.526
+    },
+    {
+     "w": "interligar",
+     "start": 118.665,
+     "end": 119.292
+    },
+    {
+     "w": "sistemas,",
+     "start": 119.35,
+     "end": 120.128
+    },
+    {
+     "w": "usar",
+     "start": 120.267,
+     "end": 120.651
+    },
+    {
+     "w": "água",
+     "start": 120.709,
+     "end": 120.906
+    },
+    {
+     "w": "de",
+     "start": 120.952,
+     "end": 121.022
+    },
+    {
+     "w": "reúso",
+     "start": 121.069,
+     "end": 121.44
+    },
+    {
+     "w": "na",
+     "start": 121.486,
+     "end": 121.556
+    },
+    {
+     "w": "indústria",
+     "start": 121.603,
+     "end": 122.137
+    },
+    {
+     "w": "e",
+     "start": 122.334,
+     "end": 122.45
+    },
+    {
+     "w": "proteger",
+     "start": 122.508,
+     "end": 123.054
+    },
+    {
+     "w": "as",
+     "start": 123.112,
+     "end": 123.17
+    },
+    {
+     "w": "nascentes.",
+     "start": 123.228,
+     "end": 123.971
+    },
+    {
+     "w": "Fortaleza,",
+     "start": 124.203,
+     "end": 124.83
+    },
+    {
+     "w": "por",
+     "start": 124.853,
+     "end": 124.969
+    },
+    {
+     "w": "exemplo,",
+     "start": 125.027,
+     "end": 125.538
+    },
+    {
+     "w": "já",
+     "start": 125.678,
+     "end": 125.782
+    },
+    {
+     "w": "começou",
+     "start": 125.829,
+     "end": 126.2
+    },
+    {
+     "w": "a",
+     "start": 126.247,
+     "end": 126.27
+    },
+    {
+     "w": "construir",
+     "start": 126.305,
+     "end": 126.781
+    },
+    {
+     "w": "uma",
+     "start": 126.827,
+     "end": 126.966
+    },
+    {
+     "w": "usina",
+     "start": 127.013,
+     "end": 127.431
+    },
+    {
+     "w": "de",
+     "start": 127.489,
+     "end": 127.57
+    },
+    {
+     "w": "dessalinização.",
+     "start": 127.663,
+     "end": 128.94
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "text": "Terceiro, plano de contingência: monitorar o nível das barragens e agir cedo, antes do reservatório chegar no fundo.",
+   "start": 129.172,
+   "end": 137.357,
+   "words": [
+    {
+     "w": "Terceiro,",
+     "start": 129.172,
+     "end": 129.973
+    },
+    {
+     "w": "plano",
+     "start": 130.205,
+     "end": 130.531
+    },
+    {
+     "w": "de",
+     "start": 130.589,
+     "end": 130.647
+    },
+    {
+     "w": "contingência:",
+     "start": 130.705,
+     "end": 131.68
+    },
+    {
+     "w": "monitorar",
+     "start": 131.842,
+     "end": 132.4
+    },
+    {
+     "w": "o",
+     "start": 132.458,
+     "end": 132.481
+    },
+    {
+     "w": "nível",
+     "start": 132.539,
+     "end": 132.841
+    },
+    {
+     "w": "das",
+     "start": 132.887,
+     "end": 133.015
+    },
+    {
+     "w": "barragens",
+     "start": 133.073,
+     "end": 133.747
+    },
+    {
+     "w": "e",
+     "start": 133.909,
+     "end": 134.025
+    },
+    {
+     "w": "agir",
+     "start": 134.083,
+     "end": 134.373
+    },
+    {
+     "w": "cedo,",
+     "start": 134.431,
+     "end": 134.931
+    },
+    {
+     "w": "antes",
+     "start": 135.047,
+     "end": 135.442
+    },
+    {
+     "w": "do",
+     "start": 135.488,
+     "end": 135.558
+    },
+    {
+     "w": "reservatório",
+     "start": 135.604,
+     "end": 136.324
+    },
+    {
+     "w": "chegar",
+     "start": 136.359,
+     "end": 136.684
+    },
+    {
+     "w": "no",
+     "start": 136.73,
+     "end": 136.8
+    },
+    {
+     "w": "fundo.",
+     "start": 136.858,
+     "end": 137.357
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "text": "Na empresa, o primeiro passo é medir. O que não se mede, não se controla. E um galpão de mil metros quadrados pode captar mais de um milhão de litros de chuva por ano.",
+   "start": 137.717,
+   "end": 148.398,
+   "words": [
+    {
+     "w": "Na",
+     "start": 137.717,
+     "end": 137.822
+    },
+    {
+     "w": "empresa,",
+     "start": 137.856,
+     "end": 138.518
+    },
+    {
+     "w": "o",
+     "start": 138.658,
+     "end": 138.727
+    },
+    {
+     "w": "primeiro",
+     "start": 138.774,
+     "end": 139.134
+    },
+    {
+     "w": "passo",
+     "start": 139.192,
+     "end": 139.54
+    },
+    {
+     "w": "é",
+     "start": 139.575,
+     "end": 139.598
+    },
+    {
+     "w": "medir.",
+     "start": 139.656,
+     "end": 140.202
+    },
+    {
+     "w": "O",
+     "start": 140.562,
+     "end": 140.643
+    },
+    {
+     "w": "que",
+     "start": 140.701,
+     "end": 140.771
+    },
+    {
+     "w": "não",
+     "start": 140.817,
+     "end": 140.945
+    },
+    {
+     "w": "se",
+     "start": 140.98,
+     "end": 141.061
+    },
+    {
+     "w": "mede,",
+     "start": 141.119,
+     "end": 141.653
+    },
+    {
+     "w": "não",
+     "start": 141.769,
+     "end": 141.966
+    },
+    {
+     "w": "se",
+     "start": 142.013,
+     "end": 142.094
+    },
+    {
+     "w": "controla.",
+     "start": 142.141,
+     "end": 142.884
+    },
+    {
+     "w": "E",
+     "start": 143.046,
+     "end": 143.116
+    },
+    {
+     "w": "um",
+     "start": 143.185,
+     "end": 143.243
+    },
+    {
+     "w": "galpão",
+     "start": 143.29,
+     "end": 143.708
+    },
+    {
+     "w": "de",
+     "start": 143.766,
+     "end": 143.836
+    },
+    {
+     "w": "mil",
+     "start": 143.894,
+     "end": 144.033
+    },
+    {
+     "w": "metros",
+     "start": 144.091,
+     "end": 144.393
+    },
+    {
+     "w": "quadrados",
+     "start": 144.428,
+     "end": 145.02
+    },
+    {
+     "w": "pode",
+     "start": 145.182,
+     "end": 145.414
+    },
+    {
+     "w": "captar",
+     "start": 145.449,
+     "end": 145.832
+    },
+    {
+     "w": "mais",
+     "start": 145.902,
+     "end": 146.169
+    },
+    {
+     "w": "de",
+     "start": 146.204,
+     "end": 146.25
+    },
+    {
+     "w": "um",
+     "start": 146.332,
+     "end": 146.401
+    },
+    {
+     "w": "milhão",
+     "start": 146.459,
+     "end": 146.866
+    },
+    {
+     "w": "de",
+     "start": 146.912,
+     "end": 146.993
+    },
+    {
+     "w": "litros",
+     "start": 147.051,
+     "end": 147.365
+    },
+    {
+     "w": "de",
+     "start": 147.4,
+     "end": 147.481
+    },
+    {
+     "w": "chuva",
+     "start": 147.516,
+     "end": 147.794
+    },
+    {
+     "w": "por",
+     "start": 147.829,
+     "end": 147.992
+    },
+    {
+     "w": "ano.",
+     "start": 148.05,
+     "end": 148.398
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "text": "E em casa: banho de cinco minutos em vez de quinze economiza noventa litros.",
+   "start": 148.712,
+   "end": 153.948,
+   "words": [
+    {
+     "w": "E",
+     "start": 148.712,
+     "end": 148.828
+    },
+    {
+     "w": "em",
+     "start": 148.909,
+     "end": 148.979
+    },
+    {
+     "w": "casa:",
+     "start": 149.048,
+     "end": 149.606
+    },
+    {
+     "w": "banho",
+     "start": 149.768,
+     "end": 150.035
+    },
+    {
+     "w": "de",
+     "start": 150.082,
+     "end": 150.151
+    },
+    {
+     "w": "cinco",
+     "start": 150.209,
+     "end": 150.453
+    },
+    {
+     "w": "minutos",
+     "start": 150.5,
+     "end": 150.976
+    },
+    {
+     "w": "em",
+     "start": 151.045,
+     "end": 151.092
+    },
+    {
+     "w": "vez",
+     "start": 151.161,
+     "end": 151.312
+    },
+    {
+     "w": "de",
+     "start": 151.359,
+     "end": 151.417
+    },
+    {
+     "w": "quinze",
+     "start": 151.486,
+     "end": 151.939
+    },
+    {
+     "w": "economiza",
+     "start": 152.079,
+     "end": 152.764
+    },
+    {
+     "w": "noventa",
+     "start": 152.81,
+     "end": 153.274
+    },
+    {
+     "w": "litros.",
+     "start": 153.332,
+     "end": 153.948
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "text": "Água não é infinita. Mas desperdício também não precisa ser. Na NorteSul, cada gota conta. E aí, por onde tu vai começar?",
+   "start": 154.308,
+   "end": 162.864,
+   "words": [
+    {
+     "w": "Água",
+     "start": 154.308,
+     "end": 154.598
+    },
+    {
+     "w": "não",
+     "start": 154.644,
+     "end": 154.784
+    },
+    {
+     "w": "é",
+     "start": 154.842,
+     "end": 154.865
+    },
+    {
+     "w": "infinita.",
+     "start": 154.9,
+     "end": 155.62
+    },
+    {
+     "w": "Mas",
+     "start": 155.817,
+     "end": 156.084
+    },
+    {
+     "w": "desperdício",
+     "start": 156.154,
+     "end": 156.873
+    },
+    {
+     "w": "também",
+     "start": 156.92,
+     "end": 157.199
+    },
+    {
+     "w": "não",
+     "start": 157.222,
+     "end": 157.315
+    },
+    {
+     "w": "precisa",
+     "start": 157.349,
+     "end": 157.744
+    },
+    {
+     "w": "ser.",
+     "start": 157.802,
+     "end": 158.22
+    },
+    {
+     "w": "Na",
+     "start": 158.58,
+     "end": 158.685
+    },
+    {
+     "w": "NorteSul,",
+     "start": 158.743,
+     "end": 159.428
+    },
+    {
+     "w": "cada",
+     "start": 159.544,
+     "end": 159.95
+    },
+    {
+     "w": "gota",
+     "start": 160.031,
+     "end": 160.368
+    },
+    {
+     "w": "conta.",
+     "start": 160.438,
+     "end": 160.972
+    },
+    {
+     "w": "E",
+     "start": 161.169,
+     "end": 161.262
+    },
+    {
+     "w": "aí,",
+     "start": 161.32,
+     "end": 161.541
+    },
+    {
+     "w": "por",
+     "start": 161.575,
+     "end": 161.715
+    },
+    {
+     "w": "onde",
+     "start": 161.761,
+     "end": 161.901
+    },
+    {
+     "w": "tu",
+     "start": 161.947,
+     "end": 162.005
+    },
+    {
+     "w": "vai",
+     "start": 162.04,
+     "end": 162.133
+    },
+    {
+     "w": "começar?",
+     "start": 162.156,
+     "end": 162.864
+    }
+   ]
+  }
+ ]
+}
