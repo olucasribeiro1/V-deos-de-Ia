@@ -19,6 +19,8 @@ export type PuppetProps = {
   ghost?: {opacity: number; color: string; dash?: number};
   /** something held in front of the chest, drawn between torso and arms (local units) */
   heldProp?: React.ReactNode;
+  /** badge/logo fixed on the chest (local units, drawn on the torso, under the arms) */
+  chestBadge?: React.ReactNode;
   /** things hanging from a wrist (e.g. heels carried in the hand); drawn at the wrist, unrotated, local units, in front of the hand */
   handProps?: {L?: React.ReactNode; R?: React.ReactNode};
 };
@@ -50,7 +52,7 @@ export const DEFAULT_POSE: Required<Pose> = {
   bob: 0,
 };
 
-export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, light = SUNSET_LIGHT, upperOnly, ghost, heldProp, handProps}) => {
+export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, light = SUNSET_LIGHT, upperOnly, ghost, heldProp, handProps, chestBadge}) => {
   const p = {...DEFAULT_POSE, ...pose};
   const tid = useUid('torso');
   const tshade = useUid('tshade');
@@ -251,6 +253,7 @@ export const Puppet: React.FC<PuppetProps> = ({outfit, pose = {}, expr = {}, lig
           </g>
         )}
 
+        {!ghost && chestBadge}
         {heldProp}
         {/* arms */}
         <Limb pts={[shL, elbL, wrL]} w={armW} tone={armTone} light={light} />
