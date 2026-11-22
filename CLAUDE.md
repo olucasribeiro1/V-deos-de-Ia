@@ -102,3 +102,12 @@ Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**,
 - **Duração:** cada episódio vertical tem de 1min30 a 2min, nunca mais. Se a narração aprovada passar disso, dividir em duas partes (cada uma com cold open e gancho), sem cortar nem acelerar a fala.
 - **Reaproveitar sempre:** cenários, personagens, animações, efeitos e trechos já feitos são reutilizados (módulos em `series/turno/`), sem perder qualidade. Só cria do zero o que for novo na história.
 - **Na compilação horizontal:** cada episódio mantém o seu gancho final; os cold opens repetidos podem ser encurtados para não cansar quem assiste em sequência.
+
+## Pedidos fixos para todos os próximos vídeos
+- **Descrição para redes sociais em todo vídeo, sem precisar pedir:** `projects/<slug>/out/descricao.md`.
+  - Legenda de Reels com gancho, pergunta pra comentar e hashtags; legenda curta de TikTok com texto de capa; título, descrição e tags do YouTube Shorts.
+  - Palavras-chave de busca (nicho + contexto brasileiro + estilo), melhor horário, transcrição, o que aparece em cada cena e custos.
+- **Expressões melhores:** rostos mais expressivos e legíveis, com transições entre as emoções (alegria de verdade, preocupação, medo, nojo, desconfiança).
+  - No 2D: sobrancelhas, olhos e boca bem marcados.
+  - No 3D/terror: rosto pintado com expressões trocáveis, sobrancelha e boca animadas, e close quando a emoção importa.
+- **Roteiro mais tenso e bizarro:** gancho de curiosidade no primeiro segundo (uma frase ou imagem que não faz sentido e obriga a ver até o fim); um detalhe bizarro a cada 20–30 s; pistas plantadas que se pagam no final; gancho de curiosidade no fim para o próximo episódio.
