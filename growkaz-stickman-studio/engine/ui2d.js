@@ -89,7 +89,7 @@ export function captions(g, globalT, o = {}) {
   const w0 = strs.map(s => measure(g, s, size)).reduce((a, b) => a + b, 0) + size * 0.3 * (strs.length - 1);
   const sz = size * Math.min(1, maxW / w0);   // shrink long phrases to fit the frame
   const gap = sz * 0.3, widths = strs.map(s => measure(g, s, sz)), total = widths.reduce((a, b) => a + b, 0) + gap * (strs.length - 1);
-  let x = V(E.W / 2, 520) - total / 2; strs.forEach((s, k) => { const cur = st + k === i; const pop = cur ? 1 + 0.08 * ease.out(prog(globalT, group[k].start, group[k].start + 0.12)) : 1; g.save(); g.translate(x + widths[k] / 2, y); g.scale(pop, pop); text(g, s, 0, 0, { size: sz, color: cur ? (E.cfg.captionStyle?.destaque || hi) : color, stroke: sz * (E.cfg.captionStyle?.contorno ?? 0.16), strokeColor: E.cfg.captionStyle?.corContorno || 'rgba(0,0,0,.85)' }); g.restore(); x += widths[k] + gap; });
+  let x = V(E.W / 2, 520) - total / 2; strs.forEach((s, k) => { const cur = st + k === i; const pop = cur ? 1 + 0.08 * ease.out(prog(globalT, group[k].start, group[k].start + 0.12)) : 1; g.save(); g.translate(x + widths[k] / 2, y); g.scale(pop, pop); text(g, s, 0, 0, { size: sz, italic: !!group[k].pensa, color: cur ? (E.cfg.captionStyle?.destaque || hi) : (group[k].pensa && E.cfg.captionStyle?.corPensa) || color, stroke: sz * (E.cfg.captionStyle?.contorno ?? 0.16), strokeColor: E.cfg.captionStyle?.corContorno || 'rgba(0,0,0,.85)' }); g.restore(); x += widths[k] + gap; });
 }
 
 // Cartão final "segue a página" (Instagram/TikTok), dentro da safe zone. Use no último plano de cada episódio.

@@ -13,7 +13,7 @@
  "fadeOut": 0.6,
  "music": {
   "enabled": true,
-  "gainDb": -27
+  "gainDb": -30
  },
  "sfx": {
   "enabled": true,
@@ -24,6 +24,7 @@
   "minusculas": true,
   "destaque": "#e8d27a",
   "corContorno": "#05060a",
-  "contorno": 0.2
+  "contorno": 0.2,
+  "corPensa": "#d8e4f0"
  }
 }

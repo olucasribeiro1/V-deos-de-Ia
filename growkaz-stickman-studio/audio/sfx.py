@@ -503,6 +503,189 @@ def vhs_rewind(dur=2.2, seed=68, **_):
     return normalize(stereo(x, 0, 0.3), -4)
 
 
+# ---------- A Estação: cidade à noite, metrô, banheiro, o "outro lado", casa; salto da Lívia por superfície ----------
+def _salto(seed, bright=4200, body=0.18, pitch=1.0):
+    """um toque de salto bloco baixo: clique curto e claro + corpo grave pequeno; variação leve por passo"""
+    r = rng(seed); n = secs(0.22); f = (1 + (r.random() - 0.5) * 0.12) * (pitch or 1.0); a = 0.8 + r.random() * 0.25
+    k = secs(0.012); x = np.zeros(n, np.float32)
+    x[:k] += bp(noise(k, seed), bright * 0.6 * f, min(bright * 1.6 * f, 15000)) * expdec(k, 0.0025)
+    x += sine(1900 * f, n) * expdec(n, 0.006) * 0.25 + sine(2900 * f, n) * expdec(n, 0.004) * 0.12
+    x += _thump(n, 240 * f, 110 * f, 0.025, 0.1, seed) * body
+    return x * a
+
+
+@sfx("salto na calçada/asfalto (seco, leve)", 0.25)
+def salto(dur=0.25, seed=70, pitch=1.0, **_):
+    return normalize(reverb(stereo(lp(_salto(seed, 3800, 0.2, pitch), 7000)), 0.35, 0.08, seed), -6)
+
+
+@sfx("salto no piso da estação (claro, reverb curto de azulejo)", 0.8)
+def salto_estacao(dur=0.8, seed=71, pitch=1.0, **_):
+    x = np.zeros(secs(dur), np.float32); y = _salto(seed, 4800, 0.14, pitch); x[:len(y)] += y
+    return normalize(reverb(stereo(x), 0.9, 0.3, seed), -6)
+
+
+@sfx("salto no azulejo molhado do banheiro (eco curto, úmido)", 0.9)
+def salto_banheiro(dur=0.9, seed=72, pitch=1.0, **_):
+    x = np.zeros(secs(dur), np.float32); y = _salto(seed, 4200, 0.16, pitch) + bp(noise(secs(0.22), seed + 3), 1500, 5000) * expdec(secs(0.22), 0.02) * 0.12; x[:len(y)] += y
+    return normalize(reverb(stereo(x), 1.2, 0.38, seed), -6)
+
+
+@sfx("salto ecoando na rua vazia do outro lado (eco longo e solitário)", 2.6)
+def salto_eco(dur=2.6, seed=73, pitch=1.0, **_):
+    x = np.zeros(secs(dur), np.float32); y = _salto(seed, 4000, 0.22, pitch); x[:len(y)] += y
+    x = x + delay(x, 0.34, 0.32) * 0.8 if False else x
+    e = np.zeros_like(x)
+    for k, (d, g) in enumerate([(0.31, 0.38), (0.63, 0.22), (0.97, 0.12), (1.36, 0.06)]):
+        s0 = secs(d); e[s0:] += lp(x[:len(x) - s0], 3500 - k * 700) * g
+    return normalize(reverb(stereo(x + e, 0, 0.7), 2.8, 0.42, seed), -6)
+
+
+@sfx("salto no piso de casa (abafado, macio)", 0.3)
+def salto_casa(dur=0.3, seed=74, pitch=1.0, **_):
+    return normalize(reverb(stereo(lp(_salto(seed, 2600, 0.3, pitch), 3200)), 0.4, 0.12, seed), -8)
+
+
+@sfx("centro de SP à noite: trânsito, motores, murmúrio de gente, buzinas longe (loopable)", 6.0)
+def cidade_noite(dur=6.0, seed=75, **_):
+    n = secs(dur); t = t_axis(n); r = rng(seed)
+    x = lp(noise(n, seed, "brown"), 300) * 1.2 + bp(noise(n, seed + 1, "pink"), 300, 1800) * 0.35 * (0.6 + 0.4 * np.sin(2 * np.pi * 0.13 * t))
+    mur = bp(noise(n, seed + 2, "pink"), 250, 2500) * (0.5 + 0.5 * np.abs(lp(noise(n, seed + 3), 3) * 8)) * 0.35   # murmúrio de multidão
+    x = x + mur
+    for k in range(2):
+        s = secs(r.random() * (dur - 0.8)); m = secs(0.35 + r.random() * 0.4); f = 380 + r.random() * 120
+        x[s:s + m] += lp(osc("square", f, m) * 0.15 + osc("square", f * 1.26, m) * 0.1, 1800) * np.sin(np.pi * np.linspace(0, 1, m)) ** 0.3 * 0.5
+    return normalize(reverb(stereo(x, 0, 1.0), 1.2, 0.2, seed), -12)
+
+
+@sfx("buzina de carro (curta, duas vezes)", 1.0)
+def buzina(dur=1.0, seed=76, pitch=1.0, **_):
+    n = secs(dur); x = np.zeros(n, np.float32); f = 410 * (pitch or 1)
+    for a, l in ((0.0, 0.18), (0.26, 0.42)):
+        s = secs(a); m = min(secs(l), n - s); x[s:s + m] += lp(osc("square", f, m) * 0.5 + osc("square", f * 1.25, m) * 0.35, 2500) * env_adsr(m, 0.01, 0.05, 0.9, 0.04)
+    return normalize(reverb(stereo(x, 0, 0.4), 0.8, 0.2, seed), -4)
+
+
+@sfx("ônibus passando (motor diesel + ar do freio)", 4.0)
+def onibus(dur=4.0, seed=77, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); prox = np.exp(-((u - 0.5) ** 2) / 0.06)
+    x = lp(osc("saw", 45 + 8 * u, n), 400) * 0.7 + lp(noise(n, seed, "brown"), 500) * 0.6
+    x *= prox; s = secs(dur * 0.62); m = secs(0.5); x[s:s + m] += hp(noise(m, seed + 2), 3000) * np.exp(-np.linspace(0, 4, m)) * 0.3
+    pan = np.clip((u - 0.5) * 2, -1, 1); return normalize(np.stack([x * np.cos((pan + 1) * np.pi / 4), x * np.sin((pan + 1) * np.pi / 4)], 1).astype(np.float32), -3)
+
+
+@sfx("motoboy passando (motor 2T agudo, efeito doppler)", 2.5)
+def moto_passa(dur=2.5, seed=78, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); f = 140 * (1.12 - 0.24 * (1 / (1 + np.exp(-(u - 0.5) * 12))))
+    x = lp(osc("saw", f, n), 1800) * np.exp(-((u - 0.5) ** 2) / 0.05) + bp(noise(n, seed), 500, 3000) * 0.1 * np.exp(-((u - 0.5) ** 2) / 0.05)
+    pan = np.clip((0.5 - u) * 2.2, -1, 1); return normalize(np.stack([x * np.cos((pan + 1) * np.pi / 4), x * np.sin((pan + 1) * np.pi / 4)], 1).astype(np.float32), -4)
+
+
+@sfx("estação de metrô: ar-condicionado, murmúrio baixo, trem distante (loopable)", 6.0)
+def estacao(dur=6.0, seed=79, **_):
+    n = secs(dur); t = t_axis(n)
+    x = lp(noise(n, seed, "pink"), 900) * 0.4 + lp(noise(n, seed + 1, "brown"), 120) * 0.9 * (0.7 + 0.3 * np.sin(2 * np.pi * 0.09 * t)) + bp(noise(n, seed + 2, "pink"), 300, 2000) * 0.12
+    return normalize(reverb(stereo(x, 0, 1.0), 2.2, 0.35, seed), -14)
+
+
+@sfx("bipe da catraca + destrava (clique metálico)", 0.8)
+def catraca(dur=0.8, seed=80, **_):
+    n = secs(dur); x = np.zeros(n, np.float32); m = secs(0.14)
+    x[:m] += osc("square", 1750, m) * env_adsr(m, 0.002, 0.02, 0.8, 0.02) * 0.35
+    s = secs(0.22); k = secs(0.06); x[s:s + k] += bp(noise(k, seed), 800, 5000) * expdec(k, 0.01) * 0.9
+    s = secs(0.45); x[s:s + k] += _thump(k, 300, 160, 0.02, 0.3, seed) * 0.6
+    return normalize(reverb(stereo(x), 0.6, 0.2, seed), -5)
+
+
+@sfx("aviso sonoro da estação (ding-dong de três notas)", 2.4)
+def aviso(dur=2.4, seed=81, **_):
+    n = secs(dur); x = np.zeros(n, np.float32)
+    for k, f in [(0.0, 659), (0.32, 523), (0.64, 784)]:
+        s = secs(k); m = n - s; tt = t_axis(m); x[s:] += (sine(f, m) + sine(f * 2, m) * 0.2) * np.exp(-tt / 0.6) * 0.5
+    return normalize(reverb(stereo(x), 2.0, 0.35, seed), -5)
+
+
+@sfx("trem do metrô chegando: zumbido elétrico subindo, rodas nos trilhos, freio chiando", 6.0)
+def trem(dur=6.0, seed=82, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); env = np.clip(u * 2.2, 0, 1) * (1 - np.clip((u - 0.75) * 4, 0, 1) * 0.5)
+    x = lp(noise(n, seed, "brown"), 400) * env * 1.2 + sine(220 + 180 * np.clip(u * 1.6, 0, 1), n) * 0.12 * env
+    clack = np.zeros(n, np.float32); t = 0.6
+    while t < dur - 0.2: s = secs(t); m = secs(0.05); clack[s:s + m] += _thump(m, 180, 80, 0.02, 0.4, int(t * 10)) * 0.5; t += 0.32 + 0.25 * (t / dur)
+    x += clack * env; s = secs(dur * 0.7); m = n - s; x[s:] += bp(noise(m, seed + 1), 3000, 7000) * np.sin(np.pi * np.linspace(0, 1, m)) * 0.18
+    return normalize(reverb(stereo(x, 0, 0.8), 2.5, 0.35, seed), -3)
+
+
+@sfx("banheiro público: zumbido de fluorescente + goteira + cano (loopable)", 6.0)
+def banheiro(dur=6.0, seed=83, **_):
+    n = secs(dur); t = t_axis(n); x = sum(sine(120 * h, n) * a for h, a in [(1, 0.25), (2, 0.18), (3, 0.1), (5, 0.05)]) * 0.5 + hp(noise(n, seed), 6000) * 0.02
+    x += lp(noise(n, seed + 4, "brown"), 150) * 0.3
+    r = rng(seed); tt = 0.4
+    while tt < dur - 0.2:
+        s = secs(tt); m = secs(0.12); f = 900 + r.random() * 300; x[s:s + m] += sine(f * (1 + 0.8 * np.exp(-np.arange(m) / 300)), m) * np.exp(-np.arange(m) / (SR * 0.02)) * 0.5; tt += 1.1 + r.random() * 0.8
+    return normalize(reverb(stereo(x, 0, 0.6), 1.4, 0.3, seed), -12)
+
+
+@sfx("papel higiênico rasgando", 0.6)
+def papel(dur=0.6, seed=84, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); x = bp(noise(n, seed), 1500, 9000) * (np.abs(lp(noise(n, seed + 1), 60)) * 14 > 0.4) * np.sin(np.pi * u) ** 0.5
+    return normalize(reverb(stereo(x * 0.8), 0.7, 0.2, seed), -6)
+
+
+@sfx("descarga de vaso (válvula + água descendo)", 4.0)
+def descarga(dur=4.0, seed=85, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); k = secs(0.05); x = np.zeros(n, np.float32); x[:k] += _thump(k, 220, 100, 0.02, 0.5, seed)
+    agua = bp(noise(n, seed + 1, "pink"), 300, 3500) * np.clip(u * 8, 0, 1) * (1 - u) ** 1.5 + lp(noise(n, seed + 2, "brown"), 250) * 0.6 * np.sin(np.pi * np.clip(u * 1.3, 0, 1))
+    gorg = sine(180 + 140 * lp(noise(n, seed + 3), 6) * 10, n) * 0.1 * (u > 0.4) * (1 - u)
+    return normalize(reverb(stereo(x + agua + gorg, 0, 0.5), 1.3, 0.35, seed), -3)
+
+
+@sfx("torneira aberta (água caindo na pia)", 3.0)
+def torneira(dur=3.0, seed=86, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); x = bp(noise(n, seed, "pink"), 600, 6000) * np.clip(u * 12, 0, 1) * np.clip((1 - u) * 8, 0, 1) * (0.8 + 0.2 * lp(noise(n, seed + 1), 8) * 10)
+    return normalize(reverb(stereo(x, 0, 0.4), 1.0, 0.25, seed), -6)
+
+
+@sfx("porta de cabine batendo (madeira/fórmica + trinco solto)", 1.0)
+def porta_bate(dur=1.0, seed=87, **_):
+    n = secs(dur); x = _thump(n, 160, 60, 0.08, 0.6, seed) * 0.9; s = secs(0.09); m = secs(0.08); x[s:s + m] += bp(noise(m, seed + 1), 1200, 6000) * expdec(m, 0.012) * 0.4
+    return normalize(reverb(stereo(x), 1.2, 0.3, seed), -2)
+
+
+@sfx("o outro lado: quase silêncio, vento baixo, zumbido grave contínuo (loopable)", 6.0)
+def outro_lado(dur=6.0, seed=88, **_):
+    n = secs(dur); t = t_axis(n)
+    wnd = bp(noise(n, seed, "pink"), 120, 700) * (0.4 + 0.6 * np.clip(lp(noise(n, seed + 1), 0.4) * 30, 0, 1)) * 0.5
+    dr = (sine(38, n) * 0.5 + sine(57.2, n) * 0.25 + sine(76.3, n) * 0.12) * (0.75 + 0.25 * np.sin(2 * np.pi * 0.07 * t))
+    x = wnd + lp(dr, 200) + hp(noise(n, seed + 2), 8000) * 0.006
+    return normalize(reverb(stereo(x, 0, 0.9), 3.0, 0.4, seed), -16)
+
+
+@sfx("tique-taque de relógio de parede (loopable)", 6.0)
+def tique(dur=6.0, seed=89, **_):
+    n = secs(dur); x = np.zeros(n, np.float32)
+    for i in range(int(dur)):
+        s = secs(i); m = secs(0.04); x[s:s + m] += bp(noise(m, seed + i), 1500 if i % 2 else 2200, 6000) * expdec(m, 0.004) * 0.7
+    x += lp(noise(n, seed + 99, "brown"), 120) * 0.05
+    return normalize(reverb(stereo(x), 0.8, 0.25, seed), -14)
+
+
+@sfx("chave entrando e girando na fechadura + trinco abrindo", 1.6)
+def chave(dur=1.6, seed=90, **_):
+    n = secs(dur); x = np.zeros(n, np.float32)
+    s = 0; m = secs(0.35); x[s:s + m] += bp(noise(m, seed), 2500, 9000) * np.sin(np.pi * np.linspace(0, 1, m)) * 0.25   # entrando
+    for a, g in ((0.55, 0.7), (0.8, 0.5), (1.05, 1.0)):
+        s = secs(a); k = secs(0.05); x[s:s + k] += (bp(noise(k, seed + int(a * 9)), 900, 6000) * expdec(k, 0.008) + _thump(k, 400, 200, 0.01, 0.2, seed)[:k] * 0.3) * g
+    return normalize(reverb(stereo(x), 0.7, 0.2, seed), -4)
+
+
+@sfx("portão de ferro abrindo (rangido metálico + trinco)", 2.0)
+def portao(dur=2.0, seed=91, **_):
+    n = secs(dur); u = np.linspace(0, 1, n); k = secs(0.06); x = np.zeros(n, np.float32); x[:k] += bp(noise(k, seed), 700, 4000) * expdec(k, 0.01)
+    f = 520 + 260 * np.sin(np.pi * u) + 60 * lp(noise(n, seed + 1), 6) * 10
+    x += bp(osc("saw", f, n), 400, 4000) * np.sin(np.pi * np.clip((u - 0.1) * 1.3, 0, 1)) ** 0.6 * 0.4
+    return normalize(reverb(stereo(x), 1.0, 0.25, seed), -4)
+
+
 def make(name, **kw):
     if name not in LIB: raise KeyError(f"unknown sfx '{name}'. Available: {', '.join(LIB)}")
     k = {"dur": LIB[name]["dur"], **{a: b for a, b in kw.items() if b is not None}}
