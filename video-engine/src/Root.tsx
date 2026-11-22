@@ -15,6 +15,7 @@ import {Ep03, Ep03Preview} from './ep03/Ep03';
 import * as T3 from './ep03/timeline';
 import {NorteSul, NorteSulPreview} from './nortesul/NorteSul';
 import * as TN from './nortesul/timeline';
+import {FollowCard} from './branding/FollowCard';
 import {ChannelAvatar, ChannelBanner} from './branding/Branding';
 import {PartA} from './ep01/partA/PartA';
 import {PartB} from './ep01/partB/PartB';
@@ -48,5 +49,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="NorteSulPartA" component={NorteSulPreview} defaultProps={{part: 'A' as const}} durationInFrames={TN.f(TN.PARTS.A.end) - TN.f(TN.PARTS.A.start)} fps={FPS} width={W} height={H} />
     <Composition id="NorteSulPartB" component={NorteSulPreview} defaultProps={{part: 'B' as const}} durationInFrames={TN.f(TN.PARTS.B.end) - TN.f(TN.PARTS.B.start)} fps={FPS} width={W} height={H} />
     <Composition id="NorteSulPartC" component={NorteSulPreview} defaultProps={{part: 'C' as const}} durationInFrames={TN.f(TN.PARTS.C.end) - TN.f(TN.PARTS.C.start)} fps={FPS} width={W} height={H} />
+    <Composition id="FollowCard" component={FollowCard} durationInFrames={105} fps={FPS} width={W} height={H} />
+    <Composition id="FollowCardNorteSul" component={FollowCard} defaultProps={{nortesul: true}} durationInFrames={105} fps={FPS} width={W} height={H} />
   </>
 );

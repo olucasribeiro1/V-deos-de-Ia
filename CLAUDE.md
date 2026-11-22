@@ -13,4 +13,5 @@
 - Toda história tem gancho no início ("E se tu…?") e gancho no fim ("Segue aí pra ver…"), e paga as regras plantadas (velocidade da Terra, estalo, a lata).
 - **Para TODO vídeo finalizado:** transcrever a narração final e gerar `episodios/epXX/descricao.md` com título (+ alternativas), descrição pronta para colar (gancho, resumo, curiosidade física, CTA, hashtags) e a transcrição completa.
 - Estrutura: `episodios/epXX/` (roteiro, narracao.txt/mp3, timing.json, descricao.md), `video-engine/src/epXX/` (partes A/B/C), `assets/sfx/epXX/` (efeitos + script de mixagem).
+- **Todo vídeo termina com o cartão "Siga e acompanhe nas redes sociais @Odavi_contos"** (composição `FollowCard` em `video-engine/src/branding/FollowCard.tsx`, 3,5 s, Davi acenando; `FollowCardNorteSul` com crachá). Anexar no final do MP4 com ffmpeg concat (áudio: `out/follow-audio.wav`).
 - MP4 finais ficam fora do git (tamanho); enviar ao usuário diretamente.
