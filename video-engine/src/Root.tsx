@@ -16,6 +16,8 @@ import * as T3 from './ep03/timeline';
 import {NorteSul, NorteSulPreview} from './nortesul/NorteSul';
 import * as TN from './nortesul/timeline';
 import {FollowCard} from './branding/FollowCard';
+import {Ep04, Ep04Preview} from './ep04/Ep04';
+import * as T4 from './ep04/timeline';
 import {ChannelAvatar, ChannelBanner} from './branding/Branding';
 import {PartA} from './ep01/partA/PartA';
 import {PartB} from './ep01/partB/PartB';
@@ -51,5 +53,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="NorteSulPartC" component={NorteSulPreview} defaultProps={{part: 'C' as const}} durationInFrames={TN.f(TN.PARTS.C.end) - TN.f(TN.PARTS.C.start)} fps={FPS} width={W} height={H} />
     <Composition id="FollowCard" component={FollowCard} durationInFrames={105} fps={FPS} width={W} height={H} />
     <Composition id="FollowCardNorteSul" component={FollowCard} defaultProps={{nortesul: true}} durationInFrames={105} fps={FPS} width={W} height={H} />
+    <Composition id="Ep04" component={Ep04} durationInFrames={T4.EP_DURATION} fps={FPS} width={W} height={H} />
+    <Composition id="Ep04PartA" component={Ep04Preview} defaultProps={{part: 'A' as const}} durationInFrames={T4.f(T4.PARTS.A.end) - T4.f(T4.PARTS.A.start)} fps={FPS} width={W} height={H} />
+    <Composition id="Ep04PartB" component={Ep04Preview} defaultProps={{part: 'B' as const}} durationInFrames={T4.f(T4.PARTS.B.end) - T4.f(T4.PARTS.B.start)} fps={FPS} width={W} height={H} />
   </>
 );
