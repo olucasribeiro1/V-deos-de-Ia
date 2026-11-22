@@ -105,7 +105,7 @@ export function palcoPS1(T, o = {}) {
   FOG.start.value = o.fogStart ?? 12; FOG.dens.value = o.fogDens ?? 0.065;
   // vertical: 360x640. Horizontal (render --wide): o canvas 3D ocupa o quadro todo e a câmera vê mais dos lados (640x360)
   if (E.wide) R.setSize(E.outW, E.outH, false);
-  const [w, h] = E.wide ? [640, 360] : RES;
+  const RB = o.res || RES; const [w, h] = E.wide ? [RB[1], RB[0]] : RB;   // o.res: resolução interna opcional (padrão 360x640)
   const camera = new THREE.PerspectiveCamera(o.fov ?? 66, E.wide ? E.outW / E.outH : E.W / E.H, 0.1, 320); scene.add(camera);
   SNAP.value.set(w / 2, h / 2);
   const rt = new THREE.WebGLRenderTarget(w, h, { type: THREE.HalfFloatType, minFilter: THREE.NearestFilter, magFilter: THREE.NearestFilter, depthBuffer: true, generateMipmaps: false });

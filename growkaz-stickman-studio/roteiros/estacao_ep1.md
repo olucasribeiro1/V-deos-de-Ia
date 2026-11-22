@@ -2,7 +2,7 @@
 Terror vertical (9:16), ~1min50. Usa a mesma base do Turno da Madrugada: 3D low poly estilo PS2/RE2, texturas pixeladas, fita VHS, sons do ambiente, um gancho no começo e outro no fim.
 Câmera em **terceira pessoa** (vemos a Lívia), lenta e acompanhando, com dissolve suave. Nos momentos de tensão, passa por cima do ombro dela.
 
-**Protagonista: LÍVIA, 28 anos.** Bonita, pele marrom e cabelo cacheado volumoso preso com uma piranha. Usa blusa mostarda, calça jeans clara, tênis branco, bolsa de lado e argolas douradas. Rosto modelado no padrão PS2/PS3: maçã do rosto, lábios cheios, sobrancelhas marcadas, olhos com brilho e expressões trocáveis (alívio, nojo, desconfiança, medo).
+**Protagonista: LÍVIA, 28 anos.** Bonita, pele marrom e cabelo cacheado volumoso preso com uma piranha. Usa blusa mostarda, calça jeans clara, sapato de salto baixo (bege), bolsa de lado e argolas douradas. Rosto modelado no padrão PS2/PS3: maçã do rosto, lábios cheios, sobrancelhas marcadas, olhos com brilho e expressões trocáveis (alívio, nojo, desconfiança, medo).
 **Voz da Lívia:** só pensamento, suave e serena, como quem reflete. Ela só fala em voz alta duas vezes (com a senhora e ao entrar em casa).
 
 Referência de clima: episódio de *Além da Imaginação*. O vídeo nunca diz isso: o estranho é mostrado, nunca explicado.
@@ -106,6 +106,7 @@ Corte seco pro preto. Cartão VHS: **"CONTINUA... · EP. 2 →"** e a chamada pr
 - **Custo estimado:** ~1.300 caracteres no ElevenLabs. Já foram gastos ~600 nas amostras.
 
 ## Som
+- **Passos de salto baixo, leves**, em toda caminhada, mudando conforme o chão. No mundo vazio, são o único som da rua, com eco longo.
 - **Rua viva:** buzina, ônibus, ambulante, multidão.
 - **Estação:** bipe da catraca, aviso sonoro e trem chegando.
 - **Banheiro:** porta rangendo, goteira, lâmpada zunindo, papel rasgando e descarga.

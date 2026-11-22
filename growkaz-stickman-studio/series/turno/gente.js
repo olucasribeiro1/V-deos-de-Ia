@@ -164,10 +164,10 @@ export const VULTO = { vulto: true, pele: '#26262c', camisa: '#2a2a30', calca: '
 export function pessoa(o) {
   const S = (o.alt ?? 1.75) / 1.75, L = o.larg ?? 1, B = o.barriga ?? 0, root = new THREE.Group(), corpo = new THREE.Group(); root.add(corpo); corpo.scale.set(S * (o.vulto ? 0.9 : 1), S, S);
   const V = !!o.vulto;
-  const mCam = mat(V ? o.camisa : '#ffffff', { map: V ? null : (o.polo ? texPolo(o) : texFlanela(o)) });
+  const mCam = mat(V ? o.camisa : '#ffffff', { map: V ? null : (o.texCamisa ? o.texCamisa(false) : o.polo ? texPolo(o) : texFlanela(o)) });
   const mCal = mat(V ? o.calca : '#ffffff', { map: V ? null : texCalca(o) });
   const mCin = mat(V ? o.calca : '#ffffff', { map: V ? null : texCinto(o) });
-  const mMan = mat(V ? o.camisa : '#ffffff', { map: V ? null : (o.polo ? texPolo(o, true) : texFlanela(o, true)) });
+  const mMan = mat(V ? o.camisa : '#ffffff', { map: V ? null : (o.texCamisa ? o.texCamisa(true) : o.polo ? texPolo(o, true) : texFlanela(o, true)) });
   const mSap = mat(o.sapato), mPele = mat(o.pele), mSola = mat(V ? '#0a0a0c' : '#3a3632');
   // ---- pernas: coxa e canela torneadas, joelho, sapato com bico ----
   const pernas = [];
@@ -197,8 +197,8 @@ export function pessoa(o) {
   const bracos = {};
   for (const [lado, s] of [['E', -1], ['D', 1]]) {
     const om = new THREE.Group(); om.position.set(s * (0.185 * L + 0.02), 0.4, 0); tronco.add(om);
-    const del = new THREE.Mesh(new THREE.SphereGeometry(0.07, 7, 4), V ? mCam : mat(o.polo ? o.camisa : o.xadrez)); del.scale.set(1, 0.85, 0.95); om.add(del);
-    const longa = !o.polo;
+    const del = new THREE.Mesh(new THREE.SphereGeometry(0.07, 7, 4), V ? mCam : mat(o.polo || o.texCamisa ? o.camisa : o.xadrez)); del.scale.set(1, 0.85, 0.95); om.add(del);
+    const longa = o.manga ? o.manga === 'longa' : !o.polo;
     om.add(M(anel([{ y: -0.035, rx: 0.062, rz: 0.064 }, { y: -0.15, rx: 0.06, rz: 0.06 }, ...(longa ? [{ y: -0.29, rx: 0.052, rz: 0.054 }] : [{ y: -0.16, rx: 0.058, rz: 0.058 }])], 7), mMan));
     if (!longa) om.add(M(anel([{ y: -0.12, rx: 0.046, rz: 0.048 }, { y: -0.3, rx: 0.042, rz: 0.044 }], 6), mPele));
     const cot = new THREE.Group(); cot.position.y = -0.29; om.add(cot);
