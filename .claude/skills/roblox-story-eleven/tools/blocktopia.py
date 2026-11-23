@@ -47,12 +47,50 @@ def bt_look(sun_angle=1.0, sun_boost=1.25):
             o.data.energy *= sun_boost
 
 
-# Kai: tan skin, messy brown hair, big red/white headphones, teal hoodie, blue jeans.
-KAI = dict(skin="#F2C9A0", hair="messy", hair_color="#5A3A22", shirt="#16A99A", pants="#3F6FC4",
-           face="kid", sleeves="long", vneck="#F4F4F4")
+# Kai: tan skin, messy brown hair, black/white headphones, split purple|orange hoodie with crossed
+# sleeves and a hood, black pants, white sneakers.
+KAI_A, KAI_B = "#6B2BD9", "#FF8A00"
+KAI = dict(skin="#F2C9A0", hair="messy", hair_color="#5A3A22", shirt=KAI_A, pants="#1F1F24",
+           face="kid", sleeves="long")
 
 
-def headphones(ch, cup="#E0231C", band="#F4F4F4"):
+def split_mat(name, left, right):
+    """Two-tone material split at object-space x = 0 (left = +X, the character's left)."""
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    N, L = m.node_tree.nodes, m.node_tree.links
+    b = N.get("Principled BSDF")
+    b.inputs["Roughness"].default_value = 0.55
+    tc, sep = N.new("ShaderNodeTexCoord"), N.new("ShaderNodeSeparateXYZ")
+    gt = N.new("ShaderNodeMath"); gt.operation = "GREATER_THAN"; gt.inputs[1].default_value = 0.0
+    mx = N.new("ShaderNodeMix"); mx.data_type = "RGBA"
+    mx.inputs[6].default_value = (*hexc(right), 1)
+    mx.inputs[7].default_value = (*hexc(left), 1)
+    L.new(tc.outputs["Object"], sep.inputs[0]); L.new(sep.outputs["X"], gt.inputs[0])
+    L.new(gt.outputs[0], mx.inputs[0]); L.new(mx.outputs[2], b.inputs["Base Color"])
+    m.diffuse_color = (*hexc(left), 1)
+    return m
+
+
+def _swap_shirt(obj, newm):
+    for sl in obj.material_slots:
+        if sl.material and sl.material.name.split(".")[0].endswith("_shirt"):
+            sl.material = newm
+
+
+def kai_outfit(ch, a=KAI_A, b=KAI_B):
+    n, O = ch.name, bpy.data.objects
+    _swap_shirt(O[n + "_torso"], split_mat(n + "_split", a, b))      # character's left half = purple
+    _swap_shirt(O[n + "_armL"], mat(n + "_sleeveL", hexc(b), 0.55))   # crossed sleeves
+    _swap_shirt(O[n + "_armR"], mat(n + "_sleeveR", hexc(a), 0.55))
+    box(n + "_hood", (1.5, 0.42, 0.5), (0, 0.62, 1.95), split_mat(n + "_hoodm", a, b), 0.16,
+        parent=ch.hip, coll=ch.coll)
+    Ms = mat(n + "_shoe", hexc("#F4F4F4"), 0.4)
+    for piv, side in ((ch.hpL, "L"), (ch.hpR, "R")):
+        box(f"{n}_shoe{side}", (1.04, 1.08, 0.34), (0, -0.04, -1.86), Ms, 0.08, parent=piv, coll=ch.coll)
+
+
+def headphones(ch, cup="#1A1A1E", band="#F4F4F4"):
     """Over-ear headphones on the head (head-local: radius 0.62, top z=0.6)."""
     import math as _m
     Mc, Mb = mat("kai_cup", hexc(cup), 0.35), mat("kai_band", hexc(band), 0.4)
@@ -78,4 +116,5 @@ def kai_(t0, t1, expr="happy", name="Kai", **kw):
     ch = chars.Char(name, **a)
     if phones:
         headphones(ch)
+    kai_outfit(ch)
     return story._live(ch, t0, t1, expr)
