@@ -54,6 +54,9 @@ to show the script. Default has **one stop** (the lead pick); "autopilot" has no
    $PY tools/tighten.py <slug> --max-gap 0.45
    $PY tools/retempo.py <slug> --wpm 258
    ```
+   Default narrator: `TX3LPaxmHKxFdv7VOQHJ` "Liam - Energetic, Social Media Creator" (premade;
+   saved as `eleven_voice_id`; if `config.json` lacks it, pass `--voice-id TX3LPaxmHKxFdv7VOQHJ`).
+   At `--speed 1.15` Liam lands near 218 wpm, so `retempo --wpm 258` (≈x1.18) is expected.
    Check the summary: 255-280 wpm, 65-75 words before 15 s, no gap over 0.45 s. Never call the
    API twice for the same script: fix timing with `--reuse`, `tighten` and `retempo`.
    Do not clone `<kit>/voice/narrator_sample.mp3` into ElevenLabs: it was licensed for Flashloop.
