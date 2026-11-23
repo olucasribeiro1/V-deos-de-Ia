@@ -20,3 +20,21 @@ def portrait(key, t0, t1):
 
 for i, key in enumerate(OPTS):
     V.shot(i + 1, i * 2.0, i * 2.0 + 2.0, key)(lambda key=key, i=i: portrait(key, i * 2.0, i * 2.0 + 2.0))
+
+
+from blocktopia import zip_, bt_look
+
+
+def zip_portrait(t0, t1, **kw):
+    town_scene()
+    E = zip_(t0, t1, "happy", **kw)
+    E.pose(t0, loc=(0, -30, 0), rot=0)
+    E.act(t0 + 0.2, "wave")
+    cam = Cam()
+    cam.key(t0, (1.6, -42.5, 3.4), (0, -30, 2.9), lens=32, focus=12.5, fstop=5)
+    cam.key(t1, (0.8, -42.0, 3.4), (0, -30, 2.9), lens=32, focus=12.0, fstop=5)
+    bt_look()
+
+
+V.shot(4, 6.0, 8.0, "Zip yellow skin, no glasses")(lambda: zip_portrait(6.0, 8.0))
+V.shot(5, 8.0, 10.0, "Zip yellow skin + glasses")(lambda: zip_portrait(8.0, 10.0, extras=("glasses",)))
