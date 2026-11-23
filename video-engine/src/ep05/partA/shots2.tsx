@@ -199,7 +199,6 @@ export const A30PhotoRocha: React.FC<ShotP> = (p) => {
   return (
     <Rig s0={1.0} s1={1.06} r0={-1} r1={1} whipIn="right" impacts={[{at: 7, amp: 8}]}>
       <PhotoZoom fx={lerp(LIA_SEAT.x, DAVI_SEAT.x + 10, u)} fy={950} z={2.5} />
-      <HudTag x={90} y={560} label="ROCHA" value="DE SMOKING" k={appear(fr, 8, 6)} size={80} color="#ff6b6b" />
       <Finish vignette={0.55} grain={0.14} />
     </Rig>
   );
@@ -319,7 +318,7 @@ const MicRings: React.FC<{k: number; fr: number; done: boolean}> = ({k, fr, done
 
 /** Timer chip "LOCALIZAÇÃO: x s". */
 const Timer: React.FC<{s: number; k: number; lock: boolean}> = ({s, k, lock}) => (
-  <BigChip x={540} y={1760} label="LOCALIZAÇÃO" value={lock ? '2 s' : `${s.toFixed(1).replace('.', ',')} s`} k={k} color={lock ? '#e0302c' : '#ffd23a'} fg={lock ? '#fff' : '#141414'} />
+  <BigChip x={540} y={1690} label="LOCALIZAÇÃO" value={lock ? '2 s' : `${s.toFixed(1).replace('.', ',')} s`} k={k} color={lock ? '#e0302c' : '#ffd23a'} fg={lock ? '#fff' : '#141414'} />
 );
 
 /** a33 — "os microfones acham o estalo": top-down terrace map, 3 mics, rings racing to the bang. */
@@ -329,6 +328,7 @@ export const A33Mics: React.FC<ShotP> = (p) => {
   const k = kf(fr, [2, p.dur + 14], [0, 0.85], (x) => x);
   const bang = fr % 12 < 6;
   return (
+    <AbsoluteFill>
     <Rig s0={1.25} s1={1.05} r0={-6} r1={-2} whipIn="up" oy={1050}>
       <AbsoluteFill style={{transform: 'perspective(1800px) rotateX(16deg)', transformOrigin: '50% 50%'}}>
         <TerracePlan t={t} />
@@ -339,9 +339,10 @@ export const A33Mics: React.FC<ShotP> = (p) => {
         <MicRings k={k} fr={fr} done={false} />
       </AbsoluteFill>
       <AbsoluteFill style={{background: 'repeating-linear-gradient(0deg, rgba(120,200,255,0.035) 0px, rgba(120,200,255,0.035) 2px, transparent 2px, transparent 6px)'}} />
-      <Timer s={(fr / 30) * 0.95} k={appear(fr, 2, 5)} lock={false} />
       <Finish vignette={0.4} grain={0.1} />
     </Rig>
+    <Timer s={(fr / 30) * 0.95} k={appear(fr, 2, 5)} lock={false} />
+    </AbsoluteFill>
   );
 };
 
@@ -361,6 +362,7 @@ export const A34Locate: React.FC<ShotP> = (p) => {
     [110, 640],
   ];
   return (
+    <AbsoluteFill>
     <Rig s0={1.05} s1={1.3} r0={-2} r1={0} ox={SPOT[0]} oy={SPOT[1]} impacts={[{at: D + 3, amp: 12, zoom: 0.06}]}>
       <AbsoluteFill style={{transform: 'perspective(1800px) rotateX(16deg)', transformOrigin: '50% 50%'}}>
         <TerracePlan t={t} />
@@ -374,9 +376,10 @@ export const A34Locate: React.FC<ShotP> = (p) => {
         </Svg>
       </AbsoluteFill>
       {fr >= D && <AbsoluteFill style={{background: `rgba(255,40,40,${0.18 * (1 - clamp((fr - D) / 10))})`, mixBlendMode: 'screen'}} />}
-      <Timer s={s} k={1} lock={fr >= D} />
       <Finish vignette={0.45} grain={0.1} />
     </Rig>
+    <Timer s={s} k={1} lock={fr >= D} />
+    </AbsoluteFill>
   );
 };
 

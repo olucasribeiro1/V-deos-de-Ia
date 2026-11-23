@@ -39,7 +39,7 @@ export const B11Globe: React.FC = () => {
 /* ------------------------------------------------------------------ b12–b14 — two points, two (almost equal) arrows */
 
 const PT_A = {x: 380, y: 860, label: 'MESA'};
-const PT_B = {x: 820, y: 1330, label: 'IATE'};
+const PT_B = {x: 820, y: 1180, label: 'IATE'};
 
 const Arrow: React.FC<{x: number; y: number; len: number; k: number; color: string; w?: number}> = ({x, y, len, k, color, w = 22}) => {
   if (k < 0.02) return null;
@@ -167,8 +167,8 @@ export const B15Step: React.FC = () => {
         </g>
       </Svg>
       {/* Davi doing a dainty tip-toe step */}
-      <PlacedDavi x={lerp(560, 610, st)} y={1640 - Math.sin(st * Math.PI) * 30} height={1050} light={TERRACE_LIGHT} pose={{hipL: lerp(-4, -24, Math.sin(st * Math.PI)), knL: Math.sin(st * Math.PI) * 30, hipR: 8, shL: -40, elL: -60, shR: 60, elR: 80, lean: 3, headTilt: -6}} expr={{halfSmile: 0.8, smile: 0.4, browRaise: 0.6, lookX: 0.2, lookY: 0.6}} />
-      <Chip x={540} y={660} text="👣 UM PASSINHO" k={kf(frame, [0, 6], [0, 1], easeOut)} color="#10131f" size={62} bg="rgba(255,255,255,0.92)" />
+      <PlacedDavi x={lerp(560, 610, st)} y={1640 - Math.sin(st * Math.PI) * 30} height={900} light={TERRACE_LIGHT} pose={{hipL: lerp(-4, -24, Math.sin(st * Math.PI)), knL: Math.sin(st * Math.PI) * 30, hipR: 8, shL: -40, elL: -60, shR: 60, elR: 80, lean: 3, headTilt: -6}} expr={{halfSmile: 0.8, smile: 0.4, browRaise: 0.6, lookX: 0.2, lookY: 0.6}} />
+      <Chip x={540} y={660} text="👣 UM PASSINHO" k={kf(frame, [0, 6], [0, 1], easeOut)} color="#10131f" size={62} bg="rgba(255,255,255,0.92)" fg="#10131f" />
       <Finish vignette={0.3} grain={0.08} />
     </Rig>
   );
@@ -318,7 +318,7 @@ export const B20Pov: React.FC = () => {
   const z = kf(frame, [0, 24], [1, 2.3], easeOut);
   return (
     <AbsoluteFill style={{overflow: 'hidden', background: '#000'}}>
-      <AbsoluteFill style={{transform: `scale(${z})`, transformOrigin: `${YACHT.x}px ${YACHT.y - 20}px`}}>
+      <AbsoluteFill style={{transform: `translate(${(540 - YACHT.x) * ((z - 1) / 1.3)}px,${(883 - YACHT.y + 20) * ((z - 1) / 1.3)}px) scale(${z})`, transformOrigin: `${YACHT.x}px ${YACHT.y - 20}px`}}>
         <Memory>
           <TerraceBG t={t + 210} horizon={640} balY={930} />
           <Svg>

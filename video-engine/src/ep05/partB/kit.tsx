@@ -142,7 +142,7 @@ export const Svg: React.FC<{children: React.ReactNode; style?: React.CSSProperti
 /* ------------------------------------------------------------------ HUD bits */
 
 /** Rounded HUD chip (series style). `k` 0..1 pop-in. */
-export const Chip: React.FC<{x: number; y: number; text: React.ReactNode; k: number; color?: string; size?: number; align?: 'left' | 'center' | 'right'; rot?: number; bg?: string}> = ({
+export const Chip: React.FC<{x: number; y: number; text: React.ReactNode; k: number; color?: string; size?: number; align?: 'left' | 'center' | 'right'; rot?: number; bg?: string; fg?: string}> = ({
   x,
   y,
   text,
@@ -152,6 +152,7 @@ export const Chip: React.FC<{x: number; y: number; text: React.ReactNode; k: num
   align = 'center',
   rot = 0,
   bg = 'rgba(8,14,32,0.86)',
+  fg = '#fff',
 }) => {
   if (k <= 0) return null;
   const s = lerp(0.4, 1, clamp(k)) * (1 + 0.12 * Math.sin(clamp(k) * Math.PI));
@@ -169,7 +170,7 @@ export const Chip: React.FC<{x: number; y: number; text: React.ReactNode; k: num
         background: bg,
         border: `${Math.max(3, size * 0.07)}px solid ${color}`,
         boxShadow: `0 0 ${size * 0.6}px ${color}66, 0 8px 22px rgba(0,0,0,0.45)`,
-        color: '#fff',
+        color: fg,
         fontFamily: HUD_FONT,
         fontWeight: 700,
         fontSize: size,
