@@ -45,3 +45,37 @@ def bt_look(sun_angle=1.0, sun_boost=1.25):
         if o.type == "LIGHT" and o.data.type == "SUN":
             o.data.angle = math.radians(sun_angle)
             o.data.energy *= sun_boost
+
+
+# Kai: tan skin, messy brown hair, big red/white headphones, teal hoodie, blue jeans.
+KAI = dict(skin="#F2C9A0", hair="messy", hair_color="#5A3A22", shirt="#16A99A", pants="#3F6FC4",
+           face="kid", sleeves="long", vneck="#F4F4F4")
+
+
+def headphones(ch, cup="#E0231C", band="#F4F4F4"):
+    """Over-ear headphones on the head (head-local: radius 0.62, top z=0.6)."""
+    import math as _m
+    Mc, Mb = mat("kai_cup", hexc(cup), 0.35), mat("kai_band", hexc(band), 0.4)
+    n, h = ch.name, ch.head
+    r, cz = 0.9, 0.0
+    for i, a in enumerate(range(-84, 85, 12)):
+        t = _m.radians(a)
+        box(f"{n}_hpb{i}", (0.22, 0.28, 0.14), (r * _m.sin(t), 0.05, cz + r * _m.cos(t)), Mb, 0.04,
+            rot=(0, a, 0), parent=h, coll=ch.coll)
+    from rbx.core import cyl
+    for sx in (-1, 1):
+        cyl(f"{n}_hpcup{sx}", 0.32, 0.2, (sx * 0.8, 0.05, 0.0), Mc, 32, bev=0.05, rot=(0, 90, 0), parent=h, coll=ch.coll)
+        cyl(f"{n}_hppad{sx}", 0.24, 0.06, (sx * 0.92, 0.05, 0.0), Mb, 32, rot=(0, 90, 0), parent=h, coll=ch.coll)
+
+
+def kai_(t0, t1, expr="happy", name="Kai", **kw):
+    """Kai, the Blocktopia protagonist."""
+    a = dict(KAI)
+    a.update(kw)
+    if "extras" in a:
+        a["extras"] = tuple(a["extras"])
+    phones = a.pop("phones", True)
+    ch = chars.Char(name, **a)
+    if phones:
+        headphones(ch)
+    return story._live(ch, t0, t1, expr)
