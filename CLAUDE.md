@@ -94,7 +94,11 @@ Canal de vídeos animados 2D **verticais (9:16) para Instagram Reels e TikTok**,
 
 ## Métrica do terror (série "Turno da Madrugada" e próximos de terror)
 - **Visual:** tudo em 3D low poly retrô, estilo PS1 e jogo indie (render em baixa resolução ampliado sem suavizar, pontilhado, grão, névoa). Tons escuros: noite azul-petróleo, fluorescente frio por dentro e luz amarela do posto como a "linha de segurança". Módulos em `series/turno/`.
-- **Câmera:** primeira pessoa (os olhos do Lucas), lenta, respirando, virando para quem fala ou para o som. Quase sem cortes, dissolve suave ≤ 0,6 s; zoom só quando a tensão pede; corte seco só no susto final.
+- **Câmera (próximos vídeos): mistura de POV e terceira pessoa.**
+  - **Terceira pessoa** para situar o lugar, mostrar a personagem andando e mostrar as expressões dela (close no rosto quando a emoção importa).
+  - **POV (os olhos dela)** para descobertas e tensão: o que ela vê e lê (placa, relógio, foto, espelho), as mãos usando as coisas, gente encarando direto na lente, sustos.
+  - Passagem de uma para a outra: a câmera entra na cabeça por trás do ombro ou um dissolve ≤ 0,6 s. A câmera é lenta, respirando e quase sem cortes. Zoom só quando a tensão pede; corte seco só no susto final.
+  - O Turno da Madrugada Ep. 1 foi todo em POV; A Estação Ep. 1, todo em terceira pessoa.
 - **Narração:** mais lenta, português claro e correto, sem erro, com suspense e pausas. O vídeo é feito antes da voz (timeline estimada); a narração só é gerada depois que o usuário aprovar o vídeo.
 - **Som:** ambiente de noite com grilos, zumbido de geladeira e fluorescente, chiado de TV, estrondo distante, batida no vidro, porta rangendo, coração e riser.
 - **Formato:** primeiro o episódio em Short vertical (9:16); depois a versão horizontal (16:9) com a mesma estética, só abrindo o enquadramento para mostrar mais do ambiente natural (nada de barras ou fundo borrado). Cenas 3D feitas para funcionar nos dois formatos.
