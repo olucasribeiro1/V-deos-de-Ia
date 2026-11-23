@@ -9,8 +9,21 @@ import math
 import bpy
 from rbx import story, chars
 
-ZIP = dict(skin="#F5CD2F", hair="spiky", hair_color="#7CFF3A", shirt="#FF7A1A", pants="#5B2A86",
-           face="hero", sleeves="short", bolt="#FFE234")
+from rbx.core import sphere, box, mat, hexc
+
+# Zip: white skin, red backwards baseball cap, black tee with a yellow bolt, dark pants, no glasses.
+ZIP = dict(skin="#F7F5F2", hair="bald", hair_color="#F7F5F2", shirt="#1C1C1E", pants="#2B2F3A",
+           face="hero", sleeves="short", bolt="#FFD21F")
+CAP_RED = "#E0231C"
+
+
+def red_cap(ch, color=CAP_RED):
+    """Baseball cap worn backwards (bill at the back), parented to the head (head-local: radius 0.62, top z=0.6)."""
+    M = mat("zipcap_red", hexc(color), 0.45)
+    n, h = ch.name, ch.head
+    sphere(n + "_capdome", 0.66, (0, 0.02, 0.34), M, (1.0, 1.0, 0.68), parent=h, coll=ch.coll, seg=32)
+    box(n + "_capbill", (1.0, 0.62, 0.07), (0, 0.86, 0.33), M, 0.03, rot=(8, 0, 0), parent=h, coll=ch.coll)
+    sphere(n + "_capbutton", 0.07, (0, 0.02, 0.79), M, parent=h, coll=ch.coll, seg=12)
 
 
 def zip_(t0, t1, expr="happy", name="Zip", **kw):
@@ -19,7 +32,11 @@ def zip_(t0, t1, expr="happy", name="Zip", **kw):
     a.update(kw)
     if "extras" in a:
         a["extras"] = tuple(a["extras"])
-    return story._live(chars.Char(name, **a), t0, t1, expr)
+    cap = a.pop("cap", True)
+    ch = chars.Char(name, **a)
+    if cap:
+        red_cap(ch)
+    return story._live(ch, t0, t1, expr)
 
 
 def bt_look(sun_angle=1.0, sun_boost=1.25):

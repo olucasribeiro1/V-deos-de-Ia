@@ -36,5 +36,15 @@ def zip_portrait(t0, t1, **kw):
     bt_look()
 
 
-V.shot(4, 6.0, 8.0, "Zip yellow skin, no glasses")(lambda: zip_portrait(6.0, 8.0))
-V.shot(5, 8.0, 10.0, "Zip yellow skin + glasses")(lambda: zip_portrait(8.0, 10.0, extras=("glasses",)))
+V.shot(4, 6.0, 8.0, "Zip front")(lambda: zip_portrait(6.0, 8.0))
+def zip_three_q(t0, t1):
+    town_scene()
+    E = zip_(t0, t1, "smile")
+    E.pose(t0, loc=(0, -30, 0), rot=-25)
+    cam = Cam()
+    cam.key(t0, (2.6, -38.6, 4.3), (0, -30, 3.9), lens=42, focus=9.0, fstop=4)
+    cam.key(t1, (2.4, -38.2, 4.3), (0, -30, 3.9), lens=42, focus=8.6, fstop=4)
+    bt_look()
+
+
+V.shot(5, 8.0, 10.0, "Zip close 3/4")(lambda: zip_three_q(8.0, 10.0))
