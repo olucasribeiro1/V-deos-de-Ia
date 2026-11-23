@@ -19,6 +19,8 @@ import {FollowCard} from './branding/FollowCard';
 import {Ep04, Ep04Preview} from './ep04/Ep04';
 import * as T4 from './ep04/timeline';
 import {PedidoInsert, OutroCTA} from './ep04/extras/Extras';
+import {Ep05, Ep05Preview} from './ep05/Ep05';
+import * as T5 from './ep05/timeline';
 import {ChannelAvatar, ChannelBanner} from './branding/Branding';
 import {PartA} from './ep01/partA/PartA';
 import {PartB} from './ep01/partB/PartB';
@@ -59,5 +61,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Ep04PartB" component={Ep04Preview} defaultProps={{part: 'B' as const}} durationInFrames={T4.f(T4.PARTS.B.end) - T4.f(T4.PARTS.B.start)} fps={FPS} width={W} height={H} />
     <Composition id="Ep04Pedido" component={PedidoInsert} defaultProps={{withAudio: true}} durationInFrames={72} fps={FPS} width={W} height={H} />
     <Composition id="Ep04Outro" component={OutroCTA} defaultProps={{withAudio: true}} durationInFrames={375} fps={FPS} width={W} height={H} />
+    <Composition id="Ep05" component={Ep05} durationInFrames={T5.EP_DURATION} fps={FPS} width={W} height={H} />
+    <Composition id="Ep05PartA" component={Ep05Preview} defaultProps={{part: 'A' as const}} durationInFrames={T5.f(T5.PARTS.A.end) - T5.f(T5.PARTS.A.start)} fps={FPS} width={W} height={H} />
+    <Composition id="Ep05PartB" component={Ep05Preview} defaultProps={{part: 'B' as const}} durationInFrames={T5.f(T5.PARTS.B.end) - T5.f(T5.PARTS.B.start)} fps={FPS} width={W} height={H} />
   </>
 );
