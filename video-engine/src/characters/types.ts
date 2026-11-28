@@ -40,7 +40,7 @@ export type Pose = {
 };
 
 export type HeadStyle = {
-  hair: 'quiff' | 'buzz' | 'bald' | 'curlyBun';
+  hair: 'quiff' | 'buzz' | 'bald' | 'curlyBun' | 'messy' | 'spiky';
   hairColor: string;
   beard?: boolean;
   sunglasses?: boolean;

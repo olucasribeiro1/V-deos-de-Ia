@@ -21,6 +21,8 @@ import * as T4 from './ep04/timeline';
 import {PedidoInsert, OutroCTA} from './ep04/extras/Extras';
 import {Ep05, Ep05Preview} from './ep05/Ep05';
 import * as T5 from './ep05/timeline';
+import {Ep06} from './ep06/Ep06';
+import * as T6 from './ep06/timeline';
 import {ChannelAvatar, ChannelBanner} from './branding/Branding';
 import {PartA} from './ep01/partA/PartA';
 import {PartB} from './ep01/partB/PartB';
@@ -64,5 +66,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Ep05" component={Ep05} durationInFrames={T5.EP_DURATION} fps={FPS} width={W} height={H} />
     <Composition id="Ep05PartA" component={Ep05Preview} defaultProps={{part: 'A' as const}} durationInFrames={T5.f(T5.PARTS.A.end) - T5.f(T5.PARTS.A.start)} fps={FPS} width={W} height={H} />
     <Composition id="Ep05PartB" component={Ep05Preview} defaultProps={{part: 'B' as const}} durationInFrames={T5.f(T5.PARTS.B.end) - T5.f(T5.PARTS.B.start)} fps={FPS} width={W} height={H} />
+    <Composition id="Ep06" component={Ep06} durationInFrames={T6.EP_DURATION} fps={FPS} width={W} height={H} />
   </>
 );

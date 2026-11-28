@@ -356,6 +356,35 @@ export const Head: React.FC<{
           opacity={0.95}
         />
       )}
+      {style.hair === 'messy' && (
+        <g>
+          <path
+            d={`M${-R - 4},-6 C${-R - 10},-104 -56,-${R + 18} 0,-${R + 16} C 56,-${R + 18} ${R + 10},-104 ${R + 4},-6 C ${R - 10},-46 ${R - 32},-66 70,-70 C 30,-78 -20,-76 -64,-70 C ${-R + 30},-64 ${-R + 10},-46 ${-R - 4},-6 Z`}
+            fill={hair}
+          />
+          {[-100, -66, -30, 6, 40, 74, 104].map((x, i) => (
+            <path
+              key={i}
+              d={`M${x - 26},-${R - 6 + (i % 2) * 8} Q${x - 8 + (i % 3) * 6},-${R + 52 + (i % 2) * 16} ${x + 22},-${R - 2 + (i % 2) * 6} Z`}
+              fill={hair}
+              transform={`rotate(${(i - 3) * 9} ${x} -${R})`}
+            />
+          ))}
+          <path d={`M -40,-${R + 10} q 20,-14 44,-4`} stroke="#5a4136" strokeWidth={5} fill="none" strokeLinecap="round" opacity={0.7} />
+        </g>
+      )}
+      {style.hair === 'spiky' && (
+        <g>
+          <path
+            d={`M${-R - 2},-6 C${-R - 6},-96 -50,-${R + 8} 0,-${R + 8} C 50,-${R + 8} ${R + 6},-96 ${R + 2},-6 C ${R - 10},-48 ${R - 30},-68 64,-72 C 24,-78 -24,-78 -64,-72 C ${-R + 30},-68 ${-R + 10},-48 ${-R - 2},-6 Z`}
+            fill={hair}
+          />
+          {[-92, -50, -8, 34, 76].map((x, i) => (
+            <path key={i} d={`M${x - 30},-${R - 10} L${x + 12 + i * 4},-${R + 92 - Math.abs(i - 2) * 16} L${x + 36},-${R - 6} Z`} fill={hair} />
+          ))}
+          <path d={`M -20,-${R + 40} L 4,-${R + 70}`} stroke="#ff9a3a" strokeWidth={7} strokeLinecap="round" opacity={0.8} />
+        </g>
+      )}
       {style.hair === 'curlyBun' && (
         <g>
           <path
