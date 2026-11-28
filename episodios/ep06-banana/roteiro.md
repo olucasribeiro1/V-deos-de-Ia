@@ -1,8 +1,8 @@
 # EP06: "Bananinha" (roteiro para aprovação)
 
-**Premissa:** o Davi tem o poder de controlar bananas com precisão. Todo mundo ri do poder mais inútil da escola, até ele estudar a ciência da banana e descobrir que, grama por grama, ela guarda quase a mesma energia que TNT. E o poder dele consegue soltar essa energia de uma vez.
+**Premissa:** dessa vez o protagonista é o **Mateus, irmão do Davi** (o Davi só aparece na abertura). O Mateus tem o poder de controlar bananas com precisão. Todo mundo ri do poder mais inútil da escola, até ele estudar a ciência da banana e descobrir que, grama por grama, ela guarda quase a mesma energia que TNT. E o poder dele consegue soltar essa energia de uma vez.
 
-**Formato:** vídeo único, história fechada · ~1:07 de história (253 palavras a ~3,8 palavras/s) + encerramento padrão (≈1:22 no total) · voz Will, tom animado e leve · fórmula Kaiser:
+**Formato:** vídeo único, história fechada · ~1:10 de história (266 palavras a ~3,8 palavras/s) + encerramento padrão (≈1:25 no total) · voz Will, tom animado e leve · fórmula Kaiser:
 - o poder em 3 s;
 - a humilhação (as gags);
 - a regra/limitação;
@@ -10,14 +10,15 @@
 - o confronto, onde cada jogada é explicada;
 - o final cômico pelo efeito colateral.
 
-- **Abertura:** gancho + "Esse poder foi pedido por vários seguidores." com o card "📩 A PEDIDO DOS SEGUIDORES" (comentários curtidos: "Faz o Davi controlando bananas 🍌").
+- **Abertura:** gancho + "Esse poder foi pedido por vários seguidores." com o card "📩 A PEDIDO DOS SEGUIDORES" (comentários curtidos: "Faz o Mateus controlando bananas 🍌").
 - **Encerramento padrão:** comenta um poder aleatório / o mais curtido vira vídeo / enquete LONGO / YouTube link na bio / @Odavi_contos. **Reaproveita o áudio já gravado no EP04, sem gastar crédito.**
 
 ## Personagens
-- **Davi** (fixo, sem mudar o design).
+- **Mateus** (novo, protagonista deste episódio): irmão mais novo do Davi. Mesmo estilo de traço, pra parecer da família, mas com cores próprias pra não confundir (proposta: camiseta verde-limão, bermuda cinza, tênis branco, cabelo mais bagunçado). O design do Davi não muda.
+- **Davi** (fixo): só aparece na abertura, na gag do "aliás".
 - **Kadu** (novo): o rival, com poder de fogo, cabelo arrepiado e jaqueta vermelha, metido. Poder "oposto": o mais legal da escola contra o mais ridículo.
 - **Bia** (figurante): voa, aparece só na gag da escola.
-- **Professora** e **pai do Davi** (figurantes de gag).
+- **Professora** e **pai do Mateus** (figurantes de gag).
 
 ## Métricas fixas na tela
 - **ENERGIA DA BANANA (kJ):** medidor em forma de banana no canto. Fica fraco no começo e, no clímax, enche até explodir.
@@ -34,23 +35,23 @@
 
 | # | Narração | Imagem / câmera | HUD |
 |---|---|---|---|
-| 1 | O Davi tem o poder de controlar bananas. Sim, bananas. Com precisão de milímetro. | **Abre na ação:** close numa banana na mesa; ela levita com um brilho amarelo e gira; zoom-out revela o Davi concentrado, mão estendida; em "Sim, bananas", ele olha pra câmera sem graça | Medidor "ENERGIA DA BANANA" aparece quase vazio |
-| 2 | Esse poder foi pedido por vários seguidores. | Card "📩 A PEDIDO DOS SEGUIDORES" com comentários curtidos ("Faz o Davi controlando bananas 🍌") | — |
-| 3 | Na escola, todo mundo tem poder irado: o Kadu solta fogo, a Bia voa. O Davi? Gira uma banana. | Pátio da escola: o Kadu solta uma labareda e a galera aplaude; a Bia passa voando; corte seco pro Davi girando uma banana no dedo, com um grilo de fundo | "PODER DO KADU 🔥 1.000 °C" · "PODER DO DAVI 🍌 ???" |
+| 1 | O Davi… aliás, dessa vez não é o Davi. É o irmão dele, o Mateus. Ele tem o poder de controlar bananas. Sim, bananas. Com precisão de milímetro. | **Abre na ação:** o Davi aparece pronto pra cena, faz pose; em "aliás", um "PARA!" na tela, a câmera desliza pro lado e revela o Mateus no sofá; close numa banana que levita com brilho amarelo e gira; em "Sim, bananas", o Mateus olha pra câmera sem graça (o Davi sai de quadro emburrado) | Medidor "ENERGIA DA BANANA" aparece quase vazio |
+| 2 | Esse poder foi pedido por vários seguidores. | Card "📩 A PEDIDO DOS SEGUIDORES" com comentários curtidos ("Faz o Mateus controlando bananas 🍌") | — |
+| 3 | Na escola, todo mundo tem poder irado: o Kadu solta fogo, a Bia voa. O Mateus? Gira uma banana. | Pátio da escola: o Kadu solta uma labareda e a galera aplaude; a Bia passa voando; corte seco pro Mateus girando uma banana no dedo, com um grilo de fundo | "PODER DO KADU 🔥 1.000 °C" · "PODER DO DAVI 🍌 ???" |
 | 4 | Ganhou apelido na hora: Bananinha. Até a professora riu. | Pichado no armário: "BANANINHA"; sala de aula, a professora fazendo chamada segura o riso | Contador "RISADAS" sobe |
 | 5 | No Torneio de Poderes, ele lança uma banana verde no Kadu. Ela quica na testa. A escola inteira chorou de rir. | Arena do torneio com arquibancada; a banana verde voa, faz "bonk" na testa do Kadu e quica; o Kadu nem pisca; a arquibancada explode em risada | "RISADAS: 312" · "BANANA VERDE: 0 kJ" |
-| 6 | Naquela noite, ele foi estudar. E descobriu: grama por grama, banana tem quase a energia de uma TNT. | Quarto à noite, luminária, livros abertos; o Davi arregala o olho; balança de livro: uma banana de um lado, um bastão de TNT do mesmo peso do outro, quase equilibrada | "BANANA 3,7 kJ/g" · "TNT 4,2 kJ/g" |
+| 6 | Naquela noite, ele foi estudar. E descobriu: grama por grama, banana tem quase a energia de uma TNT. | Quarto à noite, luminária, livros abertos; o Mateus arregala o olho; balança de livro: uma banana de um lado, um bastão de TNT do mesmo peso do outro, quase equilibrada | "BANANA 3,7 kJ/g" · "TNT 4,2 kJ/g" |
 | 7 | A diferença é a velocidade: a TNT solta tudo num milionésimo de segundo. Teu corpo leva horas. | Tela dividida: TNT explodindo num flash vs. um corpo estilo livro com a banana descendo devagar no estômago e um relógio girando | "TNT: 0,000001 s" · "DIGESTÃO: 4 h" |
-| 8 | E o poder do Davi solta essa energia de uma vez. | Linhas de energia amarelas correndo pelo braço do Davi até a banana; o medidor dá um pulo | Medidor sobe |
+| 8 | E o poder do Mateus solta essa energia de uma vez. | Linhas de energia amarelas correndo pelo braço do Mateus até a banana; o medidor dá um pulo | Medidor sobe |
 | 9 | Mas tem regra: banana verde é quase só amido, energia travada. Quanto mais pintinha, mais açúcar pronto pra explodir. | Corte transversal da banana estilo livro: grãos de amido (verde) virando açúcar (amarelo brilhante) conforme a casca ganha pintas | Escala "MATURAÇÃO 1→7" · "AMIDO → AÇÚCAR" |
-| 10 | Uma banana inteira daria cem gramas de TNT. Então ele solta só um por cento: um rojão. | Davi no quintal testando: uma banana madura estoura como um rojão, "pá!", e o cachorro do vizinho foge | "100% = 100 g TNT ✗" · "1% = ROJÃO ✓" |
-| 11 | Treinou um mês. Acertou uma mosca a vinte metros. Fez o pai escorregar três vezes. | Montagem de treino rápida: banana acertando uma mosca no ar; o Davi descascando banana no ar sem tocar; o pai pisa numa casca na cozinha e cai (três cortes, três quedas) | "DIA 1… DIA 30" · "PAI: 3 QUEDAS" |
+| 10 | Uma banana inteira daria cem gramas de TNT. Então ele solta só um por cento: um rojão. | Mateus no quintal testando: uma banana madura estoura como um rojão, "pá!", e o cachorro do vizinho foge | "100% = 100 g TNT ✗" · "1% = ROJÃO ✓" |
+| 11 | Treinou um mês. Acertou uma mosca a vinte metros. Fez o pai escorregar três vezes. | Montagem de treino rápida: banana acertando uma mosca no ar; o Mateus descascando banana no ar sem tocar; o pai pisa numa casca na cozinha e cai (três cortes, três quedas) | "DIA 1… DIA 30" · "PAI: 3 QUEDAS" |
 | 12 | Porque casca de banana tem atrito de zero vírgula zero sete. Seis vezes menos que um sapato. É gelo. | Diagrama de livro: sapato sobre casca, com o gel da casca virando "lubrificante" no zoom; comparativo com sapato no chão e patins no gelo | "ATRITO 0,07" · "SAPATO 0,4" · "÷6" |
 | 13 | Na final, o Kadu prepara uma bola de fogo. | Arena lotada de novo; o Kadu sorri metido e forma uma bola de fogo nas mãos; câmera girando ao redor | "FINAL: KADU × BANANINHA" |
-| 14 | O Davi espalha dez cascas pela arena. O Kadu corre e sai patinando. | Dez cascas voam em formação perfeita e pousam no chão; o Kadu dispara pra atacar, pisa numa casca e sai patinando em círculo, a bola de fogo voando pro céu | "CASCAS: 10" · "ATRITO 0,07" |
+| 14 | O Mateus espalha dez cascas pela arena. O Kadu corre e sai patinando. | Dez cascas voam em formação perfeita e pousam no chão; o Kadu dispara pra atacar, pisa numa casca e sai patinando em círculo, a bola de fogo voando pro céu | "CASCAS: 10" · "ATRITO 0,07" |
 | 15 | Aí vem a banana mais madura da história. Ela para na frente do Kadu e explode. Onda de purê. O Kadu voa lambuzado. | **Clímax:** câmera lenta numa banana toda pintada, nota 7; ela para no ar a um palmo do rosto do Kadu; flash amarelo, onda de choque de purê; o Kadu voa pra fora da arena coberto de banana | Escala "MATURAÇÃO 7" · medidor no máximo · "1% LIBERADO" |
-| 16 | Campeão: Bananinha. Dessa vez, ninguém riu. | O Davi segurando o troféu (em formato de banana); silêncio total na arquibancada, todo mundo de boca aberta | Contador "RISADAS: 0" |
-| 17 | Só um detalhe: banana tem potássio radioativo. Pouquinho. Mas o Davi levou trezentas pro aeroporto, e o detector apitou. | Aeroporto: o Davi passa pelo detector com uma mochila estufada; alarme vermelho "RADIAÇÃO"; dois seguranças abrem a mochila e cai uma avalanche de bananas; o Davi sorri sem graça | "POTÁSSIO-40 ☢" · "BANANAS: 300" |
+| 16 | Campeão: Bananinha. Dessa vez, ninguém riu. | O Mateus segurando o troféu (em formato de banana); silêncio total na arquibancada, todo mundo de boca aberta | Contador "RISADAS: 0" |
+| 17 | Só um detalhe: banana tem potássio radioativo. Pouquinho. Mas o Mateus levou trezentas pro aeroporto, e o detector apitou. | Aeroporto: o Mateus passa pelo detector com uma mochila estufada; alarme vermelho "RADIAÇÃO"; dois seguranças abrem a mochila e cai uma avalanche de bananas; o Mateus sorri sem graça | "POTÁSSIO-40 ☢" · "BANANAS: 300" |
 | — | *(encerramento padrão, áudio reaproveitado do EP04)* | Cards "💬 COMENTA UM PODER ALEATÓRIO", "♥ O MAIS CURTIDO VIRA O PRÓXIMO VÍDEO", "📊 ENQUETE: QUER VÍDEO LONGO? ESCREVE 'LONGO'", "▶ YOUTUBE · LINK NA BIO", "@Odavi_contos" | — |
 
 ## Checagem da ciência
