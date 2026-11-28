@@ -1,0 +1,1493 @@
+{
+ "fps": 30,
+ "tempo": 1.05,
+ "duration": 80.05,
+ "lines": [
+  {
+   "id": "L1",
+   "text": "O Davi... aliás, dessa vez não é o Davi. É o irmão dele, o Mateus. Ele tem o poder de controlar bananas. Sim, bananas. Com precisão de milímetro.",
+   "start": 0.0,
+   "end": 7.787,
+   "words": [
+    {
+     "w": "O",
+     "start": 0.0,
+     "end": 0.11
+    },
+    {
+     "w": "Davi...",
+     "start": 0.188,
+     "end": 0.719
+    },
+    {
+     "w": "aliás,",
+     "start": 0.918,
+     "end": 1.25
+    },
+    {
+     "w": "dessa",
+     "start": 1.271,
+     "end": 1.427
+    },
+    {
+     "w": "vez",
+     "start": 1.47,
+     "end": 1.603
+    },
+    {
+     "w": "não",
+     "start": 1.648,
+     "end": 1.736
+    },
+    {
+     "w": "é",
+     "start": 1.77,
+     "end": 1.791
+    },
+    {
+     "w": "o",
+     "start": 1.825,
+     "end": 1.847
+    },
+    {
+     "w": "Davi.",
+     "start": 1.88,
+     "end": 2.23
+    },
+    {
+     "w": "É",
+     "start": 2.301,
+     "end": 2.334
+    },
+    {
+     "w": "o",
+     "start": 2.4,
+     "end": 2.433
+    },
+    {
+     "w": "irmão",
+     "start": 2.456,
+     "end": 2.666
+    },
+    {
+     "w": "dele,",
+     "start": 2.699,
+     "end": 3.02
+    },
+    {
+     "w": "o",
+     "start": 3.109,
+     "end": 3.152
+    },
+    {
+     "w": "Mateus.",
+     "start": 3.208,
+     "end": 3.751
+    },
+    {
+     "w": "Ele",
+     "start": 3.799,
+     "end": 3.965
+    },
+    {
+     "w": "tem",
+     "start": 3.998,
+     "end": 4.098
+    },
+    {
+     "w": "o",
+     "start": 4.12,
+     "end": 4.142
+    },
+    {
+     "w": "poder",
+     "start": 4.175,
+     "end": 4.485
+    },
+    {
+     "w": "de",
+     "start": 4.518,
+     "end": 4.573
+    },
+    {
+     "w": "controlar",
+     "start": 4.607,
+     "end": 4.993
+    },
+    {
+     "w": "bananas.",
+     "start": 5.049,
+     "end": 5.564
+    },
+    {
+     "w": "Sim,",
+     "start": 5.646,
+     "end": 5.977
+    },
+    {
+     "w": "bananas.",
+     "start": 5.999,
+     "end": 6.608
+    },
+    {
+     "w": "Com",
+     "start": 6.674,
+     "end": 6.795
+    },
+    {
+     "w": "precisão",
+     "start": 6.829,
+     "end": 7.193
+    },
+    {
+     "w": "de",
+     "start": 7.215,
+     "end": 7.26
+    },
+    {
+     "w": "milímetro.",
+     "start": 7.304,
+     "end": 7.787
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "text": "Esse poder foi pedido por vários seguidores.",
+   "start": 7.844,
+   "end": 9.858,
+   "words": [
+    {
+     "w": "Esse",
+     "start": 7.844,
+     "end": 8.021
+    },
+    {
+     "w": "poder",
+     "start": 8.054,
+     "end": 8.309
+    },
+    {
+     "w": "foi",
+     "start": 8.352,
+     "end": 8.463
+    },
+    {
+     "w": "pedido",
+     "start": 8.486,
+     "end": 8.718
+    },
+    {
+     "w": "por",
+     "start": 8.762,
+     "end": 8.872
+    },
+    {
+     "w": "vários",
+     "start": 8.939,
+     "end": 9.259
+    },
+    {
+     "w": "seguidores.",
+     "start": 9.282,
+     "end": 9.858
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "text": "Na escola, todo mundo tem poder irado: o Kadu solta fogo, a Bia voa. O Mateus? Gira uma banana.",
+   "start": 9.956,
+   "end": 15.649,
+   "words": [
+    {
+     "w": "Na",
+     "start": 9.956,
+     "end": 10.033
+    },
+    {
+     "w": "escola,",
+     "start": 10.067,
+     "end": 10.509
+    },
+    {
+     "w": "todo",
+     "start": 10.597,
+     "end": 10.895
+    },
+    {
+     "w": "mundo",
+     "start": 10.951,
+     "end": 11.183
+    },
+    {
+     "w": "tem",
+     "start": 11.206,
+     "end": 11.293
+    },
+    {
+     "w": "poder",
+     "start": 11.327,
+     "end": 11.57
+    },
+    {
+     "w": "irado:",
+     "start": 11.614,
+     "end": 11.978
+    },
+    {
+     "w": "o",
+     "start": 12.069,
+     "end": 12.112
+    },
+    {
+     "w": "Kadu",
+     "start": 12.169,
+     "end": 12.411
+    },
+    {
+     "w": "solta",
+     "start": 12.445,
+     "end": 12.666
+    },
+    {
+     "w": "fogo,",
+     "start": 12.732,
+     "end": 13.174
+    },
+    {
+     "w": "a",
+     "start": 13.263,
+     "end": 13.34
+    },
+    {
+     "w": "Bia",
+     "start": 13.462,
+     "end": 13.705
+    },
+    {
+     "w": "voa.",
+     "start": 13.76,
+     "end": 14.099
+    },
+    {
+     "w": "O",
+     "start": 14.136,
+     "end": 14.181
+    },
+    {
+     "w": "Mateus?",
+     "start": 14.248,
+     "end": 14.813
+    },
+    {
+     "w": "Gira",
+     "start": 14.905,
+     "end": 15.104
+    },
+    {
+     "w": "uma",
+     "start": 15.126,
+     "end": 15.214
+    },
+    {
+     "w": "banana.",
+     "start": 15.248,
+     "end": 15.649
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "text": "Ganhou apelido na hora: Bananinha. Até a professora riu.",
+   "start": 15.72,
+   "end": 18.459,
+   "words": [
+    {
+     "w": "Ganhou",
+     "start": 15.72,
+     "end": 15.93
+    },
+    {
+     "w": "apelido",
+     "start": 15.974,
+     "end": 16.262
+    },
+    {
+     "w": "na",
+     "start": 16.306,
+     "end": 16.361
+    },
+    {
+     "w": "hora:",
+     "start": 16.406,
+     "end": 16.693
+    },
+    {
+     "w": "Bananinha.",
+     "start": 16.749,
+     "end": 17.449
+    },
+    {
+     "w": "Até",
+     "start": 17.496,
+     "end": 17.684
+    },
+    {
+     "w": "a",
+     "start": 17.717,
+     "end": 17.739
+    },
+    {
+     "w": "professora",
+     "start": 17.761,
+     "end": 18.204
+    },
+    {
+     "w": "riu.",
+     "start": 18.237,
+     "end": 18.459
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "text": "No Torneio de Poderes, ele lança uma banana verde no Kadu. Ela quica na testa. A escola inteira chorou de rir.",
+   "start": 18.525,
+   "end": 23.592,
+   "words": [
+    {
+     "w": "No",
+     "start": 18.525,
+     "end": 18.602
+    },
+    {
+     "w": "Torneio",
+     "start": 18.635,
+     "end": 18.911
+    },
+    {
+     "w": "de",
+     "start": 18.933,
+     "end": 18.989
+    },
+    {
+     "w": "Poderes,",
+     "start": 19.022,
+     "end": 19.528
+    },
+    {
+     "w": "ele",
+     "start": 19.589,
+     "end": 19.743
+    },
+    {
+     "w": "lança",
+     "start": 19.788,
+     "end": 20.019
+    },
+    {
+     "w": "uma",
+     "start": 20.042,
+     "end": 20.141
+    },
+    {
+     "w": "banana",
+     "start": 20.174,
+     "end": 20.539
+    },
+    {
+     "w": "verde",
+     "start": 20.628,
+     "end": 20.915
+    },
+    {
+     "w": "no",
+     "start": 20.959,
+     "end": 21.014
+    },
+    {
+     "w": "Kadu.",
+     "start": 21.048,
+     "end": 21.35
+    },
+    {
+     "w": "Ela",
+     "start": 21.406,
+     "end": 21.582
+    },
+    {
+     "w": "quica",
+     "start": 21.637,
+     "end": 21.814
+    },
+    {
+     "w": "na",
+     "start": 21.836,
+     "end": 21.891
+    },
+    {
+     "w": "testa.",
+     "start": 21.947,
+     "end": 22.301
+    },
+    {
+     "w": "A",
+     "start": 22.357,
+     "end": 22.412
+    },
+    {
+     "w": "escola",
+     "start": 22.446,
+     "end": 22.689
+    },
+    {
+     "w": "inteira",
+     "start": 22.711,
+     "end": 22.988
+    },
+    {
+     "w": "chorou",
+     "start": 23.021,
+     "end": 23.242
+    },
+    {
+     "w": "de",
+     "start": 23.286,
+     "end": 23.352
+    },
+    {
+     "w": "rir.",
+     "start": 23.386,
+     "end": 23.592
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "text": "Naquela noite, ele foi estudar. E descobriu: grama por grama, banana tem quase a energia de uma TNT.",
+   "start": 23.649,
+   "end": 29.263,
+   "words": [
+    {
+     "w": "Naquela",
+     "start": 23.649,
+     "end": 23.903
+    },
+    {
+     "w": "noite,",
+     "start": 23.936,
+     "end": 24.301
+    },
+    {
+     "w": "ele",
+     "start": 24.39,
+     "end": 24.522
+    },
+    {
+     "w": "foi",
+     "start": 24.567,
+     "end": 24.699
+    },
+    {
+     "w": "estudar.",
+     "start": 24.721,
+     "end": 25.126
+    },
+    {
+     "w": "E",
+     "start": 25.169,
+     "end": 25.234
+    },
+    {
+     "w": "descobriu:",
+     "start": 25.279,
+     "end": 25.726
+    },
+    {
+     "w": "grama",
+     "start": 25.814,
+     "end": 26.19
+    },
+    {
+     "w": "por",
+     "start": 26.224,
+     "end": 26.334
+    },
+    {
+     "w": "grama,",
+     "start": 26.378,
+     "end": 26.732
+    },
+    {
+     "w": "banana",
+     "start": 26.765,
+     "end": 27.152
+    },
+    {
+     "w": "tem",
+     "start": 27.186,
+     "end": 27.285
+    },
+    {
+     "w": "quase",
+     "start": 27.373,
+     "end": 27.728
+    },
+    {
+     "w": "a",
+     "start": 27.76,
+     "end": 27.783
+    },
+    {
+     "w": "energia",
+     "start": 27.838,
+     "end": 28.28
+    },
+    {
+     "w": "de",
+     "start": 28.313,
+     "end": 28.357
+    },
+    {
+     "w": "uma",
+     "start": 28.38,
+     "end": 28.49
+    },
+    {
+     "w": "TNT.",
+     "start": 28.568,
+     "end": 29.263
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "text": "A diferença é a velocidade: a TNT solta tudo num milionésimo de segundo. Teu corpo leva horas.",
+   "start": 29.33,
+   "end": 34.596,
+   "words": [
+    {
+     "w": "A",
+     "start": 29.33,
+     "end": 29.374
+    },
+    {
+     "w": "diferença",
+     "start": 29.418,
+     "end": 29.871
+    },
+    {
+     "w": "é",
+     "start": 29.927,
+     "end": 29.95
+    },
+    {
+     "w": "a",
+     "start": 29.982,
+     "end": 30.005
+    },
+    {
+     "w": "velocidade:",
+     "start": 30.038,
+     "end": 30.705
+    },
+    {
+     "w": "a",
+     "start": 30.794,
+     "end": 30.839
+    },
+    {
+     "w": "TNT",
+     "start": 30.894,
+     "end": 31.38
+    },
+    {
+     "w": "solta",
+     "start": 31.579,
+     "end": 31.845
+    },
+    {
+     "w": "tudo",
+     "start": 31.878,
+     "end": 32.077
+    },
+    {
+     "w": "num",
+     "start": 32.11,
+     "end": 32.231
+    },
+    {
+     "w": "milionésimo",
+     "start": 32.265,
+     "end": 32.873
+    },
+    {
+     "w": "de",
+     "start": 32.907,
+     "end": 32.95
+    },
+    {
+     "w": "segundo.",
+     "start": 32.984,
+     "end": 33.376
+    },
+    {
+     "w": "Teu",
+     "start": 33.419,
+     "end": 33.541
+    },
+    {
+     "w": "corpo",
+     "start": 33.586,
+     "end": 33.817
+    },
+    {
+     "w": "leva",
+     "start": 33.84,
+     "end": 34.05
+    },
+    {
+     "w": "horas.",
+     "start": 34.116,
+     "end": 34.596
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "text": "E o poder do Mateus solta essa energia de uma vez.",
+   "start": 34.64,
+   "end": 37.218,
+   "words": [
+    {
+     "w": "E",
+     "start": 34.64,
+     "end": 34.706
+    },
+    {
+     "w": "o",
+     "start": 34.739,
+     "end": 34.762
+    },
+    {
+     "w": "poder",
+     "start": 34.806,
+     "end": 35.016
+    },
+    {
+     "w": "do",
+     "start": 35.049,
+     "end": 35.093
+    },
+    {
+     "w": "Mateus",
+     "start": 35.127,
+     "end": 35.602
+    },
+    {
+     "w": "solta",
+     "start": 35.768,
+     "end": 36.1
+    },
+    {
+     "w": "essa",
+     "start": 36.155,
+     "end": 36.288
+    },
+    {
+     "w": "energia",
+     "start": 36.31,
+     "end": 36.664
+    },
+    {
+     "w": "de",
+     "start": 36.697,
+     "end": 36.741
+    },
+    {
+     "w": "uma",
+     "start": 36.763,
+     "end": 36.885
+    },
+    {
+     "w": "vez.",
+     "start": 36.918,
+     "end": 37.218
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "text": "Mas tem regra: banana verde é quase só amido, energia travada. Quanto mais pintinha, mais açúcar pronto pra explodir.",
+   "start": 37.287,
+   "end": 43.946,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 37.287,
+     "end": 37.452
+    },
+    {
+     "w": "tem",
+     "start": 37.496,
+     "end": 37.596
+    },
+    {
+     "w": "regra:",
+     "start": 37.651,
+     "end": 38.017
+    },
+    {
+     "w": "banana",
+     "start": 38.094,
+     "end": 38.371
+    },
+    {
+     "w": "verde",
+     "start": 38.437,
+     "end": 38.825
+    },
+    {
+     "w": "é",
+     "start": 38.946,
+     "end": 39.034
+    },
+    {
+     "w": "quase",
+     "start": 39.111,
+     "end": 39.366
+    },
+    {
+     "w": "só",
+     "start": 39.444,
+     "end": 39.665
+    },
+    {
+     "w": "amido,",
+     "start": 39.731,
+     "end": 40.145
+    },
+    {
+     "w": "energia",
+     "start": 40.202,
+     "end": 40.6
+    },
+    {
+     "w": "travada.",
+     "start": 40.622,
+     "end": 41.109
+    },
+    {
+     "w": "Quanto",
+     "start": 41.159,
+     "end": 41.413
+    },
+    {
+     "w": "mais",
+     "start": 41.502,
+     "end": 41.756
+    },
+    {
+     "w": "pintinha,",
+     "start": 41.8,
+     "end": 42.326
+    },
+    {
+     "w": "mais",
+     "start": 42.414,
+     "end": 42.613
+    },
+    {
+     "w": "açúcar",
+     "start": 42.669,
+     "end": 43.022
+    },
+    {
+     "w": "pronto",
+     "start": 43.089,
+     "end": 43.376
+    },
+    {
+     "w": "pra",
+     "start": 43.41,
+     "end": 43.487
+    },
+    {
+     "w": "explodir.",
+     "start": 43.509,
+     "end": 43.946
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "text": "Uma banana inteira daria cem gramas de TNT. Então ele solta só um por cento: um rojão.",
+   "start": 44.02,
+   "end": 48.901,
+   "words": [
+    {
+     "w": "Uma",
+     "start": 44.02,
+     "end": 44.153
+    },
+    {
+     "w": "banana",
+     "start": 44.186,
+     "end": 44.408
+    },
+    {
+     "w": "inteira",
+     "start": 44.43,
+     "end": 44.783
+    },
+    {
+     "w": "daria",
+     "start": 44.828,
+     "end": 45.07
+    },
+    {
+     "w": "cem",
+     "start": 45.126,
+     "end": 45.391
+    },
+    {
+     "w": "gramas",
+     "start": 45.469,
+     "end": 45.823
+    },
+    {
+     "w": "de",
+     "start": 45.856,
+     "end": 45.911
+    },
+    {
+     "w": "TNT.",
+     "start": 45.999,
+     "end": 46.749
+    },
+    {
+     "w": "Então",
+     "start": 46.799,
+     "end": 47.031
+    },
+    {
+     "w": "ele",
+     "start": 47.053,
+     "end": 47.12
+    },
+    {
+     "w": "solta",
+     "start": 47.142,
+     "end": 47.352
+    },
+    {
+     "w": "só",
+     "start": 47.396,
+     "end": 47.496
+    },
+    {
+     "w": "um",
+     "start": 47.54,
+     "end": 47.584
+    },
+    {
+     "w": "por",
+     "start": 47.629,
+     "end": 47.739
+    },
+    {
+     "w": "cento:",
+     "start": 47.772,
+     "end": 48.157
+    },
+    {
+     "w": "um",
+     "start": 48.268,
+     "end": 48.356
+    },
+    {
+     "w": "rojão.",
+     "start": 48.4,
+     "end": 48.901
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "text": "Treinou um mês. Acertou uma mosca a vinte metros. Fez o pai escorregar três vezes.",
+   "start": 48.937,
+   "end": 53.058,
+   "words": [
+    {
+     "w": "Treinou",
+     "start": 48.937,
+     "end": 49.28
+    },
+    {
+     "w": "um",
+     "start": 49.312,
+     "end": 49.357
+    },
+    {
+     "w": "mês.",
+     "start": 49.412,
+     "end": 49.775
+    },
+    {
+     "w": "Acertou",
+     "start": 49.839,
+     "end": 50.17
+    },
+    {
+     "w": "uma",
+     "start": 50.193,
+     "end": 50.314
+    },
+    {
+     "w": "mosca",
+     "start": 50.359,
+     "end": 50.613
+    },
+    {
+     "w": "a",
+     "start": 50.635,
+     "end": 50.657
+    },
+    {
+     "w": "vinte",
+     "start": 50.702,
+     "end": 50.934
+    },
+    {
+     "w": "metros.",
+     "start": 50.99,
+     "end": 51.398
+    },
+    {
+     "w": "Fez",
+     "start": 51.475,
+     "end": 51.63
+    },
+    {
+     "w": "o",
+     "start": 51.686,
+     "end": 51.708
+    },
+    {
+     "w": "pai",
+     "start": 51.741,
+     "end": 51.896
+    },
+    {
+     "w": "escorregar",
+     "start": 51.918,
+     "end": 52.294
+    },
+    {
+     "w": "três",
+     "start": 52.36,
+     "end": 52.604
+    },
+    {
+     "w": "vezes.",
+     "start": 52.659,
+     "end": 53.058
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "text": "Porque casca de banana tem atrito de zero vírgula zero sete. Seis vezes menos que um sapato. É gelo.",
+   "start": 53.092,
+   "end": 58.755,
+   "words": [
+    {
+     "w": "Porque",
+     "start": 53.092,
+     "end": 53.313
+    },
+    {
+     "w": "casca",
+     "start": 53.369,
+     "end": 53.59
+    },
+    {
+     "w": "de",
+     "start": 53.611,
+     "end": 53.656
+    },
+    {
+     "w": "banana",
+     "start": 53.689,
+     "end": 54.043
+    },
+    {
+     "w": "tem",
+     "start": 54.098,
+     "end": 54.198
+    },
+    {
+     "w": "atrito",
+     "start": 54.253,
+     "end": 54.53
+    },
+    {
+     "w": "de",
+     "start": 54.573,
+     "end": 54.629
+    },
+    {
+     "w": "zero",
+     "start": 54.684,
+     "end": 54.938
+    },
+    {
+     "w": "vírgula",
+     "start": 54.993,
+     "end": 55.314
+    },
+    {
+     "w": "zero",
+     "start": 55.482,
+     "end": 55.825
+    },
+    {
+     "w": "sete.",
+     "start": 55.903,
+     "end": 56.32
+    },
+    {
+     "w": "Seis",
+     "start": 56.431,
+     "end": 56.763
+    },
+    {
+     "w": "vezes",
+     "start": 56.83,
+     "end": 57.106
+    },
+    {
+     "w": "menos",
+     "start": 57.183,
+     "end": 57.459
+    },
+    {
+     "w": "que",
+     "start": 57.492,
+     "end": 57.559
+    },
+    {
+     "w": "um",
+     "start": 57.581,
+     "end": 57.625
+    },
+    {
+     "w": "sapato.",
+     "start": 57.658,
+     "end": 58.106
+    },
+    {
+     "w": "É",
+     "start": 58.178,
+     "end": 58.233
+    },
+    {
+     "w": "gelo.",
+     "start": 58.354,
+     "end": 58.755
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "text": "Na final, o Kadu prepara uma bola de fogo.",
+   "start": 58.815,
+   "end": 61.252,
+   "words": [
+    {
+     "w": "Na",
+     "start": 58.815,
+     "end": 58.914
+    },
+    {
+     "w": "final,",
+     "start": 58.948,
+     "end": 59.373
+    },
+    {
+     "w": "o",
+     "start": 59.457,
+     "end": 59.502
+    },
+    {
+     "w": "Kadu",
+     "start": 59.546,
+     "end": 59.734
+    },
+    {
+     "w": "prepara",
+     "start": 59.768,
+     "end": 60.199
+    },
+    {
+     "w": "uma",
+     "start": 60.231,
+     "end": 60.387
+    },
+    {
+     "w": "bola",
+     "start": 60.464,
+     "end": 60.73
+    },
+    {
+     "w": "de",
+     "start": 60.773,
+     "end": 60.84
+    },
+    {
+     "w": "fogo.",
+     "start": 60.917,
+     "end": 61.252
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "text": "O Mateus espalha dez cascas pela arena. O Kadu corre e sai patinando.",
+   "start": 61.311,
+   "end": 65.133,
+   "words": [
+    {
+     "w": "O",
+     "start": 61.311,
+     "end": 61.345
+    },
+    {
+     "w": "Mateus",
+     "start": 61.41,
+     "end": 61.842
+    },
+    {
+     "w": "espalha",
+     "start": 61.93,
+     "end": 62.34
+    },
+    {
+     "w": "dez",
+     "start": 62.417,
+     "end": 62.605
+    },
+    {
+     "w": "cascas",
+     "start": 62.683,
+     "end": 62.959
+    },
+    {
+     "w": "pela",
+     "start": 63.003,
+     "end": 63.158
+    },
+    {
+     "w": "arena.",
+     "start": 63.18,
+     "end": 63.501
+    },
+    {
+     "w": "O",
+     "start": 63.568,
+     "end": 63.612
+    },
+    {
+     "w": "Kadu",
+     "start": 63.668,
+     "end": 63.845
+    },
+    {
+     "w": "corre",
+     "start": 63.889,
+     "end": 64.187
+    },
+    {
+     "w": "e",
+     "start": 64.309,
+     "end": 64.397
+    },
+    {
+     "w": "sai",
+     "start": 64.452,
+     "end": 64.563
+    },
+    {
+     "w": "patinando.",
+     "start": 64.596,
+     "end": 65.133
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "text": "Aí vem a banana mais madura da história. Ela para na frente do Kadu e explode. Onda de purê. O Kadu voa lambuzado.",
+   "start": 65.205,
+   "end": 71.323,
+   "words": [
+    {
+     "w": "Aí",
+     "start": 65.205,
+     "end": 65.381
+    },
+    {
+     "w": "vem",
+     "start": 65.426,
+     "end": 65.525
+    },
+    {
+     "w": "a",
+     "start": 65.57,
+     "end": 65.591
+    },
+    {
+     "w": "banana",
+     "start": 65.613,
+     "end": 65.868
+    },
+    {
+     "w": "mais",
+     "start": 65.956,
+     "end": 66.2
+    },
+    {
+     "w": "madura",
+     "start": 66.244,
+     "end": 66.575
+    },
+    {
+     "w": "da",
+     "start": 66.609,
+     "end": 66.653
+    },
+    {
+     "w": "história.",
+     "start": 66.675,
+     "end": 67.113
+    },
+    {
+     "w": "Ela",
+     "start": 67.15,
+     "end": 67.35
+    },
+    {
+     "w": "para",
+     "start": 67.416,
+     "end": 67.627
+    },
+    {
+     "w": "na",
+     "start": 67.67,
+     "end": 67.715
+    },
+    {
+     "w": "frente",
+     "start": 67.759,
+     "end": 67.936
+    },
+    {
+     "w": "do",
+     "start": 67.958,
+     "end": 68.002
+    },
+    {
+     "w": "Kadu",
+     "start": 68.035,
+     "end": 68.29
+    },
+    {
+     "w": "e",
+     "start": 68.378,
+     "end": 68.433
+    },
+    {
+     "w": "explode.",
+     "start": 68.467,
+     "end": 69.084
+    },
+    {
+     "w": "Onda",
+     "start": 69.168,
+     "end": 69.432
+    },
+    {
+     "w": "de",
+     "start": 69.466,
+     "end": 69.521
+    },
+    {
+     "w": "purê.",
+     "start": 69.554,
+     "end": 69.871
+    },
+    {
+     "w": "O",
+     "start": 69.931,
+     "end": 69.976
+    },
+    {
+     "w": "Kadu",
+     "start": 70.053,
+     "end": 70.341
+    },
+    {
+     "w": "voa",
+     "start": 70.43,
+     "end": 70.662
+    },
+    {
+     "w": "lambuzado.",
+     "start": 70.694,
+     "end": 71.323
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "text": "Campeão: Bananinha. Dessa vez, ninguém riu.",
+   "start": 71.377,
+   "end": 73.735,
+   "words": [
+    {
+     "w": "Campeão:",
+     "start": 71.377,
+     "end": 71.877
+    },
+    {
+     "w": "Bananinha.",
+     "start": 71.966,
+     "end": 72.743
+    },
+    {
+     "w": "Dessa",
+     "start": 72.793,
+     "end": 72.992
+    },
+    {
+     "w": "vez,",
+     "start": 73.026,
+     "end": 73.202
+    },
+    {
+     "w": "ninguém",
+     "start": 73.225,
+     "end": 73.456
+    },
+    {
+     "w": "riu.",
+     "start": 73.501,
+     "end": 73.735
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "text": "Só um detalhe: banana tem potássio radioativo. Pouquinho. Mas o Mateus levou trezentas pro aeroporto, e o detector apitou.",
+   "start": 73.821,
+   "end": 79.963,
+   "words": [
+    {
+     "w": "Só",
+     "start": 73.821,
+     "end": 74.031
+    },
+    {
+     "w": "um",
+     "start": 74.097,
+     "end": 74.142
+    },
+    {
+     "w": "detalhe:",
+     "start": 74.197,
+     "end": 74.688
+    },
+    {
+     "w": "banana",
+     "start": 74.776,
+     "end": 75.086
+    },
+    {
+     "w": "tem",
+     "start": 75.118,
+     "end": 75.218
+    },
+    {
+     "w": "potássio",
+     "start": 75.273,
+     "end": 75.66
+    },
+    {
+     "w": "radioativo.",
+     "start": 75.693,
+     "end": 76.266
+    },
+    {
+     "w": "Pouquinho.",
+     "start": 76.321,
+     "end": 76.825
+    },
+    {
+     "w": "Mas",
+     "start": 76.872,
+     "end": 76.994
+    },
+    {
+     "w": "o",
+     "start": 77.016,
+     "end": 77.038
+    },
+    {
+     "w": "Mateus",
+     "start": 77.071,
+     "end": 77.304
+    },
+    {
+     "w": "levou",
+     "start": 77.348,
+     "end": 77.525
+    },
+    {
+     "w": "trezentas",
+     "start": 77.558,
+     "end": 78.1
+    },
+    {
+     "w": "pro",
+     "start": 78.155,
+     "end": 78.254
+    },
+    {
+     "w": "aeroporto,",
+     "start": 78.276,
+     "end": 78.825
+    },
+    {
+     "w": "e",
+     "start": 78.857,
+     "end": 78.912
+    },
+    {
+     "w": "o",
+     "start": 78.934,
+     "end": 78.956
+    },
+    {
+     "w": "detector",
+     "start": 78.99,
+     "end": 79.366
+    },
+    {
+     "w": "apitou.",
+     "start": 79.388,
+     "end": 79.963
+    }
+   ]
+  }
+ ]
+}

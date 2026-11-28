@@ -1,0 +1,539 @@
+[
+ {
+  "id": "faucet",
+  "start": 0.0,
+  "end": 2.12,
+  "tr": "cut",
+  "desc": "Close on a kitchen faucet: Davi's hand opens the lever, only air hisses out and a single drop falls into the dry sink",
+  "sfx": [
+   {
+    "t": 0.25,
+    "what": "faucet lever squeak (metal)"
+   },
+   {
+    "t": 0.5,
+    "what": "pipe air hiss / sputter, no water"
+   },
+   {
+    "t": 1.32,
+    "what": "single water drip falling"
+   },
+   {
+    "t": 1.72,
+    "what": "tiny drop plink in empty steel sink"
+   }
+  ]
+ },
+ {
+  "id": "sp2015",
+  "start": 2.12,
+  "end": 3.81,
+  "tr": "x",
+  "desc": "Hazy, dry São Paulo skyline under a pale sun, big '2015 / SÃO PAULO' title, slow pan",
+  "sfx": [
+   {
+    "t": 2.12,
+    "what": "soft whoosh (transition)"
+   },
+   {
+    "t": 2.3,
+    "what": "distant city ambience, warm wind"
+   },
+   {
+    "t": 2.4,
+    "what": "UI blip as '2015' appears"
+   }
+  ]
+ },
+ {
+  "id": "people",
+  "start": 3.81,
+  "end": 6.11,
+  "tr": "x",
+  "desc": "Apartment façades: windows light up one by one with residents; chip 'SP 2015 · 9 MI DE PESSOAS'",
+  "sfx": [
+   {
+    "t": 3.85,
+    "what": "soft light-switch ticks (several, quiet)"
+   },
+   {
+    "t": 4.0,
+    "what": "UI blip (chip)"
+   }
+  ]
+ },
+ {
+  "id": "queue",
+  "start": 6.11,
+  "end": 7.71,
+  "tr": "x",
+  "desc": "Queue of residents holding empty buckets beside a dry standpipe, slow lateral pan",
+  "sfx": [
+   {
+    "t": 6.11,
+    "what": "soft whoosh"
+   },
+   {
+    "t": 6.3,
+    "what": "street ambience, murmurs, bucket handle clink"
+   }
+  ]
+ },
+ {
+  "id": "reservoir",
+  "start": 7.71,
+  "end": 9.83,
+  "tr": "x",
+  "desc": "Wide shot of the dry Cantareira-style reservoir: bathtub rings, cracked bed, small puddle, dam; 'SISTEMA CANTAREIRA · SP 2015'",
+  "sfx": [
+   {
+    "t": 7.71,
+    "what": "open wind across a dry valley"
+   },
+   {
+    "t": 7.9,
+    "what": "UI blip (tag)"
+   },
+   {
+    "t": 8.3,
+    "what": "distant birds"
+   }
+  ]
+ },
+ {
+  "id": "ruler",
+  "start": 9.83,
+  "end": 12.47,
+  "tr": "x",
+  "desc": "Level ruler in the water: line drops from 32 % to 5 %, red '5%' and cracked mud foreground; chip 'CANTAREIRA · ~5% (2015)'",
+  "sfx": [
+   {
+    "t": 9.83,
+    "what": "low tonal drop (descending)"
+   },
+   {
+    "t": 10.9,
+    "what": "soft warning blip at 5 %"
+   },
+   {
+    "t": 11.0,
+    "what": "dry wind"
+   }
+  ]
+ },
+ {
+  "id": "hello",
+  "start": 12.47,
+  "end": 14.44,
+  "tr": "cut",
+  "desc": "Presenter (Davi, NorteSul badge) to camera in a light studio, waves on 'Oi'",
+  "sfx": [
+   {
+    "t": 12.47,
+    "what": "bright soft whoosh + water bubble (refill vibe as meter jumps to 100 %)"
+   },
+   {
+    "t": 12.6,
+    "what": "light ambient pad"
+   }
+  ]
+ },
+ {
+  "id": "today",
+  "start": 14.44,
+  "end": 15.99,
+  "tr": "x",
+  "desc": "Presenter medium shot, explaining gesture; floating drop + '?' icon",
+  "sfx": [
+   {
+    "t": 14.44,
+    "what": "soft whoosh"
+   },
+   {
+    "t": 14.7,
+    "what": "pop (icon)"
+   }
+  ]
+ },
+ {
+  "id": "globe",
+  "start": 15.99,
+  "end": 17.57,
+  "tr": "x",
+  "desc": "Earth turning toward South America in space",
+  "sfx": [
+   {
+    "t": 15.99,
+    "what": "airy whoosh"
+   },
+   {
+    "t": 16.1,
+    "what": "space ambience / low pad"
+   }
+  ]
+ },
+ {
+  "id": "brazil",
+  "start": 17.57,
+  "end": 20.13,
+  "tr": "x",
+  "desc": "Zoom on Brazil which lights up in blue; '12% DA ÁGUA DOCE DO MUNDO'",
+  "sfx": [
+   {
+    "t": 17.6,
+    "what": "soft shimmer (highlight)"
+   },
+   {
+    "t": 17.9,
+    "what": "UI blip (BRASIL chip)"
+   },
+   {
+    "t": 18.0,
+    "what": "UI number tick (12%)"
+   }
+  ]
+ },
+ {
+  "id": "salvador",
+  "start": 20.13,
+  "end": 22.56,
+  "tr": "x",
+  "desc": "Push to the Northeast coast; yellow pin drops on Salvador; chip 'SALVADOR · BAHIA'",
+  "sfx": [
+   {
+    "t": 20.13,
+    "what": "slow whoosh (zoom)"
+   },
+   {
+    "t": 21.4,
+    "what": "pin drop click + soft ping"
+   }
+  ]
+ },
+ {
+  "id": "ocean",
+  "start": 22.56,
+  "end": 24.46,
+  "tr": "x",
+  "desc": "Open ocean swells and sparkles; chip 'OCEANOS · MARES'",
+  "sfx": [
+   {
+    "t": 22.56,
+    "what": "ocean waves / gentle surf"
+   },
+   {
+    "t": 22.9,
+    "what": "UI blip"
+   }
+  ]
+ },
+ {
+  "id": "bottles",
+  "start": 24.46,
+  "end": 26.45,
+  "tr": "cut",
+  "desc": "100 bottles pop in (all salt-water dark blue); the last 2.5 turn light blue",
+  "sfx": [
+   {
+    "t": 24.46,
+    "what": "rapid soft pops (bottles appearing)"
+   },
+   {
+    "t": 25.64,
+    "what": "glassy chime (fresh water highlight)"
+   }
+  ]
+ },
+ {
+  "id": "fresh",
+  "start": 26.45,
+  "end": 27.93,
+  "tr": "x",
+  "desc": "Salt bottles dim, push-in on the 2.5 glowing fresh bottles; chip 'SALGADA 97,5% · DOCE 2,5%'",
+  "sfx": [
+   {
+    "t": 26.45,
+    "what": "soft whoosh (push-in)"
+   },
+   {
+    "t": 26.6,
+    "what": "UI blip (chip)"
+   }
+  ]
+ },
+ {
+  "id": "cause1",
+  "start": 27.93,
+  "end": 29.86,
+  "tr": "cut",
+  "desc": "Presenter beside the 'CAUSAS' board; four causes list in, '1/4 DESPERDÍCIO' highlights",
+  "sfx": [
+   {
+    "t": 27.95,
+    "what": "board slide-in swish"
+   },
+   {
+    "t": 28.1,
+    "what": "4 light list ticks"
+   },
+   {
+    "t": 29.13,
+    "what": "highlight blip"
+   }
+  ]
+ },
+ {
+  "id": "pipes",
+  "start": 29.86,
+  "end": 31.96,
+  "tr": "x",
+  "desc": "Street cross-section: x-ray scan sweeps underground and reveals the water main with three leaks",
+  "sfx": [
+   {
+    "t": 29.86,
+    "what": "x-ray scanner hum sweep"
+   },
+   {
+    "t": 30.3,
+    "what": "running water in pipe (muffled)"
+   },
+   {
+    "t": 30.8,
+    "what": "small leak hisses"
+   }
+  ]
+ },
+ {
+  "id": "leak",
+  "start": 31.96,
+  "end": 33.59,
+  "tr": "x",
+  "desc": "Close on a cracked pipe spraying into the soil; 'PERDA ~40%'",
+  "sfx": [
+   {
+    "t": 31.96,
+    "what": "pressurised water spray / leak hiss"
+   },
+   {
+    "t": 32.1,
+    "what": "UI blip (tag)"
+   }
+  ]
+ },
+ {
+  "id": "buckets",
+  "start": 33.59,
+  "end": 35.41,
+  "tr": "x",
+  "desc": "10 buckets; 4 tip over and spill (red X); chip '4 DE CADA 10 SE PERDEM'",
+  "sfx": [
+   {
+    "t": 33.85,
+    "what": "water slosh/spill"
+   },
+   {
+    "t": 34.1,
+    "what": "water slosh/spill"
+   },
+   {
+    "t": 34.3,
+    "what": "water slosh/spill"
+   },
+   {
+    "t": 34.55,
+    "what": "water slosh/spill"
+   },
+   {
+    "t": 34.6,
+    "what": "soft error blip ×4 (X marks)"
+   }
+  ]
+ },
+ {
+  "id": "tap6",
+  "start": 35.41,
+  "end": 37.01,
+  "tr": "x",
+  "desc": "Home tap trickling; 6 full buckets, 4 dashed empty outlines; '6 / 10 CHEGAM NA TORNEIRA'",
+  "sfx": [
+   {
+    "t": 35.41,
+    "what": "thin tap trickle"
+   },
+   {
+    "t": 35.6,
+    "what": "bucket set-down taps"
+   }
+  ]
+ },
+ {
+  "id": "cause2",
+  "start": 37.01,
+  "end": 39.24,
+  "tr": "cut",
+  "desc": "Board: cause 1 ticked, '2/4 DESMATAMENTO' highlights",
+  "sfx": [
+   {
+    "t": 37.01,
+    "what": "soft whoosh"
+   },
+   {
+    "t": 37.05,
+    "what": "highlight blip"
+   }
+  ]
+ },
+ {
+  "id": "forest",
+  "start": 39.24,
+  "end": 41.23,
+  "tr": "x",
+  "desc": "Amazon canopy, river and morning mist, gentle pan; 'AMAZÔNIA'",
+  "sfx": [
+   {
+    "t": 39.24,
+    "what": "rainforest ambience (birds, insects)"
+   },
+   {
+    "t": 39.5,
+    "what": "UI blip"
+   }
+  ]
+ },
+ {
+  "id": "vapor",
+  "start": 41.23,
+  "end": 43.6,
+  "tr": "x",
+  "desc": "Trees exhale vapour that gathers into a raining cloud",
+  "sfx": [
+   {
+    "t": 41.3,
+    "what": "gentle airy rise"
+   },
+   {
+    "t": 42.0,
+    "what": "soft rain begins"
+   }
+  ]
+ },
+ {
+  "id": "rivers",
+  "start": 43.6,
+  "end": 45.44,
+  "tr": "x",
+  "desc": "Brazil map: a cloud rides a dotted yellow arrow from the Amazon to the Southeast; chip 'RIOS VOADORES'",
+  "sfx": [
+   {
+    "t": 43.6,
+    "what": "wind whoosh travelling (left→right)"
+   },
+   {
+    "t": 44.1,
+    "what": "UI blip (chip)"
+   },
+   {
+    "t": 45.0,
+    "what": "light rain patter at SE"
+   }
+  ]
+ },
+ {
+  "id": "lessforest",
+  "start": 45.44,
+  "end": 47.92,
+  "tr": "x",
+  "desc": "Trees vanish one by one into stumps, ground turns dry, the cloud thins and the rain stops",
+  "sfx": [
+   {
+    "t": 45.5,
+    "what": "soft pops (trees vanishing)"
+   },
+   {
+    "t": 46.6,
+    "what": "rain fades out, dry wind"
+   }
+  ]
+ },
+ {
+  "id": "cause3",
+  "start": 47.92,
+  "end": 49.78,
+  "tr": "cut",
+  "desc": "Board: causes 1–2 ticked, '3/4 POLUIÇÃO' highlights",
+  "sfx": [
+   {
+    "t": 47.92,
+    "what": "soft whoosh"
+   },
+   {
+    "t": 47.95,
+    "what": "highlight blip"
+   }
+  ]
+ },
+ {
+  "id": "sewer",
+  "start": 49.78,
+  "end": 51.17,
+  "tr": "x",
+  "desc": "Sewer outfall pouring brown water into a river; '~50% SEM TRATAMENTO'",
+  "sfx": [
+   {
+    "t": 49.78,
+    "what": "river flow + pipe gush (muddy)"
+   },
+   {
+    "t": 50.0,
+    "what": "UI blip"
+   }
+  ]
+ },
+ {
+  "id": "river",
+  "start": 51.17,
+  "end": 52.7,
+  "tr": "x",
+  "desc": "Aerial river darkening downstream",
+  "sfx": [
+   {
+    "t": 51.17,
+    "what": "slow low drone / river"
+   }
+  ]
+ },
+ {
+  "id": "sun",
+  "start": 52.7,
+  "end": 54.09,
+  "tr": "cut",
+  "desc": "Blazing sun, thermometer climbing; chip '4/4 · SECAS MAIS LONGAS'",
+  "sfx": [
+   {
+    "t": 52.7,
+    "what": "warm swell / heat shimmer tone"
+   },
+   {
+    "t": 52.9,
+    "what": "UI blip"
+   }
+  ]
+ },
+ {
+  "id": "drought",
+  "start": 54.09,
+  "end": 55.508,
+  "tr": "x",
+  "desc": "Cracked ground close, dry sprout, calendar flipping JUN→NOV under the sun; 'MESES SEM CHUVA'",
+  "sfx": [
+   {
+    "t": 54.09,
+    "what": "dry wind, cicadas"
+   },
+   {
+    "t": 54.2,
+    "what": "paper flips ×5 (calendar)"
+   }
+  ]
+ }
+]

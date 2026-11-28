@@ -1,0 +1,1972 @@
+{
+ "fps": 30,
+ "duration": 102.03,
+ "lines": [
+  {
+   "id": "L1",
+   "text": "E se tu pudesse se teletransportar pra qualquer lugar que já viu?",
+   "start": 0.0,
+   "end": 2.833,
+   "words": [
+    {
+     "w": "E",
+     "start": 0.0,
+     "end": 0.093
+    },
+    {
+     "w": "se",
+     "start": 0.163,
+     "end": 0.232
+    },
+    {
+     "w": "tu",
+     "start": 0.279,
+     "end": 0.348
+    },
+    {
+     "w": "pudesse",
+     "start": 0.395,
+     "end": 0.708
+    },
+    {
+     "w": "se",
+     "start": 0.743,
+     "end": 0.824
+    },
+    {
+     "w": "teletransportar",
+     "start": 0.871,
+     "end": 1.556
+    },
+    {
+     "w": "pra",
+     "start": 1.591,
+     "end": 1.695
+    },
+    {
+     "w": "qualquer",
+     "start": 1.73,
+     "end": 1.974
+    },
+    {
+     "w": "lugar",
+     "start": 1.997,
+     "end": 2.194
+    },
+    {
+     "w": "que",
+     "start": 2.218,
+     "end": 2.287
+    },
+    {
+     "w": "já",
+     "start": 2.322,
+     "end": 2.415
+    },
+    {
+     "w": "viu?",
+     "start": 2.473,
+     "end": 2.833
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "text": "E tivesse gente paga pra te caçar por isso?",
+   "start": 3.228,
+   "end": 5.132,
+   "words": [
+    {
+     "w": "E",
+     "start": 3.228,
+     "end": 3.309
+    },
+    {
+     "w": "tivesse",
+     "start": 3.355,
+     "end": 3.657
+    },
+    {
+     "w": "gente",
+     "start": 3.68,
+     "end": 3.866
+    },
+    {
+     "w": "paga",
+     "start": 3.901,
+     "end": 4.098
+    },
+    {
+     "w": "pra",
+     "start": 4.133,
+     "end": 4.238
+    },
+    {
+     "w": "te",
+     "start": 4.272,
+     "end": 4.342
+    },
+    {
+     "w": "caçar",
+     "start": 4.377,
+     "end": 4.609
+    },
+    {
+     "w": "por",
+     "start": 4.656,
+     "end": 4.783
+    },
+    {
+     "w": "isso?",
+     "start": 4.83,
+     "end": 5.132
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "text": "Pro Davi, o primeiro salto foi sem querer. Quinze anos, caindo de uma ponte. Piscou, tava na cama.",
+   "start": 5.666,
+   "end": 11.598,
+   "words": [
+    {
+     "w": "Pro",
+     "start": 5.666,
+     "end": 5.805
+    },
+    {
+     "w": "Davi,",
+     "start": 5.851,
+     "end": 6.455
+    },
+    {
+     "w": "o",
+     "start": 6.606,
+     "end": 6.664
+    },
+    {
+     "w": "primeiro",
+     "start": 6.711,
+     "end": 7.024
+    },
+    {
+     "w": "salto",
+     "start": 7.07,
+     "end": 7.279
+    },
+    {
+     "w": "foi",
+     "start": 7.314,
+     "end": 7.442
+    },
+    {
+     "w": "sem",
+     "start": 7.477,
+     "end": 7.605
+    },
+    {
+     "w": "querer.",
+     "start": 7.651,
+     "end": 8.092
+    },
+    {
+     "w": "Quinze",
+     "start": 8.382,
+     "end": 8.719
+    },
+    {
+     "w": "anos,",
+     "start": 8.766,
+     "end": 9.009
+    },
+    {
+     "w": "caindo",
+     "start": 9.056,
+     "end": 9.311
+    },
+    {
+     "w": "de",
+     "start": 9.346,
+     "end": 9.392
+    },
+    {
+     "w": "uma",
+     "start": 9.416,
+     "end": 9.532
+    },
+    {
+     "w": "ponte.",
+     "start": 9.578,
+     "end": 9.985
+    },
+    {
+     "w": "Piscou,",
+     "start": 10.089,
+     "end": 10.693
+    },
+    {
+     "w": "tava",
+     "start": 10.739,
+     "end": 10.971
+    },
+    {
+     "w": "na",
+     "start": 11.006,
+     "end": 11.076
+    },
+    {
+     "w": "cama.",
+     "start": 11.146,
+     "end": 11.598
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "text": "O segundo foi de propósito. Uma lata de refrigerante na mão, do Rio pro Japão.",
+   "start": 11.935,
+   "end": 16.613,
+   "words": [
+    {
+     "w": "O",
+     "start": 11.935,
+     "end": 12.016
+    },
+    {
+     "w": "segundo",
+     "start": 12.098,
+     "end": 12.411
+    },
+    {
+     "w": "foi",
+     "start": 12.446,
+     "end": 12.562
+    },
+    {
+     "w": "de",
+     "start": 12.585,
+     "end": 12.643
+    },
+    {
+     "w": "propósito.",
+     "start": 12.689,
+     "end": 13.316
+    },
+    {
+     "w": "Uma",
+     "start": 13.653,
+     "end": 13.85
+    },
+    {
+     "w": "lata",
+     "start": 13.897,
+     "end": 14.082
+    },
+    {
+     "w": "de",
+     "start": 14.117,
+     "end": 14.175
+    },
+    {
+     "w": "refrigerante",
+     "start": 14.21,
+     "end": 14.744
+    },
+    {
+     "w": "na",
+     "start": 14.779,
+     "end": 14.872
+    },
+    {
+     "w": "mão,",
+     "start": 14.918,
+     "end": 15.313
+    },
+    {
+     "w": "do",
+     "start": 15.452,
+     "end": 15.58
+    },
+    {
+     "w": "Rio",
+     "start": 15.65,
+     "end": 15.882
+    },
+    {
+     "w": "pro",
+     "start": 15.928,
+     "end": 16.045
+    },
+    {
+     "w": "Japão.",
+     "start": 16.079,
+     "end": 16.613
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "text": "Ele chegou parado. A lata, não. Atravessou a parede de uma loja.",
+   "start": 16.718,
+   "end": 20.329,
+   "words": [
+    {
+     "w": "Ele",
+     "start": 16.718,
+     "end": 16.869
+    },
+    {
+     "w": "chegou",
+     "start": 16.892,
+     "end": 17.124
+    },
+    {
+     "w": "parado.",
+     "start": 17.171,
+     "end": 17.682
+    },
+    {
+     "w": "A",
+     "start": 17.786,
+     "end": 17.844
+    },
+    {
+     "w": "lata,",
+     "start": 17.925,
+     "end": 18.204
+    },
+    {
+     "w": "não.",
+     "start": 18.227,
+     "end": 18.506
+    },
+    {
+     "w": "Atravessou",
+     "start": 18.796,
+     "end": 19.272
+    },
+    {
+     "w": "a",
+     "start": 19.307,
+     "end": 19.33
+    },
+    {
+     "w": "parede",
+     "start": 19.377,
+     "end": 19.62
+    },
+    {
+     "w": "de",
+     "start": 19.655,
+     "end": 19.702
+    },
+    {
+     "w": "uma",
+     "start": 19.725,
+     "end": 19.853
+    },
+    {
+     "w": "loja.",
+     "start": 19.899,
+     "end": 20.329
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "text": "Porque no Rio o chão gira a mil quinhentos e quarenta por hora pro leste.",
+   "start": 20.433,
+   "end": 23.73,
+   "words": [
+    {
+     "w": "Porque",
+     "start": 20.433,
+     "end": 20.677
+    },
+    {
+     "w": "no",
+     "start": 20.723,
+     "end": 20.816
+    },
+    {
+     "w": "Rio",
+     "start": 20.863,
+     "end": 21.048
+    },
+    {
+     "w": "o",
+     "start": 21.083,
+     "end": 21.13
+    },
+    {
+     "w": "chão",
+     "start": 21.165,
+     "end": 21.362
+    },
+    {
+     "w": "gira",
+     "start": 21.397,
+     "end": 21.583
+    },
+    {
+     "w": "a",
+     "start": 21.606,
+     "end": 21.641
+    },
+    {
+     "w": "mil",
+     "start": 21.722,
+     "end": 21.884
+    },
+    {
+     "w": "quinhentos",
+     "start": 21.931,
+     "end": 22.326
+    },
+    {
+     "w": "e",
+     "start": 22.36,
+     "end": 22.384
+    },
+    {
+     "w": "quarenta",
+     "start": 22.418,
+     "end": 22.744
+    },
+    {
+     "w": "por",
+     "start": 22.79,
+     "end": 22.929
+    },
+    {
+     "w": "hora",
+     "start": 22.964,
+     "end": 23.092
+    },
+    {
+     "w": "pro",
+     "start": 23.127,
+     "end": 23.254
+    },
+    {
+     "w": "leste.",
+     "start": 23.289,
+     "end": 23.73
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "text": "Tóquio gira a mil trezentos e sessenta. Só que do outro lado do planeta, na direção contrária.",
+   "start": 24.067,
+   "end": 28.873,
+   "words": [
+    {
+     "w": "Tóquio",
+     "start": 24.067,
+     "end": 24.381
+    },
+    {
+     "w": "gira",
+     "start": 24.427,
+     "end": 24.601
+    },
+    {
+     "w": "a",
+     "start": 24.624,
+     "end": 24.648
+    },
+    {
+     "w": "mil",
+     "start": 24.717,
+     "end": 24.88
+    },
+    {
+     "w": "trezentos",
+     "start": 24.926,
+     "end": 25.402
+    },
+    {
+     "w": "e",
+     "start": 25.448,
+     "end": 25.472
+    },
+    {
+     "w": "sessenta.",
+     "start": 25.518,
+     "end": 26.157
+    },
+    {
+     "w": "Só",
+     "start": 26.447,
+     "end": 26.563
+    },
+    {
+     "w": "que",
+     "start": 26.609,
+     "end": 26.679
+    },
+    {
+     "w": "do",
+     "start": 26.714,
+     "end": 26.784
+    },
+    {
+     "w": "outro",
+     "start": 26.83,
+     "end": 27.004
+    },
+    {
+     "w": "lado",
+     "start": 27.039,
+     "end": 27.202
+    },
+    {
+     "w": "do",
+     "start": 27.236,
+     "end": 27.283
+    },
+    {
+     "w": "planeta,",
+     "start": 27.329,
+     "end": 27.794
+    },
+    {
+     "w": "na",
+     "start": 27.852,
+     "end": 27.945
+    },
+    {
+     "w": "direção",
+     "start": 27.979,
+     "end": 28.316
+    },
+    {
+     "w": "contrária.",
+     "start": 28.351,
+     "end": 28.873
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "text": "Diferença: dois mil e novecentos por hora. O salto acerta a velocidade do corpo dele. Do resto, não.",
+   "start": 29.013,
+   "end": 34.423,
+   "words": [
+    {
+     "w": "Diferença:",
+     "start": 29.013,
+     "end": 29.651
+    },
+    {
+     "w": "dois",
+     "start": 29.837,
+     "end": 30.081
+    },
+    {
+     "w": "mil",
+     "start": 30.139,
+     "end": 30.313
+    },
+    {
+     "w": "e",
+     "start": 30.371,
+     "end": 30.418
+    },
+    {
+     "w": "novecentos",
+     "start": 30.464,
+     "end": 30.917
+    },
+    {
+     "w": "por",
+     "start": 30.975,
+     "end": 31.126
+    },
+    {
+     "w": "hora.",
+     "start": 31.161,
+     "end": 31.497
+    },
+    {
+     "w": "O",
+     "start": 31.741,
+     "end": 31.799
+    },
+    {
+     "w": "salto",
+     "start": 31.904,
+     "end": 32.159
+    },
+    {
+     "w": "acerta",
+     "start": 32.194,
+     "end": 32.461
+    },
+    {
+     "w": "a",
+     "start": 32.484,
+     "end": 32.507
+    },
+    {
+     "w": "velocidade",
+     "start": 32.542,
+     "end": 32.937
+    },
+    {
+     "w": "do",
+     "start": 32.972,
+     "end": 33.03
+    },
+    {
+     "w": "corpo",
+     "start": 33.076,
+     "end": 33.285
+    },
+    {
+     "w": "dele.",
+     "start": 33.332,
+     "end": 33.622
+    },
+    {
+     "w": "Do",
+     "start": 33.668,
+     "end": 33.773
+    },
+    {
+     "w": "resto,",
+     "start": 33.819,
+     "end": 34.098
+    },
+    {
+     "w": "não.",
+     "start": 34.121,
+     "end": 34.423
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "text": "E todo salto deixa um buraco do tamanho dele no ar. Setenta litros de vácuo.",
+   "start": 34.76,
+   "end": 38.637,
+   "words": [
+    {
+     "w": "E",
+     "start": 34.76,
+     "end": 34.841
+    },
+    {
+     "w": "todo",
+     "start": 34.911,
+     "end": 35.085
+    },
+    {
+     "w": "salto",
+     "start": 35.131,
+     "end": 35.34
+    },
+    {
+     "w": "deixa",
+     "start": 35.387,
+     "end": 35.549
+    },
+    {
+     "w": "um",
+     "start": 35.572,
+     "end": 35.619
+    },
+    {
+     "w": "buraco",
+     "start": 35.665,
+     "end": 35.955
+    },
+    {
+     "w": "do",
+     "start": 35.99,
+     "end": 36.037
+    },
+    {
+     "w": "tamanho",
+     "start": 36.083,
+     "end": 36.362
+    },
+    {
+     "w": "dele",
+     "start": 36.385,
+     "end": 36.548
+    },
+    {
+     "w": "no",
+     "start": 36.582,
+     "end": 36.675
+    },
+    {
+     "w": "ar.",
+     "start": 36.722,
+     "end": 36.977
+    },
+    {
+     "w": "Setenta",
+     "start": 37.314,
+     "end": 37.732
+    },
+    {
+     "w": "litros",
+     "start": 37.778,
+     "end": 38.022
+    },
+    {
+     "w": "de",
+     "start": 38.045,
+     "end": 38.103
+    },
+    {
+     "w": "vácuo.",
+     "start": 38.15,
+     "end": 38.637
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "text": "O ar fecha o buraco e estala. Cento e quarenta decibéis. Um tiro do lado do ouvido.",
+   "start": 38.788,
+   "end": 43.107,
+   "words": [
+    {
+     "w": "O",
+     "start": 38.788,
+     "end": 38.846
+    },
+    {
+     "w": "ar",
+     "start": 38.951,
+     "end": 39.021
+    },
+    {
+     "w": "fecha",
+     "start": 39.09,
+     "end": 39.322
+    },
+    {
+     "w": "o",
+     "start": 39.346,
+     "end": 39.369
+    },
+    {
+     "w": "buraco",
+     "start": 39.415,
+     "end": 39.717
+    },
+    {
+     "w": "e",
+     "start": 39.752,
+     "end": 39.775
+    },
+    {
+     "w": "estala.",
+     "start": 39.798,
+     "end": 40.298
+    },
+    {
+     "w": "Cento",
+     "start": 40.344,
+     "end": 40.611
+    },
+    {
+     "w": "e",
+     "start": 40.634,
+     "end": 40.658
+    },
+    {
+     "w": "quarenta",
+     "start": 40.704,
+     "end": 41.041
+    },
+    {
+     "w": "decibéis.",
+     "start": 41.087,
+     "end": 41.702
+    },
+    {
+     "w": "Um",
+     "start": 41.807,
+     "end": 41.935
+    },
+    {
+     "w": "tiro",
+     "start": 41.981,
+     "end": 42.19
+    },
+    {
+     "w": "do",
+     "start": 42.225,
+     "end": 42.271
+    },
+    {
+     "w": "lado",
+     "start": 42.318,
+     "end": 42.48
+    },
+    {
+     "w": "do",
+     "start": 42.504,
+     "end": 42.562
+    },
+    {
+     "w": "ouvido.",
+     "start": 42.596,
+     "end": 43.107
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "text": "Foi o estalo que entregou ele. Uma ordem antiga, a Linha, espalhou microfone pela cidade.",
+   "start": 43.328,
+   "end": 47.914,
+   "words": [
+    {
+     "w": "Foi",
+     "start": 43.328,
+     "end": 43.49
+    },
+    {
+     "w": "o",
+     "start": 43.525,
+     "end": 43.548
+    },
+    {
+     "w": "estalo",
+     "start": 43.583,
+     "end": 43.874
+    },
+    {
+     "w": "que",
+     "start": 43.897,
+     "end": 43.966
+    },
+    {
+     "w": "entregou",
+     "start": 43.99,
+     "end": 44.326
+    },
+    {
+     "w": "ele.",
+     "start": 44.373,
+     "end": 44.628
+    },
+    {
+     "w": "Uma",
+     "start": 44.814,
+     "end": 44.976
+    },
+    {
+     "w": "ordem",
+     "start": 45.023,
+     "end": 45.243
+    },
+    {
+     "w": "antiga,",
+     "start": 45.267,
+     "end": 45.766
+    },
+    {
+     "w": "a",
+     "start": 45.836,
+     "end": 45.894
+    },
+    {
+     "w": "Linha,",
+     "start": 45.975,
+     "end": 46.358
+    },
+    {
+     "w": "espalhou",
+     "start": 46.381,
+     "end": 46.753
+    },
+    {
+     "w": "microfone",
+     "start": 46.788,
+     "end": 47.217
+    },
+    {
+     "w": "pela",
+     "start": 47.252,
+     "end": 47.403
+    },
+    {
+     "w": "cidade.",
+     "start": 47.438,
+     "end": 47.914
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "text": "Três microfones ouvem o estalo. A diferença de tempo diz onde foi. Dois segundos depois, eles sabem.",
+   "start": 48.1,
+   "end": 52.802,
+   "words": [
+    {
+     "w": "Três",
+     "start": 48.1,
+     "end": 48.32
+    },
+    {
+     "w": "microfones",
+     "start": 48.367,
+     "end": 48.831
+    },
+    {
+     "w": "ouvem",
+     "start": 48.877,
+     "end": 49.052
+    },
+    {
+     "w": "o",
+     "start": 49.086,
+     "end": 49.11
+    },
+    {
+     "w": "estalo.",
+     "start": 49.144,
+     "end": 49.62
+    },
+    {
+     "w": "A",
+     "start": 49.667,
+     "end": 49.713
+    },
+    {
+     "w": "diferença",
+     "start": 49.771,
+     "end": 50.178
+    },
+    {
+     "w": "de",
+     "start": 50.213,
+     "end": 50.271
+    },
+    {
+     "w": "tempo",
+     "start": 50.317,
+     "end": 50.549
+    },
+    {
+     "w": "diz",
+     "start": 50.584,
+     "end": 50.7
+    },
+    {
+     "w": "onde",
+     "start": 50.747,
+     "end": 50.898
+    },
+    {
+     "w": "foi.",
+     "start": 50.956,
+     "end": 51.269
+    },
+    {
+     "w": "Dois",
+     "start": 51.408,
+     "end": 51.559
+    },
+    {
+     "w": "segundos",
+     "start": 51.583,
+     "end": 51.861
+    },
+    {
+     "w": "depois,",
+     "start": 51.908,
+     "end": 52.198
+    },
+    {
+     "w": "eles",
+     "start": 52.221,
+     "end": 52.361
+    },
+    {
+     "w": "sabem.",
+     "start": 52.384,
+     "end": 52.802
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "text": "A Linha não usa arma. Usa luva. Eles sabem: o que o Davi segura, ele não protege.",
+   "start": 53.092,
+   "end": 58.107,
+   "words": [
+    {
+     "w": "A",
+     "start": 53.092,
+     "end": 53.138
+    },
+    {
+     "w": "Linha",
+     "start": 53.208,
+     "end": 53.371
+    },
+    {
+     "w": "não",
+     "start": 53.417,
+     "end": 53.498
+    },
+    {
+     "w": "usa",
+     "start": 53.545,
+     "end": 53.754
+    },
+    {
+     "w": "arma.",
+     "start": 53.812,
+     "end": 54.265
+    },
+    {
+     "w": "Usa",
+     "start": 54.555,
+     "end": 54.764
+    },
+    {
+     "w": "luva.",
+     "start": 54.81,
+     "end": 55.251
+    },
+    {
+     "w": "Eles",
+     "start": 55.356,
+     "end": 55.576
+    },
+    {
+     "w": "sabem:",
+     "start": 55.6,
+     "end": 55.971
+    },
+    {
+     "w": "o",
+     "start": 56.192,
+     "end": 56.25
+    },
+    {
+     "w": "que",
+     "start": 56.296,
+     "end": 56.366
+    },
+    {
+     "w": "o",
+     "start": 56.401,
+     "end": 56.424
+    },
+    {
+     "w": "Davi",
+     "start": 56.459,
+     "end": 56.645
+    },
+    {
+     "w": "segura,",
+     "start": 56.691,
+     "end": 57.179
+    },
+    {
+     "w": "ele",
+     "start": 57.225,
+     "end": 57.388
+    },
+    {
+     "w": "não",
+     "start": 57.411,
+     "end": 57.515
+    },
+    {
+     "w": "protege.",
+     "start": 57.55,
+     "end": 58.107
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "text": "Sexta-feira, Copacabana. O Davi compra um açaí. Um cara de terno segura o pulso dele.",
+   "start": 58.502,
+   "end": 63.193,
+   "words": [
+    {
+     "w": "Sexta-feira,",
+     "start": 58.502,
+     "end": 59.083
+    },
+    {
+     "w": "Copacabana.",
+     "start": 59.106,
+     "end": 59.791
+    },
+    {
+     "w": "O",
+     "start": 59.895,
+     "end": 59.953
+    },
+    {
+     "w": "Davi",
+     "start": 60.058,
+     "end": 60.267
+    },
+    {
+     "w": "compra",
+     "start": 60.313,
+     "end": 60.546
+    },
+    {
+     "w": "um",
+     "start": 60.569,
+     "end": 60.615
+    },
+    {
+     "w": "açaí.",
+     "start": 60.662,
+     "end": 61.196
+    },
+    {
+     "w": "Um",
+     "start": 61.335,
+     "end": 61.428
+    },
+    {
+     "w": "cara",
+     "start": 61.474,
+     "end": 61.683
+    },
+    {
+     "w": "de",
+     "start": 61.73,
+     "end": 61.799
+    },
+    {
+     "w": "terno",
+     "start": 61.846,
+     "end": 62.066
+    },
+    {
+     "w": "segura",
+     "start": 62.101,
+     "end": 62.368
+    },
+    {
+     "w": "o",
+     "start": 62.415,
+     "end": 62.438
+    },
+    {
+     "w": "pulso",
+     "start": 62.484,
+     "end": 62.74
+    },
+    {
+     "w": "dele.",
+     "start": 62.786,
+     "end": 63.193
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "text": "Se o Davi pular pra longe, o cara chega a dois mil por hora. Vira parede. E o Davi não mata ninguém. Eles sabem disso.",
+   "start": 63.437,
+   "end": 69.393,
+   "words": [
+    {
+     "w": "Se",
+     "start": 63.437,
+     "end": 63.529
+    },
+    {
+     "w": "o",
+     "start": 63.553,
+     "end": 63.576
+    },
+    {
+     "w": "Davi",
+     "start": 63.611,
+     "end": 63.785
+    },
+    {
+     "w": "pular",
+     "start": 63.831,
+     "end": 64.04
+    },
+    {
+     "w": "pra",
+     "start": 64.075,
+     "end": 64.214
+    },
+    {
+     "w": "longe,",
+     "start": 64.261,
+     "end": 64.598
+    },
+    {
+     "w": "o",
+     "start": 64.667,
+     "end": 64.714
+    },
+    {
+     "w": "cara",
+     "start": 64.76,
+     "end": 64.911
+    },
+    {
+     "w": "chega",
+     "start": 64.946,
+     "end": 65.12
+    },
+    {
+     "w": "a",
+     "start": 65.143,
+     "end": 65.166
+    },
+    {
+     "w": "dois",
+     "start": 65.213,
+     "end": 65.375
+    },
+    {
+     "w": "mil",
+     "start": 65.422,
+     "end": 65.526
+    },
+    {
+     "w": "por",
+     "start": 65.561,
+     "end": 65.701
+    },
+    {
+     "w": "hora.",
+     "start": 65.735,
+     "end": 66.084
+    },
+    {
+     "w": "Vira",
+     "start": 66.374,
+     "end": 66.548
+    },
+    {
+     "w": "parede.",
+     "start": 66.595,
+     "end": 67.071
+    },
+    {
+     "w": "E",
+     "start": 67.314,
+     "end": 67.396
+    },
+    {
+     "w": "o",
+     "start": 67.442,
+     "end": 67.465
+    },
+    {
+     "w": "Davi",
+     "start": 67.512,
+     "end": 67.663
+    },
+    {
+     "w": "não",
+     "start": 67.697,
+     "end": 67.767
+    },
+    {
+     "w": "mata",
+     "start": 67.79,
+     "end": 67.976
+    },
+    {
+     "w": "ninguém.",
+     "start": 68.011,
+     "end": 68.394
+    },
+    {
+     "w": "Eles",
+     "start": 68.499,
+     "end": 68.684
+    },
+    {
+     "w": "sabem",
+     "start": 68.719,
+     "end": 68.975
+    },
+    {
+     "w": "disso.",
+     "start": 69.009,
+     "end": 69.393
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "text": "Empate. O cara sorri. Mais três chegando.",
+   "start": 69.683,
+   "end": 72.516,
+   "words": [
+    {
+     "w": "Empate.",
+     "start": 69.683,
+     "end": 70.356
+    },
+    {
+     "w": "O",
+     "start": 70.495,
+     "end": 70.577
+    },
+    {
+     "w": "cara",
+     "start": 70.646,
+     "end": 70.821
+    },
+    {
+     "w": "sorri.",
+     "start": 70.867,
+     "end": 71.401
+    },
+    {
+     "w": "Mais",
+     "start": 71.552,
+     "end": 71.761
+    },
+    {
+     "w": "três",
+     "start": 71.819,
+     "end": 72.005
+    },
+    {
+     "w": "chegando.",
+     "start": 72.04,
+     "end": 72.516
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "text": "Só que o Davi fez a conta. A velocidade do chão depende de duas coisas: a distância do equador e o lado do planeta.",
+   "start": 72.55,
+   "end": 78.309,
+   "words": [
+    {
+     "w": "Só",
+     "start": 72.55,
+     "end": 72.678
+    },
+    {
+     "w": "que",
+     "start": 72.725,
+     "end": 72.794
+    },
+    {
+     "w": "o",
+     "start": 72.817,
+     "end": 72.841
+    },
+    {
+     "w": "Davi",
+     "start": 72.876,
+     "end": 73.05
+    },
+    {
+     "w": "fez",
+     "start": 73.096,
+     "end": 73.224
+    },
+    {
+     "w": "a",
+     "start": 73.27,
+     "end": 73.293
+    },
+    {
+     "w": "conta.",
+     "start": 73.352,
+     "end": 73.781
+    },
+    {
+     "w": "A",
+     "start": 74.118,
+     "end": 74.176
+    },
+    {
+     "w": "velocidade",
+     "start": 74.245,
+     "end": 74.675
+    },
+    {
+     "w": "do",
+     "start": 74.721,
+     "end": 74.791
+    },
+    {
+     "w": "chão",
+     "start": 74.826,
+     "end": 75.0
+    },
+    {
+     "w": "depende",
+     "start": 75.047,
+     "end": 75.348
+    },
+    {
+     "w": "de",
+     "start": 75.395,
+     "end": 75.453
+    },
+    {
+     "w": "duas",
+     "start": 75.499,
+     "end": 75.662
+    },
+    {
+     "w": "coisas:",
+     "start": 75.731,
+     "end": 76.138
+    },
+    {
+     "w": "a",
+     "start": 76.242,
+     "end": 76.289
+    },
+    {
+     "w": "distância",
+     "start": 76.335,
+     "end": 76.718
+    },
+    {
+     "w": "do",
+     "start": 76.765,
+     "end": 76.823
+    },
+    {
+     "w": "equador",
+     "start": 76.846,
+     "end": 77.264
+    },
+    {
+     "w": "e",
+     "start": 77.31,
+     "end": 77.415
+    },
+    {
+     "w": "o",
+     "start": 77.461,
+     "end": 77.485
+    },
+    {
+     "w": "lado",
+     "start": 77.531,
+     "end": 77.694
+    },
+    {
+     "w": "do",
+     "start": 77.728,
+     "end": 77.786
+    },
+    {
+     "w": "planeta.",
+     "start": 77.821,
+     "end": 78.309
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "text": "O Rio tá vinte e três graus pro sul. Vinte e três pro norte, na mesma linha, o chão gira igualzinho.",
+   "start": 78.355,
+   "end": 83.232,
+   "words": [
+    {
+     "w": "O",
+     "start": 78.355,
+     "end": 78.425
+    },
+    {
+     "w": "Rio",
+     "start": 78.506,
+     "end": 78.634
+    },
+    {
+     "w": "tá",
+     "start": 78.68,
+     "end": 78.773
+    },
+    {
+     "w": "vinte",
+     "start": 78.843,
+     "end": 79.098
+    },
+    {
+     "w": "e",
+     "start": 79.122,
+     "end": 79.145
+    },
+    {
+     "w": "três",
+     "start": 79.191,
+     "end": 79.377
+    },
+    {
+     "w": "graus",
+     "start": 79.447,
+     "end": 79.656
+    },
+    {
+     "w": "pro",
+     "start": 79.702,
+     "end": 79.83
+    },
+    {
+     "w": "sul.",
+     "start": 79.876,
+     "end": 80.143
+    },
+    {
+     "w": "Vinte",
+     "start": 80.329,
+     "end": 80.55
+    },
+    {
+     "w": "e",
+     "start": 80.573,
+     "end": 80.596
+    },
+    {
+     "w": "três",
+     "start": 80.642,
+     "end": 80.817
+    },
+    {
+     "w": "pro",
+     "start": 80.863,
+     "end": 80.991
+    },
+    {
+     "w": "norte,",
+     "start": 81.037,
+     "end": 81.327
+    },
+    {
+     "w": "na",
+     "start": 81.351,
+     "end": 81.409
+    },
+    {
+     "w": "mesma",
+     "start": 81.455,
+     "end": 81.664
+    },
+    {
+     "w": "linha,",
+     "start": 81.699,
+     "end": 82.047
+    },
+    {
+     "w": "o",
+     "start": 82.129,
+     "end": 82.198
+    },
+    {
+     "w": "chão",
+     "start": 82.233,
+     "end": 82.43
+    },
+    {
+     "w": "gira",
+     "start": 82.465,
+     "end": 82.651
+    },
+    {
+     "w": "igualzinho.",
+     "start": 82.674,
+     "end": 83.232
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "text": "Lá é o meio do Atlântico. E mar é tudo igual. Ele já tinha visto.",
+   "start": 83.452,
+   "end": 86.471,
+   "words": [
+    {
+     "w": "Lá",
+     "start": 83.452,
+     "end": 83.568
+    },
+    {
+     "w": "é",
+     "start": 83.615,
+     "end": 83.638
+    },
+    {
+     "w": "o",
+     "start": 83.661,
+     "end": 83.684
+    },
+    {
+     "w": "meio",
+     "start": 83.719,
+     "end": 83.858
+    },
+    {
+     "w": "do",
+     "start": 83.882,
+     "end": 83.94
+    },
+    {
+     "w": "Atlântico.",
+     "start": 83.963,
+     "end": 84.474
+    },
+    {
+     "w": "E",
+     "start": 84.509,
+     "end": 84.578
+    },
+    {
+     "w": "mar",
+     "start": 84.636,
+     "end": 84.764
+    },
+    {
+     "w": "é",
+     "start": 84.81,
+     "end": 84.834
+    },
+    {
+     "w": "tudo",
+     "start": 84.88,
+     "end": 85.077
+    },
+    {
+     "w": "igual.",
+     "start": 85.101,
+     "end": 85.495
+    },
+    {
+     "w": "Ele",
+     "start": 85.542,
+     "end": 85.693
+    },
+    {
+     "w": "já",
+     "start": 85.716,
+     "end": 85.809
+    },
+    {
+     "w": "tinha",
+     "start": 85.844,
+     "end": 86.041
+    },
+    {
+     "w": "visto.",
+     "start": 86.076,
+     "end": 86.471
+    }
+   ]
+  },
+  {
+   "id": "L20",
+   "text": "Estalo. Os dois caem na água, parados, a quase dois mil quilômetros da terra. O cara solta o pulso pra nadar.",
+   "start": 86.575,
+   "end": 92.241,
+   "words": [
+    {
+     "w": "Estalo.",
+     "start": 86.575,
+     "end": 87.179
+    },
+    {
+     "w": "Os",
+     "start": 87.516,
+     "end": 87.667
+    },
+    {
+     "w": "dois",
+     "start": 87.713,
+     "end": 87.864
+    },
+    {
+     "w": "caem",
+     "start": 87.922,
+     "end": 88.073
+    },
+    {
+     "w": "na",
+     "start": 88.12,
+     "end": 88.178
+    },
+    {
+     "w": "água,",
+     "start": 88.259,
+     "end": 88.468
+    },
+    {
+     "w": "parados,",
+     "start": 88.503,
+     "end": 88.967
+    },
+    {
+     "w": "a",
+     "start": 89.014,
+     "end": 89.06
+    },
+    {
+     "w": "quase",
+     "start": 89.118,
+     "end": 89.327
+    },
+    {
+     "w": "dois",
+     "start": 89.362,
+     "end": 89.501
+    },
+    {
+     "w": "mil",
+     "start": 89.548,
+     "end": 89.652
+    },
+    {
+     "w": "quilômetros",
+     "start": 89.675,
+     "end": 90.128
+    },
+    {
+     "w": "da",
+     "start": 90.175,
+     "end": 90.244
+    },
+    {
+     "w": "terra.",
+     "start": 90.302,
+     "end": 90.697
+    },
+    {
+     "w": "O",
+     "start": 90.743,
+     "end": 90.802
+    },
+    {
+     "w": "cara",
+     "start": 90.883,
+     "end": 91.069
+    },
+    {
+     "w": "solta",
+     "start": 91.115,
+     "end": 91.312
+    },
+    {
+     "w": "o",
+     "start": 91.336,
+     "end": 91.359
+    },
+    {
+     "w": "pulso",
+     "start": 91.405,
+     "end": 91.603
+    },
+    {
+     "w": "pra",
+     "start": 91.649,
+     "end": 91.8
+    },
+    {
+     "w": "nadar.",
+     "start": 91.846,
+     "end": 92.241
+    }
+   ]
+  },
+  {
+   "id": "L21",
+   "text": "O Davi volta pro açaí. Antes, joga uma boia e liga pra Marinha.",
+   "start": 92.462,
+   "end": 95.829,
+   "words": [
+    {
+     "w": "O",
+     "start": 92.462,
+     "end": 92.531
+    },
+    {
+     "w": "Davi",
+     "start": 92.601,
+     "end": 92.787
+    },
+    {
+     "w": "volta",
+     "start": 92.833,
+     "end": 93.065
+    },
+    {
+     "w": "pro",
+     "start": 93.1,
+     "end": 93.216
+    },
+    {
+     "w": "açaí.",
+     "start": 93.24,
+     "end": 93.75
+    },
+    {
+     "w": "Antes,",
+     "start": 93.89,
+     "end": 94.215
+    },
+    {
+     "w": "joga",
+     "start": 94.25,
+     "end": 94.47
+    },
+    {
+     "w": "uma",
+     "start": 94.493,
+     "end": 94.61
+    },
+    {
+     "w": "boia",
+     "start": 94.656,
+     "end": 94.888
+    },
+    {
+     "w": "e",
+     "start": 94.911,
+     "end": 94.935
+    },
+    {
+     "w": "liga",
+     "start": 94.969,
+     "end": 95.144
+    },
+    {
+     "w": "pra",
+     "start": 95.178,
+     "end": 95.295
+    },
+    {
+     "w": "Marinha.",
+     "start": 95.341,
+     "end": 95.829
+    }
+   ]
+  },
+  {
+   "id": "L22",
+   "text": "Segue aí pra ver o que a Linha faz quando descobrir que ele aprendeu a jogar a lata de propósito.",
+   "start": 96.165,
+   "end": 100.728,
+   "words": [
+    {
+     "w": "Segue",
+     "start": 96.165,
+     "end": 96.421
+    },
+    {
+     "w": "aí",
+     "start": 96.444,
+     "end": 96.548
+    },
+    {
+     "w": "pra",
+     "start": 96.595,
+     "end": 96.699
+    },
+    {
+     "w": "ver",
+     "start": 96.746,
+     "end": 96.85
+    },
+    {
+     "w": "o",
+     "start": 96.885,
+     "end": 96.908
+    },
+    {
+     "w": "que",
+     "start": 96.943,
+     "end": 97.024
+    },
+    {
+     "w": "a",
+     "start": 97.048,
+     "end": 97.071
+    },
+    {
+     "w": "Linha",
+     "start": 97.106,
+     "end": 97.28
+    },
+    {
+     "w": "faz",
+     "start": 97.35,
+     "end": 97.559
+    },
+    {
+     "w": "quando",
+     "start": 97.617,
+     "end": 97.814
+    },
+    {
+     "w": "descobrir",
+     "start": 97.86,
+     "end": 98.185
+    },
+    {
+     "w": "que",
+     "start": 98.22,
+     "end": 98.29
+    },
+    {
+     "w": "ele",
+     "start": 98.313,
+     "end": 98.406
+    },
+    {
+     "w": "aprendeu",
+     "start": 98.429,
+     "end": 98.789
+    },
+    {
+     "w": "a",
+     "start": 98.824,
+     "end": 98.847
+    },
+    {
+     "w": "jogar",
+     "start": 98.894,
+     "end": 99.254
+    },
+    {
+     "w": "a",
+     "start": 99.393,
+     "end": 99.474
+    },
+    {
+     "w": "lata",
+     "start": 99.544,
+     "end": 99.741
+    },
+    {
+     "w": "de",
+     "start": 99.776,
+     "end": 99.834
+    },
+    {
+     "w": "propósito.",
+     "start": 99.881,
+     "end": 100.728
+    }
+   ]
+  }
+ ]
+}

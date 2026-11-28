@@ -1,0 +1,1305 @@
+{
+ "fps": 30,
+ "tempo": 1.05,
+ "duration": 79.85,
+ "lines": [
+  {
+   "id": "L1",
+   "text": "O Davi tem o poder de vibrar. Só isso. Igual celular no silencioso.",
+   "start": 0.0,
+   "end": 3.782,
+   "words": [
+    {
+     "w": "O",
+     "start": 0.0,
+     "end": 0.067
+    },
+    {
+     "w": "Davi",
+     "start": 0.11,
+     "end": 0.276
+    },
+    {
+     "w": "tem",
+     "start": 0.321,
+     "end": 0.398
+    },
+    {
+     "w": "o",
+     "start": 0.431,
+     "end": 0.453
+    },
+    {
+     "w": "poder",
+     "start": 0.475,
+     "end": 0.719
+    },
+    {
+     "w": "de",
+     "start": 0.751,
+     "end": 0.796
+    },
+    {
+     "w": "vibrar.",
+     "start": 0.83,
+     "end": 1.271
+    },
+    {
+     "w": "Só",
+     "start": 1.681,
+     "end": 1.902
+    },
+    {
+     "w": "isso.",
+     "start": 1.979,
+     "end": 2.31
+    },
+    {
+     "w": "Igual",
+     "start": 2.444,
+     "end": 2.709
+    },
+    {
+     "w": "celular",
+     "start": 2.731,
+     "end": 3.041
+    },
+    {
+     "w": "no",
+     "start": 3.074,
+     "end": 3.118
+    },
+    {
+     "w": "silencioso.",
+     "start": 3.14,
+     "end": 3.782
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "text": "Numa academia de gente que voa e soca prédio, ele era o último do ranking. Trezentos e doze de trezentos e doze.",
+   "start": 3.981,
+   "end": 9.808,
+   "words": [
+    {
+     "w": "Numa",
+     "start": 3.981,
+     "end": 4.169
+    },
+    {
+     "w": "academia",
+     "start": 4.19,
+     "end": 4.545
+    },
+    {
+     "w": "de",
+     "start": 4.589,
+     "end": 4.644
+    },
+    {
+     "w": "gente",
+     "start": 4.677,
+     "end": 4.865
+    },
+    {
+     "w": "que",
+     "start": 4.898,
+     "end": 4.965
+    },
+    {
+     "w": "voa",
+     "start": 5.053,
+     "end": 5.308
+    },
+    {
+     "w": "e",
+     "start": 5.33,
+     "end": 5.363
+    },
+    {
+     "w": "soca",
+     "start": 5.396,
+     "end": 5.606
+    },
+    {
+     "w": "prédio,",
+     "start": 5.639,
+     "end": 6.026
+    },
+    {
+     "w": "ele",
+     "start": 6.159,
+     "end": 6.391
+    },
+    {
+     "w": "era",
+     "start": 6.413,
+     "end": 6.557
+    },
+    {
+     "w": "o",
+     "start": 6.579,
+     "end": 6.601
+    },
+    {
+     "w": "último",
+     "start": 6.69,
+     "end": 6.966
+    },
+    {
+     "w": "do",
+     "start": 6.989,
+     "end": 7.032
+    },
+    {
+     "w": "ranking.",
+     "start": 7.088,
+     "end": 7.519
+    },
+    {
+     "w": "Trezentos",
+     "start": 7.685,
+     "end": 8.193
+    },
+    {
+     "w": "e",
+     "start": 8.249,
+     "end": 8.27
+    },
+    {
+     "w": "doze",
+     "start": 8.359,
+     "end": 8.69
+    },
+    {
+     "w": "de",
+     "start": 8.724,
+     "end": 8.769
+    },
+    {
+     "w": "trezentos",
+     "start": 8.812,
+     "end": 9.222
+    },
+    {
+     "w": "e",
+     "start": 9.266,
+     "end": 9.288
+    },
+    {
+     "w": "doze.",
+     "start": 9.343,
+     "end": 9.808
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "text": "Apelido: Modo Vibra. Usavam ele pra massagem nas costas. E pra abrir pote de azeitona.",
+   "start": 9.93,
+   "end": 14.906,
+   "words": [
+    {
+     "w": "Apelido:",
+     "start": 9.93,
+     "end": 10.56
+    },
+    {
+     "w": "Modo",
+     "start": 10.692,
+     "end": 10.99
+    },
+    {
+     "w": "Vibra.",
+     "start": 11.057,
+     "end": 11.489
+    },
+    {
+     "w": "Usavam",
+     "start": 11.61,
+     "end": 11.997
+    },
+    {
+     "w": "ele",
+     "start": 12.074,
+     "end": 12.207
+    },
+    {
+     "w": "pra",
+     "start": 12.24,
+     "end": 12.318
+    },
+    {
+     "w": "massagem",
+     "start": 12.35,
+     "end": 12.705
+    },
+    {
+     "w": "nas",
+     "start": 12.738,
+     "end": 12.838
+    },
+    {
+     "w": "costas.",
+     "start": 12.904,
+     "end": 13.424
+    },
+    {
+     "w": "E",
+     "start": 13.546,
+     "end": 13.601
+    },
+    {
+     "w": "pra",
+     "start": 13.667,
+     "end": 13.745
+    },
+    {
+     "w": "abrir",
+     "start": 13.767,
+     "end": 13.944
+    },
+    {
+     "w": "pote",
+     "start": 13.999,
+     "end": 14.242
+    },
+    {
+     "w": "de",
+     "start": 14.275,
+     "end": 14.319
+    },
+    {
+     "w": "azeitona.",
+     "start": 14.341,
+     "end": 14.906
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "text": "Só que o Davi descobriu uma coisa: tudo no mundo tem uma frequência natural. Um ritmo em que vibra mais fácil.",
+   "start": 15.259,
+   "end": 20.888,
+   "words": [
+    {
+     "w": "Só",
+     "start": 15.259,
+     "end": 15.513
+    },
+    {
+     "w": "que",
+     "start": 15.58,
+     "end": 15.657
+    },
+    {
+     "w": "o",
+     "start": 15.702,
+     "end": 15.734
+    },
+    {
+     "w": "Davi",
+     "start": 15.779,
+     "end": 16.0
+    },
+    {
+     "w": "descobriu",
+     "start": 16.033,
+     "end": 16.354
+    },
+    {
+     "w": "uma",
+     "start": 16.376,
+     "end": 16.487
+    },
+    {
+     "w": "coisa:",
+     "start": 16.52,
+     "end": 16.962
+    },
+    {
+     "w": "tudo",
+     "start": 17.161,
+     "end": 17.36
+    },
+    {
+     "w": "no",
+     "start": 17.404,
+     "end": 17.449
+    },
+    {
+     "w": "mundo",
+     "start": 17.492,
+     "end": 17.714
+    },
+    {
+     "w": "tem",
+     "start": 17.747,
+     "end": 17.847
+    },
+    {
+     "w": "uma",
+     "start": 17.913,
+     "end": 18.012
+    },
+    {
+     "w": "frequência",
+     "start": 18.056,
+     "end": 18.377
+    },
+    {
+     "w": "natural.",
+     "start": 18.399,
+     "end": 18.908
+    },
+    {
+     "w": "Um",
+     "start": 19.13,
+     "end": 19.229
+    },
+    {
+     "w": "ritmo",
+     "start": 19.273,
+     "end": 19.649
+    },
+    {
+     "w": "em",
+     "start": 19.682,
+     "end": 19.727
+    },
+    {
+     "w": "que",
+     "start": 19.759,
+     "end": 19.826
+    },
+    {
+     "w": "vibra",
+     "start": 19.892,
+     "end": 20.125
+    },
+    {
+     "w": "mais",
+     "start": 20.18,
+     "end": 20.368
+    },
+    {
+     "w": "fácil.",
+     "start": 20.434,
+     "end": 20.888
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "text": "Tipo balanço de criança: empurrãozinho no ritmo certo, e ele vai cada vez mais alto. Isso é ressonância.",
+   "start": 21.087,
+   "end": 27.775,
+   "words": [
+    {
+     "w": "Tipo",
+     "start": 21.087,
+     "end": 21.308
+    },
+    {
+     "w": "balanço",
+     "start": 21.341,
+     "end": 21.595
+    },
+    {
+     "w": "de",
+     "start": 21.617,
+     "end": 21.661
+    },
+    {
+     "w": "criança:",
+     "start": 21.684,
+     "end": 22.159
+    },
+    {
+     "w": "empurrãozinho",
+     "start": 22.28,
+     "end": 22.91
+    },
+    {
+     "w": "no",
+     "start": 22.932,
+     "end": 22.977
+    },
+    {
+     "w": "ritmo",
+     "start": 23.01,
+     "end": 23.22
+    },
+    {
+     "w": "certo,",
+     "start": 23.253,
+     "end": 23.663
+    },
+    {
+     "w": "e",
+     "start": 23.784,
+     "end": 23.872
+    },
+    {
+     "w": "ele",
+     "start": 23.895,
+     "end": 24.006
+    },
+    {
+     "w": "vai",
+     "start": 24.05,
+     "end": 24.215
+    },
+    {
+     "w": "cada",
+     "start": 24.315,
+     "end": 24.724
+    },
+    {
+     "w": "vez",
+     "start": 24.812,
+     "end": 25.122
+    },
+    {
+     "w": "mais",
+     "start": 25.254,
+     "end": 25.652
+    },
+    {
+     "w": "alto.",
+     "start": 25.786,
+     "end": 26.184
+    },
+    {
+     "w": "Isso",
+     "start": 26.383,
+     "end": 26.758
+    },
+    {
+     "w": "é",
+     "start": 26.847,
+     "end": 26.935
+    },
+    {
+     "w": "ressonância.",
+     "start": 26.99,
+     "end": 27.775
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "text": "Uma taça de vidro vibra perto de quinhentos hertz. Acertou esse ritmo, ela estoura.",
+   "start": 28.13,
+   "end": 32.342,
+   "words": [
+    {
+     "w": "Uma",
+     "start": 28.13,
+     "end": 28.251
+    },
+    {
+     "w": "taça",
+     "start": 28.295,
+     "end": 28.494
+    },
+    {
+     "w": "de",
+     "start": 28.528,
+     "end": 28.571
+    },
+    {
+     "w": "vidro",
+     "start": 28.627,
+     "end": 28.87
+    },
+    {
+     "w": "vibra",
+     "start": 28.948,
+     "end": 29.269
+    },
+    {
+     "w": "perto",
+     "start": 29.302,
+     "end": 29.511
+    },
+    {
+     "w": "de",
+     "start": 29.545,
+     "end": 29.589
+    },
+    {
+     "w": "quinhentos",
+     "start": 29.622,
+     "end": 29.954
+    },
+    {
+     "w": "hertz.",
+     "start": 30.01,
+     "end": 30.418
+    },
+    {
+     "w": "Acertou",
+     "start": 30.728,
+     "end": 31.06
+    },
+    {
+     "w": "esse",
+     "start": 31.115,
+     "end": 31.236
+    },
+    {
+     "w": "ritmo,",
+     "start": 31.281,
+     "end": 31.701
+    },
+    {
+     "w": "ela",
+     "start": 31.723,
+     "end": 31.833
+    },
+    {
+     "w": "estoura.",
+     "start": 31.855,
+     "end": 32.342
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "text": "Então ele treinou. Três anos. Quatro mil copos quebrados. A mãe contou.",
+   "start": 32.541,
+   "end": 37.03,
+   "words": [
+    {
+     "w": "Então",
+     "start": 32.541,
+     "end": 33.006
+    },
+    {
+     "w": "ele",
+     "start": 33.039,
+     "end": 33.128
+    },
+    {
+     "w": "treinou.",
+     "start": 33.16,
+     "end": 33.613
+    },
+    {
+     "w": "Três",
+     "start": 33.713,
+     "end": 33.99
+    },
+    {
+     "w": "anos.",
+     "start": 34.111,
+     "end": 34.476
+    },
+    {
+     "w": "Quatro",
+     "start": 34.642,
+     "end": 34.908
+    },
+    {
+     "w": "mil",
+     "start": 34.93,
+     "end": 35.018
+    },
+    {
+     "w": "copos",
+     "start": 35.062,
+     "end": 35.306
+    },
+    {
+     "w": "quebrados.",
+     "start": 35.35,
+     "end": 35.958
+    },
+    {
+     "w": "A",
+     "start": 36.268,
+     "end": 36.323
+    },
+    {
+     "w": "mãe",
+     "start": 36.411,
+     "end": 36.566
+    },
+    {
+     "w": "contou.",
+     "start": 36.589,
+     "end": 37.03
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "text": "Prova final. O rival dele, o Bruno: superforça e campo de força. Nunca perdeu.",
+   "start": 37.196,
+   "end": 42.581,
+   "words": [
+    {
+     "w": "Prova",
+     "start": 37.196,
+     "end": 37.561
+    },
+    {
+     "w": "final.",
+     "start": 37.606,
+     "end": 38.136
+    },
+    {
+     "w": "O",
+     "start": 38.335,
+     "end": 38.39
+    },
+    {
+     "w": "rival",
+     "start": 38.446,
+     "end": 38.678
+    },
+    {
+     "w": "dele,",
+     "start": 38.722,
+     "end": 39.098
+    },
+    {
+     "w": "o",
+     "start": 39.264,
+     "end": 39.33
+    },
+    {
+     "w": "Bruno:",
+     "start": 39.408,
+     "end": 39.806
+    },
+    {
+     "w": "superforça",
+     "start": 39.971,
+     "end": 40.679
+    },
+    {
+     "w": "e",
+     "start": 40.701,
+     "end": 40.724
+    },
+    {
+     "w": "campo",
+     "start": 40.779,
+     "end": 41.022
+    },
+    {
+     "w": "de",
+     "start": 41.055,
+     "end": 41.099
+    },
+    {
+     "w": "força.",
+     "start": 41.166,
+     "end": 41.641
+    },
+    {
+     "w": "Nunca",
+     "start": 41.774,
+     "end": 42.084
+    },
+    {
+     "w": "perdeu.",
+     "start": 42.116,
+     "end": 42.581
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "text": "O Bruno levanta o escudo. O Davi encosta o dedo. Ding. Quatrocentos e quarenta hertz.",
+   "start": 42.89,
+   "end": 47.822,
+   "words": [
+    {
+     "w": "O",
+     "start": 42.89,
+     "end": 42.957
+    },
+    {
+     "w": "Bruno",
+     "start": 43.024,
+     "end": 43.233
+    },
+    {
+     "w": "levanta",
+     "start": 43.267,
+     "end": 43.532
+    },
+    {
+     "w": "o",
+     "start": 43.554,
+     "end": 43.576
+    },
+    {
+     "w": "escudo.",
+     "start": 43.61,
+     "end": 44.063
+    },
+    {
+     "w": "O",
+     "start": 44.195,
+     "end": 44.24
+    },
+    {
+     "w": "Davi",
+     "start": 44.306,
+     "end": 44.56
+    },
+    {
+     "w": "encosta",
+     "start": 44.593,
+     "end": 44.892
+    },
+    {
+     "w": "o",
+     "start": 44.914,
+     "end": 44.936
+    },
+    {
+     "w": "dedo.",
+     "start": 44.98,
+     "end": 45.433
+    },
+    {
+     "w": "Ding.",
+     "start": 45.655,
+     "end": 46.274
+    },
+    {
+     "w": "Quatrocentos",
+     "start": 46.44,
+     "end": 46.96
+    },
+    {
+     "w": "e",
+     "start": 46.992,
+     "end": 47.015
+    },
+    {
+     "w": "quarenta",
+     "start": 47.049,
+     "end": 47.358
+    },
+    {
+     "w": "hertz.",
+     "start": 47.402,
+     "end": 47.822
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "text": "Ele vibra no mesmo ritmo. O escudo treme, treme, e quebra igual taça.",
+   "start": 47.955,
+   "end": 51.957,
+   "words": [
+    {
+     "w": "Ele",
+     "start": 47.955,
+     "end": 48.121
+    },
+    {
+     "w": "vibra",
+     "start": 48.165,
+     "end": 48.353
+    },
+    {
+     "w": "no",
+     "start": 48.386,
+     "end": 48.43
+    },
+    {
+     "w": "mesmo",
+     "start": 48.486,
+     "end": 48.75
+    },
+    {
+     "w": "ritmo.",
+     "start": 48.784,
+     "end": 49.204
+    },
+    {
+     "w": "O",
+     "start": 49.326,
+     "end": 49.381
+    },
+    {
+     "w": "escudo",
+     "start": 49.426,
+     "end": 49.702
+    },
+    {
+     "w": "treme,",
+     "start": 49.757,
+     "end": 50.155
+    },
+    {
+     "w": "treme,",
+     "start": 50.189,
+     "end": 50.697
+    },
+    {
+     "w": "e",
+     "start": 50.752,
+     "end": 50.841
+    },
+    {
+     "w": "quebra",
+     "start": 50.896,
+     "end": 51.161
+    },
+    {
+     "w": "igual",
+     "start": 51.184,
+     "end": 51.405
+    },
+    {
+     "w": "taça.",
+     "start": 51.46,
+     "end": 51.957
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "text": "O Bruno parte pra cima com um soco de duas toneladas.",
+   "start": 52.267,
+   "end": 54.888,
+   "words": [
+    {
+     "w": "O",
+     "start": 52.267,
+     "end": 52.322
+    },
+    {
+     "w": "Bruno",
+     "start": 52.389,
+     "end": 52.577
+    },
+    {
+     "w": "parte",
+     "start": 52.621,
+     "end": 52.842
+    },
+    {
+     "w": "pra",
+     "start": 52.887,
+     "end": 52.964
+    },
+    {
+     "w": "cima",
+     "start": 53.019,
+     "end": 53.207
+    },
+    {
+     "w": "com",
+     "start": 53.24,
+     "end": 53.317
+    },
+    {
+     "w": "um",
+     "start": 53.34,
+     "end": 53.384
+    },
+    {
+     "w": "soco",
+     "start": 53.461,
+     "end": 53.693
+    },
+    {
+     "w": "de",
+     "start": 53.727,
+     "end": 53.77
+    },
+    {
+     "w": "duas",
+     "start": 53.859,
+     "end": 54.147
+    },
+    {
+     "w": "toneladas.",
+     "start": 54.18,
+     "end": 54.888
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "text": "O Davi nem desvia. Ele vibra o chão. Areia molhada, sacudida rápido, vira quase líquido. Chama liquefação. Acontece de verdade em terremoto.",
+   "start": 55.053,
+   "end": 63.125,
+   "words": [
+    {
+     "w": "O",
+     "start": 55.053,
+     "end": 55.098
+    },
+    {
+     "w": "Davi",
+     "start": 55.153,
+     "end": 55.408
+    },
+    {
+     "w": "nem",
+     "start": 55.496,
+     "end": 55.694
+    },
+    {
+     "w": "desvia.",
+     "start": 55.75,
+     "end": 56.314
+    },
+    {
+     "w": "Ele",
+     "start": 56.435,
+     "end": 56.612
+    },
+    {
+     "w": "vibra",
+     "start": 56.657,
+     "end": 56.878
+    },
+    {
+     "w": "o",
+     "start": 56.9,
+     "end": 56.922
+    },
+    {
+     "w": "chão.",
+     "start": 56.955,
+     "end": 57.342
+    },
+    {
+     "w": "Areia",
+     "start": 57.509,
+     "end": 57.74
+    },
+    {
+     "w": "molhada,",
+     "start": 57.773,
+     "end": 58.293
+    },
+    {
+     "w": "sacudida",
+     "start": 58.315,
+     "end": 58.735
+    },
+    {
+     "w": "rápido,",
+     "start": 58.769,
+     "end": 59.244
+    },
+    {
+     "w": "vira",
+     "start": 59.332,
+     "end": 59.498
+    },
+    {
+     "w": "quase",
+     "start": 59.543,
+     "end": 59.742
+    },
+    {
+     "w": "líquido.",
+     "start": 59.786,
+     "end": 60.173
+    },
+    {
+     "w": "Chama",
+     "start": 60.272,
+     "end": 60.56
+    },
+    {
+     "w": "liquefação.",
+     "start": 60.615,
+     "end": 61.345
+    },
+    {
+     "w": "Acontece",
+     "start": 61.599,
+     "end": 61.975
+    },
+    {
+     "w": "de",
+     "start": 61.997,
+     "end": 62.042
+    },
+    {
+     "w": "verdade",
+     "start": 62.074,
+     "end": 62.462
+    },
+    {
+     "w": "em",
+     "start": 62.484,
+     "end": 62.528
+    },
+    {
+     "w": "terremoto.",
+     "start": 62.572,
+     "end": 63.125
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "text": "O Bruno afunda até a cintura. Toda aquela superforça, presa igual pé no mangue.",
+   "start": 63.347,
+   "end": 67.947,
+   "words": [
+    {
+     "w": "O",
+     "start": 63.347,
+     "end": 63.39
+    },
+    {
+     "w": "Bruno",
+     "start": 63.457,
+     "end": 63.733
+    },
+    {
+     "w": "afunda",
+     "start": 63.789,
+     "end": 64.143
+    },
+    {
+     "w": "até",
+     "start": 64.165,
+     "end": 64.419
+    },
+    {
+     "w": "a",
+     "start": 64.463,
+     "end": 64.485
+    },
+    {
+     "w": "cintura.",
+     "start": 64.508,
+     "end": 65.071
+    },
+    {
+     "w": "Toda",
+     "start": 65.326,
+     "end": 65.569
+    },
+    {
+     "w": "aquela",
+     "start": 65.59,
+     "end": 65.79
+    },
+    {
+     "w": "superforça,",
+     "start": 65.823,
+     "end": 66.619
+    },
+    {
+     "w": "presa",
+     "start": 66.708,
+     "end": 66.973
+    },
+    {
+     "w": "igual",
+     "start": 66.995,
+     "end": 67.25
+    },
+    {
+     "w": "pé",
+     "start": 67.305,
+     "end": 67.427
+    },
+    {
+     "w": "no",
+     "start": 67.46,
+     "end": 67.515
+    },
+    {
+     "w": "mangue.",
+     "start": 67.559,
+     "end": 67.947
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "text": "Ranking: número um.",
+   "start": 68.422,
+   "end": 69.638,
+   "words": [
+    {
+     "w": "Ranking:",
+     "start": 68.422,
+     "end": 68.897
+    },
+    {
+     "w": "número",
+     "start": 68.996,
+     "end": 69.362
+    },
+    {
+     "w": "um.",
+     "start": 69.394,
+     "end": 69.638
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "text": "Efeito colateral: ele passou três horas tremendo. Foi dar autógrafo, saiu um terremoto no papel.",
+   "start": 69.804,
+   "end": 74.68,
+   "words": [
+    {
+     "w": "Efeito",
+     "start": 69.804,
+     "end": 70.07
+    },
+    {
+     "w": "colateral:",
+     "start": 70.102,
+     "end": 70.611
+    },
+    {
+     "w": "ele",
+     "start": 70.744,
+     "end": 70.866
+    },
+    {
+     "w": "passou",
+     "start": 70.888,
+     "end": 71.13
+    },
+    {
+     "w": "três",
+     "start": 71.186,
+     "end": 71.451
+    },
+    {
+     "w": "horas",
+     "start": 71.55,
+     "end": 71.772
+    },
+    {
+     "w": "tremendo.",
+     "start": 71.816,
+     "end": 72.258
+    },
+    {
+     "w": "Foi",
+     "start": 72.391,
+     "end": 72.512
+    },
+    {
+     "w": "dar",
+     "start": 72.535,
+     "end": 72.634
+    },
+    {
+     "w": "autógrafo,",
+     "start": 72.668,
+     "end": 73.342
+    },
+    {
+     "w": "saiu",
+     "start": 73.464,
+     "end": 73.74
+    },
+    {
+     "w": "um",
+     "start": 73.762,
+     "end": 73.807
+    },
+    {
+     "w": "terremoto",
+     "start": 73.84,
+     "end": 74.171
+    },
+    {
+     "w": "no",
+     "start": 74.193,
+     "end": 74.238
+    },
+    {
+     "w": "papel.",
+     "start": 74.26,
+     "end": 74.68
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "text": "E tu? Que poder piada tu ia transformar em roubado? Comenta aí.",
+   "start": 75.09,
+   "end": 78.55,
+   "words": [
+    {
+     "w": "E",
+     "start": 75.09,
+     "end": 75.177
+    },
+    {
+     "w": "tu?",
+     "start": 75.244,
+     "end": 75.51
+    },
+    {
+     "w": "Que",
+     "start": 75.764,
+     "end": 75.841
+    },
+    {
+     "w": "poder",
+     "start": 75.874,
+     "end": 76.095
+    },
+    {
+     "w": "piada",
+     "start": 76.139,
+     "end": 76.471
+    },
+    {
+     "w": "tu",
+     "start": 76.505,
+     "end": 76.56
+    },
+    {
+     "w": "ia",
+     "start": 76.604,
+     "end": 76.681
+    },
+    {
+     "w": "transformar",
+     "start": 76.704,
+     "end": 77.134
+    },
+    {
+     "w": "em",
+     "start": 77.157,
+     "end": 77.201
+    },
+    {
+     "w": "roubado?",
+     "start": 77.223,
+     "end": 77.743
+    },
+    {
+     "w": "Comenta",
+     "start": 77.81,
+     "end": 78.13
+    },
+    {
+     "w": "aí.",
+     "start": 78.152,
+     "end": 78.55
+    }
+   ]
+  }
+ ]
+}

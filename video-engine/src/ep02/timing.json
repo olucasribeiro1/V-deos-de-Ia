@@ -1,0 +1,2171 @@
+{
+ "fps": 30,
+ "duration": 115.77,
+ "lines": [
+  {
+   "id": "L1",
+   "text": "E se tu pudesse tomar café em Paris, almoçar em Tóquio e jantar em Nova York, sem pagar passagem?",
+   "start": 0.0,
+   "end": 5.143,
+   "words": [
+    {
+     "w": "E",
+     "start": 0.0,
+     "end": 0.093
+    },
+    {
+     "w": "se",
+     "start": 0.139,
+     "end": 0.209
+    },
+    {
+     "w": "tu",
+     "start": 0.255,
+     "end": 0.337
+    },
+    {
+     "w": "pudesse",
+     "start": 0.383,
+     "end": 0.697
+    },
+    {
+     "w": "tomar",
+     "start": 0.731,
+     "end": 0.952
+    },
+    {
+     "w": "café",
+     "start": 0.987,
+     "end": 1.254
+    },
+    {
+     "w": "em",
+     "start": 1.277,
+     "end": 1.324
+    },
+    {
+     "w": "Paris,",
+     "start": 1.382,
+     "end": 1.858
+    },
+    {
+     "w": "almoçar",
+     "start": 1.927,
+     "end": 2.299
+    },
+    {
+     "w": "em",
+     "start": 2.345,
+     "end": 2.392
+    },
+    {
+     "w": "Tóquio",
+     "start": 2.461,
+     "end": 2.856
+    },
+    {
+     "w": "e",
+     "start": 2.902,
+     "end": 2.949
+    },
+    {
+     "w": "jantar",
+     "start": 3.007,
+     "end": 3.274
+    },
+    {
+     "w": "em",
+     "start": 3.32,
+     "end": 3.367
+    },
+    {
+     "w": "Nova",
+     "start": 3.39,
+     "end": 3.576
+    },
+    {
+     "w": "York,",
+     "start": 3.646,
+     "end": 3.947
+    },
+    {
+     "w": "sem",
+     "start": 4.052,
+     "end": 4.214
+    },
+    {
+     "w": "pagar",
+     "start": 4.261,
+     "end": 4.481
+    },
+    {
+     "w": "passagem?",
+     "start": 4.516,
+     "end": 5.143
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "text": "Só que todo lugar que tu sonha em ir tem alguém te esperando lá.",
+   "start": 5.48,
+   "end": 8.951,
+   "words": [
+    {
+     "w": "Só",
+     "start": 5.48,
+     "end": 5.619
+    },
+    {
+     "w": "que",
+     "start": 5.666,
+     "end": 5.735
+    },
+    {
+     "w": "todo",
+     "start": 5.782,
+     "end": 5.944
+    },
+    {
+     "w": "lugar",
+     "start": 5.979,
+     "end": 6.188
+    },
+    {
+     "w": "que",
+     "start": 6.211,
+     "end": 6.293
+    },
+    {
+     "w": "tu",
+     "start": 6.339,
+     "end": 6.432
+    },
+    {
+     "w": "sonha",
+     "start": 6.513,
+     "end": 6.896
+    },
+    {
+     "w": "em",
+     "start": 6.966,
+     "end": 7.094
+    },
+    {
+     "w": "ir",
+     "start": 7.163,
+     "end": 7.349
+    },
+    {
+     "w": "tem",
+     "start": 7.419,
+     "end": 7.57
+    },
+    {
+     "w": "alguém",
+     "start": 7.616,
+     "end": 7.883
+    },
+    {
+     "w": "te",
+     "start": 7.93,
+     "end": 7.999
+    },
+    {
+     "w": "esperando",
+     "start": 8.022,
+     "end": 8.557
+    },
+    {
+     "w": "lá.",
+     "start": 8.603,
+     "end": 8.951
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "text": "Depois do Atlântico, o Davi virou turista. Torre Eiffel às oito. Maldivas ao meio-dia.",
+   "start": 9.242,
+   "end": 14.315,
+   "words": [
+    {
+     "w": "Depois",
+     "start": 9.242,
+     "end": 9.601
+    },
+    {
+     "w": "do",
+     "start": 9.648,
+     "end": 9.718
+    },
+    {
+     "w": "Atlântico,",
+     "start": 9.764,
+     "end": 10.414
+    },
+    {
+     "w": "o",
+     "start": 10.461,
+     "end": 10.53
+    },
+    {
+     "w": "Davi",
+     "start": 10.588,
+     "end": 10.855
+    },
+    {
+     "w": "virou",
+     "start": 10.902,
+     "end": 11.146
+    },
+    {
+     "w": "turista.",
+     "start": 11.192,
+     "end": 11.714
+    },
+    {
+     "w": "Torre",
+     "start": 11.784,
+     "end": 12.051
+    },
+    {
+     "w": "Eiffel",
+     "start": 12.074,
+     "end": 12.353
+    },
+    {
+     "w": "às",
+     "start": 12.399,
+     "end": 12.492
+    },
+    {
+     "w": "oito.",
+     "start": 12.574,
+     "end": 12.898
+    },
+    {
+     "w": "Maldivas",
+     "start": 13.038,
+     "end": 13.537
+    },
+    {
+     "w": "ao",
+     "start": 13.583,
+     "end": 13.63
+    },
+    {
+     "w": "meio-dia.",
+     "start": 13.676,
+     "end": 14.315
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "text": "Só que o corpo não pula de fuso. Três dias, quatro nasceres do sol, duas horas de sono.",
+   "start": 14.652,
+   "end": 19.783,
+   "words": [
+    {
+     "w": "Só",
+     "start": 14.652,
+     "end": 14.791
+    },
+    {
+     "w": "que",
+     "start": 14.837,
+     "end": 14.907
+    },
+    {
+     "w": "o",
+     "start": 14.942,
+     "end": 14.977
+    },
+    {
+     "w": "corpo",
+     "start": 15.023,
+     "end": 15.255
+    },
+    {
+     "w": "não",
+     "start": 15.29,
+     "end": 15.383
+    },
+    {
+     "w": "pula",
+     "start": 15.418,
+     "end": 15.58
+    },
+    {
+     "w": "de",
+     "start": 15.627,
+     "end": 15.685
+    },
+    {
+     "w": "fuso.",
+     "start": 15.743,
+     "end": 16.277
+    },
+    {
+     "w": "Três",
+     "start": 16.567,
+     "end": 16.834
+    },
+    {
+     "w": "dias,",
+     "start": 16.881,
+     "end": 17.206
+    },
+    {
+     "w": "quatro",
+     "start": 17.252,
+     "end": 17.589
+    },
+    {
+     "w": "nasceres",
+     "start": 17.635,
+     "end": 17.984
+    },
+    {
+     "w": "do",
+     "start": 18.03,
+     "end": 18.111
+    },
+    {
+     "w": "sol,",
+     "start": 18.169,
+     "end": 18.576
+    },
+    {
+     "w": "duas",
+     "start": 18.692,
+     "end": 18.947
+    },
+    {
+     "w": "horas",
+     "start": 18.994,
+     "end": 19.168
+    },
+    {
+     "w": "de",
+     "start": 19.191,
+     "end": 19.249
+    },
+    {
+     "w": "sono.",
+     "start": 19.307,
+     "end": 19.783
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "text": "E nem todo lugar bonito é bom de chegar. Himalaia, cinco mil metros. Metade do oxigênio.",
+   "start": 20.073,
+   "end": 25.286,
+   "words": [
+    {
+     "w": "E",
+     "start": 20.073,
+     "end": 20.143
+    },
+    {
+     "w": "nem",
+     "start": 20.213,
+     "end": 20.34
+    },
+    {
+     "w": "todo",
+     "start": 20.398,
+     "end": 20.573
+    },
+    {
+     "w": "lugar",
+     "start": 20.607,
+     "end": 20.805
+    },
+    {
+     "w": "bonito",
+     "start": 20.851,
+     "end": 21.118
+    },
+    {
+     "w": "é",
+     "start": 21.142,
+     "end": 21.165
+    },
+    {
+     "w": "bom",
+     "start": 21.211,
+     "end": 21.35
+    },
+    {
+     "w": "de",
+     "start": 21.397,
+     "end": 21.455
+    },
+    {
+     "w": "chegar.",
+     "start": 21.478,
+     "end": 22.047
+    },
+    {
+     "w": "Himalaia,",
+     "start": 22.268,
+     "end": 22.929
+    },
+    {
+     "w": "cinco",
+     "start": 22.976,
+     "end": 23.266
+    },
+    {
+     "w": "mil",
+     "start": 23.301,
+     "end": 23.405
+    },
+    {
+     "w": "metros.",
+     "start": 23.452,
+     "end": 23.951
+    },
+    {
+     "w": "Metade",
+     "start": 24.067,
+     "end": 24.52
+    },
+    {
+     "w": "do",
+     "start": 24.566,
+     "end": 24.625
+    },
+    {
+     "w": "oxigênio.",
+     "start": 24.648,
+     "end": 25.286
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "text": "O ouvido estalou igual descida de avião. Só que em zero segundos. Ele voltou em dez.",
+   "start": 25.681,
+   "end": 30.255,
+   "words": [
+    {
+     "w": "O",
+     "start": 25.681,
+     "end": 25.739
+    },
+    {
+     "w": "ouvido",
+     "start": 25.855,
+     "end": 26.18
+    },
+    {
+     "w": "estalou",
+     "start": 26.215,
+     "end": 26.587
+    },
+    {
+     "w": "igual",
+     "start": 26.633,
+     "end": 26.819
+    },
+    {
+     "w": "descida",
+     "start": 26.865,
+     "end": 27.179
+    },
+    {
+     "w": "de",
+     "start": 27.214,
+     "end": 27.272
+    },
+    {
+     "w": "avião.",
+     "start": 27.295,
+     "end": 27.806
+    },
+    {
+     "w": "Só",
+     "start": 27.957,
+     "end": 28.096
+    },
+    {
+     "w": "que",
+     "start": 28.142,
+     "end": 28.212
+    },
+    {
+     "w": "em",
+     "start": 28.235,
+     "end": 28.282
+    },
+    {
+     "w": "zero",
+     "start": 28.351,
+     "end": 28.584
+    },
+    {
+     "w": "segundos.",
+     "start": 28.618,
+     "end": 29.152
+    },
+    {
+     "w": "Ele",
+     "start": 29.222,
+     "end": 29.373
+    },
+    {
+     "w": "voltou",
+     "start": 29.419,
+     "end": 29.652
+    },
+    {
+     "w": "em",
+     "start": 29.698,
+     "end": 29.745
+    },
+    {
+     "w": "dez.",
+     "start": 29.803,
+     "end": 30.255
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "text": "Enquanto isso, a Linha mudou de tática. Se ele só pula pra lugar que já viu, era só ver o que ele viu.",
+   "start": 30.406,
+   "end": 35.143,
+   "words": [
+    {
+     "w": "Enquanto",
+     "start": 30.406,
+     "end": 30.813
+    },
+    {
+     "w": "isso,",
+     "start": 30.882,
+     "end": 31.126
+    },
+    {
+     "w": "a",
+     "start": 31.173,
+     "end": 31.219
+    },
+    {
+     "w": "Linha",
+     "start": 31.289,
+     "end": 31.451
+    },
+    {
+     "w": "mudou",
+     "start": 31.486,
+     "end": 31.695
+    },
+    {
+     "w": "de",
+     "start": 31.741,
+     "end": 31.8
+    },
+    {
+     "w": "tática.",
+     "start": 31.846,
+     "end": 32.334
+    },
+    {
+     "w": "Se",
+     "start": 32.438,
+     "end": 32.531
+    },
+    {
+     "w": "ele",
+     "start": 32.554,
+     "end": 32.659
+    },
+    {
+     "w": "só",
+     "start": 32.705,
+     "end": 32.81
+    },
+    {
+     "w": "pula",
+     "start": 32.868,
+     "end": 33.065
+    },
+    {
+     "w": "pra",
+     "start": 33.1,
+     "end": 33.216
+    },
+    {
+     "w": "lugar",
+     "start": 33.262,
+     "end": 33.448
+    },
+    {
+     "w": "que",
+     "start": 33.483,
+     "end": 33.564
+    },
+    {
+     "w": "já",
+     "start": 33.611,
+     "end": 33.704
+    },
+    {
+     "w": "viu,",
+     "start": 33.773,
+     "end": 34.005
+    },
+    {
+     "w": "era",
+     "start": 34.04,
+     "end": 34.191
+    },
+    {
+     "w": "só",
+     "start": 34.238,
+     "end": 34.33
+    },
+    {
+     "w": "ver",
+     "start": 34.377,
+     "end": 34.481
+    },
+    {
+     "w": "o",
+     "start": 34.516,
+     "end": 34.539
+    },
+    {
+     "w": "que",
+     "start": 34.574,
+     "end": 34.644
+    },
+    {
+     "w": "ele",
+     "start": 34.667,
+     "end": 34.772
+    },
+    {
+     "w": "viu.",
+     "start": 34.818,
+     "end": 35.143
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "text": "Trezentas e doze fotos salvas no celular. Cada foto virou um endereço. Em cada endereço, um terno.",
+   "start": 35.48,
+   "end": 41.424,
+   "words": [
+    {
+     "w": "Trezentas",
+     "start": 35.48,
+     "end": 36.026
+    },
+    {
+     "w": "e",
+     "start": 36.072,
+     "end": 36.095
+    },
+    {
+     "w": "doze",
+     "start": 36.142,
+     "end": 36.351
+    },
+    {
+     "w": "fotos",
+     "start": 36.397,
+     "end": 36.687
+    },
+    {
+     "w": "salvas",
+     "start": 36.734,
+     "end": 37.07
+    },
+    {
+     "w": "no",
+     "start": 37.117,
+     "end": 37.187
+    },
+    {
+     "w": "celular.",
+     "start": 37.221,
+     "end": 37.79
+    },
+    {
+     "w": "Cada",
+     "start": 38.185,
+     "end": 38.382
+    },
+    {
+     "w": "foto",
+     "start": 38.429,
+     "end": 38.626
+    },
+    {
+     "w": "virou",
+     "start": 38.661,
+     "end": 38.858
+    },
+    {
+     "w": "um",
+     "start": 38.882,
+     "end": 38.94
+    },
+    {
+     "w": "endereço.",
+     "start": 38.975,
+     "end": 39.544
+    },
+    {
+     "w": "Em",
+     "start": 39.694,
+     "end": 39.787
+    },
+    {
+     "w": "cada",
+     "start": 39.834,
+     "end": 40.02
+    },
+    {
+     "w": "endereço,",
+     "start": 40.043,
+     "end": 40.67
+    },
+    {
+     "w": "um",
+     "start": 40.751,
+     "end": 40.855
+    },
+    {
+     "w": "terno.",
+     "start": 40.937,
+     "end": 41.424
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "text": "E o Davi tinha um costume: chegar no banheiro.",
+   "start": 41.529,
+   "end": 43.886,
+   "words": [
+    {
+     "w": "E",
+     "start": 41.529,
+     "end": 41.587
+    },
+    {
+     "w": "o",
+     "start": 41.633,
+     "end": 41.657
+    },
+    {
+     "w": "Davi",
+     "start": 41.691,
+     "end": 41.877
+    },
+    {
+     "w": "tinha",
+     "start": 41.912,
+     "end": 42.063
+    },
+    {
+     "w": "um",
+     "start": 42.086,
+     "end": 42.133
+    },
+    {
+     "w": "costume:",
+     "start": 42.179,
+     "end": 42.725
+    },
+    {
+     "w": "chegar",
+     "start": 42.829,
+     "end": 43.247
+    },
+    {
+     "w": "no",
+     "start": 43.294,
+     "end": 43.352
+    },
+    {
+     "w": "banheiro.",
+     "start": 43.398,
+     "end": 43.886
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "text": "Porque chegar empurra setenta litros de ar pra fora. No banheiro, só bate a porta da cabine.",
+   "start": 44.129,
+   "end": 48.553,
+   "words": [
+    {
+     "w": "Porque",
+     "start": 44.129,
+     "end": 44.385
+    },
+    {
+     "w": "chegar",
+     "start": 44.431,
+     "end": 44.687
+    },
+    {
+     "w": "empurra",
+     "start": 44.722,
+     "end": 45.0
+    },
+    {
+     "w": "setenta",
+     "start": 45.047,
+     "end": 45.43
+    },
+    {
+     "w": "litros",
+     "start": 45.476,
+     "end": 45.755
+    },
+    {
+     "w": "de",
+     "start": 45.778,
+     "end": 45.836
+    },
+    {
+     "w": "ar",
+     "start": 45.883,
+     "end": 45.952
+    },
+    {
+     "w": "pra",
+     "start": 45.999,
+     "end": 46.126
+    },
+    {
+     "w": "fora.",
+     "start": 46.196,
+     "end": 46.614
+    },
+    {
+     "w": "No",
+     "start": 46.73,
+     "end": 46.823
+    },
+    {
+     "w": "banheiro,",
+     "start": 46.869,
+     "end": 47.229
+    },
+    {
+     "w": "só",
+     "start": 47.253,
+     "end": 47.345
+    },
+    {
+     "w": "bate",
+     "start": 47.403,
+     "end": 47.578
+    },
+    {
+     "w": "a",
+     "start": 47.612,
+     "end": 47.636
+    },
+    {
+     "w": "porta",
+     "start": 47.682,
+     "end": 47.914
+    },
+    {
+     "w": "da",
+     "start": 47.949,
+     "end": 48.007
+    },
+    {
+     "w": "cabine.",
+     "start": 48.042,
+     "end": 48.553
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "text": "Foto número duzentos e oito: terraço de um hotel em Mônaco. Ele chegou de moletom. Todo mundo de gala.",
+   "start": 48.948,
+   "end": 54.439,
+   "words": [
+    {
+     "w": "Foto",
+     "start": 48.948,
+     "end": 49.191
+    },
+    {
+     "w": "número",
+     "start": 49.238,
+     "end": 49.47
+    },
+    {
+     "w": "duzentos",
+     "start": 49.517,
+     "end": 49.853
+    },
+    {
+     "w": "e",
+     "start": 49.9,
+     "end": 49.934
+    },
+    {
+     "w": "oito:",
+     "start": 49.981,
+     "end": 50.306
+    },
+    {
+     "w": "terraço",
+     "start": 50.643,
+     "end": 51.037
+    },
+    {
+     "w": "de",
+     "start": 51.061,
+     "end": 51.119
+    },
+    {
+     "w": "um",
+     "start": 51.154,
+     "end": 51.2
+    },
+    {
+     "w": "hotel",
+     "start": 51.223,
+     "end": 51.455
+    },
+    {
+     "w": "em",
+     "start": 51.501,
+     "end": 51.571
+    },
+    {
+     "w": "Mônaco.",
+     "start": 51.618,
+     "end": 52.094
+    },
+    {
+     "w": "Ele",
+     "start": 52.233,
+     "end": 52.384
+    },
+    {
+     "w": "chegou",
+     "start": 52.407,
+     "end": 52.639
+    },
+    {
+     "w": "de",
+     "start": 52.674,
+     "end": 52.732
+    },
+    {
+     "w": "moletom.",
+     "start": 52.767,
+     "end": 53.394
+    },
+    {
+     "w": "Todo",
+     "start": 53.498,
+     "end": 53.684
+    },
+    {
+     "w": "mundo",
+     "start": 53.719,
+     "end": 53.881
+    },
+    {
+     "w": "de",
+     "start": 53.916,
+     "end": 53.974
+    },
+    {
+     "w": "gala.",
+     "start": 54.021,
+     "end": 54.439
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "text": "Inclusive a Lia. Ela riu do moletom. Ele riu do salto alto que ela carregava na mão. Ficaram até fechar o bar.",
+   "start": 54.485,
+   "end": 60.186,
+   "words": [
+    {
+     "w": "Inclusive",
+     "start": 54.485,
+     "end": 54.915
+    },
+    {
+     "w": "a",
+     "start": 54.938,
+     "end": 54.961
+    },
+    {
+     "w": "Lia.",
+     "start": 55.019,
+     "end": 55.391
+    },
+    {
+     "w": "Ela",
+     "start": 55.437,
+     "end": 55.6
+    },
+    {
+     "w": "riu",
+     "start": 55.635,
+     "end": 55.751
+    },
+    {
+     "w": "do",
+     "start": 55.786,
+     "end": 55.832
+    },
+    {
+     "w": "moletom.",
+     "start": 55.867,
+     "end": 56.378
+    },
+    {
+     "w": "Ele",
+     "start": 56.424,
+     "end": 56.575
+    },
+    {
+     "w": "riu",
+     "start": 56.61,
+     "end": 56.738
+    },
+    {
+     "w": "do",
+     "start": 56.784,
+     "end": 56.842
+    },
+    {
+     "w": "salto",
+     "start": 56.888,
+     "end": 57.167
+    },
+    {
+     "w": "alto",
+     "start": 57.225,
+     "end": 57.411
+    },
+    {
+     "w": "que",
+     "start": 57.446,
+     "end": 57.515
+    },
+    {
+     "w": "ela",
+     "start": 57.539,
+     "end": 57.643
+    },
+    {
+     "w": "carregava",
+     "start": 57.69,
+     "end": 58.108
+    },
+    {
+     "w": "na",
+     "start": 58.142,
+     "end": 58.212
+    },
+    {
+     "w": "mão.",
+     "start": 58.258,
+     "end": 58.63
+    },
+    {
+     "w": "Ficaram",
+     "start": 58.92,
+     "end": 59.245
+    },
+    {
+     "w": "até",
+     "start": 59.28,
+     "end": 59.408
+    },
+    {
+     "w": "fechar",
+     "start": 59.454,
+     "end": 59.71
+    },
+    {
+     "w": "o",
+     "start": 59.756,
+     "end": 59.779
+    },
+    {
+     "w": "bar.",
+     "start": 59.826,
+     "end": 60.186
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "text": "Ela perguntou de onde ele era. Ele disse: depende do dia.",
+   "start": 60.325,
+   "end": 63.483,
+   "words": [
+    {
+     "w": "Ela",
+     "start": 60.325,
+     "end": 60.464
+    },
+    {
+     "w": "perguntou",
+     "start": 60.511,
+     "end": 60.859
+    },
+    {
+     "w": "de",
+     "start": 60.906,
+     "end": 60.952
+    },
+    {
+     "w": "onde",
+     "start": 60.987,
+     "end": 61.114
+    },
+    {
+     "w": "ele",
+     "start": 61.138,
+     "end": 61.254
+    },
+    {
+     "w": "era.",
+     "start": 61.289,
+     "end": 61.637
+    },
+    {
+     "w": "Ele",
+     "start": 61.741,
+     "end": 61.892
+    },
+    {
+     "w": "disse:",
+     "start": 61.939,
+     "end": 62.357
+    },
+    {
+     "w": "depende",
+     "start": 62.496,
+     "end": 62.868
+    },
+    {
+     "w": "do",
+     "start": 62.914,
+     "end": 62.995
+    },
+    {
+     "w": "dia.",
+     "start": 63.053,
+     "end": 63.483
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "text": "Três encontros. Mônaco, Lisboa, Buenos Aires. Ela achava que ele tinha muita milha.",
+   "start": 63.727,
+   "end": 68.081,
+   "words": [
+    {
+     "w": "Três",
+     "start": 63.727,
+     "end": 63.936
+    },
+    {
+     "w": "encontros.",
+     "start": 63.982,
+     "end": 64.667
+    },
+    {
+     "w": "Mônaco,",
+     "start": 65.004,
+     "end": 65.387
+    },
+    {
+     "w": "Lisboa,",
+     "start": 65.41,
+     "end": 65.828
+    },
+    {
+     "w": "Buenos",
+     "start": 65.863,
+     "end": 66.142
+    },
+    {
+     "w": "Aires.",
+     "start": 66.223,
+     "end": 66.583
+    },
+    {
+     "w": "Ela",
+     "start": 66.629,
+     "end": 66.78
+    },
+    {
+     "w": "achava",
+     "start": 66.803,
+     "end": 67.036
+    },
+    {
+     "w": "que",
+     "start": 67.071,
+     "end": 67.14
+    },
+    {
+     "w": "ele",
+     "start": 67.163,
+     "end": 67.268
+    },
+    {
+     "w": "tinha",
+     "start": 67.303,
+     "end": 67.477
+    },
+    {
+     "w": "muita",
+     "start": 67.512,
+     "end": 67.721
+    },
+    {
+     "w": "milha.",
+     "start": 67.767,
+     "end": 68.081
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "text": "Quarto encontro. Mônaco de novo. Ele vai no banheiro. Na pia, um cara lavando a mão. De luva.",
+   "start": 68.162,
+   "end": 73.259,
+   "words": [
+    {
+     "w": "Quarto",
+     "start": 68.162,
+     "end": 68.452
+    },
+    {
+     "w": "encontro.",
+     "start": 68.475,
+     "end": 68.951
+    },
+    {
+     "w": "Mônaco",
+     "start": 69.242,
+     "end": 69.555
+    },
+    {
+     "w": "de",
+     "start": 69.59,
+     "end": 69.636
+    },
+    {
+     "w": "novo.",
+     "start": 69.683,
+     "end": 70.008
+    },
+    {
+     "w": "Ele",
+     "start": 70.124,
+     "end": 70.275
+    },
+    {
+     "w": "vai",
+     "start": 70.31,
+     "end": 70.403
+    },
+    {
+     "w": "no",
+     "start": 70.426,
+     "end": 70.472
+    },
+    {
+     "w": "banheiro.",
+     "start": 70.519,
+     "end": 70.971
+    },
+    {
+     "w": "Na",
+     "start": 71.053,
+     "end": 71.169
+    },
+    {
+     "w": "pia,",
+     "start": 71.227,
+     "end": 71.622
+    },
+    {
+     "w": "um",
+     "start": 71.68,
+     "end": 71.761
+    },
+    {
+     "w": "cara",
+     "start": 71.807,
+     "end": 71.982
+    },
+    {
+     "w": "lavando",
+     "start": 72.016,
+     "end": 72.26
+    },
+    {
+     "w": "a",
+     "start": 72.283,
+     "end": 72.307
+    },
+    {
+     "w": "mão.",
+     "start": 72.353,
+     "end": 72.643
+    },
+    {
+     "w": "De",
+     "start": 72.725,
+     "end": 72.806
+    },
+    {
+     "w": "luva.",
+     "start": 72.852,
+     "end": 73.259
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "text": "O Rocha. Banheiro é previsível, Davi.",
+   "start": 73.444,
+   "end": 75.72,
+   "words": [
+    {
+     "w": "O",
+     "start": 73.444,
+     "end": 73.514
+    },
+    {
+     "w": "Rocha.",
+     "start": 73.584,
+     "end": 74.06
+    },
+    {
+     "w": "Banheiro",
+     "start": 74.35,
+     "end": 74.652
+    },
+    {
+     "w": "é",
+     "start": 74.675,
+     "end": 74.698
+    },
+    {
+     "w": "previsível,",
+     "start": 74.745,
+     "end": 75.29
+    },
+    {
+     "w": "Davi.",
+     "start": 75.314,
+     "end": 75.72
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "text": "Ele podia pular até a mesa, pegar a mão dela e sumir. Só que perto, todo lugar que ele já viu, a Linha também viu.",
+   "start": 75.941,
+   "end": 81.537,
+   "words": [
+    {
+     "w": "Ele",
+     "start": 75.941,
+     "end": 76.091
+    },
+    {
+     "w": "podia",
+     "start": 76.126,
+     "end": 76.347
+    },
+    {
+     "w": "pular",
+     "start": 76.393,
+     "end": 76.626
+    },
+    {
+     "w": "até",
+     "start": 76.661,
+     "end": 76.8
+    },
+    {
+     "w": "a",
+     "start": 76.835,
+     "end": 76.858
+    },
+    {
+     "w": "mesa,",
+     "start": 76.905,
+     "end": 77.195
+    },
+    {
+     "w": "pegar",
+     "start": 77.23,
+     "end": 77.485
+    },
+    {
+     "w": "a",
+     "start": 77.52,
+     "end": 77.543
+    },
+    {
+     "w": "mão",
+     "start": 77.578,
+     "end": 77.694
+    },
+    {
+     "w": "dela",
+     "start": 77.752,
+     "end": 78.031
+    },
+    {
+     "w": "e",
+     "start": 78.089,
+     "end": 78.135
+    },
+    {
+     "w": "sumir.",
+     "start": 78.182,
+     "end": 78.6
+    },
+    {
+     "w": "Só",
+     "start": 78.785,
+     "end": 78.902
+    },
+    {
+     "w": "que",
+     "start": 78.948,
+     "end": 79.029
+    },
+    {
+     "w": "perto,",
+     "start": 79.076,
+     "end": 79.401
+    },
+    {
+     "w": "todo",
+     "start": 79.424,
+     "end": 79.61
+    },
+    {
+     "w": "lugar",
+     "start": 79.645,
+     "end": 79.83
+    },
+    {
+     "w": "que",
+     "start": 79.865,
+     "end": 79.946
+    },
+    {
+     "w": "ele",
+     "start": 79.97,
+     "end": 80.074
+    },
+    {
+     "w": "já",
+     "start": 80.121,
+     "end": 80.213
+    },
+    {
+     "w": "viu,",
+     "start": 80.272,
+     "end": 80.539
+    },
+    {
+     "w": "a",
+     "start": 80.608,
+     "end": 80.655
+    },
+    {
+     "w": "Linha",
+     "start": 80.736,
+     "end": 80.933
+    },
+    {
+     "w": "também",
+     "start": 80.98,
+     "end": 81.212
+    },
+    {
+     "w": "viu.",
+     "start": 81.258,
+     "end": 81.537
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "text": "E longe tem a lata. De Mônaco pra Lisboa, ela chegaria a quatrocentos por hora.",
+   "start": 81.874,
+   "end": 85.891,
+   "words": [
+    {
+     "w": "E",
+     "start": 81.874,
+     "end": 81.978
+    },
+    {
+     "w": "longe",
+     "start": 82.059,
+     "end": 82.292
+    },
+    {
+     "w": "tem",
+     "start": 82.338,
+     "end": 82.443
+    },
+    {
+     "w": "a",
+     "start": 82.477,
+     "end": 82.501
+    },
+    {
+     "w": "lata.",
+     "start": 82.547,
+     "end": 82.953
+    },
+    {
+     "w": "De",
+     "start": 83.104,
+     "end": 83.197
+    },
+    {
+     "w": "Mônaco",
+     "start": 83.255,
+     "end": 83.534
+    },
+    {
+     "w": "pra",
+     "start": 83.569,
+     "end": 83.685
+    },
+    {
+     "w": "Lisboa,",
+     "start": 83.731,
+     "end": 84.207
+    },
+    {
+     "w": "ela",
+     "start": 84.242,
+     "end": 84.393
+    },
+    {
+     "w": "chegaria",
+     "start": 84.428,
+     "end": 84.73
+    },
+    {
+     "w": "a",
+     "start": 84.765,
+     "end": 84.799
+    },
+    {
+     "w": "quatrocentos",
+     "start": 84.823,
+     "end": 85.31
+    },
+    {
+     "w": "por",
+     "start": 85.368,
+     "end": 85.519
+    },
+    {
+     "w": "hora.",
+     "start": 85.542,
+     "end": 85.891
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "text": "O único lugar seguro era o espelho no sul. Quarenta e três graus sul, mesma linha. Oceano aberto. Água a dez graus.",
+   "start": 86.135,
+   "end": 92.439,
+   "words": [
+    {
+     "w": "O",
+     "start": 86.135,
+     "end": 86.181
+    },
+    {
+     "w": "único",
+     "start": 86.216,
+     "end": 86.448
+    },
+    {
+     "w": "lugar",
+     "start": 86.483,
+     "end": 86.669
+    },
+    {
+     "w": "seguro",
+     "start": 86.715,
+     "end": 87.087
+    },
+    {
+     "w": "era",
+     "start": 87.156,
+     "end": 87.319
+    },
+    {
+     "w": "o",
+     "start": 87.342,
+     "end": 87.365
+    },
+    {
+     "w": "espelho",
+     "start": 87.4,
+     "end": 87.702
+    },
+    {
+     "w": "no",
+     "start": 87.737,
+     "end": 87.806
+    },
+    {
+     "w": "sul.",
+     "start": 87.853,
+     "end": 88.166
+    },
+    {
+     "w": "Quarenta",
+     "start": 88.41,
+     "end": 88.758
+    },
+    {
+     "w": "e",
+     "start": 88.781,
+     "end": 88.805
+    },
+    {
+     "w": "três",
+     "start": 88.851,
+     "end": 89.025
+    },
+    {
+     "w": "graus",
+     "start": 89.083,
+     "end": 89.304
+    },
+    {
+     "w": "sul,",
+     "start": 89.339,
+     "end": 89.652
+    },
+    {
+     "w": "mesma",
+     "start": 89.838,
+     "end": 90.105
+    },
+    {
+     "w": "linha.",
+     "start": 90.151,
+     "end": 90.465
+    },
+    {
+     "w": "Oceano",
+     "start": 90.569,
+     "end": 90.929
+    },
+    {
+     "w": "aberto.",
+     "start": 90.952,
+     "end": 91.428
+    },
+    {
+     "w": "Água",
+     "start": 91.545,
+     "end": 91.754
+    },
+    {
+     "w": "a",
+     "start": 91.777,
+     "end": 91.8
+    },
+    {
+     "w": "dez",
+     "start": 91.846,
+     "end": 92.009
+    },
+    {
+     "w": "graus.",
+     "start": 92.067,
+     "end": 92.439
+    }
+   ]
+  },
+  {
+   "id": "L20",
+   "text": "Pra ele, um mergulho. Pra ela, uma hora até a hipotermia.",
+   "start": 92.578,
+   "end": 95.492,
+   "words": [
+    {
+     "w": "Pra",
+     "start": 92.578,
+     "end": 92.752
+    },
+    {
+     "w": "ele,",
+     "start": 92.798,
+     "end": 92.949
+    },
+    {
+     "w": "um",
+     "start": 92.973,
+     "end": 93.031
+    },
+    {
+     "w": "mergulho.",
+     "start": 93.054,
+     "end": 93.518
+    },
+    {
+     "w": "Pra",
+     "start": 93.704,
+     "end": 93.878
+    },
+    {
+     "w": "ela,",
+     "start": 93.925,
+     "end": 94.064
+    },
+    {
+     "w": "uma",
+     "start": 94.087,
+     "end": 94.261
+    },
+    {
+     "w": "hora",
+     "start": 94.308,
+     "end": 94.459
+    },
+    {
+     "w": "até",
+     "start": 94.482,
+     "end": 94.679
+    },
+    {
+     "w": "a",
+     "start": 94.714,
+     "end": 94.749
+    },
+    {
+     "w": "hipotermia.",
+     "start": 94.784,
+     "end": 95.492
+    }
+   ]
+  },
+  {
+   "id": "L21",
+   "text": "O Rocha sorriu. O Davi pulou sozinho. O estalo rachou o espelho do banheiro.",
+   "start": 95.829,
+   "end": 100.194,
+   "words": [
+    {
+     "w": "O",
+     "start": 95.829,
+     "end": 95.91
+    },
+    {
+     "w": "Rocha",
+     "start": 95.98,
+     "end": 96.212
+    },
+    {
+     "w": "sorriu.",
+     "start": 96.258,
+     "end": 96.688
+    },
+    {
+     "w": "O",
+     "start": 97.141,
+     "end": 97.21
+    },
+    {
+     "w": "Davi",
+     "start": 97.315,
+     "end": 97.489
+    },
+    {
+     "w": "pulou",
+     "start": 97.535,
+     "end": 97.721
+    },
+    {
+     "w": "sozinho.",
+     "start": 97.767,
+     "end": 98.302
+    },
+    {
+     "w": "O",
+     "start": 98.383,
+     "end": 98.452
+    },
+    {
+     "w": "estalo",
+     "start": 98.511,
+     "end": 98.836
+    },
+    {
+     "w": "rachou",
+     "start": 98.882,
+     "end": 99.207
+    },
+    {
+     "w": "o",
+     "start": 99.242,
+     "end": 99.265
+    },
+    {
+     "w": "espelho",
+     "start": 99.3,
+     "end": 99.602
+    },
+    {
+     "w": "do",
+     "start": 99.625,
+     "end": 99.683
+    },
+    {
+     "w": "banheiro.",
+     "start": 99.73,
+     "end": 100.194
+    }
+   ]
+  },
+  {
+   "id": "L22",
+   "text": "Quando o Rocha voltou pro salão, a Lia ainda tava na mesa.",
+   "start": 100.589,
+   "end": 103.213,
+   "words": [
+    {
+     "w": "Quando",
+     "start": 100.589,
+     "end": 100.833
+    },
+    {
+     "w": "o",
+     "start": 100.856,
+     "end": 100.879
+    },
+    {
+     "w": "Rocha",
+     "start": 100.925,
+     "end": 101.158
+    },
+    {
+     "w": "voltou",
+     "start": 101.193,
+     "end": 101.425
+    },
+    {
+     "w": "pro",
+     "start": 101.471,
+     "end": 101.576
+    },
+    {
+     "w": "salão,",
+     "start": 101.622,
+     "end": 102.005
+    },
+    {
+     "w": "a",
+     "start": 102.052,
+     "end": 102.098
+    },
+    {
+     "w": "Lia",
+     "start": 102.156,
+     "end": 102.272
+    },
+    {
+     "w": "ainda",
+     "start": 102.296,
+     "end": 102.481
+    },
+    {
+     "w": "tava",
+     "start": 102.528,
+     "end": 102.69
+    },
+    {
+     "w": "na",
+     "start": 102.725,
+     "end": 102.783
+    },
+    {
+     "w": "mesa.",
+     "start": 102.83,
+     "end": 103.213
+    }
+   ]
+  },
+  {
+   "id": "L23",
+   "text": "Ele sentou na cadeira do Davi e pegou o celular dela.",
+   "start": 103.294,
+   "end": 105.744,
+   "words": [
+    {
+     "w": "Ele",
+     "start": 103.294,
+     "end": 103.445
+    },
+    {
+     "w": "sentou",
+     "start": 103.491,
+     "end": 103.747
+    },
+    {
+     "w": "na",
+     "start": 103.793,
+     "end": 103.851
+    },
+    {
+     "w": "cadeira",
+     "start": 103.886,
+     "end": 104.153
+    },
+    {
+     "w": "do",
+     "start": 104.188,
+     "end": 104.258
+    },
+    {
+     "w": "Davi",
+     "start": 104.304,
+     "end": 104.571
+    },
+    {
+     "w": "e",
+     "start": 104.618,
+     "end": 104.664
+    },
+    {
+     "w": "pegou",
+     "start": 104.71,
+     "end": 104.943
+    },
+    {
+     "w": "o",
+     "start": 104.966,
+     "end": 104.989
+    },
+    {
+     "w": "celular",
+     "start": 105.012,
+     "end": 105.349
+    },
+    {
+     "w": "dela.",
+     "start": 105.395,
+     "end": 105.744
+    }
+   ]
+  },
+  {
+   "id": "L24",
+   "text": "Mandou uma foto pro Davi. A mesa. A Lia. O terraço. Tu já viu esse lugar.",
+   "start": 106.08,
+   "end": 110.736,
+   "words": [
+    {
+     "w": "Mandou",
+     "start": 106.08,
+     "end": 106.313
+    },
+    {
+     "w": "uma",
+     "start": 106.336,
+     "end": 106.452
+    },
+    {
+     "w": "foto",
+     "start": 106.498,
+     "end": 106.707
+    },
+    {
+     "w": "pro",
+     "start": 106.742,
+     "end": 106.847
+    },
+    {
+     "w": "Davi.",
+     "start": 106.882,
+     "end": 107.265
+    },
+    {
+     "w": "A",
+     "start": 107.369,
+     "end": 107.416
+    },
+    {
+     "w": "mesa.",
+     "start": 107.485,
+     "end": 107.915
+    },
+    {
+     "w": "A",
+     "start": 108.101,
+     "end": 108.147
+    },
+    {
+     "w": "Lia.",
+     "start": 108.252,
+     "end": 108.623
+    },
+    {
+     "w": "O",
+     "start": 108.669,
+     "end": 108.739
+    },
+    {
+     "w": "terraço.",
+     "start": 108.844,
+     "end": 109.447
+    },
+    {
+     "w": "Tu",
+     "start": 109.738,
+     "end": 109.842
+    },
+    {
+     "w": "já",
+     "start": 109.889,
+     "end": 109.958
+    },
+    {
+     "w": "viu",
+     "start": 110.005,
+     "end": 110.109
+    },
+    {
+     "w": "esse",
+     "start": 110.132,
+     "end": 110.26
+    },
+    {
+     "w": "lugar.",
+     "start": 110.295,
+     "end": 110.736
+    }
+   ]
+  },
+  {
+   "id": "L25",
+   "text": "Segue aí pra ver se ele volta pra buscar ela, ou se pula de novo.",
+   "start": 111.026,
+   "end": 114.474,
+   "words": [
+    {
+     "w": "Segue",
+     "start": 111.026,
+     "end": 111.34
+    },
+    {
+     "w": "aí",
+     "start": 111.375,
+     "end": 111.491
+    },
+    {
+     "w": "pra",
+     "start": 111.549,
+     "end": 111.665
+    },
+    {
+     "w": "ver",
+     "start": 111.7,
+     "end": 111.793
+    },
+    {
+     "w": "se",
+     "start": 111.827,
+     "end": 111.897
+    },
+    {
+     "w": "ele",
+     "start": 111.92,
+     "end": 112.013
+    },
+    {
+     "w": "volta",
+     "start": 112.06,
+     "end": 112.28
+    },
+    {
+     "w": "pra",
+     "start": 112.315,
+     "end": 112.431
+    },
+    {
+     "w": "buscar",
+     "start": 112.478,
+     "end": 112.803
+    },
+    {
+     "w": "ela,",
+     "start": 112.872,
+     "end": 113.128
+    },
+    {
+     "w": "ou",
+     "start": 113.232,
+     "end": 113.337
+    },
+    {
+     "w": "se",
+     "start": 113.406,
+     "end": 113.488
+    },
+    {
+     "w": "pula",
+     "start": 113.534,
+     "end": 113.731
+    },
+    {
+     "w": "de",
+     "start": 113.778,
+     "end": 113.836
+    },
+    {
+     "w": "novo.",
+     "start": 113.882,
+     "end": 114.474
+    }
+   ]
+  }
+ ]
+}

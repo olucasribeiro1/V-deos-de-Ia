@@ -1,0 +1,582 @@
+[
+ {
+  "id": "power",
+  "start": 0.0,
+  "end": 1.68,
+  "desc": "Close-up do Davi vibrando com linhas de vibração; HUD PODER: VIBRAR 📳 no 'vibrar'",
+  "sfx": [
+   {
+    "t": 0.0,
+    "what": "zumbido de celular (bzz) loop"
+   },
+   {
+    "t": 0.83,
+    "what": "whoosh + impacto leve no HUD"
+   }
+  ]
+ },
+ {
+  "id": "shrug",
+  "start": 1.68,
+  "end": 2.73,
+  "desc": "Corpo inteiro, Davi dá de ombros, ainda tremendo; chip SÓ ISSO.",
+  "sfx": [
+   {
+    "t": 1.68,
+    "what": "whip"
+   },
+   {
+    "t": 1.75,
+    "what": "bzz curto"
+   }
+  ]
+ },
+ {
+  "id": "phone",
+  "start": 2.73,
+  "end": 3.98,
+  "desc": "Tela dividida: celular vibrando na mesa | Davi na mesma pose vibrando",
+  "sfx": [
+   {
+    "t": 2.73,
+    "what": "whip"
+   },
+   {
+    "t": 2.75,
+    "what": "vibração de celular na mesa (bzz bzz)"
+   }
+  ]
+ },
+ {
+  "id": "academy",
+  "start": 3.98,
+  "end": 5.05,
+  "desc": "Pátio da Academia de Poderes, grua descendo, alunos andando; aluno voando cruza",
+  "sfx": [
+   {
+    "t": 3.98,
+    "what": "ambiente de pátio/burburinho"
+   },
+   {
+    "t": 4.6,
+    "what": "whoosh de voo"
+   }
+  ]
+ },
+ {
+  "id": "punch",
+  "start": 5.05,
+  "end": 6.16,
+  "desc": "Aluno soca o prédio (rachadura, onda de choque, POW); voador e rajada ao fundo",
+  "sfx": [
+   {
+    "t": 5.05,
+    "what": "whoosh"
+   },
+   {
+    "t": 5.4,
+    "what": "soco + parede rachando"
+   },
+   {
+    "t": 5.2,
+    "what": "rajada de energia"
+   }
+  ]
+ },
+ {
+  "id": "corner",
+  "start": 6.16,
+  "end": 7.68,
+  "desc": "No canto, Davi sozinho vibrando um copo de suco; carimbo ÚLTIMO",
+  "sfx": [
+   {
+    "t": 6.16,
+    "what": "whip"
+   },
+   {
+    "t": 6.69,
+    "what": "carimbo"
+   },
+   {
+    "t": 6.2,
+    "what": "copo tremendo/canudo chacoalhando"
+   }
+  ]
+ },
+ {
+  "id": "board",
+  "start": 7.68,
+  "end": 8.72,
+  "desc": "Quadro do ranking rola de #1 BRUNO até #312 DAVI (vermelho)",
+  "sfx": [
+   {
+    "t": 7.68,
+    "what": "scroll rápido"
+   },
+   {
+    "t": 8.18,
+    "what": "impacto/buzzer triste"
+   }
+  ]
+ },
+ {
+  "id": "sadface",
+  "start": 8.72,
+  "end": 9.93,
+  "desc": "Close triste do Davi, nuvem de chuva, suco vibrando",
+  "sfx": [
+   {
+    "t": 8.72,
+    "what": "trombone triste (wah-wah) curto"
+   }
+  ]
+ },
+ {
+  "id": "laugh",
+  "start": 9.93,
+  "end": 10.69,
+  "desc": "Dois colegas apontando e rindo (HAHA)",
+  "sfx": [
+   {
+    "t": 9.93,
+    "what": "risadas"
+   }
+  ]
+ },
+ {
+  "id": "sticker",
+  "start": 10.69,
+  "end": 11.61,
+  "desc": "Mão cola adesivo MODO VIBRA nas costas do Davi",
+  "sfx": [
+   {
+    "t": 10.79,
+    "what": "tapa (plaft)"
+   }
+  ]
+ },
+ {
+  "id": "massage",
+  "start": 11.61,
+  "end": 12.9,
+  "desc": "Colega deitado no banco, Davi massageando vibrando; placa MASSAGEM R$ 2",
+  "sfx": [
+   {
+    "t": 11.61,
+    "what": "whip"
+   },
+   {
+    "t": 11.65,
+    "what": "vibração grave contínua"
+   }
+  ]
+ },
+ {
+  "id": "ahhh",
+  "start": 12.9,
+  "end": 13.77,
+  "desc": "Close do colega relaxado AHHHH~ com corações",
+  "sfx": [
+   {
+    "t": 12.9,
+    "what": "'ahhh' cômico / vibrato"
+   }
+  ]
+ },
+ {
+  "id": "olive",
+  "start": 13.77,
+  "end": 15.26,
+  "desc": "Davi vibra o pote de azeitona; tampa voa no 'azeitona'",
+  "sfx": [
+   {
+    "t": 13.77,
+    "what": "whip"
+   },
+   {
+    "t": 14.34,
+    "what": "pop de tampa + azeitonas"
+   }
+  ]
+ },
+ {
+  "id": "room",
+  "start": 15.26,
+  "end": 16.52,
+  "desc": "Quarto à noite, caderno; lâmpada de ideia no 'descobriu'",
+  "sfx": [
+   {
+    "t": 15.26,
+    "what": "ambiente noturno/grilos"
+   },
+   {
+    "t": 16.03,
+    "what": "ding de ideia"
+   }
+  ]
+ },
+ {
+  "id": "objects",
+  "start": 16.52,
+  "end": 17.75,
+  "desc": "Porta, copo e ponte do livro emitindo ondas em ritmos diferentes",
+  "sfx": [
+   {
+    "t": 16.52,
+    "what": "whip"
+   },
+   {
+    "t": 16.6,
+    "what": "zumbidos em 3 tons"
+   }
+  ]
+ },
+ {
+  "id": "freq",
+  "start": 17.75,
+  "end": 19.13,
+  "desc": "Cartão científico: taça ~500 Hz, porta ~20 Hz, ponte ~1 Hz; carimbo FREQUÊNCIA NATURAL",
+  "sfx": [
+   {
+    "t": 17.75,
+    "what": "whoosh"
+   },
+   {
+    "t": 18.06,
+    "what": "carimbo"
+   }
+  ]
+ },
+ {
+  "id": "bridge",
+  "start": 19.13,
+  "end": 20.18,
+  "desc": "Desenho no caderno: ponte balançando em onda, '~1 Hz'",
+  "sfx": [
+   {
+    "t": 19.13,
+    "what": "whip"
+   },
+   {
+    "t": 19.3,
+    "what": "lápis rabiscando"
+   }
+  ]
+ },
+ {
+  "id": "idea",
+  "start": 20.18,
+  "end": 21.09,
+  "desc": "Davi sorri, dedo vibrando com linhas amarelas de energia",
+  "sfx": [
+   {
+    "t": 20.18,
+    "what": "energia/zap leve"
+   },
+   {
+    "t": 20.3,
+    "what": "brilho"
+   }
+  ]
+ },
+ {
+  "id": "swing",
+  "start": 21.09,
+  "end": 22.28,
+  "desc": "Parque: criança no balanço, Davi atrás",
+  "sfx": [
+   {
+    "t": 21.09,
+    "what": "whip"
+   },
+   {
+    "t": 21.1,
+    "what": "rangido de balanço"
+   }
+  ]
+ },
+ {
+  "id": "tap",
+  "start": 22.28,
+  "end": 23.25,
+  "desc": "Close: dedo do Davi toca o assento no ritmo (TOC)",
+  "sfx": [
+   {
+    "t": 22.28,
+    "what": "whip"
+   },
+   {
+    "t": 22.4,
+    "what": "toc leve a cada volta"
+   }
+  ]
+ },
+ {
+  "id": "higher",
+  "start": 23.25,
+  "end": 24.32,
+  "desc": "Lateral: amplitude crescendo, seta de amplitude, chip NO RITMO CERTO",
+  "sfx": [
+   {
+    "t": 23.25,
+    "what": "rangido + whoosh"
+   }
+  ]
+ },
+ {
+  "id": "high",
+  "start": 24.32,
+  "end": 25.79,
+  "desc": "Balanço cada vez mais alto (amplitude ~55°→115°)",
+  "sfx": [
+   {
+    "t": 24.32,
+    "what": "whoosh crescente"
+   },
+   {
+    "t": 25.0,
+    "what": "criança gritando de alegria"
+   }
+  ]
+ },
+ {
+  "id": "loop",
+  "start": 25.79,
+  "end": 26.85,
+  "desc": "Quase volta completa; freeze no topo, Davi em choque (UEEEPA!)",
+  "sfx": [
+   {
+    "t": 25.79,
+    "what": "whoosh"
+   },
+   {
+    "t": 26.3,
+    "what": "freeze/record scratch"
+   }
+  ]
+ },
+ {
+  "id": "reso",
+  "start": 26.85,
+  "end": 28.13,
+  "desc": "Gráfico: amplitude crescendo com empurrõezinhos; carimbo RESSONÂNCIA",
+  "sfx": [
+   {
+    "t": 26.85,
+    "what": "whoosh"
+   },
+   {
+    "t": 26.99,
+    "what": "carimbo"
+   }
+  ]
+ },
+ {
+  "id": "glass",
+  "start": 28.13,
+  "end": 29.3,
+  "desc": "Taça de vidro no spot, push-in, brilhos",
+  "sfx": [
+   {
+    "t": 28.13,
+    "what": "ding de cristal"
+   }
+  ]
+ },
+ {
+  "id": "hz",
+  "start": 29.3,
+  "end": 30.73,
+  "desc": "Dedo vibrando perto da taça; afinador trava 500 Hz no 'hertz'",
+  "sfx": [
+   {
+    "t": 29.3,
+    "what": "whip"
+   },
+   {
+    "t": 29.62,
+    "what": "tom senoidal subindo"
+   },
+   {
+    "t": 30.01,
+    "what": "beep de trava"
+   }
+  ]
+ },
+ {
+  "id": "wobble",
+  "start": 30.73,
+  "end": 31.86,
+  "desc": "Câmera lenta: taça deformando em ondas; afinador travado",
+  "sfx": [
+   {
+    "t": 30.73,
+    "what": "tom sustentado + slow-mo grave"
+   }
+  ]
+ },
+ {
+  "id": "shatter",
+  "start": 31.86,
+  "end": 32.54,
+  "desc": "Taça estoura em cacos (CRASH!)",
+  "sfx": [
+   {
+    "t": 31.86,
+    "what": "vidro estourando"
+   }
+  ]
+ },
+ {
+  "id": "train",
+  "start": 32.54,
+  "end": 33.71,
+  "desc": "Montagem: mesa de taças estourando uma a uma, janela dia/noite",
+  "sfx": [
+   {
+    "t": 32.54,
+    "what": "whip"
+   },
+   {
+    "t": 32.7,
+    "what": "ting/estalo de vidro x4"
+   }
+  ]
+ },
+ {
+  "id": "calendar",
+  "start": 33.71,
+  "end": 34.64,
+  "desc": "Calendário com folhas voando; TREINO: 3 ANOS",
+  "sfx": [
+   {
+    "t": 33.71,
+    "what": "folhas voando/whoosh"
+   },
+   {
+    "t": 33.8,
+    "what": "impacto do HUD"
+   }
+  ]
+ },
+ {
+  "id": "pile",
+  "start": 34.64,
+  "end": 36.27,
+  "desc": "Montanha de cacos crescendo; contador COPOS: 0→4.000; Davi no topo",
+  "sfx": [
+   {
+    "t": 34.64,
+    "what": "cacos caindo"
+   },
+   {
+    "t": 35.35,
+    "what": "cha-ching / impacto"
+   }
+  ]
+ },
+ {
+  "id": "mom",
+  "start": 36.27,
+  "end": 37.2,
+  "desc": "Mãe com prancheta de tracinhos, risca mais um e olha seca pra câmera",
+  "sfx": [
+   {
+    "t": 36.27,
+    "what": "whip"
+   },
+   {
+    "t": 36.45,
+    "what": "risco de caneta"
+   },
+   {
+    "t": 36.59,
+    "what": "silêncio/grilo"
+   }
+  ]
+ },
+ {
+  "id": "final",
+  "start": 37.2,
+  "end": 38.34,
+  "desc": "Arena lotada, grua desce do telão PROVA FINAL; carimbo",
+  "sfx": [
+   {
+    "t": 37.2,
+    "what": "multidão rugindo"
+   },
+   {
+    "t": 37.61,
+    "what": "carimbo/gongo"
+   }
+  ]
+ },
+ {
+  "id": "enter",
+  "start": 38.34,
+  "end": 39.97,
+  "desc": "Bruno sai do túnel no meio da fumaça; nome BRUNO",
+  "sfx": [
+   {
+    "t": 38.34,
+    "what": "whip"
+   },
+   {
+    "t": 38.4,
+    "what": "passos pesados + fumaça"
+   },
+   {
+    "t": 39.41,
+    "what": "impacto grave"
+   }
+  ]
+ },
+ {
+  "id": "flex",
+  "start": 39.97,
+  "end": 40.78,
+  "desc": "Bruno flexiona os braços, aura vermelha, onda de choque; SUPERFORÇA",
+  "sfx": [
+   {
+    "t": 39.97,
+    "what": "whip"
+   },
+   {
+    "t": 40.17,
+    "what": "impacto/estalo de músculos"
+   }
+  ]
+ },
+ {
+  "id": "dome",
+  "start": 40.78,
+  "end": 41.77,
+  "desc": "Domo azul aparece; lata jogada quica (TOINC); CAMPO DE FORÇA",
+  "sfx": [
+   {
+    "t": 40.88,
+    "what": "escudo ligando (whomm)"
+   },
+   {
+    "t": 41.31,
+    "what": "boing/toinc"
+   }
+  ]
+ },
+ {
+  "id": "screen",
+  "start": 41.77,
+  "end": 42.89,
+  "desc": "Câmera sobe do Bruno ao telão BRUNO · #1 · INVICTO; carimbo INVICTO",
+  "sfx": [
+   {
+    "t": 41.77,
+    "what": "whoosh de tilt"
+   },
+   {
+    "t": 42.37,
+    "what": "carimbo + multidão"
+   }
+  ]
+ }
+]

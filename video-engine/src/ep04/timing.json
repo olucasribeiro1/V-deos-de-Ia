@@ -1,0 +1,1364 @@
+{
+ "fps": 30,
+ "tempo": 1.03,
+ "duration": 79.48,
+ "lines": [
+  {
+   "id": "L1",
+   "text": "O Davi tem o poder de controlar metal. Mas só coisa leve. Clipe, chave, moeda. Um carro? Nem arranha.",
+   "start": 0.0,
+   "end": 6.617,
+   "words": [
+    {
+     "w": "O",
+     "start": 0.0,
+     "end": 0.158
+    },
+    {
+     "w": "Davi",
+     "start": 0.225,
+     "end": 0.484
+    },
+    {
+     "w": "tem",
+     "start": 0.53,
+     "end": 0.62
+    },
+    {
+     "w": "o",
+     "start": 0.665,
+     "end": 0.687
+    },
+    {
+     "w": "poder",
+     "start": 0.721,
+     "end": 0.981
+    },
+    {
+     "w": "de",
+     "start": 1.026,
+     "end": 1.083
+    },
+    {
+     "w": "controlar",
+     "start": 1.116,
+     "end": 1.488
+    },
+    {
+     "w": "metal.",
+     "start": 1.533,
+     "end": 2.04
+    },
+    {
+     "w": "Mas",
+     "start": 2.299,
+     "end": 2.469
+    },
+    {
+     "w": "só",
+     "start": 2.491,
+     "end": 2.672
+    },
+    {
+     "w": "coisa",
+     "start": 2.728,
+     "end": 2.976
+    },
+    {
+     "w": "leve.",
+     "start": 3.02,
+     "end": 3.45
+    },
+    {
+     "w": "Clipe,",
+     "start": 3.675,
+     "end": 4.103
+    },
+    {
+     "w": "chave,",
+     "start": 4.125,
+     "end": 4.531
+    },
+    {
+     "w": "moeda.",
+     "start": 4.553,
+     "end": 5.095
+    },
+    {
+     "w": "Um",
+     "start": 5.23,
+     "end": 5.343
+    },
+    {
+     "w": "carro?",
+     "start": 5.388,
+     "end": 5.794
+    },
+    {
+     "w": "Nem",
+     "start": 5.929,
+     "end": 6.143
+    },
+    {
+     "w": "arranha.",
+     "start": 6.211,
+     "end": 6.617
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "text": "E tem efeito colateral: chegou perto, cartão de banco apaga. Já perdeu onze.",
+   "start": 6.741,
+   "end": 10.922,
+   "words": [
+    {
+     "w": "E",
+     "start": 6.741,
+     "end": 6.808
+    },
+    {
+     "w": "tem",
+     "start": 6.876,
+     "end": 6.954
+    },
+    {
+     "w": "efeito",
+     "start": 6.978,
+     "end": 7.225
+    },
+    {
+     "w": "colateral:",
+     "start": 7.259,
+     "end": 7.788
+    },
+    {
+     "w": "chegou",
+     "start": 7.913,
+     "end": 8.183
+    },
+    {
+     "w": "perto,",
+     "start": 8.228,
+     "end": 8.612
+    },
+    {
+     "w": "cartão",
+     "start": 8.69,
+     "end": 9.017
+    },
+    {
+     "w": "de",
+     "start": 9.04,
+     "end": 9.085
+    },
+    {
+     "w": "banco",
+     "start": 9.152,
+     "end": 9.333
+    },
+    {
+     "w": "apaga.",
+     "start": 9.355,
+     "end": 9.841
+    },
+    {
+     "w": "Já",
+     "start": 9.976,
+     "end": 10.1
+    },
+    {
+     "w": "perdeu",
+     "start": 10.156,
+     "end": 10.46
+    },
+    {
+     "w": "onze.",
+     "start": 10.528,
+     "end": 10.922
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "text": "O poder dele é magnetismo. Só que campo magnético perde força muito rápido: dobrou a distância, o campo cai oito vezes. Por isso ele só manda em coisa leve e perto.",
+   "start": 11.047,
+   "end": 20.335,
+   "words": [
+    {
+     "w": "O",
+     "start": 11.047,
+     "end": 11.103
+    },
+    {
+     "w": "poder",
+     "start": 11.159,
+     "end": 11.373
+    },
+    {
+     "w": "dele",
+     "start": 11.43,
+     "end": 11.655
+    },
+    {
+     "w": "é",
+     "start": 11.678,
+     "end": 11.712
+    },
+    {
+     "w": "magnetismo.",
+     "start": 11.779,
+     "end": 12.715
+    },
+    {
+     "w": "Só",
+     "start": 13.03,
+     "end": 13.199
+    },
+    {
+     "w": "que",
+     "start": 13.245,
+     "end": 13.312
+    },
+    {
+     "w": "campo",
+     "start": 13.357,
+     "end": 13.526
+    },
+    {
+     "w": "magnético",
+     "start": 13.56,
+     "end": 14.011
+    },
+    {
+     "w": "perde",
+     "start": 14.067,
+     "end": 14.282
+    },
+    {
+     "w": "força",
+     "start": 14.35,
+     "end": 14.609
+    },
+    {
+     "w": "muito",
+     "start": 14.643,
+     "end": 14.846
+    },
+    {
+     "w": "rápido:",
+     "start": 14.879,
+     "end": 15.284
+    },
+    {
+     "w": "dobrou",
+     "start": 15.454,
+     "end": 15.77
+    },
+    {
+     "w": "a",
+     "start": 15.803,
+     "end": 15.826
+    },
+    {
+     "w": "distância,",
+     "start": 15.859,
+     "end": 16.401
+    },
+    {
+     "w": "o",
+     "start": 16.536,
+     "end": 16.592
+    },
+    {
+     "w": "campo",
+     "start": 16.638,
+     "end": 16.863
+    },
+    {
+     "w": "cai",
+     "start": 16.885,
+     "end": 17.032
+    },
+    {
+     "w": "oito",
+     "start": 17.1,
+     "end": 17.382
+    },
+    {
+     "w": "vezes.",
+     "start": 17.449,
+     "end": 17.968
+    },
+    {
+     "w": "Por",
+     "start": 18.227,
+     "end": 18.34
+    },
+    {
+     "w": "isso",
+     "start": 18.384,
+     "end": 18.519
+    },
+    {
+     "w": "ele",
+     "start": 18.543,
+     "end": 18.633
+    },
+    {
+     "w": "só",
+     "start": 18.666,
+     "end": 18.734
+    },
+    {
+     "w": "manda",
+     "start": 18.779,
+     "end": 18.937
+    },
+    {
+     "w": "em",
+     "start": 18.959,
+     "end": 19.005
+    },
+    {
+     "w": "coisa",
+     "start": 19.038,
+     "end": 19.309
+    },
+    {
+     "w": "leve",
+     "start": 19.377,
+     "end": 19.737
+    },
+    {
+     "w": "e",
+     "start": 19.76,
+     "end": 19.827
+    },
+    {
+     "w": "perto.",
+     "start": 19.883,
+     "end": 20.335
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "text": "E nem todo metal obedece. Ferro, níquel e cobalto grudam. Alumínio, cobre e ouro, não.",
+   "start": 20.504,
+   "end": 25.598,
+   "words": [
+    {
+     "w": "E",
+     "start": 20.504,
+     "end": 20.56
+    },
+    {
+     "w": "nem",
+     "start": 20.605,
+     "end": 20.717
+    },
+    {
+     "w": "todo",
+     "start": 20.763,
+     "end": 20.932
+    },
+    {
+     "w": "metal",
+     "start": 20.966,
+     "end": 21.203
+    },
+    {
+     "w": "obedece.",
+     "start": 21.225,
+     "end": 21.788
+    },
+    {
+     "w": "Ferro,",
+     "start": 22.015,
+     "end": 22.386
+    },
+    {
+     "w": "níquel",
+     "start": 22.409,
+     "end": 22.69
+    },
+    {
+     "w": "e",
+     "start": 22.713,
+     "end": 22.747
+    },
+    {
+     "w": "cobalto",
+     "start": 22.781,
+     "end": 23.22
+    },
+    {
+     "w": "grudam.",
+     "start": 23.265,
+     "end": 23.75
+    },
+    {
+     "w": "Alumínio,",
+     "start": 23.885,
+     "end": 24.55
+    },
+    {
+     "w": "cobre",
+     "start": 24.584,
+     "end": 24.967
+    },
+    {
+     "w": "e",
+     "start": 24.99,
+     "end": 25.013
+    },
+    {
+     "w": "ouro,",
+     "start": 25.091,
+     "end": 25.272
+    },
+    {
+     "w": "não.",
+     "start": 25.294,
+     "end": 25.598
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "text": "Mas o Davi descobriu um truque: tudo no universo reage um pouquinho a campo magnético. Até água. Até tu.",
+   "start": 25.858,
+   "end": 31.742,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 25.858,
+     "end": 26.128
+    },
+    {
+     "w": "o",
+     "start": 26.218,
+     "end": 26.241
+    },
+    {
+     "w": "Davi",
+     "start": 26.286,
+     "end": 26.556
+    },
+    {
+     "w": "descobriu",
+     "start": 26.602,
+     "end": 26.951
+    },
+    {
+     "w": "um",
+     "start": 26.974,
+     "end": 27.03
+    },
+    {
+     "w": "truque:",
+     "start": 27.076,
+     "end": 27.448
+    },
+    {
+     "w": "tudo",
+     "start": 27.707,
+     "end": 28.011
+    },
+    {
+     "w": "no",
+     "start": 28.067,
+     "end": 28.157
+    },
+    {
+     "w": "universo",
+     "start": 28.191,
+     "end": 28.619
+    },
+    {
+     "w": "reage",
+     "start": 28.653,
+     "end": 28.901
+    },
+    {
+     "w": "um",
+     "start": 28.924,
+     "end": 28.969
+    },
+    {
+     "w": "pouquinho",
+     "start": 29.003,
+     "end": 29.341
+    },
+    {
+     "w": "a",
+     "start": 29.375,
+     "end": 29.397
+    },
+    {
+     "w": "campo",
+     "start": 29.453,
+     "end": 29.656
+    },
+    {
+     "w": "magnético.",
+     "start": 29.68,
+     "end": 30.321
+    },
+    {
+     "w": "Até",
+     "start": 30.446,
+     "end": 30.66
+    },
+    {
+     "w": "água.",
+     "start": 30.727,
+     "end": 31.043
+    },
+    {
+     "w": "Até",
+     "start": 31.133,
+     "end": 31.358
+    },
+    {
+     "w": "tu.",
+     "start": 31.438,
+     "end": 31.742
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "text": "Em noventa e sete, cientistas fizeram um sapo flutuar com um ímã de dezesseis tesla. Trezentas mil vezes o campo da Terra.",
+   "start": 32.159,
+   "end": 38.471,
+   "words": [
+    {
+     "w": "Em",
+     "start": 32.159,
+     "end": 32.25
+    },
+    {
+     "w": "noventa",
+     "start": 32.272,
+     "end": 32.519
+    },
+    {
+     "w": "e",
+     "start": 32.542,
+     "end": 32.565
+    },
+    {
+     "w": "sete,",
+     "start": 32.599,
+     "end": 33.027
+    },
+    {
+     "w": "cientistas",
+     "start": 33.162,
+     "end": 33.647
+    },
+    {
+     "w": "fizeram",
+     "start": 33.681,
+     "end": 34.03
+    },
+    {
+     "w": "um",
+     "start": 34.052,
+     "end": 34.109
+    },
+    {
+     "w": "sapo",
+     "start": 34.177,
+     "end": 34.448
+    },
+    {
+     "w": "flutuar",
+     "start": 34.47,
+     "end": 34.808
+    },
+    {
+     "w": "com",
+     "start": 34.842,
+     "end": 34.966
+    },
+    {
+     "w": "um",
+     "start": 35.022,
+     "end": 35.079
+    },
+    {
+     "w": "ímã",
+     "start": 35.123,
+     "end": 35.304
+    },
+    {
+     "w": "de",
+     "start": 35.349,
+     "end": 35.394
+    },
+    {
+     "w": "dezesseis",
+     "start": 35.45,
+     "end": 35.879
+    },
+    {
+     "w": "tesla.",
+     "start": 35.947,
+     "end": 36.329
+    },
+    {
+     "w": "Trezentas",
+     "start": 36.465,
+     "end": 37.05
+    },
+    {
+     "w": "mil",
+     "start": 37.13,
+     "end": 37.243
+    },
+    {
+     "w": "vezes",
+     "start": 37.321,
+     "end": 37.649
+    },
+    {
+     "w": "o",
+     "start": 37.727,
+     "end": 37.75
+    },
+    {
+     "w": "campo",
+     "start": 37.795,
+     "end": 37.976
+    },
+    {
+     "w": "da",
+     "start": 37.998,
+     "end": 38.054
+    },
+    {
+     "w": "Terra.",
+     "start": 38.088,
+     "end": 38.471
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "text": "O Davi treinou até levitar uma gota d'água. Depois, o sapo do vizinho. O sapo não gostou.",
+   "start": 38.64,
+   "end": 43.656,
+   "words": [
+    {
+     "w": "O",
+     "start": 38.64,
+     "end": 38.685
+    },
+    {
+     "w": "Davi",
+     "start": 38.742,
+     "end": 38.922
+    },
+    {
+     "w": "treinou",
+     "start": 38.945,
+     "end": 39.26
+    },
+    {
+     "w": "até",
+     "start": 39.317,
+     "end": 39.508
+    },
+    {
+     "w": "levitar",
+     "start": 39.598,
+     "end": 39.948
+    },
+    {
+     "w": "uma",
+     "start": 39.982,
+     "end": 40.117
+    },
+    {
+     "w": "gota",
+     "start": 40.162,
+     "end": 40.399
+    },
+    {
+     "w": "d'água.",
+     "start": 40.444,
+     "end": 40.872
+    },
+    {
+     "w": "Depois,",
+     "start": 41.041,
+     "end": 41.526
+    },
+    {
+     "w": "o",
+     "start": 41.549,
+     "end": 41.571
+    },
+    {
+     "w": "sapo",
+     "start": 41.617,
+     "end": 41.83
+    },
+    {
+     "w": "do",
+     "start": 41.852,
+     "end": 41.898
+    },
+    {
+     "w": "vizinho.",
+     "start": 41.92,
+     "end": 42.371
+    },
+    {
+     "w": "O",
+     "start": 42.63,
+     "end": 42.71
+    },
+    {
+     "w": "sapo",
+     "start": 42.8,
+     "end": 43.07
+    },
+    {
+     "w": "não",
+     "start": 43.092,
+     "end": 43.16
+    },
+    {
+     "w": "gostou.",
+     "start": 43.183,
+     "end": 43.656
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "text": "Sexta à noite, lanchonete. Entra um assaltante com um taco de alumínio. E alumínio não gruda em ímã.",
+   "start": 43.882,
+   "end": 49.585,
+   "words": [
+    {
+     "w": "Sexta",
+     "start": 43.882,
+     "end": 44.265
+    },
+    {
+     "w": "à",
+     "start": 44.299,
+     "end": 44.321
+    },
+    {
+     "w": "noite,",
+     "start": 44.366,
+     "end": 44.761
+    },
+    {
+     "w": "lanchonete.",
+     "start": 44.817,
+     "end": 45.617
+    },
+    {
+     "w": "Entra",
+     "start": 45.843,
+     "end": 46.148
+    },
+    {
+     "w": "um",
+     "start": 46.17,
+     "end": 46.238
+    },
+    {
+     "w": "assaltante",
+     "start": 46.283,
+     "end": 46.767
+    },
+    {
+     "w": "com",
+     "start": 46.813,
+     "end": 46.903
+    },
+    {
+     "w": "um",
+     "start": 46.948,
+     "end": 46.992
+    },
+    {
+     "w": "taco",
+     "start": 47.05,
+     "end": 47.251
+    },
+    {
+     "w": "de",
+     "start": 47.285,
+     "end": 47.331
+    },
+    {
+     "w": "alumínio.",
+     "start": 47.353,
+     "end": 47.827
+    },
+    {
+     "w": "E",
+     "start": 47.906,
+     "end": 47.974
+    },
+    {
+     "w": "alumínio",
+     "start": 48.03,
+     "end": 48.458
+    },
+    {
+     "w": "não",
+     "start": 48.525,
+     "end": 48.751
+    },
+    {
+     "w": "gruda",
+     "start": 48.796,
+     "end": 49.055
+    },
+    {
+     "w": "em",
+     "start": 49.078,
+     "end": 49.123
+    },
+    {
+     "w": "ímã.",
+     "start": 49.214,
+     "end": 49.585
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "text": "Mas o Davi liga e desliga o campo muito rápido. Isso cria corrente elétrica dentro do alumínio, e ele vira um ímã ao contrário. É a lei de Lenz.",
+   "start": 49.811,
+   "end": 57.802,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 49.811,
+     "end": 50.058
+    },
+    {
+     "w": "o",
+     "start": 50.115,
+     "end": 50.138
+    },
+    {
+     "w": "Davi",
+     "start": 50.183,
+     "end": 50.419
+    },
+    {
+     "w": "liga",
+     "start": 50.51,
+     "end": 50.825
+    },
+    {
+     "w": "e",
+     "start": 50.96,
+     "end": 51.05
+    },
+    {
+     "w": "desliga",
+     "start": 51.107,
+     "end": 51.513
+    },
+    {
+     "w": "o",
+     "start": 51.535,
+     "end": 51.557
+    },
+    {
+     "w": "campo",
+     "start": 51.591,
+     "end": 51.828
+    },
+    {
+     "w": "muito",
+     "start": 51.874,
+     "end": 52.189
+    },
+    {
+     "w": "rápido.",
+     "start": 52.246,
+     "end": 52.662
+    },
+    {
+     "w": "Isso",
+     "start": 52.887,
+     "end": 53.09
+    },
+    {
+     "w": "cria",
+     "start": 53.113,
+     "end": 53.35
+    },
+    {
+     "w": "corrente",
+     "start": 53.406,
+     "end": 53.687
+    },
+    {
+     "w": "elétrica",
+     "start": 53.711,
+     "end": 54.083
+    },
+    {
+     "w": "dentro",
+     "start": 54.161,
+     "end": 54.432
+    },
+    {
+     "w": "do",
+     "start": 54.465,
+     "end": 54.511
+    },
+    {
+     "w": "alumínio,",
+     "start": 54.533,
+     "end": 54.95
+    },
+    {
+     "w": "e",
+     "start": 55.041,
+     "end": 55.13
+    },
+    {
+     "w": "ele",
+     "start": 55.164,
+     "end": 55.277
+    },
+    {
+     "w": "vira",
+     "start": 55.311,
+     "end": 55.491
+    },
+    {
+     "w": "um",
+     "start": 55.514,
+     "end": 55.559
+    },
+    {
+     "w": "ímã",
+     "start": 55.638,
+     "end": 55.795
+    },
+    {
+     "w": "ao",
+     "start": 55.818,
+     "end": 55.885
+    },
+    {
+     "w": "contrário.",
+     "start": 55.919,
+     "end": 56.596
+    },
+    {
+     "w": "É",
+     "start": 56.956,
+     "end": 57.036
+    },
+    {
+     "w": "a",
+     "start": 57.125,
+     "end": 57.149
+    },
+    {
+     "w": "lei",
+     "start": 57.205,
+     "end": 57.295
+    },
+    {
+     "w": "de",
+     "start": 57.317,
+     "end": 57.362
+    },
+    {
+     "w": "Lenz.",
+     "start": 57.418,
+     "end": 57.802
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "text": "O taco é empurrado da mão do cara e voa longe.",
+   "start": 58.061,
+   "end": 60.372,
+   "words": [
+    {
+     "w": "O",
+     "start": 58.061,
+     "end": 58.129
+    },
+    {
+     "w": "taco",
+     "start": 58.208,
+     "end": 58.512
+    },
+    {
+     "w": "é",
+     "start": 58.535,
+     "end": 58.557
+    },
+    {
+     "w": "empurrado",
+     "start": 58.58,
+     "end": 58.985
+    },
+    {
+     "w": "da",
+     "start": 59.019,
+     "end": 59.076
+    },
+    {
+     "w": "mão",
+     "start": 59.11,
+     "end": 59.233
+    },
+    {
+     "w": "do",
+     "start": 59.267,
+     "end": 59.313
+    },
+    {
+     "w": "cara",
+     "start": 59.357,
+     "end": 59.606
+    },
+    {
+     "w": "e",
+     "start": 59.628,
+     "end": 59.65
+    },
+    {
+     "w": "voa",
+     "start": 59.718,
+     "end": 59.91
+    },
+    {
+     "w": "longe.",
+     "start": 59.944,
+     "end": 60.372
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "text": "O ladrão corre pra bicicleta. Bicicleta é pesada. Ele puxa só a corrente. Trezentos gramas.",
+   "start": 60.733,
+   "end": 65.59,
+   "words": [
+    {
+     "w": "O",
+     "start": 60.733,
+     "end": 60.766
+    },
+    {
+     "w": "ladrão",
+     "start": 60.822,
+     "end": 61.059
+    },
+    {
+     "w": "corre",
+     "start": 61.105,
+     "end": 61.262
+    },
+    {
+     "w": "pra",
+     "start": 61.284,
+     "end": 61.352
+    },
+    {
+     "w": "bicicleta.",
+     "start": 61.375,
+     "end": 61.939
+    },
+    {
+     "w": "Bicicleta",
+     "start": 62.198,
+     "end": 62.649
+    },
+    {
+     "w": "é",
+     "start": 62.694,
+     "end": 62.717
+    },
+    {
+     "w": "pesada.",
+     "start": 62.761,
+     "end": 63.37
+    },
+    {
+     "w": "Ele",
+     "start": 63.506,
+     "end": 63.652
+    },
+    {
+     "w": "puxa",
+     "start": 63.675,
+     "end": 63.878
+    },
+    {
+     "w": "só",
+     "start": 63.945,
+     "end": 64.081
+    },
+    {
+     "w": "a",
+     "start": 64.103,
+     "end": 64.125
+    },
+    {
+     "w": "corrente.",
+     "start": 64.148,
+     "end": 64.553
+    },
+    {
+     "w": "Trezentos",
+     "start": 64.655,
+     "end": 65.095
+    },
+    {
+     "w": "gramas.",
+     "start": 65.128,
+     "end": 65.59
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "text": "A polícia chegou, e o cara ainda tava pedalando.",
+   "start": 65.85,
+   "end": 68.059,
+   "words": [
+    {
+     "w": "A",
+     "start": 65.85,
+     "end": 65.907
+    },
+    {
+     "w": "polícia",
+     "start": 65.951,
+     "end": 66.211
+    },
+    {
+     "w": "chegou,",
+     "start": 66.233,
+     "end": 66.617
+    },
+    {
+     "w": "e",
+     "start": 66.717,
+     "end": 66.785
+    },
+    {
+     "w": "o",
+     "start": 66.819,
+     "end": 66.853
+    },
+    {
+     "w": "cara",
+     "start": 66.898,
+     "end": 67.079
+    },
+    {
+     "w": "ainda",
+     "start": 67.101,
+     "end": 67.27
+    },
+    {
+     "w": "tava",
+     "start": 67.304,
+     "end": 67.473
+    },
+    {
+     "w": "pedalando.",
+     "start": 67.496,
+     "end": 68.059
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "text": "Fim feliz? Quase. Na hora de pagar o lanche, o cartão não passou. Apagou. Era o décimo segundo.",
+   "start": 68.623,
+   "end": 74.744,
+   "words": [
+    {
+     "w": "Fim",
+     "start": 68.623,
+     "end": 68.758
+    },
+    {
+     "w": "feliz?",
+     "start": 68.792,
+     "end": 69.299
+    },
+    {
+     "w": "Quase.",
+     "start": 69.717,
+     "end": 70.257
+    },
+    {
+     "w": "Na",
+     "start": 70.675,
+     "end": 70.742
+    },
+    {
+     "w": "hora",
+     "start": 70.764,
+     "end": 70.878
+    },
+    {
+     "w": "de",
+     "start": 70.9,
+     "end": 70.945
+    },
+    {
+     "w": "pagar",
+     "start": 70.967,
+     "end": 71.137
+    },
+    {
+     "w": "o",
+     "start": 71.17,
+     "end": 71.193
+    },
+    {
+     "w": "lanche,",
+     "start": 71.238,
+     "end": 71.576
+    },
+    {
+     "w": "o",
+     "start": 71.7,
+     "end": 71.756
+    },
+    {
+     "w": "cartão",
+     "start": 71.779,
+     "end": 72.005
+    },
+    {
+     "w": "não",
+     "start": 72.027,
+     "end": 72.106
+    },
+    {
+     "w": "passou.",
+     "start": 72.128,
+     "end": 72.534
+    },
+    {
+     "w": "Apagou.",
+     "start": 72.67,
+     "end": 73.255
+    },
+    {
+     "w": "Era",
+     "start": 73.481,
+     "end": 73.65
+    },
+    {
+     "w": "o",
+     "start": 73.673,
+     "end": 73.695
+    },
+    {
+     "w": "décimo",
+     "start": 73.785,
+     "end": 74.225
+    },
+    {
+     "w": "segundo.",
+     "start": 74.282,
+     "end": 74.744
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "text": "E tu? O que tu ia puxar primeiro com esse poder? Comenta aí.",
+   "start": 74.913,
+   "end": 78.182,
+   "words": [
+    {
+     "w": "E",
+     "start": 74.913,
+     "end": 74.991
+    },
+    {
+     "w": "tu?",
+     "start": 75.059,
+     "end": 75.307
+    },
+    {
+     "w": "O",
+     "start": 75.792,
+     "end": 75.849
+    },
+    {
+     "w": "que",
+     "start": 75.893,
+     "end": 75.961
+    },
+    {
+     "w": "tu",
+     "start": 75.983,
+     "end": 76.04
+    },
+    {
+     "w": "ia",
+     "start": 76.062,
+     "end": 76.13
+    },
+    {
+     "w": "puxar",
+     "start": 76.164,
+     "end": 76.4
+    },
+    {
+     "w": "primeiro",
+     "start": 76.423,
+     "end": 76.683
+    },
+    {
+     "w": "com",
+     "start": 76.705,
+     "end": 76.795
+    },
+    {
+     "w": "esse",
+     "start": 76.851,
+     "end": 76.952
+    },
+    {
+     "w": "poder?",
+     "start": 76.986,
+     "end": 77.348
+    },
+    {
+     "w": "Comenta",
+     "start": 77.471,
+     "end": 77.82
+    },
+    {
+     "w": "aí.",
+     "start": 77.844,
+     "end": 78.182
+    }
+   ]
+  }
+ ]
+}

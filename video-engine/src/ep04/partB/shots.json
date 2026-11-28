@@ -1,0 +1,493 @@
+[
+ {
+  "id": "fachada",
+  "start": 43.882,
+  "end": 44.817,
+  "desc": "Exterior noturno da lanchonete, neon LANCHES piscando, Davi na janela",
+  "sfx": [
+   {
+    "t": 43.88,
+    "what": "ambiente lanchonete à noite (loop baixo) + zumbido de neon"
+   }
+  ]
+ },
+ {
+  "id": "balcao",
+  "start": 44.817,
+  "end": 45.843,
+  "desc": "Interior: Davi no banquinho comendo batata frita",
+  "sfx": [
+   {
+    "t": 44.82,
+    "what": "whoosh curto"
+   },
+   {
+    "t": 45.02,
+    "what": "mastigar/crocante"
+   }
+  ]
+ },
+ {
+  "id": "porta",
+  "start": 45.843,
+  "end": 47.05,
+  "desc": "Porta abre com sininho, assaltante encapuzado entra com taco de alumínio",
+  "sfx": [
+   {
+    "t": 45.84,
+    "what": "porta batendo + sininho da porta"
+   },
+   {
+    "t": 46.14,
+    "what": "passos"
+   }
+  ]
+ },
+ {
+  "id": "taco",
+  "start": 47.05,
+  "end": 47.906,
+  "desc": "Close do taco de alumínio com brilho; chip Al · ALUMÍNIO",
+  "sfx": [
+   {
+    "t": 47.35,
+    "what": "ting/brilho metálico"
+   },
+   {
+    "t": 47.05,
+    "what": "whoosh"
+   }
+  ]
+ },
+ {
+  "id": "tenta",
+  "start": 47.906,
+  "end": 48.796,
+  "desc": "Insert: ímã de ferradura passa pelo taco e nada acontece; \"?\"",
+  "sfx": [
+   {
+    "t": 48.31,
+    "what": "boing fraco/ploc"
+   }
+  ]
+ },
+ {
+  "id": "naomag",
+  "start": 48.796,
+  "end": 49.811,
+  "desc": "Assaltante debochado; carimbo ALUMÍNIO · NÃO MAGNÉTICO ✗",
+  "sfx": [
+   {
+    "t": 48.87,
+    "what": "carimbo (stamp)"
+   },
+   {
+    "t": 49.1,
+    "what": "batida leve do taco na mão (clang curto)"
+   }
+  ]
+ },
+ {
+  "id": "mas",
+  "start": 49.811,
+  "end": 50.51,
+  "desc": "Close do Davi com sorriso de canto; brilho no olho",
+  "sfx": [
+   {
+    "t": 49.81,
+    "what": "whoosh"
+   },
+   {
+    "t": 50.11,
+    "what": "ting de ideia"
+   }
+  ]
+ },
+ {
+  "id": "pisca",
+  "start": 50.51,
+  "end": 51.874,
+  "desc": "Mão do Davi piscando (estroboscópio) com arcos amarelos; LIGA / DESLIGA",
+  "sfx": [
+   {
+    "t": 50.51,
+    "what": "zumbido elétrico pulsando (buzz on/off ~6 Hz)"
+   }
+  ]
+ },
+ {
+  "id": "rapido",
+  "start": 51.874,
+  "end": 52.887,
+  "desc": "Plano geral: arcos atingem o taco, que vibra; chip 6× POR SEGUNDO",
+  "sfx": [
+   {
+    "t": 51.87,
+    "what": "buzz pulsando continua"
+   },
+   {
+    "t": 51.87,
+    "what": "vibração metálica do taco"
+   }
+  ]
+ },
+ {
+  "id": "xray1",
+  "start": 52.887,
+  "end": 54.161,
+  "desc": "Raio-X do taco: correntes circulares surgem; chip CORRENTE DE FOUCAULT",
+  "sfx": [
+   {
+    "t": 52.89,
+    "what": "whoosh + scanner"
+   },
+   {
+    "t": 53.39,
+    "what": "zumbido elétrico subindo"
+   }
+  ]
+ },
+ {
+  "id": "xray2",
+  "start": 54.161,
+  "end": 55.311,
+  "desc": "Zoom nas correntes de Foucault, elétrons girando",
+  "sfx": [
+   {
+    "t": 54.16,
+    "what": "zumbido elétrico rodando"
+   }
+  ]
+ },
+ {
+  "id": "contrario",
+  "start": 55.311,
+  "end": 56.956,
+  "desc": "N do Davi contra N induzido no taco: se empurram; PUSH!",
+  "sfx": [
+   {
+    "t": 55.91,
+    "what": "thump magnético / repulsão"
+   }
+  ]
+ },
+ {
+  "id": "lenz",
+  "start": 56.956,
+  "end": 58.061,
+  "desc": "Carimbo LEI DE LENZ (REAL · 1834) + chip CORRENTE DE FOUCAULT",
+  "sfx": [
+   {
+    "t": 57.41,
+    "what": "carimbo forte"
+   },
+   {
+    "t": 56.96,
+    "what": "buzz pulsando termina em 58.5"
+   }
+  ]
+ },
+ {
+  "id": "empurra",
+  "start": 58.061,
+  "end": 59.019,
+  "desc": "Arcos acertam o taco, que é arrancado da mão do ladrão",
+  "sfx": [
+   {
+    "t": 58.56,
+    "what": "TUNG/clang do taco"
+   },
+   {
+    "t": 58.56,
+    "what": "estalo elétrico"
+   }
+  ]
+ },
+ {
+  "id": "voa",
+  "start": 59.019,
+  "end": 59.944,
+  "desc": "Taco girando no ar atravessando a lanchonete",
+  "sfx": [
+   {
+    "t": 59.02,
+    "what": "whoosh giratório (spin)"
+   }
+  ]
+ },
+ {
+  "id": "crash",
+  "start": 59.944,
+  "end": 60.733,
+  "desc": "Taco bate no porta-guardanapo: CLANG, guardanapos voam",
+  "sfx": [
+   {
+    "t": 60.07,
+    "what": "clang metálico + clatter"
+   },
+   {
+    "t": 60.14,
+    "what": "papel voando"
+   }
+  ]
+ },
+ {
+  "id": "foge",
+  "start": 60.733,
+  "end": 62.198,
+  "desc": "Ladrão corre da lanchonete e pula na bicicleta",
+  "sfx": [
+   {
+    "t": 60.73,
+    "what": "passos correndo"
+   },
+   {
+    "t": 61.38,
+    "what": "bike: rangido/pedal"
+   }
+  ]
+ },
+ {
+  "id": "pesada",
+  "start": 62.198,
+  "end": 63.506,
+  "desc": "Davi tenta puxar a bicicleta, não mexe; BICICLETA 12 kg ✗",
+  "sfx": [
+   {
+    "t": 62.2,
+    "what": "esforço/gemido leve"
+   },
+   {
+    "t": 62.7,
+    "what": "erro/buzz negativo"
+   }
+  ]
+ },
+ {
+  "id": "corrente",
+  "start": 63.506,
+  "end": 64.655,
+  "desc": "Close da corrente: brilha, solta e voa pra mão do Davi (CLINK)",
+  "sfx": [
+   {
+    "t": 63.66,
+    "what": "zumbido elétrico"
+   },
+   {
+    "t": 63.95,
+    "what": "whoosh + chocalho de corrente"
+   },
+   {
+    "t": 64.15,
+    "what": "CLINK na mão"
+   }
+  ]
+ },
+ {
+  "id": "gramas",
+  "start": 64.655,
+  "end": 65.85,
+  "desc": "Davi segura a corrente orgulhoso; CORRENTE 300 g ✓; ladrão pedala sem corrente",
+  "sfx": [
+   {
+    "t": 64.66,
+    "what": "chocalho de corrente"
+   },
+   {
+    "t": 64.95,
+    "what": "ding de acerto"
+   },
+   {
+    "t": 64.86,
+    "what": "pedal girando em falso (tic-tic)"
+   }
+  ]
+ },
+ {
+  "id": "policia",
+  "start": 65.85,
+  "end": 66.717,
+  "desc": "Viatura chega derrapando com luzes vermelho/azul",
+  "sfx": [
+   {
+    "t": 65.85,
+    "what": "sirene"
+   },
+   {
+    "t": 66.18,
+    "what": "freada/derrapagem"
+   }
+  ]
+ },
+ {
+  "id": "pedala",
+  "start": 66.717,
+  "end": 67.496,
+  "desc": "Ladrão pedalando furiosamente sem sair do lugar (sem corrente), luzes da viatura",
+  "sfx": [
+   {
+    "t": 66.717,
+    "what": "pedal em falso acelerado (tic-tic-tic) + sirene ao fundo"
+   }
+  ]
+ },
+ {
+  "id": "freeze",
+  "start": 67.496,
+  "end": 68.623,
+  "desc": "Freeze cômico em \"pedalando\": quadro congelado + carimbo 0 km/h",
+  "sfx": [
+   {
+    "t": 67.5,
+    "what": "record stop/scratch"
+   },
+   {
+    "t": 67.55,
+    "what": "carimbo"
+   }
+  ]
+ },
+ {
+  "id": "fimfeliz",
+  "start": 68.623,
+  "end": 69.717,
+  "desc": "Davi comemora na lanchonete com a corrente de faixa; confete",
+  "sfx": [
+   {
+    "t": 68.62,
+    "what": "aplausos/vivas curtos + ding"
+   }
+  ]
+ },
+ {
+  "id": "quase",
+  "start": 69.717,
+  "end": 70.675,
+  "desc": "Freeze cinza, zoom no sorriso que murcha",
+  "sfx": [
+   {
+    "t": 69.72,
+    "what": "record scratch"
+   }
+  ]
+ },
+ {
+  "id": "pagar",
+  "start": 70.675,
+  "end": 71.7,
+  "desc": "Caixa: Davi aproxima o cartão da maquininha",
+  "sfx": [
+   {
+    "t": 70.67,
+    "what": "whoosh curto"
+   },
+   {
+    "t": 71.27,
+    "what": "bip de leitura"
+   }
+  ]
+ },
+ {
+  "id": "invalido",
+  "start": 71.7,
+  "end": 72.67,
+  "desc": "Maquininha: CARTÃO INVÁLIDO em vermelho",
+  "sfx": [
+   {
+    "t": 72.13,
+    "what": "bip de erro da maquininha (duplo)"
+   }
+  ]
+ },
+ {
+  "id": "apagou",
+  "start": 72.67,
+  "end": 73.481,
+  "desc": "Davi olha o verso do cartão com a tarja embaralhada, triste",
+  "sfx": [
+   {
+    "t": 72.77,
+    "what": "trombone triste (wah-wah) curto"
+   },
+   {
+    "t": 72.67,
+    "what": "estalo elétrico fraco"
+   }
+  ]
+ },
+ {
+  "id": "doze",
+  "start": 73.481,
+  "end": 74.913,
+  "desc": "Gaveta de cartões mortos; cartão 12 cai na pilha; CARTÕES PERDIDOS 11→12; carimbo Nº 12",
+  "sfx": [
+   {
+    "t": 73.78,
+    "what": "cartão caindo na pilha (clack)"
+   },
+   {
+    "t": 74.28,
+    "what": "carimbo"
+   }
+  ]
+ },
+ {
+  "id": "etu",
+  "start": 74.913,
+  "end": 75.792,
+  "desc": "Davi com o lanche aponta pra câmera",
+  "sfx": [
+   {
+    "t": 74.91,
+    "what": "whoosh"
+   }
+  ]
+ },
+ {
+  "id": "puxar",
+  "start": 75.792,
+  "end": 76.705,
+  "desc": "Clipe no balcão treme e levita com linhas amarelas",
+  "sfx": [
+   {
+    "t": 76.16,
+    "what": "zumbido magnético subindo"
+   }
+  ]
+ },
+ {
+  "id": "clipe",
+  "start": 76.705,
+  "end": 77.471,
+  "desc": "Clipe voa em direção à câmera",
+  "sfx": [
+   {
+    "t": 76.7,
+    "what": "whoosh crescente"
+   },
+   {
+    "t": 77.41,
+    "what": "tink no vidro"
+   }
+  ]
+ },
+ {
+  "id": "comenta",
+  "start": 77.471,
+  "end": 78.6,
+  "desc": "Clipe grudado na lente; Davi pisca no \"aí\"",
+  "sfx": [
+   {
+    "t": 77.84,
+    "what": "ding/brilho da piscada"
+   }
+  ]
+ },
+ {
+  "id": "black",
+  "start": 78.6,
+  "end": 79.48,
+  "desc": "Corte seco pro preto (cartão @Odavi_contos entra depois)",
+  "sfx": []
+ }
+]

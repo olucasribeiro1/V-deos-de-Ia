@@ -1,0 +1,534 @@
+[
+ {
+  "id": "open",
+  "start": 0.0,
+  "end": 1.533,
+  "desc": "Davi levanta a mão; lóbulos de campo amarelo/azul, porcas e clipes espiralando; HUD PODER: CONTROLAR METAL",
+  "sfx": [
+   {
+    "t": 0,
+    "what": "whoosh grave + zumbido magnético"
+   },
+   {
+    "t": 1.116,
+    "what": "impacto leve do HUD"
+   }
+  ]
+ },
+ {
+  "id": "orbit",
+  "start": 1.533,
+  "end": 2.728,
+  "desc": "Close da palma: clipes, chave e moedas orbitando a mão",
+  "sfx": [
+   {
+    "t": 1.533,
+    "what": "whip"
+   },
+   {
+    "t": 1.633,
+    "what": "tilintar metálico em loop"
+   }
+  ]
+ },
+ {
+  "id": "leve",
+  "start": 2.728,
+  "end": 3.675,
+  "desc": "Colher voa pra mão; haltere de 20 kg só treme (CLANK); chips LEVE ✓ / PESADO ✗",
+  "sfx": [
+   {
+    "t": 2.728,
+    "what": "whip vertical"
+   },
+   {
+    "t": 2.878,
+    "what": "colher zip + clank do haltere"
+   }
+  ]
+ },
+ {
+  "id": "grab",
+  "start": 3.675,
+  "end": 5.23,
+  "desc": "Quarto: clipe, chave e moeda voam pra mão em cada palavra",
+  "sfx": [
+   {
+    "t": 3.675,
+    "what": "zip + tic"
+   },
+   {
+    "t": 4.125,
+    "what": "zip + tilintar de chave"
+   },
+   {
+    "t": 4.553,
+    "what": "zip + moeda"
+   }
+  ]
+ },
+ {
+  "id": "car",
+  "start": 5.23,
+  "end": 6.741,
+  "desc": "Davi puxa um carro com tudo; nada. Carimbo CARRO 1.200 kg; push no rosto com veia e suor",
+  "sfx": [
+   {
+    "t": 5.388,
+    "what": "carimbo"
+   },
+   {
+    "t": 5.929,
+    "what": "esforço NNNGH + zumbido falhando"
+   }
+  ]
+ },
+ {
+  "id": "side",
+  "start": 6.741,
+  "end": 7.913,
+  "desc": "Davi anda até o caixa eletrônico; carimbo ⚠ EFEITO COLATERAL",
+  "sfx": [
+   {
+    "t": 6.741,
+    "what": "whip"
+   },
+   {
+    "t": 7.259,
+    "what": "carimbo de alerta"
+   }
+  ]
+ },
+ {
+  "id": "swipe",
+  "start": 7.913,
+  "end": 9.355,
+  "desc": "Mão leva o cartão ao leitor; a tarja chia e queima (BZZT)",
+  "sfx": [
+   {
+    "t": 7.913,
+    "what": "passos/whoosh"
+   },
+   {
+    "t": 8.69,
+    "what": "chiado elétrico BZZT"
+   }
+  ]
+ },
+ {
+  "id": "erro",
+  "start": 9.355,
+  "end": 9.976,
+  "desc": "Tela do caixa: ERRO / CARTÃO ILEGÍVEL, glitch vermelho",
+  "sfx": [
+   {
+    "t": 9.355,
+    "what": "bipe de erro BIIIP"
+   }
+  ]
+ },
+ {
+  "id": "drawer",
+  "start": 9.976,
+  "end": 11.047,
+  "desc": "Gaveta cheia de cartões riscados caindo; contador CARTÕES PERDIDOS: 11 no 'onze'",
+  "sfx": [
+   {
+    "t": 9.976,
+    "what": "gaveta abrindo + cartões caindo"
+   },
+   {
+    "t": 10.528,
+    "what": "carimbo"
+   }
+  ]
+ },
+ {
+  "id": "rub",
+  "start": 11.047,
+  "end": 11.779,
+  "desc": "Davi esfrega as mãos, faíscas e lóbulos de campo",
+  "sfx": [
+   {
+    "t": 11.047,
+    "what": "whip + faíscas"
+   }
+  ]
+ },
+ {
+  "id": "lobes",
+  "start": 11.779,
+  "end": 13.03,
+  "desc": "Livro: ímã em barra N/S com linhas de campo e limalha; MAGNETISMO",
+  "sfx": [
+   {
+    "t": 11.779,
+    "what": "virar página + ding"
+   }
+  ]
+ },
+ {
+  "id": "lines",
+  "start": 13.03,
+  "end": 14.067,
+  "desc": "Linhas de campo saindo da palma ficando ralas com a distância; régua 1-2-3 cm",
+  "sfx": [
+   {
+    "t": 13.03,
+    "what": "whoosh"
+   }
+  ]
+ },
+ {
+  "id": "graph",
+  "start": 14.067,
+  "end": 15.454,
+  "desc": "Gráfico campo × distância despencando; bolinha escorrega",
+  "sfx": [
+   {
+    "t": 14.067,
+    "what": "traço de giz"
+   },
+   {
+    "t": 14.879,
+    "what": "queda (fiuu)"
+   }
+  ]
+ },
+ {
+  "id": "lanes",
+  "start": 15.454,
+  "end": 16.536,
+  "desc": "Dois trilhos: clipe a 1 cm voa; clipe a 2 cm mal se mexe",
+  "sfx": [
+   {
+    "t": 15.454,
+    "what": "zip + tic"
+   },
+   {
+    "t": 15.859,
+    "what": "tic fraquinho"
+   }
+  ]
+ },
+ {
+  "id": "eight",
+  "start": 16.536,
+  "end": 18.227,
+  "desc": "Barras: 8 → 1; chip 2× DISTÂNCIA = CAMPO ÷ 8",
+  "sfx": [
+   {
+    "t": 16.885,
+    "what": "queda de barras"
+   },
+   {
+    "t": 17.1,
+    "what": "carimbo"
+   }
+  ]
+ },
+ {
+  "id": "orbit2",
+  "start": 18.227,
+  "end": 19.377,
+  "desc": "Davi no sofá, clipes e moedas orbitando bem perto da mão",
+  "sfx": [
+   {
+    "t": 18.227,
+    "what": "whip + tilintar"
+   }
+  ]
+ },
+ {
+  "id": "close",
+  "start": 19.377,
+  "end": 20.504,
+  "desc": "Davi chega a mão a 1 cm de um clipe e ele pula; chips LEVE ✓ PERTO ✓",
+  "sfx": [
+   {
+    "t": 19.377,
+    "what": "tic"
+   },
+   {
+    "t": 19.883,
+    "what": "ding"
+   }
+  ]
+ },
+ {
+  "id": "table",
+  "start": 20.504,
+  "end": 22.015,
+  "desc": "Mesa de teste com 6 objetos; Davi paira a mão",
+  "sfx": [
+   {
+    "t": 20.504,
+    "what": "whip"
+   }
+  ]
+ },
+ {
+  "id": "stick",
+  "start": 22.015,
+  "end": 23.265,
+  "desc": "Prego, moeda e tesoura grudam na palma; tabela Fe Ni Co acende",
+  "sfx": [
+   {
+    "t": 22.015,
+    "what": "clank"
+   },
+   {
+    "t": 22.409,
+    "what": "clank"
+   },
+   {
+    "t": 22.781,
+    "what": "clank"
+   }
+  ]
+ },
+ {
+  "id": "grudam",
+  "start": 23.265,
+  "end": 23.885,
+  "desc": "Mão cheia de metal grudado; chip ✓ FERRO NÍQUEL COBALTO",
+  "sfx": [
+   {
+    "t": 23.265,
+    "what": "ding positivo"
+   }
+  ]
+ },
+ {
+  "id": "nope",
+  "start": 23.885,
+  "end": 25.091,
+  "desc": "Latinha, fio de cobre e anel ficam parados; ✗ Al Cu Au",
+  "sfx": [
+   {
+    "t": 23.885,
+    "what": "buzzer de erro"
+   },
+   {
+    "t": 24.584,
+    "what": "buzzer"
+   },
+   {
+    "t": 25.091,
+    "what": "buzzer"
+   }
+  ]
+ },
+ {
+  "id": "frustr",
+  "start": 25.091,
+  "end": 25.858,
+  "desc": "Davi frustrado soltando fumaça; carimbo ✗ ALUMÍNIO COBRE OURO",
+  "sfx": [
+   {
+    "t": 25.091,
+    "what": "carimbo + bufada"
+   }
+  ]
+ },
+ {
+  "id": "idea",
+  "start": 25.858,
+  "end": 27.076,
+  "desc": "Davi lendo livro de física; lâmpada acende",
+  "sfx": [
+   {
+    "t": 25.858,
+    "what": "virar página"
+   },
+   {
+    "t": 26.602,
+    "what": "ding de ideia"
+   }
+  ]
+ },
+ {
+  "id": "universe",
+  "start": 27.076,
+  "end": 28.653,
+  "desc": "Espaço: planeta, maçã, pato, gato flutuando, cada um com setinhas do campo",
+  "sfx": [
+   {
+    "t": 27.076,
+    "what": "whoosh cósmico"
+   }
+  ]
+ },
+ {
+  "id": "wobble",
+  "start": 28.653,
+  "end": 29.453,
+  "desc": "Morango, lápis e patinho tremem um pouquinho perto do campo",
+  "sfx": [
+   {
+    "t": 28.653,
+    "what": "tremidinha"
+   }
+  ]
+ },
+ {
+  "id": "water",
+  "start": 29.453,
+  "end": 31.133,
+  "desc": "Copo d'água com afundamento na superfície e moléculas fugindo do ímã; chip DIAMAGNETISMO (real)",
+  "sfx": [
+   {
+    "t": 29.453,
+    "what": "bolhas/água"
+   },
+   {
+    "t": 30.727,
+    "what": "ding"
+   }
+  ]
+ },
+ {
+  "id": "tu",
+  "start": 31.133,
+  "end": 32.159,
+  "desc": "Davi aponta pra câmera no 'tu'",
+  "sfx": [
+   {
+    "t": 31.438,
+    "what": "whoosh + ponto"
+   }
+  ]
+ },
+ {
+  "id": "year",
+  "start": 32.159,
+  "end": 33.162,
+  "desc": "Livro: calendário vira até 1997; NIJMEGEN · HOLANDA",
+  "sfx": [
+   {
+    "t": 32.159,
+    "what": "calendário folheando"
+   }
+  ]
+ },
+ {
+  "id": "lab",
+  "start": 33.162,
+  "end": 34.177,
+  "desc": "Laboratório: cientistas, ímã de tubo gigante; sapinho baixando",
+  "sfx": [
+   {
+    "t": 33.162,
+    "what": "hum de laboratório"
+   }
+  ]
+ },
+ {
+  "id": "float",
+  "start": 34.177,
+  "end": 35.123,
+  "desc": "Corte do tubo: sapo flutuando na abertura",
+  "sfx": [
+   {
+    "t": 34.177,
+    "what": "zumbido + boing"
+   }
+  ]
+ },
+ {
+  "id": "sixteen",
+  "start": 35.123,
+  "end": 36.465,
+  "desc": "Close nas bobinas; 16 T em rosa",
+  "sfx": [
+   {
+    "t": 35.45,
+    "what": "impacto do HUD"
+   }
+  ]
+ },
+ {
+  "id": "ruler",
+  "start": 36.465,
+  "end": 37.795,
+  "desc": "Régua de escala log TERRA → SAPO; ×300.000",
+  "sfx": [
+   {
+    "t": 36.465,
+    "what": "subida rápida"
+   },
+   {
+    "t": 37.13,
+    "what": "carimbo"
+   }
+  ]
+ },
+ {
+  "id": "earth",
+  "start": 37.795,
+  "end": 38.64,
+  "desc": "Terra com campo fraquinho e bússola; TERRA 0,00005 T",
+  "sfx": [
+   {
+    "t": 37.795,
+    "what": "whoosh"
+   }
+  ]
+ },
+ {
+  "id": "train",
+  "start": 38.64,
+  "end": 39.598,
+  "desc": "Treino: Davi suando, energia amarela, chip TREINO · DIA 47",
+  "sfx": [
+   {
+    "t": 38.64,
+    "what": "esforço + zumbido"
+   }
+  ]
+ },
+ {
+  "id": "drop",
+  "start": 39.598,
+  "end": 41.041,
+  "desc": "Uma gota d'água sobe e flutua sobre a palma",
+  "sfx": [
+   {
+    "t": 40.162,
+    "what": "plic + brilho"
+   }
+  ]
+ },
+ {
+  "id": "neighbor",
+  "start": 41.041,
+  "end": 42.63,
+  "desc": "Quintal do vizinho: sapo sobe da lagoa e flutua por cima da cerca",
+  "sfx": [
+   {
+    "t": 41.041,
+    "what": "boing"
+   },
+   {
+    "t": 41.617,
+    "what": "coaxar"
+   }
+  ]
+ },
+ {
+  "id": "annoyed",
+  "start": 42.63,
+  "end": 43.882,
+  "desc": "Sapo flutuando de braços cruzados e cara brava; SAPO: ☹",
+  "sfx": [
+   {
+    "t": 43.092,
+    "what": "coaxar irritado"
+   },
+   {
+    "t": 43.183,
+    "what": "carimbo"
+   }
+  ]
+ }
+]

@@ -1,0 +1,2485 @@
+{
+ "fps": 30,
+ "fonte": "Sem Marca Ep1 v2 (clipes aprovados, sem regerar)",
+ "duration": 134.606,
+ "lines": [
+  {
+   "id": "n01",
+   "spk": "NARRADOR",
+   "text": "Você morreu salvando um gato. Sério.",
+   "start": 0.3,
+   "end": 2.332,
+   "words": [
+    {
+     "w": "Você",
+     "start": 0.362,
+     "end": 0.546
+    },
+    {
+     "w": "morreu",
+     "start": 0.608,
+     "end": 0.915
+    },
+    {
+     "w": "salvando",
+     "start": 1.008,
+     "end": 1.223
+    },
+    {
+     "w": "um",
+     "start": 1.285,
+     "end": 1.346
+    },
+    {
+     "w": "gato.",
+     "start": 1.408,
+     "end": 1.808
+    },
+    {
+     "w": "Sério.",
+     "start": 1.962,
+     "end": 2.332
+    }
+   ]
+  },
+  {
+   "id": "n02",
+   "spk": "NARRADOR",
+   "text": "O bichano tava parado no meio da avenida, o caminhão vinha voando, e você nem pensou: pulou, empurrou o gato pra calçada...",
+   "start": 2.432,
+   "end": 7.667,
+   "words": [
+    {
+     "w": "O",
+     "start": 2.488,
+     "end": 2.494
+    },
+    {
+     "w": "bichano",
+     "start": 2.525,
+     "end": 2.802
+    },
+    {
+     "w": "tava",
+     "start": 2.863,
+     "end": 2.986
+    },
+    {
+     "w": "parado",
+     "start": 3.048,
+     "end": 3.232
+    },
+    {
+     "w": "no",
+     "start": 3.325,
+     "end": 3.417
+    },
+    {
+     "w": "meio",
+     "start": 3.448,
+     "end": 3.602
+    },
+    {
+     "w": "da",
+     "start": 3.622,
+     "end": 3.642
+    },
+    {
+     "w": "avenida,",
+     "start": 3.663,
+     "end": 4.063
+    },
+    {
+     "w": "o",
+     "start": 4.155,
+     "end": 4.217
+    },
+    {
+     "w": "caminhão",
+     "start": 4.248,
+     "end": 4.525
+    },
+    {
+     "w": "vinha",
+     "start": 4.555,
+     "end": 4.709
+    },
+    {
+     "w": "voando,",
+     "start": 4.771,
+     "end": 5.171
+    },
+    {
+     "w": "e",
+     "start": 5.202,
+     "end": 5.232
+    },
+    {
+     "w": "você",
+     "start": 5.263,
+     "end": 5.448
+    },
+    {
+     "w": "nem",
+     "start": 5.488,
+     "end": 5.571
+    },
+    {
+     "w": "pensou:",
+     "start": 5.602,
+     "end": 6.022
+    },
+    {
+     "w": "pulou,",
+     "start": 6.042,
+     "end": 6.402
+    },
+    {
+     "w": "empurrou",
+     "start": 6.432,
+     "end": 6.74
+    },
+    {
+     "w": "o",
+     "start": 6.771,
+     "end": 6.802
+    },
+    {
+     "w": "gato",
+     "start": 6.832,
+     "end": 6.986
+    },
+    {
+     "w": "pra",
+     "start": 7.017,
+     "end": 7.048
+    },
+    {
+     "w": "calçada...",
+     "start": 7.14,
+     "end": 7.663
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "spk": "NARRADOR",
+   "text": "O gato saiu ileso. Você... virou estatística.",
+   "start": 7.817,
+   "end": 10.97,
+   "words": [
+    {
+     "w": "O",
+     "start": 7.878,
+     "end": 7.94
+    },
+    {
+     "w": "gato",
+     "start": 8.002,
+     "end": 8.248
+    },
+    {
+     "w": "saiu",
+     "start": 8.309,
+     "end": 8.494
+    },
+    {
+     "w": "ileso.",
+     "start": 8.617,
+     "end": 9.109
+    },
+    {
+     "w": "Você...",
+     "start": 9.294,
+     "end": 9.971
+    },
+    {
+     "w": "virou",
+     "start": 10.032,
+     "end": 10.155
+    },
+    {
+     "w": "estatística.",
+     "start": 10.217,
+     "end": 10.97
+    }
+   ]
+  },
+  {
+   "id": "n04",
+   "spk": "NARRADOR",
+   "text": "Aí você abre o olho. Céu azul, duas luas lá em cima... e um dragão do tamanho de um prédio passa raspando na sua cabeça.",
+   "start": 11.32,
+   "end": 16.93,
+   "words": [
+    {
+     "w": "Aí",
+     "start": 11.435,
+     "end": 11.474
+    },
+    {
+     "w": "você",
+     "start": 11.505,
+     "end": 11.628
+    },
+    {
+     "w": "abre",
+     "start": 11.689,
+     "end": 11.813
+    },
+    {
+     "w": "o",
+     "start": 11.843,
+     "end": 11.874
+    },
+    {
+     "w": "olho.",
+     "start": 11.936,
+     "end": 12.213
+    },
+    {
+     "w": "Céu",
+     "start": 12.366,
+     "end": 12.52
+    },
+    {
+     "w": "azul,",
+     "start": 12.551,
+     "end": 12.951
+    },
+    {
+     "w": "duas",
+     "start": 13.043,
+     "end": 13.289
+    },
+    {
+     "w": "luas",
+     "start": 13.351,
+     "end": 13.536
+    },
+    {
+     "w": "lá",
+     "start": 13.566,
+     "end": 13.597
+    },
+    {
+     "w": "em",
+     "start": 13.659,
+     "end": 13.72
+    },
+    {
+     "w": "cima...",
+     "start": 13.782,
+     "end": 14.182
+    },
+    {
+     "w": "e",
+     "start": 14.213,
+     "end": 14.243
+    },
+    {
+     "w": "um",
+     "start": 14.274,
+     "end": 14.336
+    },
+    {
+     "w": "dragão",
+     "start": 14.459,
+     "end": 14.643
+    },
+    {
+     "w": "do",
+     "start": 14.705,
+     "end": 14.766
+    },
+    {
+     "w": "tamanho",
+     "start": 14.849,
+     "end": 15.013
+    },
+    {
+     "w": "de",
+     "start": 15.043,
+     "end": 15.074
+    },
+    {
+     "w": "um",
+     "start": 15.166,
+     "end": 15.259
+    },
+    {
+     "w": "prédio",
+     "start": 15.32,
+     "end": 15.566
+    },
+    {
+     "w": "passa",
+     "start": 15.628,
+     "end": 15.751
+    },
+    {
+     "w": "raspando",
+     "start": 15.874,
+     "end": 16.182
+    },
+    {
+     "w": "na",
+     "start": 16.243,
+     "end": 16.305
+    },
+    {
+     "w": "sua",
+     "start": 16.346,
+     "end": 16.428
+    },
+    {
+     "w": "cabeça.",
+     "start": 16.459,
+     "end": 16.93
+    }
+   ]
+  },
+  {
+   "id": "n04b",
+   "spk": "NARRADOR",
+   "text": "Eita, porra!",
+   "start": 16.98,
+   "end": 18.278,
+   "words": [
+    {
+     "w": "Eita,",
+     "start": 17.103,
+     "end": 17.503
+    },
+    {
+     "w": "P*RRA!",
+     "start": 17.596,
+     "end": 18.272
+    }
+   ]
+  },
+  {
+   "id": "n05",
+   "spk": "NARRADOR",
+   "text": "É, parceiro. Você foi parar em outro mundo. E na sua frente aparece uma tela, igual de videogame:",
+   "start": 18.428,
+   "end": 23.05,
+   "words": [
+    {
+     "w": "É,",
+     "start": 18.858,
+     "end": 18.889
+    },
+    {
+     "w": "parceiro.",
+     "start": 18.905,
+     "end": 19.412
+    },
+    {
+     "w": "Você",
+     "start": 19.474,
+     "end": 19.535
+    },
+    {
+     "w": "foi",
+     "start": 19.597,
+     "end": 19.699
+    },
+    {
+     "w": "parar",
+     "start": 19.741,
+     "end": 19.843
+    },
+    {
+     "w": "em",
+     "start": 19.905,
+     "end": 19.966
+    },
+    {
+     "w": "outro",
+     "start": 20.028,
+     "end": 20.274
+    },
+    {
+     "w": "mundo.",
+     "start": 20.335,
+     "end": 20.848
+    },
+    {
+     "w": "E",
+     "start": 20.868,
+     "end": 20.889
+    },
+    {
+     "w": "na",
+     "start": 20.951,
+     "end": 21.012
+    },
+    {
+     "w": "sua",
+     "start": 21.074,
+     "end": 21.197
+    },
+    {
+     "w": "frente",
+     "start": 21.258,
+     "end": 21.382
+    },
+    {
+     "w": "aparece",
+     "start": 21.443,
+     "end": 21.628
+    },
+    {
+     "w": "uma",
+     "start": 21.689,
+     "end": 21.874
+    },
+    {
+     "w": "tela,",
+     "start": 21.976,
+     "end": 22.212
+    },
+    {
+     "w": "igual",
+     "start": 22.243,
+     "end": 22.428
+    },
+    {
+     "w": "de",
+     "start": 22.458,
+     "end": 22.489
+    },
+    {
+     "w": "videogame:",
+     "start": 22.551,
+     "end": 23.05
+    }
+   ]
+  },
+  {
+   "id": "n06",
+   "spk": "NARRADOR",
+   "text": "Nível zero. Força dez, velocidade oito, inteligência doze. Matou monstro, tudo sobe. Menos uma coisa: a magia. Essa tá travada no zero.",
+   "start": 23.15,
+   "end": 30.233,
+   "words": [
+    {
+     "w": "Nível",
+     "start": 23.211,
+     "end": 23.396
+    },
+    {
+     "w": "zero.",
+     "start": 23.457,
+     "end": 23.765
+    },
+    {
+     "w": "Força",
+     "start": 23.888,
+     "end": 24.134
+    },
+    {
+     "w": "dez,",
+     "start": 24.257,
+     "end": 24.411
+    },
+    {
+     "w": "velocidade",
+     "start": 24.442,
+     "end": 24.873
+    },
+    {
+     "w": "oito,",
+     "start": 24.934,
+     "end": 25.15
+    },
+    {
+     "w": "inteligência",
+     "start": 25.18,
+     "end": 25.673
+    },
+    {
+     "w": "doze.",
+     "start": 25.734,
+     "end": 26.165
+    },
+    {
+     "w": "Matou",
+     "start": 26.227,
+     "end": 26.35
+    },
+    {
+     "w": "monstro,",
+     "start": 26.411,
+     "end": 26.842
+    },
+    {
+     "w": "tudo",
+     "start": 26.903,
+     "end": 27.027
+    },
+    {
+     "w": "sobe.",
+     "start": 27.057,
+     "end": 27.519
+    },
+    {
+     "w": "Menos",
+     "start": 27.55,
+     "end": 27.642
+    },
+    {
+     "w": "uma",
+     "start": 27.703,
+     "end": 27.765
+    },
+    {
+     "w": "coisa:",
+     "start": 27.827,
+     "end": 28.257
+    },
+    {
+     "w": "a",
+     "start": 28.278,
+     "end": 28.298
+    },
+    {
+     "w": "magia.",
+     "start": 28.319,
+     "end": 28.934
+    },
+    {
+     "w": "Essa",
+     "start": 28.996,
+     "end": 29.242
+    },
+    {
+     "w": "tá",
+     "start": 29.303,
+     "end": 29.365
+    },
+    {
+     "w": "travada",
+     "start": 29.396,
+     "end": 29.673
+    },
+    {
+     "w": "no",
+     "start": 29.734,
+     "end": 29.796
+    },
+    {
+     "w": "zero.",
+     "start": 29.857,
+     "end": 30.233
+    }
+   ]
+  },
+  {
+   "id": "n07",
+   "spk": "NARRADOR",
+   "text": "Esse mundo se chama Aldoria e tem quatro nações. No norte, os elfos: arco e cura. Nas montanhas, os anões, os melhores ferreiros que existem. No centro, o reino humano, governado pelo Rei Mago. E no sul, de onde ninguém volta... o Rei Demônio.",
+   "start": 30.433,
+   "end": 41.942,
+   "words": [
+    {
+     "w": "Esse",
+     "start": 30.546,
+     "end": 30.618
+    },
+    {
+     "w": "mundo",
+     "start": 30.679,
+     "end": 30.802
+    },
+    {
+     "w": "se",
+     "start": 30.864,
+     "end": 30.987
+    },
+    {
+     "w": "chama",
+     "start": 31.018,
+     "end": 31.172
+    },
+    {
+     "w": "Aldoria",
+     "start": 31.233,
+     "end": 31.602
+    },
+    {
+     "w": "e",
+     "start": 31.633,
+     "end": 31.664
+    },
+    {
+     "w": "tem",
+     "start": 31.725,
+     "end": 31.91
+    },
+    {
+     "w": "quatro",
+     "start": 31.972,
+     "end": 32.095
+    },
+    {
+     "w": "nações.",
+     "start": 32.156,
+     "end": 32.792
+    },
+    {
+     "w": "No",
+     "start": 32.812,
+     "end": 32.833
+    },
+    {
+     "w": "norte,",
+     "start": 32.895,
+     "end": 33.243
+    },
+    {
+     "w": "os",
+     "start": 33.285,
+     "end": 33.325
+    },
+    {
+     "w": "elfos:",
+     "start": 33.387,
+     "end": 33.848
+    },
+    {
+     "w": "arco",
+     "start": 33.879,
+     "end": 34.125
+    },
+    {
+     "w": "e",
+     "start": 34.187,
+     "end": 34.248
+    },
+    {
+     "w": "cura.",
+     "start": 34.464,
+     "end": 34.7
+    },
+    {
+     "w": "Nas",
+     "start": 34.72,
+     "end": 34.802
+    },
+    {
+     "w": "montanhas,",
+     "start": 34.895,
+     "end": 35.274
+    },
+    {
+     "w": "os",
+     "start": 35.315,
+     "end": 35.356
+    },
+    {
+     "w": "anões,",
+     "start": 35.418,
+     "end": 35.695
+    },
+    {
+     "w": "os",
+     "start": 35.725,
+     "end": 35.787
+    },
+    {
+     "w": "melhores",
+     "start": 35.848,
+     "end": 36.156
+    },
+    {
+     "w": "ferreiros",
+     "start": 36.218,
+     "end": 36.525
+    },
+    {
+     "w": "que",
+     "start": 36.556,
+     "end": 36.587
+    },
+    {
+     "w": "existem.",
+     "start": 36.648,
+     "end": 37.12
+    },
+    {
+     "w": "No",
+     "start": 37.162,
+     "end": 37.202
+    },
+    {
+     "w": "centro,",
+     "start": 37.264,
+     "end": 37.592
+    },
+    {
+     "w": "o",
+     "start": 37.612,
+     "end": 37.633
+    },
+    {
+     "w": "reino",
+     "start": 37.695,
+     "end": 37.818
+    },
+    {
+     "w": "humano,",
+     "start": 37.941,
+     "end": 38.218
+    },
+    {
+     "w": "governado",
+     "start": 38.248,
+     "end": 38.618
+    },
+    {
+     "w": "pelo",
+     "start": 38.648,
+     "end": 38.802
+    },
+    {
+     "w": "Rei",
+     "start": 38.833,
+     "end": 38.925
+    },
+    {
+     "w": "Mago.",
+     "start": 38.987,
+     "end": 39.377
+    },
+    {
+     "w": "E",
+     "start": 39.397,
+     "end": 39.418
+    },
+    {
+     "w": "no",
+     "start": 39.479,
+     "end": 39.602
+    },
+    {
+     "w": "sul,",
+     "start": 39.633,
+     "end": 39.931
+    },
+    {
+     "w": "de",
+     "start": 39.951,
+     "end": 39.972
+    },
+    {
+     "w": "onde",
+     "start": 40.064,
+     "end": 40.156
+    },
+    {
+     "w": "ninguém",
+     "start": 40.218,
+     "end": 40.464
+    },
+    {
+     "w": "volta...",
+     "start": 40.556,
+     "end": 40.987
+    },
+    {
+     "w": "o",
+     "start": 41.018,
+     "end": 41.079
+    },
+    {
+     "w": "Rei",
+     "start": 41.141,
+     "end": 41.264
+    },
+    {
+     "w": "Demônio.",
+     "start": 41.325,
+     "end": 41.941
+    }
+   ]
+  },
+  {
+   "id": "n08",
+   "spk": "NARRADOR",
+   "text": "E aqui todo mundo nasce com uma marca no rosto. Uma linha? Elite. Duas? Soldado, ferreiro. Três? Trabalho pesado, e ninguém nem olha na sua cara.",
+   "start": 42.142,
+   "end": 49.533,
+   "words": [
+    {
+     "w": "E",
+     "start": 42.199,
+     "end": 42.204
+    },
+    {
+     "w": "aqui",
+     "start": 42.265,
+     "end": 42.512
+    },
+    {
+     "w": "todo",
+     "start": 42.604,
+     "end": 42.696
+    },
+    {
+     "w": "mundo",
+     "start": 42.758,
+     "end": 42.942
+    },
+    {
+     "w": "nasce",
+     "start": 43.035,
+     "end": 43.189
+    },
+    {
+     "w": "com",
+     "start": 43.219,
+     "end": 43.25
+    },
+    {
+     "w": "uma",
+     "start": 43.312,
+     "end": 43.435
+    },
+    {
+     "w": "marca",
+     "start": 43.558,
+     "end": 43.681
+    },
+    {
+     "w": "no",
+     "start": 43.712,
+     "end": 43.742
+    },
+    {
+     "w": "rosto.",
+     "start": 43.835,
+     "end": 44.255
+    },
+    {
+     "w": "Uma",
+     "start": 44.275,
+     "end": 44.358
+    },
+    {
+     "w": "linha?",
+     "start": 44.419,
+     "end": 45.035
+    },
+    {
+     "w": "Elite.",
+     "start": 45.219,
+     "end": 45.445
+    },
+    {
+     "w": "Duas?",
+     "start": 45.486,
+     "end": 45.865
+    },
+    {
+     "w": "Soldado,",
+     "start": 45.896,
+     "end": 46.368
+    },
+    {
+     "w": "ferreiro.",
+     "start": 46.409,
+     "end": 46.922
+    },
+    {
+     "w": "Três?",
+     "start": 46.963,
+     "end": 47.394
+    },
+    {
+     "w": "Trabalho",
+     "start": 47.414,
+     "end": 47.619
+    },
+    {
+     "w": "pesado,",
+     "start": 47.773,
+     "end": 48.132
+    },
+    {
+     "w": "e",
+     "start": 48.152,
+     "end": 48.173
+    },
+    {
+     "w": "ninguém",
+     "start": 48.235,
+     "end": 48.542
+    },
+    {
+     "w": "nem",
+     "start": 48.573,
+     "end": 48.727
+    },
+    {
+     "w": "olha",
+     "start": 48.789,
+     "end": 48.912
+    },
+    {
+     "w": "na",
+     "start": 48.973,
+     "end": 49.035
+    },
+    {
+     "w": "sua",
+     "start": 49.075,
+     "end": 49.158
+    },
+    {
+     "w": "cara.",
+     "start": 49.219,
+     "end": 49.533
+    }
+   ]
+  },
+  {
+   "id": "n09",
+   "spk": "NARRADOR",
+   "text": "E a cor é o elemento. E repara: não é truque, é física.",
+   "start": 49.633,
+   "end": 52.962,
+   "words": [
+    {
+     "w": "E",
+     "start": 49.69,
+     "end": 49.694
+    },
+    {
+     "w": "a",
+     "start": 49.725,
+     "end": 49.756
+    },
+    {
+     "w": "cor",
+     "start": 49.879,
+     "end": 50.063
+    },
+    {
+     "w": "é",
+     "start": 50.125,
+     "end": 50.186
+    },
+    {
+     "w": "o",
+     "start": 50.217,
+     "end": 50.248
+    },
+    {
+     "w": "elemento.",
+     "start": 50.494,
+     "end": 50.956
+    },
+    {
+     "w": "E",
+     "start": 50.986,
+     "end": 51.017
+    },
+    {
+     "w": "repara:",
+     "start": 51.048,
+     "end": 51.54
+    },
+    {
+     "w": "não",
+     "start": 51.602,
+     "end": 51.663
+    },
+    {
+     "w": "é",
+     "start": 51.725,
+     "end": 51.786
+    },
+    {
+     "w": "truque,",
+     "start": 51.879,
+     "end": 52.217
+    },
+    {
+     "w": "é",
+     "start": 52.279,
+     "end": 52.402
+    },
+    {
+     "w": "física.",
+     "start": 52.463,
+     "end": 52.962
+    }
+   ]
+  },
+  {
+   "id": "n09a",
+   "spk": "NARRADOR",
+   "text": "Vermelha, fogo. O mago junta calor, combustível e oxigênio, o tal triângulo do fogo, e solta tudo num jato.",
+   "start": 53.082,
+   "end": 58.936,
+   "words": [
+    {
+     "w": "Vermelha,",
+     "start": 53.294,
+     "end": 53.636
+    },
+    {
+     "w": "fogo.",
+     "start": 53.759,
+     "end": 54.159
+    },
+    {
+     "w": "O",
+     "start": 54.313,
+     "end": 54.374
+    },
+    {
+     "w": "mago",
+     "start": 54.405,
+     "end": 54.62
+    },
+    {
+     "w": "junta",
+     "start": 54.651,
+     "end": 54.805
+    },
+    {
+     "w": "calor,",
+     "start": 54.866,
+     "end": 55.236
+    },
+    {
+     "w": "combustível",
+     "start": 55.297,
+     "end": 55.851
+    },
+    {
+     "w": "e",
+     "start": 55.882,
+     "end": 55.913
+    },
+    {
+     "w": "oxigênio,",
+     "start": 55.974,
+     "end": 56.497
+    },
+    {
+     "w": "o",
+     "start": 56.59,
+     "end": 56.651
+    },
+    {
+     "w": "tal",
+     "start": 56.743,
+     "end": 56.836
+    },
+    {
+     "w": "triângulo",
+     "start": 56.897,
+     "end": 57.143
+    },
+    {
+     "w": "do",
+     "start": 57.205,
+     "end": 57.266
+    },
+    {
+     "w": "fogo,",
+     "start": 57.328,
+     "end": 57.738
+    },
+    {
+     "w": "e",
+     "start": 57.78,
+     "end": 57.82
+    },
+    {
+     "w": "solta",
+     "start": 57.913,
+     "end": 58.19
+    },
+    {
+     "w": "tudo",
+     "start": 58.22,
+     "end": 58.374
+    },
+    {
+     "w": "num",
+     "start": 58.436,
+     "end": 58.497
+    },
+    {
+     "w": "jato.",
+     "start": 58.559,
+     "end": 58.936
+    }
+   ]
+  },
+  {
+   "id": "n09b",
+   "spk": "NARRADOR",
+   "text": "Azul, água. O ar tá cheio de vapor invisível. Ele esfria o ar em volta da mão, o vapor condensa e vira água, igual copo gelado suando.",
+   "start": 59.056,
+   "end": 65.532,
+   "words": [
+    {
+     "w": "Azul,",
+     "start": 59.225,
+     "end": 59.486
+    },
+    {
+     "w": "água.",
+     "start": 59.609,
+     "end": 59.979
+    },
+    {
+     "w": "O",
+     "start": 60.102,
+     "end": 60.163
+    },
+    {
+     "w": "ar",
+     "start": 60.225,
+     "end": 60.286
+    },
+    {
+     "w": "tá",
+     "start": 60.379,
+     "end": 60.471
+    },
+    {
+     "w": "cheio",
+     "start": 60.533,
+     "end": 60.656
+    },
+    {
+     "w": "de",
+     "start": 60.717,
+     "end": 60.748
+    },
+    {
+     "w": "vapor",
+     "start": 60.779,
+     "end": 60.963
+    },
+    {
+     "w": "invisível.",
+     "start": 61.025,
+     "end": 61.579
+    },
+    {
+     "w": "Ele",
+     "start": 61.702,
+     "end": 61.763
+    },
+    {
+     "w": "esfria",
+     "start": 61.825,
+     "end": 62.071
+    },
+    {
+     "w": "o",
+     "start": 62.102,
+     "end": 62.133
+    },
+    {
+     "w": "ar",
+     "start": 62.194,
+     "end": 62.256
+    },
+    {
+     "w": "em",
+     "start": 62.317,
+     "end": 62.379
+    },
+    {
+     "w": "volta",
+     "start": 62.44,
+     "end": 62.563
+    },
+    {
+     "w": "da",
+     "start": 62.625,
+     "end": 62.686
+    },
+    {
+     "w": "mão,",
+     "start": 62.717,
+     "end": 62.963
+    },
+    {
+     "w": "o",
+     "start": 62.994,
+     "end": 63.025
+    },
+    {
+     "w": "vapor",
+     "start": 63.056,
+     "end": 63.24
+    },
+    {
+     "w": "condensa",
+     "start": 63.302,
+     "end": 63.671
+    },
+    {
+     "w": "e",
+     "start": 63.702,
+     "end": 63.733
+    },
+    {
+     "w": "vira",
+     "start": 63.794,
+     "end": 63.917
+    },
+    {
+     "w": "água,",
+     "start": 64.04,
+     "end": 64.317
+    },
+    {
+     "w": "igual",
+     "start": 64.348,
+     "end": 64.533
+    },
+    {
+     "w": "copo",
+     "start": 64.625,
+     "end": 64.748
+    },
+    {
+     "w": "gelado",
+     "start": 64.779,
+     "end": 65.025
+    },
+    {
+     "w": "suando.",
+     "start": 65.148,
+     "end": 65.532
+    }
+   ]
+  },
+  {
+   "id": "n09c",
+   "spk": "NARRADOR",
+   "text": "Marrom, terra. Ele faz o chão vibrar, os grãos se apertam, e a terra sobe dura feito pedra.",
+   "start": 65.652,
+   "end": 70.583,
+   "words": [
+    {
+     "w": "Marrom,",
+     "start": 65.824,
+     "end": 66.114
+    },
+    {
+     "w": "terra.",
+     "start": 66.206,
+     "end": 66.606
+    },
+    {
+     "w": "Ele",
+     "start": 66.76,
+     "end": 66.883
+    },
+    {
+     "w": "faz",
+     "start": 66.944,
+     "end": 67.067
+    },
+    {
+     "w": "o",
+     "start": 67.129,
+     "end": 67.19
+    },
+    {
+     "w": "chão",
+     "start": 67.221,
+     "end": 67.314
+    },
+    {
+     "w": "vibrar,",
+     "start": 67.375,
+     "end": 67.806
+    },
+    {
+     "w": "os",
+     "start": 67.929,
+     "end": 68.052
+    },
+    {
+     "w": "grãos",
+     "start": 68.083,
+     "end": 68.237
+    },
+    {
+     "w": "se",
+     "start": 68.267,
+     "end": 68.298
+    },
+    {
+     "w": "apertam,",
+     "start": 68.421,
+     "end": 68.883
+    },
+    {
+     "w": "e",
+     "start": 68.914,
+     "end": 68.944
+    },
+    {
+     "w": "a",
+     "start": 68.975,
+     "end": 69.037
+    },
+    {
+     "w": "terra",
+     "start": 69.16,
+     "end": 69.283
+    },
+    {
+     "w": "sobe",
+     "start": 69.314,
+     "end": 69.59
+    },
+    {
+     "w": "dura",
+     "start": 69.621,
+     "end": 69.837
+    },
+    {
+     "w": "feito",
+     "start": 69.96,
+     "end": 70.083
+    },
+    {
+     "w": "pedra.",
+     "start": 70.175,
+     "end": 70.575
+    }
+   ]
+  },
+  {
+   "id": "n09d",
+   "spk": "NARRADOR",
+   "text": "Branca, vento. Vento é só ar correndo da pressão alta pra pressão baixa. Ele cria essa diferença, e o ar sai empurrando até navio.",
+   "start": 70.703,
+   "end": 76.741,
+   "words": [
+    {
+     "w": "Branca,",
+     "start": 70.916,
+     "end": 71.196
+    },
+    {
+     "w": "vento.",
+     "start": 71.319,
+     "end": 71.842
+    },
+    {
+     "w": "Vento",
+     "start": 71.873,
+     "end": 72.057
+    },
+    {
+     "w": "é",
+     "start": 72.119,
+     "end": 72.18
+    },
+    {
+     "w": "só",
+     "start": 72.242,
+     "end": 72.303
+    },
+    {
+     "w": "ar",
+     "start": 72.365,
+     "end": 72.488
+    },
+    {
+     "w": "correndo",
+     "start": 72.549,
+     "end": 72.816
+    },
+    {
+     "w": "da",
+     "start": 72.836,
+     "end": 72.857
+    },
+    {
+     "w": "pressão",
+     "start": 72.919,
+     "end": 73.165
+    },
+    {
+     "w": "alta",
+     "start": 73.288,
+     "end": 73.411
+    },
+    {
+     "w": "pra",
+     "start": 73.473,
+     "end": 73.534
+    },
+    {
+     "w": "pressão",
+     "start": 73.657,
+     "end": 73.78
+    },
+    {
+     "w": "baixa.",
+     "start": 73.842,
+     "end": 74.334
+    },
+    {
+     "w": "Ele",
+     "start": 74.396,
+     "end": 74.457
+    },
+    {
+     "w": "cria",
+     "start": 74.519,
+     "end": 74.611
+    },
+    {
+     "w": "essa",
+     "start": 74.642,
+     "end": 74.765
+    },
+    {
+     "w": "diferença,",
+     "start": 74.847,
+     "end": 75.339
+    },
+    {
+     "w": "e",
+     "start": 75.359,
+     "end": 75.38
+    },
+    {
+     "w": "o",
+     "start": 75.411,
+     "end": 75.442
+    },
+    {
+     "w": "ar",
+     "start": 75.503,
+     "end": 75.626
+    },
+    {
+     "w": "sai",
+     "start": 75.657,
+     "end": 75.719
+    },
+    {
+     "w": "empurrando",
+     "start": 75.749,
+     "end": 76.119
+    },
+    {
+     "w": "até",
+     "start": 76.242,
+     "end": 76.334
+    },
+    {
+     "w": "navio.",
+     "start": 76.365,
+     "end": 76.734
+    }
+   ]
+  },
+  {
+   "id": "n09e",
+   "spk": "NARRADOR",
+   "text": "Amarela, raio. Ele separa cargas elétricas, igual nuvem de tempestade, e a descarga chega a uns trinta mil graus. Cinco vezes mais quente que a superfície do Sol.",
+   "start": 76.861,
+   "end": 84.62,
+   "words": [
+    {
+     "w": "Amarela,",
+     "start": 76.975,
+     "end": 77.384
+    },
+    {
+     "w": "raio.",
+     "start": 77.477,
+     "end": 77.907
+    },
+    {
+     "w": "Ele",
+     "start": 78.031,
+     "end": 78.154
+    },
+    {
+     "w": "separa",
+     "start": 78.215,
+     "end": 78.461
+    },
+    {
+     "w": "cargas",
+     "start": 78.544,
+     "end": 78.707
+    },
+    {
+     "w": "elétricas,",
+     "start": 78.8,
+     "end": 79.261
+    },
+    {
+     "w": "igual",
+     "start": 79.323,
+     "end": 79.507
+    },
+    {
+     "w": "nuvem",
+     "start": 79.569,
+     "end": 79.754
+    },
+    {
+     "w": "de",
+     "start": 79.784,
+     "end": 79.815
+    },
+    {
+     "w": "tempestade,",
+     "start": 79.877,
+     "end": 80.513
+    },
+    {
+     "w": "e",
+     "start": 80.533,
+     "end": 80.554
+    },
+    {
+     "w": "a",
+     "start": 80.584,
+     "end": 80.615
+    },
+    {
+     "w": "descarga",
+     "start": 80.738,
+     "end": 81.046
+    },
+    {
+     "w": "chega",
+     "start": 81.077,
+     "end": 81.169
+    },
+    {
+     "w": "a",
+     "start": 81.2,
+     "end": 81.231
+    },
+    {
+     "w": "uns",
+     "start": 81.354,
+     "end": 81.477
+    },
+    {
+     "w": "trinta",
+     "start": 81.507,
+     "end": 81.723
+    },
+    {
+     "w": "mil",
+     "start": 81.784,
+     "end": 81.907
+    },
+    {
+     "w": "graus.",
+     "start": 81.969,
+     "end": 82.492
+    },
+    {
+     "w": "Cinco",
+     "start": 82.523,
+     "end": 82.769
+    },
+    {
+     "w": "vezes",
+     "start": 82.831,
+     "end": 83.077
+    },
+    {
+     "w": "mais",
+     "start": 83.107,
+     "end": 83.323
+    },
+    {
+     "w": "quente",
+     "start": 83.354,
+     "end": 83.507
+    },
+    {
+     "w": "que",
+     "start": 83.538,
+     "end": 83.569
+    },
+    {
+     "w": "a",
+     "start": 83.6,
+     "end": 83.631
+    },
+    {
+     "w": "superfície",
+     "start": 83.754,
+     "end": 84.061
+    },
+    {
+     "w": "do",
+     "start": 84.123,
+     "end": 84.184
+    },
+    {
+     "w": "Sol.",
+     "start": 84.277,
+     "end": 84.615
+    }
+   ]
+  },
+  {
+   "id": "n09f",
+   "spk": "NARRADOR",
+   "text": "E a dourada, a mais rara de todas, ninguém sabe explicar. Só o próprio Rei Mago tem.",
+   "start": 84.74,
+   "end": 90.092,
+   "words": [
+    {
+     "w": "E",
+     "start": 84.801,
+     "end": 84.863
+    },
+    {
+     "w": "a",
+     "start": 84.893,
+     "end": 84.924
+    },
+    {
+     "w": "dourada,",
+     "start": 84.986,
+     "end": 85.786
+    },
+    {
+     "w": "a",
+     "start": 85.816,
+     "end": 85.847
+    },
+    {
+     "w": "mais",
+     "start": 85.97,
+     "end": 86.216
+    },
+    {
+     "w": "rara",
+     "start": 86.247,
+     "end": 86.463
+    },
+    {
+     "w": "de",
+     "start": 86.524,
+     "end": 86.586
+    },
+    {
+     "w": "todas,",
+     "start": 86.647,
+     "end": 87.263
+    },
+    {
+     "w": "ninguém",
+     "start": 87.355,
+     "end": 87.632
+    },
+    {
+     "w": "sabe",
+     "start": 87.663,
+     "end": 87.816
+    },
+    {
+     "w": "explicar.",
+     "start": 87.878,
+     "end": 88.678
+    },
+    {
+     "w": "Só",
+     "start": 88.74,
+     "end": 88.863
+    },
+    {
+     "w": "o",
+     "start": 88.924,
+     "end": 88.986
+    },
+    {
+     "w": "próprio",
+     "start": 89.047,
+     "end": 89.293
+    },
+    {
+     "w": "Rei",
+     "start": 89.355,
+     "end": 89.447
+    },
+    {
+     "w": "Mago",
+     "start": 89.478,
+     "end": 89.724
+    },
+    {
+     "w": "tem.",
+     "start": 89.786,
+     "end": 90.092
+    }
+   ]
+  },
+  {
+   "id": "n10",
+   "spk": "NARRADOR",
+   "text": "Aí você corre até um lago, se olha na água... e nada. Rosto liso. Nenhuma marca. Ferrou. Na cidade, todo mundo te encara: criança aponta, guarda já põe a mão na lança.",
+   "start": 90.292,
+   "end": 98.908,
+   "words": [
+    {
+     "w": "Aí",
+     "start": 90.354,
+     "end": 90.415
+    },
+    {
+     "w": "você",
+     "start": 90.446,
+     "end": 90.6
+    },
+    {
+     "w": "corre",
+     "start": 90.662,
+     "end": 90.815
+    },
+    {
+     "w": "até",
+     "start": 90.846,
+     "end": 90.939
+    },
+    {
+     "w": "um",
+     "start": 90.969,
+     "end": 91.031
+    },
+    {
+     "w": "lago,",
+     "start": 91.062,
+     "end": 91.4
+    },
+    {
+     "w": "se",
+     "start": 91.523,
+     "end": 91.585
+    },
+    {
+     "w": "olha",
+     "start": 91.646,
+     "end": 91.769
+    },
+    {
+     "w": "na",
+     "start": 91.8,
+     "end": 91.831
+    },
+    {
+     "w": "água...",
+     "start": 91.954,
+     "end": 92.415
+    },
+    {
+     "w": "e",
+     "start": 92.446,
+     "end": 92.508
+    },
+    {
+     "w": "nada.",
+     "start": 92.569,
+     "end": 93.092
+    },
+    {
+     "w": "Rosto",
+     "start": 93.123,
+     "end": 93.369
+    },
+    {
+     "w": "liso.",
+     "start": 93.4,
+     "end": 93.831
+    },
+    {
+     "w": "Nenhuma",
+     "start": 93.862,
+     "end": 94.169
+    },
+    {
+     "w": "marca.",
+     "start": 94.415,
+     "end": 94.723
+    },
+    {
+     "w": "Ferrou.",
+     "start": 94.785,
+     "end": 95.431
+    },
+    {
+     "w": "Na",
+     "start": 95.462,
+     "end": 95.523
+    },
+    {
+     "w": "cidade,",
+     "start": 95.585,
+     "end": 95.954
+    },
+    {
+     "w": "todo",
+     "start": 96.046,
+     "end": 96.139
+    },
+    {
+     "w": "mundo",
+     "start": 96.2,
+     "end": 96.323
+    },
+    {
+     "w": "te",
+     "start": 96.385,
+     "end": 96.415
+    },
+    {
+     "w": "encara:",
+     "start": 96.446,
+     "end": 96.918
+    },
+    {
+     "w": "criança",
+     "start": 96.959,
+     "end": 97.123
+    },
+    {
+     "w": "aponta,",
+     "start": 97.185,
+     "end": 97.615
+    },
+    {
+     "w": "guarda",
+     "start": 97.677,
+     "end": 97.862
+    },
+    {
+     "w": "já",
+     "start": 97.923,
+     "end": 98.046
+    },
+    {
+     "w": "põe",
+     "start": 98.108,
+     "end": 98.169
+    },
+    {
+     "w": "a",
+     "start": 98.2,
+     "end": 98.231
+    },
+    {
+     "w": "mão",
+     "start": 98.262,
+     "end": 98.354
+    },
+    {
+     "w": "na",
+     "start": 98.385,
+     "end": 98.415
+    },
+    {
+     "w": "lança.",
+     "start": 98.477,
+     "end": 98.908
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "spk": "NARRADOR",
+   "text": "Te levam pra Academia Real, pro Teste do Cristal. O garoto antes de você encosta, e o cristal pega fogo. Sua vez. Você encosta... e nada. Nem uma faísca. A sala inteira cai na gargalhada.",
+   "start": 99.058,
+   "end": 108.171,
+   "words": [
+    {
+     "w": "Te",
+     "start": 99.115,
+     "end": 99.12
+    },
+    {
+     "w": "levam",
+     "start": 99.181,
+     "end": 99.366
+    },
+    {
+     "w": "pra",
+     "start": 99.397,
+     "end": 99.428
+    },
+    {
+     "w": "Academia",
+     "start": 99.458,
+     "end": 99.735
+    },
+    {
+     "w": "Real,",
+     "start": 99.797,
+     "end": 100.104
+    },
+    {
+     "w": "pro",
+     "start": 100.166,
+     "end": 100.289
+    },
+    {
+     "w": "Teste",
+     "start": 100.351,
+     "end": 100.535
+    },
+    {
+     "w": "do",
+     "start": 100.566,
+     "end": 100.597
+    },
+    {
+     "w": "Cristal.",
+     "start": 100.658,
+     "end": 101.12
+    },
+    {
+     "w": "O",
+     "start": 101.274,
+     "end": 101.304
+    },
+    {
+     "w": "garoto",
+     "start": 101.335,
+     "end": 101.581
+    },
+    {
+     "w": "antes",
+     "start": 101.643,
+     "end": 101.766
+    },
+    {
+     "w": "de",
+     "start": 101.797,
+     "end": 101.828
+    },
+    {
+     "w": "você",
+     "start": 101.858,
+     "end": 102.074
+    },
+    {
+     "w": "encosta,",
+     "start": 102.166,
+     "end": 102.535
+    },
+    {
+     "w": "e",
+     "start": 102.628,
+     "end": 102.648
+    },
+    {
+     "w": "o",
+     "start": 102.668,
+     "end": 102.689
+    },
+    {
+     "w": "cristal",
+     "start": 102.72,
+     "end": 102.935
+    },
+    {
+     "w": "pega",
+     "start": 102.966,
+     "end": 103.12
+    },
+    {
+     "w": "fogo.",
+     "start": 103.181,
+     "end": 103.643
+    },
+    {
+     "w": "Sua",
+     "start": 103.674,
+     "end": 103.735
+    },
+    {
+     "w": "vez.",
+     "start": 103.797,
+     "end": 104.289
+    },
+    {
+     "w": "Você",
+     "start": 104.351,
+     "end": 104.412
+    },
+    {
+     "w": "encosta...",
+     "start": 104.504,
+     "end": 105.058
+    },
+    {
+     "w": "e",
+     "start": 105.089,
+     "end": 105.151
+    },
+    {
+     "w": "nada.",
+     "start": 105.212,
+     "end": 105.735
+    },
+    {
+     "w": "Nem",
+     "start": 105.766,
+     "end": 105.889
+    },
+    {
+     "w": "uma",
+     "start": 105.981,
+     "end": 106.074
+    },
+    {
+     "w": "faísca.",
+     "start": 106.135,
+     "end": 106.658
+    },
+    {
+     "w": "A",
+     "start": 106.689,
+     "end": 106.72
+    },
+    {
+     "w": "sala",
+     "start": 106.751,
+     "end": 106.874
+    },
+    {
+     "w": "inteira",
+     "start": 106.935,
+     "end": 107.304
+    },
+    {
+     "w": "cai",
+     "start": 107.366,
+     "end": 107.428
+    },
+    {
+     "w": "na",
+     "start": 107.489,
+     "end": 107.551
+    },
+    {
+     "w": "gargalhada.",
+     "start": 107.581,
+     "end": 108.171
+    }
+   ]
+  },
+  {
+   "id": "n12",
+   "spk": "NARRADOR",
+   "text": "Até que o diretor bate o cajado no chão, e todo mundo cala a boca. Ele chega perto e fala baixinho, só pra você:",
+   "start": 108.321,
+   "end": 114.414,
+   "words": [
+    {
+     "w": "Até",
+     "start": 108.383,
+     "end": 108.598
+    },
+    {
+     "w": "que",
+     "start": 108.629,
+     "end": 108.66
+    },
+    {
+     "w": "o",
+     "start": 108.691,
+     "end": 108.721
+    },
+    {
+     "w": "diretor",
+     "start": 108.752,
+     "end": 109.121
+    },
+    {
+     "w": "bate",
+     "start": 109.183,
+     "end": 109.367
+    },
+    {
+     "w": "o",
+     "start": 109.388,
+     "end": 109.408
+    },
+    {
+     "w": "cajado",
+     "start": 109.429,
+     "end": 109.737
+    },
+    {
+     "w": "no",
+     "start": 109.798,
+     "end": 109.86
+    },
+    {
+     "w": "chão,",
+     "start": 109.921,
+     "end": 110.26
+    },
+    {
+     "w": "e",
+     "start": 110.291,
+     "end": 110.475
+    },
+    {
+     "w": "todo",
+     "start": 110.598,
+     "end": 110.721
+    },
+    {
+     "w": "mundo",
+     "start": 110.783,
+     "end": 111.029
+    },
+    {
+     "w": "cala",
+     "start": 111.091,
+     "end": 111.152
+    },
+    {
+     "w": "a",
+     "start": 111.183,
+     "end": 111.214
+    },
+    {
+     "w": "boca.",
+     "start": 111.275,
+     "end": 111.86
+    },
+    {
+     "w": "Ele",
+     "start": 111.891,
+     "end": 112.014
+    },
+    {
+     "w": "chega",
+     "start": 112.044,
+     "end": 112.26
+    },
+    {
+     "w": "perto",
+     "start": 112.291,
+     "end": 112.691
+    },
+    {
+     "w": "e",
+     "start": 112.752,
+     "end": 112.814
+    },
+    {
+     "w": "fala",
+     "start": 112.844,
+     "end": 112.998
+    },
+    {
+     "w": "baixinho,",
+     "start": 113.029,
+     "end": 113.644
+    },
+    {
+     "w": "só",
+     "start": 113.675,
+     "end": 113.798
+    },
+    {
+     "w": "pra",
+     "start": 113.829,
+     "end": 113.86
+    },
+    {
+     "w": "você:",
+     "start": 113.921,
+     "end": 114.414
+    }
+   ]
+  },
+  {
+   "id": "d1",
+   "spk": "DIRETOR",
+   "text": "O último sem marca foi o meu irmão. Exilaram ele pro sul, pras terras do Rei Demônio. Ele nunca mais voltou.",
+   "start": 114.564,
+   "end": 121.21,
+   "words": [
+    {
+     "w": "O",
+     "start": 114.707,
+     "end": 114.742
+    },
+    {
+     "w": "último",
+     "start": 114.778,
+     "end": 115.064
+    },
+    {
+     "w": "sem",
+     "start": 115.135,
+     "end": 115.349
+    },
+    {
+     "w": "marca",
+     "start": 115.528,
+     "end": 115.707
+    },
+    {
+     "w": "foi",
+     "start": 115.778,
+     "end": 115.874
+    },
+    {
+     "w": "o",
+     "start": 115.897,
+     "end": 115.921
+    },
+    {
+     "w": "meu",
+     "start": 115.957,
+     "end": 116.064
+    },
+    {
+     "w": "irmão.",
+     "start": 116.171,
+     "end": 116.921
+    },
+    {
+     "w": "Exilaram",
+     "start": 117.028,
+     "end": 117.421
+    },
+    {
+     "w": "ele",
+     "start": 117.492,
+     "end": 117.564
+    },
+    {
+     "w": "pro",
+     "start": 117.671,
+     "end": 117.778
+    },
+    {
+     "w": "sul,",
+     "start": 117.849,
+     "end": 118.278
+    },
+    {
+     "w": "pras",
+     "start": 118.385,
+     "end": 118.492
+    },
+    {
+     "w": "terras",
+     "start": 118.564,
+     "end": 118.849
+    },
+    {
+     "w": "do",
+     "start": 118.885,
+     "end": 118.921
+    },
+    {
+     "w": "Rei",
+     "start": 118.992,
+     "end": 119.064
+    },
+    {
+     "w": "Demônio.",
+     "start": 119.135,
+     "end": 119.921
+    },
+    {
+     "w": "Ele",
+     "start": 120.028,
+     "end": 120.135
+    },
+    {
+     "w": "nunca",
+     "start": 120.207,
+     "end": 120.492
+    },
+    {
+     "w": "mais",
+     "start": 120.528,
+     "end": 120.635
+    },
+    {
+     "w": "voltou.",
+     "start": 120.707,
+     "end": 121.21
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "spk": "NARRADOR",
+   "text": "E aí você escuta um miado. Em cima da estante, te encarando... o mesmo gato que você salvou.",
+   "start": 121.51,
+   "end": 127.432,
+   "words": [
+    {
+     "w": "E",
+     "start": 121.633,
+     "end": 121.664
+    },
+    {
+     "w": "aí",
+     "start": 121.695,
+     "end": 121.88
+    },
+    {
+     "w": "você",
+     "start": 121.941,
+     "end": 122.126
+    },
+    {
+     "w": "escuta",
+     "start": 122.218,
+     "end": 122.495
+    },
+    {
+     "w": "um",
+     "start": 122.557,
+     "end": 122.618
+    },
+    {
+     "w": "miado.",
+     "start": 122.71,
+     "end": 123.326
+    },
+    {
+     "w": "Em",
+     "start": 123.541,
+     "end": 123.726
+    },
+    {
+     "w": "cima",
+     "start": 123.757,
+     "end": 123.91
+    },
+    {
+     "w": "da",
+     "start": 123.941,
+     "end": 123.972
+    },
+    {
+     "w": "estante,",
+     "start": 124.033,
+     "end": 124.649
+    },
+    {
+     "w": "te",
+     "start": 124.71,
+     "end": 124.772
+    },
+    {
+     "w": "encarando...",
+     "start": 124.833,
+     "end": 125.633
+    },
+    {
+     "w": "o",
+     "start": 125.726,
+     "end": 125.818
+    },
+    {
+     "w": "mesmo",
+     "start": 125.941,
+     "end": 126.187
+    },
+    {
+     "w": "gato",
+     "start": 126.249,
+     "end": 126.495
+    },
+    {
+     "w": "que",
+     "start": 126.557,
+     "end": 126.618
+    },
+    {
+     "w": "você",
+     "start": 126.68,
+     "end": 126.803
+    },
+    {
+     "w": "salvou.",
+     "start": 126.864,
+     "end": 127.432
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "spk": "NARRADOR",
+   "text": "Segue a página pra ver o episódio dois!",
+   "start": 130.632,
+   "end": 132.606,
+   "words": [
+    {
+     "w": "Segue",
+     "start": 130.755,
+     "end": 130.878
+    },
+    {
+     "w": "a",
+     "start": 130.939,
+     "end": 131.001
+    },
+    {
+     "w": "página",
+     "start": 131.032,
+     "end": 131.309
+    },
+    {
+     "w": "pra",
+     "start": 131.37,
+     "end": 131.432
+    },
+    {
+     "w": "ver",
+     "start": 131.493,
+     "end": 131.555
+    },
+    {
+     "w": "o",
+     "start": 131.586,
+     "end": 131.616
+    },
+    {
+     "w": "episódio",
+     "start": 131.678,
+     "end": 132.047
+    },
+    {
+     "w": "dois!",
+     "start": 132.109,
+     "end": 132.601
+    }
+   ]
+  }
+ ]
+}

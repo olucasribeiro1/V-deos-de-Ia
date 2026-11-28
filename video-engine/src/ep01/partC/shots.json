@@ -1,0 +1,426 @@
+[
+ {
+  "id": "c01_mathFace",
+  "start": 72.533,
+  "end": 74.133,
+  "desc": "Extreme close on Davi's face, eyes narrow; chalk-blue math (v = 1.674 x cos φ) sketches around him; fast push-in, impact zoom on 'conta'",
+  "sfx": [
+   {
+    "t": 72.533,
+    "what": "soft whoosh-in + chalk scribble ticks"
+   },
+   {
+    "t": 73.333,
+    "what": "impact zoom thump on \"conta\""
+   }
+  ]
+ },
+ {
+  "id": "c02_globeSpin",
+  "start": 74.133,
+  "end": 75.033,
+  "desc": "Wide: stylised globe spinning, ground-speed arrows streaming east along the surface; whip-in",
+  "sfx": [
+   {
+    "t": 74.133,
+    "what": "whoosh (whip-in right)"
+   },
+   {
+    "t": 74.233,
+    "what": "airy streaming arrows swish"
+   }
+  ]
+ },
+ {
+  "id": "c03_twoThings",
+  "start": 75.033,
+  "end": 76.333,
+  "desc": "Globe tilts; two HUD chips pop: 1 LATITUDE (↕) and 2 LONGITUDE (↔); push-in",
+  "sfx": [
+   {
+    "t": 75.033,
+    "what": "whoosh (whip-in up)"
+   },
+   {
+    "t": 75.233,
+    "what": "UI pop 1"
+   },
+   {
+    "t": 75.567,
+    "what": "UI pop 2"
+   }
+  ]
+ },
+ {
+  "id": "c04_equator",
+  "start": 76.333,
+  "end": 77.533,
+  "desc": "Equator line ignites around the globe; push-in toward the equator",
+  "sfx": [
+   {
+    "t": 76.333,
+    "what": "zoom whoosh"
+   },
+   {
+    "t": 76.4,
+    "what": "electric line ignite hum"
+   }
+  ]
+ },
+ {
+  "id": "c05_meridian",
+  "start": 77.533,
+  "end": 78.5,
+  "desc": "Whip-rotation of the globe; Rio's meridian (43° W) lights up pole to pole",
+  "sfx": [
+   {
+    "t": 77.533,
+    "what": "fast globe spin whoosh"
+   },
+   {
+    "t": 77.8,
+    "what": "line ignite hum (higher)"
+   }
+  ]
+ },
+ {
+  "id": "c06_rioPin",
+  "start": 78.5,
+  "end": 79.433,
+  "desc": "Detail: red pin drops on Rio, impact zoom + shake",
+  "sfx": [
+   {
+    "t": 78.733,
+    "what": "pin impact thud + ping"
+   }
+  ]
+ },
+ {
+  "id": "c07_south23",
+  "start": 79.433,
+  "end": 80.333,
+  "desc": "Angle arc sweeps from the equator down to Rio: HUD 23° S",
+  "sfx": [
+   {
+    "t": 79.433,
+    "what": "whoosh down"
+   },
+   {
+    "t": 79.5,
+    "what": "angle sweep tick-tick"
+   }
+  ]
+ },
+ {
+  "id": "c08_north23",
+  "start": 80.333,
+  "end": 81.467,
+  "desc": "Mirror: arc sweeps up the same meridian to 23° N, blue pin pops; tilt up",
+  "sfx": [
+   {
+    "t": 80.333,
+    "what": "whoosh up"
+   },
+   {
+    "t": 80.433,
+    "what": "angle sweep tick-tick"
+   },
+   {
+    "t": 80.867,
+    "what": "pin pop (blue)"
+   }
+  ]
+ },
+ {
+  "id": "c09_sameLine",
+  "start": 81.467,
+  "end": 82.467,
+  "desc": "Camera tracks along the meridian from Rio to 23° N, pulse travels the line",
+  "sfx": [
+   {
+    "t": 81.467,
+    "what": "whoosh down"
+   },
+   {
+    "t": 81.467,
+    "what": "pulse travel blips along line"
+   }
+  ]
+ },
+ {
+  "id": "c10_sameSpeed",
+  "start": 82.467,
+  "end": 83.467,
+  "desc": "Two identical east arrows on both points, HUD 1.540 km/h each + 23° S = 23° N",
+  "sfx": [
+   {
+    "t": 82.533,
+    "what": "double arrow swish (stereo L/R)"
+   },
+   {
+    "t": 82.933,
+    "what": "match chime / soft hit"
+   }
+  ]
+ },
+ {
+  "id": "c11_atlantic",
+  "start": 83.467,
+  "end": 84.5,
+  "desc": "Crash zoom into the 23° N point: middle of the Atlantic, nothing but water",
+  "sfx": [
+   {
+    "t": 83.467,
+    "what": "crash-zoom riser"
+   },
+   {
+    "t": 84.167,
+    "what": "ocean wind ambience fade-in"
+   }
+  ]
+ },
+ {
+  "id": "c12_seaSame",
+  "start": 84.5,
+  "end": 85.533,
+  "desc": "Split screen wipe: Copacabana sea vs mid-Atlantic sea, identical horizons (RIO | 23° N)",
+  "sfx": [
+   {
+    "t": 84.5,
+    "what": "whoosh right"
+   },
+   {
+    "t": 84.5,
+    "what": "ocean waves ambience bed"
+   }
+  ]
+ },
+ {
+  "id": "c13_daviSmile",
+  "start": 85.533,
+  "end": 86.567,
+  "desc": "Close: Davi looks at the sea, half smile; slow push + tilt",
+  "sfx": [
+   {
+    "t": 85.533,
+    "what": "whoosh right, light beach ambience"
+   }
+  ]
+ },
+ {
+  "id": "c14_estalo",
+  "start": 86.567,
+  "end": 87.5,
+  "desc": "Kiosk: Rocha gripping Davi's wrist -> both vanish: Rastro, flash, shockwave, heavy shake",
+  "sfx": [
+   {
+    "t": 86.7,
+    "what": "RASTRO zap + thunder-clap (140 dB estalo), heavy low boom"
+   }
+  ]
+ },
+ {
+  "id": "c15_splash",
+  "start": 87.5,
+  "end": 88.5,
+  "desc": "Open ocean: Rastro tear in mid-air, both drop into the water, big splash",
+  "sfx": [
+   {
+    "t": 87.5,
+    "what": "rastro zap tail (mid-air)"
+   },
+   {
+    "t": 88.0,
+    "what": "big double SPLASH"
+   },
+   {
+    "t": 88.0,
+    "what": "open-ocean ambience starts"
+   }
+  ]
+ },
+ {
+  "id": "c16_floating",
+  "start": 88.5,
+  "end": 89.533,
+  "desc": "Close at water level: the two heads bobbing, parados, glove still on the yellow wrist",
+  "sfx": [
+   {
+    "t": 88.5,
+    "what": "whoosh left"
+   },
+   {
+    "t": 88.5,
+    "what": "water lapping, calm"
+   }
+  ]
+ },
+ {
+  "id": "c17_drone",
+  "start": 89.533,
+  "end": 90.733,
+  "desc": "Drone pull-back straight up: two dots in an endless ocean, HUD TERRA 1.900 km",
+  "sfx": [
+   {
+    "t": 89.533,
+    "what": "whoosh up / drone rise wind"
+   }
+  ]
+ },
+ {
+  "id": "c18_release",
+  "start": 90.733,
+  "end": 91.633,
+  "desc": "Detail: black glove lets go of the yellow sleeve over the water",
+  "sfx": [
+   {
+    "t": 91.0,
+    "what": "glove leather release + small splash"
+   }
+  ]
+ },
+ {
+  "id": "c19_swim",
+  "start": 91.633,
+  "end": 92.6,
+  "desc": "Rocha splashes to swim; Davi blinks out with a Rastro",
+  "sfx": [
+   {
+    "t": 91.633,
+    "what": "frantic swim splashes loop"
+   },
+   {
+    "t": 91.933,
+    "what": "RASTRO zap (Davi leaves)"
+   }
+  ]
+ },
+ {
+  "id": "c20_backAcai",
+  "start": 92.6,
+  "end": 93.9,
+  "desc": "Kiosk: Rastro, Davi pops back in, açaí in hand, takes a spoonful",
+  "sfx": [
+   {
+    "t": 92.667,
+    "what": "RASTRO zap (arrival) + beach ambience back"
+   },
+   {
+    "t": 93.167,
+    "what": "cup pick-up"
+   }
+  ]
+ },
+ {
+  "id": "c21_buoy",
+  "start": 93.9,
+  "end": 94.967,
+  "desc": "Ocean: orange ring buoy falls from the sky, plops next to Rocha",
+  "sfx": [
+   {
+    "t": 93.9,
+    "what": "falling whistle"
+   },
+   {
+    "t": 94.3,
+    "what": "buoy PLOP + splash"
+   }
+  ]
+ },
+ {
+  "id": "c22_phone",
+  "start": 94.967,
+  "end": 96.167,
+  "desc": "Detail: phone in Davi's hand calling MARINHA, ringing pulses",
+  "sfx": [
+   {
+    "t": 94.967,
+    "what": "whoosh up"
+   },
+   {
+    "t": 94.967,
+    "what": "phone ring (vibrate buzz pattern every 0.4 s)"
+   }
+  ]
+ },
+ {
+  "id": "c23_agents",
+  "start": 96.167,
+  "end": 97.333,
+  "desc": "High angle: three suits run up to the kiosk, look around, nobody there",
+  "sfx": [
+   {
+    "t": 96.167,
+    "what": "whoosh down"
+   },
+   {
+    "t": 96.167,
+    "what": "running dress-shoe footsteps"
+   }
+  ]
+ },
+ {
+  "id": "c24_rochaBuoy",
+  "start": 97.333,
+  "end": 98.433,
+  "desc": "Close: Rocha in the water wearing the buoy, sunglasses crooked, furious",
+  "sfx": [
+   {
+    "t": 97.333,
+    "what": "whoosh left"
+   },
+   {
+    "t": 97.533,
+    "what": "comic angry sting / water drip"
+   }
+  ]
+ },
+ {
+  "id": "c25_toss",
+  "start": 98.433,
+  "end": 99.533,
+  "desc": "Medium: Davi at the kiosk tossing a red can, smirk",
+  "sfx": [
+   {
+    "t": 98.433,
+    "what": "whoosh left"
+   },
+   {
+    "t": 98.433,
+    "what": "can toss-catch flicks (every 17 f)"
+   }
+  ]
+ },
+ {
+  "id": "c26_canSpin",
+  "start": 99.533,
+  "end": 101.0,
+  "desc": "Final close: can spinning above his hand, Rastro zaps around it, flash",
+  "sfx": [
+   {
+    "t": 99.533,
+    "what": "zoom whoosh"
+   },
+   {
+    "t": 99.533,
+    "what": "can spin whirr"
+   },
+   {
+    "t": 100.6,
+    "what": "RASTRO zap + FINAL HIT"
+   }
+  ]
+ },
+ {
+  "id": "c27_black",
+  "start": 101.0,
+  "end": 102.033,
+  "desc": "Hard cut to black",
+  "sfx": [
+   {
+    "t": 101.0,
+    "what": "hard cut to black — final hit tail/reverb out"
+   }
+  ]
+ }
+]

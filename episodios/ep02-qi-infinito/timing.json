@@ -1,0 +1,1405 @@
+{
+ "fps": 30,
+ "tempo": 1.11,
+ "duration": 79.29,
+ "lines": [
+  {
+   "id": "L1",
+   "text": "O Davi nasceu com QI infinito. Agora tá fugindo de quatro agentes do governo num metrô. Spoiler: ele vai ganhar.",
+   "start": 0.0,
+   "end": 5.826,
+   "words": [
+    {
+     "w": "O",
+     "start": 0.0,
+     "end": 0.063
+    },
+    {
+     "w": "Davi",
+     "start": 0.105,
+     "end": 0.251
+    },
+    {
+     "w": "nasceu",
+     "start": 0.282,
+     "end": 0.533
+    },
+    {
+     "w": "com",
+     "start": 0.576,
+     "end": 0.659
+    },
+    {
+     "w": "QI",
+     "start": 0.701,
+     "end": 0.889
+    },
+    {
+     "w": "infinito.",
+     "start": 0.921,
+     "end": 1.454
+    },
+    {
+     "w": "Agora",
+     "start": 1.568,
+     "end": 1.788
+    },
+    {
+     "w": "tá",
+     "start": 1.81,
+     "end": 1.851
+    },
+    {
+     "w": "fugindo",
+     "start": 1.893,
+     "end": 2.217
+    },
+    {
+     "w": "de",
+     "start": 2.259,
+     "end": 2.322
+    },
+    {
+     "w": "quatro",
+     "start": 2.385,
+     "end": 2.636
+    },
+    {
+     "w": "agentes",
+     "start": 2.657,
+     "end": 2.929
+    },
+    {
+     "w": "do",
+     "start": 2.95,
+     "end": 2.991
+    },
+    {
+     "w": "governo",
+     "start": 3.033,
+     "end": 3.389
+    },
+    {
+     "w": "num",
+     "start": 3.462,
+     "end": 3.619
+    },
+    {
+     "w": "metrô.",
+     "start": 3.64,
+     "end": 4.048
+    },
+    {
+     "w": "Spoiler:",
+     "start": 4.341,
+     "end": 4.937
+    },
+    {
+     "w": "ele",
+     "start": 5.062,
+     "end": 5.198
+    },
+    {
+     "w": "vai",
+     "start": 5.241,
+     "end": 5.366
+    },
+    {
+     "w": "ganhar.",
+     "start": 5.397,
+     "end": 5.826
+    }
+   ]
+  },
+  {
+   "id": "L2",
+   "text": "Porque ele sabe o que tu vai fazer antes de tu saber.",
+   "start": 5.951,
+   "end": 8.326,
+   "words": [
+    {
+     "w": "Porque",
+     "start": 5.951,
+     "end": 6.15
+    },
+    {
+     "w": "ele",
+     "start": 6.171,
+     "end": 6.265
+    },
+    {
+     "w": "sabe",
+     "start": 6.317,
+     "end": 6.558
+    },
+    {
+     "w": "o",
+     "start": 6.579,
+     "end": 6.6
+    },
+    {
+     "w": "que",
+     "start": 6.621,
+     "end": 6.684
+    },
+    {
+     "w": "tu",
+     "start": 6.715,
+     "end": 6.757
+    },
+    {
+     "w": "vai",
+     "start": 6.788,
+     "end": 6.861
+    },
+    {
+     "w": "fazer",
+     "start": 6.904,
+     "end": 7.269
+    },
+    {
+     "w": "antes",
+     "start": 7.342,
+     "end": 7.698
+    },
+    {
+     "w": "de",
+     "start": 7.73,
+     "end": 7.771
+    },
+    {
+     "w": "tu",
+     "start": 7.814,
+     "end": 7.866
+    },
+    {
+     "w": "saber.",
+     "start": 7.897,
+     "end": 8.326
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "text": "Não é telepatia, é conta. Teu rosto tem quarenta e três músculos. Pensou, mexeu, por um vigésimo de segundo. Microexpressão. Existe de verdade.",
+   "start": 8.567,
+   "end": 16.484,
+   "words": [
+    {
+     "w": "Não",
+     "start": 8.567,
+     "end": 8.692
+    },
+    {
+     "w": "é",
+     "start": 8.744,
+     "end": 8.765
+    },
+    {
+     "w": "telepatia,",
+     "start": 8.796,
+     "end": 9.393
+    },
+    {
+     "w": "é",
+     "start": 9.466,
+     "end": 9.507
+    },
+    {
+     "w": "conta.",
+     "start": 9.623,
+     "end": 10.114
+    },
+    {
+     "w": "Teu",
+     "start": 10.24,
+     "end": 10.376
+    },
+    {
+     "w": "rosto",
+     "start": 10.407,
+     "end": 10.627
+    },
+    {
+     "w": "tem",
+     "start": 10.659,
+     "end": 10.741
+    },
+    {
+     "w": "quarenta",
+     "start": 10.784,
+     "end": 11.087
+    },
+    {
+     "w": "e",
+     "start": 11.108,
+     "end": 11.129
+    },
+    {
+     "w": "três",
+     "start": 11.17,
+     "end": 11.369
+    },
+    {
+     "w": "músculos.",
+     "start": 11.442,
+     "end": 11.976
+    },
+    {
+     "w": "Pensou,",
+     "start": 12.269,
+     "end": 12.75
+    },
+    {
+     "w": "mexeu,",
+     "start": 12.771,
+     "end": 13.252
+    },
+    {
+     "w": "por",
+     "start": 13.336,
+     "end": 13.43
+    },
+    {
+     "w": "um",
+     "start": 13.461,
+     "end": 13.503
+    },
+    {
+     "w": "vigésimo",
+     "start": 13.545,
+     "end": 13.879
+    },
+    {
+     "w": "de",
+     "start": 13.911,
+     "end": 13.953
+    },
+    {
+     "w": "segundo.",
+     "start": 13.974,
+     "end": 14.392
+    },
+    {
+     "w": "Microexpressão.",
+     "start": 14.632,
+     "end": 15.365
+    },
+    {
+     "w": "Existe",
+     "start": 15.449,
+     "end": 15.805
+    },
+    {
+     "w": "de",
+     "start": 15.846,
+     "end": 15.888
+    },
+    {
+     "w": "verdade.",
+     "start": 15.919,
+     "end": 16.484
+    }
+   ]
+  },
+  {
+   "id": "L4",
+   "text": "O Davi vê todas. Professor Xavier, dos X-Men? Amador. Precisa de capacete.",
+   "start": 16.578,
+   "end": 21.892,
+   "words": [
+    {
+     "w": "O",
+     "start": 16.578,
+     "end": 16.631
+    },
+    {
+     "w": "Davi",
+     "start": 16.704,
+     "end": 16.976
+    },
+    {
+     "w": "vê",
+     "start": 17.039,
+     "end": 17.153
+    },
+    {
+     "w": "todas.",
+     "start": 17.268,
+     "end": 17.865
+    },
+    {
+     "w": "Professor",
+     "start": 17.98,
+     "end": 18.262
+    },
+    {
+     "w": "Xavier,",
+     "start": 18.283,
+     "end": 18.743
+    },
+    {
+     "w": "dos",
+     "start": 19.036,
+     "end": 19.172
+    },
+    {
+     "w": "X-Men?",
+     "start": 19.256,
+     "end": 19.674
+    },
+    {
+     "w": "Amador.",
+     "start": 20.197,
+     "end": 20.678
+    },
+    {
+     "w": "Precisa",
+     "start": 20.919,
+     "end": 21.212
+    },
+    {
+     "w": "de",
+     "start": 21.232,
+     "end": 21.275
+    },
+    {
+     "w": "capacete.",
+     "start": 21.295,
+     "end": 21.892
+    }
+   ]
+  },
+  {
+   "id": "L5",
+   "text": "Com cinco anos, sabia quando a mãe mentia. Papai Noel existe? Noventa e quatro por cento mentira.",
+   "start": 22.049,
+   "end": 27.457,
+   "words": [
+    {
+     "w": "Com",
+     "start": 22.049,
+     "end": 22.174
+    },
+    {
+     "w": "cinco",
+     "start": 22.195,
+     "end": 22.414
+    },
+    {
+     "w": "anos,",
+     "start": 22.467,
+     "end": 22.759
+    },
+    {
+     "w": "sabia",
+     "start": 22.843,
+     "end": 23.272
+    },
+    {
+     "w": "quando",
+     "start": 23.324,
+     "end": 23.503
+    },
+    {
+     "w": "a",
+     "start": 23.523,
+     "end": 23.544
+    },
+    {
+     "w": "mãe",
+     "start": 23.607,
+     "end": 23.743
+    },
+    {
+     "w": "mentia.",
+     "start": 23.764,
+     "end": 24.234
+    },
+    {
+     "w": "Papai",
+     "start": 24.569,
+     "end": 24.799
+    },
+    {
+     "w": "Noel",
+     "start": 24.82,
+     "end": 25.04
+    },
+    {
+     "w": "existe?",
+     "start": 25.114,
+     "end": 25.595
+    },
+    {
+     "w": "Noventa",
+     "start": 25.783,
+     "end": 26.17
+    },
+    {
+     "w": "e",
+     "start": 26.191,
+     "end": 26.212
+    },
+    {
+     "w": "quatro",
+     "start": 26.253,
+     "end": 26.495
+    },
+    {
+     "w": "por",
+     "start": 26.515,
+     "end": 26.599
+    },
+    {
+     "w": "cento",
+     "start": 26.641,
+     "end": 26.86
+    },
+    {
+     "w": "mentira.",
+     "start": 26.892,
+     "end": 27.457
+    }
+   ]
+  },
+  {
+   "id": "L6",
+   "text": "Com dez, ganhava todo truco da família. Nunca mais chamaram ele pro churrasco.",
+   "start": 27.582,
+   "end": 31.253,
+   "words": [
+    {
+     "w": "Com",
+     "start": 27.582,
+     "end": 27.718
+    },
+    {
+     "w": "dez,",
+     "start": 27.77,
+     "end": 28.032
+    },
+    {
+     "w": "ganhava",
+     "start": 28.052,
+     "end": 28.356
+    },
+    {
+     "w": "todo",
+     "start": 28.481,
+     "end": 28.764
+    },
+    {
+     "w": "truco",
+     "start": 28.805,
+     "end": 28.984
+    },
+    {
+     "w": "da",
+     "start": 29.005,
+     "end": 29.046
+    },
+    {
+     "w": "família.",
+     "start": 29.077,
+     "end": 29.538
+    },
+    {
+     "w": "Nunca",
+     "start": 29.747,
+     "end": 29.998
+    },
+    {
+     "w": "mais",
+     "start": 30.04,
+     "end": 30.186
+    },
+    {
+     "w": "chamaram",
+     "start": 30.207,
+     "end": 30.479
+    },
+    {
+     "w": "ele",
+     "start": 30.532,
+     "end": 30.605
+    },
+    {
+     "w": "pro",
+     "start": 30.625,
+     "end": 30.688
+    },
+    {
+     "w": "churrasco.",
+     "start": 30.709,
+     "end": 31.253
+    }
+   ]
+  },
+  {
+   "id": "L7",
+   "text": "Com dezoito, banido de três cassinos no Paraguai.",
+   "start": 31.441,
+   "end": 33.931,
+   "words": [
+    {
+     "w": "Com",
+     "start": 31.441,
+     "end": 31.557
+    },
+    {
+     "w": "dezoito,",
+     "start": 31.598,
+     "end": 32.226
+    },
+    {
+     "w": "banido",
+     "start": 32.341,
+     "end": 32.613
+    },
+    {
+     "w": "de",
+     "start": 32.644,
+     "end": 32.686
+    },
+    {
+     "w": "três",
+     "start": 32.749,
+     "end": 32.958
+    },
+    {
+     "w": "cassinos",
+     "start": 33.0,
+     "end": 33.356
+    },
+    {
+     "w": "no",
+     "start": 33.386,
+     "end": 33.429
+    },
+    {
+     "w": "Paraguai.",
+     "start": 33.46,
+     "end": 33.931
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "text": "O problema: ler gente esquenta o cérebro. Uma pessoa, trinta e sete e meio. Uma multidão, passa de quarenta. Guarda isso.",
+   "start": 34.119,
+   "end": 41.012,
+   "words": [
+    {
+     "w": "O",
+     "start": 34.119,
+     "end": 34.171
+    },
+    {
+     "w": "problema:",
+     "start": 34.234,
+     "end": 34.82
+    },
+    {
+     "w": "ler",
+     "start": 34.945,
+     "end": 35.133
+    },
+    {
+     "w": "gente",
+     "start": 35.196,
+     "end": 35.489
+    },
+    {
+     "w": "esquenta",
+     "start": 35.51,
+     "end": 35.886
+    },
+    {
+     "w": "o",
+     "start": 35.918,
+     "end": 35.939
+    },
+    {
+     "w": "cérebro.",
+     "start": 35.981,
+     "end": 36.451
+    },
+    {
+     "w": "Uma",
+     "start": 36.577,
+     "end": 36.786
+    },
+    {
+     "w": "pessoa,",
+     "start": 36.818,
+     "end": 37.225
+    },
+    {
+     "w": "trinta",
+     "start": 37.277,
+     "end": 37.57
+    },
+    {
+     "w": "e",
+     "start": 37.592,
+     "end": 37.613
+    },
+    {
+     "w": "sete",
+     "start": 37.654,
+     "end": 37.926
+    },
+    {
+     "w": "e",
+     "start": 37.948,
+     "end": 37.968
+    },
+    {
+     "w": "meio.",
+     "start": 38.031,
+     "end": 38.386
+    },
+    {
+     "w": "Uma",
+     "start": 38.627,
+     "end": 38.847
+    },
+    {
+     "w": "multidão,",
+     "start": 38.888,
+     "end": 39.423
+    },
+    {
+     "w": "passa",
+     "start": 39.464,
+     "end": 39.694
+    },
+    {
+     "w": "de",
+     "start": 39.725,
+     "end": 39.768
+    },
+    {
+     "w": "quarenta.",
+     "start": 39.798,
+     "end": 40.249
+    },
+    {
+     "w": "Guarda",
+     "start": 40.332,
+     "end": 40.604
+    },
+    {
+     "w": "isso.",
+     "start": 40.657,
+     "end": 41.012
+    }
+   ]
+  },
+  {
+   "id": "L9",
+   "text": "O governo quis ele lendo suspeito numa salinha. Ele recusou. Daí a correria.",
+   "start": 41.221,
+   "end": 44.945,
+   "words": [
+    {
+     "w": "O",
+     "start": 41.221,
+     "end": 41.263
+    },
+    {
+     "w": "governo",
+     "start": 41.315,
+     "end": 41.567
+    },
+    {
+     "w": "quis",
+     "start": 41.597,
+     "end": 41.702
+    },
+    {
+     "w": "ele",
+     "start": 41.765,
+     "end": 41.88
+    },
+    {
+     "w": "lendo",
+     "start": 41.932,
+     "end": 42.11
+    },
+    {
+     "w": "suspeito",
+     "start": 42.141,
+     "end": 42.497
+    },
+    {
+     "w": "numa",
+     "start": 42.529,
+     "end": 42.665
+    },
+    {
+     "w": "salinha.",
+     "start": 42.686,
+     "end": 43.124
+    },
+    {
+     "w": "Ele",
+     "start": 43.25,
+     "end": 43.396
+    },
+    {
+     "w": "recusou.",
+     "start": 43.428,
+     "end": 43.909
+    },
+    {
+     "w": "Daí",
+     "start": 44.066,
+     "end": 44.328
+    },
+    {
+     "w": "a",
+     "start": 44.359,
+     "end": 44.38
+    },
+    {
+     "w": "correria.",
+     "start": 44.422,
+     "end": 44.945
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "text": "O da esquerda vai pular a catraca. O de azul tá com medo. O careca vai tropeçar. Tropeçou.",
+   "start": 45.154,
+   "end": 49.526,
+   "words": [
+    {
+     "w": "O",
+     "start": 45.154,
+     "end": 45.206
+    },
+    {
+     "w": "da",
+     "start": 45.269,
+     "end": 45.311
+    },
+    {
+     "w": "esquerda",
+     "start": 45.332,
+     "end": 45.624
+    },
+    {
+     "w": "vai",
+     "start": 45.656,
+     "end": 45.74
+    },
+    {
+     "w": "pular",
+     "start": 45.76,
+     "end": 45.949
+    },
+    {
+     "w": "a",
+     "start": 45.969,
+     "end": 45.991
+    },
+    {
+     "w": "catraca.",
+     "start": 46.012,
+     "end": 46.493
+    },
+    {
+     "w": "O",
+     "start": 46.545,
+     "end": 46.586
+    },
+    {
+     "w": "de",
+     "start": 46.66,
+     "end": 46.702
+    },
+    {
+     "w": "azul",
+     "start": 46.733,
+     "end": 46.942
+    },
+    {
+     "w": "tá",
+     "start": 46.963,
+     "end": 47.015
+    },
+    {
+     "w": "com",
+     "start": 47.058,
+     "end": 47.151
+    },
+    {
+     "w": "medo.",
+     "start": 47.204,
+     "end": 47.591
+    },
+    {
+     "w": "O",
+     "start": 47.706,
+     "end": 47.759
+    },
+    {
+     "w": "careca",
+     "start": 47.811,
+     "end": 48.093
+    },
+    {
+     "w": "vai",
+     "start": 48.124,
+     "end": 48.187
+    },
+    {
+     "w": "tropeçar.",
+     "start": 48.208,
+     "end": 48.731
+    },
+    {
+     "w": "Tropeçou.",
+     "start": 48.857,
+     "end": 49.526
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "text": "Aí chega o chefe. O rosto dele não mexe. Botox. Músculo paralisado, zero microexpressão. Leitura: zero por cento.",
+   "start": 49.714,
+   "end": 55.561,
+   "words": [
+    {
+     "w": "Aí",
+     "start": 49.714,
+     "end": 49.86
+    },
+    {
+     "w": "chega",
+     "start": 49.882,
+     "end": 50.059
+    },
+    {
+     "w": "o",
+     "start": 50.08,
+     "end": 50.101
+    },
+    {
+     "w": "chefe.",
+     "start": 50.123,
+     "end": 50.488
+    },
+    {
+     "w": "O",
+     "start": 50.645,
+     "end": 50.697
+    },
+    {
+     "w": "rosto",
+     "start": 50.74,
+     "end": 50.906
+    },
+    {
+     "w": "dele",
+     "start": 50.949,
+     "end": 51.085
+    },
+    {
+     "w": "não",
+     "start": 51.116,
+     "end": 51.199
+    },
+    {
+     "w": "mexe.",
+     "start": 51.231,
+     "end": 51.566
+    },
+    {
+     "w": "Botox.",
+     "start": 51.691,
+     "end": 52.224
+    },
+    {
+     "w": "Músculo",
+     "start": 52.34,
+     "end": 52.632
+    },
+    {
+     "w": "paralisado,",
+     "start": 52.653,
+     "end": 53.177
+    },
+    {
+     "w": "zero",
+     "start": 53.197,
+     "end": 53.375
+    },
+    {
+     "w": "microexpressão.",
+     "start": 53.406,
+     "end": 54.044
+    },
+    {
+     "w": "Leitura:",
+     "start": 54.159,
+     "end": 54.577
+    },
+    {
+     "w": "zero",
+     "start": 54.704,
+     "end": 54.976
+    },
+    {
+     "w": "por",
+     "start": 55.017,
+     "end": 55.122
+    },
+    {
+     "w": "cento.",
+     "start": 55.164,
+     "end": 55.561
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "text": "Então o Davi se joga na multidão. Trezentas caras de uma vez. Trinta e nove graus. Quarenta. Quarenta e um.",
+   "start": 55.686,
+   "end": 61.188,
+   "words": [
+    {
+     "w": "Então",
+     "start": 55.686,
+     "end": 55.906
+    },
+    {
+     "w": "o",
+     "start": 55.927,
+     "end": 55.948
+    },
+    {
+     "w": "Davi",
+     "start": 55.99,
+     "end": 56.231
+    },
+    {
+     "w": "se",
+     "start": 56.283,
+     "end": 56.335
+    },
+    {
+     "w": "joga",
+     "start": 56.377,
+     "end": 56.513
+    },
+    {
+     "w": "na",
+     "start": 56.534,
+     "end": 56.576
+    },
+    {
+     "w": "multidão.",
+     "start": 56.607,
+     "end": 57.077
+    },
+    {
+     "w": "Trezentas",
+     "start": 57.193,
+     "end": 57.747
+    },
+    {
+     "w": "caras",
+     "start": 57.799,
+     "end": 57.998
+    },
+    {
+     "w": "de",
+     "start": 58.019,
+     "end": 58.061
+    },
+    {
+     "w": "uma",
+     "start": 58.082,
+     "end": 58.176
+    },
+    {
+     "w": "vez.",
+     "start": 58.218,
+     "end": 58.542
+    },
+    {
+     "w": "Trinta",
+     "start": 58.699,
+     "end": 58.981
+    },
+    {
+     "w": "e",
+     "start": 59.003,
+     "end": 59.023
+    },
+    {
+     "w": "nove",
+     "start": 59.055,
+     "end": 59.222
+    },
+    {
+     "w": "graus.",
+     "start": 59.243,
+     "end": 59.661
+    },
+    {
+     "w": "Quarenta.",
+     "start": 59.777,
+     "end": 60.32
+    },
+    {
+     "w": "Quarenta",
+     "start": 60.446,
+     "end": 60.885
+    },
+    {
+     "w": "e",
+     "start": 60.906,
+     "end": 60.927
+    },
+    {
+     "w": "um.",
+     "start": 60.979,
+     "end": 61.188
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "text": "Mas ele vê o buraco abrindo, passa pelo meio, e entra no trem um segundo antes da porta fechar.",
+   "start": 61.481,
+   "end": 66.0,
+   "words": [
+    {
+     "w": "Mas",
+     "start": 61.481,
+     "end": 61.649
+    },
+    {
+     "w": "ele",
+     "start": 61.701,
+     "end": 61.775
+    },
+    {
+     "w": "vê",
+     "start": 61.816,
+     "end": 61.889
+    },
+    {
+     "w": "o",
+     "start": 61.91,
+     "end": 61.932
+    },
+    {
+     "w": "buraco",
+     "start": 61.963,
+     "end": 62.214
+    },
+    {
+     "w": "abrindo,",
+     "start": 62.245,
+     "end": 62.632
+    },
+    {
+     "w": "passa",
+     "start": 62.695,
+     "end": 62.914
+    },
+    {
+     "w": "pelo",
+     "start": 62.946,
+     "end": 63.092
+    },
+    {
+     "w": "meio,",
+     "start": 63.123,
+     "end": 63.448
+    },
+    {
+     "w": "e",
+     "start": 63.573,
+     "end": 63.699
+    },
+    {
+     "w": "entra",
+     "start": 63.751,
+     "end": 63.929
+    },
+    {
+     "w": "no",
+     "start": 63.96,
+     "end": 64.002
+    },
+    {
+     "w": "trem",
+     "start": 64.033,
+     "end": 64.222
+    },
+    {
+     "w": "um",
+     "start": 64.348,
+     "end": 64.473
+    },
+    {
+     "w": "segundo",
+     "start": 64.546,
+     "end": 64.986
+    },
+    {
+     "w": "antes",
+     "start": 65.027,
+     "end": 65.215
+    },
+    {
+     "w": "da",
+     "start": 65.247,
+     "end": 65.31
+    },
+    {
+     "w": "porta",
+     "start": 65.341,
+     "end": 65.508
+    },
+    {
+     "w": "fechar.",
+     "start": 65.55,
+     "end": 66.0
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "text": "Na plataforma, o chefe tentou fazer cara de bravo. Não conseguiu.",
+   "start": 66.293,
+   "end": 69.818,
+   "words": [
+    {
+     "w": "Na",
+     "start": 66.293,
+     "end": 66.377
+    },
+    {
+     "w": "plataforma,",
+     "start": 66.397,
+     "end": 67.025
+    },
+    {
+     "w": "o",
+     "start": 67.087,
+     "end": 67.15
+    },
+    {
+     "w": "chefe",
+     "start": 67.182,
+     "end": 67.391
+    },
+    {
+     "w": "tentou",
+     "start": 67.412,
+     "end": 67.642
+    },
+    {
+     "w": "fazer",
+     "start": 67.684,
+     "end": 67.914
+    },
+    {
+     "w": "cara",
+     "start": 67.987,
+     "end": 68.228
+    },
+    {
+     "w": "de",
+     "start": 68.259,
+     "end": 68.312
+    },
+    {
+     "w": "bravo.",
+     "start": 68.343,
+     "end": 68.793
+    },
+    {
+     "w": "Não",
+     "start": 68.981,
+     "end": 69.201
+    },
+    {
+     "w": "conseguiu.",
+     "start": 69.242,
+     "end": 69.818
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "text": "Moral da história: QI infinito te salva de tudo. Menos do teu gato. Esse, nem o Davi consegue ler.",
+   "start": 69.932,
+   "end": 75.434,
+   "words": [
+    {
+     "w": "Moral",
+     "start": 69.932,
+     "end": 70.195
+    },
+    {
+     "w": "da",
+     "start": 70.236,
+     "end": 70.277
+    },
+    {
+     "w": "história:",
+     "start": 70.299,
+     "end": 70.801
+    },
+    {
+     "w": "QI",
+     "start": 70.958,
+     "end": 71.146
+    },
+    {
+     "w": "infinito",
+     "start": 71.261,
+     "end": 71.7
+    },
+    {
+     "w": "te",
+     "start": 71.722,
+     "end": 71.774
+    },
+    {
+     "w": "salva",
+     "start": 71.858,
+     "end": 72.108
+    },
+    {
+     "w": "de",
+     "start": 72.15,
+     "end": 72.213
+    },
+    {
+     "w": "tudo.",
+     "start": 72.286,
+     "end": 72.673
+    },
+    {
+     "w": "Menos",
+     "start": 72.736,
+     "end": 73.05
+    },
+    {
+     "w": "do",
+     "start": 73.081,
+     "end": 73.123
+    },
+    {
+     "w": "teu",
+     "start": 73.165,
+     "end": 73.269
+    },
+    {
+     "w": "gato.",
+     "start": 73.311,
+     "end": 73.677
+    },
+    {
+     "w": "Esse,",
+     "start": 73.803,
+     "end": 74.169
+    },
+    {
+     "w": "nem",
+     "start": 74.232,
+     "end": 74.441
+    },
+    {
+     "w": "o",
+     "start": 74.494,
+     "end": 74.514
+    },
+    {
+     "w": "Davi",
+     "start": 74.546,
+     "end": 74.723
+    },
+    {
+     "w": "consegue",
+     "start": 74.755,
+     "end": 75.079
+    },
+    {
+     "w": "ler.",
+     "start": 75.132,
+     "end": 75.434
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "text": "Segue aí pra mais ciência absurda, só que de verdade.",
+   "start": 75.623,
+   "end": 77.986,
+   "words": [
+    {
+     "w": "Segue",
+     "start": 75.623,
+     "end": 75.863
+    },
+    {
+     "w": "aí",
+     "start": 75.885,
+     "end": 75.989
+    },
+    {
+     "w": "pra",
+     "start": 76.031,
+     "end": 76.125
+    },
+    {
+     "w": "mais",
+     "start": 76.167,
+     "end": 76.334
+    },
+    {
+     "w": "ciência",
+     "start": 76.355,
+     "end": 76.575
+    },
+    {
+     "w": "absurda,",
+     "start": 76.595,
+     "end": 77.035
+    },
+    {
+     "w": "só",
+     "start": 77.129,
+     "end": 77.244
+    },
+    {
+     "w": "que",
+     "start": 77.276,
+     "end": 77.338
+    },
+    {
+     "w": "de",
+     "start": 77.369,
+     "end": 77.412
+    },
+    {
+     "w": "verdade.",
+     "start": 77.443,
+     "end": 77.986
+    }
+   ]
+  }
+ ]
+}
