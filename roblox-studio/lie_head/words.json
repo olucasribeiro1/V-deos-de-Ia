@@ -1,0 +1,1637 @@
+[
+{
+"word": "In",
+"start": 0.0,
+"end": 0.121
+},
+{
+"word": "this",
+"start": 0.167,
+"end": 0.278
+},
+{
+"word": "town,",
+"start": 0.316,
+"end": 0.576
+},
+{
+"word": "I",
+"start": 0.669,
+"end": 0.715
+},
+{
+"word": "told",
+"start": 0.79,
+"end": 0.938
+},
+{
+"word": "one",
+"start": 1.003,
+"end": 1.207
+},
+{
+"word": "tiny",
+"start": 1.245,
+"end": 1.495
+},
+{
+"word": "lie,",
+"start": 1.551,
+"end": 1.835
+},
+{
+"word": "and",
+"start": 1.955,
+"end": 2.066
+},
+{
+"word": "now",
+"start": 2.112,
+"end": 2.196
+},
+{
+"word": "my",
+"start": 2.252,
+"end": 2.317
+},
+{
+"word": "head",
+"start": 2.372,
+"end": 2.456
+},
+{
+"word": "is",
+"start": 2.484,
+"end": 2.531
+},
+{
+"word": "stuck",
+"start": 2.549,
+"end": 2.698
+},
+{
+"word": "in",
+"start": 2.726,
+"end": 2.763
+},
+{
+"word": "the",
+"start": 2.791,
+"end": 2.847
+},
+{
+"word": "school",
+"start": 2.865,
+"end": 3.051
+},
+{
+"word": "door!",
+"start": 3.088,
+"end": 3.425
+},
+{
+"word": "Because",
+"start": 3.536,
+"end": 3.768
+},
+{
+"word": "in",
+"start": 3.796,
+"end": 3.852
+},
+{
+"word": "this",
+"start": 3.898,
+"end": 4.009
+},
+{
+"word": "town,",
+"start": 4.047,
+"end": 4.36
+},
+{
+"word": "every",
+"start": 4.46,
+"end": 4.656
+},
+{
+"word": "time",
+"start": 4.684,
+"end": 4.841
+},
+{
+"word": "you",
+"start": 4.869,
+"end": 4.925
+},
+{
+"word": "lie,",
+"start": 4.99,
+"end": 5.194
+},
+{
+"word": "your",
+"start": 5.222,
+"end": 5.315
+},
+{
+"word": "head",
+"start": 5.361,
+"end": 5.464
+},
+{
+"word": "grows",
+"start": 5.51,
+"end": 5.677
+},
+{
+"word": "one",
+"start": 5.752,
+"end": 5.891
+},
+{
+"word": "block",
+"start": 5.909,
+"end": 6.104
+},
+{
+"word": "bigger!",
+"start": 6.141,
+"end": 6.467
+},
+{
+"word": "Everybody",
+"start": 6.587,
+"end": 6.884
+},
+{
+"word": "knows",
+"start": 6.912,
+"end": 7.107
+},
+{
+"word": "it!",
+"start": 7.154,
+"end": 7.358
+},
+{
+"word": "My",
+"start": 7.478,
+"end": 7.589
+},
+{
+"word": "little",
+"start": 7.636,
+"end": 7.803
+},
+{
+"word": "sister",
+"start": 7.831,
+"end": 8.073
+},
+{
+"word": "said",
+"start": 8.119,
+"end": 8.268
+},
+{
+"word": "she",
+"start": 8.314,
+"end": 8.407
+},
+{
+"word": "didn't",
+"start": 8.462,
+"end": 8.657
+},
+{
+"word": "eat",
+"start": 8.704,
+"end": 8.825
+},
+{
+"word": "the",
+"start": 8.853,
+"end": 8.909
+},
+{
+"word": "cookies.",
+"start": 9.029,
+"end": 9.363
+},
+{
+"word": "Boop!",
+"start": 9.483,
+"end": 9.874
+},
+{
+"word": "Her",
+"start": 9.994,
+"end": 10.134
+},
+{
+"word": "head",
+"start": 10.199,
+"end": 10.338
+},
+{
+"word": "grew.",
+"start": 10.394,
+"end": 10.802
+},
+{
+"word": "The",
+"start": 10.922,
+"end": 11.024
+},
+{
+"word": "mayor",
+"start": 11.061,
+"end": 11.237
+},
+{
+"word": "said",
+"start": 11.284,
+"end": 11.396
+},
+{
+"word": "he'd",
+"start": 11.414,
+"end": 11.507
+},
+{
+"word": "fix",
+"start": 11.544,
+"end": 11.692
+},
+{
+"word": "every",
+"start": 11.767,
+"end": 12.008
+},
+{
+"word": "road.",
+"start": 12.064,
+"end": 12.389
+},
+{
+"word": "Now",
+"start": 12.509,
+"end": 12.629
+},
+{
+"word": "his",
+"start": 12.685,
+"end": 12.759
+},
+{
+"word": "head",
+"start": 12.797,
+"end": 12.899
+},
+{
+"word": "is",
+"start": 12.926,
+"end": 12.982
+},
+{
+"word": "bigger",
+"start": 13.057,
+"end": 13.28
+},
+{
+"word": "than",
+"start": 13.307,
+"end": 13.401
+},
+{
+"word": "his",
+"start": 13.419,
+"end": 13.493
+},
+{
+"word": "car!",
+"start": 13.549,
+"end": 13.933
+},
+{
+"word": "The",
+"start": 14.006,
+"end": 14.108
+},
+{
+"word": "weatherman",
+"start": 14.136,
+"end": 14.415
+},
+{
+"word": "promised",
+"start": 14.471,
+"end": 14.74
+},
+{
+"word": "sunshine.",
+"start": 14.759,
+"end": 15.241
+},
+{
+"word": "Now",
+"start": 15.361,
+"end": 15.5
+},
+{
+"word": "his",
+"start": 15.565,
+"end": 15.649
+},
+{
+"word": "head",
+"start": 15.686,
+"end": 15.797
+},
+{
+"word": "blocks",
+"start": 15.843,
+"end": 16.141
+},
+{
+"word": "the",
+"start": 16.178,
+"end": 16.243
+},
+{
+"word": "sun!",
+"start": 16.29,
+"end": 16.689
+},
+{
+"word": "Even",
+"start": 16.809,
+"end": 16.995
+},
+{
+"word": "my",
+"start": 17.041,
+"end": 17.115
+},
+{
+"word": "dog",
+"start": 17.18,
+"end": 17.403
+},
+{
+"word": "has",
+"start": 17.45,
+"end": 17.551
+},
+{
+"word": "a",
+"start": 17.589,
+"end": 17.617
+},
+{
+"word": "big",
+"start": 17.663,
+"end": 17.793
+},
+{
+"word": "head!",
+"start": 17.839,
+"end": 18.134
+},
+{
+"word": "Don't",
+"start": 18.248,
+"end": 18.462
+},
+{
+"word": "ask!",
+"start": 18.498,
+"end": 18.851
+},
+{
+"word": "So",
+"start": 18.971,
+"end": 19.074
+},
+{
+"word": "in",
+"start": 19.12,
+"end": 19.167
+},
+{
+"word": "this",
+"start": 19.195,
+"end": 19.297
+},
+{
+"word": "town,",
+"start": 19.334,
+"end": 19.63
+},
+{
+"word": "everyone",
+"start": 19.702,
+"end": 19.999
+},
+{
+"word": "tells",
+"start": 20.027,
+"end": 20.212
+},
+{
+"word": "the",
+"start": 20.249,
+"end": 20.305
+},
+{
+"word": "truth.",
+"start": 20.324,
+"end": 20.675
+},
+{
+"word": "Everyone...",
+"start": 20.795,
+"end": 21.212
+},
+{
+"word": "except",
+"start": 21.332,
+"end": 21.592
+},
+{
+"word": "me.",
+"start": 21.639,
+"end": 21.847
+},
+{
+"word": "This",
+"start": 21.938,
+"end": 22.097
+},
+{
+"word": "morning,",
+"start": 22.161,
+"end": 22.393
+},
+{
+"word": "I",
+"start": 22.413,
+"end": 22.431
+},
+{
+"word": "forgot",
+"start": 22.524,
+"end": 22.719
+},
+{
+"word": "my",
+"start": 22.756,
+"end": 22.812
+},
+{
+"word": "homework.",
+"start": 22.867,
+"end": 23.272
+},
+{
+"word": "My",
+"start": 23.392,
+"end": 23.485
+},
+{
+"word": "teacher",
+"start": 23.541,
+"end": 23.745
+},
+{
+"word": "looked",
+"start": 23.782,
+"end": 23.921
+},
+{
+"word": "at",
+"start": 23.94,
+"end": 23.986
+},
+{
+"word": "me.",
+"start": 24.014,
+"end": 24.227
+},
+{
+"word": "\"Kai,",
+"start": 24.272,
+"end": 24.693
+},
+{
+"word": "where",
+"start": 24.739,
+"end": 24.898
+},
+{
+"word": "is",
+"start": 24.926,
+"end": 24.972
+},
+{
+"word": "your",
+"start": 24.999,
+"end": 25.083
+},
+{
+"word": "homework?\"",
+"start": 25.12,
+"end": 25.529
+},
+{
+"word": "And",
+"start": 25.603,
+"end": 25.724
+},
+{
+"word": "I",
+"start": 25.761,
+"end": 25.78
+},
+{
+"word": "said...",
+"start": 25.835,
+"end": 26.142
+},
+{
+"word": "\"My",
+"start": 26.16,
+"end": 26.347
+},
+{
+"word": "dog",
+"start": 26.402,
+"end": 26.56
+},
+{
+"word": "ate",
+"start": 26.607,
+"end": 26.718
+},
+{
+"word": "it.\"",
+"start": 26.736,
+"end": 26.937
+},
+{
+"word": "Bonk!",
+"start": 27.046,
+"end": 27.409
+},
+{
+"word": "My",
+"start": 27.529,
+"end": 27.641
+},
+{
+"word": "head",
+"start": 27.706,
+"end": 27.826
+},
+{
+"word": "grew",
+"start": 27.863,
+"end": 28.022
+},
+{
+"word": "one",
+"start": 28.077,
+"end": 28.244
+},
+{
+"word": "block.",
+"start": 28.272,
+"end": 28.605
+},
+{
+"word": "The",
+"start": 28.683,
+"end": 28.776
+},
+{
+"word": "whole",
+"start": 28.813,
+"end": 28.952
+},
+{
+"word": "class",
+"start": 28.971,
+"end": 29.175
+},
+{
+"word": "gasped!",
+"start": 29.221,
+"end": 29.621
+},
+{
+"word": "\"I",
+"start": 29.676,
+"end": 29.788
+},
+{
+"word": "mean,",
+"start": 29.843,
+"end": 30.02
+},
+{
+"word": "a",
+"start": 30.075,
+"end": 30.121
+},
+{
+"word": "dinosaur",
+"start": 30.186,
+"end": 30.539
+},
+{
+"word": "ate",
+"start": 30.577,
+"end": 30.679
+},
+{
+"word": "it!\"",
+"start": 30.697,
+"end": 30.875
+},
+{
+"word": "Bonk!",
+"start": 30.98,
+"end": 31.351
+},
+{
+"word": "Bigger!",
+"start": 31.416,
+"end": 31.8
+},
+{
+"word": "\"A",
+"start": 31.838,
+"end": 31.968
+},
+{
+"word": "dinosaur",
+"start": 32.024,
+"end": 32.367
+},
+{
+"word": "riding",
+"start": 32.404,
+"end": 32.572
+},
+{
+"word": "a",
+"start": 32.6,
+"end": 32.618
+},
+{
+"word": "dragon!\"",
+"start": 32.646,
+"end": 33.054
+},
+{
+"word": "Bonk!",
+"start": 33.1,
+"end": 33.463
+},
+{
+"word": "Bonk!",
+"start": 33.509,
+"end": 33.853
+},
+{
+"word": "Bonk!",
+"start": 33.89,
+"end": 34.345
+},
+{
+"word": "Now",
+"start": 34.465,
+"end": 34.594
+},
+{
+"word": "my",
+"start": 34.641,
+"end": 34.706
+},
+{
+"word": "head",
+"start": 34.762,
+"end": 34.864
+},
+{
+"word": "was",
+"start": 34.901,
+"end": 34.994
+},
+{
+"word": "as",
+"start": 35.041,
+"end": 35.096
+},
+{
+"word": "big",
+"start": 35.142,
+"end": 35.254
+},
+{
+"word": "as",
+"start": 35.291,
+"end": 35.347
+},
+{
+"word": "a",
+"start": 35.384,
+"end": 35.402
+},
+{
+"word": "fridge.",
+"start": 35.458,
+"end": 35.83
+},
+{
+"word": "My",
+"start": 35.932,
+"end": 36.034
+},
+{
+"word": "headphones",
+"start": 36.09,
+"end": 36.425
+},
+{
+"word": "snapped!",
+"start": 36.471,
+"end": 36.942
+},
+{
+"word": "Everybody",
+"start": 37.059,
+"end": 37.383
+},
+{
+"word": "was",
+"start": 37.42,
+"end": 37.504
+},
+{
+"word": "laughing.",
+"start": 37.56,
+"end": 38.006
+},
+{
+"word": "\"It's",
+"start": 38.031,
+"end": 38.263
+},
+{
+"word": "not",
+"start": 38.3,
+"end": 38.412
+},
+{
+"word": "that",
+"start": 38.44,
+"end": 38.56
+},
+{
+"word": "big!\"",
+"start": 38.607,
+"end": 39.016
+},
+{
+"word": "I",
+"start": 39.071,
+"end": 39.117
+},
+{
+"word": "yelled.",
+"start": 39.183,
+"end": 39.492
+},
+{
+"word": "Bonk!",
+"start": 39.612,
+"end": 40.03
+},
+{
+"word": "My",
+"start": 40.123,
+"end": 40.235
+},
+{
+"word": "head",
+"start": 40.29,
+"end": 40.411
+},
+{
+"word": "smashed",
+"start": 40.476,
+"end": 40.773
+},
+{
+"word": "right",
+"start": 40.82,
+"end": 40.959
+},
+{
+"word": "through",
+"start": 40.977,
+"end": 41.108
+},
+{
+"word": "the",
+"start": 41.126,
+"end": 41.182
+},
+{
+"word": "ceiling!",
+"start": 41.21,
+"end": 41.6
+},
+{
+"word": "Birds",
+"start": 41.71,
+"end": 41.979
+},
+{
+"word": "landed",
+"start": 42.035,
+"end": 42.239
+},
+{
+"word": "in",
+"start": 42.267,
+"end": 42.304
+},
+{
+"word": "my",
+"start": 42.35,
+"end": 42.434
+},
+{
+"word": "hair.",
+"start": 42.499,
+"end": 42.823
+},
+{
+"word": "An",
+"start": 42.926,
+"end": 43.029
+},
+{
+"word": "airplane",
+"start": 43.066,
+"end": 43.391
+},
+{
+"word": "had",
+"start": 43.428,
+"end": 43.549
+},
+{
+"word": "to",
+"start": 43.577,
+"end": 43.614
+},
+{
+"word": "turn",
+"start": 43.651,
+"end": 43.781
+},
+{
+"word": "around!",
+"start": 43.809,
+"end": 44.218
+},
+{
+"word": "My",
+"start": 44.338,
+"end": 44.441
+},
+{
+"word": "best",
+"start": 44.497,
+"end": 44.654
+},
+{
+"word": "friend",
+"start": 44.692,
+"end": 44.84
+},
+{
+"word": "took",
+"start": 44.878,
+"end": 44.989
+},
+{
+"word": "a",
+"start": 45.017,
+"end": 45.035
+},
+{
+"word": "selfie",
+"start": 45.091,
+"end": 45.342
+},
+{
+"word": "with",
+"start": 45.36,
+"end": 45.454
+},
+{
+"word": "my",
+"start": 45.5,
+"end": 45.574
+},
+{
+"word": "giant",
+"start": 45.648,
+"end": 45.908
+},
+{
+"word": "head.",
+"start": 45.946,
+"end": 46.224
+},
+{
+"word": "A",
+"start": 46.344,
+"end": 46.4
+},
+{
+"word": "million",
+"start": 46.493,
+"end": 46.772
+},
+{
+"word": "likes!",
+"start": 46.828,
+"end": 47.227
+},
+{
+"word": "I",
+"start": 47.347,
+"end": 47.393
+},
+{
+"word": "tried",
+"start": 47.486,
+"end": 47.709
+},
+{
+"word": "to",
+"start": 47.727,
+"end": 47.774
+},
+{
+"word": "run",
+"start": 47.83,
+"end": 47.959
+},
+{
+"word": "home,",
+"start": 48.015,
+"end": 48.365
+},
+{
+"word": "but",
+"start": 48.44,
+"end": 48.561
+},
+{
+"word": "I",
+"start": 48.589,
+"end": 48.607
+},
+{
+"word": "got",
+"start": 48.653,
+"end": 48.793
+},
+{
+"word": "stuck",
+"start": 48.839,
+"end": 49.062
+},
+{
+"word": "in",
+"start": 49.117,
+"end": 49.164
+},
+{
+"word": "the",
+"start": 49.192,
+"end": 49.248
+},
+{
+"word": "school",
+"start": 49.285,
+"end": 49.489
+},
+{
+"word": "door.",
+"start": 49.536,
+"end": 49.85
+},
+{
+"word": "The",
+"start": 49.953,
+"end": 50.046
+},
+{
+"word": "principal",
+"start": 50.083,
+"end": 50.417
+},
+{
+"word": "came",
+"start": 50.473,
+"end": 50.612
+},
+{
+"word": "running.",
+"start": 50.64,
+"end": 50.975
+},
+{
+"word": "\"Kai,",
+"start": 50.99,
+"end": 51.455
+},
+{
+"word": "just",
+"start": 51.523,
+"end": 51.662
+},
+{
+"word": "tell",
+"start": 51.68,
+"end": 51.792
+},
+{
+"word": "the",
+"start": 51.82,
+"end": 51.876
+},
+{
+"word": "truth!\"",
+"start": 51.894,
+"end": 52.26
+},
+{
+"word": "But",
+"start": 52.356,
+"end": 52.496
+},
+{
+"word": "I",
+"start": 52.56,
+"end": 52.653
+},
+{
+"word": "was",
+"start": 52.728,
+"end": 52.83
+},
+{
+"word": "scared.",
+"start": 52.886,
+"end": 53.405
+},
+{
+"word": "If",
+"start": 53.515,
+"end": 53.617
+},
+{
+"word": "I",
+"start": 53.682,
+"end": 53.71
+},
+{
+"word": "told",
+"start": 53.803,
+"end": 53.933
+},
+{
+"word": "the",
+"start": 53.961,
+"end": 54.017
+},
+{
+"word": "truth,",
+"start": 54.054,
+"end": 54.305
+},
+{
+"word": "I'd",
+"start": 54.323,
+"end": 54.416
+},
+{
+"word": "be",
+"start": 54.453,
+"end": 54.518
+},
+{
+"word": "in",
+"start": 54.546,
+"end": 54.593
+},
+{
+"word": "SO",
+"start": 54.667,
+"end": 54.797
+},
+{
+"word": "much",
+"start": 54.843,
+"end": 54.982
+},
+{
+"word": "trouble!",
+"start": 55.029,
+"end": 55.42
+},
+{
+"word": "Then",
+"start": 55.54,
+"end": 55.781
+},
+{
+"word": "I",
+"start": 55.883,
+"end": 55.929
+},
+{
+"word": "noticed",
+"start": 56.049,
+"end": 56.3
+},
+{
+"word": "something.",
+"start": 56.319,
+"end": 56.746
+},
+{
+"word": "My",
+"start": 56.866,
+"end": 56.968
+},
+{
+"word": "sister",
+"start": 57.024,
+"end": 57.256
+},
+{
+"word": "said",
+"start": 57.303,
+"end": 57.423
+},
+{
+"word": "sorry",
+"start": 57.47,
+"end": 57.692
+},
+{
+"word": "for",
+"start": 57.73,
+"end": 57.795
+},
+{
+"word": "the",
+"start": 57.813,
+"end": 57.869
+},
+{
+"word": "cookies,",
+"start": 57.897,
+"end": 58.213
+},
+{
+"word": "and",
+"start": 58.231,
+"end": 58.296
+},
+{
+"word": "her",
+"start": 58.343,
+"end": 58.417
+},
+{
+"word": "head",
+"start": 58.463,
+"end": 58.594
+},
+{
+"word": "shrank",
+"start": 58.64,
+"end": 58.863
+},
+{
+"word": "back.",
+"start": 58.919,
+"end": 59.215
+},
+{
+"word": "Pop!",
+"start": 59.334,
+"end": 59.722
+},
+{
+"word": "The",
+"start": 59.823,
+"end": 59.916
+},
+{
+"word": "truth",
+"start": 59.953,
+"end": 60.111
+},
+{
+"word": "makes",
+"start": 60.139,
+"end": 60.269
+},
+{
+"word": "it",
+"start": 60.306,
+"end": 60.353
+},
+{
+"word": "smaller!",
+"start": 60.389,
+"end": 60.822
+},
+{
+"word": "So",
+"start": 60.942,
+"end": 61.054
+},
+{
+"word": "I",
+"start": 61.109,
+"end": 61.128
+},
+{
+"word": "took",
+"start": 61.175,
+"end": 61.276
+},
+{
+"word": "a",
+"start": 61.304,
+"end": 61.323
+},
+{
+"word": "deep",
+"start": 61.36,
+"end": 61.481
+},
+{
+"word": "breath.",
+"start": 61.518,
+"end": 61.862
+},
+{
+"word": "\"I",
+"start": 61.883,
+"end": 62.014
+},
+{
+"word": "didn't",
+"start": 62.07,
+"end": 62.199
+},
+{
+"word": "do",
+"start": 62.227,
+"end": 62.264
+},
+{
+"word": "my",
+"start": 62.32,
+"end": 62.376
+},
+{
+"word": "homework.",
+"start": 62.423,
+"end": 62.859
+},
+{
+"word": "I",
+"start": 62.979,
+"end": 63.015
+},
+{
+"word": "played",
+"start": 63.071,
+"end": 63.229
+},
+{
+"word": "video",
+"start": 63.257,
+"end": 63.434
+},
+{
+"word": "games",
+"start": 63.48,
+"end": 63.666
+},
+{
+"word": "all",
+"start": 63.694,
+"end": 63.787
+},
+{
+"word": "night.\"",
+"start": 63.823,
+"end": 64.157
+},
+{
+"word": "Pop!",
+"start": 64.26,
+"end": 64.727
+},
+{
+"word": "\"And",
+"start": 64.732,
+"end": 64.925
+},
+{
+"word": "I",
+"start": 64.98,
+"end": 64.999
+},
+{
+"word": "ate",
+"start": 65.073,
+"end": 65.213
+},
+{
+"word": "the",
+"start": 65.231,
+"end": 65.287
+},
+{
+"word": "last",
+"start": 65.334,
+"end": 65.501
+},
+{
+"word": "slice",
+"start": 65.519,
+"end": 65.715
+},
+{
+"word": "of",
+"start": 65.742,
+"end": 65.779
+},
+{
+"word": "pizza.\"",
+"start": 65.798,
+"end": 66.277
+},
+{
+"word": "Pop!",
+"start": 66.378,
+"end": 66.833
+},
+{
+"word": "\"And",
+"start": 66.842,
+"end": 67.048
+},
+{
+"word": "I'm",
+"start": 67.114,
+"end": 67.243
+},
+{
+"word": "the",
+"start": 67.271,
+"end": 67.327
+},
+{
+"word": "one",
+"start": 67.374,
+"end": 67.466
+},
+{
+"word": "who",
+"start": 67.485,
+"end": 67.55
+},
+{
+"word": "broke",
+"start": 67.587,
+"end": 67.754
+},
+{
+"word": "the",
+"start": 67.782,
+"end": 67.838
+},
+{
+"word": "window!\"",
+"start": 67.866,
+"end": 68.247
+},
+{
+"word": "Pop!",
+"start": 68.347,
+"end": 68.635
+},
+{
+"word": "Pop!",
+"start": 68.663,
+"end": 68.895
+},
+{
+"word": "Pop!",
+"start": 68.914,
+"end": 69.276
+},
+{
+"word": "My",
+"start": 69.396,
+"end": 69.497
+},
+{
+"word": "head",
+"start": 69.553,
+"end": 69.656
+},
+{
+"word": "was",
+"start": 69.702,
+"end": 69.785
+},
+{
+"word": "normal",
+"start": 69.85,
+"end": 70.073
+},
+{
+"word": "again.",
+"start": 70.111,
+"end": 70.5
+},
+{
+"word": "Everybody",
+"start": 70.62,
+"end": 70.936
+},
+{
+"word": "cheered!",
+"start": 70.991,
+"end": 71.456
+},
+{
+"word": "Even",
+"start": 71.576,
+"end": 71.752
+},
+{
+"word": "my",
+"start": 71.798,
+"end": 71.863
+},
+{
+"word": "sister",
+"start": 71.919,
+"end": 72.142
+},
+{
+"word": "gave",
+"start": 72.179,
+"end": 72.3
+},
+{
+"word": "me",
+"start": 72.318,
+"end": 72.374
+},
+{
+"word": "a",
+"start": 72.392,
+"end": 72.411
+},
+{
+"word": "cookie.",
+"start": 72.448,
+"end": 72.817
+},
+{
+"word": "My",
+"start": 72.937,
+"end": 73.03
+},
+{
+"word": "teacher",
+"start": 73.085,
+"end": 73.318
+},
+{
+"word": "smiled.",
+"start": 73.364,
+"end": 73.82
+},
+{
+"word": "\"Thank",
+"start": 73.884,
+"end": 74.123
+},
+{
+"word": "you",
+"start": 74.151,
+"end": 74.206
+},
+{
+"word": "for",
+"start": 74.244,
+"end": 74.309
+},
+{
+"word": "the",
+"start": 74.337,
+"end": 74.393
+},
+{
+"word": "truth,",
+"start": 74.411,
+"end": 74.615
+},
+{
+"word": "Kai.",
+"start": 74.643,
+"end": 75.006
+},
+{
+"word": "Now",
+"start": 75.126,
+"end": 75.247
+},
+{
+"word": "you",
+"start": 75.284,
+"end": 75.34
+},
+{
+"word": "have",
+"start": 75.386,
+"end": 75.479
+},
+{
+"word": "double",
+"start": 75.516,
+"end": 75.721
+},
+{
+"word": "homework.\"",
+"start": 75.749,
+"end": 76.189
+},
+{
+"word": "And",
+"start": 76.264,
+"end": 76.394
+},
+{
+"word": "I",
+"start": 76.44,
+"end": 76.458
+},
+{
+"word": "said,",
+"start": 76.514,
+"end": 76.774
+},
+{
+"word": "\"I",
+"start": 76.781,
+"end": 76.892
+},
+{
+"word": "love",
+"start": 76.985,
+"end": 77.142
+},
+{
+"word": "homework!\"",
+"start": 77.17,
+"end": 77.609
+},
+{
+"word": "Bonk!",
+"start": 77.729,
+"end": 78.076
+}
+]

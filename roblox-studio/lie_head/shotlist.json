@@ -1,0 +1,298 @@
+{
+ "video": "lie_head",
+ "aspect": "9:16 vertical, 1080x1920",
+ "fps": 30,
+ "total_seconds": 78.33,
+ "shots": [
+  {
+   "id": 1,
+   "start": 0.0,
+   "end": 3.54,
+   "dur": 3.54,
+   "setting": "School entrance",
+   "action": "HOOK: Kai (headphones, split purple/orange hoodie) with a GIANT head jammed in the school doorway, legs kicking, panicking",
+   "camera": "low angle push-in from the street, fast zoom punch on 'stuck'",
+   "narration": "In this town, I told one tiny lie, and now my head is stuck in the school door!"
+  },
+  {
+   "id": 2,
+   "start": 3.54,
+   "end": 6.59,
+   "dur": 3.05,
+   "setting": "Town square",
+   "action": "Wide of the blocky suburb: red and blue roofs, people walking; a man lies and his head POPS one size bigger",
+   "camera": "drone shot descending, whip to the man",
+   "narration": "Because in this town, every time you lie, your head grows one block bigger!"
+  },
+  {
+   "id": 3,
+   "start": 6.59,
+   "end": 10.92,
+   "dur": 4.34,
+   "setting": "Kai's kitchen",
+   "action": "Little sister with cookie crumbs on her face says 'I didn't eat them' — BOOP, her head grows",
+   "camera": "medium shot, quick zoom on her head",
+   "narration": "Everybody knows it! My little sister said she didn't eat the cookies. Boop! Her head grew."
+  },
+  {
+   "id": 4,
+   "start": 10.92,
+   "end": 14.01,
+   "dur": 3.08,
+   "setting": "Street by City Hall",
+   "action": "Mayor in top hat at a podium promising roads; road full of holes behind him; his head grows huge beside his car",
+   "camera": "low angle on the mayor, then wide showing head vs car",
+   "narration": "The mayor said he'd fix every road. Now his head is bigger than his car!"
+  },
+  {
+   "id": 5,
+   "start": 14.01,
+   "end": 16.81,
+   "dur": 2.8,
+   "setting": "Street",
+   "action": "Weatherman in front of a sunny-weather sign; his giant head casts a shadow over the whole block",
+   "camera": "tilt up from the sign to the head",
+   "narration": "The weatherman promised sunshine. Now his head blocks the sun!"
+  },
+  {
+   "id": 6,
+   "start": 16.81,
+   "end": 18.97,
+   "dur": 2.16,
+   "setting": "Kai's front yard",
+   "action": "Kai's dog with an absurdly big blocky head, wagging; Kai shrugs at camera",
+   "camera": "static close, then snap zoom on the dog",
+   "narration": "Even my dog has a big head! Don't ask!"
+  },
+  {
+   "id": 7,
+   "start": 18.97,
+   "end": 21.94,
+   "dur": 2.97,
+   "setting": "Town square",
+   "action": "Everyone in town with normal heads, smiling and honest; Kai alone, sweating, side-eye",
+   "camera": "slow push to Kai",
+   "narration": "So in this town, everyone tells the truth. Everyone... except me."
+  },
+  {
+   "id": 8,
+   "start": 21.94,
+   "end": 23.39,
+   "dur": 1.45,
+   "setting": "Classroom",
+   "action": "Classroom morning; Kai at a front desk digs in his empty backpack, panic",
+   "camera": "over-shoulder from behind Kai",
+   "narration": "This morning, I forgot my homework."
+  },
+  {
+   "id": 9,
+   "start": 23.39,
+   "end": 25.6,
+   "dur": 2.21,
+   "setting": "Classroom",
+   "action": "Teacher (red outfit, bun) leans in, arms crossed: 'Kai, where is your homework?'",
+   "camera": "Kai's POV, slight push",
+   "narration": "My teacher looked at me. \"Kai, where is your homework?\""
+  },
+  {
+   "id": 10,
+   "start": 25.6,
+   "end": 27.05,
+   "dur": 1.44,
+   "setting": "Classroom",
+   "action": "Kai fake smile: 'My dog ate it'",
+   "camera": "close-up on Kai",
+   "narration": "And I said... \"My dog ate it.\""
+  },
+  {
+   "id": 11,
+   "start": 27.05,
+   "end": 29.68,
+   "dur": 2.63,
+   "setting": "Classroom",
+   "action": "BONK! Kai's head grows one block; whole class gasps",
+   "camera": "crash zoom on the head, then whip to the class gasping",
+   "narration": "Bonk! My head grew one block. The whole class gasped!"
+  },
+  {
+   "id": 12,
+   "start": 29.68,
+   "end": 31.84,
+   "dur": 2.16,
+   "setting": "Classroom",
+   "action": "'A dinosaur ate it!' BONK — head bigger, knocks his desk",
+   "camera": "close-up, camera shake",
+   "narration": "\"I mean, a dinosaur ate it!\" Bonk! Bigger!"
+  },
+  {
+   "id": 13,
+   "start": 31.84,
+   "end": 34.47,
+   "dur": 2.63,
+   "setting": "Classroom",
+   "action": "'A dinosaur riding a dragon!' BONK BONK BONK — head grows three times in a row, desk breaks",
+   "camera": "fast zoom-outs on each bonk",
+   "narration": "\"A dinosaur riding a dragon!\" Bonk! Bonk! Bonk!"
+  },
+  {
+   "id": 14,
+   "start": 34.47,
+   "end": 38.03,
+   "dur": 3.57,
+   "setting": "Classroom",
+   "action": "Head as big as a fridge, filling the frame; headphones snap off and fly; kids laughing and pointing",
+   "camera": "wide from the board, kids in the foreground",
+   "narration": "Now my head was as big as a fridge. My headphones snapped! Everybody was laughing."
+  },
+  {
+   "id": 15,
+   "start": 38.03,
+   "end": 41.71,
+   "dur": 3.68,
+   "setting": "Classroom",
+   "action": "Kai yells 'It's not that big!' — BONK, head smashes through the ceiling",
+   "camera": "low angle looking up, debris falling",
+   "narration": "\"It's not that big!\" I yelled. Bonk! My head smashed right through the ceiling!"
+  },
+  {
+   "id": 16,
+   "start": 41.71,
+   "end": 44.34,
+   "dur": 2.63,
+   "setting": "School roof / sky",
+   "action": "Outside: Kai's giant head sticking out of the school roof; birds land on his hair; an airplane swerves away",
+   "camera": "drone orbit around the head",
+   "narration": "Birds landed in my hair. An airplane had to turn around!"
+  },
+  {
+   "id": 17,
+   "start": 44.34,
+   "end": 47.35,
+   "dur": 3.01,
+   "setting": "School roof",
+   "action": "Best friend takes a selfie with the giant head; phone screen shows '1,000,000 likes'",
+   "camera": "phone-screen insert then wide",
+   "narration": "My best friend took a selfie with my giant head. A million likes!"
+  },
+  {
+   "id": 18,
+   "start": 47.35,
+   "end": 49.95,
+   "dur": 2.61,
+   "setting": "School entrance",
+   "action": "Kai tries to run home but the head gets stuck in the school door (the hook moment, now in context)",
+   "camera": "same angle as the hook, matched cut",
+   "narration": "I tried to run home, but I got stuck in the school door."
+  },
+  {
+   "id": 19,
+   "start": 49.95,
+   "end": 52.36,
+   "dur": 2.4,
+   "setting": "School entrance",
+   "action": "Principal runs up: 'Kai, just tell the truth!'",
+   "camera": "tracking with the principal",
+   "narration": "The principal came running. \"Kai, just tell the truth!\""
+  },
+  {
+   "id": 20,
+   "start": 52.36,
+   "end": 55.54,
+   "dur": 3.18,
+   "setting": "School entrance",
+   "action": "Kai's eyes shaking, scared; imagine-bubble of him in big trouble",
+   "camera": "extreme close-up on eyes",
+   "narration": "But I was scared. If I told the truth, I'd be in SO much trouble!"
+  },
+  {
+   "id": 21,
+   "start": 55.54,
+   "end": 59.82,
+   "dur": 4.28,
+   "setting": "Kai's kitchen",
+   "action": "Flashback: sister says sorry for the cookies — POP — her head shrinks back",
+   "camera": "medium, quick zoom",
+   "narration": "Then I noticed something. My sister said sorry for the cookies, and her head shrank back. Pop!"
+  },
+  {
+   "id": 22,
+   "start": 59.82,
+   "end": 60.94,
+   "dur": 1.12,
+   "setting": "School entrance",
+   "action": "Kai's lightbulb moment: 'The truth makes it smaller!'",
+   "camera": "push-in, sparkle",
+   "narration": "The truth makes it smaller!"
+  },
+  {
+   "id": 23,
+   "start": 60.94,
+   "end": 61.88,
+   "dur": 0.94,
+   "setting": "School entrance",
+   "action": "Kai takes a deep breath, chest puffs",
+   "camera": "close-up",
+   "narration": "So I took a deep breath."
+  },
+  {
+   "id": 24,
+   "start": 61.88,
+   "end": 64.73,
+   "dur": 2.85,
+   "setting": "School entrance",
+   "action": "'I didn't do my homework, I played video games all night' — POP, head shrinks one size",
+   "camera": "medium, small zoom-out on pop",
+   "narration": "\"I didn't do my homework. I played video games all night.\" Pop!"
+  },
+  {
+   "id": 25,
+   "start": 64.73,
+   "end": 66.84,
+   "dur": 2.11,
+   "setting": "School entrance",
+   "action": "'I ate the last slice of pizza' — POP, smaller",
+   "camera": "same framing, jump cut",
+   "narration": "\"And I ate the last slice of pizza.\" Pop!"
+  },
+  {
+   "id": 26,
+   "start": 66.84,
+   "end": 69.4,
+   "dur": 2.55,
+   "setting": "School entrance",
+   "action": "'I broke the window!' — POP POP POP, head back to normal size, he pops free from the door",
+   "camera": "wide, he stumbles out",
+   "narration": "\"And I'm the one who broke the window!\" Pop! Pop! Pop!"
+  },
+  {
+   "id": 27,
+   "start": 69.4,
+   "end": 72.94,
+   "dur": 3.54,
+   "setting": "School yard",
+   "action": "Everybody cheers, confetti; sister hands him a cookie",
+   "camera": "wide crane up",
+   "narration": "My head was normal again. Everybody cheered! Even my sister gave me a cookie."
+  },
+  {
+   "id": 28,
+   "start": 72.94,
+   "end": 76.26,
+   "dur": 3.33,
+   "setting": "Classroom",
+   "action": "Teacher smiling: 'Thank you for the truth, Kai. Now you have double homework.' Drops a huge stack of papers",
+   "camera": "medium on teacher, then the paper stack lands",
+   "narration": "My teacher smiled. \"Thank you for the truth, Kai. Now you have double homework.\""
+  },
+  {
+   "id": 29,
+   "start": 76.26,
+   "end": 78.33,
+   "dur": 2.06,
+   "setting": "Classroom",
+   "action": "Kai: 'I love homework!' — BONK, head grows again. Freeze frame",
+   "camera": "crash zoom on the head, freeze",
+   "narration": "And I said, \"I love homework!\" Bonk!"
+  }
+ ]
+}
