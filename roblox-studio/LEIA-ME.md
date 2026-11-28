@@ -10,6 +10,10 @@ O áudio (narração, música, efeitos) e as legendas já ficam prontos neste re
 3. **Conector do Roblox Studio para o Claude** (MCP):
    - Recomendado pelo Roblox: o servidor MCP que já vem dentro do Roblox Studio.
      Instruções oficiais: https://create.roblox.com/docs/studio/mcp
+     - Claude Code no Windows (num terminal do seu PC):
+       `claude mcp add --transport stdio Roblox_Studio -- "cmd.exe" "/c" "cd /d %LOCALAPPDATA%\Roblox && .\mcp.bat"`
+     - Conferir: `claude mcp list` mostra `Roblox_Studio`; dentro do Claude Code, `/mcp` mostra conectado
+       (o Studio precisa estar aberto com um lugar aberto).
    - Alternativa (arquivada pelo Roblox em abril de 2026, mas com instalador pronto):
      https://github.com/Roblox/studio-rust-mcp-server
      - Windows: baixe e rode https://github.com/Roblox/studio-rust-mcp-server/releases/latest/download/rbx-studio-mcp.exe
