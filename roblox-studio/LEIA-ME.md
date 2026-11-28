@@ -7,9 +7,19 @@ O áudio (narração, música, efeitos) e as legendas já ficam prontos neste re
 
 1. **Roblox Studio**: create.roblox.com → Start Creating (Windows ou Mac).
 2. **Claude no computador**: Claude Desktop (claude.ai/download) ou Claude Code.
-3. **Conector do Roblox Studio para o Claude**: o servidor MCP oficial do Roblox,
-   `github.com/Roblox/studio-rust-mcp-server`. Siga o README de lá: ele instala o plugin no Studio
-   e liga o Studio ao Claude. No Studio, confira que o plugin aparece como conectado.
+3. **Conector do Roblox Studio para o Claude** (MCP):
+   - Recomendado pelo Roblox: o servidor MCP que já vem dentro do Roblox Studio.
+     Instruções oficiais: https://create.roblox.com/docs/studio/mcp
+   - Alternativa (arquivada pelo Roblox em abril de 2026, mas com instalador pronto):
+     https://github.com/Roblox/studio-rust-mcp-server
+     - Windows: baixe e rode https://github.com/Roblox/studio-rust-mcp-server/releases/latest/download/rbx-studio-mcp.exe
+     - Mac: baixe https://github.com/Roblox/studio-rust-mcp-server/releases/latest/download/macOS-rbx-studio-mcp.zip,
+       descompacte e rode o instalador.
+     - Antes de instalar: abra e feche o Roblox Studio e o Claude Desktop uma vez. Depois, abra os dois de novo.
+     - Claude Code no Mac: `claude mcp add --transport stdio Roblox_Studio -- '/Applications/RobloxStudioMCP.app/Contents/MacOS/rbx-studio-mcp' --stdio`
+     - Conferir: no Studio, aba Plugins → o plugin MCP aparece (o ícone liga/desliga a conexão) e o
+       Output mostra "The MCP Studio plugin is ready for prompts.". No Claude Desktop, o ícone de
+       ferramentas lista `run_code` e `insert_model`.
 4. **OBS Studio** (obsproject.com), grátis, para gravar a tela.
 5. Baixe este repositório no computador (botão "Code" → Download ZIP, ou `git clone`).
 
