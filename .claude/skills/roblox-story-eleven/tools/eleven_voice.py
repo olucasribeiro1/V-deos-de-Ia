@@ -30,6 +30,24 @@ OUTPUT_FORMAT = 'mp3_44100_128'
 
 
 # ---- API ---------------------------------------------------------------------------------
+def pitch_chain(speed, pitch):
+    """ffmpeg filter: speed up by `speed`, raise pitch by `pitch` without changing length."""
+    f = f'aresample=48000,atempo={speed}'
+    if abs(pitch - 1.0) > 1e-3:
+        f += f',asetrate={48000 * pitch:.0f},aresample=48000,atempo={1 / pitch:.5f}'
+    return f
+
+
+def voice_settings(o):
+    vs = {}
+    if o.stability is not None: vs['stability'] = o.stability
+    if o.style is not None: vs['style'] = o.style
+    if vs:
+        vs.setdefault('similarity_boost', 0.75); vs['use_speaker_boost'] = True
+        return {'voice_settings': vs}
+    return {}
+
+
 def api(method, path, body=None, timeout=300):
     headers = {'xi-api-key': os.environ.get('ELEVEN_API_KEY') or 'dummy', 'Accept': 'application/json'}
     data = None
@@ -134,6 +152,9 @@ def main():
     ap.add_argument('--speed', type=float, default=1.15)
     ap.add_argument('--reuse', action='store_true', help='re-process audio/raw.mp3 + eleven_alignment.json, no API call')
     ap.add_argument('--list-voices', action='store_true')
+    ap.add_argument('--stability', type=float, default=None, help='0-1; lower = more expressive/hysterical (try 0.25)')
+    ap.add_argument('--style', type=float, default=None, help='0-1; style exaggeration (try 0.7)')
+    ap.add_argument('--pitch', type=float, default=1.0, help='pitch factor applied to the final voice.wav, same length (e.g. 1.41)')
     o = ap.parse_args()
     if o.list_voices:
         return list_voices()
@@ -167,7 +188,7 @@ def main():
             sys.exit(f'not enough ElevenLabs characters: need {len(text)}, have {left}')
         print(f'generating with voice {voice_id}, model {o.model} ...')
         r = api('POST', f'/v1/text-to-speech/{voice_id}/with-timestamps?output_format={OUTPUT_FORMAT}',
-                {'text': text, 'model_id': o.model})
+                dict({'text': text, 'model_id': o.model}, **voice_settings(o)))
         open(raw, 'wb').write(base64.b64decode(r['audio_base64']))
         al = r.get('alignment') or r.get('normalized_alignment')
         if not al:
@@ -184,7 +205,7 @@ def main():
     fast, trimmed = os.path.join(adir, 'raw_fast.wav'), os.path.join(adir, 'trimmed.wav')
     voice_py = [sys.executable, os.path.join(ROOT, 'tools', 'voice.py'), '--video', o.slug]
     n_script = len(text.split())
-    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', raw, '-af', f'atempo={o.speed}', '-ar', '48000', '-ac', '1', fast],
+    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', raw, '-af', pitch_chain(o.speed, o.pitch), '-ar', '48000', '-ac', '1', fast],
                    check=True)
     sp = o.speed
     seed_cache(adir, fast, [{'w': w['w'], 's': round(w['s'] / sp, 3), 'e': round(w['e'] / sp, 3)} for w in words])
