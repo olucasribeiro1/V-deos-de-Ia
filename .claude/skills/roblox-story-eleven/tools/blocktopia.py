@@ -159,6 +159,11 @@ def roblox_look(sun_angle=3.0, sun_boost=1.05, exposure=-0.15):
         except TypeError:
             continue
     sc.view_settings.exposure = exposure
+    import os as _os
+    if _os.environ.get("BT_PCT"):
+        sc.render.resolution_percentage = int(_os.environ["BT_PCT"])
+    if _os.environ.get("BT_SAMPLES"):
+        sc.eevee.taa_render_samples = int(_os.environ["BT_SAMPLES"])
     try:
         sc.eevee.use_fast_gi = True
         sc.eevee.fast_gi_method = "GLOBAL_ILLUMINATION"
