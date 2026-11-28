@@ -18,6 +18,22 @@ needed Flashloop change. When the two skills disagree, this one wins here:
 | 5. Textures | Flashloop images | Pillow (pattern of `tools/make_textures.py`), saved in `assets/tex/` |
 | 12. Cover | Flashloop image from a frame | best frame + Pillow title (white, black outline) |
 
+## BLOCKTOPIA channel rules (always)
+
+- Every narration's FIRST words are "In this town," and the first sentence is the hook (result first):
+  "In this town, I told one tiny lie, and now my head is stuck in the school door!". The rule line
+  also says "in this town" ("Because in this town, every time you lie, ..."). Never "in this world".
+- Voice: Liam `TX3LPaxmHKxFdv7VOQHJ`, fast and high: `--speed 1.25 --stability 0.25 --style 0.75 --pitch 1.41`,
+  then `tools/tighten.py <slug> --max-gap 0.12` (continuous talk, no sentence pauses). Do not retempo slower.
+- Captions: white fill, black outline (kit default in finish.py). Never yellow.
+- Music: `music/blocktopia_theme.m4a` on every video.
+- Stories use any characters the plot needs (Kai or one-off cast). The host avatar `host_()` (owner's
+  knight) appears only rarely, to explain something; never as the story lead.
+- Look: call `roblox_look()` LAST in every shot (matte SmoothPlastic, soft sun, neutral tone mapping).
+  Heads that grow: `grow(ch, t, scale)` / `head_at(ch, t, scale)` scale from the neck.
+- Format learned from top channels: R6 avatars, 2D-texture clothes, clean screen (no game UI), bright
+  saturated day lighting, low-poly suburbs (red/blue roofs), continuous fast narration, cut every 1-2.5 s.
+
 ## 0. Setup (every new container)
 
 ```bash
